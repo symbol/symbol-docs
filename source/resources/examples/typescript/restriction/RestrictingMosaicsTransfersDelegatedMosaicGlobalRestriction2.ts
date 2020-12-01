@@ -28,6 +28,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with cc.shares mosaic id
 const sharesIdHex = '7cdf3b117a3c40cc';
@@ -42,7 +45,7 @@ const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 
 const transaction = MosaicGlobalRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         sharesId,  // mosaicId
         key, // restictionKey
         UInt64.fromUint(0), // previousRestrictionValue

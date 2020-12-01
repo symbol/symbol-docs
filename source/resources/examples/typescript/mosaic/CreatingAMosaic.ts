@@ -31,6 +31,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -48,7 +51,7 @@ const divisibility = 0;
 
 const nonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     nonce,
     MosaicId.createFromNonce(nonce, account.address),
     MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable),
@@ -62,7 +65,7 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
 const delta = 1000000;
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     mosaicDefinitionTransaction.mosaicId,
     MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(delta * Math.pow(10, divisibility)),
@@ -71,7 +74,7 @@ const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [
         mosaicDefinitionTransaction.toAggregate(account.publicAccount),
         mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)],

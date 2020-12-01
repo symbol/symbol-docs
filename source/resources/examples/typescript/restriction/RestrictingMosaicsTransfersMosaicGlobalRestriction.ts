@@ -28,6 +28,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '634a8ac3fc2b65b3';
@@ -41,7 +44,7 @@ const networkType = NetworkType.TEST_NET;
 
 const transaction = MosaicGlobalRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicId, // mosaicId
         key, // restrictionKey
         UInt64.fromUint(0), // previousRestrictionValue

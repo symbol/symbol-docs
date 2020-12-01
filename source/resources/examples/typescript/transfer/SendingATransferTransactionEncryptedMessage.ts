@@ -26,6 +26,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -43,7 +46,7 @@ const encryptedMessage = aliceAccount
 
 /* start block 02 */
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     certificatePublicAccount.address,
     [],
     encryptedMessage,

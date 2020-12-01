@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, Metadata, MetadataSearchCriteria, MetadataType, RepositoryFactoryHttp} from 'symbol-sdk';
+import { Address, Metadata, MetadataType, Page, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // Replace with address
@@ -29,10 +29,10 @@ const metadataHttp = repositoryFactory.createMetadataRepository();
 
 const searchCriteria = {targetAddress: address, metadataType: MetadataType.Account};
 metadataHttp.search(searchCriteria)
-    .subscribe((metadata) => {
-        if (metadata.totalEntries > 0) {
-            console.log('Page', metadata.pageNumber, 'of', metadata.totalPages);
-            metadata.data
+    .subscribe((metadataEntries: Page<Metadata>) => {
+        if (metadataEntries.pageSize > 0) {
+            console.log('Page', metadataEntries.pageNumber);
+            metadataEntries.data
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);

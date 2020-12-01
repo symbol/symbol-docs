@@ -31,6 +31,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 const networkType = NetworkType.TEST_NET;
 // replace with kyc provider private key
@@ -40,7 +43,7 @@ const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, n
 // Define KYC Mosaic Id
 const mosaicNonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     mosaicNonce,
     MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount.address),
     MosaicFlags.create(true, true, true),
@@ -53,7 +56,7 @@ console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicDefinitionTransaction.mosaicId, // mosaicId
         key, // restictionKey
         UInt64.fromUint(0), // previousRestrictionValue
@@ -63,7 +66,7 @@ const mosaicGlobalRestrictionTransaction = MosaicGlobalRestrictionTransaction
         networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [
         mosaicDefinitionTransaction.toAggregate(kycProviderAccount.publicAccount),
         mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)],

@@ -25,6 +25,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with namespace name
 const namespaceName = 'foo';
@@ -34,7 +37,7 @@ const duration = UInt64.fromUint(172800);
 const networkType = NetworkType.TEST_NET;
 
 const namespaceRegistrationTransaction = NamespaceRegistrationTransaction.createRootNamespace(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     namespaceName,
     duration,
     networkType,

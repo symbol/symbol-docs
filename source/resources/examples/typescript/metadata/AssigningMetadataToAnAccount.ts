@@ -32,6 +32,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with key
 const key = KeyGenerator.generateUInt64Key('CERT');
@@ -48,7 +51,7 @@ const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, net
 const value = '123456';
 
 const accountMetadataTransaction = AccountMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     alicePublicAccount.address,
     key,
     value.length,
@@ -63,7 +66,7 @@ const bobPrivateKey = '000000000000000000000000000000000000000000000000000000000
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createBonded(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)],
     networkType,
     [],
@@ -82,7 +85,7 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     new Mosaic(networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
