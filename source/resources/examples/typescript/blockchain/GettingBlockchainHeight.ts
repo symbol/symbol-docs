@@ -16,7 +16,7 @@
  *
  */
 
-import {RepositoryFactoryHttp} from 'symbol-sdk';
+import {ChainInfo, RepositoryFactoryHttp} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with node endpoint
@@ -25,6 +25,6 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const chainHttp = repositoryFactory.createChainRepository();
 
 chainHttp
-    .getBlockchainHeight()
-    .subscribe((height) => console.log(height.compact()), (err) => console.error(err));
+    .getChainInfo()
+    .subscribe((info: ChainInfo) => console.log(info.height.compact()), (err) => console.error(err));
 /* end block 01 */

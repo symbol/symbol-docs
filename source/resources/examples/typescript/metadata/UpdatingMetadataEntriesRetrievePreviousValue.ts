@@ -29,6 +29,9 @@ import {
     RepositoryFactoryHttp,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -58,7 +61,7 @@ const accountMetadataTransaction = metadataHttp
     .pipe( mergeMap((metadata) => {
         const currentValueBytes = Convert.utf8ToUint8(metadata.data[0].metadataEntry.value);
         return of(AccountMetadataTransaction.create(
-            Deadline.create(),
+            Deadline.create(epochAdjustment),
             alicePublicAccount.address,
             key,
             newValueBytes.length - currentValueBytes.length,

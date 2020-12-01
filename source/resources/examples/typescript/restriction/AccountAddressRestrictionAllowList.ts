@@ -27,6 +27,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with company address
 const companyRawAddress = 'TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI';
@@ -39,7 +42,7 @@ const networkType = NetworkType.TEST_NET;
 
 const transaction = AccountRestrictionTransaction
     .createAddressRestrictionModificationTransaction(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         AddressRestrictionFlag.AllowIncomingAddress,
         [companyAddress],
         [],

@@ -32,6 +32,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -51,7 +54,7 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     ticketDistributorPublicAccount.address,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))],
@@ -59,7 +62,7 @@ const aliceToTicketDistributorTx = TransferTransaction.create(
     networkType);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     aliceAccount.address,
     [new Mosaic(ticketMosaicId,
         UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))],
@@ -68,7 +71,7 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
 /* end block 01 */
 
 /* start block 02 */
-const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(),
+const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(epochAdjustment),
     [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
         ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
     networkType,
@@ -83,7 +86,7 @@ console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 
 /* start block 03 */
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),

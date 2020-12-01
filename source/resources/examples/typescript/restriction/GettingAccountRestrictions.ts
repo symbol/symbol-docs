@@ -28,11 +28,11 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionAccountRepository();
 
 restrictionHttp.getAccountRestrictions(address)
-    .subscribe((accountRestrictions) => {
+    .subscribe((accountRestrictions: any) => {
         if (accountRestrictions.length > 0) {
             accountRestrictions
-                .filter((accountRestriction) => accountRestriction.values.length > 0)
-                .map((accountRestriction) => {
+                .filter((accountRestriction: any) => accountRestriction.values.length > 0)
+                .map((accountRestriction: any) => {
                     console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
                 });
         } else {

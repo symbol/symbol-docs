@@ -29,6 +29,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -46,7 +49,7 @@ const key = KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 
 const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicId, // mosaicId
         key, // restrictionKey
         aliceAddress, // address
@@ -55,7 +58,7 @@ const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
 
 const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicId, // mosaicId
         key, // restictionKey
         bobAddress, // address
@@ -69,7 +72,7 @@ const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 const account = Account.createFromPrivateKey(privateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [
         aliceMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount),
         bobMosaicAddressRestrictionTransaction.toAggregate(account.publicAccount)],

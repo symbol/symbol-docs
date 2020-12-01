@@ -27,6 +27,9 @@ import {
     TransferTransaction,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 const example = async () => {
     /* start block 01 */
     const publicAccount1 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
@@ -41,7 +44,7 @@ const example = async () => {
     const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
     const recipientAddress = Address.createFromRawAddress(rawAddress);
     const transferTransaction = TransferTransaction.create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         recipientAddress,
         [],
         PlainMessage.create('This is a test message'),
@@ -54,7 +57,7 @@ const example = async () => {
     const requiredCosignatures = 1;
     const aggregateTransaction = AggregateTransaction
         .createBonded(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         [transferTransaction.toAggregate(publicAccount1),
             transferTransaction.toAggregate(publicAccount2)],
         NetworkType.TEST_NET,

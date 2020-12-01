@@ -29,6 +29,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
@@ -40,7 +43,7 @@ const recipientAddress = Address.createFromRawAddress(rawAddress);
 const networkType = NetworkType.TEST_NET;
 
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     recipientAddress,
     [new Mosaic(mosaicId, UInt64.fromUint(1))],
     PlainMessage.create('enjoy your ticket'),

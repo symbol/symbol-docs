@@ -1,5 +1,8 @@
 // tslint:disable-next-line: max-line-length
-import { Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Deadline, Mosaic, NamespaceId, NetworkCurrencyPublic, NetworkType, PlainMessage, PublicAccount, RepositoryFactoryHttp, TransactionMapping, TransferTransaction, UInt64 } from 'symbol-sdk';
+import { Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Deadline, Mosaic, NamespaceId, NetworkCurrencies, NetworkType, PlainMessage, PublicAccount, RepositoryFactoryHttp, TransactionMapping, TransferTransaction, UInt64 } from 'symbol-sdk';
+
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
 
 /* start block 01 */
 const networkType = NetworkType.TEST_NET;
@@ -13,15 +16,15 @@ const bobPublicKey = '';
 const bobPublicAccount = PublicAccount.createFromPublicKey(bobPublicKey, networkType);
 
 const aliceTransferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     bobPublicAccount.address,
-    [NetworkCurrencyPublic.createRelative(1000)],
+    [NetworkCurrencies.PUBLIC.currency.createRelative(1000)],
     PlainMessage.create('payout'),
     networkType,
 );
 
 const bobTransferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     aliceAccount.address,
     [new Mosaic(new NamespaceId('collectible'), UInt64.fromUint(1))],
     PlainMessage.create('payout'),
@@ -29,7 +32,7 @@ const bobTransferTransaction = TransferTransaction.create(
 );
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [aliceTransferTransaction.toAggregate(aliceAccount.publicAccount), bobTransferTransaction.toAggregate(bobPublicAccount)],
     networkType,
     [],

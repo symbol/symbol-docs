@@ -31,6 +31,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 const alicePublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);
 const alicePrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJIN);
@@ -57,7 +60,7 @@ console.log('Secret:', secret);
 
 /* start block 03 */
 const tx1 = SecretLockTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     new Mosaic(new MosaicId('00D3378709746FC4'), UInt64.fromUint(10)),
     UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
     LockHashAlgorithm.Op_Sha3_256,
@@ -75,7 +78,7 @@ privateChainTransactionHttp
 
 /* start block 05 */
 const tx2 = SecretLockTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     new Mosaic(new MosaicId('10293DE77C684F71'), UInt64.fromUint(10)),
     UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
     LockHashAlgorithm.Op_Sha3_256,
@@ -94,7 +97,7 @@ publicChainTransactionHttp
 
 /* start block 07 */
 const tx3 = SecretProofTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     LockHashAlgorithm.Op_Sha3_256,
     secret,
     alicePublicChainAccount.address,
@@ -110,7 +113,7 @@ publicChainTransactionHttp
 
 /* start block 08 */
 const tx4 = SecretProofTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     LockHashAlgorithm.Op_Sha3_256,
     secret,
     bobPrivateChainAccount.address,

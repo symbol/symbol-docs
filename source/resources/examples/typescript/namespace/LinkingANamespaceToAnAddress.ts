@@ -28,6 +28,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with namespace name
 const namespaceId = new NamespaceId('foo');
@@ -41,7 +44,7 @@ const address = Address.createFromRawAddress(rawAddress);
 const networkType = NetworkType.TEST_NET;
 
 const addressAliasTransaction = AliasTransaction.createForAddress(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     AliasAction.Link,
     namespaceId,
     address,

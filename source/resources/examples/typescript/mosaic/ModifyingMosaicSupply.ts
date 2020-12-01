@@ -27,6 +27,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -42,7 +45,7 @@ const divisibility = 0;
 const delta = 1000000;
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     mosaicId,
     MosaicSupplyChangeAction.Increase,
     UInt64.fromUint(delta * Math.pow(10, divisibility)),

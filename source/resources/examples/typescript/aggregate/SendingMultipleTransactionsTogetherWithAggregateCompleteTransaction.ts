@@ -30,6 +30,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -51,13 +54,13 @@ const mosaic = new Mosaic (networkCurrencyMosaicId,
     UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
 
 const aliceTransferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(123456789),
     aliceAccount,
     [mosaic],
     PlainMessage.create('payout'),
     networkType);
 const bobTransferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(123456789),
     bobAccount,
     [mosaic],
     PlainMessage.create('payout'),
@@ -66,7 +69,7 @@ const bobTransferTransaction = TransferTransaction.create(
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(123456789),
     [aliceTransferTransaction.toAggregate(account.publicAccount),
         bobTransferTransaction.toAggregate(account.publicAccount)],
     networkType,
