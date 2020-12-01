@@ -31,6 +31,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace network type
 const networkType = NetworkType.TEST_NET;
@@ -51,7 +54,7 @@ const networkCurrencyDivisibility = 6;
 
 /* start block 02 */
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     recipientAddress,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
@@ -61,7 +64,7 @@ const transferTransaction = TransferTransaction.create(
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [transferTransaction.toAggregate(multisigAccount)],
     networkType,
     [],

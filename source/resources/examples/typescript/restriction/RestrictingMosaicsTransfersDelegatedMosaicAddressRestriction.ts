@@ -29,6 +29,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with kyc mosaic id
 const mosaicIdHex = '183D0802BCDB97AF';
@@ -49,7 +52,7 @@ const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 
 const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicId, // mosaicId
         key, // restrictionKey
         aliceAddress, // address
@@ -58,7 +61,7 @@ const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransac
 
 const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicId, // mosaicId
         key, // restrictionKey
         bobAddress, // address
@@ -67,7 +70,7 @@ const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransacti
 
 const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
     .create(
-        Deadline.create(),
+        Deadline.create(epochAdjustment),
         mosaicId, // mosaicId
         key, // restrictionKey
         carolAddress, // address
@@ -79,7 +82,7 @@ const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [
         aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
         bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),

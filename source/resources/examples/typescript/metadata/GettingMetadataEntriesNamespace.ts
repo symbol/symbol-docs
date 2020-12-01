@@ -16,7 +16,7 @@
  *
  */
 
-import {Metadata, MetadataType, NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
+import { Metadata, MetadataType, NamespaceId, Page, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -28,10 +28,10 @@ const metadataHttp = repositoryFactory.createMetadataRepository();
 
 const searchCriteria = {targetId: namespaceId, metadataType: MetadataType.Namespace};
 metadataHttp.search(searchCriteria)
-    .subscribe((metadata) => {
-        if (metadata.totalEntries > 0) {
-            console.log('Page', metadata.pageNumber, 'of', metadata.totalPages);
-            metadata.data
+    .subscribe((metadataEntries: Page<Metadata>) => {
+        if (metadataEntries.pageSize > 0) {
+            console.log('Page', metadataEntries.pageNumber);
+            metadataEntries.data
                 .map((entry: Metadata) => {
                     const metadataEntry = entry.metadataEntry;
                     console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);

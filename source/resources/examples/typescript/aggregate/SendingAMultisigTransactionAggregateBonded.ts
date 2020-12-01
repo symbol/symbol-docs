@@ -33,6 +33,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 // replace network type
 const networkType = NetworkType.TEST_NET;
 // replace with cosignatory private key
@@ -50,7 +53,7 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     recipientAddress,
     [new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
@@ -59,7 +62,7 @@ const transferTransaction = TransferTransaction.create(
 
 /* start block 01 */
 const aggregateTransaction = AggregateTransaction.createBonded(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [transferTransaction.toAggregate(multisigAccount)],
     networkType);
 
@@ -71,7 +74,7 @@ console.log(signedTransaction.hash);
 
 /* start block 02 */
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     new Mosaic (networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),

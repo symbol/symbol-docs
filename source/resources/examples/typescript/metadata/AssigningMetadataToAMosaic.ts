@@ -28,6 +28,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -39,7 +42,7 @@ const mosaicId = new NamespaceId('cc.shares');
 
 const isin = 'US00000000';
 const isinMetadataTransaction = MosaicMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     companyAccount.address,
     KeyGenerator.generateUInt64Key('ISIN'),
     mosaicId,
@@ -52,7 +55,7 @@ const isinMetadataTransaction = MosaicMetadataTransaction.create(
 /* start block 02 */
 const name = 'ComfyClothingCompany';
 const nameMetadataTransaction = MosaicMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     companyAccount.address,
     KeyGenerator.generateUInt64Key('NAME'),
     mosaicId,
@@ -64,7 +67,7 @@ const nameMetadataTransaction = MosaicMetadataTransaction.create(
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [isinMetadataTransaction.toAggregate(companyAccount.publicAccount),
         nameMetadataTransaction.toAggregate(companyAccount.publicAccount)],
     networkType,

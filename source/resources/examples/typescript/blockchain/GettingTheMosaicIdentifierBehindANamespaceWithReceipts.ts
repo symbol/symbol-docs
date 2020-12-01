@@ -31,6 +31,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 const aliasedMosaic = new Mosaic(
     new NamespaceId('symbol.xym'),
@@ -42,7 +45,7 @@ const aliasedMosaic = new Mosaic(
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
     [aliasedMosaic],
     PlainMessage.create('Test aliased mosaic'),

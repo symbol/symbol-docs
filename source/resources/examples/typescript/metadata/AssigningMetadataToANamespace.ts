@@ -28,6 +28,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -42,7 +45,7 @@ const address = 'ComfyClothingCompany HQ';
 const phone = '000-0000';
 
 const nameMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     companyAccount.address,
     KeyGenerator.generateUInt64Key('NAME'),
     namespaceId,
@@ -52,7 +55,7 @@ const nameMetadataTransaction = NamespaceMetadataTransaction.create(
 );
 
 const emailMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     companyAccount.address,
     KeyGenerator.generateUInt64Key('EMAIL'),
     namespaceId,
@@ -62,7 +65,7 @@ const emailMetadataTransaction = NamespaceMetadataTransaction.create(
 );
 
 const addressMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     companyAccount.address,
     KeyGenerator.generateUInt64Key('ADDRESS'),
     namespaceId,
@@ -72,7 +75,7 @@ const addressMetadataTransaction = NamespaceMetadataTransaction.create(
 );
 
 const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     companyAccount.address,
     KeyGenerator.generateUInt64Key('PHONE'),
     namespaceId,
@@ -84,7 +87,7 @@ const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [
         nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
         emailMetadataTransaction.toAggregate(companyAccount.publicAccount),

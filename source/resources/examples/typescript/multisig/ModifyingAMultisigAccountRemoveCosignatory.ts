@@ -27,6 +27,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -41,7 +44,7 @@ const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111
 const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
 
 const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     0,
     0,
     [],
@@ -49,7 +52,7 @@ const multisigAccountModificationTransaction = MultisigAccountModificationTransa
     networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
     networkType,
     [],

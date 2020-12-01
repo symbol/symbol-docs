@@ -27,13 +27,16 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with aliased mosaicId
 const mosaicId = new NamespaceId('foo');
 TransferTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     Account.generateNewAccount(networkType).address,
     [new Mosaic(mosaicId, UInt64.fromUint(10000000))],
     EmptyMessage,

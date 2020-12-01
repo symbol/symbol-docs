@@ -31,6 +31,9 @@ import {
     UInt64,
 } from 'symbol-sdk';
 
+// Retrieve from node's /network/properties
+const epochAdjustment = 123456789;
+
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
@@ -45,7 +48,7 @@ const cosignatoryAccount6PublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A
 const cosignatory6 = PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, networkType);
 
 const convertMultisigAccount2Transaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     1,
     1,
     [cosignatory5.address, cosignatory6.address],
@@ -68,7 +71,7 @@ const cosignatoryAccount4PublicKey = 'EB2B065D27C6A6FB322F2E568E1AAD9CD6C0F15567
 const cosignatory4 = PublicAccount.createFromPublicKey(cosignatoryAccount4PublicKey, networkType);
 
 const convertMultisigAccount3Transaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     2,
     1,
     [cosignatory7.address, cosignatory8.address, cosignatory4.address],
@@ -82,7 +85,7 @@ const multisig1PrivateKey = '000000000000000000000000000000000000000000000000000
 const multisigAccount1 = Account.createFromPrivateKey(multisig1PrivateKey, networkType);
 
 const convertMultisigAccount1Transaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     3,
     1,
     [multisigAccount2.publicAccount.address, multisigAccount3.publicAccount.address, cosignatory4.address],
@@ -92,7 +95,7 @@ const convertMultisigAccount1Transaction = MultisigAccountModificationTransactio
 
 /* start block 04 */
 const aggregateTransaction = AggregateTransaction.createBonded(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     [convertMultisigAccount2Transaction.toAggregate(multisigAccount2.publicAccount),
         convertMultisigAccount3Transaction.toAggregate(multisigAccount3.publicAccount),
         convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount)],
@@ -111,7 +114,7 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(),
+    Deadline.create(epochAdjustment),
     new Mosaic(networkCurrencyMosaicId,
         UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
     UInt64.fromUint(480),
