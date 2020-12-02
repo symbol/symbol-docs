@@ -35,7 +35,7 @@ const example = async () => {
   const transferTransaction = TransferTransaction.create(
     Deadline.create(epochAdjustment),
     recipientAddress,
-    [currency.createAbsolute(10)],
+    [currency.createRelative(10)],
     PlainMessage.create('This is a test message'),
     networkType,
     UInt64.fromUint(2000000),
