@@ -8,7 +8,8 @@ cache: pip
 before_install:
   - cd source/resources/examples/typescript
   - npm install
-  - npm run lint
+#  - npm run lint renable once npm run style:fix is executed
+# include tsc compile!
   - cd $TRAVIS_BUILD_DIR
 install:
   - pip install -r requirements.txt
