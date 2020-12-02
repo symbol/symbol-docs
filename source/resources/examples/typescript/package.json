@@ -7,16 +7,28 @@
     "crypto": "^1.0.1",
     "js-sha3": "^0.7.0",
     "merkletreejs": "^0.1.11",
-    "rxjs": "^6.5.4",
-    "symbol-sdk": "^0.21.1-alpha-202011262256",
+    "rxjs": "^6.6.3",
+    "rxjs-compat": "^6.6.3",
+    "symbol-sdk": "0.21.1-alpha-202012011228",
     "tslint": "^5.20.1",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@types/node": "^10.12.27"
+    "@types/node": "^10.12.27",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "prettier-plugin-organize-imports": "^1.1.1"
   },
   "scripts": {
-    "lint": "tslint --project ."
+    "prettier": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "style:fix": "npm run prettier && npm run lint:fix",
+    "build": "tsc"
   },
   "author": "",
   "license": ""
