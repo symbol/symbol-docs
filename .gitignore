@@ -11,3 +11,4 @@ build/
 source/resources/examples/typescript/node_modules
 source/locale/**/*.mo
 *.pyc
+/source/resources/examples/typescript/typescript.iml
