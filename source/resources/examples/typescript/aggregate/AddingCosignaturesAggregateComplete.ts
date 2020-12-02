@@ -1,7 +1,7 @@
 // tslint:disable-next-line: max-line-length
 import { Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Deadline, Mosaic, NamespaceId, NetworkCurrencies, NetworkType, PlainMessage, PublicAccount, RepositoryFactoryHttp, TransactionMapping, TransferTransaction, UInt64 } from 'symbol-sdk';
 
-// Retrieve from node's /network/properties
+// Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
 
 /* start block 01 */

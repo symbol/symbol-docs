@@ -27,7 +27,7 @@ import {
     TransferTransaction,
 } from 'symbol-sdk';
 
-// Retrieve from node's /network/properties
+// Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
 
 const example = async () => {
