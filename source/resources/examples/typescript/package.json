@@ -10,7 +10,6 @@
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
     "symbol-sdk": "0.21.1-alpha-202012011228",
-    "tslint": "^5.20.1",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
