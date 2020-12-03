@@ -30,7 +30,7 @@ import {
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
 
-const example = async () => {
+const example = async (): Promise<any> => {
   /* start block 01 */
   const publicAccount1 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
   const publicAccount2 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
@@ -54,7 +54,6 @@ const example = async () => {
 
   /* start block 02 */
   // Define transaction and set max fee
-  const requiredCosignatures = 1;
   const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(epochAdjustment),
     [transferTransaction.toAggregate(publicAccount1), transferTransaction.toAggregate(publicAccount2)],
@@ -62,6 +61,7 @@ const example = async () => {
     [],
   ).setMaxFeeForAggregate(medianFeeMultiplier, 1);
   /* end block 02 */
+  return aggregateTransaction;
 };
 
 example().then((result) => console.log(result));

@@ -27,7 +27,7 @@ const recipientAddress = Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 
-const ignored = TransferTransaction.create(
+const transferTransaction = TransferTransaction.create(
   Deadline.create(epochAdjustment),
   recipientAddress,
   /* start block 01 */
@@ -40,3 +40,4 @@ const ignored = TransferTransaction.create(
   networkType,
   UInt64.fromUint(2000000),
 );
+console.log(transferTransaction);
