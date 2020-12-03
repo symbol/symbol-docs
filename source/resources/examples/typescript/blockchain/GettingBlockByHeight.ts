@@ -16,7 +16,7 @@
  *
  */
 
-import {RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
+import { RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with node endpoint
@@ -25,7 +25,8 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryFactory.createBlockRepository();
 
 const height = 1;
-blockHttp
-    .getBlockByHeight(UInt64.fromUint(height))
-    .subscribe((block) => console.log(block), (err) => console.error(err));
+blockHttp.getBlockByHeight(UInt64.fromUint(height)).subscribe(
+  (block) => console.log(block),
+  (err) => console.error(err),
+);
 /* end block 01 */

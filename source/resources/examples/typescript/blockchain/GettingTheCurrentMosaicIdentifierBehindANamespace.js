@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with namespace name
 const namespaceId = new symbol_sdk_1.NamespaceId('symbol.xym');
@@ -25,7 +25,8 @@ const namespaceId = new symbol_sdk_1.NamespaceId('symbol.xym');
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
-namespaceHttp
-    .getLinkedMosaicId(namespaceId)
-    .subscribe((mosaicId) => console.log(mosaicId.toHex()), (err) => console.log(err));
+namespaceHttp.getLinkedMosaicId(namespaceId).subscribe(
+  (mosaicId) => console.log(mosaicId.toHex()),
+  (err) => console.log(err),
+);
 /* end block 01 */

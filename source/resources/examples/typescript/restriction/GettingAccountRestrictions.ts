@@ -16,7 +16,7 @@
  *
  */
 
-import { Address, RepositoryFactoryHttp} from 'symbol-sdk';
+import { Address, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with address
@@ -27,16 +27,18 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionAccountRepository();
 
-restrictionHttp.getAccountRestrictions(address)
-    .subscribe((accountRestrictions: any) => {
-        if (accountRestrictions.length > 0) {
-            accountRestrictions
-                .filter((accountRestriction: any) => accountRestriction.values.length > 0)
-                .map((accountRestriction: any) => {
-                    console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
-                });
-        } else {
-            console.log('The address does not have account restriction assigned.');
-        }
-    }, (err) => console.log(err));
+restrictionHttp.getAccountRestrictions(address).subscribe(
+  (accountRestrictions: any) => {
+    if (accountRestrictions.length > 0) {
+      accountRestrictions
+        .filter((accountRestriction: any) => accountRestriction.values.length > 0)
+        .map((accountRestriction: any) => {
+          console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
+        });
+    } else {
+      console.log('The address does not have account restriction assigned.');
+    }
+  },
+  (err) => console.log(err),
+);
 /* end block 01 */

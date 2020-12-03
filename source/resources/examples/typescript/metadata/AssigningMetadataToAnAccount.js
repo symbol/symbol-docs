@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with key
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
@@ -30,13 +30,26 @@ const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332
 const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
 // replace with value
 const value = '123456';
-const accountMetadataTransaction = symbol_sdk_1.AccountMetadataTransaction.create(symbol_sdk_1.Deadline.create(), alicePublicAccount.address, key, value.length, value, networkType);
+const accountMetadataTransaction = symbol_sdk_1.AccountMetadataTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  alicePublicAccount.address,
+  key,
+  value.length,
+  value,
+  networkType,
+);
 /* end block 02 */
 /* start block 03 */
 // replace with bob private key
 const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
 const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
-const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
+  symbol_sdk_1.Deadline.create(),
+  [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)],
+  networkType,
+  [],
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
@@ -47,7 +60,14 @@ console.log(signedTransaction.hash);
 const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  symbol_sdk_1.UInt64.fromUint(480),
+  signedTransaction,
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
 /* end block 04 */
 /* start block 05 */
@@ -59,8 +79,10 @@ const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    transactionService
-        .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)
-        .subscribe((x) => console.log(x), (err) => console.log(err), () => listener.close());
+  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
+    (x) => console.log(x),
+    (err) => console.log(err),
+    () => listener.close(),
+  );
 });
 /* end block 05 */

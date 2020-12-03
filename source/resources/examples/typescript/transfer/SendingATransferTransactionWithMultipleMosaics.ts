@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, Deadline, Mosaic, MosaicId, NetworkType, PlainMessage, TransferTransaction, UInt64} from 'symbol-sdk';
+import { Address, Deadline, Mosaic, MosaicId, NetworkType, PlainMessage, TransferTransaction, UInt64 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
@@ -28,12 +28,15 @@ const recipientAddress = Address.createFromRawAddress(rawAddress);
 const networkType = NetworkType.TEST_NET;
 
 const ignored = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    recipientAddress,
-    /* start block 01 */
-    [new Mosaic( new MosaicId('7CDF3B117A3C40CC'), UInt64.fromUint(1000)),
-        new Mosaic ( new MosaicId('5E62990DCAC5BE8A'), UInt64.fromUint(10 * Math.pow(10, 6)))],
-    /* end block 01 */
-    PlainMessage.create('This is a test message'),
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  recipientAddress,
+  /* start block 01 */
+  [
+    new Mosaic(new MosaicId('7CDF3B117A3C40CC'), UInt64.fromUint(1000)),
+    new Mosaic(new MosaicId('5E62990DCAC5BE8A'), UInt64.fromUint(10 * Math.pow(10, 6))),
+  ],
+  /* end block 01 */
+  PlainMessage.create('This is a test message'),
+  networkType,
+  UInt64.fromUint(2000000),
+);

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
@@ -27,11 +27,17 @@ const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(alicePrivateKey, 
 // replace with certificate public key
 const certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
 const certificatePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
-const encryptedMessage = aliceAccount
-    .encryptMessage('This message is secret', certificatePublicAccount);
+const encryptedMessage = aliceAccount.encryptMessage('This message is secret', certificatePublicAccount);
 /* end block 01 */
 /* start block 02 */
-const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), certificatePublicAccount.address, [], encryptedMessage, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  certificatePublicAccount.address,
+  [],
+  encryptedMessage,
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 /* end block 02 */
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
@@ -43,7 +49,8 @@ console.log(signedTransaction.hash);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 04 */

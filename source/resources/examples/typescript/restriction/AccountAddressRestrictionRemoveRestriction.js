@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 const companyRawAddress = 'TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI';
 const companyAddress = symbol_sdk_1.Address.createFromRawAddress(companyRawAddress);
@@ -25,8 +25,14 @@ const companyAddress = symbol_sdk_1.Address.createFromRawAddress(companyRawAddre
 /* start block 02 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const transaction = symbol_sdk_1.AccountRestrictionTransaction
-    .createAddressRestrictionModificationTransaction(symbol_sdk_1.Deadline.create(), symbol_sdk_1.AddressRestrictionFlag.AllowIncomingAddress, [], [companyAddress], networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const transaction = symbol_sdk_1.AccountRestrictionTransaction.createAddressRestrictionModificationTransaction(
+  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.AddressRestrictionFlag.AllowIncomingAddress,
+  [],
+  [companyAddress],
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 /* end block 02 */
 /* start block 03 */
 // replace with product private key
@@ -39,7 +45,8 @@ const signedTransaction = productAccount.sign(transaction, networkGenerationHash
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

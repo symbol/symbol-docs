@@ -17,18 +17,18 @@
  */
 
 import {
-    Account,
-    Address,
-    AggregateTransaction,
-    Deadline,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PlainMessage,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    TransferTransaction,
-    UInt64,
+  Account,
+  Address,
+  AggregateTransaction,
+  Deadline,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  PlainMessage,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -54,21 +54,22 @@ const networkCurrencyDivisibility = 6;
 
 /* start block 02 */
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    recipientAddress,
-    [new Mosaic (networkCurrencyMosaicId,
-        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('sending 10 symbol.xym'),
-    networkType);
+  Deadline.create(epochAdjustment),
+  recipientAddress,
+  [new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  PlainMessage.create('sending 10 symbol.xym'),
+  networkType,
+);
 /* end block 02 */
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(epochAdjustment),
-    [transferTransaction.toAggregate(multisigAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  [transferTransaction.toAggregate(multisigAccount)],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 /* end block 03 */
 
 /* start block 04 */
@@ -79,7 +80,8 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkG
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 04 */

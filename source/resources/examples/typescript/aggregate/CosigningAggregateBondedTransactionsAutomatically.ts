@@ -16,21 +16,20 @@
  *
  */
 
+import { filter, map, mergeMap } from 'rxjs/operators';
 import {
-    Account,
-    AggregateTransaction,
-    CosignatureSignedTransaction,
-    CosignatureTransaction,
-    NetworkType,
-    RepositoryFactoryHttp,
+  Account,
+  AggregateTransaction,
+  CosignatureSignedTransaction,
+  CosignatureTransaction,
+  NetworkType,
+  RepositoryFactoryHttp,
 } from 'symbol-sdk';
-
-import {filter, map, mergeMap} from 'rxjs/operators';
 
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
-    const cosignatureTransaction = CosignatureTransaction.create(transaction);
-    return account.signCosignatureTransaction(cosignatureTransaction);
+  const cosignatureTransaction = CosignatureTransaction.create(transaction);
+  return account.signCosignatureTransaction(cosignatureTransaction);
 };
 /* end block 01 */
 
@@ -47,19 +46,22 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 
 listener.open().then(() => {
-    listener
-        .aggregateBondedAdded(account.address)
-        .pipe(
-            filter((_) => !_.signedByAccount(account.publicAccount)),
-            map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
-            mergeMap((signedCosignatureTransaction) => {
-                listener.close();
-                return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
-            }),
-        )
-        .subscribe((announcedTransaction) => {
-            console.log(announcedTransaction);
-            listener.close();
-        }, (err) => console.error(err));
+  listener
+    .aggregateBondedAdded(account.address)
+    .pipe(
+      filter((_) => !_.signedByAccount(account.publicAccount)),
+      map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+      mergeMap((signedCosignatureTransaction) => {
+        listener.close();
+        return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
+      }),
+    )
+    .subscribe(
+      (announcedTransaction) => {
+        console.log(announcedTransaction);
+        listener.close();
+      },
+      (err) => console.error(err),
+    );
 });
 /* end block 02 */

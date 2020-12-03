@@ -16,7 +16,7 @@
  *
  */
 
-import {ChainInfo, RepositoryFactoryHttp} from 'symbol-sdk';
+import { ChainInfo, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with node endpoint
@@ -24,7 +24,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const chainHttp = repositoryFactory.createChainRepository();
 
-chainHttp
-    .getChainInfo()
-    .subscribe((info: ChainInfo) => console.log(info.height.compact()), (err) => console.error(err));
+chainHttp.getChainInfo().subscribe(
+  (info: ChainInfo) => console.log(info.height.compact()),
+  (err) => console.error(err),
+);
 /* end block 01 */

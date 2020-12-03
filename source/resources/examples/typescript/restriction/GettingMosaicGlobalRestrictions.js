@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '634a8ac3fc2b65b3';
@@ -26,18 +26,22 @@ const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
-restrictionHttp.getMosaicGlobalRestriction(mosaicId)
-    .subscribe((mosaicGlobalRestrictions) => {
+restrictionHttp.getMosaicGlobalRestriction(mosaicId).subscribe(
+  (mosaicGlobalRestrictions) => {
     if (mosaicGlobalRestrictions.restrictions.size > 0) {
-        console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
-        mosaicGlobalRestrictions.restrictions.forEach((value, key) => {
-            console.log('\n' + key + '\t', value.referenceMosaicId.toHex() +
-                '\t', symbol_sdk_1.MosaicRestrictionType[value.restrictionType] +
-                '\t', value.restrictionValue);
-        });
+      console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
+      mosaicGlobalRestrictions.restrictions.forEach((value, key) => {
+        console.log(
+          '\n' + key + '\t',
+          value.referenceMosaicId.toHex() + '\t',
+          symbol_sdk_1.MosaicRestrictionType[value.restrictionType] + '\t',
+          value.restrictionValue,
+        );
+      });
+    } else {
+      console.log('\n The mosaic does not have mosaic global restrictions assigned.');
     }
-    else {
-        console.log('\n The mosaic does not have mosaic global restrictions assigned.');
-    }
-}, (err) => console.log(err));
+  },
+  (err) => console.log(err),
+);
 /* end block 01 */

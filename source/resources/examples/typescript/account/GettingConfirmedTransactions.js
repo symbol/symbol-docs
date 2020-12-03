@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with account address
 const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
@@ -29,7 +29,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Confirmed, address, pageNumber: 1, pageSize: 100 };
-transactionHttp
-    .search(searchCriteria)
-    .subscribe((page) => console.log(page.data), (err) => console.error(err));
+transactionHttp.search(searchCriteria).subscribe(
+  (page) => console.log(page.data),
+  (err) => console.error(err),
+);
 /* end block 02 */

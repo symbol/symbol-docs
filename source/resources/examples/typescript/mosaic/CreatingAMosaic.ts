@@ -17,18 +17,18 @@
  */
 
 import {
-    Account,
-    AggregateTransaction,
-    Deadline,
-    MosaicDefinitionTransaction,
-    MosaicFlags,
-    MosaicId,
-    MosaicNonce,
-    MosaicSupplyChangeAction,
-    MosaicSupplyChangeTransaction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  Deadline,
+  MosaicDefinitionTransaction,
+  MosaicFlags,
+  MosaicId,
+  MosaicNonce,
+  MosaicSupplyChangeAction,
+  MosaicSupplyChangeTransaction,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -51,13 +51,14 @@ const divisibility = 0;
 
 const nonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
-    Deadline.create(epochAdjustment),
-    nonce,
-    MosaicId.createFromNonce(nonce, account.address),
-    MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable),
-    divisibility,
-    duration,
-    networkType);
+  Deadline.create(epochAdjustment),
+  nonce,
+  MosaicId.createFromNonce(nonce, account.address),
+  MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable),
+  divisibility,
+  duration,
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -65,22 +66,22 @@ const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
 const delta = 1000000;
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
-    Deadline.create(epochAdjustment),
-    mosaicDefinitionTransaction.mosaicId,
-    MosaicSupplyChangeAction.Increase,
-    UInt64.fromUint(delta * Math.pow(10, divisibility)),
-    networkType);
+  Deadline.create(epochAdjustment),
+  mosaicDefinitionTransaction.mosaicId,
+  MosaicSupplyChangeAction.Increase,
+  UInt64.fromUint(delta * Math.pow(10, divisibility)),
+  networkType,
+);
 /* end block 02 */
 
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(epochAdjustment),
-    [
-        mosaicDefinitionTransaction.toAggregate(account.publicAccount),
-        mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  [mosaicDefinitionTransaction.toAggregate(account.publicAccount), mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -90,7 +91,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

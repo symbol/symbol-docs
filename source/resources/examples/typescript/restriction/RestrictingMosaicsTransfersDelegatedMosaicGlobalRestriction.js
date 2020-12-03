@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with kyc provider private key
@@ -25,22 +25,38 @@ const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 const kycProviderAccount = symbol_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 // Define KYC Mosaic Id
 const mosaicNonce = symbol_sdk_1.MosaicNonce.createRandom();
-const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(symbol_sdk_1.Deadline.create(), mosaicNonce, symbol_sdk_1.MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount.address), symbol_sdk_1.MosaicFlags.create(true, true, true), 0, symbol_sdk_1.UInt64.fromUint(0), networkType);
+const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  mosaicNonce,
+  symbol_sdk_1.MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount.address),
+  symbol_sdk_1.MosaicFlags.create(true, true, true),
+  0,
+  symbol_sdk_1.UInt64.fromUint(0),
+  networkType,
+);
 console.log('KYC MosaicId:', mosaicDefinitionTransaction.mosaicId.toHex());
 // Define Mosaic global restriction Is_Verified = 1
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
-const mosaicGlobalRestrictionTransaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction
-    .create(symbol_sdk_1.Deadline.create(), mosaicDefinitionTransaction.mosaicId, // mosaicId
-key, // restictionKey
-symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
-symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
-symbol_sdk_1.UInt64.fromUint(1), // newRestrictionValue
-symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
-networkType);
-const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [
+const mosaicGlobalRestrictionTransaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  mosaicDefinitionTransaction.mosaicId, // mosaicId
+  key, // restictionKey
+  symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
+  symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
+  symbol_sdk_1.UInt64.fromUint(1), // newRestrictionValue
+  symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
+  networkType,
+);
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
+  symbol_sdk_1.Deadline.create(),
+  [
     mosaicDefinitionTransaction.toAggregate(kycProviderAccount.publicAccount),
-    mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount)
-], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
+    mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+  ],
+  networkType,
+  [],
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
@@ -49,7 +65,8 @@ console.log(signedTransaction.hash);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 01 */

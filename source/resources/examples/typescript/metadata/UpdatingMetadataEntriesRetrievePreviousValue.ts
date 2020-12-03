@@ -16,17 +16,17 @@
  *
  */
 
-import {of} from 'rxjs';
-import {mergeMap} from 'rxjs/operators';
+import { of } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 import {
-    Account,
-    AccountMetadataTransaction,
-    Convert,
-    Deadline,
-    KeyGenerator,
-    NetworkType,
-    PublicAccount,
-    RepositoryFactoryHttp,
+  Account,
+  AccountMetadataTransaction,
+  Convert,
+  Deadline,
+  KeyGenerator,
+  NetworkType,
+  PublicAccount,
+  RepositoryFactoryHttp,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -52,21 +52,23 @@ const newValue = '000000';
 const newValueBytes = Convert.utf8ToUint8(newValue);
 
 const searchCriteria = {
-    targetAddress: alicePublicAccount.address,
-    scopedMetadataKey: key.toString(),
-    sourceAddress: bobAccount.address,
+  targetAddress: alicePublicAccount.address,
+  scopedMetadataKey: key.toString(),
+  sourceAddress: bobAccount.address,
 };
-const accountMetadataTransaction = metadataHttp
-.search(searchCriteria)
-    .pipe( mergeMap((metadata) => {
-        const currentValueBytes = Convert.utf8ToUint8(metadata.data[0].metadataEntry.value);
-        return of(AccountMetadataTransaction.create(
-            Deadline.create(epochAdjustment),
-            alicePublicAccount.address,
-            key,
-            newValueBytes.length - currentValueBytes.length,
-            Convert.decodeHex(Convert.xor(currentValueBytes, newValueBytes)),
-            networkType,
-        ));
-    }));
+const accountMetadataTransaction = metadataHttp.search(searchCriteria).pipe(
+  mergeMap((metadata) => {
+    const currentValueBytes = Convert.utf8ToUint8(metadata.data[0].metadataEntry.value);
+    return of(
+      AccountMetadataTransaction.create(
+        Deadline.create(epochAdjustment),
+        alicePublicAccount.address,
+        key,
+        newValueBytes.length - currentValueBytes.length,
+        Convert.decodeHex(Convert.xor(currentValueBytes, newValueBytes)),
+        networkType,
+      ),
+    );
+  }),
+);
 /* end block 01 */

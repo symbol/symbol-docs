@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
@@ -32,10 +32,23 @@ const cosignatory2PublicKey = '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB
 const cosignatory2 = symbol_sdk_1.PublicAccount.createFromPublicKey(cosignatory2PublicKey, networkType);
 /* end block 01 */
 /* start block 02 */
-const multisigAccountModificationTransaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(symbol_sdk_1.Deadline.create(), 1, 1, [cosignatory1.address, cosignatory2.address], [], networkType);
+const multisigAccountModificationTransaction = symbol_sdk_1.MultisigAccountModificationTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  1,
+  1,
+  [cosignatory1.address, cosignatory2.address],
+  [],
+  networkType,
+);
 /* end block 02 */
 /* start block 03 */
-const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [multisigAccountModificationTransaction.toAggregate(account.publicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
+  symbol_sdk_1.Deadline.create(),
+  [multisigAccountModificationTransaction.toAggregate(account.publicAccount)],
+  networkType,
+  [],
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 /* end block 03 */
 /* start block 04 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
@@ -48,7 +61,14 @@ console.log(signedTransaction.hash);
 const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  symbol_sdk_1.UInt64.fromUint(480),
+  signedTransaction,
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 const signedHashLockTransaction = account.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -58,8 +78,10 @@ const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    transactionService
-        .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)
-        .subscribe((x) => console.log(x), (err) => console.log(err), () => listener.close());
+  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
+    (x) => console.log(x),
+    (err) => console.log(err),
+    () => listener.close(),
+  );
 });
 /* end block 05 */

@@ -17,15 +17,15 @@
  */
 
 import {
-    Account,
-    AliasAction,
-    AliasTransaction,
-    Deadline,
-    MosaicId,
-    NamespaceId,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  AliasAction,
+  AliasTransaction,
+  Deadline,
+  MosaicId,
+  NamespaceId,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -43,12 +43,13 @@ const mosaicId = new MosaicId('7cdf3b117a3c40cc');
 const networkType = NetworkType.TEST_NET;
 
 const mosaicAliasTransaction = AliasTransaction.createForMosaic(
-    Deadline.create(epochAdjustment),
-    AliasAction.Link,
-    namespaceId,
-    mosaicId,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  AliasAction.Link,
+  namespaceId,
+  mosaicId,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
@@ -61,7 +62,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 02 */

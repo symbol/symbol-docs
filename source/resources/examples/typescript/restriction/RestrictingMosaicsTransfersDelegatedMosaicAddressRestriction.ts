@@ -17,16 +17,16 @@
  */
 
 import {
-    Account,
-    Address,
-    AggregateTransaction,
-    Deadline,
-    KeyGenerator,
-    MosaicAddressRestrictionTransaction,
-    MosaicId,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  Address,
+  AggregateTransaction,
+  Deadline,
+  KeyGenerator,
+  MosaicAddressRestrictionTransaction,
+  MosaicId,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -50,47 +50,48 @@ const networkType = NetworkType.TEST_NET;
 
 const key = KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
 
-const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
-    .create(
-        Deadline.create(epochAdjustment),
-        mosaicId, // mosaicId
-        key, // restrictionKey
-        aliceAddress, // address
-        UInt64.fromUint(1), // newRestrictionValue
-        networkType);
+const aliceMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction.create(
+  Deadline.create(epochAdjustment),
+  mosaicId, // mosaicId
+  key, // restrictionKey
+  aliceAddress, // address
+  UInt64.fromUint(1), // newRestrictionValue
+  networkType,
+);
 
-const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
-    .create(
-        Deadline.create(epochAdjustment),
-        mosaicId, // mosaicId
-        key, // restrictionKey
-        bobAddress, // address
-        UInt64.fromUint(2), // newRestrictionValue
-        networkType);
+const bobMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction.create(
+  Deadline.create(epochAdjustment),
+  mosaicId, // mosaicId
+  key, // restrictionKey
+  bobAddress, // address
+  UInt64.fromUint(2), // newRestrictionValue
+  networkType,
+);
 
-const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction
-    .create(
-        Deadline.create(epochAdjustment),
-        mosaicId, // mosaicId
-        key, // restrictionKey
-        carolAddress, // address
-        UInt64.fromUint(2), // newRestrictionValue
-        networkType);
+const carolMosaicAddressRestrictionTransaction = MosaicAddressRestrictionTransaction.create(
+  Deadline.create(epochAdjustment),
+  mosaicId, // mosaicId
+  key, // restrictionKey
+  carolAddress, // address
+  UInt64.fromUint(2), // newRestrictionValue
+  networkType,
+);
 
 // replace with kyc provider private key
 const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
 const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(epochAdjustment),
-    [
-        aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
-        bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
-        carolMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
-    ],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  [
+    aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+    bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+    carolMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+  ],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -101,7 +102,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 01 */

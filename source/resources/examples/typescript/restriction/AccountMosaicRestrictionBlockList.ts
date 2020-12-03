@@ -17,14 +17,14 @@
  */
 
 import {
-    Account,
-    AccountRestrictionTransaction,
-    Deadline,
-    MosaicId,
-    MosaicRestrictionFlag,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  AccountRestrictionTransaction,
+  Deadline,
+  MosaicId,
+  MosaicRestrictionFlag,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -40,14 +40,14 @@ const companyShareMosaicId = new MosaicId(companyShareMosaicIdHex);
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 
-const transaction = AccountRestrictionTransaction
-    .createMosaicRestrictionModificationTransaction(
-        Deadline.create(epochAdjustment),
-        MosaicRestrictionFlag.BlockMosaic,
-        [companyShareMosaicId],
-        [],
-        networkType,
-        UInt64.fromUint(2000000));
+const transaction = AccountRestrictionTransaction.createMosaicRestrictionModificationTransaction(
+  Deadline.create(epochAdjustment),
+  MosaicRestrictionFlag.BlockMosaic,
+  [companyShareMosaicId],
+  [],
+  networkType,
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -62,7 +62,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

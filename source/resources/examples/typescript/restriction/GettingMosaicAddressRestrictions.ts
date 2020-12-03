@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, MosaicId, RepositoryFactoryHttp} from 'symbol-sdk';
+import { Address, MosaicId, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with address
@@ -30,14 +30,16 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 
-restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
-    .subscribe((mosaicAddressRestrictions) => {
-        if (mosaicAddressRestrictions.restrictions.size > 0) {
-            mosaicAddressRestrictions.restrictions.forEach((value: string, key: string) => {
-                console.log('\n', key, value);
-            });
-        } else {
-            console.log('\n The address does not have mosaic address restrictions assigned.');
-        }
-    }, (err) => console.log(err));
+restrictionHttp.getMosaicAddressRestriction(mosaicId, address).subscribe(
+  (mosaicAddressRestrictions) => {
+    if (mosaicAddressRestrictions.restrictions.size > 0) {
+      mosaicAddressRestrictions.restrictions.forEach((value: string, key: string) => {
+        console.log('\n', key, value);
+      });
+    } else {
+      console.log('\n The address does not have mosaic address restrictions assigned.');
+    }
+  },
+  (err) => console.log(err),
+);
 /* end block 01 */

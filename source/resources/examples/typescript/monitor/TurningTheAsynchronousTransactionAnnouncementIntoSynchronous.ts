@@ -16,20 +16,20 @@
  *
  */
 
-import {merge} from 'rxjs';
-import {filter, tap} from 'rxjs/operators';
+import { merge } from 'rxjs';
+import { filter, tap } from 'rxjs/operators';
 import {
-    Account,
-    Address,
-    Deadline,
-    EmptyMessage,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    RepositoryFactoryHttp,
-    TransactionService,
-    TransferTransaction,
-    UInt64,
+  Account,
+  Address,
+  Deadline,
+  EmptyMessage,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  RepositoryFactoryHttp,
+  TransactionService,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -47,13 +47,13 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    recipientAddress,
-    [new Mosaic(networkCurrencyMosaicId,
-        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
-    EmptyMessage,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  recipientAddress,
+  [new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  EmptyMessage,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
@@ -72,18 +72,21 @@ const listener = repositoryFactory.createListener();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    merge(transactionService.announce(signedTransaction, listener),
-        listener
-            .status(account.address)
-            .pipe(
-                filter((error) => error.hash === signedTransaction.hash),
-                tap((error) => {
-                    throw new Error(error.code);
-                })))
-        .subscribe((transaction) => {
-            console.log(transaction);
-            // TODO: send email to recipient
-            listener.close();
-        }, (err) => console.error(err));
+  merge(
+    transactionService.announce(signedTransaction, listener),
+    listener.status(account.address).pipe(
+      filter((error) => error.hash === signedTransaction.hash),
+      tap((error) => {
+        throw new Error(error.code);
+      }),
+    ),
+  ).subscribe(
+    (transaction) => {
+      console.log(transaction);
+      // TODO: send email to recipient
+      listener.close();
+    },
+    (err) => console.error(err),
+  );
 });
 /* end block 02 */

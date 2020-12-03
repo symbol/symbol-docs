@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with address
 const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
@@ -29,15 +29,16 @@ const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
-restrictionHttp.getMosaicAddressRestriction(mosaicId, address)
-    .subscribe((mosaicAddressRestrictions) => {
+restrictionHttp.getMosaicAddressRestriction(mosaicId, address).subscribe(
+  (mosaicAddressRestrictions) => {
     if (mosaicAddressRestrictions.restrictions.size > 0) {
-        mosaicAddressRestrictions.restrictions.forEach((value, key) => {
-            console.log('\n', key, value);
-        });
+      mosaicAddressRestrictions.restrictions.forEach((value, key) => {
+        console.log('\n', key, value);
+      });
+    } else {
+      console.log('\n The address does not have mosaic address restrictions assigned.');
     }
-    else {
-        console.log('\n The address does not have mosaic address restrictions assigned.');
-    }
-}, (err) => console.log(err));
+  },
+  (err) => console.log(err),
+);
 /* end block 01 */

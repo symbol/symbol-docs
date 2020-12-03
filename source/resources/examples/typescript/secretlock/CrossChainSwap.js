@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,10 +16,10 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const crypto = require("crypto");
-const js_sha3_1 = require("js-sha3");
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const crypto = require('crypto');
+const js_sha3_1 = require('js-sha3');
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 const alicePublicChainAccount = symbol_sdk_1.Account.createFromPrivateKey('', symbol_sdk_1.NetworkType.MAIN_NET);
 const alicePrivateChainAccount = symbol_sdk_1.Account.createFromPrivateKey('', symbol_sdk_1.NetworkType.MIJIN);
@@ -39,36 +39,70 @@ const secret = hash.update(random).hex().toUpperCase();
 console.log('Secret:', secret);
 /* end block 02 */
 /* start block 03 */
-const tx1 = symbol_sdk_1.SecretLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('00D3378709746FC4'), symbol_sdk_1.UInt64.fromUint(10)), symbol_sdk_1.UInt64.fromUint(96 * 3600 / 15), // assuming one block every 15 seconds
-symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256, secret, bobPrivateChainAccount.address, symbol_sdk_1.NetworkType.MIJIN);
+const tx1 = symbol_sdk_1.SecretLockTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('00D3378709746FC4'), symbol_sdk_1.UInt64.fromUint(10)),
+  symbol_sdk_1.UInt64.fromUint((96 * 3600) / 15), // assuming one block every 15 seconds
+  symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256,
+  secret,
+  bobPrivateChainAccount.address,
+  symbol_sdk_1.NetworkType.MIJIN,
+);
 /* end block 03 */
 /* start block 04 */
 const tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
-privateChainTransactionHttp
-    .announce(tx1Signed)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+privateChainTransactionHttp.announce(tx1Signed).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 04 */
 /* start block 05 */
-const tx2 = symbol_sdk_1.SecretLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('10293DE77C684F71'), symbol_sdk_1.UInt64.fromUint(10)), symbol_sdk_1.UInt64.fromUint(84 * 3600 / 15), // assuming one block every 15 seconds
-symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256, secret, alicePublicChainAccount.address, symbol_sdk_1.NetworkType.MAIN_NET, symbol_sdk_1.UInt64.fromUint(2000000));
+const tx2 = symbol_sdk_1.SecretLockTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('10293DE77C684F71'), symbol_sdk_1.UInt64.fromUint(10)),
+  symbol_sdk_1.UInt64.fromUint((84 * 3600) / 15), // assuming one block every 15 seconds
+  symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256,
+  secret,
+  alicePublicChainAccount.address,
+  symbol_sdk_1.NetworkType.MAIN_NET,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 /* end block 05 */
 /* start block 06 */
 const tx2Signed = bobPublicChainAccount.sign(tx2, publicChainGenerationHash);
-publicChainTransactionHttp
-    .announce(tx2Signed)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+publicChainTransactionHttp.announce(tx2Signed).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 06 */
 /* start block 07 */
-const tx3 = symbol_sdk_1.SecretProofTransaction.create(symbol_sdk_1.Deadline.create(), symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256, secret, alicePublicChainAccount.address, proof, symbol_sdk_1.NetworkType.MAIN_NET, symbol_sdk_1.UInt64.fromUint(2000000));
+const tx3 = symbol_sdk_1.SecretProofTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256,
+  secret,
+  alicePublicChainAccount.address,
+  proof,
+  symbol_sdk_1.NetworkType.MAIN_NET,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 const tx3Signed = alicePublicChainAccount.sign(tx3, publicChainGenerationHash);
-publicChainTransactionHttp
-    .announce(tx3Signed)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+publicChainTransactionHttp.announce(tx3Signed).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 07 */
 /* start block 08 */
-const tx4 = symbol_sdk_1.SecretProofTransaction.create(symbol_sdk_1.Deadline.create(), symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256, secret, bobPrivateChainAccount.address, proof, symbol_sdk_1.NetworkType.MIJIN);
+const tx4 = symbol_sdk_1.SecretProofTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256,
+  secret,
+  bobPrivateChainAccount.address,
+  proof,
+  symbol_sdk_1.NetworkType.MIJIN,
+);
 const tx4Signed = bobPrivateChainAccount.sign(tx4, privateChainGenerationHash);
-privateChainTransactionHttp
-    .announce(tx4Signed)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+privateChainTransactionHttp.announce(tx4Signed).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 08 */

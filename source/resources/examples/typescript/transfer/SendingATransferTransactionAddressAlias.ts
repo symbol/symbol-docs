@@ -16,7 +16,7 @@
  *
  */
 
-import {Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction, UInt64} from 'symbol-sdk';
+import { Deadline, EmptyMessage, NamespaceId, NetworkType, TransferTransaction, UInt64 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
@@ -27,11 +27,5 @@ const networkType = NetworkType.TEST_NET;
 // Replace with aliased address
 const recipientAddress = new NamespaceId('foo');
 
-TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    recipientAddress,
-    [],
-    EmptyMessage,
-    networkType,
-    UInt64.fromUint(2000000));
+TransferTransaction.create(Deadline.create(epochAdjustment), recipientAddress, [], EmptyMessage, networkType, UInt64.fromUint(2000000));
 /* end block 01 */

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,9 +16,9 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const operators_1 = require("rxjs/operators");
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const operators_1 = require('rxjs/operators');
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with signer public key
 const signerPublicKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
@@ -35,27 +35,32 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const searchCriteria = {
-    group: symbol_sdk_1.TransactionGroup.Confirmed,
-    signerPublicKey,
-    recipientAddress,
-    pageSize: 100,
-    pageNumber: 1,
-    type: [symbol_sdk_1.TransactionType.TRANSFER]
+  group: symbol_sdk_1.TransactionGroup.Confirmed,
+  signerPublicKey,
+  recipientAddress,
+  pageSize: 100,
+  pageNumber: 1,
+  type: [symbol_sdk_1.TransactionType.TRANSFER],
 };
 transactionHttp
-    .search(searchCriteria)
-    .pipe(operators_1.map((_) => _.data), 
-// Process each transaction individually.
-operators_1.mergeMap((_) => _), 
-// Map transaction as transfer transaction.
-operators_1.map((_) => _), 
-// Filter transactions containing a given mosaic
-operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)), 
-// Transform absolute amount to relative amount.
-operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)), 
-// Add all amounts into an array.
-operators_1.toArray(), 
-// Sum all the amounts.
-operators_1.map((_) => _.reduce((a, b) => a + b, 0)))
-    .subscribe((total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total), (err) => console.error(err));
+  .search(searchCriteria)
+  .pipe(
+    operators_1.map((_) => _.data),
+    // Process each transaction individually.
+    operators_1.mergeMap((_) => _),
+    // Map transaction as transfer transaction.
+    operators_1.map((_) => _),
+    // Filter transactions containing a given mosaic
+    operators_1.filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(mosaicId)),
+    // Transform absolute amount to relative amount.
+    operators_1.map((_) => _.mosaics[0].amount.compact() / Math.pow(10, divisibility)),
+    // Add all amounts into an array.
+    operators_1.toArray(),
+    // Sum all the amounts.
+    operators_1.map((_) => _.reduce((a, b) => a + b, 0)),
+  )
+  .subscribe(
+    (total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total),
+    (err) => console.error(err),
+  );
 /* end block 01 */
