@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,13 +16,13 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
-const operators_1 = require("rxjs/operators");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
+const operators_1 = require('rxjs/operators');
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction, account) => {
-    const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
-    return account.signCosignatureTransaction(cosignatureTransaction);
+  const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
+  return account.signCosignatureTransaction(cosignatureTransaction);
 };
 /* end block 01 */
 /* start block 02 */
@@ -37,15 +37,22 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 listener.open().then(() => {
-    listener
-        .aggregateBondedAdded(account.address)
-        .pipe(operators_1.filter((_) => !_.signedByAccount(account.publicAccount)), operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((signedCosignatureTransaction) => {
+  listener
+    .aggregateBondedAdded(account.address)
+    .pipe(
+      operators_1.filter((_) => !_.signedByAccount(account.publicAccount)),
+      operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+      operators_1.mergeMap((signedCosignatureTransaction) => {
         listener.close();
         return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
-    }))
-        .subscribe((announcedTransaction) => {
+      }),
+    )
+    .subscribe(
+      (announcedTransaction) => {
         console.log(announcedTransaction);
         listener.close();
-    }, (err) => console.error(err));
+      },
+      (err) => console.error(err),
+    );
 });
 /* end block 02 */

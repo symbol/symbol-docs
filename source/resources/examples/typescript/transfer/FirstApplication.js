@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
@@ -27,7 +27,14 @@ const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [new symbol_sdk_1.Mosaic(mosaicId, symbol_sdk_1.UInt64.fromUint(1))], symbol_sdk_1.PlainMessage.create('enjoy your ticket'), networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  recipientAddress,
+  [new symbol_sdk_1.Mosaic(mosaicId, symbol_sdk_1.UInt64.fromUint(1))],
+  symbol_sdk_1.PlainMessage.create('enjoy your ticket'),
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 /* end block 01 */
 /* start block 02 */
 // replace with ticket vendor private key
@@ -42,7 +49,8 @@ const signedTransaction = account.sign(transferTransaction, networkGenerationHas
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

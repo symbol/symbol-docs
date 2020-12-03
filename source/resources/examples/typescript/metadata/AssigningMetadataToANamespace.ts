@@ -17,15 +17,15 @@
  */
 
 import {
-    Account,
-    AggregateTransaction,
-    Deadline,
-    KeyGenerator,
-    NamespaceId,
-    NamespaceMetadataTransaction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  Deadline,
+  KeyGenerator,
+  NamespaceId,
+  NamespaceMetadataTransaction,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -45,58 +45,59 @@ const address = 'ComfyClothingCompany HQ';
 const phone = '000-0000';
 
 const nameMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(epochAdjustment),
-    companyAccount.address,
-    KeyGenerator.generateUInt64Key('NAME'),
-    namespaceId,
-    name.length,
-    name,
-    networkType,
+  Deadline.create(epochAdjustment),
+  companyAccount.address,
+  KeyGenerator.generateUInt64Key('NAME'),
+  namespaceId,
+  name.length,
+  name,
+  networkType,
 );
 
 const emailMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(epochAdjustment),
-    companyAccount.address,
-    KeyGenerator.generateUInt64Key('EMAIL'),
-    namespaceId,
-    email.length,
-    email,
-    networkType,
+  Deadline.create(epochAdjustment),
+  companyAccount.address,
+  KeyGenerator.generateUInt64Key('EMAIL'),
+  namespaceId,
+  email.length,
+  email,
+  networkType,
 );
 
 const addressMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(epochAdjustment),
-    companyAccount.address,
-    KeyGenerator.generateUInt64Key('ADDRESS'),
-    namespaceId,
-    address.length,
-    address,
-    networkType,
+  Deadline.create(epochAdjustment),
+  companyAccount.address,
+  KeyGenerator.generateUInt64Key('ADDRESS'),
+  namespaceId,
+  address.length,
+  address,
+  networkType,
 );
 
 const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
-    Deadline.create(epochAdjustment),
-    companyAccount.address,
-    KeyGenerator.generateUInt64Key('PHONE'),
-    namespaceId,
-    phone.length,
-    phone,
-    networkType,
+  Deadline.create(epochAdjustment),
+  companyAccount.address,
+  KeyGenerator.generateUInt64Key('PHONE'),
+  namespaceId,
+  phone.length,
+  phone,
+  networkType,
 );
 /* end block 01 */
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(epochAdjustment),
-    [
-        nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
-        emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
-        addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
-        phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
-    ],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  [
+    nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
+    emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
+    addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
+    phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
+  ],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -109,7 +110,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

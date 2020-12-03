@@ -16,7 +16,7 @@
  *
  */
 
-import {NetworkType, Password, SimpleWallet} from 'symbol-sdk';
+import { NetworkType, Password, SimpleWallet } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with password
@@ -26,6 +26,5 @@ const privateKey = '000000000000000000000000000000000000000000000000000000000000
 
 const wallet = SimpleWallet.createFromPrivateKey('wallet-name', password, privateKey, NetworkType.TEST_NET);
 const account = wallet.open(password);
-console.log('Your account address is:', account.address.pretty(),
-    'and its private key', account.privateKey);
+console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 /* end block 01 */

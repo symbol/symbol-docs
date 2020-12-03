@@ -17,30 +17,29 @@
  */
 
 /* start block 01 */
-import {sha3_256} from 'js-sha3';
-import {BlockRepository, MerklePosition, RepositoryFactoryHttp, UInt64} from 'symbol-sdk';
+import { sha3_256 } from 'js-sha3';
+import { BlockRepository, MerklePosition, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHttp: BlockRepository) => {
-    // 2. Obtain HRoot; in Symbol, this is stored in the block header.
-    const HRoot = (await blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
-    // 3. Request the merkleProof: H1, H7, H10
-    const merkleProof = (await blockHttp.getMerkleTransaction(height, leaf).toPromise()).merklePath!;
-    // 4. Calculate HRoot'.
-    if (merkleProof.length === 0) {
-        // There is a single item in the tree, so HRoot' = leaf.
-        return leaf.toUpperCase() === HRoot.toUpperCase();
+  // 2. Obtain HRoot; in Symbol, this is stored in the block header.
+  const HRoot = (await blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
+  // 3. Request the merkleProof: H1, H7, H10
+  const merkleProof = (await blockHttp.getMerkleTransaction(height, leaf).toPromise()).merklePath!;
+  // 4. Calculate HRoot'.
+  if (merkleProof.length === 0) {
+    // There is a single item in the tree, so HRoot' = leaf.
+    return leaf.toUpperCase() === HRoot.toUpperCase();
+  }
+  const HRoot0 = merkleProof.reduce((proofHash, pathItem) => {
+    const hasher = sha3_256.create();
+    if (pathItem.position === MerklePosition.Left) {
+      return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
+    } else {
+      return hasher.update(Buffer.from(proofHash + pathItem.hash, 'hex')).hex();
     }
-    const HRoot0 = merkleProof
-        .reduce( (proofHash, pathItem) => {
-            const hasher = sha3_256.create();
-            if (pathItem.position === MerklePosition.Left) {
-                return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
-            } else {
-                return hasher.update(Buffer.from(proofHash + pathItem.hash, 'hex')).hex();
-            }
-        }, leaf);
-    // 5. Compare if the HRoot' equals to HRoot.
-    return HRoot.toUpperCase() === HRoot0.toUpperCase();
+  }, leaf);
+  // 5. Compare if the HRoot' equals to HRoot.
+  return HRoot.toUpperCase() === HRoot0.toUpperCase();
 };
 
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';

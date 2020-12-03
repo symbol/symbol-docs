@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with address
 const rawAddress = 'TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU';
@@ -26,17 +26,18 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionAccountRepository();
-restrictionHttp.getAccountRestrictions(address)
-    .subscribe((accountRestrictions) => {
+restrictionHttp.getAccountRestrictions(address).subscribe(
+  (accountRestrictions) => {
     if (accountRestrictions.length > 0) {
-        accountRestrictions
-            .filter((accountRestriction) => accountRestriction.values.length > 0)
-            .map((accountRestriction) => {
-            console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
+      accountRestrictions
+        .filter((accountRestriction) => accountRestriction.values.length > 0)
+        .map((accountRestriction) => {
+          console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
         });
+    } else {
+      console.log('The address does not have account restriction assigned.');
     }
-    else {
-        console.log('The address does not have account restriction assigned.');
-    }
-}, (err) => console.log(err));
+  },
+  (err) => console.log(err),
+);
 /* end block 01 */

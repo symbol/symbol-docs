@@ -16,7 +16,7 @@
  *
  */
 
-import {RepositoryFactoryHttp} from 'symbol-sdk';
+import { RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -24,11 +24,12 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 
 listener.open().then(() => {
-    listener
-        .newBlock()
-        .subscribe((block) => {
-            console.log(block);
-            listener.close();
-        }, (err) => console.error(err));
+  listener.newBlock().subscribe(
+    (block) => {
+      console.log(block);
+      listener.close();
+    },
+    (err) => console.error(err),
+  );
 });
 /* end block 01 */

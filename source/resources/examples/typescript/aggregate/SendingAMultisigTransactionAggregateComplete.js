@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
@@ -36,10 +36,22 @@ const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 /* end block 01 */
 /* start block 02 */
-const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.PlainMessage.create('sending 10 symbol.xym'), networkType);
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  recipientAddress,
+  [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  symbol_sdk_1.PlainMessage.create('sending 10 symbol.xym'),
+  networkType,
+);
 /* end block 02 */
 /* start block 03 */
-const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(symbol_sdk_1.Deadline.create(), [transferTransaction.toAggregate(multisigAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
+  symbol_sdk_1.Deadline.create(),
+  [transferTransaction.toAggregate(multisigAccount)],
+  networkType,
+  [],
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 /* end block 03 */
 /* start block 04 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
@@ -49,7 +61,8 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkG
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 04 */

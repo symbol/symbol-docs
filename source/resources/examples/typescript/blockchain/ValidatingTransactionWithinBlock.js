@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,42 +16,63 @@
  * limitations under the License.
  *
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+var __awaiter =
+  (this && this.__awaiter) ||
+  function (thisArg, _arguments, P, generator) {
+    function adopt(value) {
+      return value instanceof P
+        ? value
+        : new P(function (resolve) {
+            resolve(value);
+          });
+    }
     return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
+      function fulfilled(value) {
+        try {
+          step(generator.next(value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function rejected(value) {
+        try {
+          step(generator['throw'](value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function step(result) {
+        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-};
-Object.defineProperty(exports, "__esModule", { value: true });
+  };
+Object.defineProperty(exports, '__esModule', { value: true });
 /* start block 01 */
-const js_sha3_1 = require("js-sha3");
-const symbol_sdk_1 = require("symbol-sdk");
-const validateTransactionInBlock = (leaf, height, blockHttp) => __awaiter(void 0, void 0, void 0, function* () {
+const js_sha3_1 = require('js-sha3');
+const symbol_sdk_1 = require('symbol-sdk');
+const validateTransactionInBlock = (leaf, height, blockHttp) =>
+  __awaiter(void 0, void 0, void 0, function* () {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
     const HRoot = (yield blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
     // 3. Request the merkleProof: H1, H7, H10
     const merkleProof = (yield blockHttp.getMerkleTransaction(height, leaf).toPromise()).merklePath;
     // 4. Calculate HRoot'.
     if (merkleProof.length === 0) {
-        // There is a single item in the tree, so HRoot' = leaf.
-        return leaf.toUpperCase() === HRoot.toUpperCase();
+      // There is a single item in the tree, so HRoot' = leaf.
+      return leaf.toUpperCase() === HRoot.toUpperCase();
     }
-    const HRoot0 = merkleProof
-        .reduce((proofHash, pathItem) => {
-        const hasher = js_sha3_1.sha3_256.create();
-        if (pathItem.position === symbol_sdk_1.MerklePosition.Left) {
-            return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
-        }
-        else {
-            return hasher.update(Buffer.from(proofHash + pathItem.hash, 'hex')).hex();
-        }
+    const HRoot0 = merkleProof.reduce((proofHash, pathItem) => {
+      const hasher = js_sha3_1.sha3_256.create();
+      if (pathItem.position === symbol_sdk_1.MerklePosition.Left) {
+        return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
+      } else {
+        return hasher.update(Buffer.from(proofHash + pathItem.hash, 'hex')).hex();
+      }
     }, leaf);
     // 5. Compare if the HRoot' equals to HRoot.
     return HRoot.toUpperCase() === HRoot0.toUpperCase();
-});
+  });
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();

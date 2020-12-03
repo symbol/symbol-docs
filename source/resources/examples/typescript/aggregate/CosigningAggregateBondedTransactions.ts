@@ -16,22 +16,21 @@
  *
  */
 
-import {filter, map, mergeMap} from 'rxjs/operators';
+import { map, mergeMap } from 'rxjs/operators';
 import {
-    Account,
-    AggregateTransaction,
-    CosignatureSignedTransaction,
-    CosignatureTransaction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    Transaction,
-    TransactionGroup,
+  Account,
+  AggregateTransaction,
+  CosignatureSignedTransaction,
+  CosignatureTransaction,
+  NetworkType,
+  RepositoryFactoryHttp,
+  TransactionGroup,
 } from 'symbol-sdk';
 
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
-    const cosignatureTransaction = CosignatureTransaction.create(transaction);
-    return account.signCosignatureTransaction(cosignatureTransaction);
+  const cosignatureTransaction = CosignatureTransaction.create(transaction);
+  return account.signCosignatureTransaction(cosignatureTransaction);
 };
 /* end block 01 */
 
@@ -53,12 +52,13 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
 
 transactionHttp
-    .getTransaction(transactionHash, TransactionGroup.Partial)
-    .pipe(
-        map((transaction) => cosignAggregateBondedTransaction(transaction as AggregateTransaction, account)),
-        mergeMap((cosignatureSignedTransaction) =>
-            transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)),
-    )
-    .subscribe((announcedTransaction) => console.log(announcedTransaction),
-        (err) => console.error(err));
+  .getTransaction(transactionHash, TransactionGroup.Partial)
+  .pipe(
+    map((transaction) => cosignAggregateBondedTransaction(transaction as AggregateTransaction, account)),
+    mergeMap((cosignatureSignedTransaction) => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)),
+  )
+  .subscribe(
+    (announcedTransaction) => console.log(announcedTransaction),
+    (err) => console.error(err),
+  );
 /* end block 03 */

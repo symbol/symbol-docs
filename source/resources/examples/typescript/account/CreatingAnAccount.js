@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 const account = symbol_sdk_1.Account.generateNewAccount(symbol_sdk_1.NetworkType.TEST_NET);
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);

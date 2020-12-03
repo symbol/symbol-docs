@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
@@ -35,19 +35,46 @@ const ticketDivisibility = 0;
 const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const aliceToTicketDistributorTx = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), ticketDistributorPublicAccount.address, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.PlainMessage.create('send 100 symbol.xym to distributor'), networkType);
-const ticketDistributorToAliceTx = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), aliceAccount.address, [new symbol_sdk_1.Mosaic(ticketMosaicId, symbol_sdk_1.UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))], symbol_sdk_1.PlainMessage.create('send 1 museum ticket to customer'), networkType);
+const aliceToTicketDistributorTx = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  ticketDistributorPublicAccount.address,
+  [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))],
+  symbol_sdk_1.PlainMessage.create('send 100 symbol.xym to distributor'),
+  networkType,
+);
+const ticketDistributorToAliceTx = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  aliceAccount.address,
+  [new symbol_sdk_1.Mosaic(ticketMosaicId, symbol_sdk_1.UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))],
+  symbol_sdk_1.PlainMessage.create('send 1 museum ticket to customer'),
+  networkType,
+);
 /* end block 01 */
 /* start block 02 */
-const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(symbol_sdk_1.Deadline.create(), [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
-    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)], networkType, [], symbol_sdk_1.UInt64.fromUint(2000000));
+const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
+  symbol_sdk_1.Deadline.create(),
+  [
+    aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
+    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount),
+  ],
+  networkType,
+  [],
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = aliceAccount.sign(aggregateTransaction, networkGenerationHash);
 console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
-const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(symbol_sdk_1.Deadline.create(), new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))), symbol_sdk_1.UInt64.fromUint(480), signedTransaction, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  symbol_sdk_1.UInt64.fromUint(480),
+  signedTransaction,
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -57,8 +84,10 @@ const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    transactionService
-        .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)
-        .subscribe((x) => console.log(x), (err) => console.log(err), () => listener.close());
+  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
+    (x) => console.log(x),
+    (err) => console.log(err),
+    () => listener.close(),
+  );
 });
 /* end block 03 */

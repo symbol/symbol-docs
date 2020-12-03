@@ -16,24 +16,24 @@
  *
  */
 
-import {of} from 'rxjs';
-import {mergeMap} from 'rxjs/operators';
+import { of } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 import {
-    Account,
-    AggregateTransaction,
-    Deadline,
-    HashLockTransaction,
-    KeyGenerator,
-    MetadataHttp,
-    MetadataTransactionService,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    SignedTransaction,
-    TransactionService,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  Deadline,
+  HashLockTransaction,
+  KeyGenerator,
+  MetadataHttp,
+  MetadataTransactionService,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  SignedTransaction,
+  TransactionService,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -58,36 +58,38 @@ const key = KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 
 const accountMetadataTransaction = metadataService.createAccountMetadataTransaction(
-    Deadline.create(epochAdjustment),
-    networkType,
-    alicePublicAccount.address,
-    key,
-    newValue,
-    bobAccount.publicAccount.address,
-    UInt64.fromUint(0));
+  Deadline.create(epochAdjustment),
+  networkType,
+  alicePublicAccount.address,
+  key,
+  newValue,
+  bobAccount.publicAccount.address,
+  UInt64.fromUint(0),
+);
 /* end block 01 */
 
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedAggregateTransaction = accountMetadataTransaction
-    .pipe(
-        mergeMap((transaction) => {
-            const aggregateTransaction = AggregateTransaction.createBonded(
-                Deadline.create(epochAdjustment),
-                [transaction.toAggregate(bobAccount.publicAccount)],
-                networkType,
-                [],
-                UInt64.fromUint(2000000));
-            const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
-            return of(signedTransaction);
-        }));
+const signedAggregateTransaction = accountMetadataTransaction.pipe(
+  mergeMap((transaction) => {
+    const aggregateTransaction = AggregateTransaction.createBonded(
+      Deadline.create(epochAdjustment),
+      [transaction.toAggregate(bobAccount.publicAccount)],
+      networkType,
+      [],
+      UInt64.fromUint(2000000),
+    );
+    const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
+    return of(signedTransaction);
+  }),
+);
 /* end block 02 */
 
 /* start block 03 */
 interface SignedAggregateHashLock {
-    readonly aggregate: SignedTransaction;
-    readonly hashLock: SignedTransaction;
+  readonly aggregate: SignedTransaction;
+  readonly hashLock: SignedTransaction;
 }
 
 // replace with symbol.xym id
@@ -96,24 +98,25 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const signedAggregateHashLock = signedAggregateTransaction.pipe(
-    mergeMap((signedAggregateTransaction) => {
-        const hashLockTransaction = HashLockTransaction.create(
-            Deadline.create(epochAdjustment),
-            new Mosaic(networkCurrencyMosaicId,
-                UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
-            UInt64.fromUint(480),
-            signedAggregateTransaction,
-            networkType,
-            UInt64.fromUint(2000000));
-        const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
-        const signedAggregateHashLock: SignedAggregateHashLock = {
-            aggregate: signedAggregateTransaction,
-            hashLock: signedTransaction,
-        };
-        console.log('Aggregate Transaction Hash:', signedAggregateTransaction.hash + '\n');
-        console.log('HashLock Transaction Hash:', signedTransaction.hash + '\n');
-        return of(signedAggregateHashLock);
-    }));
+  mergeMap((signedAggregateTransaction) => {
+    const hashLockTransaction = HashLockTransaction.create(
+      Deadline.create(epochAdjustment),
+      new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+      UInt64.fromUint(480),
+      signedAggregateTransaction,
+      networkType,
+      UInt64.fromUint(2000000),
+    );
+    const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+    const signedAggregateHashLock: SignedAggregateHashLock = {
+      aggregate: signedAggregateTransaction,
+      hashLock: signedTransaction,
+    };
+    console.log('Aggregate Transaction Hash:', signedAggregateTransaction.hash + '\n');
+    console.log('HashLock Transaction Hash:', signedTransaction.hash + '\n');
+    return of(signedAggregateHashLock);
+  }),
+);
 /* end block 03 */
 
 /* start block 04 */
@@ -124,16 +127,16 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    signedAggregateHashLock.pipe(
-        mergeMap((signedAggregateHashLock) =>
-            transactionService.announceHashLockAggregateBonded(
-                signedAggregateHashLock.hashLock,
-                signedAggregateHashLock.aggregate,
-                listener),
-        ),
-    ).subscribe(
-        (ignored) => console.log('Transaction confirmed'),
-        (err) => console.log(err),
-        () => listener.close());
+  signedAggregateHashLock
+    .pipe(
+      mergeMap((signedAggregateHashLock) =>
+        transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener),
+      ),
+    )
+    .subscribe(
+      (ignored) => console.log('Transaction confirmed'),
+      (err) => console.log(err),
+      () => listener.close(),
+    );
 });
 /* end block 04 */

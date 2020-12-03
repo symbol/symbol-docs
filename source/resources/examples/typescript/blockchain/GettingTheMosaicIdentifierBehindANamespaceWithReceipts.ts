@@ -16,41 +16,39 @@
  *
  */
 
-import {map, mergeMap} from 'rxjs/operators';
+import { map, mergeMap } from 'rxjs/operators';
 import {
-    Account,
-    Address,
-    Deadline,
-    Mosaic,
-    NamespaceId,
-    NetworkType,
-    PlainMessage,
-    RepositoryFactoryHttp,
-    TransactionService,
-    TransferTransaction,
-    UInt64,
+  Account,
+  Address,
+  Deadline,
+  Mosaic,
+  NamespaceId,
+  NetworkType,
+  PlainMessage,
+  RepositoryFactoryHttp,
+  TransactionService,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
 
 /* start block 01 */
-const aliasedMosaic = new Mosaic(
-    new NamespaceId('symbol.xym'),
-    UInt64.fromUint(1000000),
-);
+const aliasedMosaic = new Mosaic(new NamespaceId('symbol.xym'), UInt64.fromUint(1000000));
 /* end block 01 */
 
 /* start block 02 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
-    [aliasedMosaic],
-    PlainMessage.create('Test aliased mosaic'),
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
+  [aliasedMosaic],
+  PlainMessage.create('Test aliased mosaic'),
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
@@ -71,15 +69,18 @@ const listener = repositoryFactory.createListener();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    transactionService
-        .announce(signedTransaction, listener)
-        .pipe(
-            mergeMap((transaction) =>
-                transactionService.resolveAliases([transaction.transactionInfo!.hash!])),
-            map((transactions) => transactions[0] as TransferTransaction))
-        .subscribe((transaction) => {
-            console.log('Resolved MosaicId: ', transaction.mosaics[0].id.toHex());
-            listener.close();
-        }, (err) => console.log(err));
+  transactionService
+    .announce(signedTransaction, listener)
+    .pipe(
+      mergeMap((transaction) => transactionService.resolveAliases([transaction.transactionInfo!.hash!])),
+      map((transactions) => transactions[0] as TransferTransaction),
+    )
+    .subscribe(
+      (transaction) => {
+        console.log('Resolved MosaicId: ', transaction.mosaics[0].id.toHex());
+        listener.close();
+      },
+      (err) => console.log(err),
+    );
 });
 /* end block 03 */

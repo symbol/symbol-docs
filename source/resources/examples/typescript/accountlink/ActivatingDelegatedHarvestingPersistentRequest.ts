@@ -1,11 +1,11 @@
 import {
-    Account,
-    Deadline,
-    NetworkType,
-    PersistentDelegationRequestTransaction,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  Deadline,
+  NetworkType,
+  PersistentDelegationRequestTransaction,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 /* start block 01 */

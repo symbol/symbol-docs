@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,9 +16,9 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const operators_1 = require("rxjs/operators");
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const operators_1 = require('rxjs/operators');
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
@@ -35,10 +35,13 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 // replace with transaction hash
 const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
 transactionHttp
-    .getTransaction(transactionHash, symbol_sdk_1.TransactionGroup.Confirmed)
-    .pipe(operators_1.map((x) => x))
-    .subscribe((transaction) => {
-    console.log('Raw message: ', transaction.message.payload);
-    console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount).payload);
-}, ((err) => console.log(err)));
+  .getTransaction(transactionHash, symbol_sdk_1.TransactionGroup.Confirmed)
+  .pipe(operators_1.map((x) => x))
+  .subscribe(
+    (transaction) => {
+      console.log('Raw message: ', transaction.message.payload);
+      console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount).payload);
+    },
+    (err) => console.log(err),
+  );
 /* end block 01 */

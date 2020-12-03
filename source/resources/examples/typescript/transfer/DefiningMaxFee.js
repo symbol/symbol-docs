@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,18 +16,41 @@
  * limitations under the License.
  *
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+var __awaiter =
+  (this && this.__awaiter) ||
+  function (thisArg, _arguments, P, generator) {
+    function adopt(value) {
+      return value instanceof P
+        ? value
+        : new P(function (resolve) {
+            resolve(value);
+          });
+    }
     return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
+      function fulfilled(value) {
+        try {
+          step(generator.next(value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function rejected(value) {
+        try {
+          step(generator['throw'](value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function step(result) {
+        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
-const example = () => __awaiter(void 0, void 0, void 0, function* () {
+  };
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
+const example = () =>
+  __awaiter(void 0, void 0, void 0, function* () {
     /* start block 01 */
     const publicAccount1 = symbol_sdk_1.Account.generateNewAccount(symbol_sdk_1.NetworkType.TEST_NET).publicAccount;
     const publicAccount2 = symbol_sdk_1.Account.generateNewAccount(symbol_sdk_1.NetworkType.TEST_NET).publicAccount;
@@ -39,16 +62,23 @@ const example = () => __awaiter(void 0, void 0, void 0, function* () {
     // Define transaction and set max fee
     const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
     const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
-    const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [], symbol_sdk_1.PlainMessage.create('This is a test message'), symbol_sdk_1.NetworkType.TEST_NET)
-        .setMaxFee(medianFeeMultiplier);
+    const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+      symbol_sdk_1.Deadline.create(),
+      recipientAddress,
+      [],
+      symbol_sdk_1.PlainMessage.create('This is a test message'),
+      symbol_sdk_1.NetworkType.TEST_NET,
+    ).setMaxFee(medianFeeMultiplier);
     /* end block 01 */
     /* start block 02 */
     // Define transaction and set max fee
     const requiredCosignatures = 1;
-    const aggregateTransaction = symbol_sdk_1.AggregateTransaction
-        .createBonded(symbol_sdk_1.Deadline.create(), [transferTransaction.toAggregate(publicAccount1),
-        transferTransaction.toAggregate(publicAccount2)], symbol_sdk_1.NetworkType.TEST_NET, [])
-        .setMaxFeeForAggregate(medianFeeMultiplier, 1);
+    const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
+      symbol_sdk_1.Deadline.create(),
+      [transferTransaction.toAggregate(publicAccount1), transferTransaction.toAggregate(publicAccount2)],
+      symbol_sdk_1.NetworkType.TEST_NET,
+      [],
+    ).setMaxFeeForAggregate(medianFeeMultiplier, 1);
     /* end block 02 */
-});
+  });
 example().then((result) => console.log(result));

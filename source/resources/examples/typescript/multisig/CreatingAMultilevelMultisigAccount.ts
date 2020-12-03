@@ -17,18 +17,18 @@
  */
 
 import {
-    Account,
-    AggregateTransaction,
-    Deadline,
-    HashLockTransaction,
-    Mosaic,
-    MosaicId,
-    MultisigAccountModificationTransaction,
-    NetworkType,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    TransactionService,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  Deadline,
+  HashLockTransaction,
+  Mosaic,
+  MosaicId,
+  MultisigAccountModificationTransaction,
+  NetworkType,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  TransactionService,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -48,12 +48,13 @@ const cosignatoryAccount6PublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A
 const cosignatory6 = PublicAccount.createFromPublicKey(cosignatoryAccount6PublicKey, networkType);
 
 const convertMultisigAccount2Transaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(epochAdjustment),
-    1,
-    1,
-    [cosignatory5.address, cosignatory6.address],
-    [],
-    networkType);
+  Deadline.create(epochAdjustment),
+  1,
+  1,
+  [cosignatory5.address, cosignatory6.address],
+  [],
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -71,12 +72,13 @@ const cosignatoryAccount4PublicKey = 'EB2B065D27C6A6FB322F2E568E1AAD9CD6C0F15567
 const cosignatory4 = PublicAccount.createFromPublicKey(cosignatoryAccount4PublicKey, networkType);
 
 const convertMultisigAccount3Transaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(epochAdjustment),
-    2,
-    1,
-    [cosignatory7.address, cosignatory8.address, cosignatory4.address],
-    [],
-    networkType);
+  Deadline.create(epochAdjustment),
+  2,
+  1,
+  [cosignatory7.address, cosignatory8.address, cosignatory4.address],
+  [],
+  networkType,
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -85,23 +87,27 @@ const multisig1PrivateKey = '000000000000000000000000000000000000000000000000000
 const multisigAccount1 = Account.createFromPrivateKey(multisig1PrivateKey, networkType);
 
 const convertMultisigAccount1Transaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(epochAdjustment),
-    3,
-    1,
-    [multisigAccount2.publicAccount.address, multisigAccount3.publicAccount.address, cosignatory4.address],
-    [],
-    networkType);
+  Deadline.create(epochAdjustment),
+  3,
+  1,
+  [multisigAccount2.publicAccount.address, multisigAccount3.publicAccount.address, cosignatory4.address],
+  [],
+  networkType,
+);
 /* end block 03 */
 
 /* start block 04 */
 const aggregateTransaction = AggregateTransaction.createBonded(
-    Deadline.create(epochAdjustment),
-    [convertMultisigAccount2Transaction.toAggregate(multisigAccount2.publicAccount),
-        convertMultisigAccount3Transaction.toAggregate(multisigAccount3.publicAccount),
-        convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  [
+    convertMultisigAccount2Transaction.toAggregate(multisigAccount2.publicAccount),
+    convertMultisigAccount3Transaction.toAggregate(multisigAccount3.publicAccount),
+    convertMultisigAccount1Transaction.toAggregate(multisigAccount1.publicAccount),
+  ],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -114,13 +120,13 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(epochAdjustment),
-    new Mosaic(networkCurrencyMosaicId,
-        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
-    UInt64.fromUint(480),
-    signedTransaction,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  UInt64.fromUint(480),
+  signedTransaction,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 const signedHashLockTransaction = multisigAccount1.sign(hashLockTransaction, networkGenerationHash);
 
@@ -133,11 +139,10 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    transactionService
-        .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)
-        .subscribe(
-            (x) => console.log(x),
-            (err) => console.log(err),
-            () => listener.close());
+  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
+    (x) => console.log(x),
+    (err) => console.log(err),
+    () => listener.close(),
+  );
 });
 /* end block 04 */

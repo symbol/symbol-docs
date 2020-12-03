@@ -17,14 +17,14 @@
  */
 
 import {
-    Account,
-    Deadline,
-    MosaicId,
-    MosaicSupplyChangeAction,
-    MosaicSupplyChangeTransaction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  Deadline,
+  MosaicId,
+  MosaicSupplyChangeAction,
+  MosaicSupplyChangeTransaction,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -45,12 +45,13 @@ const divisibility = 0;
 const delta = 1000000;
 
 const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
-    Deadline.create(epochAdjustment),
-    mosaicId,
-    MosaicSupplyChangeAction.Increase,
-    UInt64.fromUint(delta * Math.pow(10, divisibility)),
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  mosaicId,
+  MosaicSupplyChangeAction.Increase,
+  UInt64.fromUint(delta * Math.pow(10, divisibility)),
+  networkType,
+  UInt64.fromUint(2000000),
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -62,7 +63,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 02 */
