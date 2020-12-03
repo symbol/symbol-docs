@@ -1,12 +1,4 @@
-import {
-    Account,
-    AccountKeyLinkTransaction,
-    Deadline,
-    LinkAction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
-} from 'symbol-sdk';
+import { Account, AccountKeyLinkTransaction, Deadline, LinkAction, NetworkType, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with network type
@@ -20,11 +12,12 @@ const remoteAccount = Account.generateNewAccount(networkType);
 
 /* start block 02 */
 const accountLinkTransaction = AccountKeyLinkTransaction.create(
-    Deadline.create(),
-    remoteAccount.publicKey,
-    LinkAction.Link,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(),
+  remoteAccount.publicKey,
+  LinkAction.Link,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -35,7 +28,8 @@ const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(accountLinkTransaction, networkGenerationHash);
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

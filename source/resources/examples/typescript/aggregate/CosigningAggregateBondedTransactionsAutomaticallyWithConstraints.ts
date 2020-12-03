@@ -16,35 +16,36 @@
  *
  */
 
-import {filter, map, mergeMap} from 'rxjs/operators';
+import { filter, map, mergeMap } from 'rxjs/operators';
 import {
-    Account,
-    AggregateTransaction,
-    CosignatureSignedTransaction,
-    CosignatureTransaction,
-    MosaicId,
-    NamespaceId,
-    NetworkType,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    Transaction,
-    TransferTransaction,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  CosignatureSignedTransaction,
+  CosignatureTransaction,
+  MosaicId,
+  NamespaceId,
+  NetworkType,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  Transaction,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 /* start block 01 */
 const validTransaction = (transaction: Transaction, publicAccount: PublicAccount): boolean => {
-    return transaction instanceof TransferTransaction &&
-        transaction.signer!.equals(publicAccount) &&
-        transaction.mosaics.length === 1 &&
-        (transaction.mosaics[0].id.equals(new MosaicId('5E62990DCAC5BE8A') ||
-            transaction.mosaics[0].id.equals(new NamespaceId('symbol.xym')))) &&
-        transaction.mosaics[0].amount.compare(UInt64.fromUint(100 * Math.pow(10, 6))) < 0;
+  return (
+    transaction instanceof TransferTransaction &&
+    transaction.signer!.equals(publicAccount) &&
+    transaction.mosaics.length === 1 &&
+    transaction.mosaics[0].id.equals(new MosaicId('5E62990DCAC5BE8A') || transaction.mosaics[0].id.equals(new NamespaceId('symbol.xym'))) &&
+    transaction.mosaics[0].amount.compare(UInt64.fromUint(100 * Math.pow(10, 6))) < 0
+  );
 };
 
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
-    const cosignatureTransaction = CosignatureTransaction.create(transaction);
-    return account.signCosignatureTransaction(cosignatureTransaction);
+  const cosignatureTransaction = CosignatureTransaction.create(transaction);
+  return account.signCosignatureTransaction(cosignatureTransaction);
 };
 
 // replace with network type
@@ -59,20 +60,25 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 
 listener.open().then(() => {
-    listener
-        .aggregateBondedAdded(account.address)
-        .pipe(
-            filter((_) => _.innerTransactions.length === 2),
-            filter((_) => !_.signedByAccount(account.publicAccount)),
-            filter((_) => validTransaction(_.innerTransactions[0], account.publicAccount)
-                || validTransaction(_.innerTransactions[1], account.publicAccount)),
-            map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
-            mergeMap((signedCosignatureTransaction) => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction)),
-        )
-        .subscribe((announcedTransaction) => {
-                console.log(announcedTransaction);
-                listener.close();
-            },
-            (err) => console.error(err));
+  listener
+    .aggregateBondedAdded(account.address)
+    .pipe(
+      filter((_) => _.innerTransactions.length === 2),
+      filter((_) => !_.signedByAccount(account.publicAccount)),
+      filter(
+        (_) =>
+          validTransaction(_.innerTransactions[0], account.publicAccount) ||
+          validTransaction(_.innerTransactions[1], account.publicAccount),
+      ),
+      map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+      mergeMap((signedCosignatureTransaction) => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction)),
+    )
+    .subscribe(
+      (announcedTransaction) => {
+        console.log(announcedTransaction);
+        listener.close();
+      },
+      (err) => console.error(err),
+    );
 });
 /* end block 01 */

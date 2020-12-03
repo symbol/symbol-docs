@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with cc.shares mosaic id
 const sharesIdHex = '7cdf3b117a3c40cc';
@@ -28,15 +28,18 @@ const kycId = new symbol_sdk_1.MosaicId(kycIdHex);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
-const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction
-    .create(symbol_sdk_1.Deadline.create(), sharesId, // mosaicId
-key, // restictionKey
-symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
-symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
-symbol_sdk_1.UInt64.fromUint(2), // newRestrictionValue
-symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
-networkType, kycId, // referenceMosaicId
-symbol_sdk_1.UInt64.fromUint(2000000));
+const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  sharesId, // mosaicId
+  key, // restictionKey
+  symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
+  symbol_sdk_1.MosaicRestrictionType.NONE, // previousRestrictionType
+  symbol_sdk_1.UInt64.fromUint(2), // newRestrictionValue
+  symbol_sdk_1.MosaicRestrictionType.EQ, // newRestrictionType
+  networkType,
+  kycId, // referenceMosaicId
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 const comfyClothingCompanyAccount = symbol_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
@@ -47,7 +50,8 @@ console.log(signedTransaction.hash);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 01 */

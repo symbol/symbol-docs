@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '71415AC19C818709';
@@ -26,7 +26,8 @@ const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const mosaicHttp = repositoryFactory.createMosaicRepository();
-mosaicHttp
-    .getMosaic(mosaicId)
-    .subscribe((mosaicInfo) => console.log(mosaicInfo), (err) => console.error(err));
+mosaicHttp.getMosaic(mosaicId).subscribe(
+  (mosaicInfo) => console.log(mosaicInfo),
+  (err) => console.error(err),
+);
 /* end block 01 */

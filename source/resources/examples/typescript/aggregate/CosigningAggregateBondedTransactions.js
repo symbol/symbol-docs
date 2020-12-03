@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,13 +16,13 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const operators_1 = require("rxjs/operators");
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const operators_1 = require('rxjs/operators');
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction, account) => {
-    const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
-    return account.signCosignatureTransaction(cosignatureTransaction);
+  const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
+  return account.signCosignatureTransaction(cosignatureTransaction);
 };
 /* end block 01 */
 /* start block 02 */
@@ -41,7 +41,15 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const accountHttp = repositoryFactory.createAccountRepository();
 transactionHttp
-    .getTransaction(transactionHash, symbol_sdk_1.TransactionGroup.Partial)
-    .pipe(operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)), operators_1.mergeMap((cosignatureSignedTransaction) => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)))
-    .subscribe((announcedTransaction) => console.log(announcedTransaction), (err) => console.error(err));
+  .getTransaction(transactionHash, symbol_sdk_1.TransactionGroup.Partial)
+  .pipe(
+    operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+    operators_1.mergeMap((cosignatureSignedTransaction) =>
+      transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction),
+    ),
+  )
+  .subscribe(
+    (announcedTransaction) => console.log(announcedTransaction),
+    (err) => console.error(err),
+  );
 /* end block 03 */

@@ -17,20 +17,20 @@
  */
 
 import {
-    Account,
-    Address,
-    AggregateTransaction,
-    Deadline,
-    HashLockTransaction,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PlainMessage,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    TransactionService,
-    TransferTransaction,
-    UInt64,
+  Account,
+  Address,
+  AggregateTransaction,
+  Deadline,
+  HashLockTransaction,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  PlainMessage,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  TransactionService,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -53,18 +53,19 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    recipientAddress,
-    [new Mosaic (networkCurrencyMosaicId,
-        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('sending 10 symbol.xym'),
-    networkType);
+  Deadline.create(epochAdjustment),
+  recipientAddress,
+  [new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  PlainMessage.create('sending 10 symbol.xym'),
+  networkType,
+);
 
 /* start block 01 */
 const aggregateTransaction = AggregateTransaction.createBonded(
-    Deadline.create(epochAdjustment),
-    [transferTransaction.toAggregate(multisigAccount)],
-    networkType);
+  Deadline.create(epochAdjustment),
+  [transferTransaction.toAggregate(multisigAccount)],
+  networkType,
+);
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -74,13 +75,13 @@ console.log(signedTransaction.hash);
 
 /* start block 02 */
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(epochAdjustment),
-    new Mosaic (networkCurrencyMosaicId,
-        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
-    UInt64.fromUint(480),
-    signedTransaction,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  UInt64.fromUint(480),
+  signedTransaction,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
 
@@ -93,11 +94,10 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    transactionService
-        .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)
-        .subscribe(
-            (x) => console.log(x),
-            (err) => console.log(err),
-            () => listener.close());
+  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
+    (x) => console.log(x),
+    (err) => console.log(err),
+    () => listener.close(),
+  );
 });
 /* end block 02 */

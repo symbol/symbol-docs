@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,8 +16,8 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with namespace name
 const namespaceId = new symbol_sdk_1.NamespaceId('foo');
@@ -28,7 +28,14 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 /* start block 02 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const addressAliasTransaction = symbol_sdk_1.AliasTransaction.createForAddress(symbol_sdk_1.Deadline.create(), symbol_sdk_1.AliasAction.Link, namespaceId, address, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const addressAliasTransaction = symbol_sdk_1.AliasTransaction.createForAddress(
+  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.AliasAction.Link,
+  namespaceId,
+  address,
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
@@ -39,7 +46,8 @@ const signedTransaction = account.sign(addressAliasTransaction, networkGeneratio
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 02 */

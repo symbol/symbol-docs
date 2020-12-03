@@ -17,17 +17,17 @@
  */
 
 import {
-    Account,
-    Address,
-    AggregateTransaction,
-    Deadline,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PlainMessage,
-    RepositoryFactoryHttp,
-    TransferTransaction,
-    UInt64,
+  Account,
+  Address,
+  AggregateTransaction,
+  Deadline,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  PlainMessage,
+  RepositoryFactoryHttp,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -40,7 +40,7 @@ const networkType = NetworkType.TEST_NET;
 const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with address
-const aliceAddress =  'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
+const aliceAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
 const aliceAccount = Address.createFromRawAddress(aliceAddress);
 // replace with address
 const bobAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
@@ -50,31 +50,32 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 
-const mosaic = new Mosaic (networkCurrencyMosaicId,
-    UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
+const mosaic = new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)));
 
 const aliceTransferTransaction = TransferTransaction.create(
-    Deadline.create(123456789),
-    aliceAccount,
-    [mosaic],
-    PlainMessage.create('payout'),
-    networkType);
+  Deadline.create(123456789),
+  aliceAccount,
+  [mosaic],
+  PlainMessage.create('payout'),
+  networkType,
+);
 const bobTransferTransaction = TransferTransaction.create(
-    Deadline.create(123456789),
-    bobAccount,
-    [mosaic],
-    PlainMessage.create('payout'),
-    networkType);
+  Deadline.create(123456789),
+  bobAccount,
+  [mosaic],
+  PlainMessage.create('payout'),
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(123456789),
-    [aliceTransferTransaction.toAggregate(account.publicAccount),
-        bobTransferTransaction.toAggregate(account.publicAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(123456789),
+  [aliceTransferTransaction.toAggregate(account.publicAccount), bobTransferTransaction.toAggregate(account.publicAccount)],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -86,7 +87,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

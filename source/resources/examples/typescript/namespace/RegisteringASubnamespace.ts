@@ -16,14 +16,7 @@
  *
  */
 
-import {
-    Account,
-    Deadline,
-    NamespaceRegistrationTransaction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
-} from 'symbol-sdk';
+import { Account, Deadline, NamespaceRegistrationTransaction, NetworkType, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
@@ -37,11 +30,12 @@ const subnamespaceName = 'bar';
 const networkType = NetworkType.TEST_NET;
 
 const namespaceRegistrationTransaction = NamespaceRegistrationTransaction.createSubNamespace(
-    Deadline.create(epochAdjustment),
-    subnamespaceName,
-    rootNamespaceName,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  subnamespaceName,
+  rootNamespaceName,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 // replace with private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
@@ -54,7 +48,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 01 */

@@ -17,14 +17,14 @@
  */
 
 import {
-    Account,
-    AggregateTransaction,
-    Deadline,
-    MultisigAccountModificationTransaction,
-    NetworkType,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  Deadline,
+  MultisigAccountModificationTransaction,
+  NetworkType,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -41,22 +41,24 @@ const cosignatoryToRemovePublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A4
 const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, networkType);
 // replace with cosignatory private key
 const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const cosignatoryAccount =  Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
 
 const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
-    Deadline.create(epochAdjustment),
-    0,
-    0,
-    [],
-    [cosignatoryToRemove.address],
-    networkType);
+  Deadline.create(epochAdjustment),
+  0,
+  0,
+  [],
+  [cosignatoryToRemove.address],
+  networkType,
+);
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(epochAdjustment),
-    [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -66,7 +68,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 01 */

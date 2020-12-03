@@ -1,11 +1,11 @@
 import {
-    Account,
-    Deadline,
-    NetworkType,
-    PersistentDelegationRequestTransaction,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  Deadline,
+  NetworkType,
+  PersistentDelegationRequestTransaction,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 /* start block 01 */
@@ -25,13 +25,13 @@ const announcerAccount = Account.createFromPrivateKey(announcerAccountPrivateKey
 const nodePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
 const nodePublicAccount = PublicAccount.createFromPublicKey(nodePublicKey, networkType);
 
-const persistentDelegationRequestTransaction = PersistentDelegationRequestTransaction
-    .createPersistentDelegationRequestTransaction(
-        Deadline.create(),
-        remoteAccount.privateKey,
-        nodePublicAccount.publicKey,
-        networkType,
-        UInt64.fromUint(2000000));
+const persistentDelegationRequestTransaction = PersistentDelegationRequestTransaction.createPersistentDelegationRequestTransaction(
+  Deadline.create(),
+  remoteAccount.privateKey,
+  nodePublicAccount.publicKey,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -43,7 +43,8 @@ const signedTransaction = announcerAccount.sign(persistentDelegationRequestTrans
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

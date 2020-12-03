@@ -17,16 +17,16 @@
  */
 
 import {
-    Account,
-    Address,
-    Deadline,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PlainMessage,
-    RepositoryFactoryHttp,
-    TransferTransaction,
-    UInt64,
+  Account,
+  Address,
+  Deadline,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  PlainMessage,
+  RepositoryFactoryHttp,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -43,12 +43,13 @@ const recipientAddress = Address.createFromRawAddress(rawAddress);
 const networkType = NetworkType.TEST_NET;
 
 const transferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    recipientAddress,
-    [new Mosaic(mosaicId, UInt64.fromUint(1))],
-    PlainMessage.create('enjoy your ticket'),
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  recipientAddress,
+  [new Mosaic(mosaicId, UInt64.fromUint(1))],
+  PlainMessage.create('enjoy your ticket'),
+  networkType,
+  UInt64.fromUint(2000000),
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -67,7 +68,8 @@ const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

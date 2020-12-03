@@ -16,7 +16,7 @@
  *
  */
 
-import {Address, RepositoryFactoryHttp, TransactionGroup} from 'symbol-sdk';
+import { Address, RepositoryFactoryHttp, TransactionGroup } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with account address
@@ -30,9 +30,9 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-const searchCriteria = {group: TransactionGroup.Confirmed, address, pageNumber: 1, pageSize: 100};
-transactionHttp
-    .search(searchCriteria)
-    .subscribe((page) => console.log(page.data),
-        (err) => console.error(err));
+const searchCriteria = { group: TransactionGroup.Confirmed, address, pageNumber: 1, pageSize: 100 };
+transactionHttp.search(searchCriteria).subscribe(
+  (page) => console.log(page.data),
+  (err) => console.error(err),
+);
 /* end block 02 */

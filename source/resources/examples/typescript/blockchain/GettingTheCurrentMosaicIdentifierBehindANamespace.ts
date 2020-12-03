@@ -16,7 +16,7 @@
  *
  */
 
-import {NamespaceId, RepositoryFactoryHttp} from 'symbol-sdk';
+import { NamespaceId, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -27,8 +27,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 
-namespaceHttp
-    .getLinkedMosaicId(namespaceId)
-    .subscribe((mosaicId) => console.log(mosaicId!.toHex()),
-            (err) => console.log(err));
+namespaceHttp.getLinkedMosaicId(namespaceId).subscribe(
+  (mosaicId) => console.log(mosaicId!.toHex()),
+  (err) => console.log(err),
+);
 /* end block 01 */

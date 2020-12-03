@@ -17,15 +17,15 @@
  */
 
 import {
-    Account,
-    Deadline,
-    KeyGenerator,
-    MosaicGlobalRestrictionTransaction,
-    MosaicId,
-    MosaicRestrictionType,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  Deadline,
+  KeyGenerator,
+  MosaicGlobalRestrictionTransaction,
+  MosaicId,
+  MosaicRestrictionType,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -42,18 +42,18 @@ const key = KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 
-const transaction = MosaicGlobalRestrictionTransaction
-    .create(
-        Deadline.create(epochAdjustment),
-        mosaicId, // mosaicId
-        key, // restrictionKey
-        UInt64.fromUint(0), // previousRestrictionValue
-        MosaicRestrictionType.NONE, // previousRestrictionType
-        UInt64.fromUint(1), // newRestrictionValue
-        MosaicRestrictionType.EQ, // newRestrictionType
-        networkType,
-        undefined,
-        UInt64.fromUint(2000000));
+const transaction = MosaicGlobalRestrictionTransaction.create(
+  Deadline.create(epochAdjustment),
+  mosaicId, // mosaicId
+  key, // restrictionKey
+  UInt64.fromUint(0), // previousRestrictionValue
+  MosaicRestrictionType.NONE, // previousRestrictionType
+  UInt64.fromUint(1), // newRestrictionValue
+  MosaicRestrictionType.EQ, // newRestrictionType
+  networkType,
+  undefined,
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -68,7 +68,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

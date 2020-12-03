@@ -17,19 +17,19 @@
  */
 
 import {
-    Account,
-    AggregateTransaction,
-    Deadline,
-    HashLockTransaction,
-    Mosaic,
-    MosaicId,
-    NetworkType,
-    PlainMessage,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    TransactionService,
-    TransferTransaction,
-    UInt64,
+  Account,
+  AggregateTransaction,
+  Deadline,
+  HashLockTransaction,
+  Mosaic,
+  MosaicId,
+  NetworkType,
+  PlainMessage,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  TransactionService,
+  TransferTransaction,
+  UInt64,
 } from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -54,29 +54,33 @@ const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 
 const aliceToTicketDistributorTx = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    ticketDistributorPublicAccount.address,
-    [new Mosaic (networkCurrencyMosaicId,
-        UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))],
-    PlainMessage.create('send 100 symbol.xym to distributor'),
-    networkType);
+  Deadline.create(epochAdjustment),
+  ticketDistributorPublicAccount.address,
+  [new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(100 * Math.pow(10, networkCurrencyDivisibility)))],
+  PlainMessage.create('send 100 symbol.xym to distributor'),
+  networkType,
+);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    aliceAccount.address,
-    [new Mosaic(ticketMosaicId,
-        UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))],
-    PlainMessage.create('send 1 museum ticket to customer'),
-    networkType);
+  Deadline.create(epochAdjustment),
+  aliceAccount.address,
+  [new Mosaic(ticketMosaicId, UInt64.fromUint(1 * Math.pow(10, ticketDivisibility)))],
+  PlainMessage.create('send 1 museum ticket to customer'),
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
-const aggregateTransaction = AggregateTransaction.createBonded(Deadline.create(epochAdjustment),
-    [aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
-        ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000));
+const aggregateTransaction = AggregateTransaction.createBonded(
+  Deadline.create(epochAdjustment),
+  [
+    aliceToTicketDistributorTx.toAggregate(aliceAccount.publicAccount),
+    ticketDistributorToAliceTx.toAggregate(ticketDistributorPublicAccount),
+  ],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
+);
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -86,13 +90,13 @@ console.log('Aggregate Transaction Hash:', signedTransaction.hash);
 
 /* start block 03 */
 const hashLockTransaction = HashLockTransaction.create(
-    Deadline.create(epochAdjustment),
-    new Mosaic (networkCurrencyMosaicId,
-        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
-    UInt64.fromUint(480),
-    signedTransaction,
-    networkType,
-    UInt64.fromUint(2000000));
+  Deadline.create(epochAdjustment),
+  new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  UInt64.fromUint(480),
+  signedTransaction,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 
 const signedHashLockTransaction = aliceAccount.sign(hashLockTransaction, networkGenerationHash);
 
@@ -105,11 +109,10 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-    transactionService
-        .announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener)
-        .subscribe(
-            (x) => console.log(x),
-            (err) => console.log(err),
-            () => listener.close());
+  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
+    (x) => console.log(x),
+    (err) => console.log(err),
+    () => listener.close(),
+  );
 });
 /* end block 03 */

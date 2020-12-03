@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,15 +16,16 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryFactory.createBlockRepository();
 const height = 1;
-blockHttp
-    .getBlockByHeight(symbol_sdk_1.UInt64.fromUint(height))
-    .subscribe((block) => console.log(block), (err) => console.error(err));
+blockHttp.getBlockByHeight(symbol_sdk_1.UInt64.fromUint(height)).subscribe(
+  (block) => console.log(block),
+  (err) => console.error(err),
+);
 /* end block 01 */

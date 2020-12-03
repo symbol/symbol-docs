@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  *
  * Copyright 2018-present NEM
@@ -16,10 +16,10 @@
  * limitations under the License.
  *
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const rxjs_1 = require("rxjs");
-const operators_1 = require("rxjs/operators");
-const symbol_sdk_1 = require("symbol-sdk");
+Object.defineProperty(exports, '__esModule', { value: true });
+const rxjs_1 = require('rxjs');
+const operators_1 = require('rxjs/operators');
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with recipient address
 const rawRecipientAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
@@ -30,7 +30,14 @@ const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
-const transferTransaction = symbol_sdk_1.TransferTransaction.create(symbol_sdk_1.Deadline.create(), recipientAddress, [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))], symbol_sdk_1.EmptyMessage, networkType, symbol_sdk_1.UInt64.fromUint(2000000));
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(),
+  recipientAddress,
+  [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  symbol_sdk_1.EmptyMessage,
+  networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
+);
 // replace with sender private key
 const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
 const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
@@ -46,15 +53,23 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
 const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
 listener.open().then(() => {
-    rxjs_1.merge(transactionService.announce(signedTransaction, listener), listener
-        .status(account.address)
-        .pipe(operators_1.filter((error) => error.hash === signedTransaction.hash), operators_1.tap((error) => {
-        throw new Error(error.code);
-    })))
-        .subscribe((transaction) => {
+  rxjs_1
+    .merge(
+      transactionService.announce(signedTransaction, listener),
+      listener.status(account.address).pipe(
+        operators_1.filter((error) => error.hash === signedTransaction.hash),
+        operators_1.tap((error) => {
+          throw new Error(error.code);
+        }),
+      ),
+    )
+    .subscribe(
+      (transaction) => {
         console.log(transaction);
         // TODO: send email to recipient
         listener.close();
-    }, (err) => console.error(err));
+      },
+      (err) => console.error(err),
+    );
 });
 /* end block 02 */

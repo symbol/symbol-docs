@@ -1,5 +1,21 @@
 // tslint:disable-next-line: max-line-length
-import { Account, AggregateTransaction, CosignatureSignedTransaction, CosignatureTransaction, Deadline, Mosaic, NamespaceId, NetworkCurrencies, NetworkType, PlainMessage, PublicAccount, RepositoryFactoryHttp, TransactionMapping, TransferTransaction, UInt64 } from 'symbol-sdk';
+import {
+  Account,
+  AggregateTransaction,
+  CosignatureSignedTransaction,
+  CosignatureTransaction,
+  Deadline,
+  Mosaic,
+  NamespaceId,
+  NetworkCurrencies,
+  NetworkType,
+  PlainMessage,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  TransactionMapping,
+  TransferTransaction,
+  UInt64,
+} from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
@@ -9,34 +25,34 @@ const networkType = NetworkType.TEST_NET;
 
 // replace with alice private key
 const alicePrivatekey = '';
-const aliceAccount =  Account.createFromPrivateKey(alicePrivatekey, networkType);
+const aliceAccount = Account.createFromPrivateKey(alicePrivatekey, networkType);
 
 // replace with bob public key
 const bobPublicKey = '';
 const bobPublicAccount = PublicAccount.createFromPublicKey(bobPublicKey, networkType);
 
 const aliceTransferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    bobPublicAccount.address,
-    [NetworkCurrencies.PUBLIC.currency.createRelative(1000)],
-    PlainMessage.create('payout'),
-    networkType,
+  Deadline.create(epochAdjustment),
+  bobPublicAccount.address,
+  [NetworkCurrencies.PUBLIC.currency.createRelative(1000)],
+  PlainMessage.create('payout'),
+  networkType,
 );
 
 const bobTransferTransaction = TransferTransaction.create(
-    Deadline.create(epochAdjustment),
-    aliceAccount.address,
-    [new Mosaic(new NamespaceId('collectible'), UInt64.fromUint(1))],
-    PlainMessage.create('payout'),
-    networkType,
+  Deadline.create(epochAdjustment),
+  aliceAccount.address,
+  [new Mosaic(new NamespaceId('collectible'), UInt64.fromUint(1))],
+  PlainMessage.create('payout'),
+  networkType,
 );
 
 const aggregateTransaction = AggregateTransaction.createComplete(
-    Deadline.create(epochAdjustment),
-    [aliceTransferTransaction.toAggregate(aliceAccount.publicAccount), bobTransferTransaction.toAggregate(bobPublicAccount)],
-    networkType,
-    [],
-    UInt64.fromUint(2000000),
+  Deadline.create(epochAdjustment),
+  [aliceTransferTransaction.toAggregate(aliceAccount.publicAccount), bobTransferTransaction.toAggregate(bobPublicAccount)],
+  networkType,
+  [],
+  UInt64.fromUint(2000000),
 );
 /* end block 01 */
 
@@ -52,24 +68,32 @@ console.log(signedTransactionNotComplete.payload);
 // replace with bob private key
 const bobPrivateKey = '';
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
-const cosignedTransactionBob = CosignatureTransaction
-.signTransactionPayload(bobAccount, signedTransactionNotComplete.payload, generationHash);
+const cosignedTransactionBob = CosignatureTransaction.signTransactionPayload(
+  bobAccount,
+  signedTransactionNotComplete.payload,
+  generationHash,
+);
 console.log(cosignedTransactionBob.signature);
 console.log(cosignedTransactionBob.parentHash);
 /* end block 03 */
 
 /* start block 04 */
 const cosignatureSignedTransactions = [
-    new CosignatureSignedTransaction(
-        cosignedTransactionBob.parentHash,
-        cosignedTransactionBob.signature,
-        cosignedTransactionBob.signerPublicKey),
+  new CosignatureSignedTransaction(
+    cosignedTransactionBob.parentHash,
+    cosignedTransactionBob.signature,
+    cosignedTransactionBob.signerPublicKey,
+  ),
 ];
-const rectreatedAggregateTransactionFromPayload = TransactionMapping
-.createFromPayload(signedTransactionNotComplete.payload) as AggregateTransaction;
+const rectreatedAggregateTransactionFromPayload = TransactionMapping.createFromPayload(
+  signedTransactionNotComplete.payload,
+) as AggregateTransaction;
 
-const signedTransactionComplete = aliceAccount
-    .signTransactionGivenSignatures(rectreatedAggregateTransactionFromPayload, cosignatureSignedTransactions, generationHash);
+const signedTransactionComplete = aliceAccount.signTransactionGivenSignatures(
+  rectreatedAggregateTransactionFromPayload,
+  cosignatureSignedTransactions,
+  generationHash,
+);
 console.log(signedTransactionComplete.hash);
 
 // replace with node endpoint
@@ -77,7 +101,8 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 
-transactionHttp
-    .announce(signedTransactionComplete)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransactionComplete).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 04 */
