@@ -49,7 +49,6 @@ const transactionHash = '0000000000000000000000000000000000000000000000000000000
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const accountHttp = repositoryFactory.createAccountRepository();
 
 transactionHttp
   .getTransaction(transactionHash, TransactionGroup.Partial)

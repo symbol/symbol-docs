@@ -18,19 +18,20 @@
 
 import { Account, Address, Deadline, PlainMessage, RepositoryFactoryHttp, TransferTransaction, UInt64 } from 'symbol-sdk';
 
-const example = async () => {
-  //Network information
+const example = async (): Promise<void> => {
+  // Network information
   const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
   const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
   const epochAdjustment = await repositoryFactory.getEpochAdjustment().toPromise();
   const networkType = await repositoryFactory.getNetworkType().toPromise();
+  const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
+  // Returns the network main currency, symbol.xym
+  const { currency } = await repositoryFactory.getCurrencies().toPromise();
 
   /* start block 01 */
   // replace with recipient address
   const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
   const recipientAddress = Address.createFromRawAddress(rawAddress);
-  // returns the network main currency, symbol.xym
-  const { currency } = await repositoryFactory.getCurrencies().toPromise();
 
   const transferTransaction = TransferTransaction.create(
     Deadline.create(epochAdjustment),
@@ -46,17 +47,15 @@ const example = async () => {
   // replace with sender private key
   const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
   const account = Account.createFromPrivateKey(privateKey, networkType);
-  const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
   const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
   console.log('Payload:', signedTransaction.payload);
   console.log('Transaction Hash:', signedTransaction.hash);
   /* end block 02 */
 
   /* start block 03 */
-  // replace with node endpoint
   const transactionRepository = repositoryFactory.createTransactionRepository();
-
-  const response = transactionRepository.announce(signedTransaction).toPromise();
+  const response = await transactionRepository.announce(signedTransaction).toPromise();
   console.log(response);
   /* end block 03 */
 };
+example().then();

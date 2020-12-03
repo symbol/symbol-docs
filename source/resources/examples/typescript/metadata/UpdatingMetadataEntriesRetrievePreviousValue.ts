@@ -72,3 +72,4 @@ const accountMetadataTransaction = metadataHttp.search(searchCriteria).pipe(
   }),
 );
 /* end block 01 */
+console.log(accountMetadataTransaction);

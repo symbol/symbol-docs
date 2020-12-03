@@ -11,9 +11,6 @@ import {
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
-// replace with private key
-const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
 const remoteAccount = Account.generateNewAccount(networkType);
 // replace with private key
 const announcerAccountPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';

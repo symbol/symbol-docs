@@ -20,7 +20,7 @@
 import { sha3_256 } from 'js-sha3';
 import { BlockRepository, MerklePosition, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
-const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHttp: BlockRepository) => {
+const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHttp: BlockRepository): Promise<boolean> => {
   // 2. Obtain HRoot; in Symbol, this is stored in the block header.
   const HRoot = (await blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
   // 3. Request the merkleProof: H1, H7, H10
