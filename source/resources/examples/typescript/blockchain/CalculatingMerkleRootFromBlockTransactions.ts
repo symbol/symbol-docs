@@ -21,7 +21,7 @@ import { sha3_256 } from 'js-sha3';
 import { MerkleTree } from 'merkletreejs/index';
 import { QueryParams, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
-const example = async () => {
+const example = async (): Promise<boolean> => {
   // replace with node url
   const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
   const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);

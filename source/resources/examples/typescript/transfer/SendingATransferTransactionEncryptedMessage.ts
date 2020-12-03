@@ -18,7 +18,7 @@
 
 import { Account, Deadline, PublicAccount, RepositoryFactoryHttp, TransferTransaction, UInt64 } from 'symbol-sdk';
 
-const example = async () => {
+const example = async (): Promise<void> => {
   //Network information
   const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
   const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
@@ -60,3 +60,4 @@ const example = async () => {
   console.log(response);
   /* end block 04 */
 };
+example().then();

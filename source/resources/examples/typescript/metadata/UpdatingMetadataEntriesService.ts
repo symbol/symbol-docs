@@ -134,7 +134,7 @@ listener.open().then(() => {
       ),
     )
     .subscribe(
-      (ignored) => console.log('Transaction confirmed'),
+      () => console.log('Transaction confirmed'),
       (err) => console.log(err),
       () => listener.close(),
     );
