@@ -5,10 +5,15 @@ python:
   - 3.8
 cache: pip
 
+node_js:
+ - "10"
+
 before_install:
   - cd source/resources/examples/typescript
   - npm install
-#  - npm run lint renable once npm run style:fix is executed
+  - node --version
+  - npm -- version
+  - npm run lint
 # include tsc compile!
   - cd $TRAVIS_BUILD_DIR
 install:
