@@ -20,7 +20,7 @@ import { Address, RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with multisig address
-const rawAddress = 'TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU';
+const rawAddress = 'TAEG6LKWXRA7PSWUEEILQPG43V5CYZS5652TJTU';
 const address = Address.createFromRawAddress(rawAddress);
 
 // replace with node endpoint
