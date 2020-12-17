@@ -10,7 +10,8 @@
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
     "symbol-sdk": "0.22.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "utf8": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^10.12.27",
@@ -20,7 +21,8 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
-    "prettier-plugin-organize-imports": "^1.1.1"
+    "prettier-plugin-organize-imports": "^1.1.1",
+    "ts-node": "^9.1.1"
   },
   "scripts": {
     "prettier": "prettier --write .",
