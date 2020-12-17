@@ -607,3 +607,9 @@ ul.postlist-style-circle .first {
     font-size: 40px;
     font-weight: 900;
 }
+div.sidebar {
+    background-color: #9bd2f2;
+    border: 0px;
+    border-radius: 4px;
+    width: 50%;
+}

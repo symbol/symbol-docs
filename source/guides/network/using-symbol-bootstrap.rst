@@ -7,11 +7,22 @@
 Using Symbol Bootstrap
 ######################
 
+.. sidebar:: Quick Installation
+
+    On systems using ``apt``:
+
+    .. code-block:: bash
+
+      sudo apt update
+      sudo apt install nodejs npm \
+          docker docker-compose
+      npm install -g symbol-bootstrap
+
 This guide explains the concepts behind |symbol-bootstrap|, a package which contains the necessary setup scripts to help developers quickly configure and run their own network or node.
 
 After reading this you will be able to better understand the :doc:`Creating private test networks <creating-a-private-test-net>` and :doc:`Running a test net node <running-a-test-net-node>` guides.
 
-.. note:: This package replaces the previous tools |catapult-service-bootstrap| and |symbol-testnet-bootstrap|.
+**This package replaces the previous tools** |catapult-service-bootstrap| and |symbol-testnet-bootstrap|.
 
 ************
 Requirements
