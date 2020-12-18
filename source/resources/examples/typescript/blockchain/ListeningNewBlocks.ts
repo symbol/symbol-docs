@@ -19,17 +19,24 @@
 import { RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
+// Replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 
-listener.open().then(() => {
-  listener.newBlock().subscribe(
-    (block) => {
-      console.log(block);
-      listener.close();
-    },
-    (err) => console.error(err),
-  );
-});
+listener
+  .open()
+  .then(() => {
+    console.log('Waiting for new block to be harvested...');
+    listener.newBlock().subscribe(
+      (block) => {
+        console.log(block);
+        listener.close();
+      },
+      (err) => console.error(err),
+    );
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 /* end block 01 */
