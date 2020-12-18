@@ -36,32 +36,44 @@ Sending a synchronous transaction
 
 Alice is developing an app to send 10 |privatenetworkcurrency| to Bob and wants to know if the transaction has reached the network before sending Bob an email.
 
-1. Create a new ``.ts`` file. Then, define and sign a :doc:`TransferTransaction <../../concepts/transfer-transaction>`.
+1. Create a new source file, define and sign a :doc:`TransferTransaction <../../concepts/transfer-transaction>`.
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronousViaPromise.ts
         :language: typescript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronousViaPromise.js
         :language: javascript
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Once signed, :doc:`announce the transaction <../../concepts/transaction>` using ``TransactionService.announce`` instead of ``TransactionHttp.announce``.
+2. Once signed, announce the transaction using a ``TransactionService`` instead of a ``TransactionFactory``. This service connects the necessary listeners so your code can just focus on the transaction's result. For example, using promises:
 
 .. example-code::
 
-    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronousViaPromise.ts
         :language: typescript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronousViaPromise.js
         :language: javascript
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: The function ``TransactionService.announce()`` will respond successfully if the transaction reaches the network and does not have validation errors. You might still need to :doc:`wait for several confirmations  <../../concepts/transaction>` before executing additional actions.
+3. You can also connect the listeners yourself to get notified of more events. For example:
+
+.. example-code::
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronousViaListener.ts
+        :language: typescript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
+
+    .. viewsource:: ../../resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronousViaListener.js
+        :language: javascript
+        :start-after:  /* start block 02 */
+        :end-before: /* end block 02 */
