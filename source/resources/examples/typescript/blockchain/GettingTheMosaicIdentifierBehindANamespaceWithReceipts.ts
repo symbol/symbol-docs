@@ -35,19 +35,28 @@ const example = async (): Promise<void> => {
     // Network information
     const nodeUrl = 'http://192.168.253.3:3000';
     const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-    const epochAdjustment = await repositoryFactory.getEpochAdjustment().toPromise();
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
     const networkType = await repositoryFactory.getNetworkType().toPromise();
-    const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
 
     /* start block 01 */
-    const aliasedMosaic = new Mosaic(new NamespaceId('symbol.xym'), UInt64.fromUint(1000000));
+    const aliasedMosaic = new Mosaic(
+      new NamespaceId('symbol.xym'),
+      UInt64.fromUint(1000000),
+    );
     /* end block 01 */
 
     /* start block 02 */
     const maxFee = UInt64.fromUint(2000000);
     const transferTransaction = TransferTransaction.create(
       Deadline.create(epochAdjustment),
-      Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
+      Address.createFromRawAddress(
+        'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I',
+      ),
       [aliasedMosaic],
       PlainMessage.create('Test aliased mosaic'),
       networkType,
@@ -55,9 +64,13 @@ const example = async (): Promise<void> => {
     );
 
     // Replace with sender private key
-    const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+    const privateKey =
+      '1111111111111111111111111111111111111111111111111111111111111111';
     const account = Account.createFromPrivateKey(privateKey, networkType);
-    const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+    const signedTransaction = account.sign(
+      transferTransaction,
+      networkGenerationHash,
+    );
     console.log('Transaction hash: ' + signedTransaction.hash);
     /* end block 02 */
 
@@ -65,18 +78,28 @@ const example = async (): Promise<void> => {
     const receiptHttp = repositoryFactory.createReceiptRepository();
     const transactionHttp = repositoryFactory.createTransactionRepository();
     const listener = repositoryFactory.createListener();
-    const transactionService = new TransactionService(transactionHttp, receiptHttp);
+    const transactionService = new TransactionService(
+      transactionHttp,
+      receiptHttp,
+    );
 
     listener.open().then(() => {
       transactionService
         .announce(signedTransaction, listener)
         .pipe(
-          mergeMap((transaction) => transactionService.resolveAliases([transaction.transactionInfo!.hash!])),
+          mergeMap((transaction) =>
+            transactionService.resolveAliases([
+              transaction.transactionInfo!.hash!,
+            ]),
+          ),
           map((transactions) => transactions[0] as TransferTransaction),
         )
         .subscribe(
           (transaction) => {
-            console.log('Resolved MosaicId: ', transaction.mosaics[0].id.toHex());
+            console.log(
+              'Resolved MosaicId: ',
+              transaction.mosaics[0].id.toHex(),
+            );
             listener.close();
           },
           (err) => {

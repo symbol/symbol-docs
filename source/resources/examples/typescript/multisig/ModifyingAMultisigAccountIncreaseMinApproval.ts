@@ -31,17 +31,29 @@ const example = async (): Promise<void> => {
     // Network information
     const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
     const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-    const epochAdjustment = await repositoryFactory.getEpochAdjustment().toPromise();
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
     const networkType = await repositoryFactory.getNetworkType().toPromise();
-    const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
 
     /* start block 01 */
     // Replace with cosignatory private key
-    const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-    const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+    const cosignatoryPrivateKey =
+      '1111111111111111111111111111111111111111111111111111111111111111';
+    const cosignatoryAccount = Account.createFromPrivateKey(
+      cosignatoryPrivateKey,
+      networkType,
+    );
     // Replace with multisig account private key
-    const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-    const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+    const multisigAccountPublicKey =
+      '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+    const multisigAccount = PublicAccount.createFromPublicKey(
+      multisigAccountPublicKey,
+      networkType,
+    );
     /* end block 01 */
 
     /* start block 02 */
@@ -65,7 +77,10 @@ const example = async (): Promise<void> => {
       maxFee,
     );
 
-    const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+    const signedTransaction = cosignatoryAccount.sign(
+      aggregateTransaction,
+      networkGenerationHash,
+    );
     console.log('Transaction Hash:', signedTransaction.hash);
     const transactionHttp = repositoryFactory.createTransactionRepository();
 

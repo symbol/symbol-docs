@@ -22,12 +22,23 @@ const symbol_sdk_1 = require('symbol-sdk');
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with alice private key
-const alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(alicePrivateKey, networkType);
+const alicePrivateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  alicePrivateKey,
+  networkType,
+);
 // replace with certificate public key
-const certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-const certificatePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
-const encryptedMessage = aliceAccount.encryptMessage('This message is secret', certificatePublicAccount);
+const certificatePublicKey =
+  '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const certificatePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(
+  certificatePublicKey,
+  networkType,
+);
+const encryptedMessage = aliceAccount.encryptMessage(
+  'This message is secret',
+  certificatePublicAccount,
+);
 /* end block 01 */
 /* start block 02 */
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(
@@ -41,8 +52,12 @@ const transferTransaction = symbol_sdk_1.TransferTransaction.create(
 /* end block 02 */
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = aliceAccount.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */

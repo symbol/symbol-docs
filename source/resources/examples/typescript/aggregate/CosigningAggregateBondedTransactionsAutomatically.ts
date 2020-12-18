@@ -27,7 +27,10 @@ import {
 } from 'symbol-sdk';
 
 /* start block 01 */
-const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
+const cosignAggregateBondedTransaction = (
+  transaction: AggregateTransaction,
+  account: Account,
+): CosignatureSignedTransaction => {
   const cosignatureTransaction = CosignatureTransaction.create(transaction);
   return account.signCosignatureTransaction(cosignatureTransaction);
 };
@@ -37,7 +40,8 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -50,10 +54,14 @@ listener.open().then(() => {
     .aggregateBondedAdded(account.address)
     .pipe(
       filter((_) => !_.signedByAccount(account.publicAccount)),
-      map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+      map((transaction) =>
+        cosignAggregateBondedTransaction(transaction, account),
+      ),
       mergeMap((signedCosignatureTransaction) => {
         listener.close();
-        return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
+        return transactionHttp.announceAggregateBondedCosignature(
+          signedCosignatureTransaction,
+        );
       }),
     )
     .subscribe(

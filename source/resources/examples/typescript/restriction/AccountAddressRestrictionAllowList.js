@@ -21,7 +21,9 @@ const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 // replace with company address
 const companyRawAddress = 'TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI';
-const companyAddress = symbol_sdk_1.Address.createFromRawAddress(companyRawAddress);
+const companyAddress = symbol_sdk_1.Address.createFromRawAddress(
+  companyRawAddress,
+);
 /* end block 01 */
 /* start block 02 */
 // replace with network type
@@ -37,11 +39,19 @@ const transaction = symbol_sdk_1.AccountRestrictionTransaction.createAddressRest
 /* end block 02 */
 /* start block 03 */
 // replace with product private key
-const productPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const productAccount = symbol_sdk_1.Account.createFromPrivateKey(productPrivateKey, networkType);
+const productPrivateKey =
+  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const productAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  productPrivateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = productAccount.sign(transaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = productAccount.sign(
+  transaction,
+  networkGenerationHash,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);

@@ -26,8 +26,12 @@ const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with value
 const value = '123456';
 const accountMetadataTransaction = symbol_sdk_1.AccountMetadataTransaction.create(
@@ -41,8 +45,12 @@ const accountMetadataTransaction = symbol_sdk_1.AccountMetadataTransaction.creat
 /* end block 02 */
 /* start block 03 */
 // replace with bob private key
-const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
+const bobPrivateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  bobPrivateKey,
+  networkType,
+);
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
   symbol_sdk_1.Deadline.create(),
   [accountMetadataTransaction.toAggregate(bobAccount.publicAccount)],
@@ -51,8 +59,12 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = bobAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 /* end block 03 */
 /* start block 04 */
@@ -62,13 +74,21 @@ const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 const networkCurrencyDivisibility = 6;
 const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(
   symbol_sdk_1.Deadline.create(),
-  new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  new symbol_sdk_1.Mosaic(
+    networkCurrencyMosaicId,
+    symbol_sdk_1.UInt64.fromUint(
+      10 * Math.pow(10, networkCurrencyDivisibility),
+    ),
+  ),
   symbol_sdk_1.UInt64.fromUint(480),
   signedTransaction,
   networkType,
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
-const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+const signedHashLockTransaction = bobAccount.sign(
+  hashLockTransaction,
+  networkGenerationHash,
+);
 /* end block 04 */
 /* start block 05 */
 // replace with node endpoint
@@ -77,12 +97,21 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
+const transactionService = new symbol_sdk_1.TransactionService(
+  transactionHttp,
+  receiptHttp,
+);
 listener.open().then(() => {
-  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
-    (x) => console.log(x),
-    (err) => console.log(err),
-    () => listener.close(),
-  );
+  transactionService
+    .announceHashLockAggregateBonded(
+      signedHashLockTransaction,
+      signedTransaction,
+      listener,
+    )
+    .subscribe(
+      (x) => console.log(x),
+      (err) => console.log(err),
+      () => listener.close(),
+    );
 });
 /* end block 05 */

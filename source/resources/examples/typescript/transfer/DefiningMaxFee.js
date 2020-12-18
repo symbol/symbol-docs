@@ -42,7 +42,9 @@ var __awaiter =
         }
       }
       function step(result) {
-        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        result.done
+          ? resolve(result.value)
+          : adopt(result.value).then(fulfilled, rejected);
       }
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
@@ -52,16 +54,24 @@ const symbol_sdk_1 = require('symbol-sdk');
 const example = () =>
   __awaiter(void 0, void 0, void 0, function* () {
     /* start block 01 */
-    const publicAccount1 = symbol_sdk_1.Account.generateNewAccount(symbol_sdk_1.NetworkType.TEST_NET).publicAccount;
-    const publicAccount2 = symbol_sdk_1.Account.generateNewAccount(symbol_sdk_1.NetworkType.TEST_NET).publicAccount;
+    const publicAccount1 = symbol_sdk_1.Account.generateNewAccount(
+      symbol_sdk_1.NetworkType.TEST_NET,
+    ).publicAccount;
+    const publicAccount2 = symbol_sdk_1.Account.generateNewAccount(
+      symbol_sdk_1.NetworkType.TEST_NET,
+    ).publicAccount;
     // Get median fee multiplier
     const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
     const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
     const networkHttp = repositoryHttp.createNetworkRepository();
-    const medianFeeMultiplier = (yield networkHttp.getTransactionFees().toPromise()).medianFeeMultiplier;
+    const medianFeeMultiplier = (yield networkHttp
+      .getTransactionFees()
+      .toPromise()).medianFeeMultiplier;
     // Define transaction and set max fee
     const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
-    const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
+    const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(
+      rawAddress,
+    );
     const transferTransaction = symbol_sdk_1.TransferTransaction.create(
       symbol_sdk_1.Deadline.create(),
       recipientAddress,
@@ -75,7 +85,10 @@ const example = () =>
     const requiredCosignatures = 1;
     const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
       symbol_sdk_1.Deadline.create(),
-      [transferTransaction.toAggregate(publicAccount1), transferTransaction.toAggregate(publicAccount2)],
+      [
+        transferTransaction.toAggregate(publicAccount1),
+        transferTransaction.toAggregate(publicAccount2),
+      ],
       symbol_sdk_1.NetworkType.TEST_NET,
       [],
     ).setMaxFeeForAggregate(medianFeeMultiplier, 1);

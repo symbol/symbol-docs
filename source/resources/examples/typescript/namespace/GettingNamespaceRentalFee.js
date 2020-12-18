@@ -42,7 +42,9 @@ var __awaiter =
         }
       }
       function step(result) {
-        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        result.done
+          ? resolve(result.value)
+          : adopt(result.value).then(fulfilled, rejected);
       }
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
@@ -56,8 +58,14 @@ const example = () =>
     const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
     const networkHttp = repositoryHttp.createNetworkRepository();
     networkHttp.getRentalFees().subscribe((rentalFees) => {
-      console.log('RootNamespaceRentalFeePerBlock', rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact());
-      console.log('ChildNamespaceRentalFee', rentalFees.effectiveChildNamespaceRentalFee.compact());
+      console.log(
+        'RootNamespaceRentalFeePerBlock',
+        rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact(),
+      );
+      console.log(
+        'ChildNamespaceRentalFee',
+        rentalFees.effectiveChildNamespaceRentalFee.compact(),
+      );
     });
     /* end block 01 */
   });

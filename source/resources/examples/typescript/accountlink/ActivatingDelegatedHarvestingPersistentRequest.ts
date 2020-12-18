@@ -13,14 +13,22 @@ import {
 const networkType = NetworkType.TEST_NET;
 const remoteAccount = Account.generateNewAccount(networkType);
 // replace with private key
-const announcerAccountPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const announcerAccount = Account.createFromPrivateKey(announcerAccountPrivateKey, networkType);
+const announcerAccountPrivateKey =
+  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const announcerAccount = Account.createFromPrivateKey(
+  announcerAccountPrivateKey,
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
 // replace with node publicKey (nodeUrl + '/node/info')
-const nodePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-const nodePublicAccount = PublicAccount.createFromPublicKey(nodePublicKey, networkType);
+const nodePublicKey =
+  '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const nodePublicAccount = PublicAccount.createFromPublicKey(
+  nodePublicKey,
+  networkType,
+);
 
 const persistentDelegationRequestTransaction = PersistentDelegationRequestTransaction.createPersistentDelegationRequestTransaction(
   Deadline.create(),
@@ -33,8 +41,12 @@ const persistentDelegationRequestTransaction = PersistentDelegationRequestTransa
 
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = announcerAccount.sign(persistentDelegationRequestTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = announcerAccount.sign(
+  persistentDelegationRequestTransaction,
+  networkGenerationHash,
+);
 
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';

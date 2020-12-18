@@ -38,15 +38,22 @@ const epochAdjustment = 123456789;
 /* start block 01 */
 const networkType = NetworkType.TEST_NET;
 // replace with kyc provider private key
-const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
-const kycProviderAccount = Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
+const kycProviderPrivateKey =
+  'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
+const kycProviderAccount = Account.createFromPrivateKey(
+  kycProviderPrivateKey,
+  networkType,
+);
 
 // Define KYC Mosaic Id
 const mosaicNonce = MosaicNonce.createRandom();
 const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
   Deadline.create(epochAdjustment),
   mosaicNonce,
-  MosaicId.createFromNonce(mosaicNonce, kycProviderAccount.publicAccount.address),
+  MosaicId.createFromNonce(
+    mosaicNonce,
+    kycProviderAccount.publicAccount.address,
+  ),
   MosaicFlags.create(true, true, true),
   0,
   UInt64.fromUint(0),
@@ -71,15 +78,21 @@ const aggregateTransaction = AggregateTransaction.createComplete(
   Deadline.create(epochAdjustment),
   [
     mosaicDefinitionTransaction.toAggregate(kycProviderAccount.publicAccount),
-    mosaicGlobalRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+    mosaicGlobalRestrictionTransaction.toAggregate(
+      kycProviderAccount.publicAccount,
+    ),
   ],
   networkType,
   [],
   UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = kycProviderAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';

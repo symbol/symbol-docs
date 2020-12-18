@@ -22,8 +22,12 @@ const symbol_sdk_1 = require('symbol-sdk');
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with duration (in blocks)
 const duration = symbol_sdk_1.UInt64.fromUint(0);
 // replace with custom mosaic flags
@@ -37,7 +41,11 @@ const mosaicDefinitionTransaction = symbol_sdk_1.MosaicDefinitionTransaction.cre
   symbol_sdk_1.Deadline.create(),
   nonce,
   symbol_sdk_1.MosaicId.createFromNonce(nonce, account.address),
-  symbol_sdk_1.MosaicFlags.create(isSupplyMutable, isTransferable, isRestrictable),
+  symbol_sdk_1.MosaicFlags.create(
+    isSupplyMutable,
+    isTransferable,
+    isRestrictable,
+  ),
   divisibility,
   duration,
   networkType,
@@ -57,14 +65,21 @@ const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction
 /* start block 03 */
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
   symbol_sdk_1.Deadline.create(),
-  [mosaicDefinitionTransaction.toAggregate(account.publicAccount), mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)],
+  [
+    mosaicDefinitionTransaction.toAggregate(account.publicAccount),
+    mosaicSupplyChangeTransaction.toAggregate(account.publicAccount),
+  ],
   networkType,
   [],
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);

@@ -27,7 +27,9 @@ const kycIdHex = '183D0802BCDB97AF';
 const kycId = new symbol_sdk_1.MosaicId(kycIdHex);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
+const key = symbol_sdk_1.KeyGenerator.generateUInt64Key(
+  'IsVerified'.toLowerCase(),
+);
 const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction.create(
   symbol_sdk_1.Deadline.create(),
   sharesId, // mosaicId
@@ -40,11 +42,19 @@ const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction.create(
   kycId, // referenceMosaicId
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
-const comfyClothingCompanyPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const comfyClothingCompanyAccount = symbol_sdk_1.Account.createFromPrivateKey(comfyClothingCompanyPrivateKey, networkType);
+const comfyClothingCompanyPrivateKey =
+  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const comfyClothingCompanyAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  comfyClothingCompanyPrivateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = comfyClothingCompanyAccount.sign(transaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = comfyClothingCompanyAccount.sign(
+  transaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';

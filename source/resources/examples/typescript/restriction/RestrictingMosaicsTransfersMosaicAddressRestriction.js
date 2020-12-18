@@ -50,8 +50,12 @@ const bobMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestric
 /* end block 01 */
 /* start block 02 */
 // replace with company private key
-const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
   symbol_sdk_1.Deadline.create(),
   [
@@ -63,8 +67,12 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';

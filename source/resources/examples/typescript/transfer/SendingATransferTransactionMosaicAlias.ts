@@ -16,7 +16,16 @@
  *
  */
 
-import { Account, Deadline, EmptyMessage, Mosaic, NamespaceId, NetworkType, TransferTransaction, UInt64 } from 'symbol-sdk';
+import {
+  Account,
+  Deadline,
+  EmptyMessage,
+  Mosaic,
+  NamespaceId,
+  NetworkType,
+  TransferTransaction,
+  UInt64,
+} from 'symbol-sdk';
 
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;

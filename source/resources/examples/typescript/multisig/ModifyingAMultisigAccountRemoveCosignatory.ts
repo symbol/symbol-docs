@@ -31,20 +31,36 @@ const example = async (): Promise<void> => {
     // Network information
     const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
     const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-    const epochAdjustment = await repositoryFactory.getEpochAdjustment().toPromise();
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
     const networkType = await repositoryFactory.getNetworkType().toPromise();
-    const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
 
     /* start block 01 */
     // Replace with multisig public key
-    const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-    const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+    const multisigAccountPublicKey =
+      '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+    const multisigAccount = PublicAccount.createFromPublicKey(
+      multisigAccountPublicKey,
+      networkType,
+    );
     // Replace with cosignatory public key
-    const cosignatoryToRemovePublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
-    const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, networkType);
+    const cosignatoryToRemovePublicKey =
+      '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
+    const cosignatoryToRemove = PublicAccount.createFromPublicKey(
+      cosignatoryToRemovePublicKey,
+      networkType,
+    );
     // Replace with cosignatory private key
-    const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-    const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+    const cosignatoryPrivateKey =
+      '1111111111111111111111111111111111111111111111111111111111111111';
+    const cosignatoryAccount = Account.createFromPrivateKey(
+      cosignatoryPrivateKey,
+      networkType,
+    );
 
     const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
       Deadline.create(epochAdjustment),
@@ -64,11 +80,16 @@ const example = async (): Promise<void> => {
       maxFee,
     );
 
-    const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+    const signedTransaction = cosignatoryAccount.sign(
+      aggregateTransaction,
+      networkGenerationHash,
+    );
     const transactionHttp = repositoryFactory.createTransactionRepository();
 
     console.log('Transaction Hash:', signedTransaction.hash);
-    const response = await transactionHttp.announce(signedTransaction).toPromise();
+    const response = await transactionHttp
+      .announce(signedTransaction)
+      .toPromise();
     console.log(response);
     /* end block 01 */
   } catch (e) {

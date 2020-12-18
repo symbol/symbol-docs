@@ -22,8 +22,12 @@ const symbol_sdk_1 = require('symbol-sdk');
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with company private key
-const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const companyAccount = symbol_sdk_1.Account.createFromPrivateKey(companyPrivateKey, networkType);
+const companyPrivateKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const companyAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  companyPrivateKey,
+  networkType,
+);
 // replace with namespace name
 const namespaceId = new symbol_sdk_1.NamespaceId('cc');
 const name = 'ComfyClothingCompany';
@@ -83,8 +87,12 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
 /* end block 02 */
 /* start block 03 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = companyAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);

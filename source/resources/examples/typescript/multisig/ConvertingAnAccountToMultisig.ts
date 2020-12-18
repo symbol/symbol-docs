@@ -33,22 +33,35 @@ const example = async (): Promise<void> => {
     // Network information
     const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
     const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-    const epochAdjustment = await repositoryFactory.getEpochAdjustment().toPromise();
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
     const networkType = await repositoryFactory.getNetworkType().toPromise();
-    const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
     // Returns the network main currency, symbol.xym
     const { currency } = await repositoryFactory.getCurrencies().toPromise();
 
     /* start block 01 */
     // Replace with candidate multisig private key
-    const privateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+    const privateKey =
+      'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
     const account = Account.createFromPrivateKey(privateKey, networkType);
     // Replace with cosignatory 1 public key
-    const cosignatory1PublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-    const cosignatory1 = PublicAccount.createFromPublicKey(cosignatory1PublicKey, networkType);
+    const cosignatory1PublicKey =
+      'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+    const cosignatory1 = PublicAccount.createFromPublicKey(
+      cosignatory1PublicKey,
+      networkType,
+    );
     // Replace with cosignatory 2 public key
-    const cosignatory2PublicKey = '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
-    const cosignatory2 = PublicAccount.createFromPublicKey(cosignatory2PublicKey, networkType);
+    const cosignatory2PublicKey =
+      '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
+    const cosignatory2 = PublicAccount.createFromPublicKey(
+      cosignatory2PublicKey,
+      networkType,
+    );
     /* end block 01 */
 
     /* start block 02 */
@@ -66,7 +79,11 @@ const example = async (): Promise<void> => {
     const maxFee = UInt64.fromUint(2000000);
     const aggregateTransaction = AggregateTransaction.createBonded(
       Deadline.create(epochAdjustment),
-      [multisigAccountModificationTransaction.toAggregate(account.publicAccount)],
+      [
+        multisigAccountModificationTransaction.toAggregate(
+          account.publicAccount,
+        ),
+      ],
       networkType,
       [],
       maxFee,
@@ -74,7 +91,10 @@ const example = async (): Promise<void> => {
     /* end block 03 */
 
     /* start block 04 */
-    const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+    const signedTransaction = account.sign(
+      aggregateTransaction,
+      networkGenerationHash,
+    );
     console.log('Aggregate transaction hash: ' + signedTransaction.hash);
     /* end block 04 */
 
@@ -88,26 +108,38 @@ const example = async (): Promise<void> => {
       maxFee,
     );
 
-    const signedHashLockTransaction = account.sign(hashLockTransaction, networkGenerationHash);
+    const signedHashLockTransaction = account.sign(
+      hashLockTransaction,
+      networkGenerationHash,
+    );
     console.log('Hashlock transaction hash: ' + signedHashLockTransaction.hash);
 
     const listener = repositoryFactory.createListener();
     const receiptHttp = repositoryFactory.createReceiptRepository();
     const transactionHttp = repositoryFactory.createTransactionRepository();
-    const transactionService = new TransactionService(transactionHttp, receiptHttp);
+    const transactionService = new TransactionService(
+      transactionHttp,
+      receiptHttp,
+    );
 
     console.log('Waiting for confirmation...');
     listener.open().then(() => {
-      transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
-        () => {
-          console.log('Confirmed!');
-          listener.close();
-        },
-        (err) => {
-          console.log(err);
-          listener.close();
-        },
-      );
+      transactionService
+        .announceHashLockAggregateBonded(
+          signedHashLockTransaction,
+          signedTransaction,
+          listener,
+        )
+        .subscribe(
+          () => {
+            console.log('Confirmed!');
+            listener.close();
+          },
+          (err) => {
+            console.log(err);
+            listener.close();
+          },
+        );
     });
     /* end block 05 */
   } catch (e) {

@@ -38,11 +38,19 @@ const transferTransaction = symbol_sdk_1.TransferTransaction.create(
 /* end block 01 */
 /* start block 02 */
 // replace with ticket vendor private key
-const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 /* end block 02 */
 /* start block 03 */
 // replace with node endpoint

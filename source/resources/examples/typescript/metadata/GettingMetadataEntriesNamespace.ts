@@ -16,7 +16,13 @@
  *
  */
 
-import { Metadata, MetadataType, NamespaceId, Page, RepositoryFactoryHttp } from 'symbol-sdk';
+import {
+  Metadata,
+  MetadataType,
+  NamespaceId,
+  Page,
+  RepositoryFactoryHttp,
+} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with namespace name
@@ -26,7 +32,10 @@ const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
 
-const searchCriteria = { targetId: namespaceId, metadataType: MetadataType.Namespace };
+const searchCriteria = {
+  targetId: namespaceId,
+  metadataType: MetadataType.Namespace,
+};
 metadataHttp.search(searchCriteria).subscribe(
   (metadataEntries: Page<Metadata>) => {
     if (metadataEntries.pageSize > 0) {
@@ -36,9 +45,18 @@ metadataHttp.search(searchCriteria).subscribe(
         console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
         console.log('\n ---');
         console.log('\n Value:\t', metadataEntry.value);
-        console.log('\n Sender Address:\t', metadataEntry.sourceAddress.pretty());
-        console.log('\n Target address:\t', metadataEntry.targetAddress.pretty());
-        console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
+        console.log(
+          '\n Sender Address:\t',
+          metadataEntry.sourceAddress.pretty(),
+        );
+        console.log(
+          '\n Target address:\t',
+          metadataEntry.targetAddress.pretty(),
+        );
+        console.log(
+          '\n Scoped metadata key:\t',
+          metadataEntry.scopedMetadataKey.toHex(),
+        );
         console.log('\n TargetId:\t', metadataEntry.targetId);
       });
     } else {

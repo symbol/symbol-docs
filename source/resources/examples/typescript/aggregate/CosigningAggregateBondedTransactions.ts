@@ -28,7 +28,10 @@ import {
 } from 'symbol-sdk';
 
 /* start block 01 */
-const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
+const cosignAggregateBondedTransaction = (
+  transaction: AggregateTransaction,
+  account: Account,
+): CosignatureSignedTransaction => {
   const cosignatureTransaction = CosignatureTransaction.create(transaction);
   return account.signCosignatureTransaction(cosignatureTransaction);
 };
@@ -38,11 +41,13 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 // replace with transaction hash to cosign
-const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
+const transactionHash =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 /* end block 02 */
 
 /* start block 03 */
@@ -53,8 +58,17 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp
   .getTransaction(transactionHash, TransactionGroup.Partial)
   .pipe(
-    map((transaction) => cosignAggregateBondedTransaction(transaction as AggregateTransaction, account)),
-    mergeMap((cosignatureSignedTransaction) => transactionHttp.announceAggregateBondedCosignature(cosignatureSignedTransaction)),
+    map((transaction) =>
+      cosignAggregateBondedTransaction(
+        transaction as AggregateTransaction,
+        account,
+      ),
+    ),
+    mergeMap((cosignatureSignedTransaction) =>
+      transactionHttp.announceAggregateBondedCosignature(
+        cosignatureSignedTransaction,
+      ),
+    ),
   )
   .subscribe(
     (announcedTransaction) => console.log(announcedTransaction),

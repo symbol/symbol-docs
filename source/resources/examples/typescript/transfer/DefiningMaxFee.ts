@@ -32,13 +32,17 @@ const epochAdjustment = 123456789;
 
 const example = async (): Promise<any> => {
   /* start block 01 */
-  const publicAccount1 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
-  const publicAccount2 = Account.generateNewAccount(NetworkType.TEST_NET).publicAccount;
+  const publicAccount1 = Account.generateNewAccount(NetworkType.TEST_NET)
+    .publicAccount;
+  const publicAccount2 = Account.generateNewAccount(NetworkType.TEST_NET)
+    .publicAccount;
   // Get median fee multiplier
   const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
   const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
   const networkHttp = repositoryHttp.createNetworkRepository();
-  const medianFeeMultiplier = (await networkHttp.getTransactionFees().toPromise()).medianFeeMultiplier;
+  const medianFeeMultiplier = (
+    await networkHttp.getTransactionFees().toPromise()
+  ).medianFeeMultiplier;
 
   // Define transaction and set max fee
   const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
@@ -56,7 +60,10 @@ const example = async (): Promise<any> => {
   // Define transaction and set max fee
   const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(epochAdjustment),
-    [transferTransaction.toAggregate(publicAccount1), transferTransaction.toAggregate(publicAccount2)],
+    [
+      transferTransaction.toAggregate(publicAccount1),
+      transferTransaction.toAggregate(publicAccount2),
+    ],
     NetworkType.TEST_NET,
     [],
   ).setMaxFeeForAggregate(medianFeeMultiplier, 1);

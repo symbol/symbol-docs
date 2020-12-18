@@ -42,7 +42,9 @@ var __awaiter =
         }
       }
       function step(result) {
-        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        result.done
+          ? resolve(result.value)
+          : adopt(result.value).then(fulfilled, rejected);
       }
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
@@ -54,9 +56,12 @@ const symbol_sdk_1 = require('symbol-sdk');
 const validateTransactionInBlock = (leaf, height, blockHttp) =>
   __awaiter(void 0, void 0, void 0, function* () {
     // 2. Obtain HRoot; in Symbol, this is stored in the block header.
-    const HRoot = (yield blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
+    const HRoot = (yield blockHttp.getBlockByHeight(height).toPromise())
+      .blockTransactionsHash;
     // 3. Request the merkleProof: H1, H7, H10
-    const merkleProof = (yield blockHttp.getMerkleTransaction(height, leaf).toPromise()).merklePath;
+    const merkleProof = (yield blockHttp
+      .getMerkleTransaction(height, leaf)
+      .toPromise()).merklePath;
     // 4. Calculate HRoot'.
     if (merkleProof.length === 0) {
       // There is a single item in the tree, so HRoot' = leaf.
@@ -65,9 +70,13 @@ const validateTransactionInBlock = (leaf, height, blockHttp) =>
     const HRoot0 = merkleProof.reduce((proofHash, pathItem) => {
       const hasher = js_sha3_1.sha3_256.create();
       if (pathItem.position === symbol_sdk_1.MerklePosition.Left) {
-        return hasher.update(Buffer.from(pathItem.hash + proofHash, 'hex')).hex();
+        return hasher
+          .update(Buffer.from(pathItem.hash + proofHash, 'hex'))
+          .hex();
       } else {
-        return hasher.update(Buffer.from(proofHash + pathItem.hash, 'hex')).hex();
+        return hasher
+          .update(Buffer.from(proofHash + pathItem.hash, 'hex'))
+          .hex();
       }
     }, leaf);
     // 5. Compare if the HRoot' equals to HRoot.
@@ -80,5 +89,7 @@ const blockHttp = repositoryHttp.createBlockRepository();
 const height = symbol_sdk_1.UInt64.fromUint(1);
 // 1. Calculate H(B); the hash of the element you want to validate if exists within a block.
 const leaf = '1F4B55D42C9C91805E73317319DDDA633667D5E44EB0F03678FF7F130555DF4B'.toLowerCase();
-validateTransactionInBlock(leaf, height, blockHttp).then((result) => console.log(result));
+validateTransactionInBlock(leaf, height, blockHttp).then((result) =>
+  console.log(result),
+);
 /* end block 01 */

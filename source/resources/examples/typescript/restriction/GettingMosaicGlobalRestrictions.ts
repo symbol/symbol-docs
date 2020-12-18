@@ -16,7 +16,12 @@
  *
  */
 
-import { MosaicGlobalRestrictionItem, MosaicId, MosaicRestrictionType, RepositoryFactoryHttp } from 'symbol-sdk';
+import {
+  MosaicGlobalRestrictionItem,
+  MosaicId,
+  MosaicRestrictionType,
+  RepositoryFactoryHttp,
+} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with mosaic id
@@ -30,17 +35,26 @@ const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 restrictionHttp.getMosaicGlobalRestriction(mosaicId).subscribe(
   (mosaicGlobalRestrictions) => {
     if (mosaicGlobalRestrictions.restrictions.size > 0) {
-      console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
-      mosaicGlobalRestrictions.restrictions.forEach((value: MosaicGlobalRestrictionItem, key: string) => {
-        console.log(
-          '\n' + key + '\t',
-          value.referenceMosaicId.toHex() + '\t',
-          MosaicRestrictionType[value.restrictionType] + '\t',
-          value.restrictionValue,
-        );
-      });
+      console.log(
+        'Key\t',
+        'Reference MosaicId\t',
+        'Restriction Type\t',
+        'Restriction Value',
+      );
+      mosaicGlobalRestrictions.restrictions.forEach(
+        (value: MosaicGlobalRestrictionItem, key: string) => {
+          console.log(
+            '\n' + key + '\t',
+            value.referenceMosaicId.toHex() + '\t',
+            MosaicRestrictionType[value.restrictionType] + '\t',
+            value.restrictionValue,
+          );
+        },
+      );
     } else {
-      console.log('\n The mosaic does not have mosaic global restrictions assigned.');
+      console.log(
+        '\n The mosaic does not have mosaic global restrictions assigned.',
+      );
     }
   },
   (err) => console.log(err),

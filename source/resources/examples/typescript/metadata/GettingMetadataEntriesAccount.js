@@ -26,7 +26,10 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const metadataHttp = repositoryFactory.createMetadataRepository();
-const searchCriteria = { targetAddress: address, metadataType: symbol_sdk_1.MetadataType.Account };
+const searchCriteria = {
+  targetAddress: address,
+  metadataType: symbol_sdk_1.MetadataType.Account,
+};
 metadataHttp.search(searchCriteria).subscribe(
   (metadata) => {
     if (metadata.totalEntries > 0) {
@@ -36,9 +39,18 @@ metadataHttp.search(searchCriteria).subscribe(
         console.log('\n \n Key:\t', metadataEntry.scopedMetadataKey);
         console.log('\n ---');
         console.log('\n Value:\t', metadataEntry.value);
-        console.log('\n Sender Address:\t', metadataEntry.sourceAddress.pretty());
-        console.log('\n Target address:\t', metadataEntry.targetAddress.pretty());
-        console.log('\n Scoped metadata key:\t', metadataEntry.scopedMetadataKey.toHex());
+        console.log(
+          '\n Sender Address:\t',
+          metadataEntry.sourceAddress.pretty(),
+        );
+        console.log(
+          '\n Target address:\t',
+          metadataEntry.targetAddress.pretty(),
+        );
+        console.log(
+          '\n Scoped metadata key:\t',
+          metadataEntry.scopedMetadataKey.toHex(),
+        );
       });
     } else {
       console.log('\n The address does not have metadata entries assigned.');

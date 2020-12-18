@@ -35,8 +35,12 @@ const epochAdjustment = 123456789;
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with company private key
-const companyPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const companyAccount = Account.createFromPrivateKey(companyPrivateKey, networkType);
+const companyPrivateKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const companyAccount = Account.createFromPrivateKey(
+  companyPrivateKey,
+  networkType,
+);
 // replace with mosaic id
 const mosaicId = new NamespaceId('cc.shares');
 
@@ -68,7 +72,10 @@ const nameMetadataTransaction = MosaicMetadataTransaction.create(
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
   Deadline.create(epochAdjustment),
-  [isinMetadataTransaction.toAggregate(companyAccount.publicAccount), nameMetadataTransaction.toAggregate(companyAccount.publicAccount)],
+  [
+    isinMetadataTransaction.toAggregate(companyAccount.publicAccount),
+    nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
+  ],
   networkType,
   [],
   UInt64.fromUint(2000000),
@@ -78,8 +85,12 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 
 /* start block 04 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = companyAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = companyAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 
 // replace with node endpoint

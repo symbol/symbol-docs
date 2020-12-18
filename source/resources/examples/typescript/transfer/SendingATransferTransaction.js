@@ -31,7 +31,14 @@ const networkCurrencyDivisibility = 6;
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(
   symbol_sdk_1.Deadline.create(),
   recipientAddress,
-  [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  [
+    new symbol_sdk_1.Mosaic(
+      networkCurrencyMosaicId,
+      symbol_sdk_1.UInt64.fromUint(
+        10 * Math.pow(10, networkCurrencyDivisibility),
+      ),
+    ),
+  ],
   symbol_sdk_1.PlainMessage.create('This is a test message'),
   networkType,
   symbol_sdk_1.UInt64.fromUint(2000000),
@@ -39,11 +46,19 @@ const transferTransaction = symbol_sdk_1.TransferTransaction.create(
 /* end block 01 */
 /* start block 02 */
 // replace with sender private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 console.log('Payload:', signedTransaction.payload);
 console.log('Transaction Hash:', signedTransaction.hash);
 /* end block 02 */

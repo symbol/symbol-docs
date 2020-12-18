@@ -32,9 +32,13 @@ const example = async (): Promise<void> => {
     // Network information
     const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
     const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-    const epochAdjustment = await repositoryFactory.getEpochAdjustment().toPromise();
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
     const networkType = await repositoryFactory.getNetworkType().toPromise();
-    const networkGenerationHash = await repositoryFactory.getGenerationHash().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
     // Returns the network main currency, symbol.xym
     const { currency } = await repositoryFactory.getCurrencies().toPromise();
 
@@ -54,20 +58,30 @@ const example = async (): Promise<void> => {
     );
 
     // Replace with sender's private key
-    const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+    const privateKey =
+      '1111111111111111111111111111111111111111111111111111111111111111';
     const account = Account.createFromPrivateKey(privateKey, networkType);
-    const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+    const signedTransaction = account.sign(
+      transferTransaction,
+      networkGenerationHash,
+    );
     /* end block 01 */
 
     console.log('Sender address: ' + account.address.pretty());
     console.log('Recipient address: ' + recipientAddress.pretty());
-    console.log('Amount (absolute): ' + transferTransaction.mosaics[0].amount.compact().toLocaleString());
+    console.log(
+      'Amount (absolute): ' +
+        transferTransaction.mosaics[0].amount.compact().toLocaleString(),
+    );
 
     /* start block 02 */
     const receiptHttp = repositoryFactory.createReceiptRepository();
     const transactionHttp = repositoryFactory.createTransactionRepository();
     const listener = repositoryFactory.createListener();
-    const transactionService = new TransactionService(transactionHttp, receiptHttp);
+    const transactionService = new TransactionService(
+      transactionHttp,
+      receiptHttp,
+    );
 
     console.log('Waiting for confirmation...');
     await listener.open();
