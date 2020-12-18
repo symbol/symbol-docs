@@ -23,7 +23,6 @@ import {
   Deadline,
   Mosaic,
   NamespaceId,
-  NetworkType,
   PlainMessage,
   RepositoryFactoryHttp,
   TransactionService,
@@ -31,66 +30,87 @@ import {
   UInt64,
 } from 'symbol-sdk';
 
-// Retrieve from node's /network/properties or RepositoryFactory
-const epochAdjustment = 123456789;
+const example = async (): Promise<void> => {
+  try {
+    // Network information
+    const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+    const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
+    const networkType = await repositoryFactory.getNetworkType().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
 
-/* start block 01 */
-const aliasedMosaic = new Mosaic(
-  new NamespaceId('symbol.xym'),
-  UInt64.fromUint(1000000),
-);
-/* end block 01 */
-
-/* start block 02 */
-// replace with network type
-const networkType = NetworkType.TEST_NET;
-const transferTransaction = TransferTransaction.create(
-  Deadline.create(epochAdjustment),
-  Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
-  [aliasedMosaic],
-  PlainMessage.create('Test aliased mosaic'),
-  networkType,
-  UInt64.fromUint(2000000),
-);
-
-// replace with sender private key
-const privateKey =
-  '1111111111111111111111111111111111111111111111111111111111111111';
-const account = Account.createFromPrivateKey(privateKey, networkType);
-// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash =
-  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(
-  transferTransaction,
-  networkGenerationHash,
-);
-console.log(signedTransaction.hash);
-/* end block 02 */
-
-/* start block 03 */
-// replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const receiptHttp = repositoryFactory.createReceiptRepository();
-const transactionHttp = repositoryFactory.createTransactionRepository();
-const listener = repositoryFactory.createListener();
-const transactionService = new TransactionService(transactionHttp, receiptHttp);
-
-listener.open().then(() => {
-  transactionService
-    .announce(signedTransaction, listener)
-    .pipe(
-      mergeMap((transaction) =>
-        transactionService.resolveAliases([transaction.transactionInfo!.hash!]),
-      ),
-      map((transactions) => transactions[0] as TransferTransaction),
-    )
-    .subscribe(
-      (transaction) => {
-        console.log('Resolved MosaicId: ', transaction.mosaics[0].id.toHex());
-        listener.close();
-      },
-      (err) => console.log(err),
+    /* start block 01 */
+    const aliasedMosaic = new Mosaic(
+      new NamespaceId('symbol.xym'),
+      UInt64.fromUint(1000000),
     );
-});
-/* end block 03 */
+    /* end block 01 */
+
+    /* start block 02 */
+    const maxFee = UInt64.fromUint(2000000);
+    const transferTransaction = TransferTransaction.create(
+      Deadline.create(epochAdjustment),
+      Address.createFromRawAddress(
+        'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I',
+      ),
+      [aliasedMosaic],
+      PlainMessage.create('Test aliased mosaic'),
+      networkType,
+      maxFee,
+    );
+
+    // Replace with sender private key
+    const privateKey =
+      '1111111111111111111111111111111111111111111111111111111111111111';
+    const account = Account.createFromPrivateKey(privateKey, networkType);
+    const signedTransaction = account.sign(
+      transferTransaction,
+      networkGenerationHash,
+    );
+    console.log('Transaction hash: ' + signedTransaction.hash);
+    /* end block 02 */
+
+    /* start block 03 */
+    const receiptHttp = repositoryFactory.createReceiptRepository();
+    const transactionHttp = repositoryFactory.createTransactionRepository();
+    const listener = repositoryFactory.createListener();
+    const transactionService = new TransactionService(
+      transactionHttp,
+      receiptHttp,
+    );
+
+    listener.open().then(() => {
+      transactionService
+        .announce(signedTransaction, listener)
+        .pipe(
+          mergeMap((transaction) =>
+            transactionService.resolveAliases([
+              transaction.transactionInfo!.hash!,
+            ]),
+          ),
+          map((transactions) => transactions[0] as TransferTransaction),
+        )
+        .subscribe(
+          (transaction) => {
+            console.log(
+              'Resolved MosaicId: ',
+              transaction.mosaics[0].id.toHex(),
+            );
+            listener.close();
+          },
+          (err) => {
+            console.log(err);
+            listener.close();
+          },
+        );
+    });
+    /* end block 03 */
+  } catch (e) {
+    console.log(e);
+  }
+};
+example().then();
