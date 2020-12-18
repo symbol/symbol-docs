@@ -182,6 +182,12 @@ source_file = build/gettext/concepts/transfer-transaction.pot
 source_lang = en
 type = PO
 
+[symboldocs.contribute--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/index.po
+source_file = build/gettext/contribute/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.contribute--community]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/community.po
 source_file = build/gettext/contribute/community.pot
@@ -191,6 +197,18 @@ type = PO
 [symboldocs.contribute--contributing]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
 source_file = build/gettext/contribute/contributing.pot
+source_lang = en
+type = PO
+
+[symboldocs.contribute--glossary]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/glossary.po
+source_file = build/gettext/contribute/glossary.pot
+source_lang = en
+type = PO
+
+[symboldocs.getting-started--indexe]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/index.po
+source_file = build/gettext/getting-started/index.pot
 source_lang = en
 type = PO
 
@@ -260,6 +278,17 @@ source_file = build/gettext/guidelines/writing-a-schema.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/index.po
+source_file = build/gettext/guides/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--account--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/index.po
+source_file = build/gettext/guides/account/index.pot
+source_lang = en
+type = PO
 
 [symboldocs.guides--account--getting-account-information]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-account-information.po
@@ -282,6 +311,18 @@ type = PO
 [symboldocs.guides--account--reading-transactions-from-an-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/reading-transactions-from-an-account.po
 source_file = build/gettext/guides/account/reading-transactions-from-an-account.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--aggregate--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/index.po
+source_file = build/gettext/guides/aggregate/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--aggregate--adding-cosginatures-aggregate-complete]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/adding-cosginatures-aggregate-complete.po
+source_file = build/gettext/guides/aggregate/adding-cosginatures-aggregate-complete.pot
 source_lang = en
 type = PO
 
@@ -315,6 +356,12 @@ source_file = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-
 source_lang = en
 type = PO
 
+[symboldocs.guides--blockchain--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/index.po
+source_file = build/gettext/guides/blockchain/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
 source_file = build/gettext/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.pot
@@ -333,9 +380,21 @@ source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--accountlink--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/index.po
+source_file = build/gettext/guides/accountlink/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--accountlink--activating-delegated-harvesting]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/activating-delegated-harvesting.po
 source_file = build/gettext/guides/accountlink/activating-delegated-harvesting.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--metadata--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/index.po
+source_file = build/gettext/guides/metadata/index.pot
 source_lang = en
 type = PO
 
@@ -381,15 +440,33 @@ source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--migration--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/index.po
+source_file = build/gettext/guides/migration/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--migration--migrating-from-nem-to-symbol]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nem-to-symbol.po
 source_file = build/gettext/guides/migration/migrating-from-nem-to-symbol.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--monitor--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/index.po
+source_file = build/gettext/guides/monitor/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--monitor--turning-the-asynchronous-transaction-announcement-into-synchronous]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.po
 source_file = build/gettext/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--mosaic--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/index.po
+source_file = build/gettext/guides/mosaic/index.pot
 source_lang = en
 type = PO
 
@@ -408,6 +485,12 @@ type = PO
 [symboldocs.guides--mosaic--modifying-mosaic-supply]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/modifying-mosaic-supply.po
 source_file = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--multisig--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/index.po
+source_file = build/gettext/guides/multisig/index.pot
 source_lang = en
 type = PO
 
@@ -438,6 +521,12 @@ type = PO
 [symboldocs.guides--multisig--removing-a-signer-from-a-multisig-account]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/removing-a-signer-from-a-multisig-account.po
 source_file = build/gettext/guides/multisig/removing-a-signer-from-a-multisig-account.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--namespace--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/index.po
+source_file = build/gettext/guides/namespace/index.pot
 source_lang = en
 type = PO
 
@@ -477,6 +566,18 @@ source_file = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--network--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/index.po
+source_file = build/gettext/guides/network/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--network--using-symbol-bootstrap]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/using-symbol-bootstrap.po
+source_file = build/gettext/guides/network/using-symbol-bootstrap.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--network--configuring-network-properties]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-network-properties.po
 source_file = build/gettext/guides/network/configuring-network-properties.pot
@@ -507,6 +608,12 @@ source_file = build/gettext/guides/network/running-a-test-net-node.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--restriction--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/index.po
+source_file = build/gettext/guides/restriction/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--restriction--preventing-spam-attacks-with-account-restrictions]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
 source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot
@@ -533,9 +640,21 @@ source_file = build/gettext/guides/restriction/restricting-mosaics-transfers.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--secretlock--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/secretlock/index.po
+source_file = build/gettext/guides/secretlock/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--secretlock--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.po
 source_file = build/gettext/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--transfer--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/index.po
+source_file = build/gettext/guides/transfer/index.pot
 source_lang = en
 type = PO
 
@@ -563,9 +682,21 @@ source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictio
 source_lang = en
 type = PO
 
+[symboldocs.references--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/index.po
+source_file = build/gettext/references/index.pot
+source_lang = en
+type = PO
+
 [symboldocs.references--overview]
 file_filter = source/locale/<lang>/LC_MESSAGES/references/overview.po
 source_file = build/gettext/references/overview.pot
+source_lang = en
+type = PO
+
+[symboldocs.serialization--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/serialization/index.po
+source_file = build/gettext/serialization/index.pot
 source_lang = en
 type = PO
 
