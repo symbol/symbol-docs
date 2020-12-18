@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:42
+msgid "Adding cosignatures to aggregate complete trasactions"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:44
+msgid ""
+"This guide will show you how to add cosignatures to an aggregate complete"
+" transaction without using the partial cache."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:46
+msgid ""
+"This can be useful for when you are keeping your private keys in an "
+"offline device (cold wallet) for security reasons. By signing adding the "
+"cosignatures offline, the cosignatories will be able to execute "
+"transactions from your cold wallet while keeping their private keys "
+"completely safe. Furthermore, it also allows users to avoid unnecessarily"
+" locking their funds in :ref:`aggregate bonded transactions <aggregate-"
+"bonded>`."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:51
+msgid "Use case"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:57
+msgid "Multi-Asset Escrowed Transactions"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:59
+msgid ""
+"We will set up an aggregate complete transaction where Alice "
+"(``TDPXWF2H5G7U2NKZRJD47QR4KZPRULPAMQ4O54IK``) will send 100 "
+"|networkcurrency| to Bob (``TCHS3AOXFGWGTN2QUUHDCXJ4SBYLIQIPNUPHHA2N``) "
+"in return for 1 `collectible` mosaic."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:63
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:65
+msgid "Have 2 accounts :ref:`account <setup-creating-a-test-account>`."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:66
+msgid ""
+"Load the accounts with enough |networkcurrency| to pay for transaction "
+"fees."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:67
+msgid "One of the accounts must own a mosaic other than the |networkcurrency|."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:68
+msgid ""
+"Both your offline and online :doc:`workstations <../../getting-started"
+"/setup-workstation>` are set up for Symbol-CLI and Symbol-SDK."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:72
+msgid "Step 1: Construct the aggregate complete transaction"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:74
+msgid ""
+"Open up a text editor. Then, construct the Aggregate Complete Transaction"
+" using Alice's account."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:78
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:99
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:125
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:152
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.ts`"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:83
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:104
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:130
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:157
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/aggregate/AddingCosignaturesAggregateComplete.js`"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:88
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:109
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:135
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:162
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/AddingCosignaturesAggregateComplete.java`"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:93
+msgid ""
+"Make sure to place Alice's private key and Bob's public key in the "
+"appropriate places."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:95
+msgid "Sign the transaction with Alice's key."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:114
+msgid ""
+"3. Save the TypeScript file, then run it on your terminal. Copy the "
+"returned payload and send it over to Bob."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:119
+msgid "Step 2: Add the second cosignature"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:121
+msgid "Bob cosigns the payload obtained from the previous step."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:141
+msgid ""
+"2. Bob runs the code snippet in the terminal and obtains the transaction "
+"signature and the parent hash. Finally, he shares the information back "
+"with Alice."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:146
+msgid "Step 3: Announce the Aggregate Complete Transaction"
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:148
+msgid ""
+"Using Bob's public key, cosignature transaction hash, and signature, "
+"recreate the transaction and announce it to the network as complete."
+msgstr ""
+
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:168
+msgid ""
+"If successful, Alice will have sent 100 |networkcurrency| to Bob and "
+"received 1 ``collectible`` mosaic in return."
+msgstr ""
+

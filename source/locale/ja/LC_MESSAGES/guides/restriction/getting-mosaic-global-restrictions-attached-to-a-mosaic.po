@@ -1,48 +1,73 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-11-03 08:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:20
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:42
 msgid "Getting mosaic global restrictions attached to a mosaic"
 msgstr "モザイクにアタッチされたグローバルモザイク制限を取得する"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:22
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:44
 msgid "Get the list of mosaic global restrictions."
 msgstr "モザイクのグローバル制限リストの取得"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:26
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:48
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:28
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:50
 msgid ""
 "Complete :doc:`restricting mosaics transfers <restricting-mosaics-"
 "transfers>` guide."
 msgstr ":doc:`モザイク転送の制限 <restricting-mosaics-transfers>` ガイドを完了している"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:33
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:55
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:54
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:59
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/restriction/GettingMosaicGlobalRestrictions.ts`"
+msgstr ""
+
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:64
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/restriction/GettingMosaicGlobalRestrictions.js`"
+msgstr ""
+
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:69
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/restriction/GettingMosaicGlobalRestrictions.java`"
+msgstr ""
+
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:76
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
+
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:78
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/restriction/GettingMosaicGlobalRestrictions.sh`"
+msgstr ""
+

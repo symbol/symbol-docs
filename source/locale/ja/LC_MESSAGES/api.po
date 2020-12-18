@@ -1,42 +1,41 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-21 09:32+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/api.rst:12
+#: ../../source/api.rst:36
 msgid "REST Gateway"
 msgstr "REST ゲートウェイ"
 
-#: ../../source/api.rst:14
+#: ../../source/api.rst:38
 msgid ""
 "|catapult-rest| combines HTTP and WebSockets to perform read and write "
 "actions on the blockchain."
-msgstr ""
-"|catapult-rest| は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように併合します。"
+msgstr "|catapult-rest| は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように併合します。"
 
-#: ../../source/api.rst:20
+#: ../../source/api.rst:44
 msgid "Http requests"
 msgstr "HTTP リクエスト"
 
-#: ../../source/api.rst:22
+#: ../../source/api.rst:46
 msgid ""
 "The REST Gateway uses the port ``3000`` and accepts both HTTP **GET**, "
 "**PUT** and **POST** requests."
@@ -44,28 +43,35 @@ msgstr ""
 "REST ゲートウェイはポート ``3000`` 番を使用します。HTTP **GET** 、 **PUT** そして **POST** "
 "リクエストを受け付けます。"
 
-#: ../../source/api.rst:24
+#: ../../source/api.rst:48
 msgid ""
 "Assuming that Catapult REST is running locally, HTTP GET requests can be "
 "executed from a browser and have the form:"
 msgstr "Catapult REST がローカルで動いているのであれば、HTTP GET リクエストはブラウザからこのように実行できます:"
 
-#: ../../source/api.rst:28
+#: ../../source/api.rst:50
+msgid "http://localhost:3000/<path-to-API-request>"
+msgstr ""
+
+#: ../../source/api.rst:52
 msgid ""
-"Conversely, HTTP PUT and POST requests have the same structure but use JSON "
-"structures in the request body. This kind of request cannot usually be "
-"executed from within the browser unless you use a plugin which enables you "
-"to do it."
+"Conversely, HTTP PUT and POST requests have the same structure but use "
+"JSON structures in the request body. This kind of request cannot usually "
+"be executed from within the browser unless you use a plugin which enables"
+" you to do it."
 msgstr ""
 "HTTP PUT と POST リクエストは同じ構造ですが、リクエストボディに JSON "
 "形式を使用します。この種のリクエストは、それが可能なプラグインを利用しないことにはブラウザから実行することができません。"
 
-#: ../../source/api.rst:34
-msgid ""
-"Refer to the next documentation to get the list of available endpoints."
+#: ../../source/api.rst:56
+msgid "Endpoints"
+msgstr ""
+
+#: ../../source/api.rst:58
+msgid "Refer to the next documentation to get the list of available endpoints."
 msgstr "次のドキュメントを参照して、使用可能なエンドポイントのリストを確認できます。"
 
-#: ../../source/api.rst:39
+#: ../../source/api.rst:63
 msgid ""
 "To check the compatibility between the API specification and the REST "
 "Gateway implementation, see :doc:`Product Compatibility Matrix "
@@ -74,31 +80,31 @@ msgstr ""
 "API 仕様と REST ゲートウェイ実装との互換性を確認するには :doc:`製品互換性表 <../compatibility>` "
 "を参照してください。"
 
-#: ../../source/api.rst:42
+#: ../../source/api.rst:66
 msgid "Response codes"
 msgstr "レスポンスコード"
 
-#: ../../source/api.rst:44
+#: ../../source/api.rst:68
 msgid ""
 "Symbol uses conventional HTTP response codes to indicate the success or "
 "failure of an API request."
 msgstr "Symbol は従来の HTTP レスポンスコードを使用して、API リクエストの成功または失敗を示します。"
 
-#: ../../source/api.rst:46
+#: ../../source/api.rst:70
 msgid "Codes in the ``2xx`` range indicate success."
 msgstr "``2xx`` 番台コードは成功を示します。"
 
-#: ../../source/api.rst:47
+#: ../../source/api.rst:71
 msgid ""
-"Codes in the ``4xx`` range indicate an error occurred with the information "
-"provided by the user."
+"Codes in the ``4xx`` range indicate an error occurred with the "
+"information provided by the user."
 msgstr "``4xx`` 番台コードはユーザーが提供した情報でエラーが発生したことを示します。"
 
-#: ../../source/api.rst:48
+#: ../../source/api.rst:72
 msgid "Codes in the ``5xx`` range indicate an error with the node."
 msgstr "``5xx`` 番台のコードはノードのエラーを示します。"
 
-#: ../../source/api.rst:50
+#: ../../source/api.rst:74
 msgid "HTTP Status Code Summary"
 msgstr "HTTP ステータスコード概要"
 
@@ -110,60 +116,115 @@ msgstr "エラーコード"
 msgid "Response"
 msgstr "レスポンス"
 
-#: ../../source/api.rst:1 ../../source/api.rst:1
+#: ../../source/api.rst:1
 msgid "Description"
 msgstr "説明"
+
+#: ../../source/api.rst:1
+msgid "200"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "OK"
+msgstr ""
 
 #: ../../source/api.rst:1
 msgid "Everything worked as expected."
 msgstr "すべて想定通りに稼働している"
 
 #: ../../source/api.rst:1
-msgid ""
-"The request has been accepted, but the processing has not been completed."
+msgid "202"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "Accepted"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "The request has been accepted, but the processing has not been completed."
 msgstr "リクエストは受理されましたが、処理は完了していません。"
+
+#: ../../source/api.rst:1
+msgid "400"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "InvalidContent"
+msgstr ""
 
 #: ../../source/api.rst:1
 msgid "The provided argument was not of an acceptable type of input."
 msgstr "提供された引数は、許容できるタイプの入力ではありませんでした"
 
 #: ../../source/api.rst:1
+msgid "404"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "ResourceNotFound"
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid "The requested resource does not exist."
 msgstr "リクエストしたリソースは存在しません。"
+
+#: ../../source/api.rst:1
+msgid "409"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "InvalidArgument"
+msgstr ""
 
 #: ../../source/api.rst:1
 msgid "The required arguments were missing or unacceptable for the request."
 msgstr "リクエストに必要な引数が欠落しているか、受け入れられませんでした"
 
 #: ../../source/api.rst:1
+msgid "500"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "InternalServiceError"
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid "An error occurred within the REST Gateway."
 msgstr "REST ゲートウェイでエラーが発生しました"
 
 #: ../../source/api.rst:1
+msgid "503"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "ServiceUnavailable"
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid ""
-"Either API node or database service is unavailable or unreachable from the "
-"REST Gateway."
+"Either API node or database service is unavailable or unreachable from "
+"the REST Gateway."
 msgstr "API ノードまたはデータベースサービスのいずれかが REST ゲートウェイから使用できないか、到達できません"
 
-#: ../../source/api.rst:63
+#: ../../source/api.rst:87
 msgid "Pagination"
 msgstr "ページネーション"
 
-#: ../../source/api.rst:65
+#: ../../source/api.rst:89
 msgid ""
-"When a query returns more than one result, the REST Gateway paginates the "
-"responses by default. The query parameters can be customized to advance "
+"When a query returns more than one result, the REST Gateway paginates the"
+" responses by default. The query parameters can be customized to advance "
 "through the pages and filter the contents returned."
 msgstr ""
 "クエリが複数の結果を返す場合、REST "
 "ゲートウェイはデフォルトでレスポンスにページ番号を付けます。クエリパラメータをカスタマイズして、ページを進めたり、返却されるコンテンツをフィルタリングできます。"
 
-#: ../../source/api.rst:68
+#: ../../source/api.rst:92
 msgid ""
 "Each pageable endpoint defines its own set of filters. However, the "
-"following table shows the query params present in every searchable endpoint:"
-msgstr ""
-"ページング可能な各エンドポイントは、独自のフィルターセットを定義しています。次の表はすべての検索可能なエンドポイントに存在するクエリパラメータを示しています:"
+"following table shows the query params present in every searchable "
+"endpoint:"
+msgstr "ページング可能な各エンドポイントは、独自のフィルターセットを定義しています。次の表はすべての検索可能なエンドポイントに存在するクエリパラメータを示しています:"
 
 #: ../../source/api.rst:1
 msgid "Query Parameter"
@@ -178,19 +239,51 @@ msgid "Default"
 msgstr "デフォルト"
 
 #: ../../source/api.rst:1
+msgid "pageSize"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "integer ``[10..100]``"
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid ""
 "Selects the number of entries to return. Example: "
-"``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per page"
+"``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per "
+"page"
 msgstr ""
-"返却するエントリの数を選択します。例: ``http://localhost:3000/blocks?pageSize=100``  ページにつき "
-"100 エントリを返却します"
+"返却するエントリの数を選択します。例: ``http://localhost:3000/blocks?pageSize=100``  ページにつき"
+" 100 エントリを返却します"
+
+#: ../../source/api.rst:1
+msgid "``10``"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "pageNumber"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "integer ``>=1``"
+msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
 "Filters by page number. Example: ``http://localhost:3000/blocks?page=2`` "
 "returns page 2"
+msgstr "ページ番号でフィルタします。例: ``http://localhost:3000/blocks?page=2`` 2 ページ目を返却します。"
+
+#: ../../source/api.rst:1
+msgid "``1``"
 msgstr ""
-"ページ番号でフィルタします。例: ``http://localhost:3000/blocks?page=2`` 2 ページ目を返却します。"
+
+#: ../../source/api.rst:1
+msgid "offset"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "string"
+msgstr ""
 
 #: ../../source/api.rst:1
 msgid ""
@@ -201,25 +294,36 @@ msgstr ""
 "``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03``"
 
 #: ../../source/api.rst:1
+msgid "order"
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid ""
-"Sorts the responses in ascending or descending order based on the collection"
-" property set on the parameter ``orderBy``. If the requests does not specify"
-" ``orderBy``, REST returns the collection ordered by id. Example: "
-"``http://localhost:3000/blocks?order=asc`` returns the block entries in "
-"ascending order."
+"Sorts the responses in ascending or descending order based on the "
+"collection property set on the parameter ``orderBy``. If the requests "
+"does not specify ``orderBy``, REST returns the collection ordered by id. "
+"Example: ``http://localhost:3000/blocks?order=asc`` returns the block "
+"entries in ascending order."
 msgstr ""
 "パラメータ ``orderBy`` に設定されたコレクションプロパティに基づき、レスポンスを昇順または降順に並べ替えます。リクエストで "
 "``orderBy`` が指定されていない場合、REST は ID 順に並べられたコレクションを返します。例: "
 "``http://localhost:3000/blocks?order=asc`` ブロックのエントリを昇順で返却します。"
 
 #: ../../source/api.rst:1
+msgid "desc"
+msgstr ""
+
+#: ../../source/api.rst:1
+msgid "orderBy"
+msgstr ""
+
+#: ../../source/api.rst:1
 msgid ""
 "Chooses the parameter to sort by. By default, all the collections are "
 "sortable by id, but the collection could define additional properties."
-msgstr ""
-"ソートするパラメーターを選択します。デフォルトでは、すべてのコレクションは ID でソート可能ですが、コレクションは追加プロパティを定義可能です。"
+msgstr "ソートするパラメーターを選択します。デフォルトでは、すべてのコレクションは ID でソート可能ですが、コレクションは追加プロパティを定義可能です。"
 
-#: ../../source/api.rst:81
+#: ../../source/api.rst:105
 msgid ""
 "Multiple query parameters can be combined in the same call. For example, "
 "``http://localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1C03`` "
@@ -230,22 +334,26 @@ msgstr ""
 "``http://localhost:3000/blocks?pageSize=100&id=EE94FD819A1B30D6C5D1C03`` "
 "will ブロック ID ``EE94FD819A1B30D6C5D1C03`` を起点に、ページごと 100 ブロックエントリを返却します。"
 
-#: ../../source/api.rst:84
+#: ../../source/api.rst:108
 msgid ""
 "The responses also include meta-information about the pagination total "
-"number of entries, current page number, and the total number of pages. Here "
-"is an example response meta-information of the pagination:"
-msgstr ""
-"レスポンスにはページネーションのエントリの総数、現在のページ番号、およびページ総数などのメタ情報も含まれます。これはページネーションのレスポンスメタ情報の例です:"
+"number of entries, current page number, and the total number of pages. "
+"Here is an example response meta-information of the pagination:"
+msgstr "レスポンスにはページネーションのエントリの総数、現在のページ番号、およびページ総数などのメタ情報も含まれます。これはページネーションのレスポンスメタ情報の例です:"
 
-#: ../../source/api.rst:107
+#: ../../source/api.rst:129
+msgid "WebSockets"
+msgstr ""
+
+#: ../../source/api.rst:131
 msgid ""
 "To get **live updates** when an event occurs on the blockchain, Catapult "
 "REST publishes WebSockets. Client applications can open a WebSocket "
-"connection and get a unique identifier. With this identifier, applications "
-"qualify to subscribe to the available channels instead of constantly polling"
-" the API for updates. When an event occurs in a channel, the REST Gateway "
-"sends a notification to every subscribed client in real-time."
+"connection and get a unique identifier. With this identifier, "
+"applications qualify to subscribe to the available channels instead of "
+"constantly polling the API for updates. When an event occurs in a "
+"channel, the REST Gateway sends a notification to every subscribed client"
+" in real-time."
 msgstr ""
 "ブロックチェーン上でのイベントの発生による **リアルタイムな更新** を得るために、 Catapult REST は WebSocket "
 "を公開しています。クライアントアプリケーションは WebSocket "
@@ -253,79 +361,108 @@ msgstr ""
 "を絶えずポーリングするのではなく、使用可能なチャンネルを購読する資格を得ます。チャンネルでイベントが発生すると REST "
 "ゲートウェイは購読しているすべてのクライアントにリアルタイムで通知を送信します。"
 
-#: ../../source/api.rst:112
+#: ../../source/api.rst:136
 msgid ""
-"WebSocket URIs share the same host and port as the HTTP requests URIs, but "
-"use the ``ws://`` protocol:"
-msgstr ""
-"WebSocket URI は HTTP リクエスト URI と同じホストとポートを共有しますが ``ws://`` プロトコルを使用します:"
+"WebSocket URIs share the same host and port as the HTTP requests URIs, "
+"but use the ``ws://`` protocol:"
+msgstr "WebSocket URI は HTTP リクエスト URI と同じホストとポートを共有しますが ``ws://`` プロトコルを使用します:"
 
-#: ../../source/api.rst:116
+#: ../../source/api.rst:138
+msgid "ws://localhost:3000/ws"
+msgstr ""
+
+#: ../../source/api.rst:140
 msgid ""
 "Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain"
 "/listening-new-blocks>`"
-msgstr ""
-"ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
+msgstr "ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
 
-#: ../../source/api.rst:121
+#: ../../source/api.rst:143
+#, fuzzy
+msgid "Response format"
+msgstr "レスポンスコード"
+
+#: ../../source/api.rst:145
 msgid "All channels share the same response format, which is:"
 msgstr "すべてのチャンネルは同じレスポンスフォーマットを共有しています:"
 
-#: ../../source/api.rst:130
+#: ../../source/api.rst:154
 msgid ""
-"``topic`` contains the name of the subscribed channel, so the same websocket"
-" can be used to monitor multiple channels (``topic`` matches the "
-"``subscribe`` field provided in the request body when subscribing)."
+"``topic`` contains the name of the subscribed channel, so the same "
+"websocket can be used to monitor multiple channels (``topic`` matches the"
+" ``subscribe`` field provided in the request body when subscribing)."
 msgstr ""
 "``topic`` には購読しているチャンネル名が含まれているため、同じ WebSocket を使用して複数のチャンネルを監視できます "
 "(``topic`` は購読時にリクエストボディで提供される ``subscribe`` フィールドに一致します)"
 
-#: ../../source/api.rst:131
+#: ../../source/api.rst:155
 msgid ""
-"``data`` is a channel-specific object. Each channel listed below describes "
-"the data object it returns."
-msgstr ""
-"``data`` はチャンネル固有のオブジェクトです。以下にリストされている各チャンネルは、それが返すデータオブジェクトについて説明しています。"
+"``data`` is a channel-specific object. Each channel listed below "
+"describes the data object it returns."
+msgstr "``data`` はチャンネル固有のオブジェクトです。以下にリストされている各チャンネルは、それが返すデータオブジェクトについて説明しています。"
 
-#: ../../source/api.rst:134
+#: ../../source/api.rst:158
 msgid "Channels"
 msgstr "チャンネル"
 
-#: ../../source/api.rst:136
+#: ../../source/api.rst:160
 msgid "**block**"
 msgstr "**ブロック**"
 
-#: ../../source/api.rst:138
+#: ../../source/api.rst:162
 msgid ""
-"The ``block`` channel notifies subscribed clients every time a new block is "
-"harvested. Each returned message contains information about a harvested "
-"block."
+"The ``block`` channel notifies subscribed clients every time a new block "
+"is harvested. Each returned message contains information about a "
+"harvested block."
 msgstr ""
 "``block`` "
 "チャンネルは、新しいブロックが取得されるたび、購読しているクライアントへ通知します。返却される各メッセージには、収集されたブロックに関する情報が含まれます。"
 
-#: ../../source/api.rst:141 ../../source/api.rst:159 ../../source/api.rst:177
-#: ../../source/api.rst:197 ../../source/api.rst:217 ../../source/api.rst:235
-#: ../../source/api.rst:255 ../../source/api.rst:273 ../../source/api.rst:291
+#: ../../source/api.rst:165 ../../source/api.rst:183 ../../source/api.rst:201
+#: ../../source/api.rst:221 ../../source/api.rst:241 ../../source/api.rst:259
+#: ../../source/api.rst:279 ../../source/api.rst:297 ../../source/api.rst:315
 msgid "*Request body*"
 msgstr "*リクエストボディ*"
 
-#: ../../source/api.rst:154
+#: ../../source/api.rst:174 ../../source/api.rst:192 ../../source/api.rst:210
+#: ../../source/api.rst:230 ../../source/api.rst:250 ../../source/api.rst:268
+#: ../../source/api.rst:288 ../../source/api.rst:306 ../../source/api.rst:324
+#, fuzzy
+msgid "*Response data*"
+msgstr "レスポンスコード"
+
+#: ../../source/api.rst:176
+msgid ""
+"`BlockInfoDTO <https://github.com/nemtech/symbol-"
+"openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_"
+msgstr ""
+
+#: ../../source/api.rst:178
 msgid "**finalizedBlock**"
 msgstr "**ファイナライズ済みブロック**"
 
-#: ../../source/api.rst:156
+#: ../../source/api.rst:180
 msgid ""
-"The ``finalizedBlock`` channel notifies subscribed clients every time a set "
-"of blocks is :ref:`finalized <finalization>`. Each returned message contains"
-" information about the **highest block** in the finalization round. All "
-"blocks with a smaller height are assumed finalized."
+"The ``finalizedBlock`` channel notifies subscribed clients every time a "
+"set of blocks is :ref:`finalized <finalization>`. Each returned message "
+"contains information about the **highest block** in the finalization "
+"round. All blocks with a smaller height are assumed finalized."
 msgstr ""
 "``finalizedBlock`` チャンネルは、ブロックの集合が :ref:`finalized <finalization>` "
 "されるたびに購読しているクライアントに通知します。返却される各メッセージには、ファイナライズラウンドの **最も高いブロック** "
 "に関する情報が含まれています。高さが低いブロックはすべてファイナライズ済みと見なされます。"
 
-#: ../../source/api.rst:174
+#: ../../source/api.rst:194
+msgid ""
+"`FinalizedBlockDTO <https://github.com/nemtech/symbol-"
+"openapi/blob/main/spec/core/chain/schemas/FinalizedBlockDTO.yml>`_"
+msgstr ""
+
+#: ../../source/api.rst:196
+msgid "**confirmedAdded/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:198
 msgid ""
 "The ``confirmedAdded`` channel notifies subscribed clients when a "
 "transaction related to the given address is included in a block. Each "
@@ -334,7 +471,17 @@ msgstr ""
 "``confirmedAdded`` "
 "チャンネルは、指定されたアドレスに関連するトランザクションがブロックに含まれると、購読しているクライアントに通知します。返却される各メッセージには、承認されたトランザクションに関する情報が含まれます。"
 
-#: ../../source/api.rst:192
+#: ../../source/api.rst:212 ../../source/api.rst:232 ../../source/api.rst:270
+msgid ""
+"`TransactionInfoDTO <https://github.com/nemtech/symbol-"
+"openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_"
+msgstr ""
+
+#: ../../source/api.rst:214
+msgid "**unconfirmedAdded/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:216
 msgid ""
 "The ``unconfirmedAdded`` channel notifies subscribed clients when a "
 "transaction related to the given address enters the unconfirmed state, "
@@ -344,47 +491,62 @@ msgstr ""
 "``unconfirmedAdded`` "
 "チャンネルは、指定されたアドレスに関連するトランザクションが未承認の状態になり、ブロックに含まれるのを待機しているときに、購読しているクライアントに通知します。返却される各メッセージには、未承認のトランザクションに関する情報が含まれます。"
 
-#: ../../source/api.rst:195
+#: ../../source/api.rst:219
 msgid ""
 "Possible scenarios when this message is received are: the transaction is "
-"announced to the network via the ``PUT /transaction`` HTTP endpoint or an "
-":ref:`AggregateBondedTransaction <aggregate-bonded>` has all required "
+"announced to the network via the ``PUT /transaction`` HTTP endpoint or an"
+" :ref:`AggregateBondedTransaction <aggregate-bonded>` has all required "
 "cosigners and changes its state from partial to unconfirmed."
 msgstr ""
 "トランザクションが ``PUT /transaction`` HTTP エンドポイントによりアナウンスされるか、 "
 ":ref:`AggregateBondedTransaction <aggregate-bonded>` のすべての署名が揃い、partial "
 "から未承認へ変わるとき、このメッセージが届く可能性があります。"
 
-#: ../../source/api.rst:212
+#: ../../source/api.rst:234
+msgid "**unconfirmedRemoved/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:236
 msgid ""
 "The ``unconfirmedRemoved`` channel notifies subscribed clients when a "
-"transaction related to the given address exits the unconfirmed state. Each "
-"returned message contains a no-longer-unconfirmed transaction hash."
+"transaction related to the given address exits the unconfirmed state. "
+"Each returned message contains a no-longer-unconfirmed transaction hash."
 msgstr ""
 "``unconfirmedRemoved`` "
 "チャンネルは、指定されたアドレスに関連するトランザクションが未確認の状態を抜けると、購読しているクライアントに通知します。返却される各メッセージには、承認されていないトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:215
+#: ../../source/api.rst:239
 msgid ""
-"Possible scenarios when this message is received are: the transaction is now"
-" confirmed, or the deadline was reached and the transaction was not included"
-" in a block."
-msgstr ""
-"このメッセージが受信された場合に考えられるシナリオは、トランザクションが確認されたか、期限に達していてトランザクションがブロックに含まれていなかった場合です。"
+"Possible scenarios when this message is received are: the transaction is "
+"now confirmed, or the deadline was reached and the transaction was not "
+"included in a block."
+msgstr "このメッセージが受信された場合に考えられるシナリオは、トランザクションが確認されたか、期限に達していてトランザクションがブロックに含まれていなかった場合です。"
 
-#: ../../source/api.rst:232
+#: ../../source/api.rst:252 ../../source/api.rst:290
+msgid "Hash"
+msgstr ""
+
+#: ../../source/api.rst:254
+msgid "**partialAdded/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:256
 msgid ""
 "The ``partialAdded`` channel notifies subscribed clients when an "
-":ref:`AggregateBondedTransaction <aggregate-bonded>` related to the given "
-"address enters the partial state, waiting for all required cosignatures to "
-"complete. Each returned message contains information about an added partial "
-"transaction."
+":ref:`AggregateBondedTransaction <aggregate-bonded>` related to the given"
+" address enters the partial state, waiting for all required cosignatures "
+"to complete. Each returned message contains information about an added "
+"partial transaction."
 msgstr ""
 "``partialAdded`` チャンネルは、指定されたアドレスに関連する :ref:`AggregateBondedTransaction "
 "<aggregate-bonded>` "
 "が部分的な状態になり、必要なすべての署名が完了するのを待っているときに、購読したクライアントに通知します。返却される各メッセージには、追加された部分トランザクションに関する情報が含まれます。"
 
-#: ../../source/api.rst:250
+#: ../../source/api.rst:272
+msgid "**partialRemoved/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:274
 msgid ""
 "The ``partialRemoved`` channel notifies subscribed clients when a "
 "transaction related to the given address exits the partial state. Each "
@@ -393,26 +555,39 @@ msgstr ""
 "``partialRemoved`` "
 "チャンネルは、指定されたアドレスに関連するトランザクションが部分的な状態を終了すると、購読したクライアントに通知します。返却される各メッセージには、削除された部分的なトランザクションハッシュが含まれます。"
 
-#: ../../source/api.rst:253
+#: ../../source/api.rst:277
 msgid ""
 "Possible scenarios when this message is emitted are: all required "
-"cosignatures were received and the transaction is now unconfirmed, or the "
-"deadline was reached and the transaction was not included in a block."
-msgstr ""
-"このメッセージが出されたときに考えられるシナリオは次のとおりです。必要なすべての署名が受信され、トランザクションが未承認であるか、期限に達し、トランザクションがブロックに含まれていません。"
+"cosignatures were received and the transaction is now unconfirmed, or the"
+" deadline was reached and the transaction was not included in a block."
+msgstr "このメッセージが出されたときに考えられるシナリオは次のとおりです。必要なすべての署名が受信され、トランザクションが未承認であるか、期限に達し、トランザクションがブロックに含まれていません。"
 
-#: ../../source/api.rst:270
+#: ../../source/api.rst:292
+msgid "**cosignature/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:294
 msgid ""
-"The ``cosignature`` channel notifies subscribed clients when a cosignature-"
-"signed transaction related to the given address is added to an "
-":ref:`AggregateBondedTransaction <aggregate-bonded>` in the partial state. "
-"Each returned message contains a cosignature-signed transaction."
+"The ``cosignature`` channel notifies subscribed clients when a "
+"cosignature-signed transaction related to the given address is added to "
+"an :ref:`AggregateBondedTransaction <aggregate-bonded>` in the partial "
+"state. Each returned message contains a cosignature-signed transaction."
 msgstr ""
 "``cosignature`` チャンネルは、指定されたアドレスに関連する連署者に署名されたトランザクションがパーシャル状態で "
 ":ref:`AggregateBondedTransaction <aggregate-bonded>` "
 "に追加されると、購読したクライアントに通知します。返却される各メッセージには、署名者が署名したトランザクションが含まれます。"
 
-#: ../../source/api.rst:288
+#: ../../source/api.rst:308
+msgid ""
+"`CosignatureDTO <https://github.com/nemtech/symbol-"
+"openapi/blob/main/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_"
+msgstr ""
+
+#: ../../source/api.rst:310
+msgid "**status/{address}**"
+msgstr ""
+
+#: ../../source/api.rst:312
 msgid ""
 "The ``status`` channel notifies subscribed clients when a transaction "
 "related to the given address signals an error. Each returned message "
@@ -420,3 +595,10 @@ msgid ""
 msgstr ""
 "``status`` "
 "チャンネルは、指定されたアドレスに関連するトランザクションがエラーを通知したときに、購読したクライアントに通知します。返される各メッセージには、エラーメッセージとトランザクションハッシュが含まれます。"
+
+#: ../../source/api.rst:326
+msgid ""
+"`TransactionStatusDTO <https://github.com/nemtech/symbol-"
+"openapi/blob/main/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_"
+msgstr ""
+

@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/contribute/index.rst:36
+msgid "Contributing"
+msgstr ""
+
+#: ../../source/contribute/index.rst:38
+msgid ""
+"|codename| is an |open-source| project. Discover how our |community| is "
+"organized, and get started participating:"
+msgstr ""
+
+#: ../../source/contribute/index.rst:41
+msgid "Reach our community joining the official |slack|"
+msgstr ""
+
+#: ../../source/contribute/index.rst:42
+msgid "Check the :doc:`contributing guidelines <contributing>` to propose changes"
+msgstr ""
+
+#: ../../source/contribute/index.rst:43
+msgid "Follow the development updates on |twitter|"
+msgstr ""
+
+#: ../../source/contribute/index.rst:44
+msgid "Explore our |github| repositories"
+msgstr ""
+

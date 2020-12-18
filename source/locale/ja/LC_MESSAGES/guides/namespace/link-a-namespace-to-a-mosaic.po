@@ -1,138 +1,177 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-03-19 13:58+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:20
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:42
 msgid "Linking a namespace to a mosaic"
 msgstr "ネームスペースをモザイクへリンクする"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:22
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:44
 msgid ""
-"Alias an mosaic with a namespace so that others can reference it in a more "
-"friendly way when issuing transactions."
-msgstr ""
-"トランザクションを発行するとき、他の人がよりわかりやすい方法でモザイクを参照できるように、ネームスペースをモザイクにエイリアスとして設定します。"
+"Alias an mosaic with a namespace so that others can reference it in a "
+"more friendly way when issuing transactions."
+msgstr "トランザクションを発行するとき、他の人がよりわかりやすい方法でモザイクを参照できるように、ネームスペースをモザイクにエイリアスとして設定します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:26
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:48
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:28
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:50
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:29
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:51
 msgid "Create a new :ref:`account <setup-creating-a-test-account>`."
 msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:30
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:52
 msgid ""
-"Load the account with enough |networkcurrency| to pay for transaction fees."
+"Load the account with enough |networkcurrency| to pay for transaction "
+"fees."
 msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:31
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:53
 msgid "Create a :doc:`mosaic <../../concepts/mosaic>` with the account."
 msgstr "このアカウントで :doc:`モザイク <../../concepts/mosaic>` を登録します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:32
-msgid ""
-"Register a :doc:`namespace <../../concepts/namespace>` with the account."
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:54
+msgid "Register a :doc:`namespace <../../concepts/namespace>` with the account."
 msgstr "このアカウントで :doc:`ネームスペース <../../concepts/namespace>` を登録します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:36
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:58
 msgid "Method #01: Using the Desktop Wallet"
 msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:38
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:60
 msgid "Click on \"**Namespace**\" on the left-side menu."
 msgstr "左側のメニューの \"**ネームスペース**\" をクリックします。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:44
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:66
 msgid ""
 "Click on the edit icon of the namespace you desire to link to a mosaic. "
 "Click \"**Link**\"."
 msgstr "モザイクにリンクするネームスペースの編集アイコンをクリックします。 \"**リンク**\" をクリックします。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:46
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:68
 msgid ""
-"Select \"**Link a mosaic**\" as the alias type. Select the ID of the mosaic "
-"you desire to connect to the namespace. Click \"**Send**\". Verify the "
-"information on the next page and enter your wallet password. Click "
+"Select \"**Link a mosaic**\" as the alias type. Select the ID of the "
+"mosaic you desire to connect to the namespace. Click \"**Send**\". Verify"
+" the information on the next page and enter your wallet password. Click "
 "\"**Confirm**\"."
 msgstr ""
-"エイリアスタイプとして \"**モザイクをリンク**\" を選択します。ネームスペースに接続するモザイクのIDを選択します。 \"**送信**\" "
-"をクリックします。次のページの情報を確認し、ウォレットのパスワードを入力します。 \"**確認**\" をクリックします。"
+"エイリアスタイプとして \"**モザイクをリンク**\" を選択します。ネームスペースに接続するモザイクのIDを選択します。 \"**送信**\""
+" をクリックします。次のページの情報を確認し、ウォレットのパスワードを入力します。 \"**確認**\" をクリックします。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:52
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:74
 msgid ""
-"You can check that the mosaic has been linked by going to the \"**Mosaic**\""
-" page. The name displayed for the mosaic should be the linked namespace."
+"You can check that the mosaic has been linked by going to the "
+"\"**Mosaic**\" page. The name displayed for the mosaic should be the "
+"linked namespace."
 msgstr "モザイクがリンクされているかどうかは、 \"**モザイク**\" ページで確認できます。モザイクに表示される名前はリンクされたネームスペースです。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:60
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:82
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:62
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:84
 msgid ""
 "Open a new file and define the namespace identifier and the mosaic "
 "identifier you want to alias."
 msgstr "新しいファイルを開き、ネームスペース識別子とリンクしたいモザイク識別子を定義します。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:64
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:86
 msgid ""
-"The account signing the transaction must own the namespace and mosaic being "
-"aliased."
+"The account signing the transaction must own the namespace and mosaic "
+"being aliased."
 msgstr "トランザクションに署名するアカウントはネームスペースとエイリアスをつけるモザイクを所有している必要があります。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:78
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:90
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:104
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:95
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:109
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/namespace/LinkingANamespaceToAMosaic.js`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:100
 msgid ""
 "Then, announce the **AliasTransaction** that links the namespace and the "
 "mosaic."
 msgstr "次に、ネームスペースとモザイクをリンクする **AliasTransaction** をアナウンスします。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:92
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:114
 msgid ""
 "If you want to unlink the alias, change alias action type to "
 "``AliasActionType.Unlink``."
 msgstr "エイリアスをアンリンクしたい場合は、タイプを ``AliasActionType.Unlink`` に変えてください。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:96
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:118
 msgid ""
 "Now you can send transactions using the namespace linked to the mosaic "
 "instead of defining the complete MosaicId."
 msgstr "これで、モザイク ID の代わりにネームスペースでトランザクションを送信することができるようになりました。"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:117
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:122
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransactionMosaicAlias.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:127
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransactionMosaicAlias.js`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:132
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransactionMosaicAlias.java`"
+msgstr ""
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:139
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
-#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:119
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:141
 msgid ""
 "To link a namespace and a mosaic, open a terminal window and run the "
-"following command. Replace ``7cdf3b117a3c40cc`` with the mosaic identifier "
-"and ``foo`` with the namespace name to be linked."
+"following command. Replace ``7cdf3b117a3c40cc`` with the mosaic "
+"identifier and ``foo`` with the namespace name to be linked."
 msgstr ""
 "ネームスペースとモザイクをリンクするには、ターミナルウィンドウを開き、次のコマンドを実行します。 ``7cdf3b117a3c40cc`` "
 "をモザイク識別子に、 ``foo`` をリンクするネームスペース名に置き換えます。"
+
+#: ../../source/guides/namespace/link-a-namespace-to-a-mosaic.rst:144
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/namespace/LinkNamespaceMosaic.sh`"
+msgstr ""
+

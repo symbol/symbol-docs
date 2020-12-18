@@ -1,134 +1,136 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-27 12:49+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-07-02 14:32+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/concepts/consensus-algorithm.rst:12
+#: ../../source/concepts/consensus-algorithm.rst:36
 msgid "Consensus"
 msgstr "コンセンサス"
 
-#: ../../source/concepts/consensus-algorithm.rst:14
+#: ../../source/concepts/consensus-algorithm.rst:38
 msgid ""
 "The consensus protocol is the dynamic method through which blockchain "
 "systems reach an agreement and make decisions. |codename| utilizes an "
-"innovative mechanism called the Proof-of-Stake Plus, a modified version of "
-"the popular Proof-of-Stake (|pos|) protocol."
+"innovative mechanism called the Proof-of-Stake Plus, a modified version "
+"of the popular Proof-of-Stake (|pos|) protocol."
 msgstr ""
-"コンセンサスプロトコルはブロックチェーンシステムが合意形成を行い、意思決定をする動的な方法です。|codename| では、有名な Proof-of-"
-"Stake (|pos|) プロトコルの修正バージョンである Proof-of-Stake Plus と呼ばれる革新的なメカニズムを利用します。"
+"コンセンサスプロトコルはブロックチェーンシステムが合意形成を行い、意思決定をする動的な方法です。|codename| では、有名な Proof-"
+"of-Stake (|pos|) プロトコルの修正バージョンである Proof-of-Stake Plus "
+"と呼ばれる革新的なメカニズムを利用します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:17
+#: ../../source/concepts/consensus-algorithm.rst:41
 msgid ""
-"In a basic Proof of Stake consensus algorithm, the formation of a subsequent"
-" block in a blockchain is stochastically assigned to a coin-holding "
-"stakeholder of the blockchain weighed by a combination of factors relating "
-"to the stakeholders' wealth. The PoS+ protocol also considers accounts' "
-"stakes, but it is designed to promote the ecosystem's health by rewarding "
-"participants based on their activity."
+"In a basic Proof of Stake consensus algorithm, the formation of a "
+"subsequent block in a blockchain is stochastically assigned to a coin-"
+"holding stakeholder of the blockchain weighed by a combination of factors"
+" relating to the stakeholders' wealth. The PoS+ protocol also considers "
+"accounts' stakes, but it is designed to promote the ecosystem's health by"
+" rewarding participants based on their activity."
 msgstr ""
 "基本の Proof of Stake "
 "コンセンサスアルゴリズムでは、ブロックチェーン内における後続ブロック形成は、関係者の資産に関連する要因の組み合わせによって重み付けされた、ブロックチェーンのコイン保有ステークホルダーへ確率的に割り当てられます。PoS+"
 " プロトコルはアカウントの利害も考慮しますが、参加者の活動に基づいて参加者に報酬を与えることにより、生態系の健康を促進するように設計されています。"
 
-#: ../../source/concepts/consensus-algorithm.rst:24
+#: ../../source/concepts/consensus-algorithm.rst:48
 msgid "Factors"
 msgstr "要因"
 
-#: ../../source/concepts/consensus-algorithm.rst:26
+#: ../../source/concepts/consensus-algorithm.rst:50
 msgid ""
 "The algorithm considers the following factors to improve the ecosystem’s "
 "health perspective:"
 msgstr "このアルゴリズムはエコシステム健全性の観点を改善するために以下の要因を考慮します:"
 
-#: ../../source/concepts/consensus-algorithm.rst:28
+#: ../../source/concepts/consensus-algorithm.rst:52
 msgid ""
 "**Stake**: The total amount of the :ref:`harvesting mosaic <harvesting-"
-"mosaic>` owned. Owners with larger balances have the incentive to see the "
-"ecosystem flourish."
+"mosaic>` owned. Owners with larger balances have the incentive to see the"
+" ecosystem flourish."
 msgstr ""
 "**Stake**: 保有している :ref:`ハーベスティングモザイク <harvesting-mosaic>` "
 "の総量。より大きい残高の保有者はエコシステムが繁栄するのを見るためにインセンティブを持ちます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:29
+#: ../../source/concepts/consensus-algorithm.rst:53
 msgid ""
 "**Transactions**: The total amount of fees paid by an account. Being an "
 "active account in the network is encouraged."
 msgstr "**Transactions**: アカウントが支払った手数料の合計量。ネットワーク上でアクティブなアカウントになることが奨励されます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:30
+#: ../../source/concepts/consensus-algorithm.rst:54
 msgid ""
-"**Nodes**: The number of times an account is a beneficiary of a block. The "
-"network incentivizes active accounts running nodes for securing the network."
+"**Nodes**: The number of times an account is a beneficiary of a block. "
+"The network incentivizes active accounts running nodes for securing the "
+"network."
 msgstr ""
 "**Nodes**: "
 "アカウントがブロックの受益者である回数。ネットワークを安全に保つため、ネットワークはノードを実行しているアクティブなアカウントへインセンティブを与えます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:32
+#: ../../source/concepts/consensus-algorithm.rst:56
 msgid ""
-"All high-value accounts receive an **importance score** based on these three"
-" factors that determines the probability to :doc:`harvest <harvesting>` a "
-"block."
+"All high-value accounts receive an **importance score** based on these "
+"three factors that determines the probability to :doc:`harvest "
+"<harvesting>` a block."
 msgstr ""
 "すべての高価値アカウントはこれら 3 つの要素に基づいて **インポータンススコア** を受け取り、それがブロックを :doc:`ハーベスト "
 "<harvesting>` する確率を決定します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:36
+#: ../../source/concepts/consensus-algorithm.rst:60
 msgid "Scores"
 msgstr "スコア"
 
-#: ../../source/concepts/consensus-algorithm.rst:38
+#: ../../source/concepts/consensus-algorithm.rst:62
 msgid ""
-"The network calculates the following sub scores for all high-value accounts "
-"for each factor:"
+"The network calculates the following sub scores for all high-value "
+"accounts for each factor:"
 msgstr "ネットワークは各要因をすべての高価値アカウントに対して以下のサブスコアを計算します:"
 
-#: ../../source/concepts/consensus-algorithm.rst:40
+#: ../../source/concepts/consensus-algorithm.rst:64
 msgid ""
-"**Stake Score (S`)**: Percentage of the effective balance of all high value "
-"accounts at time P."
+"**Stake Score (S`)**: Percentage of the effective balance of all high "
+"value accounts at time P."
 msgstr "**Stake Score (S`)**: 時間 P におけるすべての高価値アカウントの実効残高の割合"
 
-#: ../../source/concepts/consensus-algorithm.rst:41
+#: ../../source/concepts/consensus-algorithm.rst:65
 msgid ""
-"**Transaction Score (T`)**: Percentage of total transaction fees among all "
-"high-value accounts in period P-1 to P."
+"**Transaction Score (T`)**: Percentage of total transaction fees among "
+"all high-value accounts in period P-1 to P."
 msgstr ""
-"**Transaction Score (T`)**: 期間 P-1 から P までのすべての高価値アカウントにおける合計トランザクション手数料の割合"
+"**Transaction Score (T`)**: 期間 P-1 から P "
+"までのすべての高価値アカウントにおける合計トランザクション手数料の割合"
 
-#: ../../source/concepts/consensus-algorithm.rst:42
+#: ../../source/concepts/consensus-algorithm.rst:66
 msgid ""
-"**Node Score (N`)**: Percentage of total beneficiaries among all blocks in "
-"period P-1 to P."
+"**Node Score (N`)**: Percentage of total beneficiaries among all blocks "
+"in period P-1 to P."
 msgstr "**Node Score (N`)**: P-1 から P までの全ブロックにおける受益者合計の割合"
 
-#: ../../source/concepts/consensus-algorithm.rst:46
+#: ../../source/concepts/consensus-algorithm.rst:70
 msgid "Constants"
 msgstr "制約"
 
-#: ../../source/concepts/consensus-algorithm.rst:48
+#: ../../source/concepts/consensus-algorithm.rst:72
 msgid ""
-"Each network can define custom consensus algorithm :ref:`constants <config-"
-"network-properties>`."
-msgstr ""
-"各ネットワークはカスタムコンセンサスアルゴリズム :ref:`定数 <config-network-properties>` を定義できます。"
+"Each network can define custom consensus algorithm :ref:`constants "
+"<config-network-properties>`."
+msgstr "各ネットワークはカスタムコンセンサスアルゴリズム :ref:`定数 <config-network-properties>` を定義できます。"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Constant"
@@ -143,38 +145,69 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
+msgid "a"
+msgstr ""
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "0.05"
+msgstr ""
+
+#: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Network wide contribution of activity score."
 msgstr "活動スコアのネットワーク全体の貢献"
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "p"
+msgstr ""
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "10000"
+msgstr ""
 
 #: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Constants to tune phasing out of activity score."
 msgstr "活動スコアから段階的にフェーズアウトを調整するための定数"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
+msgid "t"
+msgstr ""
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "0.8"
+msgstr ""
+
+#: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Transaction score multiplier."
 msgstr "トランザクションスコア乗数"
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "n"
+msgstr ""
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "0.2"
+msgstr ""
 
 #: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Node score multiplier."
 msgstr "ノードスコア乗数"
 
-#: ../../source/concepts/consensus-algorithm.rst:62
+#: ../../source/concepts/consensus-algorithm.rst:86
 msgid "Calculation"
 msgstr "算出"
 
-#: ../../source/concepts/consensus-algorithm.rst:64
-msgid ""
-"The importance can be calculated for each account in the following manner:"
+#: ../../source/concepts/consensus-algorithm.rst:88
+msgid "The importance can be calculated for each account in the following manner:"
 msgstr "インポータンスはアカウントごとに次の方法で計算できます:"
 
-#: ../../source/concepts/consensus-algorithm.rst:70
+#: ../../source/concepts/consensus-algorithm.rst:94
 msgid ""
-"The combination of Transaction Score and Node Score has a multiplier effect "
-"when Stake Score is low. Conversely, the multiplier effect is insignificant "
-"when Stake Score is high."
-msgstr ""
-"トランザクションスコアとノードスコアの組み合わせはステークスコアが低い場合に乗数効果があります。逆に、ステークスコアが高い場合に乗数効果は重要ではありません。"
+"The combination of Transaction Score and Node Score has a multiplier "
+"effect when Stake Score is low. Conversely, the multiplier effect is "
+"insignificant when Stake Score is high."
+msgstr "トランザクションスコアとノードスコアの組み合わせはステークスコアが低い場合に乗数効果があります。逆に、ステークスコアが高い場合に乗数効果は重要ではありません。"
 
-#: ../../source/concepts/consensus-algorithm.rst:77
+#: ../../source/concepts/consensus-algorithm.rst:101
 msgid "Continue: :doc:`Harvesting <harvesting>`."
 msgstr "次項: :doc:`ハーベスティング <harvesting>`"
+

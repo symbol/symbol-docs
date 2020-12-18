@@ -1,66 +1,66 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-07-12 11:03+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:14
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:36
 msgid "Getting the asset identifier behind a namespace with receipts"
 msgstr "レシート付きネームスペースの背後にあるアセットの識別子を取得"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:22
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:44
 msgid "Get the resolution for a given alias and transaction using receipts."
 msgstr "レシートを使用して特定のエイリアスとトランザクションの解決を取得します。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:26
-msgid "Background"
-msgstr "背景"
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:48
+msgid "Use case"
+msgstr ""
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:28
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:50
 msgid ""
 "|codename| accounts can link registered namespaces to other accounts or "
-"mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`."
-" This feature allows you to replace long and complex identifiers with short "
-"and familiar names for your accounts and mosaics."
+"mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-"
+"transaction>`. This feature allows you to replace long and complex "
+"identifiers with short and familiar names for your accounts and mosaics."
 msgstr ""
 "|codename| ではアカウントは :ref:`AliasTransaction <mosaic-alias-transaction>` "
 "のアナウンスによって、それが登録したネームスペースを他のアカウントまたはモザイクにリンクさせることができます。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:31
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:53
 msgid ""
-"Imagine a ticket vendor sending tickets to their customers on |codename|'s "
-"public chain. The company needs to send 1 ``0dc67fbe1cad29e3`` to ``SCVG35"
-"-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6``. With aliases, the ticket vendor "
-"can define the same transaction as sending 1 ``ticketsales.event1.ticket`` "
-"to ``@alice`` instead."
+"Imagine a ticket vendor sending tickets to their customers on "
+"|codename|'s public chain. The company needs to send 1 "
+"``0dc67fbe1cad29e3`` to ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-"
+"N2E6``. With aliases, the ticket vendor can define the same transaction "
+"as sending 1 ``ticketsales.event1.ticket`` to ``@alice`` instead."
 msgstr ""
 "|codename| パブリックブロックチェーン上でチケット販売者が彼らの顧客へチケットを送るのを想像してください。会社は ``1 "
 "0dc67fbe1cad29e3`` を ``SCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6`` "
-"へ送る必要があります。エイリアスを使うと、チケット販売者は同じトランザクションを ``1 ticketsales.event1.ticket`` を "
-"``@alice`` へ送るというように定義することができます。"
+"へ送る必要があります。エイリアスを使うと、チケット販売者は同じトランザクションを ``1 ticketsales.event1.ticket`` "
+"を ``@alice`` へ送るというように定義することができます。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:39
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:61
 msgid "Recognizable mosaics and addresses"
 msgstr "認識しやすいモザイクとアドレス"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:41
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:63
 msgid ""
 "To ensure the transactions are being sent to the correct place with the "
 "correct mosaic, you can directly query the network about the **current "
@@ -69,108 +69,148 @@ msgstr ""
 "トランザクションが正しいモザイクで正しい場所に送信されていることを確認するには、次のスニペットを実行することで "
 "**ネームスペースに関連づく現在のモザイク識別子** についてネットワークへ直接問い合わせることができます:"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:60
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:67
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingTheCurrentMosaicIdentifierBehindANamespace.ts`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:72
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingTheCurrentMosaicIdentifierBehindANamespace.js`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:77
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/blockchain/GettingTheCurrentMosaicIdentifierBehindANamespace.java`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:82
 msgid ""
 "However, the same method **cannot be used to verify transactions of the "
 "past**. This is due to the facts that:"
 msgstr "しかし、同じ方法では **過去のトランザクションを検証することができません** 。これは以下の事実によるものです:"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:63
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:85
 msgid ""
-"Transactions using aliased mosaics or accounts are stored on the blockchain "
-"using the namespace identifier, not the real address or mosaic id behind it."
-msgstr ""
-"エイリアス済みのモザイクまたはアカウントを使用したトランザクションは実際のアドレスや関連付いたモザイクIDではなく、ネームスペース識別子によってブロックチェーンに格納されます。"
+"Transactions using aliased mosaics or accounts are stored on the "
+"blockchain using the namespace identifier, not the real address or mosaic"
+" id behind it."
+msgstr "エイリアス済みのモザイクまたはアカウントを使用したトランザクションは実際のアドレスや関連付いたモザイクIDではなく、ネームスペース識別子によってブロックチェーンに格納されます。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:64
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:86
 msgid ""
-"Links are editable. The namespace creator can link its namespace to another "
-"asset."
+"Links are editable. The namespace creator can link its namespace to "
+"another asset."
 msgstr "リンクは編集可能です。ネームスペースの作成者はそのネームスペースを別のアセットにリンクすることができます。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:65
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:87
 msgid "Namespaces expire. The namespace link could be deleted."
 msgstr "期限の切れたネームスペース。ネームスペースリンクは削除される可能性があります。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:67
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:89
 msgid ""
 "At this point, you might be wondering: how then can we get the accurate "
-"relation between a namespace and its real identifier for a past transaction?"
-" The answer lies with :doc:`receipts <../../concepts/receipt>`. For each "
-"block, |codename| nodes store receipts that contain every **invisible state "
-"change** that cannot be retrieved directly from the transaction or block "
-"header."
+"relation between a namespace and its real identifier for a past "
+"transaction? The answer lies with :doc:`receipts "
+"<../../concepts/receipt>`. For each block, |codename| nodes store "
+"receipts that contain every **invisible state change** that cannot be "
+"retrieved directly from the transaction or block header."
 msgstr ""
 "この時点であなたは疑問に思うかもしれません: "
-"どうすれば過去のトランザクションのネームスペースとその実際の識別子との間の正確な関係を得ることができるのでしょうか？その答えは :doc:`レシート "
-"<../../concepts/receipt>` です。各ブロックに対して |codename| "
+"どうすれば過去のトランザクションのネームスペースとその実際の識別子との間の正確な関係を得ることができるのでしょうか？その答えは "
+":doc:`レシート <../../concepts/receipt>` です。各ブロックに対して |codename| "
 "ノードはトランザクションまたはブロックヘッダから直接取得することができない、すべての **見えない状態変化** を含むレシートを保存します。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:72
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:94
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:74
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:96
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:75
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:97
 msgid "Create a new :ref:`account <setup-creating-a-test-account>`."
 msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:76
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:98
 msgid ""
-"Load the account with enough |networkcurrency| to pay for transaction fees."
+"Load the account with enough |networkcurrency| to pay for transaction "
+"fees."
 msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金します。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:80
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:102
 msgid "Getting into some code"
 msgstr "それではコードを見ていきましょう"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:82
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:104
 msgid ""
-"In this example, we are going to announce a **TransferTransaction** using "
-"|networkcurrency| instead of the native currency mosaic id. Once the network"
-" confirms the transaction, we will get the **block height** where the "
-"transaction has been recorded. With this information, we will then get the "
-"namespace-mosaic relation by looking into the block receipts’."
+"In this example, we are going to announce a **TransferTransaction** using"
+" |networkcurrency| instead of the native currency mosaic id. Once the "
+"network confirms the transaction, we will get the **block height** where "
+"the transaction has been recorded. With this information, we will then "
+"get the namespace-mosaic relation by looking into the block receipts’."
 msgstr ""
 "この例ではネイティブ通貨のモザイクIDの代わりに |networkcurrency| を使って **TransferTransaction** "
 "をアナウンスします。ネットワークがトランザクションを承認したら、トランザクションが記録されたブロック高を取得します。この情報を元にブロックのレシートを調べてネームスペースとモザイクの関連を取得します。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:85
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:107
 msgid ""
-"Define the mosaic you want to send. Use a **linked namespace identifier** "
-"(e.g. |networkcurrency|) instead of the mosaic identifier."
+"Define the mosaic you want to send. Use a **linked namespace identifier**"
+" (e.g. |networkcurrency|) instead of the mosaic identifier."
 msgstr ""
 "送信したいモザイクを定義します。モザイク識別子の代わりに **リンクされたネームスペース識別子** (例: |networkcurrency|) "
 "を使用してください。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:99
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:111
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:125
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:140
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.ts`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:116
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:130
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:145
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingTheMosaicIdentifierBehindANamespaceWithReceipts.js`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:121
 msgid "Attach the mosaic to a **TransferTransaction**."
 msgstr "**TransferTransaction** にモザイクを添付してください。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:113
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:135
 msgid ""
-"3. Announce the **TransferTransaction**. Once the transaction is confirmed, "
-"retrieve the receipts attached to the block and find for the namespace "
-"resolution."
+"3. Announce the **TransferTransaction**. Once the transaction is "
+"confirmed, retrieve the receipts attached to the block and find for the "
+"namespace resolution."
 msgstr ""
 "3. **TransferTransaction** "
 "をアナウンスします。トランザクションが承認されたら、ブロックに添付されたレシートを取得し、ネームスペースの解決を発見します。"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:130
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:152
 msgid "What is next?"
 msgstr "次は？"
 
-#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:132
+#: ../../source/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.rst:154
 msgid ""
-"Receipts do not only store resolutions for aliases, but also every invisible"
-" state change that is not directly retrievable from transactions or the "
-"block header. You can check under the :doc:`receipts documentation "
-"<../../concepts/receipt>` the **complete list of changes logged**."
+"Receipts do not only store resolutions for aliases, but also every "
+"invisible state change that is not directly retrievable from transactions"
+" or the block header. You can check under the :doc:`receipts "
+"documentation <../../concepts/receipt>` the **complete list of changes "
+"logged**."
 msgstr ""
 "レシートにはエイリアスの解決だけでなく、トランザクションやブロックヘッダからは直接取得できない、すべての不可視の状態変化も格納されます。 "
 ":doc:`レシートドキュメント <../../concepts/receipt>` で **記録された変更の完全なリスト** を確認できます。"
+
+#~ msgid "Background"
+#~ msgstr "背景"
+

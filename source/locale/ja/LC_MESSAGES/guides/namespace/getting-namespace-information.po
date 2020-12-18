@@ -1,47 +1,71 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-06-06 21:51+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:20
+#: ../../source/guides/namespace/getting-namespace-information.rst:42
 msgid "Getting the namespace information"
 msgstr "ネームスペースの情報を取得する"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:22
+#: ../../source/guides/namespace/getting-namespace-information.rst:44
 msgid "Get the ownership and duration for a given namespace identifier."
 msgstr "ネームスペース識別子による所有権と期間の取得"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:26
+#: ../../source/guides/namespace/getting-namespace-information.rst:48
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:28
-msgid ""
-"Complete :doc:`registering a namespace <registering-a-namespace>` guide."
+#: ../../source/guides/namespace/getting-namespace-information.rst:50
+msgid "Complete :doc:`registering a namespace <registering-a-namespace>` guide."
 msgstr ":doc:`ネームスペースの取得 <registering-a-namespace>` ガイドを完了している"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:32
+#: ../../source/guides/namespace/getting-namespace-information.rst:54
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:53
+#: ../../source/guides/namespace/getting-namespace-information.rst:58
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/namespace/GettingNamespaceInformation.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/getting-namespace-information.rst:63
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/namespace/GettingNamespaceInformation.js`"
+msgstr ""
+
+#: ../../source/guides/namespace/getting-namespace-information.rst:68
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/namespace/GettingNamespaceInformation.java`"
+msgstr ""
+
+#: ../../source/guides/namespace/getting-namespace-information.rst:75
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
+
+#: ../../source/guides/namespace/getting-namespace-information.rst:77
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/namespace/GettingNamespaceInformation.sh`"
+msgstr ""
+

@@ -1,51 +1,51 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-27 12:49+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-11-13 15:09+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/concepts/fees.rst:12
+#: ../../source/concepts/fees.rst:36
 msgid "Fees"
 msgstr "手数料"
 
-#: ../../source/concepts/fees.rst:14
+#: ../../source/concepts/fees.rst:38
 msgid ""
-"Announcing :doc:`transactions <transaction>` have an associated cost. This "
-"cost is necessary to provide an incentive for the :doc:`harvesters "
+"Announcing :doc:`transactions <transaction>` have an associated cost. "
+"This cost is necessary to provide an incentive for the :doc:`harvesters "
 "<harvesting>` who secure the network and run the infrastructure."
 msgstr ""
 ":doc:`トランザクション <transaction>` "
-"のアナウンスには関連コストがあります。コストはネットワークを安全に保ち、インフラを運用している :doc:`ハーベスタ <harvesting>` "
-"へのインセンティブの提供として必須です。"
+"のアナウンスには関連コストがあります。コストはネットワークを安全に保ち、インフラを運用している :doc:`ハーベスタ <harvesting>`"
+" へのインセンティブの提供として必須です。"
 
-#: ../../source/concepts/fees.rst:19
+#: ../../source/concepts/fees.rst:43
 msgid "Network currency"
 msgstr "ネットワーク通貨"
 
-#: ../../source/concepts/fees.rst:21
+#: ../../source/concepts/fees.rst:45
 msgid ""
 "By default, fees are paid in the underlying currency of the |codename| "
 "network."
 msgstr "デフォルトでは、手数料は |codename| ネットワーク基軸通貨で支払われます。"
 
-#: ../../source/concepts/fees.rst:23
+#: ../../source/concepts/fees.rst:47
 msgid "Default network currency per network type"
 msgstr "ネットワークタイプごとのデフォルトネットワーク通貨"
 
@@ -57,91 +57,124 @@ msgstr "ネットワークタイプ"
 msgid "Mosaic name"
 msgstr "モザイク名"
 
-#: ../../source/concepts/fees.rst:30
+#: ../../source/concepts/fees.rst:1
+msgid "PRIVATE"
+msgstr ""
+
+#: ../../source/concepts/fees.rst:1
+#, fuzzy
+msgid "|privatenetworkcurrency|"
+msgstr "ネットワーク通貨"
+
+#: ../../source/concepts/fees.rst:1
+msgid "TEST_NET"
+msgstr ""
+
+#: ../../source/concepts/fees.rst:1
+#, fuzzy
+msgid "|networkcurrency|"
+msgstr "ネットワーク通貨"
+
+#: ../../source/concepts/fees.rst:54
 msgid ""
 "Private chains :ref:`can edit the network configuration <config-network-"
-"properties>` to eliminate fees or use another :doc:`mosaic <mosaic>` that "
-"better suits their needs."
+"properties>` to eliminate fees or use another :doc:`mosaic <mosaic>` that"
+" better suits their needs."
 msgstr ""
 "プライベートチェーンでは、ニーズに合わせるために手数料を無くしたり、他の :doc:`モザイク <mosaic>` を使用するために  "
 ":ref:`ネットワークの設定を編集 <config-network-properties>` できます。"
 
-#: ../../source/concepts/fees.rst:34
+#: ../../source/concepts/fees.rst:58
 msgid "Transaction fee"
 msgstr "トランザクション手数料"
 
-#: ../../source/concepts/fees.rst:36
+#: ../../source/concepts/fees.rst:60
 msgid ""
-"The fee associated with a transaction primarily depends on the size of the "
-"transaction. The effective fee deducted from the account sending the "
-"transaction is calculated as the product of the size of the transaction and "
-"a fee multiplier set by the node that harvests the block."
-msgstr ""
-"トランザクションに関連する手数料は、主としてトランザクションのサイズによって異なります。トランザクションを送信するアカウントから差し引かれる実効手数料はトランザクションのサイズとブロックをハーベストするノードによって設定される手数料乗数の積として計算されます。"
+"The fee associated with a transaction primarily depends on the size of "
+"the transaction. The effective fee deducted from the account sending the "
+"transaction is calculated as the product of the size of the transaction "
+"and a fee multiplier set by the node that harvests the block."
+msgstr "トランザクションに関連する手数料は、主としてトランザクションのサイズによって異なります。トランザクションを送信するアカウントから差し引かれる実効手数料はトランザクションのサイズとブロックをハーベストするノードによって設定される手数料乗数の積として計算されます。"
 
-#: ../../source/concepts/fees.rst:43
+#: ../../source/concepts/fees.rst:67
 msgid ""
-"A node owner :ref:`can configure the fee multiplier <node-properties>` to "
-"all positive values, including zero. The ``fee_multiplier`` is stored in the"
-" :ref:`block header <block-header>` when the node harvests a new block, "
-"determining which was the effective fee paid for every transaction included."
+"A node owner :ref:`can configure the fee multiplier <node-properties>` to"
+" all positive values, including zero. The ``fee_multiplier`` is stored in"
+" the :ref:`block header <block-header>` when the node harvests a new "
+"block, determining which was the effective fee paid for every transaction"
+" included."
 msgstr ""
 "ノード所有者は :ref:`手数料乗数 <node-properties>` を 0 "
-"を含むすべての正の値に設定できます。ノードが新しいブロックをハーベストするとき ``fee_multiplier`` は :ref:`ブロックヘッダー "
-"<block-header>` に格納され、含まれるトランザクションすべてに対して支払われた有効な手数料を決定します。"
+"を含むすべての正の値に設定できます。ノードが新しいブロックをハーベストするとき ``fee_multiplier`` は "
+":ref:`ブロックヘッダー <block-header>` "
+"に格納され、含まれるトランザクションすべてに対して支払われた有効な手数料を決定します。"
 
-#: ../../source/concepts/fees.rst:46
+#: ../../source/concepts/fees.rst:70
 msgid ""
 "Before announcing the transaction, the sender must specify during the "
-"transaction definition a ``max_fee``, indicating the maximum fee the account"
-" allows to spend for this transaction."
+"transaction definition a ``max_fee``, indicating the maximum fee the "
+"account allows to spend for this transaction."
 msgstr ""
 "トランザクションを送信する前に、トランザクション定義の中で ``max_fee`` "
 "を指定する必要があり、これはアカウントがこのトランザクションに費やせる最大手数料を示しています。"
 
-#: ../../source/concepts/fees.rst:48
+#: ../../source/concepts/fees.rst:72
 msgid ""
-"If the ``effective_fee`` is smaller or equal to the ``max_fee``, a harvester"
-" could opt to include the transaction in the block. The harvesting nodes "
-":ref:`can set their transaction inclusion strategy <node-properties>`:"
+"If the ``effective_fee`` is smaller or equal to the ``max_fee``, a "
+"harvester could opt to include the transaction in the block. The "
+"harvesting nodes :ref:`can set their transaction inclusion strategy "
+"<node-properties>`:"
 msgstr ""
 "``effective_fee`` が ``max_fee`` "
-"以下の場合、ハーベスタはトランザクションをブロックに含める選択ができます。ハーベスティングノードはそれらの :ref:`トランザクションインクルード戦略"
-" <node-properties>` を設定できます:"
+"以下の場合、ハーベスタはトランザクションをブロックに含める選択ができます。ハーベスティングノードはそれらの "
+":ref:`トランザクションインクルード戦略 <node-properties>` を設定できます:"
 
-#: ../../source/concepts/fees.rst:51
+#: ../../source/concepts/fees.rst:75
 msgid ""
-"**Prefer-oldest**: Preferred for networks with high transaction throughput "
-"requirements. Include first the oldest transactions."
+"**Prefer-oldest**: Preferred for networks with high transaction "
+"throughput requirements. Include first the oldest transactions."
 msgstr ""
-"**Prefer-oldest**：高いトランザクションスループットが要求されるネットワークに適しています。最も古いトランザクションを最初に含めます。"
+"**Prefer-"
+"oldest**：高いトランザクションスループットが要求されるネットワークに適しています。最も古いトランザクションを最初に含めます。"
 
-#: ../../source/concepts/fees.rst:52
+#: ../../source/concepts/fees.rst:76
 msgid ""
-"**Minimize-fees**: Philanthropic nodes. Include first the transactions that "
-"other nodes do not want to include."
+"**Minimize-fees**: Philanthropic nodes. Include first the transactions "
+"that other nodes do not want to include."
 msgstr "**Minimize-fees**: 慈善事業なノード。他のノードが含めたくない最初のトランザクションを含めます。"
 
-#: ../../source/concepts/fees.rst:53
+#: ../../source/concepts/fees.rst:77
 msgid ""
 "**Maximize-fees**: Most common in public networks. Include first "
 "transactions with higher fees."
 msgstr "**Maximize-fees**: パブリックネットワークで最も一般的です。より高い手数料の最初のトランザクションを含みます。"
 
-#: ../../source/concepts/fees.rst:55
+#: ../../source/concepts/fees.rst:79
 msgid ""
 "To ensure that the transaction will get included without setting a "
-"``max_fee`` unnecessarily high, the sender of the transaction can ask the "
-":doc:`REST Gateway <../api>` for the median, average, highest, or lowest "
-"multiplier of the network over the last N blocks. For example, the sender "
-"could set the transaction max_fee as follows:"
+"``max_fee`` unnecessarily high, the sender of the transaction can ask the"
+" :doc:`REST Gateway <../api>` for the median, average, highest, or lowest"
+" multiplier of the network over the last N blocks. For example, the "
+"sender could set the transaction max_fee as follows:"
 msgstr ""
-"``max_fee`` を不必要に高く設定せずにトランザクションが確実に含まれるようにするためには、トランザクション送信者は :doc:`REST "
-"ゲートウェイ <../api>` に直近 N "
-"ブロックのネットワークの乗数の中央値、平均値、最高値、または最低値を問い合わせることができます。たとえば、送信者はトランザクションの max_fee "
-"を次のように設定できます:"
+"``max_fee`` を不必要に高く設定せずにトランザクションが確実に含まれるようにするためには、トランザクション送信者は :doc:`REST"
+" ゲートウェイ <../api>` に直近 N "
+"ブロックのネットワークの乗数の中央値、平均値、最高値、または最低値を問い合わせることができます。たとえば、送信者はトランザクションの "
+"max_fee を次のように設定できます:"
 
-#: ../../source/concepts/fees.rst:73
+#: ../../source/concepts/fees.rst:87 ../../source/concepts/fees.rst:103
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/transfer/DefiningMaxFee.ts`"
+msgstr ""
+
+#: ../../source/concepts/fees.rst:92 ../../source/concepts/fees.rst:108
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/transfer/DefiningMaxFee.js`"
+msgstr ""
+
+#: ../../source/concepts/fees.rst:97
 msgid ""
 "It is not guaranteed that the transaction will get confirmed if the "
 "multiplier used is too low. To have better chances, the sender of the "
@@ -149,27 +182,28 @@ msgid ""
 "``medianNetworkFeeMultiplier`` and ``highestFeeMultiplier`` instead."
 msgstr ""
 "設定した乗数が少なすぎる場合、トランザクションが承認されることを保証できません。承認される可能性を高めるためには、トランザクション送信者が "
-"``medianNetworkFeeMultiplier`` と ``highestFeeMultiplier`` の間で任意の値を使用してください。"
+"``medianNetworkFeeMultiplier`` と ``highestFeeMultiplier`` "
+"の間で任意の値を使用してください。"
 
-#: ../../source/concepts/fees.rst:75
+#: ../../source/concepts/fees.rst:99
 msgid ""
-"To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` "
-"size, it is required to know beforehand the number of participant accounts "
-"that will need to cosign the transaction."
+"To determine an :doc:`aggregate bonded transaction <aggregate-"
+"transaction>` size, it is required to know beforehand the number of "
+"participant accounts that will need to cosign the transaction."
 msgstr ""
 ":doc:`アグリゲートボンデッドトランザクション <aggregate-transaction>` "
 "のサイズを決定するには、トランザクションに署名する必要がある参加者アカウントの数を事前に知っておく必要があります。"
 
-#: ../../source/concepts/fees.rst:91
+#: ../../source/concepts/fees.rst:115
 msgid "Rental fee"
 msgstr "レンタル手数料"
 
-#: ../../source/concepts/fees.rst:93
+#: ../../source/concepts/fees.rst:117
 msgid ""
 "Accounts willing to register a :doc:`namespace <namespace>` or a "
 ":doc:`mosaic <mosaic>` have to pay a rental fee in addition to the "
-"transaction fee. The effective rental fee is adjusted dynamically based on "
-"the :doc:`median network multiplier <harvesting>` over last "
+"transaction fee. The effective rental fee is adjusted dynamically based "
+"on the :doc:`median network multiplier <harvesting>` over last "
 ":ref:`maxDifficultyBlocks <config-network-properties>`."
 msgstr ""
 ":doc:`ネームスペース <namespace>` または :doc:`モザイク <mosaic>` "
@@ -177,15 +211,16 @@ msgstr ""
 ":ref:`maxDifficultyBlocks <config-network-properties>` に対する :doc:`median "
 "network multiplier <harvesting>` に基づいて調整されます。"
 
-#: ../../source/concepts/fees.rst:96
+#: ../../source/concepts/fees.rst:120
 msgid ""
-"For more information, see how the network calculates the effective rental "
-"fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-"
-"rental-fee>`."
+"For more information, see how the network calculates the effective rental"
+" fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces "
+"<namespace-rental-fee>`."
 msgstr ""
 "より詳しくは :ref:`モザイク <mosaic-rental-fee>` と :ref:`ネームスペース <namespace-rental-"
 "fee>` のレンタル実効手数料の計算方法を参照してください。"
 
-#: ../../source/concepts/fees.rst:98
+#: ../../source/concepts/fees.rst:122
 msgid "Continue: :doc:`Receipt <receipt>`."
 msgstr "次項: :doc:`レシート <receipt>`"
+

@@ -1,0 +1,752 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/contribute/glossary.rst:36
+msgid "Glossary"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:39
+msgid "Absolute Amount"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:41
+msgid ""
+"A method of measuring amounts of mosaics while taking into account their "
+"divisibility. It is figured out by multiplying the relative amount by "
+"10\\ :sup:`divisibility`. For example, if the mosaic has divisibility 2, "
+"to send 10 units (relative) you should define 1000 (absolute) instead."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:42
+msgid "Account"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:44
+msgid ""
+"A container for assets, which can only be modified with its private key. "
+"An account always has two keys (private and public) and an address. Read "
+":doc:`more <../concepts/account>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:45
+msgid "Account Link Transaction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:47
+msgid ""
+"A type of transaction used to transfer an account importance score to a "
+"proxy account. This is required for all accounts that wish to activate "
+":ref:`delegated harvesting <delegated-harvesting>`. Read :ref:`more "
+"<account-key-link-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:48
+msgid "Account Restrictions"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:50
+msgid ""
+"A configurable set of smart rules to block announcing or receiving "
+"transactions for a specific account. Read :doc:`more <../concepts"
+"/account-restriction>`"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:51
+msgid "Aggregate Transaction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:53
+msgid ""
+"A type of transaction that merges multiple transactions into one by "
+"generating a one-time disposable smart contract. Read :doc:`more "
+"<../concepts/aggregate-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:54
+msgid "Aggregate Bonded (partial transaction)"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:56
+msgid ""
+"An Aggregate Transaction is bonded when it requires signatures from "
+"multiple participants. Read :ref:`more <aggregate-bonded>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:57
+msgid "Aggregate Complete"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:59
+msgid ""
+"An Aggregate Transaction is complete when all the required participants "
+"have signed it. Read :ref:`more <aggregate-complete>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:60
+msgid "Alias"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:62
+msgid ""
+"The :doc:`namespace <../concepts/namespace>` linked to an account or "
+"mosaic using Alias transactions. An alias and its linked object can be "
+"used interchangeably when sending a transaction. Read :ref:`more "
+"<alias>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:63
+msgid "API Nodes"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:65
+msgid ""
+"Nodes responsible for storing data in a readable form in MongoDB. They "
+"are also responsible for collecting the cosignatures of :ref:`aggregated "
+"bonded transactions <aggregate-bonded>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:66
+msgid "Automated Delegated Harvester Detection"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:68
+msgid ""
+"The automatic process by which Symbol servers allows accounts to register"
+" as :ref:`delegated harvesters <delegated-harvesting>` via special "
+"transfer messages."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:69
+msgid "Catapult"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:71
+msgid "The original project alias for NEM 2.0 - later labeled as Symbol."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:72
+msgid "Cosign"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:74
+msgid "The act providing a signature to approve a transaction."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:75
+msgid "Cosignatories"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:77
+msgid ""
+"Accounts that act as account managers to :doc:`multisig accounts "
+"<../concepts/multisig-account>`. Cosignatories need to sign multisig "
+"account transactions before they can be announced to the network."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:78
+msgid "Cross Chain Swap"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:80
+msgid ""
+"A built-in feature of Symbol which enables the trading of tokens across "
+"different blockchains without using an intermediary party (e.g. an "
+"exchange service). Read :doc:`more <../concepts/cross-chain-swaps>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:81
+msgid "Deadline"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:83
+msgid ""
+"A time window for a transaction to be accepted before it reaches its "
+"expiration. The transaction is eliminated when the deadline is reached "
+"and all the nodes reject the transaction. By default, the SDK sets the "
+"deadline to 2 hours, but it can be extended up to 24 hours."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:84
+msgid "Delegated Harvesting"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:86
+msgid ""
+"A method of harvesting that allows users to receive rewards without "
+"having to run a node locally by delegating their importance scores to a "
+"brand new proxy account. Read :ref:`more <delegated-harvesting>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:87
+msgid "Divisibility"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:89
+msgid ""
+"The property of mosaics that enable fractional amounts. The number of "
+"divisibility refers to the decimal place to which the mosaic can be "
+"divided."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:90
+msgid "Duration"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:92
+msgid ""
+"Length of time measured in :doc:`blocks <../concepts/block>`. Each block "
+"on the Symbol blockchain takes about ~15 seconds to harvest."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:93
+msgid "Effective Fee"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:95
+msgid ""
+"The :doc:`fee <../concepts/fees>` to be paid for a transaction. "
+"Calculated by reading the fee multiplier from the block in which the "
+"transaction got confirmed and multiplying it by the size of the "
+"transaction."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:96
+msgid "Fee Multiplier"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:98
+msgid ""
+"A multiplier used to calculate the effective :doc:`fee "
+"<../concepts/fees>` of each transaction contained within a block."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:99
+msgid "Global Restriction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:101
+msgid ""
+"Network-wide rules that determine whether accounts will be able to send "
+"or receive a specific mosaic (with :doc:`Mosaic Restrictions <../concepts"
+"/mosaic-restriction>` enabled)."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:102
+msgid "Harvester"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:104
+msgid ""
+"The account that :doc:`harvests <../concepts/harvesting>` a block. The "
+"account is rewarded with the transaction fees added in the block and the "
+":doc:`inflation <../concepts/inflation>` tokens generated."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:105
+msgid "Harvesting"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:107
+msgid ""
+"The process of creating new blocks on the Symbol blockchain. Read "
+":doc:`more <../concepts/harvesting>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:108
+msgid "Harvesting Beneficiary"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:110
+msgid ""
+"An account determined by the node operator that shares a portion of the "
+"block rewards."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:111
+msgid "Hash Lock Transaction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:113
+msgid ""
+"A type of transaction which locks funds for a certain amount of "
+":doc:`blocks <../concepts/block>`. This transaction is required before "
+"announcing an :ref:`Aggregate Bonded Transaction <aggregate-bonded>`. "
+"When the associated :doc:`Aggregate Transaction <../concepts/aggregate-"
+"transaction>` is complete, the locked funds are returned to the original "
+"account. Read :ref:`more <hash-lock-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:114
+msgid "Hashed Time Lock Contract (HTLC)"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:116
+msgid ""
+"A protocol which creates a trustless environment for the decentralized "
+"exchange of assets. It guarantees that a swap will take place if all the "
+"participants agree. On the other hand, if some of them decide not to "
+"conclude the process, each participant will receive their locked funds "
+"back."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:117
+msgid "Importance Score"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:119
+msgid ""
+"A value calculated by the :doc:`PoS+ protocol <../concepts/consensus-"
+"algorithm>` based on three factors that determines the probability that "
+"an account has to harvest a :doc:`block <../concepts/block>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:120
+msgid "Inflation"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:122
+msgid ""
+"Network configured increase in currency supply per block. The mosaics "
+"created due to inflation are included in the block reward. Read "
+":doc:`more <../concepts/inflation>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:123
+msgid "Local Harvesting"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:125
+msgid ""
+"A method of :doc:`harvesting <../concepts/harvesting>` executed by "
+"running a local node."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:126
+msgid "Maximum Fee"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:128
+msgid ""
+"The maximum :doc:`fee <../concepts/fees>` allowed by the sender to be "
+"paid for this transaction to be confirmed in a block."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:129
+msgid "Merkle Tree"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:131
+msgid ""
+"A structure of nodes labeled by hashes. It is a :doc:`data validation "
+"<../concepts/data-validation>` technique used by Symbol to store large "
+"data associated with a block that cannot be retrieved directly from the "
+"block header. It allows light clients to verify if an element (e.g. "
+"transaction, receipt statement) exists without demanding the entire "
+"ledger history."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:132
+msgid "Messaging"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:134
+msgid ""
+"The ability to attach text strings to :doc:`transactions <../concepts"
+"/transfer-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:135
+msgid "Metadata"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:137
+msgid ""
+"Additional information that can be attached to accounts, mosaics, or "
+"namespaces. Read :doc:`more <../concepts/metadata>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:138
+msgid "Minimum Approval"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:140
+msgid ""
+"Number of cosignatories required for the :doc:`multisignature account "
+"<../concepts/multisig-account>` to execute a transaction."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:141
+msgid "Minimum Removal"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:143
+msgid ""
+"Number of cosignatories required to remove a cosignatory from a "
+":doc:`multisignature account <../concepts/multisig-account>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:144
+msgid "Mosaics"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:146
+msgid ""
+"Digital tokens on the Symbol blockchain used to represent fixed assets - "
+"set of multiple identical things that do not change. Read :doc:`more "
+"<../concepts/mosaic>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:147
+msgid "Mosaic Restriction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:149
+msgid ""
+"A feature that allows mosaic creators to control which accounts can "
+"transact with the asset. It only affects mosaics with the restrictable "
+"property enabled explicitly at the moment of creation. Read :doc:`more "
+"<../concepts/mosaic-restriction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:150
+msgid "Multi-level Multisignature Account"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:152
+msgid ""
+"An advanced built-in feature of Symbol that allows :doc:`multisignature "
+"accounts <../concepts/multisig-account>` to be cosigners for other "
+"multisignature accounts, creating multiple layers of cosignatories. "
+"Multi-level multisignature accounts add “AND/OR” logic to multi-signature"
+" transactions."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:153
+msgid "Multisignature (Multisig) Account"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:155
+msgid ""
+"Accounts that require additional signatures (from cosignatories) to "
+"initiate actions/transfers. Read :doc:`more <../concepts/multisig-"
+"account>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:156
+msgid "Namespaces"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:158
+msgid ""
+"Unique domain spaces on the Symbol blockchain which can be linked to "
+"Symbol accounts or mosaics. Functions similarly to internet domains. Read"
+" :doc:`more <../concepts/namespace>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:159
+msgid "Nanowallet"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:161
+msgid "Desktop NIS1 wallet created by the NEM Foundation."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:162
+msgid "Network Fee Sink"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:164
+msgid ""
+"An account defined by the network operator that will receive a percentage"
+" of the :doc:`harvesting <../concepts/harvesting>` rewards."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:165
+msgid "NIS1"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:167
+msgid ""
+"The first version of NEM’s blockchain node that operates the public "
+"mainnet with the native currency XEM. First launched on March 31, 2015."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:168
+msgid "Node Banning"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:170
+msgid ""
+"The act by which the Symbol network will prevent communication with a "
+"malicious remote node and reject incoming connections from it."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:171
+msgid "Node Reputation"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:173
+msgid ""
+"A measure of trust that the Symbol network determines for each specific "
+"node. The network’s trust for a node increases with each successful "
+"interaction, and decreases for each failed attempt of communication."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:174
+msgid "Off-chain"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:176
+msgid ""
+"Realm outside of the blockchain. Off-chain activity does not directly "
+"reflect on the blockchain."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:177
+msgid "Peer Nodes"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:179
+msgid ""
+"Nodes that facilitate the blockchain process by verifying transactions "
+"and blocks, running the :doc:`consensus algorithm <../concepts/consensus-"
+"algorithm>`, creating new blocks, and propagating the changes through the"
+" network."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:180
+msgid "Persistent Delegated Harvesting Unlocking (PDHU)"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:182
+msgid ""
+"A feature that enables :ref:`delegated harvesters <delegated-harvesting>`"
+" to preserve their status despite connectivity problems of nodes. With "
+"PDHU, if a node experiences turbulence and reboots, the existing "
+"delegated harvesters will automatically reconnect when the node is back "
+"online."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:183
+msgid "Private Key"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:185
+msgid ""
+"Cryptographic key that gives ultimate control over an account and its "
+"assets, and must thus be kept secret. It is paired with the public key in"
+" the key pair system."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:186
+msgid "Proof-of-Stake Plus (PoS+)"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:188
+msgid ""
+"Symbol’s consensus protocol. It is a modified PoS protocol which "
+"considers users’ activity in the network in addition to their network "
+"stakes. The chance that accounts will have to harvest a block is "
+"calculated through their importance scores. Read :doc:`more <../concepts"
+"/consensus-algorithm>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:189
+msgid "Public Key"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:191
+msgid ""
+"The public identifier of the key pair, which can be disseminated widely. "
+"It is used to prove that a transaction was signed with the paired private"
+" key. The public key is cryptographically derived from the private key."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:192
+msgid "Receipt"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:194
+msgid ""
+"Record of proof for every hidden change on the blockchain. The collection"
+" of receipts are hashed into a merkle tree and linked to a block. Read "
+":doc:`more <../concepts/receipt>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:195
+msgid "Reference Mosaic"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:197
+msgid ""
+"A mosaic selected by the mosaic creator to define mosaic restrictions "
+"that depend directly on the selected mosaic's global restrictions."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:198
+msgid "Rental Fee"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:200
+msgid ""
+":doc:`Fees <../concepts/fees>` required to register a :doc:`namespace "
+"<../concepts/namespace>` or extend its duration. The default namespace "
+"rental fees are configurable per network, but the network dynamically "
+"adjusts the namespace rental fees over time."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:201
+msgid "Rollback"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:203
+msgid ""
+"The act of undoing a :doc:`block(s) <../concepts/block>` that was "
+"previously confirmed."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:204
+msgid "Secret Lock Transaction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:206
+msgid ""
+"A type of transaction between two accounts where the mosaics remain "
+"locked until the recipient presents a valid SecretProofTransaction. "
+"Otherwise, the funds are returned to the sender. Read :ref:`more <secret-"
+"lock-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:207
+msgid "Secret Proof Transaction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:209
+msgid ""
+"A type of transaction through which the recipient of a "
+"SecretLockTransaction provides proof and unlocks the mosaics. Read "
+":ref:`more <secret-lock-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:210
+msgid "Spam Throttle"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:212
+msgid ""
+"A feature which provides Symbol network protection against being spammed "
+"with lots of unconfirmed transactions."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:213
+msgid "Subnamespaces"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:215
+msgid ""
+"A unique domain on the Symbol blockchain that is a part of a larger "
+"domain under the :doc:`namespace <../concepts/namespace>` hierarchy. "
+"Subnamespaces can only exist in conjunction with a root namespace."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:216
+msgid "Symbol Software Development Kit (SDK)"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:218
+msgid ""
+"The primary software development tool to create Symbol components, such "
+"as additional tools, libraries, or applications. It enables developers to"
+" focus on their product rather than on the specific API details due to "
+"its higher abstraction. Read :doc:`more <../sdk>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:219
+msgid "Symbol Command-Line Interface (CLI)"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:221
+msgid ""
+"The open-source command-line interface to interact with the Symbol "
+"blockchain. Read :doc:`more <../cli>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:222
+msgid "Symbol Extensions"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:224
+msgid ""
+"Plugins that can be added to the Symbol’s protocol to extend its "
+"capabilities. Allows developers to introduce different ways to alter the "
+"chain’s state via transactions without modifying the core engine or "
+"disrupting other features. Read :doc:`more <../concepts/plugin>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:225
+msgid "TLS"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:227
+msgid ""
+"Security protocol used to encrypting communication between peers on the "
+"Symbol blockchain."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:228
+msgid "Transaction Plugins"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:230
+msgid ""
+"Set of plugins that determine the kinds of transactions the network "
+"supports."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:231
+msgid "Transfer Transaction"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:233
+msgid ""
+"The most basic transaction used to send mosaics and messages between two "
+"accounts. Read :doc:`more <../concepts/transfer-transaction>`."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:234
+msgid "VRF"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:236
+msgid ""
+"VRF stands for verifiable random function. All potential harvesting "
+"accounts must link to a second public key by announcing a "
+"VrfKeyLinkTransaction. The key linked is then used to randomize block "
+"production and leader/participant selection."
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:237
+msgid "XYM"
+msgstr ""
+
+#: ../../source/contribute/glossary.rst:239
+msgid "The native currency of the Symbol blockchain."
+msgstr ""
+

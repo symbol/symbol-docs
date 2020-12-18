@@ -1,66 +1,109 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:20
+#: ../../source/guides/blockchain/getting-block-by-height.rst:42
 msgid "Getting a block by height"
 msgstr "ブロック高によるブロックの取得"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:22
+#: ../../source/guides/blockchain/getting-block-by-height.rst:44
 msgid "Get the block information given a height."
 msgstr "与えられたブロック高のブロック情報を取得する。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:26
+#: ../../source/guides/blockchain/getting-block-by-height.rst:48
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:28
+#: ../../source/guides/blockchain/getting-block-by-height.rst:50
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:32
+#: ../../source/guides/blockchain/getting-block-by-height.rst:54
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:34
+#: ../../source/guides/blockchain/getting-block-by-height.rst:56
 msgid ""
-"What happened in the genesis block? Run the following code to get the first "
-"block header recorded on the blockchain."
+"What happened in the genesis block? Run the following code to get the "
+"first block header recorded on the blockchain."
 msgstr "ジェネシスブロックでは何が発生したのでしょう？次のコードを実行してブロックチェーンに最初に記録されたブロックのヘッダを取得します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:53
+#: ../../source/guides/blockchain/getting-block-by-height.rst:60
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingBlockByHeight.ts`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:65
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingBlockByHeight.js`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:70
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/blockchain/GettingBlockByHeight.java`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:75
 msgid "The following snippet returns the height of the latest block."
 msgstr "以下のスニペットは最終ブロックの高さを返却します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:69
+#: ../../source/guides/blockchain/getting-block-by-height.rst:79
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingBlockchainHeight.ts`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:84
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/GettingBlockchainHeight.js`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:91
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:71
+#: ../../source/guides/blockchain/getting-block-by-height.rst:93
 msgid "Get the block header:"
 msgstr "ブロックヘッダの取得:"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:77
+#: ../../source/guides/blockchain/getting-block-by-height.rst:95
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/blockchain/GettingBlockHeader.sh`"
+msgstr ""
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:99
 msgid "Get the height of the blockchain:"
 msgstr "ブロックチェーン高の取得:"
+
+#: ../../source/guides/blockchain/getting-block-by-height.rst:101
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/blockchain/GettingBlockchainHeight.sh`"
+msgstr ""
+

@@ -1,128 +1,312 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/serialization/receipts.rst:14
+#: ../../source/serialization/receipts.rst:36
 msgid "Receipts Schemas"
 msgstr "レシートスキーマ"
 
-#: ../../source/serialization/receipts.rst:16
+#: ../../source/serialization/receipts.rst:38
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
-"defines how each transaction type should be serialized. In combination with "
-"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
-"generators>`_ project, developers can generate builder classes for a given "
-"set of programming languages."
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ "
+"repository defines how each transaction type should be serialized. In "
+"combination with the `catbuffer-generators <https://github.com/nemtech"
+"/catbuffer-generators>`_ project, developers can generate builder classes"
+" for a given set of programming languages."
 msgstr ""
 "`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
+#: ../../source/serialization/receipts.rst:42
+#, fuzzy
+msgid "Receipts"
+msgstr "レシートの配列"
+
+#: ../../source/serialization/receipts.rst:47
+#, fuzzy
+msgid "ReceiptType"
+msgstr "レシートタイプ"
+
+#: ../../source/serialization/receipts.rst:49
+msgid "Enumeration: uint16"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Id"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "0x0000"
+msgstr ""
+
 #: ../../source/serialization/receipts.rst:1
 msgid "Reserved."
 msgstr "予約済み"
 
-#: ../../source/serialization/receipts.rst:40
+#: ../../source/serialization/receipts.rst:60
+#, fuzzy
+msgid "Receipt"
+msgstr "レシートタイプ"
+
+#: ../../source/serialization/receipts.rst:62
 msgid ""
 "Receipts provide proof for every state change not retrievable from the "
 "block."
 msgstr "レシートはブロックから取得できないすべての状態変化の証明を提供します。"
 
-#: ../../source/serialization/receipts.rst:42
-#: ../../source/serialization/receipts.rst:63
+#: ../../source/serialization/receipts.rst:64
 #: ../../source/serialization/receipts.rst:85
-#: ../../source/serialization/receipts.rst:106
-#: ../../source/serialization/receipts.rst:126
-#: ../../source/serialization/receipts.rst:147
+#: ../../source/serialization/receipts.rst:107
+#: ../../source/serialization/receipts.rst:128
+#: ../../source/serialization/receipts.rst:148
+#: ../../source/serialization/receipts.rst:169
 msgid "**Inlines**:"
 msgstr "**インライン**"
+
+#: ../../source/serialization/receipts.rst:66
+msgid ":ref:`SizePrefixedEntity <size-prefixed-entity>`"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "Type"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+#, fuzzy
+msgid "version"
+msgstr "レシートバージョン"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "uint16"
+msgstr ""
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Receipt version."
 msgstr "レシートバージョン"
 
 #: ../../source/serialization/receipts.rst:1
+msgid "type"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid ":ref:`ReceiptType <receipt-type>`"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
 msgid "Receipt type."
 msgstr "レシートタイプ"
 
-#: ../../source/serialization/receipts.rst:58
+#: ../../source/serialization/receipts.rst:78
+msgid "BalanceTransferReceipt"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:80
 msgid "The invisible state change triggered a mosaic transfer."
 msgstr "モザイク転送によりトリガされた不可視の状態変化。"
+
+#: ../../source/serialization/receipts.rst:82
+#: ../../source/serialization/receipts.rst:104
+#: ../../source/serialization/receipts.rst:125
+#: ../../source/serialization/receipts.rst:145
+#: ../../source/serialization/receipts.rst:166
+msgid "**version**: 0x1"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:83
+msgid "**basicType**: 0x1"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:87
+#: ../../source/serialization/receipts.rst:109
+#: ../../source/serialization/receipts.rst:130
+#: ../../source/serialization/receipts.rst:150
+#: ../../source/serialization/receipts.rst:171
+msgid ":ref:`Receipt <receipt>`"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "mosaic"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+#, fuzzy
+msgid ":ref:`Mosaic <mosaic>`"
+msgstr "期限切れの :doc:`モザイク <mosaic>`"
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Mosaic transferred."
 msgstr "転送されたモザイク"
 
 #: ../../source/serialization/receipts.rst:1
-msgid "Public key of the sender."
-msgstr "送信者の公開鍵"
+msgid "senderAddress"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid ":schema:`Address <types.cats>`"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+#, fuzzy
+msgid "Address of the sender."
+msgstr "受信者のアドレス"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "recipientAddress"
+msgstr ""
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Address of the recipient."
 msgstr "受信者のアドレス"
 
-#: ../../source/serialization/receipts.rst:80
+#: ../../source/serialization/receipts.rst:100
+msgid "BalanceChangeReceipt"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:102
 msgid "The invisible state change changed an account balance."
 msgstr "アカウントの残高変化によりトリガされた不可視の状態変化。"
+
+#: ../../source/serialization/receipts.rst:105
+msgid "**basicType**: (0x2) credit or (0x3) debit"
+msgstr ""
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Mosaic increased or decreased."
 msgstr "増加または減少したモザイク"
 
 #: ../../source/serialization/receipts.rst:1
-msgid "Public key of the target account."
+msgid "targetAddress"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+#, fuzzy
+msgid "Address of the target account."
 msgstr "対象アカウントの公開鍵"
 
-#: ../../source/serialization/receipts.rst:101
+#: ../../source/serialization/receipts.rst:121
+msgid "MosaicExpiryReceipt"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:123
 msgid "An :doc:`mosaic <mosaic>` expired."
 msgstr "期限切れの :doc:`モザイク <mosaic>`"
+
+#: ../../source/serialization/receipts.rst:126
+msgid "**basicType**: 0x4"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "artifactId"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid ":schema:`MosaicId <types.cats>`"
+msgstr ""
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Mosaic identifier."
 msgstr "モザイク識別子"
 
-#: ../../source/serialization/receipts.rst:121
+#: ../../source/serialization/receipts.rst:141
+msgid "InflationReceipt"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:143
 msgid ""
 "Network currency mosaics were created due to :doc:`inflation "
 "<../concepts/inflation>`."
 msgstr ":doc:`インフレーション <../concepts/inflation>` のために作り出されたネットワーク通貨モザイク。"
+
+#: ../../source/serialization/receipts.rst:146
+msgid "**basicType**: 0x5"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "mosaicId"
+msgstr ""
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Identifier of the mosaic that has been created."
 msgstr "作成されたモザイクの識別子"
 
 #: ../../source/serialization/receipts.rst:1
+msgid "amount"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid ":schema:`Amount <types.cats>`"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
 msgid "Number of mosaics created."
 msgstr "作成されたモザイクの数"
 
-#: ../../source/serialization/receipts.rst:142
+#: ../../source/serialization/receipts.rst:162
+msgid "TransactionStatement"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:164
 msgid "The collection of receipts related to a transaction."
 msgstr "トランザクションに関するレシートのコレクション。"
+
+#: ../../source/serialization/receipts.rst:167
+msgid "**type**: Transaction_Group"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid "source"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
+msgid ":ref:`ReceiptSource <receipt-source>`"
+msgstr ""
 
 #: ../../source/serialization/receipts.rst:1
 msgid "Transaction that triggered the receipt."
 msgstr "レシートをトリガしたトランザクション。"
 
 #: ../../source/serialization/receipts.rst:1
+#, fuzzy
+msgid "receipts"
+msgstr "レシートの配列"
+
+#: ../../source/serialization/receipts.rst:1
+msgid "array(:ref:`Receipt <receipt>`, size=receiptsSize)"
+msgstr ""
+
+#: ../../source/serialization/receipts.rst:1
 msgid "Array of receipts."
 msgstr "レシートの配列"
+
+#~ msgid "Public key of the sender."
+#~ msgstr "送信者の公開鍵"
+

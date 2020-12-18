@@ -1,303 +1,332 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-12-17 09:31+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:19
+#: ../../source/guides/network/running-a-test-net-node.rst:41
 msgid "Running a test net node"
 msgstr "テストネットノードの立ち上げ"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:21
+#: ../../source/guides/network/running-a-test-net-node.rst:43
+#, fuzzy
 msgid ""
-"This guide will walk you through the process of setting up your node to join"
-" |codename|’s **public test network**."
-msgstr ""
-"このガイドでは |codename| の **パブリックテストネットワーク** へ参加するための、あなたのノードのセットアップ方法を説明します。"
+"This guide walks you through the process of setting up a node to join "
+"|codename|'s **public test network**."
+msgstr "このガイドでは |codename| の **パブリックテストネットワーク** へ参加するための、あなたのノードのセットアップ方法を説明します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:23
+#: ../../source/guides/network/running-a-test-net-node.rst:45
+#, fuzzy
 msgid ""
-"The test network mirrors the same technology and features of the future main"
-" public network. You can use the test net to experiment with the offered "
-"|codename|'s transaction set in a live network without the loss of valuable "
-"assets."
+"The test network mirrors the same technology and features of the future "
+"main public network. You can use the test net to experiment with the "
+"offered |codename|'s transaction set in a live network."
 msgstr ""
 "テストネットワークは将来のパブリックメインネットワークと同じテクノロジーと機能を反映しています。テストネットを実験的に使用することで、貴重な資産を失うことなく、|codename|"
 " が提供するトランザクションセットを試すことができます。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:26
+#: ../../source/guides/network/running-a-test-net-node.rst:48
 msgid ""
-"The network **might be offline or replaced without notice** because it is "
-"used extensively for testing purposes. To work in a private environment "
-"network, install :doc:`a local network for learning and development purposes"
-" <creating-a-private-test-net>`."
+"The network **might be offline or replaced without notice** because it is"
+" used extensively for testing purposes. To work in a private environment "
+"network, install :doc:`a local network for learning and development "
+"purposes <creating-a-private-test-net>`."
 msgstr ""
 "このネットワークはテスト目的で広く使用されているため **予告なく変更される** 場合があります。プライベート環境のネットワークで作業するには "
 ":doc:`学習および開発用のローカルネットワーク <creating-a-private-test-net>` をインストールしてください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:30
-msgid "Hardware requirements"
-msgstr "ハードウェア要求"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:32
-msgid ""
-"|codename| nodes have been tested on computers with the following **minimum "
-"requirements**."
-msgstr "|codename| は次の **最低必要環境** でテストされています。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:34
-msgid "**CPU**: 2 cores or more"
-msgstr "**CPU**: 2コア以上"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:35
-msgid "**Memory**: 4GB or more"
-msgstr "**メモリ**: 4GB 以上"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:36
-msgid "**HD**: 20GB or more"
-msgstr "**HD**: 20GB 以上"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:38
-msgid ""
-"Although you might be able to run the software in less powerful instances, "
-"you might encounter some issues while installing or running the node."
-msgstr ""
-"それほど強力ではないインスタンスでソフトウェアを実行できる場合もありますが、ノードのインストールまたは実行中に問題が発生する場合があります。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:42
-msgid "Environment requirements"
-msgstr "必須環境"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:44
-msgid ""
-"The setup scripts are available for Linux and Mac OS and automated using "
-"docker. To run a test net node, you will need to have installed the "
-"following docker tools:"
-msgstr ""
-"Linux と Mac OS 用のセットアップスクリプトは Docker を使用して自動化されます。テストネットノードを立ち上げるには、次の "
-"Docker ツールをインストールする必要があります。"
-
 #: ../../source/guides/network/running-a-test-net-node.rst:50
 msgid ""
-"The release images target modern x86 architectures. It has been reported "
-"that errors are experienced on some older machines provided. If you run into"
-" any related issues, please report in the `slack group (#help) "
-"<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_."
+"To run the network, we are going to use the package |symbol-bootstrap|. "
+"To better understand how this package works it is highly recommended to "
+"read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide."
 msgstr ""
-"リリース中のイメージは最新のx86アーキテクチャを対象としています。一部の古いマシンでエラーが発生することが報告されています。問題が発生した場合は "
-"`Slack グループ (#help) "
-"<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_"
-" にて報告してください"
 
 #: ../../source/guides/network/running-a-test-net-node.rst:54
-msgid "Port requirements"
-msgstr "ポート要件"
+msgid "The ``testnet`` preset"
+msgstr ""
 
 #: ../../source/guides/network/running-a-test-net-node.rst:56
 msgid ""
-"Make sure that the server's host is accessible from the internet and that "
-"the following ports are open and available:"
-msgstr "サーバーのホストがインターネットからアクセス可能であり、次のポートが開いていて、使用可能であることを確認してください。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:58
-msgid ""
-"The port ``7900`` is used by catapult-server to communicate between nodes."
-msgstr "``7900`` 番ポートはノード間の通信するに catapult-server が使用します。"
+"|symbol-bootstrap| has a preset called ``testnet`` which instantiates a "
+"node that connects to the current public test network (testnet). The "
+"capabilities of this node are selected through the ``assembly`` option."
+msgstr ""
 
 #: ../../source/guides/network/running-a-test-net-node.rst:59
-msgid ""
-"The port ``3000`` is used by the REST Gateway to expose the endpoints to "
-"interact with the node."
-msgstr "``3000`` 番ポートは REST ゲートウェイがエンドポイントを公開してノードとの疎通に使用します。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:63
-msgid "Installation"
-msgstr "インストール"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:65
-msgid ""
-"The package ``symbol-testnet-bootstrap`` contains both assemblies ready to "
-"be installed."
-msgstr "``symbol-testnet-bootstrap`` パッケージはすぐにインストールできる両方のアセンブリを含んでいます。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:67
-msgid ""
-"Download the |latest-release| of the package, or clone the repository "
-"directly using Git."
-msgstr "|latest-release| のパッケージをダウンロードまたは Git を使用してリポジトリから直接クローンしてください。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:73
-msgid "Choose the **assembly distribution** you want to install."
-msgstr "インストールしたい **アセンブリディストリビューション** を選択します。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:75
-msgid ""
-"In short, if you want to be able to interact with your node, you need to run"
-" the :ref:`API assembly <api-node>`. On the other hand, if you want a node "
-"dedicated exclusively confirm transactions, deploy the :ref:`Peer assembly "
-"<peer-node>`."
+msgid "To create a peer node:"
 msgstr ""
-"つまり、ノードと疎通するには :ref:`API アセンブリ <api-node>` "
-"を実行する必要があります。一方で、トランザクションを確認する専用ノードが必要な場合は :ref:`Peer アセンブリ <peer-node>` "
-"を展開します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:82
-msgid "or..."
-msgstr "または…"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:88
-msgid "Run the node with **docker-compose**."
-msgstr "**docker-compose** を実行してください。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:94
+#: ../../source/guides/network/running-a-test-net-node.rst:61
 msgid ""
-"You should see docker downloading the container images for the first time. "
-"Then it should run the setup and finally startup the service."
-msgstr "初回はコンテナイメージのダウンロードが表示され、セットアップが実行されると最終的にサービスが開始されます。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:96
-msgid ""
-"To stop all the running services, run ``sudo docker-compose down`` in the "
-"same directory you executed the ``up`` command."
+":ref:`Peer nodes <peer-node>`, also called a *harvester* nodes, are the "
+"backbone of the network. Among other things, they verify transactions and"
+" add new blocks to the blockchain, collecting fees in the process."
 msgstr ""
-"サービスを停止するには ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
-"を実行してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:99
-msgid "Peer assembly"
-msgstr "Peer アセンブリ"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:101
-msgid ""
-"You can verify that the node is running by running with the command "
-"``docker-compose ps peer-node`` in the same ``peer-assembly`` folder. The "
-"command's output looks like:"
+#: ../../source/guides/network/running-a-test-net-node.rst:68
+msgid "To create an API node:"
 msgstr ""
-"``peer-assembly`` と同じフォルダ内で、コマンド ``docker-compose ps peer-node`` "
-"を実行すると、ノードが実行されていることを確認できます。コマンド出力は次のようになります:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:110
+#: ../../source/guides/network/running-a-test-net-node.rst:70
 msgid ""
-"The node is running if the state for ``peerassembly_peer-node_1`` is set to "
-"\"Up\"."
-msgstr "``peerassembly_peer-node_1`` の状態が \"Up\" の場合、ノードは実行中です。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:113
-msgid "API harvest assembly"
-msgstr "API ハーベストアセンブリ"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:115
-msgid ""
-"The API harvest assembly will set up a dual-purpose :ref:`API <api-node>` "
-"and :ref:`Peer <peer-node>` node, as well as the :ref:`Rest gateway <rest-"
-"gateway>` that transactions can be submitted to and data read from."
+":ref:`API nodes <api-node>` provide external access to the network "
+"through a REST API."
 msgstr ""
-"API harvest assembly は :ref:`API <api-node>` と :ref:`Peer <peer-node>` "
-"の併用で、トランザクションのサブミットを受けたり、データの読み込みを提供する :ref:`Rest gateway <rest-gateway>` "
-"もセットアップします。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:117
+#: ../../source/guides/network/running-a-test-net-node.rst:76
+#, fuzzy
+msgid ""
+"To check that the node is up and running open a new browser tab and go to"
+" ``localhost:3000/chain/info``. You should get a response from the API "
+"node."
+msgstr "次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:78
+#, fuzzy
 msgid ""
 "API nodes take up more memory and storage than Peer nodes. If you have "
 "memory or storage constraints and you are running into issues, it is "
-"recommended you switch to running a Peer only node instead."
+"recommended that you switch to running a Peer only node instead."
 msgstr ""
 "API ノードは Peer ノードよりも多くのメモリとストレージを必要とします。もしメモリやストレージに制約がある場合は、Peer "
 "ノードを変わりに起動することを推奨します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:119
-msgid ""
-"You can verify that the node is running by opening a new browser tab with "
-"the following URL: ``localhost:3000/chain/height``."
+#: ../../source/guides/network/running-a-test-net-node.rst:81
+msgid "To create a dual node:"
 msgstr ""
-"次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:121
+#: ../../source/guides/network/running-a-test-net-node.rst:83
 msgid ""
-"The software should expose the port ``3000`` by default. If you cannot "
-"access the REST Gateway from outside, it might mean that the port is closed "
-"by default by your machine or hosting provider. If so, you will have to open"
-" it in order to access it from outside the machine."
+"Dual nodes provide the functionality of both :ref:`Peer <peer-node>` and "
+":ref:`API <api-node>` nodes."
 msgstr ""
-"ソフトウェアはデフォルトでポート ``3000`` を公開します。もし REST Gateway "
-"に外部からアクセスできない場合は、あなたのマシンかホスティングプロバイダがデフォルトでポートを閉じている可能性があります。マシンの外部からアクセスできるようにポートを開いてください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:125
+#: ../../source/guides/network/running-a-test-net-node.rst:91
+#, fuzzy
+msgid "Running the node"
+msgstr "テストネットノードの立ち上げ"
+
+#: ../../source/guides/network/running-a-test-net-node.rst:93
+msgid ""
+"You really don't need to use anything else but ``symbol-bootstrap "
+"start``.  Use any of the commands above to instantiate and boot a "
+"|codename| node and ``Ctrl+C`` to shut it down."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:95
+msgid ""
+"Alternatively, you can start in detached mode (``--detached``) to run in "
+"the background."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:99
+msgid "Retrieving the node account"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:101
+msgid ""
+"The node you just created has an associated |codename| account which you "
+"can use to interact with the node. For instance, you need this account to"
+" provide funds to the node so it can emit transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:103
+msgid ""
+"The account's keys and address can be retrieved from a YAML file in the "
+"``target`` folder:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:105
+msgid "``target/addresses.yml``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:107
+msgid "As an example:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:132
+msgid "Keep you Secret Keys secret at all times!"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:134
+msgid ""
+"Use the information in the ``signing`` section to access the node's "
+"account."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:138
+msgid "Providing funds to the node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:140
+msgid ""
+"Before the node can begin harvesting or voting (see below) it needs a "
+"**minimum amount of funds**. In the ``testnet`` test environment you can "
+"use |codename|'s **Faucet** to provide these funds."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:142
+msgid ""
+"Go to |faucet-1| (or |faucet-2|), insert the ``address`` of your node's "
+"account and the amount of |networkcurrency| you need and click on CLAIM."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:144
+msgid ""
+"You will see that your request is first ``unconfirmed`` (pending) and "
+"after a few seconds it becomes ``confirmed``. Your node is now funded and"
+" ready to operate!"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:148
+msgid "Submitting link keys"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:150
+msgid ""
+"**Harvesting** and **Voting** nodes require an extra configuration step "
+"before they can be used:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:153
+msgid "Enabling harvesting"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:155
+msgid ""
+"|symbol-bootstrap| creates peer nodes with :doc:`harvesting "
+"<../../concepts/harvesting>` enabled by default, but they still need to "
+"be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-"
+"transaction>` to the network."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:157
+msgid ""
+"This can be done by |symbol-bootstrap| too, but it needs to be a step "
+"separated from ``symbol-bootstrap start`` because funds are required to "
+"announce transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:159
+msgid ""
+"Once the node is running with ``symbol-bootstrap start`` and you have "
+"funded it account, from a different terminal (but from the same folder), "
+"simply type:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:165
+msgid ""
+"This creates the required :ref:`VrfKeyLinkTransaction <vrf-key-link-"
+"transaction>` and submits it to the network. If it succeeds (it might "
+"take some seconds, as the transaction needs to be confirmed) your new "
+"node is ready to harvest."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:167
+msgid ""
+"Without extra parameters, ``symbol-bootstrap link`` tries to send the "
+"registration transaction to the local node (running on the other "
+"terminal) which will forward it to the rest of the network. If your node "
+"is not running at this moment, or it is not an API node, you can provide "
+"the URL of a testnet node using ``--url``. Find a `list of nodes here "
+"<https://forum.nem.io/t/nem-symbol-0-10-0-release-announcement-testnet-"
+"launch/25863>`_."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:170
+msgid "Enabling voting"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:172
+msgid ""
+"The :ref:`block finalization <finalization>` process requires that "
+"network nodes vote about the correctness of blocks before they are added "
+"to the blockchain. For your new node to participate it has to register as"
+" a voter by announcing a :ref:`VotingKeyLinkTransaction <voting-key-link-"
+"transaction>` to the network. |symbol-bootstrap| can take care of this "
+"too."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:174
+msgid ""
+"We are going to create a new voting node. If you already created a non-"
+"voting node which you no longer need, you can remove the ``target`` "
+"folder or, more conveniently, use the ``-r`` switch next time you invoke "
+"``symbol-bootstrap``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:176
+msgid ""
+"First, you need to configure the node as a voter, so, besides selecting "
+"the ``testnet`` preset and the desired assembly you have to provide a "
+"custom preset file with the following content:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:183
+msgid ""
+"So if you call the above file ``enable-voting-preset.yml`` the whole "
+"command would be:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:189
+msgid ""
+"Once the node is running, from a different terminal (but from the same "
+"folder), simply type:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:195
+msgid ""
+"Just like in the harvesting case, this creates the required "
+":ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` and submits"
+" it to the network. Upon successful completion, your new node is ready to"
+" vote."
+msgstr ""
+
+#: ../../source/guides/network/running-a-test-net-node.rst:199
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:127
+#: ../../source/guides/network/running-a-test-net-node.rst:201
 msgid ""
-"After running the node for the first time, you can :ref:`change a set of "
-"properties <node-properties>` such as the public name or the "
-":doc:`harvesting <../../concepts/harvesting>` configuration of the node."
+"Follow the :ref:`Configuring node properties <node-properties>` guide to "
+"change parameters such as the public name of the node."
 msgstr ""
-"ノードを初回に実行した後、ノードの公開名や :doc:`ハーベスティング <../../concepts/harvesting>` 設定の "
-":ref:`プロパティを変更 <node-properties>` できます。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:129
-msgid "To edit the node properties, follow the next steps:"
-msgstr "ノードプロパティを編集するには次の手順に従います:"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:131
-msgid ""
-"If the node service is running, run ``sudo docker-compose down`` under the "
-"same directory you executed the ``up`` command."
-msgstr ""
-"ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo docker-compose down`` "
-"を実行してください。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:133
-msgid "Edit the properties file ``config-input.yaml`` with a text editor."
-msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:135
-msgid ""
-"Save and apply the changes with the command ``sudo docker-compose up --build"
-" --detach``."
-msgstr "保存したら ``sudo docker-compose up --build --detach`` コマンドで反映してください。"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:139
+#: ../../source/guides/network/running-a-test-net-node.rst:205
 msgid "Interacting with the test network"
 msgstr "テストネットワークと疎通する"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:141
+#: ../../source/guides/network/running-a-test-net-node.rst:207
 msgid ""
-"To interact with your node, :ref:`create first an account <setup-creating-a"
-"-test-account>` and :ref:`acquire test <setup-getting-test-currency>` "
-"|networkcurrency|."
+"You can use the following tools to test the functionality of your new "
+"node:"
 msgstr ""
-"ノードと疎通するために、 :ref:`最初のアカウントを作成 <setup-creating-a-test-account>` して "
-":ref:`テスト用 <setup-getting-test-currency>`  |networkcurrency| を取得してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:143
-msgid "Then, read and write data from the network with the following tools:"
-msgstr "ネットワークからのデータの読み書きは次のツールで行います:"
-
-#: ../../source/guides/network/running-a-test-net-node.rst:145
+#: ../../source/guides/network/running-a-test-net-node.rst:209
 msgid ""
-"|blockchain-explorer|: Search for transactions, accounts, assets, and blocks"
-" in the test network."
+"|blockchain-explorer|: Search for transactions, accounts, assets, and "
+"blocks in the test network."
 msgstr "|blockchain-explorer|: テストネットワーク内のトランザクション、アカウント、アセット、ブロックの検索"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:146
+#: ../../source/guides/network/running-a-test-net-node.rst:210
 msgid ""
 ":ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for "
 "|codename|. Available for Mac, Linux, and Windows."
@@ -305,31 +334,270 @@ msgstr ""
 ":ref:`デスクトップウォレット <wallet-desktop>`: |codename| 用Mac, Linux, Windows "
 "向けクロスプラットフォームクライアント."
 
-#: ../../source/guides/network/running-a-test-net-node.rst:147
+#: ../../source/guides/network/running-a-test-net-node.rst:211
 msgid ""
-":ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used "
-"actions from your terminal."
+":ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly "
+"used actions from your terminal."
 msgstr ":ref:`コマンドラインインターフェイス <wallet-cli>`: よく使用されるアクションをターミナルで実行します"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:148
+#: ../../source/guides/network/running-a-test-net-node.rst:212
+#, fuzzy
 msgid ""
-"|faucet-1|: Receive |networkcurrency| units to test |codename|'s services. "
-"If the default faucet is empty, try this other |faucet-2|."
+"The |codename| |faucet-1|: Receive |networkcurrency| units to test "
+"|codename|'s services. If the default faucet is empty, try the "
+"|faucet-2|."
 msgstr ""
-"|faucet-1|: テスト |codename| サービスへ |networkcurrency| を受信します。デフォルトフォーセットが空の場合は "
-"|faucet-2| を試してください。"
+"|faucet-1|: テスト |codename| サービスへ |networkcurrency| "
+"を受信します。デフォルトフォーセットが空の場合は |faucet-2| を試してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:149
+#: ../../source/guides/network/running-a-test-net-node.rst:213
 msgid ""
 ":doc:`Software Development Kits <../../sdk>`: Add |codename| to your "
 "project."
 msgstr ":doc:`ソフトウェア開発キット <../../sdk>`: |codename| をあなたのプロジェクトへ追加"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:151
+#: ../../source/guides/network/running-a-test-net-node.rst:215
 msgid ""
-"On this portal you can find information about |codename|'s features and :ref"
-":`self-paced guides <blog-categories>` on how to use the **software "
-"development kits**."
+"And don't forget to check :ref:`the rest of the guides <blog-categories>`"
+" to continue learning about |codename|!"
 msgstr ""
-"このポータルでは |codename| の機能及び **ソフトウェア開発キット** の使い方において :ref:`自己ペースガイド <blog-"
-"categories>` の情報が掲載されています。"
+
+#~ msgid "Hardware requirements"
+#~ msgstr "ハードウェア要求"
+
+#~ msgid ""
+#~ "|codename| nodes have been tested on "
+#~ "computers with the following **minimum "
+#~ "requirements**."
+#~ msgstr "|codename| は次の **最低必要環境** でテストされています。"
+
+#~ msgid "**CPU**: 2 cores or more"
+#~ msgstr "**CPU**: 2コア以上"
+
+#~ msgid "**Memory**: 4GB or more"
+#~ msgstr "**メモリ**: 4GB 以上"
+
+#~ msgid "**HD**: 20GB or more"
+#~ msgstr "**HD**: 20GB 以上"
+
+#~ msgid ""
+#~ "Although you might be able to run"
+#~ " the software in less powerful "
+#~ "instances, you might encounter some "
+#~ "issues while installing or running the"
+#~ " node."
+#~ msgstr "それほど強力ではないインスタンスでソフトウェアを実行できる場合もありますが、ノードのインストールまたは実行中に問題が発生する場合があります。"
+
+#~ msgid "Environment requirements"
+#~ msgstr "必須環境"
+
+#~ msgid ""
+#~ "The setup scripts are available for "
+#~ "Linux and Mac OS and automated "
+#~ "using docker. To run a test net"
+#~ " node, you will need to have "
+#~ "installed the following docker tools:"
+#~ msgstr ""
+#~ "Linux と Mac OS 用のセットアップスクリプトは Docker "
+#~ "を使用して自動化されます。テストネットノードを立ち上げるには、次の Docker "
+#~ "ツールをインストールする必要があります。"
+
+#~ msgid ""
+#~ "The release images target modern x86 "
+#~ "architectures. It has been reported that"
+#~ " errors are experienced on some older"
+#~ " machines provided. If you run into"
+#~ " any related issues, please report in"
+#~ " the `slack group (#help) "
+#~ "<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_."
+#~ msgstr ""
+#~ "リリース中のイメージは最新のx86アーキテクチャを対象としています。一部の古いマシンでエラーが発生することが報告されています。問題が発生した場合は"
+#~ " `Slack グループ (#help) "
+#~ "<https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLWZmZWRiMjViYTVhZjEzOTA0MzUyMTA1NTA5OWQ0MWUzNTA4NjM5OTJhOGViOTBhNjkxYWVhMWRiZDRkOTE0YmU>`_"
+#~ " にて報告してください"
+
+#~ msgid "Port requirements"
+#~ msgstr "ポート要件"
+
+#~ msgid ""
+#~ "Make sure that the server's host "
+#~ "is accessible from the internet and "
+#~ "that the following ports are open "
+#~ "and available:"
+#~ msgstr "サーバーのホストがインターネットからアクセス可能であり、次のポートが開いていて、使用可能であることを確認してください。"
+
+#~ msgid ""
+#~ "The port ``7900`` is used by "
+#~ "catapult-server to communicate between "
+#~ "nodes."
+#~ msgstr "``7900`` 番ポートはノード間の通信するに catapult-server が使用します。"
+
+#~ msgid ""
+#~ "The port ``3000`` is used by the"
+#~ " REST Gateway to expose the endpoints"
+#~ " to interact with the node."
+#~ msgstr "``3000`` 番ポートは REST ゲートウェイがエンドポイントを公開してノードとの疎通に使用します。"
+
+#~ msgid "Installation"
+#~ msgstr "インストール"
+
+#~ msgid ""
+#~ "The package ``symbol-testnet-bootstrap`` "
+#~ "contains both assemblies ready to be "
+#~ "installed."
+#~ msgstr "``symbol-testnet-bootstrap`` パッケージはすぐにインストールできる両方のアセンブリを含んでいます。"
+
+#~ msgid ""
+#~ "Download the |latest-release| of the "
+#~ "package, or clone the repository "
+#~ "directly using Git."
+#~ msgstr "|latest-release| のパッケージをダウンロードまたは Git を使用してリポジトリから直接クローンしてください。"
+
+#~ msgid "Choose the **assembly distribution** you want to install."
+#~ msgstr "インストールしたい **アセンブリディストリビューション** を選択します。"
+
+#~ msgid ""
+#~ "In short, if you want to be "
+#~ "able to interact with your node, "
+#~ "you need to run the :ref:`API "
+#~ "assembly <api-node>`. On the other "
+#~ "hand, if you want a node dedicated"
+#~ " exclusively confirm transactions, deploy "
+#~ "the :ref:`Peer assembly <peer-node>`."
+#~ msgstr ""
+#~ "つまり、ノードと疎通するには :ref:`API アセンブリ <api-node>` "
+#~ "を実行する必要があります。一方で、トランザクションを確認する専用ノードが必要な場合は :ref:`Peer "
+#~ "アセンブリ <peer-node>` を展開します。"
+
+#~ msgid "or..."
+#~ msgstr "または…"
+
+#~ msgid "Run the node with **docker-compose**."
+#~ msgstr "**docker-compose** を実行してください。"
+
+#~ msgid ""
+#~ "You should see docker downloading the"
+#~ " container images for the first time."
+#~ " Then it should run the setup "
+#~ "and finally startup the service."
+#~ msgstr "初回はコンテナイメージのダウンロードが表示され、セットアップが実行されると最終的にサービスが開始されます。"
+
+#~ msgid ""
+#~ "To stop all the running services, "
+#~ "run ``sudo docker-compose down`` in "
+#~ "the same directory you executed the "
+#~ "``up`` command."
+#~ msgstr ""
+#~ "サービスを停止するには ``up`` コマンドを実行した同じディレクトリで ``sudo "
+#~ "docker-compose down`` を実行してください。"
+
+#~ msgid "Peer assembly"
+#~ msgstr "Peer アセンブリ"
+
+#~ msgid ""
+#~ "You can verify that the node is"
+#~ " running by running with the command"
+#~ " ``docker-compose ps peer-node`` in"
+#~ " the same ``peer-assembly`` folder. "
+#~ "The command's output looks like:"
+#~ msgstr ""
+#~ "``peer-assembly`` と同じフォルダ内で、コマンド ``docker-"
+#~ "compose ps peer-node`` "
+#~ "を実行すると、ノードが実行されていることを確認できます。コマンド出力は次のようになります:"
+
+#~ msgid ""
+#~ "The node is running if the state"
+#~ " for ``peerassembly_peer-node_1`` is set"
+#~ " to \"Up\"."
+#~ msgstr "``peerassembly_peer-node_1`` の状態が \"Up\" の場合、ノードは実行中です。"
+
+#~ msgid "API harvest assembly"
+#~ msgstr "API ハーベストアセンブリ"
+
+#~ msgid ""
+#~ "The API harvest assembly will set "
+#~ "up a dual-purpose :ref:`API <api-"
+#~ "node>` and :ref:`Peer <peer-node>` node,"
+#~ " as well as the :ref:`Rest gateway"
+#~ " <rest-gateway>` that transactions can "
+#~ "be submitted to and data read "
+#~ "from."
+#~ msgstr ""
+#~ "API harvest assembly は :ref:`API "
+#~ "<api-node>` と :ref:`Peer <peer-node>` "
+#~ "の併用で、トランザクションのサブミットを受けたり、データの読み込みを提供する :ref:`Rest gateway"
+#~ " <rest-gateway>` もセットアップします。"
+
+#~ msgid ""
+#~ "The software should expose the port "
+#~ "``3000`` by default. If you cannot "
+#~ "access the REST Gateway from outside,"
+#~ " it might mean that the port is"
+#~ " closed by default by your machine"
+#~ " or hosting provider. If so, you "
+#~ "will have to open it in order "
+#~ "to access it from outside the "
+#~ "machine."
+#~ msgstr ""
+#~ "ソフトウェアはデフォルトでポート ``3000`` を公開します。もし REST "
+#~ "Gateway "
+#~ "に外部からアクセスできない場合は、あなたのマシンかホスティングプロバイダがデフォルトでポートを閉じている可能性があります。マシンの外部からアクセスできるようにポートを開いてください。"
+
+#~ msgid ""
+#~ "After running the node for the "
+#~ "first time, you can :ref:`change a "
+#~ "set of properties <node-properties>` "
+#~ "such as the public name or the "
+#~ ":doc:`harvesting <../../concepts/harvesting>` "
+#~ "configuration of the node."
+#~ msgstr ""
+#~ "ノードを初回に実行した後、ノードの公開名や :doc:`ハーベスティング "
+#~ "<../../concepts/harvesting>` 設定の :ref:`プロパティを変更 "
+#~ "<node-properties>` できます。"
+
+#~ msgid "To edit the node properties, follow the next steps:"
+#~ msgstr "ノードプロパティを編集するには次の手順に従います:"
+
+#~ msgid ""
+#~ "If the node service is running, "
+#~ "run ``sudo docker-compose down`` under"
+#~ " the same directory you executed the"
+#~ " ``up`` command."
+#~ msgstr ""
+#~ "ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo"
+#~ " docker-compose down`` を実行してください。"
+
+#~ msgid "Edit the properties file ``config-input.yaml`` with a text editor."
+#~ msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
+
+#~ msgid ""
+#~ "Save and apply the changes with "
+#~ "the command ``sudo docker-compose up "
+#~ "--build --detach``."
+#~ msgstr "保存したら ``sudo docker-compose up --build --detach`` コマンドで反映してください。"
+
+#~ msgid ""
+#~ "To interact with your node, :ref:`create"
+#~ " first an account <setup-creating-a"
+#~ "-test-account>` and :ref:`acquire test "
+#~ "<setup-getting-test-currency>` |networkcurrency|."
+#~ msgstr ""
+#~ "ノードと疎通するために、 :ref:`最初のアカウントを作成 <setup-creating-a"
+#~ "-test-account>` して :ref:`テスト用 <setup-"
+#~ "getting-test-currency>`  |networkcurrency| "
+#~ "を取得してください。"
+
+#~ msgid "Then, read and write data from the network with the following tools:"
+#~ msgstr "ネットワークからのデータの読み書きは次のツールで行います:"
+
+#~ msgid ""
+#~ "On this portal you can find "
+#~ "information about |codename|'s features and"
+#~ " :ref:`self-paced guides <blog-categories>`"
+#~ " on how to use the **software "
+#~ "development kits**."
+#~ msgstr ""
+#~ "このポータルでは |codename| の機能及び **ソフトウェア開発キット** "
+#~ "の使い方において :ref:`自己ペースガイド <blog-categories>` "
+#~ "の情報が掲載されています。"
+

@@ -1,49 +1,49 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:20
+#: ../../source/guides/blockchain/listening-new-blocks.rst:42
 msgid "Listening to new blocks"
 msgstr "新しいブロックの監視"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:22
+#: ../../source/guides/blockchain/listening-new-blocks.rst:44
 msgid "Get notified when a new block is included."
 msgstr "新しいブロックが取り込まれた通知を受け取る。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:26
+#: ../../source/guides/blockchain/listening-new-blocks.rst:48
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:28
+#: ../../source/guides/blockchain/listening-new-blocks.rst:50
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:32
+#: ../../source/guides/blockchain/listening-new-blocks.rst:54
 msgid "Method #01: Using WebSockets"
 msgstr "方法 #01: WebSocket を使用する"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:34
+#: ../../source/guides/blockchain/listening-new-blocks.rst:56
 msgid ""
 "1. First, we need to create a bidirectional link between our client "
 "application and the REST Gateway. To do so, open a new :ref:`WebSocket "
@@ -52,38 +52,38 @@ msgstr ""
 "1. まず、クライアントアプリケーションと REST ゲートウェイの間に双方向リンクを作成する必要があります。そのために新しい "
 ":ref:`WebSocket connection <websockets>` を開きます。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:61
+#: ../../source/guides/blockchain/listening-new-blocks.rst:83
 msgid ""
-"Once the connection is open, you will get a unique string identifier named "
-"``uid``. As we want to get notifications every time there is a new block "
-"harvested; the next step is to subscribe to the block channel. Check "
-":ref:`here <websockets>` the complete list of channels available."
+"Once the connection is open, you will get a unique string identifier "
+"named ``uid``. As we want to get notifications every time there is a new "
+"block harvested; the next step is to subscribe to the block channel. "
+"Check :ref:`here <websockets>` the complete list of channels available."
 msgstr ""
 "接続が開くと ``uid`` という名前の一意の文字列識別子が取得されます。 "
-"新しいブロックがハーベストされるたびに通知を受け取るために、次のステップではブロックチャネルを購読します。 :ref:`ここ <websockets>`"
-" で利用可能なチャンネルのリストを確認してください。"
+"新しいブロックがハーベストされるたびに通知を受け取るために、次のステップではブロックチャネルを購読します。 :ref:`ここ "
+"<websockets>` で利用可能なチャンネルのリストを確認してください。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:65
+#: ../../source/guides/blockchain/listening-new-blocks.rst:87
 msgid ""
 "Send the uid received during the connection phase, and the channel name "
 "formatted as follows."
 msgstr "接続フェーズ中に受信した uid と、次の形式のチャネル名を送信します。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:80
+#: ../../source/guides/blockchain/listening-new-blocks.rst:102
 msgid ""
-"From that moment, every ``15`` seconds more or less, you will receive a new "
-"notification with the content of the new harvested blocks."
+"From that moment, every ``15`` seconds more or less, you will receive a "
+"new notification with the content of the new harvested blocks."
 msgstr "その瞬間から ``15`` 秒ごとに新しくハーベストされたブロックの内容を含む新しい通知を受け取ります。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:84
+#: ../../source/guides/blockchain/listening-new-blocks.rst:106
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:86
+#: ../../source/guides/blockchain/listening-new-blocks.rst:108
 msgid "The |sdk| simplifies the process of handling WebSocket connections."
 msgstr "|sdk| は WebSocket 接続の処理プロセスを簡素化します。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:88
+#: ../../source/guides/blockchain/listening-new-blocks.rst:110
 msgid ""
 "In the SDK, WebSockets are named **Listeners**. As we have done with "
 "WebSockets, we need to open the connection first and subscribe to the "
@@ -92,16 +92,40 @@ msgstr ""
 "SDK では、WebSockets は **リスナー** と呼ばれます。WebSocket "
 "で行ったように、最初に接続を開き、目的のチャンネルを購読する必要がありますが、今回は uid を処理しません。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:103
+#: ../../source/guides/blockchain/listening-new-blocks.rst:115
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/ListeningNewBlocks.ts`"
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:120
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/blockchain/ListeningNewBlocks.js`"
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:125
 msgid ""
 "Note that the |sdk| for TypeScript base Listener is designed to work on "
 "Node.js backend environments. If you want to execute Listeners from the "
-"client-side (e.g., Angular, React, Vue.), pass the browser implementation of"
-" the WebSocket to the Listener."
+"client-side (e.g., Angular, React, Vue.), pass the browser implementation"
+" of the WebSocket to the Listener."
 msgstr ""
-"Typescript ベースのリスナー用 |sdk| は Node.js バックエンド環境で動作するように設計されています。リスナーをクライアントサイド"
-" (例: Angular, React, Vue) で実行するには、WebSocket のブラウザ実装をリスナーに渡します。"
+"Typescript ベースのリスナー用 |sdk| は Node.js "
+"バックエンド環境で動作するように設計されています。リスナーをクライアントサイド (例: Angular, React, Vue) "
+"で実行するには、WebSocket のブラウザ実装をリスナーに渡します。"
 
-#: ../../source/guides/blockchain/listening-new-blocks.rst:113
+#: ../../source/guides/blockchain/listening-new-blocks.rst:135
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:137
+msgid "Open a terminal window and run the following command."
+msgstr ""
+
+#: ../../source/guides/blockchain/listening-new-blocks.rst:139
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/blockchain/ListeningNewBlocks.sh`"
+msgstr ""
+

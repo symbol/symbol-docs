@@ -1,57 +1,119 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/serialization/aggregate.rst:14
+#: ../../source/serialization/aggregate.rst:36
 msgid "Hash Lock Schemas"
 msgstr "ハッシュロックスキーマ"
 
-#: ../../source/serialization/aggregate.rst:16
+#: ../../source/serialization/aggregate.rst:38
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
-"defines how each transaction type should be serialized. In combination with "
-"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
-"generators>`_ project, developers can generate builder classes for a given "
-"set of programming languages."
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ "
+"repository defines how each transaction type should be serialized. In "
+"combination with the `catbuffer-generators <https://github.com/nemtech"
+"/catbuffer-generators>`_ project, developers can generate builder classes"
+" for a given set of programming languages."
 msgstr ""
 "`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/aggregate.rst:27
+#: ../../source/serialization/aggregate.rst:42
+msgid "Aggregate"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:47
+#, fuzzy
+msgid "AggregateTransaction"
+msgstr "アグリゲートトランザクションのハッシュの集約"
+
+#: ../../source/serialization/aggregate.rst:49
 msgid ""
-"Announce an AggregateTransaction to combine multiple transactions together."
+"Announce an AggregateTransaction to combine multiple transactions "
+"together."
 msgstr "複数の転送トランザクションを集約するために AggregateTransaction をアナウンスします。"
+
+#: ../../source/serialization/aggregate.rst:51
+msgid "**Version**: 0x01"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:53
+msgid ""
+"**EntityType**: 0x4141 (:ref:`complete<aggregate-complete>`), 0x4241 "
+"(:ref:`bonded<aggregate-bonded>`)"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:55
+#: ../../source/serialization/aggregate.rst:80
+msgid "**Inlines**:"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:57
+msgid ":ref:`Transaction <transaction>`"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "Type"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+#, fuzzy
+msgid "transactionsHash"
+msgstr "トランザクションの署名"
+
+#: ../../source/serialization/aggregate.rst:1
+msgid ":schema:`Hash256 <types.cats>`"
+msgstr ""
 
 #: ../../source/serialization/aggregate.rst:1
 msgid "Aggregate hash of the aggregate transaction."
 msgstr "アグリゲートトランザクションのハッシュの集約"
 
 #: ../../source/serialization/aggregate.rst:1
+msgid "payloadSize"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "uint32"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
 msgid ""
-"Transaction payload size in bytes. In other words, the total number of bytes"
-" occupied by all inner transactions."
+"Transaction payload size in bytes. In other words, the total number of "
+"bytes occupied by all inner transactions."
 msgstr "バイト単位のトランザクションのペイロードサイズ。つまりインナートランザクションすべてによって占有されている合計バイト数。"
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "aggregateTransactionHeader_Reserved1"
+msgstr ""
 
 #: ../../source/serialization/aggregate.rst:1
 msgid ""
@@ -60,18 +122,46 @@ msgid ""
 msgstr "AggregateTransactionHeader の終わりを 8 バイト境界に揃えた予約パディング"
 
 #: ../../source/serialization/aggregate.rst:1
-msgid ""
-"Array of inner transactions. Other aggregate transactions are not allowed as"
-" inner transactions."
-msgstr "インナートランザクションの配列。他のアグリゲートトランザクションはインナートランザクションとして許可されていません。"
+#, fuzzy
+msgid "transactions"
+msgstr "トランザクションの署名"
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "array(:ref:`Transaction <transaction>`, size=payloadSize)"
+msgstr ""
 
 #: ../../source/serialization/aggregate.rst:1
 msgid ""
-"Array of transaction :ref:`cosignatures <cosignature>`. Fills the remaining "
-"body space after transactions."
+"Array of inner transactions. Other aggregate transactions are not allowed"
+" as inner transactions."
+msgstr "インナートランザクションの配列。他のアグリゲートトランザクションはインナートランザクションとして許可されていません。"
+
+#: ../../source/serialization/aggregate.rst:1
+#, fuzzy
+msgid "cosignatures"
+msgstr "トランザクションの署名"
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "array(:ref:`Cosignature <cosignature>`, __FILL__)"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid ""
+"Array of transaction :ref:`cosignatures <cosignature>`. Fills the "
+"remaining body space after transactions."
 msgstr ":ref:`連署者 <cosignature>` トランザクションの配列。トランザクションの後ろの残りの本体スペースを埋めます。"
 
-#: ../../source/serialization/aggregate.rst:56
+#: ../../source/serialization/aggregate.rst:71
+#: ../../source/serialization/aggregate.rst:93
+#, fuzzy
+msgid "Cosignature"
+msgstr "トランザクションの署名"
+
+#: ../../source/serialization/aggregate.rst:76
+msgid "DetachedCosignature"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:78
 msgid ""
 "Cosignature transactions are used to sign :ref:`announced "
 "AggregateBondedTransactions <aggregate-transaction>` with missing "
@@ -80,11 +170,19 @@ msgstr ""
 "署名トランザクションは、まだ署名の揃っていない :ref:`アナウンス済みの AggregateBondedTransactions "
 "<aggregate-transaction>` への署名に使用します。"
 
+#: ../../source/serialization/aggregate.rst:82
+msgid ":ref:`Cosignature <cosignature-transaction>`"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "parentHash"
+msgstr ""
+
 #: ../../source/serialization/aggregate.rst:1
 msgid "AggregateBondedTransaction hash to cosign."
 msgstr "署名すべき AggregateBondedTransaction ハッシュ"
 
-#: ../../source/serialization/aggregate.rst:73
+#: ../../source/serialization/aggregate.rst:95
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -93,9 +191,39 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/serialization/aggregate.rst:1
+msgid "version"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "uint64"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid "Version of the structure."
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+#, fuzzy
+msgid "signerPublicKey"
+msgstr "連署者の公開鍵"
+
+#: ../../source/serialization/aggregate.rst:1
+msgid ":schema:`Key <types.cats>`"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
 msgid "Cosigner public key."
 msgstr "連署者の公開鍵"
 
 #: ../../source/serialization/aggregate.rst:1
+msgid "signature"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
+msgid ":schema:`Signature <types.cats>`"
+msgstr ""
+
+#: ../../source/serialization/aggregate.rst:1
 msgid "Transaction signature."
 msgstr "トランザクションの署名"
+

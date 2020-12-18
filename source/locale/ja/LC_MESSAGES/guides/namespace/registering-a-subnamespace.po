@@ -1,63 +1,62 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:20
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:42
 msgid "Creating a subnamespace"
 msgstr "サブネームスペースの作成"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:22
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:44
 msgid ""
-"Once you have a registered root :doc:`namespace <../../concepts/namespace>`,"
-" you can create up to ``3`` levels of subnamespaces to organize your assets."
+"Once you have a registered root :doc:`namespace "
+"<../../concepts/namespace>`, you can create up to ``3`` levels of "
+"subnamespaces to organize your assets."
 msgstr ""
 "ルート :doc:`ネームスペース <../../concepts/namespace>` を取得すると ``3`` "
 "つまでのサブネームスペースを作って、アセットの整理をすることができます。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:26
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:48
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:28
-msgid ""
-"Complete :doc:`registering a namespace <registering-a-namespace>` guide."
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:50
+msgid "Complete :doc:`registering a namespace <registering-a-namespace>` guide."
 msgstr ":doc:`ネームスペースの取得 <registering-a-namespace>` ガイドを完了している"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:29
-msgid ""
-"Register a :doc:`namespace <../../concepts/namespace>` with an account."
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:51
+msgid "Register a :doc:`namespace <../../concepts/namespace>` with an account."
 msgstr "アカウントで :doc:`ネームスペース <../../concepts/namespace>` を登録します。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:33
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:55
 msgid "Method #01: Using the Desktop Wallet"
 msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:35
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:57
 msgid ""
 "Click on \"**Namespace**\" on the left-side menu. Go to the \"**Create "
 "subnamespaces**\" tab."
 msgstr "左側のメニューの \"**ネームスペース**\" をクリックします。\"**サブネームスペースの作成**\" タブへ遷移します。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:41
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:63
 msgid ""
 "Enter information for your subnamespace. Click \"**Send**\". Verify the "
 "information on the popup and enter your wallet password. Click "
@@ -66,42 +65,61 @@ msgstr ""
 "サブネームスペースの情報を入力します。 \"**送信**\" をクリックします。ポップアップの情報を確認し、ウォレットのパスワードを入力します。 "
 "\"**確認**\" をクリックします。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:47
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:69
 msgid ""
-"You can check that the sub namespace has been created by going back to the "
-"\"**Owned namespaces**\" tab. If the subnamespace does not show, try "
+"You can check that the sub namespace has been created by going back to "
+"the \"**Owned namespaces**\" tab. If the subnamespace does not show, try "
 "clicking on the update icon."
 msgstr "\"**Owned namespaces**\" タブに戻って、サブネームスペースが作成されたことを確認できます。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:53
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:75
 msgid ""
-"When the subnamespace is created, link the subnamespace with a :doc:`mosaic "
-"<../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address "
-"<../namespace/link-a-namespace-to-an-address>`."
+"When the subnamespace is created, link the subnamespace with a "
+":doc:`mosaic <../namespace/link-a-namespace-to-a-mosaic>` or "
+":doc:`address <../namespace/link-a-namespace-to-an-address>`."
 msgstr ""
-"サブネームスペースが作成されると、 :doc:`モザイク <../namespace/link-a-namespace-to-a-mosaic>` "
-"または :doc:`アドレス <../namespace/link-a-namespace-to-an-address>` "
+"サブネームスペースが作成されると、 :doc:`モザイク <../namespace/link-a-namespace-to-a-mosaic>`"
+" または :doc:`アドレス <../namespace/link-a-namespace-to-an-address>` "
 "がサブネームスペースとリンクします。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:57
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:79
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:59
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:81
 msgid ""
 "The next code snippet creates a subnamespace called ``bar`` under the "
 "namespace ``foo``."
 msgstr "次のコードスニペットは、ネームスペース ``foo`` の下に ``bar`` というサブネームスペースを作成します。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:75
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:85
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/namespace/RegisteringASubnamespace.ts`"
+msgstr ""
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:90
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/namespace/RegisteringASubnamespace.js`"
+msgstr ""
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:97
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:77
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:99
 msgid ""
 "To create a subnamespace, open a terminal window and run the following "
-"command. Replace ``foo`` with the root namespace name and ``bar`` with the "
-"new subnamespace to be created."
+"command. Replace ``foo`` with the root namespace name and ``bar`` with "
+"the new subnamespace to be created."
 msgstr ""
 "サブネームスペースを作成するには、ターミナルウィンドウを開き、次のコマンドを実行します。 ``foo`` をルートネームスペース名に置き換え、 "
 "``bar`` を作成する新しいサブネームスペースに置き換えます。"
+
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:102
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/namespace/RegisteringASubnamespace.sh`"
+msgstr ""
+

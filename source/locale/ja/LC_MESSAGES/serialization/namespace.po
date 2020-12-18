@@ -1,57 +1,77 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/serialization/namespace.rst:14
+#: ../../source/serialization/namespace.rst:36
 msgid "Namespace Schemas"
 msgstr "ネームスペーススキーマ"
 
-#: ../../source/serialization/namespace.rst:16
+#: ../../source/serialization/namespace.rst:38
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
-"defines how each transaction type should be serialized. In combination with "
-"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
-"generators>`_ project, developers can generate builder classes for a given "
-"set of programming languages."
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ "
+"repository defines how each transaction type should be serialized. In "
+"combination with the `catbuffer-generators <https://github.com/nemtech"
+"/catbuffer-generators>`_ project, developers can generate builder classes"
+" for a given set of programming languages."
 msgstr ""
 "`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/namespace.rst:20
+#: ../../source/serialization/namespace.rst:42
 msgid "Address Alias"
 msgstr "アドレスエイリアス"
 
-#: ../../source/serialization/namespace.rst:27
+#: ../../source/serialization/namespace.rst:47
+msgid "AddressAliasTransaction"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:49
 msgid ""
 "Announce an AliasTransaction to attach a namespace to an account. A "
 "namespace can be assigned to any account present in the network."
-msgstr ""
-"ネームスペースをアカウントへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースはネットワーク上に存在するいかなるアカウントにも割り当てることができます。"
+msgstr "ネームスペースをアカウントへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースはネットワーク上に存在するいかなるアカウントにも割り当てることができます。"
 
-#: ../../source/serialization/namespace.rst:35
-#: ../../source/serialization/namespace.rst:62
-#: ../../source/serialization/namespace.rst:113
+#: ../../source/serialization/namespace.rst:51
+#: ../../source/serialization/namespace.rst:78
+#: ../../source/serialization/namespace.rst:129
+msgid "**Version**: 0x01"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:53
+msgid "**EntityType**: 0x424E"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:55
+#: ../../source/serialization/namespace.rst:82
+#: ../../source/serialization/namespace.rst:108
+#: ../../source/serialization/namespace.rst:133
+msgid "**Inlines**:"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:57
+#: ../../source/serialization/namespace.rst:84
+#: ../../source/serialization/namespace.rst:135
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -60,57 +80,151 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/serialization/namespace.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "Type"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+#, fuzzy
+msgid "namespaceId"
+msgstr "ルートネームスペース"
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":schema:`NamespaceId <namespace/namespace_types.cats#L1>`"
+msgstr ""
+
 #: ../../source/serialization/namespace.rst:1
 msgid "Identifier of the namespace that will become an alias."
 msgstr "エイリアスになるネームスペースの識別子"
+
+#: ../../source/serialization/namespace.rst:1
+#, fuzzy
+msgid "address"
+msgstr "エイリアスアドレス"
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":schema:`Address <types.cats>`"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid "Aliased address."
 msgstr "エイリアスアドレス"
 
 #: ../../source/serialization/namespace.rst:1
+#, fuzzy
+msgid "aliasAction"
+msgstr "エイリアスアクション"
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":ref:`AliasAction <alias-action>`"
+msgstr ""
+
 #: ../../source/serialization/namespace.rst:1
 msgid "Alias action."
 msgstr "エイリアスアクション"
 
-#: ../../source/serialization/namespace.rst:47
+#: ../../source/serialization/namespace.rst:69
 msgid "Mosaic Alias"
 msgstr "モザイクエイリアス"
 
-#: ../../source/serialization/namespace.rst:54
-msgid ""
-"Announce an AliasTransaction to attach a namespace to a mosaic. Setting an "
-"alias to a mosaic is only possible if the account announcing the transaction"
-" has created the namespace and mosaic involved."
+#: ../../source/serialization/namespace.rst:74
+msgid "MosaicAliasTransaction"
 msgstr ""
-"ネームスペースをモザイクへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースとモザイクを作成したアカウントがトランザクションをアナウンスしたときだけ、モザイクへエイリアスを設定することが可能です。"
+
+#: ../../source/serialization/namespace.rst:76
+msgid ""
+"Announce an AliasTransaction to attach a namespace to a mosaic. Setting "
+"an alias to a mosaic is only possible if the account announcing the "
+"transaction has created the namespace and mosaic involved."
+msgstr "ネームスペースをモザイクへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースとモザイクを作成したアカウントがトランザクションをアナウンスしたときだけ、モザイクへエイリアスを設定することが可能です。"
+
+#: ../../source/serialization/namespace.rst:80
+msgid "**EntityType**: 0x434E"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":schema:`NamespaceId <namespace/namespace_types.cats>`"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+#, fuzzy
+msgid "mosaicId"
+msgstr "モザイクエイリアス"
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":schema:`MosaicId <types.cats>`"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid "Aliased mosaic identifier."
 msgstr "エイリアス済みモザイク識別子"
 
-#: ../../source/serialization/namespace.rst:74
+#: ../../source/serialization/namespace.rst:96
 msgid "Namespace Receipts"
 msgstr "ネームスペースレシート"
 
-#: ../../source/serialization/namespace.rst:81
+#: ../../source/serialization/namespace.rst:101
+#, fuzzy
+msgid "NamespaceExpiryReceipt"
+msgstr "ネームスペースレシート"
+
+#: ../../source/serialization/namespace.rst:103
 msgid "A :doc:`namespace <namespace>` expired."
 msgstr "期限切れの :doc:`ネームスペース <namespace>`"
 
+#: ../../source/serialization/namespace.rst:105
+msgid "**version**: 0x1"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:106
+msgid "**basicType**: 0x4"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:110
+msgid ":ref:`Receipt <receipt>`"
+msgstr ""
+
 #: ../../source/serialization/namespace.rst:1
+msgid "artifactId"
+msgstr ""
+
 #: ../../source/serialization/namespace.rst:1
 msgid "Namespace identifier."
 msgstr "ネームスペース識別子"
 
-#: ../../source/serialization/namespace.rst:98
+#: ../../source/serialization/namespace.rst:120
 msgid "Namespace Registration"
 msgstr "ネームスペース登録"
 
-#: ../../source/serialization/namespace.rst:105
+#: ../../source/serialization/namespace.rst:125
+#, fuzzy
+msgid "NamespaceRegistrationTransaction"
+msgstr "ネームスペース登録"
+
+#: ../../source/serialization/namespace.rst:127
 msgid ""
 "Announce a NamespaceRegistrationTransaction to register and re-rent a "
 "namespace."
 msgstr "ネームスペース取得トランザクションはネームスペースの取得と再取得に使用します。"
+
+#: ../../source/serialization/namespace.rst:131
+msgid "**EntityType**: 0x414E"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "duration"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":schema:`BlockDuration <types.cats>`"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid ""
@@ -119,37 +233,106 @@ msgid ""
 msgstr "ネームスペースをレンタルしたい期間の承認済みブロック数を指定します。ルートネームスペースでは必須項目です。"
 
 #: ../../source/serialization/namespace.rst:1
+msgid "parentId"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
 msgid "Parent namespace identifier. Required for subnamespaces."
 msgstr "親ネームスペース識別子。サブネームスペースに必須です。"
+
+#: ../../source/serialization/namespace.rst:1
+msgid "id"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+#, fuzzy
+msgid "registrationType"
+msgstr "ネームスペース登録タイプ"
+
+#: ../../source/serialization/namespace.rst:1
+msgid ":ref:`NamespaceRegistrationType <namespace-registration-type>`"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid "Namespace registration type."
 msgstr "ネームスペース登録タイプ"
 
 #: ../../source/serialization/namespace.rst:1
+msgid "nameSize"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "uint8"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
 msgid "Namespace name size in bytes."
 msgstr "バイト換算のネームスペース名"
+
+#: ../../source/serialization/namespace.rst:1
+msgid "name"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "array(bytes, namespaceNameSize)"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid "Namespace name."
 msgstr "ネームスペース名"
 
-#: ../../source/serialization/namespace.rst:128
+#: ../../source/serialization/namespace.rst:150
 msgid "Namespace Types"
 msgstr "ネームスペースタイプ"
+
+#: ../../source/serialization/namespace.rst:155
+#, fuzzy
+msgid "NamespaceRegistrationType"
+msgstr "ネームスペース登録タイプ"
+
+#: ../../source/serialization/namespace.rst:157
+#: ../../source/serialization/namespace.rst:171
+msgid "Enumeration: uint8"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "Id"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
+msgid "0"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid "Root namespace."
 msgstr "ルートネームスペース"
 
 #: ../../source/serialization/namespace.rst:1
+msgid "1"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
 msgid "Child namespace."
 msgstr "子ネームスペース"
+
+#: ../../source/serialization/namespace.rst:169
+#, fuzzy
+msgid "AliasAction"
+msgstr "エイリアスアクション"
+
+#: ../../source/serialization/namespace.rst:1
+msgid "0x00"
+msgstr ""
 
 #: ../../source/serialization/namespace.rst:1
 msgid "Link alias."
 msgstr "エイリアスに関連付ける"
 
 #: ../../source/serialization/namespace.rst:1
+msgid "0x01"
+msgstr ""
+
+#: ../../source/serialization/namespace.rst:1
 msgid "Unlink alias."
 msgstr "エイリアスの関連付けをやめる"
+

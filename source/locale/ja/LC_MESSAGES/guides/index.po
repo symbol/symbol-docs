@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/index.rst:36
+msgid "Guides"
+msgstr ""
+
+#: ../../source/guides/index.rst:40
+msgid ":doc:`transfer/sending-a-transfer-transaction`"
+msgstr ""
+
+#: ../../source/guides/index.rst:42
+msgid ":doc:`mosaic/creating-a-mosaic`"
+msgstr ""
+
+#: ../../source/guides/index.rst:44
+msgid ":doc:`multisig/creating-a-multisig-account`"
+msgstr ""
+
+#: ../../source/guides/index.rst:46
+msgid ":doc:`network/running-a-test-net-node`"
+msgstr ""
+
+#: ../../source/guides/index.rst:48
+msgid ":doc:`network/creating-a-private-test-net`"
+msgstr ""
+
+#: ../../source/guides/index.rst:50
+msgid ""
+"The guides are further divided into the following **topics**. To see the "
+"guides grouped by **tags** instead, see the `complete guides catalog "
+"<https://docs.symbolplatform.com/guides/category.html>`__."
+msgstr ""
+
+#: ../../source/guides/index.rst:55
+msgid ":doc:`account/index`"
+msgstr ""
+
+#: ../../source/guides/account/index.rst:1
+msgid "Guides related to :doc:`account <../../concepts/account>` handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:63
+msgid ":doc:`accountlink/index`"
+msgstr ""
+
+#: ../../source/guides/accountlink/index.rst:1
+msgid ""
+"Guides related to linking different :doc:`accounts "
+"<../../concepts/account>` between them."
+msgstr ""
+
+#: ../../source/guides/index.rst:71
+msgid ":doc:`aggregate/index`"
+msgstr ""
+
+#: ../../source/guides/aggregate/index.rst:1
+msgid ""
+"Guides related to :doc:`aggregate transaction <../../concepts/aggregate-"
+"transaction>` handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:79
+msgid ":doc:`blockchain/index`"
+msgstr ""
+
+#: ../../source/guides/blockchain/index.rst:1
+msgid "Guides related to the handling the blockchain itself."
+msgstr ""
+
+#: ../../source/guides/index.rst:87
+msgid ":doc:`metadata/index`"
+msgstr ""
+
+#: ../../source/guides/metadata/index.rst:1
+msgid "Guides related to :doc:`metadata <../../concepts/metadata>` handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:95
+msgid ":doc:`migration/index`"
+msgstr ""
+
+#: ../../source/guides/migration/index.rst:1
+msgid "Guides related to migrating from NIS1 to |codename|."
+msgstr ""
+
+#: ../../source/guides/index.rst:103
+msgid ":doc:`monitor/index`"
+msgstr ""
+
+#: ../../source/guides/monitor/index.rst:1
+msgid "Guides related to monitoring transactions."
+msgstr ""
+
+#: ../../source/guides/index.rst:111
+msgid ":doc:`mosaic/index`"
+msgstr ""
+
+#: ../../source/guides/mosaic/index.rst:1
+msgid "Guides related to :doc:`mosaics <../../concepts/mosaic>` handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:119
+msgid ":doc:`multisig/index`"
+msgstr ""
+
+#: ../../source/guides/multisig/index.rst:1
+msgid ""
+"Guides related to :doc:`multisignature account <../../concepts/multisig-"
+"account>` (multisig) handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:127
+msgid ":doc:`namespace/index`"
+msgstr ""
+
+#: ../../source/guides/namespace/index.rst:1
+msgid "Guides related to :doc:`namespace <../../concepts/namespace>` handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:135
+msgid ":doc:`network/index`"
+msgstr ""
+
+#: ../../source/guides/network/index.rst:1
+msgid "Guides related to creating nodes and test networks."
+msgstr ""
+
+#: ../../source/guides/index.rst:143
+msgid ":doc:`restriction/index`"
+msgstr ""
+
+#: ../../source/guides/restriction/index.rst:1
+msgid ""
+"Guides related to :doc:`mosaic restrictions <../../concepts/mosaic-"
+"restriction>` handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:151
+msgid ":doc:`secretlock/index`"
+msgstr ""
+
+#: ../../source/guides/secretlock/index.rst:1
+msgid "Guides related to secret lock handling."
+msgstr ""
+
+#: ../../source/guides/index.rst:159
+msgid ":doc:`transfer/index`"
+msgstr ""
+
+#: ../../source/guides/transfer/index.rst:1
+msgid ""
+"Guides related to :doc:`transfer transactions <../../concepts/transfer-"
+"transaction>` handling."
+msgstr ""
+

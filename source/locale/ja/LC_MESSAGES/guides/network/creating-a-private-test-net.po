@@ -1,292 +1,482 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:19
-msgid "Creating a private test net"
+#: ../../source/guides/network/creating-a-private-test-net.rst:41
+#, fuzzy
+msgid "Creating private test networks"
 msgstr "プライベートテストネットの作成"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:21
+#: ../../source/guides/network/creating-a-private-test-net.rst:43
+#, fuzzy
 msgid ""
-"This guide will walk you through the process of setting up your own private "
-"network using |codename|'s technology."
+"This guide will walk you through the process of setting up your own "
+"private network using |codename|."
+msgstr "このガイドでは、 |codename| のテクノロジーを使用して、独自のプライベートネットワークをセットアップするプロセスを説明しています。"
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:45
+msgid ""
+"To run the network, we are going to use the package |symbol-bootstrap|. "
+"To better understand how this package works it is recommended to read the"
+" :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide."
 msgstr ""
-"このガイドでは、 |codename| のテクノロジーを使用して、独自のプライベートネットワークをセットアップするプロセスを説明しています。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:23
-msgid ""
-"To run the network, we are going to use the package |catapult-service-"
-"bootstrap|. This software suite contains the necessary setup scripts to help"
-" developers to quickly build their own network."
+#: ../../source/guides/network/creating-a-private-test-net.rst:49
+msgid "The ``bootstrap`` preset"
 msgstr ""
-"ネットワークを立ち上げるために |catapult-service-bootstrap| "
-"を使用します。このソフトウェアスイートは開発者が素早く自分のネットワークを構築するための手助けになるセットアップスクリプトが含まれています。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:25
+#: ../../source/guides/network/creating-a-private-test-net.rst:51
 msgid ""
-"This bootstrap setup is for learning and development purposes and it should "
-"not power any production |codename| instances."
-msgstr "このブートストラップの設定は学習と開発を目的としており、本番の |codename| インスタンスを動かすものではありません 。"
+"|symbol-bootstrap| has a preset called ``bootstrap`` which instantiates a"
+" network with multiple nodes with the following architecture:"
+msgstr ""
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:27
-msgid ""
-"|codename| Service Bootstrap deploys a private network with the following "
-"high-level architecture:"
-msgstr "|codename| Service Bootstrap は次の高レベルアーキテクチャでプライベートネットワークを展開しています:"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:33
+#: ../../source/guides/network/creating-a-private-test-net.rst:57
 msgid "Bootstrap network architecture"
 msgstr "ブートストラップネットワークアーキテクチャ"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:35
+#: ../../source/guides/network/creating-a-private-test-net.rst:59
 msgid ""
-"**peer-node (1 and 2)**: Peer nodes verify transactions once the API pushes "
-"them into the P2P network. They run the consensus algorithm, create new "
-"blocks, and propagate the changes through the network."
+"The nodes labelled \"Internal\" are the ones created by |symbol-"
+"bootstrap|, and are accessible through the REST API:"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:61
+msgid ""
+"**peer-node (1 and 2)**: Peer nodes verify transactions once the API "
+"pushes them into the P2P network. They run the consensus algorithm, "
+"create new blocks, and propagate the changes through the network."
 msgstr ""
 "**peer-node (1 と 2)**: Peer ノードは API がトランザクションを P2P "
 "ネットワークにプッシュすると、それを検証します。ノードはコンセンサスアルゴリズムを実行して、新しいブロックを作成して、ネットワークを通して変更を伝播します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:36
+#: ../../source/guides/network/creating-a-private-test-net.rst:62
 msgid ""
 "**api-node**: The API node stores data in the MongoDB database once "
-"transactions are validated. They also identify and store partial aggregate "
-"bonded transactions."
+"transactions are validated. They also identify and store partial "
+"aggregate bonded transactions."
 msgstr ""
 "**api-node**: API ノードはトランザクションが検証された後に MongoDB "
 "データベースにデータを保存します。これらはパーシャルなアグリゲートボンドトランザクションを識別して保存もします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:37
+#: ../../source/guides/network/creating-a-private-test-net.rst:63
 msgid ""
 "**rest-gateway**: Combines HTTP and WebSockets to perform read and write "
 "actions on the blockchain."
-msgstr ""
-"**rest-gateway** は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように構成します。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:41
-msgid "Hardware requirements"
-msgstr "ハードウェア要求"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:43
-msgid ""
-"|codename| Service Bootstrap has been tested on computers with the following"
-" **minimum requirements**."
-msgstr "|codename| Service Bootstrap は次の **最低必要環境** でテストされています。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:45
-msgid "**CPU**: 2 cores or more"
-msgstr "**CPU**: 2 コア以上"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:46
-msgid "**Memory**: 4GB or more"
-msgstr "**Memory**: 4GB 以上"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:47
-msgid "**HD**: 20GB or more"
-msgstr "**HD**: 20GB 以上"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:49
-msgid ""
-"Although you might be able to run the software in less powerful instances, "
-"you might encounter some issues while installing or running the node."
-msgstr ""
-"それほど強力ではないインスタンスでソフトウェアを実行できる場合もありますが、ノードのインストールまたは実行中に問題が発生する場合があります。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:53
-msgid "Environment requirements"
-msgstr "必須環境"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:55
-msgid ""
-"The setup scripts are available for Linux and Mac OS and automated using "
-"docker. To run a test net node, you will need to have installed the "
-"following docker tools:"
-msgstr ""
-"Linux と Mac OS 用のセットアップスクリプトは Docker を使用して自動化されます。テストネットノードを立ち上げるには、次の "
-"Docker ツールをインストールする必要があります。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:63
-msgid "Port requirements"
-msgstr "ポート要件"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:65
-msgid ""
-"Make sure that the server's host is accessible from the internet and that "
-"the following ports are open and available:"
-msgstr "サーバーのホストがインターネットからアクセス可能であり、次のポートが開いていて、使用可能であることを確認してください。"
+msgstr "**rest-gateway** は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように構成します。"
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:67
-msgid ""
-"The port ``7900`` is used by catapult-server to communicate between nodes."
-msgstr "``7900`` 番ポートはノード間の通信するに catapult-server が使用します。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:68
-msgid ""
-"The port ``3000`` is used by the REST Gateway to expose the endpoints to "
-"interact with the node."
-msgstr "``3000`` 番ポートは REST ゲートウェイがエンドポイントを公開してノードとの疎通に使用します。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:72
-msgid "Installation"
-msgstr "インストール"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:74
-msgid ""
-"Use this link to **download the latest release** of the package, or clone "
-"the repository directly using Git."
-msgstr "パッケージの **最新版のダウンロードリンク** またはリポジトリから Git を使用して直接クローンしてください。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:80
-msgid "Open the ``catapult-service-bootstrap`` folder."
-msgstr "``catapult-service-bootstrap`` フォルダを開きます。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:86
-msgid ""
-"(Optional) Customize the network's :doc:`configurable parameters "
-"<configuring-network-properties>` before launching it."
-msgstr ""
-"(オプション) 起動の前に、ネットワークの :doc:`設定可能なパラメータ <configuring-network-properties>` "
-"をカスタマイズします。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:88
-msgid "Run the network."
+#, fuzzy
+msgid "Instantiate the network"
 msgstr "ネットワークの立ち上げ"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:94
+#: ../../source/guides/network/creating-a-private-test-net.rst:69
 msgid ""
-"To run the docker containers in the background of your terminal, you can run"
-" the service in detached mode using the option ``--detach`` or ``-d``."
+"Use the ``start`` command (explained in the :ref:`Using Symbol Bootstrap "
+"<symbol-bootstrap-all-in-one>` guide) using the ``bootstrap`` preset:"
 msgstr ""
-"ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` または ``-d`` "
-"オプション使用してサービスをデタッチモードで実行します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:96
+#: ../../source/guides/network/creating-a-private-test-net.rst:75
 msgid ""
-"Verify that the node is running by opening a new browser tab with the "
-"following URL: ``localhost:3000/chain/height``."
+"With a single command the network is created and booted. Now check that "
+"it is up and running by opening a new browser tab and going to:"
 msgstr ""
-"次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: ``localhost:3000/chain/height``"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:98
-msgid "To stop the process, press ``Ctrl+C``."
-msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
+#: ../../source/guides/network/creating-a-private-test-net.rst:77
+msgid "``localhost:3000/chain/info``"
+msgstr ""
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:100
+#: ../../source/guides/network/creating-a-private-test-net.rst:79
+msgid "You should get a response from the API node."
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:83
+msgid "Retrieving the node accounts"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:85
 msgid ""
-"Find more commands to manage the network in the `installation notes "
-"<https://github.com/tech-bureau/catapult-service-bootstrap#bootstrap-"
-"scriptscommands>`_."
+"|symbol-bootstrap| has created multiple nodes with corresponding "
+"accounts. To interact with any of these accounts (to transfer mosaics "
+"**to** it, for example) you need its address or its public key. To fully "
+"control an account (to transfer mosaics **from** it, for example) you "
+"need its private key."
 msgstr ""
-"`インストレーションノート <https://github.com/tech-bureau/catapult-service-bootstrap"
-"#bootstrap-scriptscommands>`_ でより多くのネットワークマネジメントコマンドを見ることができます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:104
-msgid "Getting test currency"
-msgstr "テスト通貨の取得"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:106
+#: ../../source/guides/network/creating-a-private-test-net.rst:87
 msgid ""
-"An :doc:`account <../../concepts/account>` is a deposit box where you can "
-"hold :doc:`mosaics <../../concepts/mosaic>` (tokens) and interact with them "
-"announcing transactions. To announce a transaction, the sender should pay a "
-":doc:`fee <../../concepts/fees>` to provide an incentive to those who "
-"validate and secure the network and run the infrastructure. This cost is "
-"paid in |privatenetworkcurrency| mosaics, the default network token."
+"All this information can be retrieved from a YAML file in the ``target`` "
+"folder:"
 msgstr ""
-":doc:`アカウント <../../concepts/account>` はあなたが :doc:`モザイク "
-"<../../concepts/mosaic>` (トークン) を保有することのできる **預け入れ箱** "
-"であり、トランザクションをアナウンスすることでこれらと疎通できます。トランザクションをアナウンスするには、ネットワークを保護・検証するインフラストラクチャを維持する人々へのインセンティブを提供するための"
-" :doc:`手数料 <../../concepts/fees>` を支払う必要があります。このコストはデフォルトのネットワークトークンである "
-"|privatenetworkcurrency| モザイクで支払われます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:110
-msgid ""
-"After running the ``catapult-service-bootstrap`` tool for the first time, "
-"the available currency supply is distributed between a generated set of "
-"accounts. To keep one of these accounts quickly retrievable, we are going to"
-" store one of them using a command-line tool to conveniently perform the "
-"most commonly used actions i.e. interact with the blockchain, setting up an "
-"account, sending funds, etc."
+#: ../../source/guides/network/creating-a-private-test-net.rst:89
+msgid "``target/addresses.yml``"
 msgstr ""
-"初回の ``catapult-service-bootstrap`` "
-"ツールの起動後、利用可能な通貨の供給は、生成されたアカウントに分配されます。これらのアカウントの 1 "
-"つをすばやく取得するには、ブロックチェーンとの対話、アカウントの設定、資金の送信など、最も一般的なアクションを便利に実行するコマンドラインツールを使用して保存します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:113
-msgid "Install |cli|."
-msgstr "|cli| のインストール"
+#: ../../source/guides/network/creating-a-private-test-net.rst:91
+msgid "As an example:"
+msgstr ""
 
 #: ../../source/guides/network/creating-a-private-test-net.rst:119
-msgid ""
-"2. Open a new terminal window. Then, go to the directory where the bootstrap"
-" tool has generated the addresses."
-msgstr "2. 新しいターミナルウィンドウを開きます。ブートストラップツールが生成したアドレスの入っているディレクトリへ移動します。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:126
-msgid "Display the content of the ``addresses.yaml`` file."
-msgstr "``addresses.yaml`` ファイルの内容を表示します。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:132
-msgid ""
-"4. Under the section ``nemesis_addresses``, you will find the key pairs "
-"which contain |privatenetworkcurrency|. Copy the private key of the first "
-"account."
+msgid "Keep you Secret Keys secret at all times!"
 msgstr ""
-"4. ``nemesis_addresses`` のセクションから |privatenetworkcurrency| "
-"を保有するキーペアが見つかります。最初のアカウントの秘密鍵をコピーします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:135
+#: ../../source/guides/network/creating-a-private-test-net.rst:121
 msgid ""
-"Type the command ``symbol-cli profile import`` using the key obtained in the"
-" previous step."
-msgstr "前のステップで取得したキーを使用して、コマンド ``symbol-cli profile import`` を実行します。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:146
-msgid "You should see the account credentials in your terminal."
-msgstr "アカウントの資格情報がターミナルで確認できます。"
-
-#: ../../source/guides/network/creating-a-private-test-net.rst:161
-msgid ""
-"As the name suggests, the **private key has to be kept secret at all "
-"times**. Anyone with access to the private key ultimately has control over "
-"the account. On the other hand, you can share securely the public and "
-"address of your account with other participants of the network to receive "
-"transactions from them."
+"You can now import any of these accounts using the |symbol-cli| command-"
+"line tool for ease of access (Read :doc:`the symbol-cli guide "
+"<../../cli>` for more details):"
 msgstr ""
-"その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
-"。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:167
+#: ../../source/guides/network/creating-a-private-test-net.rst:127
+msgid ""
+"After giving this new profile a name you will be ready to use it, for "
+"example, to retrieve the account's balance:"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:133
+msgid ""
+"You should see that the nodes that |symbol-bootstrap| has created for you"
+" already contain some currency (in different :doc:`mosaics "
+"<../../concepts/mosaic>`) to start experimenting with them:"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:148
+#, fuzzy
+msgid "Retrieving the test accounts"
+msgstr "プライベートテストネットの作成"
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:150
+msgid ""
+"|symbol-bootstrap| has also created several test accounts preloaded with "
+":doc:`mosaics <../../concepts/mosaic>`. These accounts exist solely for "
+"development and learning purposes."
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:152
+msgid ""
+"The keys to these accounts can be found in the ``target/addresses.yml`` "
+"file as described above, in the ``mosaics`` section:"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:186
+msgid ""
+"Use the Private Keys to access these accounts, for example, using the "
+"|symbol-cli| command-line tool as described above."
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:190
+msgid "Voting nodes"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:192
+msgid ""
+"The :ref:`block finalization <finalization>` process requires that "
+"network nodes vote about the correctness of blocks before they are added "
+"to the blockchain. Each node can decide whether to register as a voter or"
+" not."
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:194
+msgid ""
+"All nodes created by the ``bootstrap`` preset are voters by default. If "
+"you don't want this, provide a custom preset with these lines to disable "
+"voting for each node:"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:203
+msgid ""
+"Without ANY voting node no finalization can occur. By taking a look at "
+"``localhost:3000/chain/info`` you will see you chain height grow but the "
+"``latestFinalizedBlock``'s height will remain at zero."
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:207
+msgid "Configuring network properties"
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:209
+msgid ""
+"Read the :doc:`Configuring network properties <configuring-network-"
+"properties>` guide for a list of network-related settings that can be "
+"customized."
+msgstr ""
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:213
 msgid "Next steps"
 msgstr "次の手順"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:169
+#: ../../source/guides/network/creating-a-private-test-net.rst:215
 msgid ""
-"Now that you have your test network running and an account with some "
-"|privatenetworkcurrency|, we recommend you to surf the |sitename|. In this "
-"portal, you can find detailed information about |codename|'s features and "
-":ref:`self-paced guides <blog-categories>` on how to use the software "
-"development kits."
+"You now have a test network running and access to each node's account. "
+"You can also interact with it through the API node serving at "
+"``localhost:3000``."
 msgstr ""
-"テストネットワークの起動と |privatenetworkcurrency| を持つアカウントの準備ができたので、 |sitename| "
-"の閲覧を推奨します。このポータルでは詳細な |codename| の機能、及びソフトウェア開発キットの使い方において :ref:`自己ペースガイド "
-"<blog-categories>` が掲載されています。"
+
+#: ../../source/guides/network/creating-a-private-test-net.rst:217
+msgid ""
+"We recommend you continue reading the rest of :ref:`the guides <blog-"
+"categories>` to keep learning more |codename|'s features!"
+msgstr ""
+
+#~ msgid ""
+#~ "To run the network, we are going"
+#~ " to use the package |catapult-"
+#~ "service-bootstrap|. This software suite "
+#~ "contains the necessary setup scripts to"
+#~ " help developers to quickly build "
+#~ "their own network."
+#~ msgstr ""
+#~ "ネットワークを立ち上げるために |catapult-service-bootstrap| "
+#~ "を使用します。このソフトウェアスイートは開発者が素早く自分のネットワークを構築するための手助けになるセットアップスクリプトが含まれています。"
+
+#~ msgid ""
+#~ "This bootstrap setup is for learning "
+#~ "and development purposes and it should"
+#~ " not power any production |codename| "
+#~ "instances."
+#~ msgstr "このブートストラップの設定は学習と開発を目的としており、本番の |codename| インスタンスを動かすものではありません 。"
+
+#~ msgid ""
+#~ "|codename| Service Bootstrap deploys a "
+#~ "private network with the following "
+#~ "high-level architecture:"
+#~ msgstr "|codename| Service Bootstrap は次の高レベルアーキテクチャでプライベートネットワークを展開しています:"
+
+#~ msgid "Hardware requirements"
+#~ msgstr "ハードウェア要求"
+
+#~ msgid ""
+#~ "|codename| Service Bootstrap has been "
+#~ "tested on computers with the following"
+#~ " **minimum requirements**."
+#~ msgstr "|codename| Service Bootstrap は次の **最低必要環境** でテストされています。"
+
+#~ msgid "**CPU**: 2 cores or more"
+#~ msgstr "**CPU**: 2 コア以上"
+
+#~ msgid "**Memory**: 4GB or more"
+#~ msgstr "**Memory**: 4GB 以上"
+
+#~ msgid "**HD**: 20GB or more"
+#~ msgstr "**HD**: 20GB 以上"
+
+#~ msgid ""
+#~ "Although you might be able to run"
+#~ " the software in less powerful "
+#~ "instances, you might encounter some "
+#~ "issues while installing or running the"
+#~ " node."
+#~ msgstr "それほど強力ではないインスタンスでソフトウェアを実行できる場合もありますが、ノードのインストールまたは実行中に問題が発生する場合があります。"
+
+#~ msgid "Environment requirements"
+#~ msgstr "必須環境"
+
+#~ msgid ""
+#~ "The setup scripts are available for "
+#~ "Linux and Mac OS and automated "
+#~ "using docker. To run a test net"
+#~ " node, you will need to have "
+#~ "installed the following docker tools:"
+#~ msgstr ""
+#~ "Linux と Mac OS 用のセットアップスクリプトは Docker "
+#~ "を使用して自動化されます。テストネットノードを立ち上げるには、次の Docker "
+#~ "ツールをインストールする必要があります。"
+
+#~ msgid "Port requirements"
+#~ msgstr "ポート要件"
+
+#~ msgid ""
+#~ "Make sure that the server's host "
+#~ "is accessible from the internet and "
+#~ "that the following ports are open "
+#~ "and available:"
+#~ msgstr "サーバーのホストがインターネットからアクセス可能であり、次のポートが開いていて、使用可能であることを確認してください。"
+
+#~ msgid ""
+#~ "The port ``7900`` is used by "
+#~ "catapult-server to communicate between "
+#~ "nodes."
+#~ msgstr "``7900`` 番ポートはノード間の通信するに catapult-server が使用します。"
+
+#~ msgid ""
+#~ "The port ``3000`` is used by the"
+#~ " REST Gateway to expose the endpoints"
+#~ " to interact with the node."
+#~ msgstr "``3000`` 番ポートは REST ゲートウェイがエンドポイントを公開してノードとの疎通に使用します。"
+
+#~ msgid "Installation"
+#~ msgstr "インストール"
+
+#~ msgid ""
+#~ "Use this link to **download the "
+#~ "latest release** of the package, or "
+#~ "clone the repository directly using Git."
+#~ msgstr "パッケージの **最新版のダウンロードリンク** またはリポジトリから Git を使用して直接クローンしてください。"
+
+#~ msgid "Open the ``catapult-service-bootstrap`` folder."
+#~ msgstr "``catapult-service-bootstrap`` フォルダを開きます。"
+
+#~ msgid ""
+#~ "(Optional) Customize the network's "
+#~ ":doc:`configurable parameters <configuring-"
+#~ "network-properties>` before launching it."
+#~ msgstr ""
+#~ "(オプション) 起動の前に、ネットワークの :doc:`設定可能なパラメータ "
+#~ "<configuring-network-properties>` をカスタマイズします。"
+
+#~ msgid ""
+#~ "To run the docker containers in "
+#~ "the background of your terminal, you "
+#~ "can run the service in detached "
+#~ "mode using the option ``--detach`` or"
+#~ " ``-d``."
+#~ msgstr ""
+#~ "ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` "
+#~ "または ``-d`` オプション使用してサービスをデタッチモードで実行します。"
+
+#~ msgid ""
+#~ "Verify that the node is running by"
+#~ " opening a new browser tab with "
+#~ "the following URL: ``localhost:3000/chain/height``."
+#~ msgstr ""
+#~ "次の URL で新しいブラウザタブを開いてノードが実行されていることを確認します: "
+#~ "``localhost:3000/chain/height``"
+
+#~ msgid "To stop the process, press ``Ctrl+C``."
+#~ msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
+
+#~ msgid ""
+#~ "Find more commands to manage the "
+#~ "network in the `installation notes "
+#~ "<https://github.com/tech-bureau/catapult-service-"
+#~ "bootstrap#bootstrap-scriptscommands>`_."
+#~ msgstr ""
+#~ "`インストレーションノート <https://github.com/tech-bureau/catapult-"
+#~ "service-bootstrap#bootstrap-scriptscommands>`_ "
+#~ "でより多くのネットワークマネジメントコマンドを見ることができます。"
+
+#~ msgid "Getting test currency"
+#~ msgstr "テスト通貨の取得"
+
+#~ msgid ""
+#~ "An :doc:`account <../../concepts/account>` is "
+#~ "a deposit box where you can hold"
+#~ " :doc:`mosaics <../../concepts/mosaic>` (tokens) "
+#~ "and interact with them announcing "
+#~ "transactions. To announce a transaction, "
+#~ "the sender should pay a :doc:`fee "
+#~ "<../../concepts/fees>` to provide an incentive"
+#~ " to those who validate and secure "
+#~ "the network and run the infrastructure."
+#~ " This cost is paid in "
+#~ "|privatenetworkcurrency| mosaics, the default "
+#~ "network token."
+#~ msgstr ""
+#~ ":doc:`アカウント <../../concepts/account>` はあなたが "
+#~ ":doc:`モザイク <../../concepts/mosaic>` (トークン) "
+#~ "を保有することのできる **預け入れ箱** "
+#~ "であり、トランザクションをアナウンスすることでこれらと疎通できます。トランザクションをアナウンスするには、ネットワークを保護・検証するインフラストラクチャを維持する人々へのインセンティブを提供するための"
+#~ " :doc:`手数料 <../../concepts/fees>` "
+#~ "を支払う必要があります。このコストはデフォルトのネットワークトークンである |privatenetworkcurrency|"
+#~ " モザイクで支払われます。"
+
+#~ msgid ""
+#~ "After running the ``catapult-service-"
+#~ "bootstrap`` tool for the first time, "
+#~ "the available currency supply is "
+#~ "distributed between a generated set of"
+#~ " accounts. To keep one of these "
+#~ "accounts quickly retrievable, we are "
+#~ "going to store one of them using"
+#~ " a command-line tool to conveniently"
+#~ " perform the most commonly used "
+#~ "actions i.e. interact with the "
+#~ "blockchain, setting up an account, "
+#~ "sending funds, etc."
+#~ msgstr ""
+#~ "初回の ``catapult-service-bootstrap`` "
+#~ "ツールの起動後、利用可能な通貨の供給は、生成されたアカウントに分配されます。これらのアカウントの 1 "
+#~ "つをすばやく取得するには、ブロックチェーンとの対話、アカウントの設定、資金の送信など、最も一般的なアクションを便利に実行するコマンドラインツールを使用して保存します。"
+
+#~ msgid "Install |cli|."
+#~ msgstr "|cli| のインストール"
+
+#~ msgid ""
+#~ "2. Open a new terminal window. "
+#~ "Then, go to the directory where "
+#~ "the bootstrap tool has generated the "
+#~ "addresses."
+#~ msgstr "2. 新しいターミナルウィンドウを開きます。ブートストラップツールが生成したアドレスの入っているディレクトリへ移動します。"
+
+#~ msgid "Display the content of the ``addresses.yaml`` file."
+#~ msgstr "``addresses.yaml`` ファイルの内容を表示します。"
+
+#~ msgid ""
+#~ "4. Under the section ``nemesis_addresses``,"
+#~ " you will find the key pairs "
+#~ "which contain |privatenetworkcurrency|. Copy "
+#~ "the private key of the first "
+#~ "account."
+#~ msgstr ""
+#~ "4. ``nemesis_addresses`` のセクションから "
+#~ "|privatenetworkcurrency| を保有するキーペアが見つかります。最初のアカウントの秘密鍵をコピーします。"
+
+#~ msgid ""
+#~ "Type the command ``symbol-cli profile"
+#~ " import`` using the key obtained in"
+#~ " the previous step."
+#~ msgstr "前のステップで取得したキーを使用して、コマンド ``symbol-cli profile import`` を実行します。"
+
+#~ msgid "You should see the account credentials in your terminal."
+#~ msgstr "アカウントの資格情報がターミナルで確認できます。"
+
+#~ msgid ""
+#~ "As the name suggests, the **private "
+#~ "key has to be kept secret at "
+#~ "all times**. Anyone with access to "
+#~ "the private key ultimately has control"
+#~ " over the account. On the other "
+#~ "hand, you can share securely the "
+#~ "public and address of your account "
+#~ "with other participants of the network"
+#~ " to receive transactions from them."
+#~ msgstr ""
+#~ "その名が示すように **秘密鍵は常に秘匿されていなければなりません** "
+#~ "。秘密鍵にアクセスできる人はアカウントのコントロールを完全に掌握します。一方で、あなたのアカウントの公開鍵とアドレスはネットワーク上の他の参加者と安全に共有でき、彼らからのトランザクションを受け取ることができるようになります。"
+
+#~ msgid ""
+#~ "Now that you have your test "
+#~ "network running and an account with "
+#~ "some |privatenetworkcurrency|, we recommend "
+#~ "you to surf the |sitename|. In "
+#~ "this portal, you can find detailed "
+#~ "information about |codename|'s features and"
+#~ " :ref:`self-paced guides <blog-categories>`"
+#~ " on how to use the software "
+#~ "development kits."
+#~ msgstr ""
+#~ "テストネットワークの起動と |privatenetworkcurrency| を持つアカウントの準備ができたので、"
+#~ " |sitename| の閲覧を推奨します。このポータルでは詳細な |codename| "
+#~ "の機能、及びソフトウェア開発キットの使い方において :ref:`自己ペースガイド <blog-"
+#~ "categories>` が掲載されています。"
+

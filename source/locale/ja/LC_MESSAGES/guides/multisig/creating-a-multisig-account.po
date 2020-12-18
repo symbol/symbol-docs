@@ -1,263 +1,310 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.21.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-16 03:55+0000\n"
+"POT-Creation-Date: 2020-12-18 17:38+0100\n"
 "PO-Revision-Date: 2020-04-24 12:28+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:21
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:43
 msgid "Creating a multisig account"
 msgstr "マルチシグアカウントの作成"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:23
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:45
 msgid "This guide will show you how to setup a joint account."
 msgstr "このガイドでは、共同アカウントを設定する方法について説明します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:27
-msgid "Background"
-msgstr "背景"
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:49
+msgid "Use case"
+msgstr ""
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:29
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:51
 msgid ""
 "Imagine that Alice and Bob have separate accounts, but they also want to "
-"have a shared account to buy groceries. If one of them goes out shopping, "
-"they should be able to transact with using their joint account without "
+"have a shared account to buy groceries. If one of them goes out shopping,"
+" they should be able to transact with using their joint account without "
 "requiring explicit authorization from the other person."
 msgstr ""
 "例えば Alice と Bob "
 "はそれぞれのアカウントを持っているとします。彼らは食料雑貨の購入に共有アカウントを使用したいと思っています。どちらかが買い物に出かけたとき、他方からの明示的な承認を必要とせずに、共有アカウントを使って取引ができます。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:32
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:54
 msgid ""
-"This shared account appears in |codename| as **1-of-2 multisig**. Creating a"
-" :doc:`Multisig account <../../concepts/multisig-account>` permits Alice and"
-" Bob to share funds in a separate account. Since the account is configured "
-"as a 1-of-2, it's only required the signature from one of them to issue "
-"transactions from the new account."
+"This shared account appears in |codename| as **1-of-2 multisig**. "
+"Creating a :doc:`Multisig account <../../concepts/multisig-account>` "
+"permits Alice and Bob to share funds in a separate account. Since the "
+"account is configured as a 1-of-2, it's only required the signature from "
+"one of them to issue transactions from the new account."
 msgstr ""
 "この共有アカウントは |codename| では **1-of-2 マルチシグ** として表されます。 :doc:`マルチシグアカウント "
 "<../../concepts/multisig-account>` を作ることは Alice と Bob "
 "が別々のアカウントで資産を共有することを可能にします。アカウントは 1-of-2 "
 "として設定されているので、トランザクションには彼らどちらかの署名を必要とします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:40
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:62
 msgid "1-of-2 multisig account example"
 msgstr "1-of-2 マルチシグアカウントの例"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:44
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:66
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:46
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:68
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:47
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:69
 msgid ""
 "Create a new :ref:`account <setup-creating-a-test-account>` to turn into "
 "multisig."
 msgstr "マルチシグへ変換する新しい :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:48
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:70
 msgid ""
-"Load the account with enough |networkcurrency| to pay for transaction fees."
+"Load the account with enough |networkcurrency| to pay for transaction "
+"fees."
 msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:49
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:71
 msgid "Create accounts for Alice and Bob."
 msgstr "Alice と Bob のアカウントを作成します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:51
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:73
 msgid ""
 "To create create new accounts, follow :ref:`this guide <setup-creating-a"
 "-test-account>`."
 msgstr ":ref:`このガイド <setup-creating-a-test-account>` に従って新しいアカウントを作成します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:55
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:77
 msgid "Method #01: Using the Desktop Wallet"
 msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:57
-msgid ""
-"Log in to the account that you want to convert into a multisig account."
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:79
+msgid "Log in to the account that you want to convert into a multisig account."
 msgstr "マルチシグアカウントに変換するアカウントにログインします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:59
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:81
 msgid "Click on the “**Multisig**” tab on the left-side menu."
 msgstr "左側のメニューの \"**マルチシグ**\" タブをクリックします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:61
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:83
+#, fuzzy
 msgid ""
-"3. Click on “**Add a cosignatory**” and provide the address or public key of"
-" the account you want to add as a cosignatory of the multisig. Click on the "
-"“**+**” button. .. note:: Note: make sure potential cosignatory accounts "
-"have previously sent transactions on the network."
+"Click on “**Add a cosignatory**” and provide the address or public key of"
+" the account you want to add as a cosignatory of the multisig. Click on "
+"the “**+**” button."
 msgstr ""
-"3. \"**署名者を追加**\" をクリックし、マルチシグ連署者として追加するアカウントのアドレスまたは公開鍵を入力します。 \"**+**\" "
-"ボタンをクリックします。 .. note:: 注: 署名者アカウント候補が以前にネットワーク上でトランザクションを送信していることを確認してください。"
+"3. \"**署名者を追加**\" をクリックし、マルチシグ連署者として追加するアカウントのアドレスまたは公開鍵を入力します。 \"**+**\""
+" ボタンをクリックします。 .. note:: 注: "
+"署名者アカウント候補が以前にネットワーク上でトランザクションを送信していることを確認してください。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:68
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:89
 msgid ""
 "Repeat step 3 for each account you want to add as a cosignatory of the "
 "multisig. In our example case, we have 2 accounts we want to add as "
 "cosignatories: Alice and Bob."
 msgstr ""
-"マルチシグ連署者として追加するアカウントごとに、手順 3 を繰り返します。この例では、連署者として追加する 2 つのアカウントの Alice と Bob"
-" があります。"
+"マルチシグ連署者として追加するアカウントごとに、手順 3 を繰り返します。この例では、連署者として追加する 2 つのアカウントの Alice と "
+"Bob があります。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:70
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:91
 msgid ""
 "Select the number of “**Min. Approval**” and “**Min. Removal**” for the "
 "multisig."
 msgstr "マルチシグの “**最小承認数**” と “**最小削除数**” を選択します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:72
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:93
 msgid ""
-"Click “**Send**”. Review the information on the popup. Provide your wallet "
-"password and click “**Confirm**”."
+"Click “**Send**”. Review the information on the popup. Provide your "
+"wallet password and click “**Confirm**”."
 msgstr "\"**送信**\" をクリックします。ポップアップの情報を確認します。ウォレットパスワードを入力して \"**確認**\" をクリックします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:78
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:99
 msgid ""
 "Log in to an account you selected as a potential cosignatory of the "
-"multisig. On the “**Home**” page, click on “**Partial**” transactions. Click"
-" on the pending Aggregate Bonded transaction. Provide your wallet password "
-"and click “**Confirm**”."
+"multisig. On the “**Home**” page, click on “**Partial**” transactions. "
+"Click on the pending Aggregate Bonded transaction. Provide your wallet "
+"password and click “**Confirm**”."
 msgstr ""
 "マルチシグ連署者として選択したアカウントにログインします。 \"**ホーム**\" ページで "
 "\"**パーシャル**\"トランザクションをクリックします。保留中のアグリゲートボンデッドトランザクションをクリックします。ウォレットパスワードを入力して"
 " \"**確認**\" をクリックします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:84
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:105
 msgid ""
-"Repeat step 7 for each account you added as a potential cosignatory for the "
-"multisig."
+"Repeat step 7 for each account you added as a potential cosignatory for "
+"the multisig."
 msgstr "マルチシグ連署者候補として追加するアカウントごとに、手順 7 を繰り返します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:86
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:107
 msgid ""
 "Log in to the account being converted to a multisig. When the Aggregate "
-"Bonded transaction is complete (confirmed), you can check that it has been "
-"converted by going back to the “**Multisig**” page."
+"Bonded transaction is complete (confirmed), you can check that it has "
+"been converted by going back to the “**Multisig**” page."
 msgstr ""
-"マルチシグに変換されるアカウントにログインします。 アグリゲートボンデッドトランザクションが完了 (承認済み) したら、\"**マルチシグ**\" "
-"ページに戻って、変換されたことを確認できます。"
+"マルチシグに変換されるアカウントにログインします。 アグリゲートボンデッドトランザクションが完了 (承認済み) したら、\"**マルチシグ**\""
+" ページに戻って、変換されたことを確認できます。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:94
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:115
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:96
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:117
 msgid ""
-"1. First, define the accounts that will become cosignatories of the multisig"
-" account. Following our example, these are Alice and Bob addresses. Then, "
-"open the account that will be converted into multisig using its private key."
+"1. First, define the accounts that will become cosignatories of the "
+"multisig account. Following our example, these are Alice and Bob "
+"addresses. Then, open the account that will be converted into multisig "
+"using its private key."
 msgstr ""
 "1. まず、マルチシグアカウントの連署者にするアカウントを決めます。私たちの例では、Alice と Bob "
 "のアドレスとします。次に、それ自身の秘密鍵を用いてマルチシグアカウントへ変換するアカウントを作成します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:112
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:123
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:138
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:153
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:169
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:185
 msgid ""
-"2. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-"
-"modification-transaction>` to convert the shared account into a multisig "
-"account. Since we want to create a 1-of-2 multisig account, let's set the "
-"minimum required signatures to ``1``."
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts`"
 msgstr ""
-"2. 共有アカウントをマルチシグアカウントへ変換するために :ref:`MultisigAccountModificationTransaction "
-"<multisig-account-modification-transaction>` を作成します。私たちには 1-of-2 "
-"マルチシグアカウントが必要なので、最小署名者は ``1`` にセットします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:127
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:128
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:143
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:158
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:174
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:190
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js`"
+msgstr ""
+
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:133
+msgid ""
+"2. Create a :ref:`MultisigAccountModificationTransaction <multisig-"
+"account-modification-transaction>` to convert the shared account into a "
+"multisig account. Since we want to create a 1-of-2 multisig account, "
+"let's set the minimum required signatures to ``1``."
+msgstr ""
+"2. 共有アカウントをマルチシグアカウントへ変換するために "
+":ref:`MultisigAccountModificationTransaction <multisig-account-"
+"modification-transaction>` を作成します。私たちには 1-of-2 マルチシグアカウントが必要なので、最小署名者は "
+"``1`` にセットします。"
+
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:148
 msgid ""
 "3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, "
 "wrapping the **MultisigAccountModificationTransaction** defined in the "
-"previous step. This action is necessary because Alice and Bob must opt-in to"
-" become cosignatories of the new multisig account."
+"previous step. This action is necessary because Alice and Bob must opt-in"
+" to become cosignatories of the new multisig account."
 msgstr ""
 "3. 前のステップで定義した **MultisigAccountModificationTransaction** をラップする "
-":ref:`AggregateBondedTransaction <aggregate-transaction>` を作成します。Alice と Bob"
-" が新しいマルチシグアカウントの署名者になるためにオプトインする必要があるので必要なアクションです。"
+":ref:`AggregateBondedTransaction <aggregate-transaction>` を作成します。Alice と "
+"Bob が新しいマルチシグアカウントの署名者になるためにオプトインする必要があるので必要なアクションです。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:142
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:163
 msgid ""
 "Sign the **AggregateTransaction** using the private key of the future "
 "multisig account."
 msgstr "後のマルチシグアカウントの秘密鍵を使って **AggregateTransaction** に署名します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:144
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:165
 msgid ""
-"To make the transaction only valid for your network, you will need to pass "
-"the first network generation hash. Open ``nodeUrl + '/node/info'`` in a new "
-"browser tab and copy the ``meta.networkGenerationHash`` value."
+"To make the transaction only valid for your network, you will need to "
+"pass the first network generation hash. Open ``nodeUrl + '/node/info'`` "
+"in a new browser tab and copy the ``meta.networkGenerationHash`` value."
 msgstr ""
-"自分のネットワークでのみ有効なトランザクションを作るには、ネットワークジェネレーションハッシュを含めます。新しいブラウザタブで ``nodeUrl + "
-"'/node/info'`` を開いて ``meta.networkGenerationHash`` の値をコピーします。"
+"自分のネットワークでのみ有効なトランザクションを作るには、ネットワークジェネレーションハッシュを含めます。新しいブラウザタブで ``nodeUrl"
+" + '/node/info'`` を開いて ``meta.networkGenerationHash`` の値をコピーします。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:158
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:179
 msgid ""
 "5. Before sending an **AggregateBondedTransaction**, the future multisig "
-"account needs to lock at least ``10`` |networkcurrency|. This transaction is"
-" required to prevent spamming the network. After the **HashLockTransaction**"
-" has been confirmed, announce the AggregateTransaction signed in (4)."
+"account needs to lock at least ``10`` |networkcurrency|. This transaction"
+" is required to prevent spamming the network. After the "
+"**HashLockTransaction** has been confirmed, announce the "
+"AggregateTransaction signed in (4)."
 msgstr ""
 "5. **AggregateBondedTransaction** を送信する前に、マルチシグアカウント候補はロックのために最低 ``10`` "
 "|networkcurrency| を必要とします。このトランザクションはスパムを防止する目的で要求されます。 "
 "**HashLockTransaction** が承認されると、(4) の AggregateTransaction をアナウンスできます。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:174
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:195
 msgid ""
 "6. :doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-"
 "aggregate-bonded-transactions>` with the :ref:`CLI <wallet-cli>` using "
 "Alice's account. Replace the hash "
-"``A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C`` with "
-"the AggregateTransaction hash signed in (4)."
+"``A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C`` with"
+" the AggregateTransaction hash signed in (4)."
 msgstr ""
-"6. :ref:`CLI <wallet-cli>` を使用し、 Alice のアカウントで :doc:`AggregateTransaction "
-"に署名 <../aggregate/signing-announced-aggregate-bonded-transactions>` します。ハッシュ"
-" ``A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C`` を (4) "
-"の AggregateTransaction ハッシュで置き換えてください。"
+"6. :ref:`CLI <wallet-cli>` を使用し、 Alice のアカウントで :doc:`AggregateTransaction"
+" に署名 <../aggregate/signing-announced-aggregate-bonded-transactions>` "
+"します。ハッシュ "
+"``A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C`` を "
+"(4) の AggregateTransaction ハッシュで置き換えてください。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:181
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:202
 msgid ""
 ":doc:`Cosign the AggregateTransaction <../aggregate/signing-announced-"
 "aggregate-bonded-transactions>` with Bob's account."
 msgstr ""
-"Bob のアカウントで :doc:`AggregateTransaction に署名 <../aggregate/signing-announced-"
-"aggregate-bonded-transactions>` します。"
+"Bob のアカウントで :doc:`AggregateTransaction に署名 <../aggregate/signing-"
+"announced-aggregate-bonded-transactions>` します。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:189
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:210
 msgid ""
-"8. If everything goes well, the account is now set as multisig, being Alice "
-"and Bob accounts their cosignatories. You can get the list of the multisig "
-"accounts where Alice or Bob are cosignatories with the function "
+"8. If everything goes well, the account is now set as multisig, being "
+"Alice and Bob accounts their cosignatories. You can get the list of the "
+"multisig accounts where Alice or Bob are cosignatories with the function "
 "``MultisigHttp.getMultisigAccountInfo()``."
 msgstr ""
-"8. すべてが上手く行くと、このアカウントは Alice と Bob のアカウントが連署者であるマルチシグになります。 Alice または Bob "
-"が署名者であるマルチシグアカウントのリストは関数  ``MultisigHttp.getMultisigAccountInfo()`` "
+"8. すべてが上手く行くと、このアカウントは Alice と Bob のアカウントが連署者であるマルチシグになります。 Alice または Bob"
+" が署名者であるマルチシグアカウントのリストは関数  ``MultisigHttp.getMultisigAccountInfo()`` "
 "によって取得することができます。"
 
-#: ../../source/guides/multisig/creating-a-multisig-account.rst:209
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:215
 msgid ""
-"Follow :doc:`the next guide <modifying-a-multisig-account-min-approval>` to "
-"modify the number of required signatures."
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/multisig/GettingMultisigAccountCosignatories.ts`"
+msgstr ""
+
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:220
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/multisig/GettingMultisigAccountCosignatories.js`"
+msgstr ""
+
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:225
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/multisig/GettingMultisigAccountCosignatories.java`"
+msgstr ""
+
+#: ../../source/guides/multisig/creating-a-multisig-account.rst:230
+msgid ""
+"Follow :doc:`the next guide <modifying-a-multisig-account-min-approval>` "
+"to modify the number of required signatures."
 msgstr ""
 ":doc:`次のガイド <modifying-a-multisig-account-min-approval>` "
 "に従って、要求される署名数を変更します。"
+
+#~ msgid "Background"
+#~ msgstr "背景"
+
