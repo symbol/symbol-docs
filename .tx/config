@@ -194,12 +194,6 @@ source_file = build/gettext/contribute/contributing.pot
 source_lang = en
 type = PO
 
-[symboldocs.contribute--contributors]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributors.po
-source_file = build/gettext/contribute/contributors.pot
-source_lang = en
-type = PO
-
 [symboldocs.getting-started--first-application]
 file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/first-application.po
 source_file = build/gettext/getting-started/first-application.pot
