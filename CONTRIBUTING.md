@@ -72,6 +72,14 @@ Run the following command and open the provided URL in a browser.
 
 `make livehtml`
 
+### Updating translations
+
+Generate the `.pot` files with `make gettext`.
+
+Update the Japanese `.po` files with `sphinx-intl update  -p build/gettext -l ja`
+
+Commit and push the changes in the `source/locale` folder. Travis will send the changes to Transifex.
+
 ### Submitting your changes
 
 Once your changes and tests are ready to submit for review:
