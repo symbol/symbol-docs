@@ -26,7 +26,7 @@ Summary of the required steps:
 
 4. Request the node to add the remote account **R** as a delegated harvester using a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`.
 
-Please note that it is entirely up to the node to comply with the request. Moreover, **by design** there is no mechanism to check if the request has been accepted or not, since there is no way to provide such mechanism in a trustless environment.
+Please note that it is entirely up to the node to comply with the request. Some nodes can be asked for their current list of delegated harvesters but this information is not always available (see :ref:`delegated-harvesting-verifying-activation` below).
 
 *************
 Prerequisites
@@ -126,6 +126,22 @@ As the remote private key is **saved on disk** by the node, even if the node dis
 
 Additionally, the use of an encrypted message creates a **backup** of the information for the nodes. If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can still retrieve the data by querying the blockchain.
 
+.. _delegated-harvesting-verifying-activation:
+
+********************
+Verifying activation
+********************
+
+As stated in the introduction, whether a node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state.
+
+Therefore, there is no **reliable** way to know if your account has become a harvester or not (besides waiting to see if any blocks appear on the blockchain signed by your remote account and your main account starts collecting harvesting fees).
+
+That said, nodes configured to act as **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) can be queried for their current list of delegated harvesters. To reiterate, this information comes from the node and is not backed up by the blockchain, so take it with a grain of salt.
+
+You can retrieve this list using the ``getUnlockedAccount`` API endpoint (using the `REST API <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ or the `Typescript SDK <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_ for example). It contains the public keys of all registered delegated harvesters in the node.
+
+By default a node can have up to 5 delegated harvesters and excess requests can be priorized as the node sees fit. This can be configured on the node through the ``maxUnlockedAccounts`` and ``delegatePrioritizationPolicy`` :ref:`node-properties-harvesting-configuration`.
+
 ***********
 Final words
 ***********
@@ -134,4 +150,4 @@ Final words
 
 - **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 180 blocks (about every 45 minutes). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
 
-- Finally, as explained in the introduction, **announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester**. Nodes are free to comply with the request or even to lie about its status, therefore, |codename| does not provide a mechanism to ask a node this information. You will know delegated harvesting is working when you start seeing blocks appear on the chain signed with your remote account's key and your main account starts receiving harvesting fees.
+- Finally, as explained in :ref:`delegated-harvesting-verifying-activation` above, **announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester**. Nodes are free to comply with the request or even to lie about its status.
