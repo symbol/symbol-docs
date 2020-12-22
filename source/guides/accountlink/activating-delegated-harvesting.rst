@@ -14,17 +14,19 @@ Share your account's importance securely with a node.
 Introduction
 ************
 
-:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node. At the same time, it allows nodes to benefit from an account's (possibly higher) :ref:`importance score <importance-calculation>`. The account's **private key** is never shared with the node so this method is inherently safer than :ref:`local harvesting <local-harvesting>` since all nodes must be publicly accessible.
+:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node. At the same time, it allows nodes to benefit from an account's (possibly higher) :ref:`importance score <importance-calculation>`.
+
+The account's **private key** is never shared with the node so this method is inherently safer than :ref:`local harvesting <local-harvesting>` since all nodes must be publicly accessible and therefore open to attack. For this reason it is recommended that node owners also use delegated harvesting even though setting up a node for local harvesting is simpler.
 
 Summary of the required steps:
 
-1. Delegate the **main account (M)** importance to a **remote account (R)** using a :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
+1. Delegate the **main account (M)** importance to a **remote account (R)** using an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
 
 2. Link the main account **M** to a **VRF account (V)** for randomized block production and account selection using a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`.
 
 3. Link the main account **M** to a node in order to harvest through that node using a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
 
-4. Request the node to add the remote account **R** as a delegated harvester using a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`.
+4. Request the node to add the remote account **R** as a delegated harvester using a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`. Conversely, if the node configuration is accessible, the remote account's private key can be set in the node configuration.
 
 Please note that it is entirely up to the node to comply with the request. Some nodes can be asked for their current list of delegated harvesters but this information is not always available (see :ref:`delegated-harvesting-verifying-activation` below).
 
@@ -97,9 +99,13 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-4. Once the transactions are confirmed, the next step is to **share R's private key with the node** through a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`. As the private key will be shared in an **encrypted message**, only the node will be able to see it. Moreover, **R** does not possess any mosaic.
+4. Once the transactions are confirmed, the next step is to **share R's private key with the node**. This can be done in one of two ways depending on whether you are the node owner and have access to the node's configuration or not.
 
-   The harvested |networkcurrency| will be sent to **M** as it has established a link with the node through the :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
+   If you are the **node owner**, you simply need to set the remote account's private signing key in the ``harvesterSigningPrivateKey`` field in the :ref:`node-properties-harvesting-configuration`.
+
+   **Otherwise**, a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` must be used. As the private key will be shared in an **encrypted message**, only the node will be able to see it. Moreover, **R** does not own any mosaic.
+
+   The harvesting fees will be sent to **M** as it has established a link with the node through the :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
 
    Sign the :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` with **M** (or **A** for added privacy, as stated in the Prerequisites) and announce it to the network.
 
@@ -119,7 +125,7 @@ Guide
 If everything is successful, the node will receive the encrypted message through :ref:`WebSockets <websockets>`. Once the node decrypts the private key of the potential delegated harvester, the node owner may **add R as a delegated harvester** if the following requirements are met:
 
 - The node permits delegated harvesting.
-- The node has harvesting slots available.
+- The node has harvesting slots available (See next section).
 - The remote account has never sent or received transactions before.
 
 As the remote private key is **saved on disk** by the node, even if the node disconnects temporarily the persistent delegated harvesters will be reestablished once the node reconnects to the network.
@@ -132,7 +138,7 @@ Additionally, the use of an encrypted message creates a **backup** of the inform
 Verifying activation
 ********************
 
-As stated in the introduction, whether a node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state.
+When requesting delegation through a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state.
 
 Therefore, there is no **reliable** way to know if your account has become a harvester or not (besides waiting to see if any blocks appear on the blockchain signed by your remote account and your main account starts collecting harvesting fees).
 
@@ -140,7 +146,7 @@ That said, nodes configured to act as **Dual** nodes (being both :ref:`Peer <pee
 
 You can retrieve this list using the ``getUnlockedAccount`` API endpoint (using the `REST API <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ or the `Typescript SDK <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_ for example). It contains the public keys of all registered delegated harvesters in the node.
 
-By default a node can have up to 5 delegated harvesters and excess requests can be priorized as the node sees fit. This can be configured on the node through the ``maxUnlockedAccounts`` and ``delegatePrioritizationPolicy`` :ref:`node-properties-harvesting-configuration`.
+By default a node can have up to 5 delegated harvesters (harvesting slots) and excess requests can be priorized as the node sees fit. This can be configured on the node through the ``maxUnlockedAccounts`` and ``delegatePrioritizationPolicy`` :ref:`node-properties-harvesting-configuration`.
 
 ***********
 Final words
