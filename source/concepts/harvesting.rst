@@ -67,7 +67,7 @@ To harvest locally, a node must provide the following properties in the :propert
 .. raw:: html
     :file: ../_static/config-harvesting.properties.html
 
-As it can be seen, the harvester account's **private key** must be stored in the node configuration, since it will be used to sign off created blocks. This is a **security concern** since this account contains funds (at the very least, the collected :ref:`harvesting fees <harvesting-rewards>`), and funded accounts' private keys are typically stored offline.
+As it can be seen, the harvester account's **private key** must be stored in the node configuration, since it will be used to sign off created blocks. This is a **security concern** since this account contains funds (at the very least, the collected :ref:`harvesting fees <harvesting-rewards>`), and funded accounts' **private keys should always be stored offline**.
 
 To avoid storing private keys on a node which is available online and therefore susceptible to attack, use :ref:`delegated harvesting <delegated-harvesting>`.
 
@@ -77,11 +77,13 @@ To avoid storing private keys on a node which is available online and therefore 
 Delegated harvesting
 ********************
 
-Delegated harvesting allows using the :ref:`importance score <importance-calculation>` of an account to create new blocks and receive rewards without having to run a node locally or exposing the account's private key.
+Delegated harvesting allows using the :ref:`importance score <importance-calculation>` of an account to create new blocks and receive rewards without exposing the account's private key on a node.
 
 An :ref:`eligible account <account_eligibility>` can delegate its importance score to a **remote account** which acts as a proxy. The remote account signs off created blocks, sharing its **private key** with the a node, but **harvesting fees are sent to the original account**.
 
 With delegated harvesting, an account without a node can still collect harvesting fees, and a node with a low importance score can still be selected as a harvester, thanks to the delegated importance from the first account. **It is a beneficial agreement to both parties.**
+
+Due to its inherently higher security, node owners may prefer using delegated harvesting over local harvesting and this is indeed the recommended setup.
 
 Security-wise, sharing a proxy private key involves **minimal risk** since:
 
