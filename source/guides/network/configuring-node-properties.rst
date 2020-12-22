@@ -36,6 +36,8 @@ Node configuration
 .. raw:: html
     :file: ../../_static/config-node.properties.html
 
+.. _node-properties-harvesting-configuration:
+
 ************************
 Harvesting Configuration
 ************************
