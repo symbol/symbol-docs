@@ -42,7 +42,7 @@ Before you can activate delegated harvesting, you need the following items:
 
 - A **VRF account (V)** that has never sent or received any transactions. It is a regular account used to add randomness to the account selection process.
 
-- The **node's public TLS key**. This is the key the node uses to authenticate data for transport over TLS and must be provided by the node owner, it cannot be retrieved remotely through any |codename| API.
+- The **node's public TLS key**. This is the key the node uses to authenticate data for transport over TLS and is typically provided by the node owner.
 
 Optionally:
 
@@ -84,7 +84,7 @@ Guide
 
 3. Create a :ref:`NodeKeyLinkTransaction <node-key-link>` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
-   .. note:: The node's public TLS key must be provided by the node owner.
+   .. note:: The node's public TLS key is typically provided by the node owner. However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) running a version of the :doc:`REST Gateway <../../api>` higher than **2.2.0** offer this information through the ``nodePublicKey`` field of the ``node/info`` `REST endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_.
 
    .. example-code::
 
