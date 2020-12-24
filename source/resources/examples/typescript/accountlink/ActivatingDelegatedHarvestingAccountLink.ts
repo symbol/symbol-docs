@@ -1,6 +1,8 @@
 import { Account, AccountKeyLinkTransaction, Deadline, LinkAction, NetworkType, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 /* start block 01 */
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 // Set network type
 const networkType = NetworkType.TEST_NET;
 // Main account private key for signing transaction
@@ -13,7 +15,7 @@ console.log('Remote account Private Key:', remoteAccount.privateKey);
 
 /* start block 02 */
 const accountLinkTransaction = AccountKeyLinkTransaction.create(
-  Deadline.create(),
+  Deadline.create(epochAdjustment),
   remoteAccount.publicKey,
   LinkAction.Link,
   networkType,

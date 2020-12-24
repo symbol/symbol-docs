@@ -9,11 +9,10 @@ import {
 } from 'symbol-sdk';
 
 /* start block 01 */
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 // Set network type
 const networkType = NetworkType.TEST_NET;
-// Main account private key
-const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
 // Remote account private key
 const remoteAccountPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const remoteAccount = Account.createFromPrivateKey(remoteAccountPrivateKey, networkType);
@@ -29,14 +28,14 @@ const nodeAccount = PublicAccount.createFromPublicKey(nodePublicTLSKey, networkT
 /* end block 01 */
 
 /* start block 02 */
-const persistentDelegationRequestTransaction = PersistentDelegationRequestTransaction
-    .createPersistentDelegationRequestTransaction(
-        Deadline.create(),
-        remoteAccount.privateKey,
-        vrfAccount.privateKey,
-        nodeAccount.publicKey,
-        networkType,
-        UInt64.fromUint(2000000));
+const persistentDelegationRequestTransaction = PersistentDelegationRequestTransaction.createPersistentDelegationRequestTransaction(
+  Deadline.create(epochAdjustment),
+  remoteAccount.privateKey,
+  vrfAccount.privateKey,
+  nodeAccount.publicKey,
+  networkType,
+  UInt64.fromUint(2000000),
+);
 /* end block 02 */
 
 /* start block 03 */
@@ -49,7 +48,8 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = announcerAccount.sign(persistentDelegationRequestTransaction, networkGenerationHash);
 console.log('Transaction hash:', signedTransaction.hash);
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

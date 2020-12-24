@@ -1,14 +1,8 @@
-import {
-    Account,
-    Deadline,
-    LinkAction,
-    NetworkType,
-    RepositoryFactoryHttp,
-    UInt64,
-    VrfKeyLinkTransaction,
-} from 'symbol-sdk';
+import { Account, Deadline, LinkAction, NetworkType, RepositoryFactoryHttp, UInt64, VrfKeyLinkTransaction } from 'symbol-sdk';
 
 /* start block 01 */
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 // Set network type
 const networkType = NetworkType.TEST_NET;
 // Main account private key for signing transaction
@@ -21,11 +15,12 @@ console.log('Vrf account Private Key:', vrfAccount.privateKey);
 
 /* start block 02 */
 const vrfLinkTransaction = VrfKeyLinkTransaction.create(
-    Deadline.create(),
-    vrfAccount.publicKey,
-    LinkAction.Link,
-    networkType,
-    UInt64.fromUint(2000000)); // Absolute number
+  Deadline.create(epochAdjustment),
+  vrfAccount.publicKey,
+  LinkAction.Link,
+  networkType,
+  UInt64.fromUint(2000000),
+); // Absolute number
 /* end block 02 */
 
 /* start block 03 */
@@ -38,7 +33,8 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(vrfLinkTransaction, networkGenerationHash);
 console.log('Transaction hash:', signedTransaction.hash);
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */

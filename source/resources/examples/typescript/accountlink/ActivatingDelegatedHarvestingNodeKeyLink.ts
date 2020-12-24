@@ -1,15 +1,17 @@
 import {
-    Account,
-    Deadline,
-    LinkAction,
-    NetworkType,
-    NodeKeyLinkTransaction,
-    PublicAccount,
-    RepositoryFactoryHttp,
-    UInt64,
+  Account,
+  Deadline,
+  LinkAction,
+  NetworkType,
+  NodeKeyLinkTransaction,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  UInt64,
 } from 'symbol-sdk';
 
 /* start block 01 */
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 // Set network type
 const networkType = NetworkType.TEST_NET;
 // Main account private key for signing transaction
@@ -22,11 +24,12 @@ const nodeAccount = PublicAccount.createFromPublicKey(nodePublicTLSKey, networkT
 
 /* start block 02 */
 const nodeLinkTransaction = NodeKeyLinkTransaction.create(
-    Deadline.create(),
-    nodeAccount.publicKey,
-    LinkAction.Link,
-    networkType,
-    UInt64.fromUint(2000000)); // Absolute number
+  Deadline.create(epochAdjustment),
+  nodeAccount.publicKey,
+  LinkAction.Link,
+  networkType,
+  UInt64.fromUint(2000000),
+); // Absolute number
 /* end block 02 */
 
 /* start block 03 */
@@ -39,7 +42,8 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(nodeLinkTransaction, networkGenerationHash);
 console.log('Transaction hash:', signedTransaction.hash);
 
-transactionHttp
-    .announce(signedTransaction)
-    .subscribe((x) => console.log(x), (err) => console.error(err));
+transactionHttp.announce(signedTransaction).subscribe(
+  (x) => console.log(x),
+  (err) => console.error(err),
+);
 /* end block 03 */
