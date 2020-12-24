@@ -17,11 +17,13 @@
  *
  */
 Object.defineProperty(exports, '__esModule', { value: true });
-const symbol_sdk_1 = require('symbol-sdk');
 const operators_1 = require('rxjs/operators');
+const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
 const cosignAggregateBondedTransaction = (transaction, account) => {
-  const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
+  const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(
+    transaction,
+  );
   return account.signCosignatureTransaction(cosignatureTransaction);
 };
 /* end block 01 */
@@ -29,8 +31,12 @@ const cosignAggregateBondedTransaction = (transaction, account) => {
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
@@ -41,10 +47,14 @@ listener.open().then(() => {
     .aggregateBondedAdded(account.address)
     .pipe(
       operators_1.filter((_) => !_.signedByAccount(account.publicAccount)),
-      operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+      operators_1.map((transaction) =>
+        cosignAggregateBondedTransaction(transaction, account),
+      ),
       operators_1.mergeMap((signedCosignatureTransaction) => {
         listener.close();
-        return transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction);
+        return transactionHttp.announceAggregateBondedCosignature(
+          signedCosignatureTransaction,
+        );
       }),
     )
     .subscribe(

@@ -25,7 +25,12 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const searchCriteria = { group: symbol_sdk_1.TransactionGroup.Partial, address, pageNumber: 1, pageSize: 100 };
+const searchCriteria = {
+  group: symbol_sdk_1.TransactionGroup.Partial,
+  address,
+  pageNumber: 1,
+  pageSize: 100,
+};
 transactionHttp.search(searchCriteria).subscribe(
   (page) => console.log(page.data),
   (err) => console.error(err),

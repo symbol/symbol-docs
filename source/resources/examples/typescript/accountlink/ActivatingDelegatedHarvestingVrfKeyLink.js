@@ -13,18 +13,18 @@ const mainAccount = symbol_sdk_1.Account.createFromPrivateKey(
   mainAccountPrivateKey,
   networkType,
 );
-// Generate a new account as remote account
-const remoteAccount = symbol_sdk_1.Account.generateNewAccount(networkType);
-console.log('Remote account Private Key:', remoteAccount.privateKey);
+// Generate a new account as vrf account
+const vrfAccount = symbol_sdk_1.Account.generateNewAccount(networkType);
+console.log('Vrf account Private Key:', vrfAccount.privateKey);
 /* end block 01 */
 /* start block 02 */
-const accountLinkTransaction = symbol_sdk_1.AccountKeyLinkTransaction.create(
+const vrfLinkTransaction = symbol_sdk_1.VrfKeyLinkTransaction.create(
   symbol_sdk_1.Deadline.create(epochAdjustment),
-  remoteAccount.publicKey,
+  vrfAccount.publicKey,
   symbol_sdk_1.LinkAction.Link,
   networkType,
   symbol_sdk_1.UInt64.fromUint(2000000),
-);
+); // Absolute number
 /* end block 02 */
 /* start block 03 */
 // Replace with any node in the network
@@ -35,7 +35,7 @@ const networkGenerationHash =
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = mainAccount.sign(
-  accountLinkTransaction,
+  vrfLinkTransaction,
   networkGenerationHash,
 );
 console.log('Transaction hash:', signedTransaction.hash);

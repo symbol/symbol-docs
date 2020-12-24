@@ -23,24 +23,39 @@ const symbol_sdk_1 = require('symbol-sdk');
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with certificate private key
-const certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const certificateAccount = symbol_sdk_1.Account.createFromPrivateKey(certificatePrivateKey, networkType);
+const certificatePrivateKey =
+  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const certificateAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  certificatePrivateKey,
+  networkType,
+);
 // replace with alice public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 // replace with transaction hash
-const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
+const transactionHash =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 transactionHttp
   .getTransaction(transactionHash, symbol_sdk_1.TransactionGroup.Confirmed)
   .pipe(operators_1.map((x) => x))
   .subscribe(
     (transaction) => {
       console.log('Raw message: ', transaction.message.payload);
-      console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount).payload);
+      console.log(
+        'Message: ',
+        certificateAccount.decryptMessage(
+          transaction.message,
+          alicePublicAccount,
+        ).payload,
+      );
     },
     (err) => console.log(err),
   );

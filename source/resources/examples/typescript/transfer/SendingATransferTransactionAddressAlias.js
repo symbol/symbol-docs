@@ -18,13 +18,15 @@
  */
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
 // Replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // Replace with aliased address
 const recipientAddress = new symbol_sdk_1.NamespaceId('foo');
 symbol_sdk_1.TransferTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   recipientAddress,
   [],
   symbol_sdk_1.EmptyMessage,

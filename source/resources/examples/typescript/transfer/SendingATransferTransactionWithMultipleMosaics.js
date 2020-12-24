@@ -18,21 +18,30 @@
  */
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 // replace with recipient address
 const rawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const ignored = symbol_sdk_1.TransferTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   recipientAddress,
   /* start block 01 */
   [
-    new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('7CDF3B117A3C40CC'), symbol_sdk_1.UInt64.fromUint(1000)),
-    new symbol_sdk_1.Mosaic(new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A'), symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, 6))),
+    new symbol_sdk_1.Mosaic(
+      new symbol_sdk_1.MosaicId('7CDF3B117A3C40CC'),
+      symbol_sdk_1.UInt64.fromUint(1000),
+    ),
+    new symbol_sdk_1.Mosaic(
+      new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A'),
+      symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, 6)),
+    ),
   ],
   /* end block 01 */
   symbol_sdk_1.PlainMessage.create('This is a test message'),
   networkType,
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
+console.log(transferTransaction);

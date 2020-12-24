@@ -18,6 +18,8 @@
  */
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
 // replace with kyc mosaic id
 const mosaicIdHex = '183D0802BCDB97AF';
@@ -33,9 +35,11 @@ const carolRawAddress = 'TCF7MK-FL6QYF-UHWVRZ-6UUCLN-YBDWLQ-ZZC37A-2O6R';
 const carolAddress = symbol_sdk_1.Address.createFromRawAddress(carolRawAddress);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('IsVerified'.toLowerCase());
+const key = symbol_sdk_1.KeyGenerator.generateUInt64Key(
+  'IsVerified'.toLowerCase(),
+);
 const aliceMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestrictionTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   mosaicId, // mosaicId
   key, // restrictionKey
   aliceAddress, // address
@@ -43,7 +47,7 @@ const aliceMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestr
   networkType,
 );
 const bobMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestrictionTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   mosaicId, // mosaicId
   key, // restrictionKey
   bobAddress, // address
@@ -51,7 +55,7 @@ const bobMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestric
   networkType,
 );
 const carolMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestrictionTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   mosaicId, // mosaicId
   key, // restrictionKey
   carolAddress, // address
@@ -59,22 +63,36 @@ const carolMosaicAddressRestrictionTransaction = symbol_sdk_1.MosaicAddressRestr
   networkType,
 );
 // replace with kyc provider private key
-const kycProviderPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
-const kycProviderAccount = symbol_sdk_1.Account.createFromPrivateKey(kycProviderPrivateKey, networkType);
+const kycProviderPrivateKey =
+  'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
+const kycProviderAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  kycProviderPrivateKey,
+  networkType,
+);
 const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createComplete(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   [
-    aliceMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
-    bobMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
-    carolMosaicAddressRestrictionTransaction.toAggregate(kycProviderAccount.publicAccount),
+    aliceMosaicAddressRestrictionTransaction.toAggregate(
+      kycProviderAccount.publicAccount,
+    ),
+    bobMosaicAddressRestrictionTransaction.toAggregate(
+      kycProviderAccount.publicAccount,
+    ),
+    carolMosaicAddressRestrictionTransaction.toAggregate(
+      kycProviderAccount.publicAccount,
+    ),
   ],
   networkType,
   [],
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = kycProviderAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = kycProviderAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';

@@ -23,8 +23,8 @@ const symbol_sdk_1 = require('symbol-sdk');
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const chainHttp = repositoryFactory.createChainRepository();
-chainHttp.getBlockchainHeight().subscribe(
-  (height) => console.log(height.compact()),
+chainHttp.getChainInfo().subscribe(
+  (info) => console.log(info.height.compact()),
   (err) => console.error(err),
 );
 /* end block 01 */

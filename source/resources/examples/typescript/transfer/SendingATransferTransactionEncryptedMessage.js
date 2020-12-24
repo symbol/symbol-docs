@@ -18,39 +18,60 @@
  */
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
-/* start block 01 */
-// replace with network type
-const networkType = symbol_sdk_1.NetworkType.TEST_NET;
-// replace with alice private key
-const alicePrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(alicePrivateKey, networkType);
-// replace with certificate public key
-const certificatePublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-const certificatePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(certificatePublicKey, networkType);
-const encryptedMessage = aliceAccount.encryptMessage('This message is secret', certificatePublicAccount);
-/* end block 01 */
-/* start block 02 */
-const transferTransaction = symbol_sdk_1.TransferTransaction.create(
-  symbol_sdk_1.Deadline.create(),
-  certificatePublicAccount.address,
-  [],
-  encryptedMessage,
-  networkType,
-  symbol_sdk_1.UInt64.fromUint(2000000),
-);
-/* end block 02 */
-/* start block 03 */
-// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = aliceAccount.sign(transferTransaction, networkGenerationHash);
-console.log(signedTransaction.hash);
-/* end block 03 */
-/* start block 04 */
-const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
-const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
-const transactionHttp = repositoryFactory.createTransactionRepository();
-transactionHttp.announce(signedTransaction).subscribe(
-  (x) => console.log(x),
-  (err) => console.error(err),
-);
-/* end block 04 */
+const example = async () => {
+  //Network information
+  const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+  const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
+  const epochAdjustment = await repositoryFactory
+    .getEpochAdjustment()
+    .toPromise();
+  /* start block 01 */
+  const networkType = await repositoryFactory.getNetworkType().toPromise();
+  // replace with alice private key
+  const alicePrivateKey =
+    '1111111111111111111111111111111111111111111111111111111111111111';
+  const aliceAccount = symbol_sdk_1.Account.createFromPrivateKey(
+    alicePrivateKey,
+    networkType,
+  );
+  // replace with certificate public key
+  const certificatePublicKey =
+    '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+  const certificatePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(
+    certificatePublicKey,
+    networkType,
+  );
+  const encryptedMessage = aliceAccount.encryptMessage(
+    'This message is secret',
+    certificatePublicAccount,
+  );
+  /* end block 01 */
+  /* start block 02 */
+  const transferTransaction = symbol_sdk_1.TransferTransaction.create(
+    symbol_sdk_1.Deadline.create(epochAdjustment),
+    certificatePublicAccount.address,
+    [],
+    encryptedMessage,
+    networkType,
+    symbol_sdk_1.UInt64.fromUint(2000000),
+  );
+  /* end block 02 */
+  /* start block 03 */
+  const networkGenerationHash = await repositoryFactory
+    .getGenerationHash()
+    .toPromise();
+  const signedTransaction = aliceAccount.sign(
+    transferTransaction,
+    networkGenerationHash,
+  );
+  console.log(signedTransaction.hash);
+  /* end block 03 */
+  /* start block 04 */
+  const transactionRepository = repositoryFactory.createTransactionRepository();
+  const response = await transactionRepository
+    .announce(signedTransaction)
+    .toPromise();
+  console.log(response);
+  /* end block 04 */
+};
+example().then();

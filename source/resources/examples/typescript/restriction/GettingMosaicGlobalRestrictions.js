@@ -29,7 +29,12 @@ const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 restrictionHttp.getMosaicGlobalRestriction(mosaicId).subscribe(
   (mosaicGlobalRestrictions) => {
     if (mosaicGlobalRestrictions.restrictions.size > 0) {
-      console.log('Key\t', 'Reference MosaicId\t', 'Restriction Type\t', 'Restriction Value');
+      console.log(
+        'Key\t',
+        'Reference MosaicId\t',
+        'Restriction Type\t',
+        'Restriction Value',
+      );
       mosaicGlobalRestrictions.restrictions.forEach((value, key) => {
         console.log(
           '\n' + key + '\t',
@@ -39,7 +44,9 @@ restrictionHttp.getMosaicGlobalRestriction(mosaicId).subscribe(
         );
       });
     } else {
-      console.log('\n The mosaic does not have mosaic global restrictions assigned.');
+      console.log(
+        '\n The mosaic does not have mosaic global restrictions assigned.',
+      );
     }
   },
   (err) => console.log(err),

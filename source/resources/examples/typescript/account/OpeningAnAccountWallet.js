@@ -22,8 +22,19 @@ const symbol_sdk_1 = require('symbol-sdk');
 // replace with password
 const password = new symbol_sdk_1.Password('password');
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const wallet = symbol_sdk_1.SimpleWallet.createFromPrivateKey('wallet-name', password, privateKey, symbol_sdk_1.NetworkType.TEST_NET);
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
+const wallet = symbol_sdk_1.SimpleWallet.createFromPrivateKey(
+  'wallet-name',
+  password,
+  privateKey,
+  symbol_sdk_1.NetworkType.TEST_NET,
+);
 const account = wallet.open(password);
-console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+console.log(
+  'Your account address is:',
+  account.address.pretty(),
+  'and its private key',
+  account.privateKey,
+);
 /* end block 01 */

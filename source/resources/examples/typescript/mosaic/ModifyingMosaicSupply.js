@@ -18,12 +18,18 @@
  */
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with mosaic id
 const mosaicIdHex = '7cdf3b117a3c40cc';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
@@ -32,7 +38,7 @@ const divisibility = 0;
 // replace with mosaic units to increase
 const delta = 1000000;
 const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   mosaicId,
   symbol_sdk_1.MosaicSupplyChangeAction.Increase,
   symbol_sdk_1.UInt64.fromUint(delta * Math.pow(10, divisibility)),
@@ -42,8 +48,12 @@ const mosaicSupplyChangeTransaction = symbol_sdk_1.MosaicSupplyChangeTransaction
 /* end block 01 */
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(mosaicSupplyChangeTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  mosaicSupplyChangeTransaction,
+  networkGenerationHash,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);

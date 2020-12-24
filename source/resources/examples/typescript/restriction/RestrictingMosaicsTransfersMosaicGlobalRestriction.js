@@ -18,6 +18,8 @@
  */
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
 // replace with mosaic id
 const mosaicIdHex = '634a8ac3fc2b65b3';
@@ -28,7 +30,7 @@ const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('KYC'.toLowerCase());
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   mosaicId, // mosaicId
   key, // restrictionKey
   symbol_sdk_1.UInt64.fromUint(0), // previousRestrictionValue
@@ -42,10 +44,15 @@ const transaction = symbol_sdk_1.MosaicGlobalRestrictionTransaction.create(
 /* end block 02 */
 /* start block 03 */
 // replace with company private key
-const privateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = account.sign(transaction, networkGenerationHash);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
