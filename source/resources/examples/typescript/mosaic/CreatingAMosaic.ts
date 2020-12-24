@@ -38,7 +38,8 @@ const epochAdjustment = 123456789;
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with duration (in blocks)
 const duration = UInt64.fromUint(0);
@@ -77,15 +78,22 @@ const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
 /* start block 03 */
 const aggregateTransaction = AggregateTransaction.createComplete(
   Deadline.create(epochAdjustment),
-  [mosaicDefinitionTransaction.toAggregate(account.publicAccount), mosaicSupplyChangeTransaction.toAggregate(account.publicAccount)],
+  [
+    mosaicDefinitionTransaction.toAggregate(account.publicAccount),
+    mosaicSupplyChangeTransaction.toAggregate(account.publicAccount),
+  ],
   networkType,
   [],
   UInt64.fromUint(2000000),
 );
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);

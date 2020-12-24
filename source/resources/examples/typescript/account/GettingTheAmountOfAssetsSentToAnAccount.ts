@@ -17,11 +17,19 @@
  */
 
 import { filter, map, mergeMap, toArray } from 'rxjs/operators';
-import { Address, MosaicId, RepositoryFactoryHttp, TransactionGroup, TransactionType, TransferTransaction } from 'symbol-sdk';
+import {
+  Address,
+  MosaicId,
+  RepositoryFactoryHttp,
+  TransactionGroup,
+  TransactionType,
+  TransferTransaction,
+} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with signer public key
-const signerPublicKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const signerPublicKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 // replace with recipient address
 const recipientRawAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
 const recipientAddress = Address.createFromRawAddress(recipientRawAddress);
@@ -62,7 +70,15 @@ transactionHttp
     map((_) => _.reduce((a, b) => a + b, 0)),
   )
   .subscribe(
-    (total) => console.log('Total', mosaicId.toHex(), 'sent to account', recipientAddress.pretty(), 'is:', total),
+    (total) =>
+      console.log(
+        'Total',
+        mosaicId.toHex(),
+        'sent to account',
+        recipientAddress.pretty(),
+        'is:',
+        total,
+      ),
     (err) => console.error(err),
   );
 /* end block 01 */

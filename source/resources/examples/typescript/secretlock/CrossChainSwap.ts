@@ -35,17 +35,32 @@ import {
 const epochAdjustment = 123456789;
 
 /* start block 01 */
-const alicePublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);
-const alicePrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJIN);
+const alicePublicChainAccount = Account.createFromPrivateKey(
+  '',
+  NetworkType.MAIN_NET,
+);
+const alicePrivateChainAccount = Account.createFromPrivateKey(
+  '',
+  NetworkType.MIJIN,
+);
 
-const bobPublicChainAccount = Account.createFromPrivateKey('', NetworkType.MAIN_NET);
-const bobPrivateChainAccount = Account.createFromPrivateKey('', NetworkType.MIJIN);
+const bobPublicChainAccount = Account.createFromPrivateKey(
+  '',
+  NetworkType.MAIN_NET,
+);
+const bobPrivateChainAccount = Account.createFromPrivateKey(
+  '',
+  NetworkType.MIJIN,
+);
 
-const privateChainTransactionHttp = new TransactionHttp('http://localhost:3000');
+const privateChainTransactionHttp = new TransactionHttp(
+  'http://localhost:3000',
+);
 const publicChainTransactionHttp = new TransactionHttp('http://localhost:3000');
 
 const publicChainGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
-const privateChainGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const privateChainGenerationHash = process.env
+  .NETWORK_GENERATION_HASH as string;
 
 /* end block 01 */
 
@@ -71,7 +86,10 @@ const tx1 = SecretLockTransaction.create(
 /* end block 03 */
 
 /* start block 04 */
-const tx1Signed = alicePrivateChainAccount.sign(tx1, privateChainGenerationHash);
+const tx1Signed = alicePrivateChainAccount.sign(
+  tx1,
+  privateChainGenerationHash,
+);
 privateChainTransactionHttp.announce(tx1Signed).subscribe(
   (x) => console.log(x),
   (err) => console.error(err),

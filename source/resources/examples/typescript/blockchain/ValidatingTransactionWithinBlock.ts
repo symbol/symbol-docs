@@ -18,13 +18,25 @@
 
 /* start block 01 */
 import { sha3_256 } from 'js-sha3';
-import { BlockRepository, MerklePosition, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
+import {
+  BlockRepository,
+  MerklePosition,
+  RepositoryFactoryHttp,
+  UInt64,
+} from 'symbol-sdk';
 
-const validateTransactionInBlock = async (leaf: string, height: UInt64, blockHttp: BlockRepository): Promise<boolean> => {
+const validateTransactionInBlock = async (
+  leaf: string,
+  height: UInt64,
+  blockHttp: BlockRepository,
+): Promise<boolean> => {
   // 2. Obtain HRoot; in Symbol, this is stored in the block header.
-  const HRoot = (await blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
+  const HRoot = (await blockHttp.getBlockByHeight(height).toPromise())
+    .blockTransactionsHash;
   // 3. Request the merkleProof: H1, H7, H10
-  const merkleProof = (await blockHttp.getMerkleTransaction(height, leaf).toPromise()).merklePath!;
+  const merkleProof = (
+    await blockHttp.getMerkleTransaction(height, leaf).toPromise()
+  ).merklePath!;
   // 4. Calculate HRoot'.
   if (merkleProof.length === 0) {
     // There is a single item in the tree, so HRoot' = leaf.
@@ -49,5 +61,7 @@ const blockHttp = repositoryHttp.createBlockRepository();
 const height = UInt64.fromUint(1);
 // 1. Calculate H(B); the hash of the element you want to validate if exists within a block.
 const leaf = '1F4B55D42C9C91805E73317319DDDA633667D5E44EB0F03678FF7F130555DF4B'.toLowerCase();
-validateTransactionInBlock(leaf, height, blockHttp).then((result) => console.log(result));
+validateTransactionInBlock(leaf, height, blockHttp).then((result) =>
+  console.log(result),
+);
 /* end block 01 */

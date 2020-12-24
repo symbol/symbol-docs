@@ -1,4 +1,12 @@
-import { Account, AccountKeyLinkTransaction, Deadline, LinkAction, NetworkType, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
+import {
+  Account,
+  AccountKeyLinkTransaction,
+  Deadline,
+  LinkAction,
+  NetworkType,
+  RepositoryFactoryHttp,
+  UInt64,
+} from 'symbol-sdk';
 
 /* start block 01 */
 // Retrieve from node's /network/properties or RepositoryFactory
@@ -6,8 +14,12 @@ const epochAdjustment = 123456789;
 // Set network type
 const networkType = NetworkType.TEST_NET;
 // Main account private key for signing transaction
-const mainAccountPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const mainAccount = Account.createFromPrivateKey(mainAccountPrivateKey, networkType);
+const mainAccountPrivateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
+const mainAccount = Account.createFromPrivateKey(
+  mainAccountPrivateKey,
+  networkType,
+);
 // Generate a new account as remote account
 const remoteAccount = Account.generateNewAccount(networkType);
 console.log('Remote account Private Key:', remoteAccount.privateKey);
@@ -27,10 +39,14 @@ const accountLinkTransaction = AccountKeyLinkTransaction.create(
 // Replace with any node in the network
 const nodeUrl = 'http://api-01.ap-northeast-1.0.10.0.x.symboldev.network:3000';
 // Replace with networkGenerationHashSeed by querying http://<node-url>:3000/node/info
-const networkGenerationHash = '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';
+const networkGenerationHash =
+  '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const signedTransaction = mainAccount.sign(accountLinkTransaction, networkGenerationHash);
+const signedTransaction = mainAccount.sign(
+  accountLinkTransaction,
+  networkGenerationHash,
+);
 
 console.log('Transaction hash:', signedTransaction.hash);
 

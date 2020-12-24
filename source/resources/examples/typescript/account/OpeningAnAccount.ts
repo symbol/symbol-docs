@@ -20,8 +20,14 @@ import { Account, NetworkType } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 
 const account = Account.createFromPrivateKey(privateKey, NetworkType.TEST_NET);
-console.log('Your account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+console.log(
+  'Your account address is:',
+  account.address.pretty(),
+  'and its private key',
+  account.privateKey,
+);
 /* end block 01 */

@@ -22,7 +22,16 @@ import { NetworkType, Password, SimpleWallet } from 'symbol-sdk';
 // replace with password
 const password = new Password('password');
 
-const wallet = SimpleWallet.create('wallet-name', password, NetworkType.TEST_NET);
+const wallet = SimpleWallet.create(
+  'wallet-name',
+  password,
+  NetworkType.TEST_NET,
+);
 const account = wallet.open(password);
-console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+console.log(
+  'Your new account address is:',
+  account.address.pretty(),
+  'and its private key',
+  account.privateKey,
+);
 /* end block 01 */

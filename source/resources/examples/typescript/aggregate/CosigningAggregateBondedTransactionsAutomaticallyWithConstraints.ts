@@ -33,17 +33,28 @@ import {
 } from 'symbol-sdk';
 
 /* start block 01 */
-const validTransaction = (transaction: Transaction, publicAccount: PublicAccount): boolean => {
+const validTransaction = (
+  transaction: Transaction,
+  publicAccount: PublicAccount,
+): boolean => {
   return (
     transaction instanceof TransferTransaction &&
     transaction.signer!.equals(publicAccount) &&
     transaction.mosaics.length === 1 &&
-    transaction.mosaics[0].id.equals(new MosaicId('5E62990DCAC5BE8A') || transaction.mosaics[0].id.equals(new NamespaceId('symbol.xym'))) &&
-    transaction.mosaics[0].amount.compare(UInt64.fromUint(100 * Math.pow(10, 6))) < 0
+    transaction.mosaics[0].id.equals(
+      new MosaicId('5E62990DCAC5BE8A') ||
+        transaction.mosaics[0].id.equals(new NamespaceId('symbol.xym')),
+    ) &&
+    transaction.mosaics[0].amount.compare(
+      UInt64.fromUint(100 * Math.pow(10, 6)),
+    ) < 0
   );
 };
 
-const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
+const cosignAggregateBondedTransaction = (
+  transaction: AggregateTransaction,
+  account: Account,
+): CosignatureSignedTransaction => {
   const cosignatureTransaction = CosignatureTransaction.create(transaction);
   return account.signCosignatureTransaction(cosignatureTransaction);
 };
@@ -51,7 +62,8 @@ const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, acc
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -70,8 +82,14 @@ listener.open().then(() => {
           validTransaction(_.innerTransactions[0], account.publicAccount) ||
           validTransaction(_.innerTransactions[1], account.publicAccount),
       ),
-      map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
-      mergeMap((signedCosignatureTransaction) => transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction)),
+      map((transaction) =>
+        cosignAggregateBondedTransaction(transaction, account),
+      ),
+      mergeMap((signedCosignatureTransaction) =>
+        transactionHttp.announceAggregateBondedCosignature(
+          signedCosignatureTransaction,
+        ),
+      ),
     )
     .subscribe(
       (announcedTransaction) => {

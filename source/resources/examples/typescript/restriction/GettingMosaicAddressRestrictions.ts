@@ -33,11 +33,15 @@ const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 restrictionHttp.getMosaicAddressRestriction(mosaicId, address).subscribe(
   (mosaicAddressRestrictions) => {
     if (mosaicAddressRestrictions.restrictions.size > 0) {
-      mosaicAddressRestrictions.restrictions.forEach((value: string, key: string) => {
-        console.log('\n', key, value);
-      });
+      mosaicAddressRestrictions.restrictions.forEach(
+        (value: string, key: string) => {
+          console.log('\n', key, value);
+        },
+      );
     } else {
-      console.log('\n The address does not have mosaic address restrictions assigned.');
+      console.log(
+        '\n The address does not have mosaic address restrictions assigned.',
+      );
     }
   },
   (err) => console.log(err),
