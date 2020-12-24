@@ -31,9 +31,15 @@ restrictionHttp.getAccountRestrictions(address).subscribe(
   (accountRestrictions: any) => {
     if (accountRestrictions.length > 0) {
       accountRestrictions
-        .filter((accountRestriction: any) => accountRestriction.values.length > 0)
+        .filter(
+          (accountRestriction: any) => accountRestriction.values.length > 0,
+        )
         .map((accountRestriction: any) => {
-          console.log('\n', accountRestriction.restrictionFlags, accountRestriction.values.toString());
+          console.log(
+            '\n',
+            accountRestriction.restrictionFlags,
+            accountRestriction.values.toString(),
+          );
         });
     } else {
       console.log('The address does not have account restriction assigned.');

@@ -36,11 +36,16 @@ const epochAdjustment = 123456789;
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with bob private key
-const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobPrivateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 // replace with alice public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
@@ -58,7 +63,9 @@ const searchCriteria = {
 };
 const accountMetadataTransaction = metadataHttp.search(searchCriteria).pipe(
   mergeMap((metadata) => {
-    const currentValueBytes = Convert.utf8ToUint8(metadata.data[0].metadataEntry.value);
+    const currentValueBytes = Convert.utf8ToUint8(
+      metadata.data[0].metadataEntry.value,
+    );
     return of(
       AccountMetadataTransaction.create(
         Deadline.create(epochAdjustment),

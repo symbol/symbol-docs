@@ -49,18 +49,28 @@ const networkCurrencyDivisibility = 6;
 const transferTransaction = TransferTransaction.create(
   Deadline.create(epochAdjustment),
   recipientAddress,
-  [new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  [
+    new Mosaic(
+      networkCurrencyMosaicId,
+      UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)),
+    ),
+  ],
   EmptyMessage,
   networkType,
   UInt64.fromUint(2000000),
 );
 
 // replace with sender private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 /* end block 01 */
 
 /* start block 02 */

@@ -45,8 +45,12 @@ const key = KeyGenerator.generateUInt64Key('CERT');
 const networkType = NetworkType.TEST_NET;
 
 // replace with public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with value
 const value = '123456';
 
@@ -62,7 +66,8 @@ const accountMetadataTransaction = AccountMetadataTransaction.create(
 
 /* start block 03 */
 // replace with bob private key
-const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobPrivateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 
 const aggregateTransaction = AggregateTransaction.createBonded(
@@ -74,8 +79,12 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 );
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = bobAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
@@ -87,13 +96,19 @@ const networkCurrencyDivisibility = 6;
 
 const hashLockTransaction = HashLockTransaction.create(
   Deadline.create(epochAdjustment),
-  new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  new Mosaic(
+    networkCurrencyMosaicId,
+    UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)),
+  ),
   UInt64.fromUint(480),
   signedTransaction,
   networkType,
   UInt64.fromUint(2000000),
 );
-const signedHashLockTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+const signedHashLockTransaction = bobAccount.sign(
+  hashLockTransaction,
+  networkGenerationHash,
+);
 /* end block 04 */
 
 /* start block 05 */
@@ -106,10 +121,16 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
-    (x) => console.log(x),
-    (err) => console.log(err),
-    () => listener.close(),
-  );
+  transactionService
+    .announceHashLockAggregateBonded(
+      signedHashLockTransaction,
+      signedTransaction,
+      listener,
+    )
+    .subscribe(
+      (x) => console.log(x),
+      (err) => console.log(err),
+      () => listener.close(),
+    );
 });
 /* end block 05 */

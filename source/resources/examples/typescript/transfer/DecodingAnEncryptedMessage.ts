@@ -17,24 +17,40 @@
  */
 
 import { map } from 'rxjs/operators';
-import { Account, NetworkType, PublicAccount, RepositoryFactoryHttp, TransactionGroup, TransferTransaction } from 'symbol-sdk';
+import {
+  Account,
+  NetworkType,
+  PublicAccount,
+  RepositoryFactoryHttp,
+  TransactionGroup,
+  TransferTransaction,
+} from 'symbol-sdk';
 
 /* start block 01 */
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 
 // replace with certificate private key
-const certificatePrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const certificateAccount = Account.createFromPrivateKey(certificatePrivateKey, networkType);
+const certificatePrivateKey =
+  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const certificateAccount = Account.createFromPrivateKey(
+  certificatePrivateKey,
+  networkType,
+);
 // replace with alice public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 // replace with transaction hash
-const transactionHash = '0000000000000000000000000000000000000000000000000000000000000000';
+const transactionHash =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 
 transactionHttp
   .getTransaction(transactionHash, TransactionGroup.Confirmed)
@@ -42,7 +58,13 @@ transactionHttp
   .subscribe(
     (transaction) => {
       console.log('Raw message: ', transaction.message.payload);
-      console.log('Message: ', certificateAccount.decryptMessage(transaction.message, alicePublicAccount).payload);
+      console.log(
+        'Message: ',
+        certificateAccount.decryptMessage(
+          transaction.message,
+          alicePublicAccount,
+        ).payload,
+      );
     },
     (err) => console.log(err),
   );

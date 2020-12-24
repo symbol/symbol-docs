@@ -30,11 +30,14 @@ const example = async (): Promise<boolean> => {
   const height = UInt64.fromUint(1);
 
   // 1. Obtain HRoot; in Symbol, this is stored in the block header.
-  const HRoot = (await blockHttp.getBlockByHeight(height).toPromise()).blockTransactionsHash;
+  const HRoot = (await blockHttp.getBlockByHeight(height).toPromise())
+    .blockTransactionsHash;
   // 2. Calculate HRoot' creating a Merkle tree with all the transactions within the block in natural order.
   // Note: This code snippet assumes that the block has less than 100 transactions.
   const queryParams = new QueryParams({ pageSize: 100 });
-  const transactions = await blockHttp.getBlockTransactions(height, queryParams).toPromise();
+  const transactions = await blockHttp
+    .getBlockTransactions(height, queryParams)
+    .toPromise();
   const leaves = transactions
     .sort((n1, n2) => n1.transactionInfo!.index - n2.transactionInfo!.index)
     .map((transaction) => transaction.transactionInfo!.hash);

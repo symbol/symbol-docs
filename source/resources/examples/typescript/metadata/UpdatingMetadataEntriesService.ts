@@ -43,11 +43,16 @@ const epochAdjustment = 123456789;
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with bob private key
-const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
+const bobPrivateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
 const bobAccount = Account.createFromPrivateKey(bobPrivateKey, networkType);
 // replace with alice public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
@@ -70,7 +75,8 @@ const accountMetadataTransaction = metadataService.createAccountMetadataTransact
 
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedAggregateTransaction = accountMetadataTransaction.pipe(
   mergeMap((transaction) => {
     const aggregateTransaction = AggregateTransaction.createBonded(
@@ -80,7 +86,10 @@ const signedAggregateTransaction = accountMetadataTransaction.pipe(
       [],
       UInt64.fromUint(2000000),
     );
-    const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
+    const signedTransaction = bobAccount.sign(
+      aggregateTransaction,
+      networkGenerationHash,
+    );
     return of(signedTransaction);
   }),
 );
@@ -101,18 +110,27 @@ const signedAggregateHashLock = signedAggregateTransaction.pipe(
   mergeMap((signedAggregateTransaction) => {
     const hashLockTransaction = HashLockTransaction.create(
       Deadline.create(epochAdjustment),
-      new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+      new Mosaic(
+        networkCurrencyMosaicId,
+        UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)),
+      ),
       UInt64.fromUint(480),
       signedAggregateTransaction,
       networkType,
       UInt64.fromUint(2000000),
     );
-    const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+    const signedTransaction = bobAccount.sign(
+      hashLockTransaction,
+      networkGenerationHash,
+    );
     const signedAggregateHashLock: SignedAggregateHashLock = {
       aggregate: signedAggregateTransaction,
       hashLock: signedTransaction,
     };
-    console.log('Aggregate Transaction Hash:', signedAggregateTransaction.hash + '\n');
+    console.log(
+      'Aggregate Transaction Hash:',
+      signedAggregateTransaction.hash + '\n',
+    );
     console.log('HashLock Transaction Hash:', signedTransaction.hash + '\n');
     return of(signedAggregateHashLock);
   }),
@@ -130,7 +148,11 @@ listener.open().then(() => {
   signedAggregateHashLock
     .pipe(
       mergeMap((signedAggregateHashLock) =>
-        transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener),
+        transactionService.announceHashLockAggregateBonded(
+          signedAggregateHashLock.hashLock,
+          signedAggregateHashLock.aggregate,
+          listener,
+        ),
       ),
     )
     .subscribe(

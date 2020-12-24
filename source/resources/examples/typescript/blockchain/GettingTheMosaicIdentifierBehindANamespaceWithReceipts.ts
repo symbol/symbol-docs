@@ -35,7 +35,10 @@ import {
 const epochAdjustment = 123456789;
 
 /* start block 01 */
-const aliasedMosaic = new Mosaic(new NamespaceId('symbol.xym'), UInt64.fromUint(1000000));
+const aliasedMosaic = new Mosaic(
+  new NamespaceId('symbol.xym'),
+  UInt64.fromUint(1000000),
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -51,11 +54,16 @@ const transferTransaction = TransferTransaction.create(
 );
 
 // replace with sender private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
 const account = Account.createFromPrivateKey(privateKey, networkType);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 /* end block 02 */
 
@@ -72,7 +80,9 @@ listener.open().then(() => {
   transactionService
     .announce(signedTransaction, listener)
     .pipe(
-      mergeMap((transaction) => transactionService.resolveAliases([transaction.transactionInfo!.hash!])),
+      mergeMap((transaction) =>
+        transactionService.resolveAliases([transaction.transactionInfo!.hash!]),
+      ),
       map((transactions) => transactions[0] as TransferTransaction),
     )
     .subscribe(

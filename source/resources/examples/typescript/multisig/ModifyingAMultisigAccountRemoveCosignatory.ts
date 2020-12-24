@@ -34,14 +34,26 @@ const epochAdjustment = 123456789;
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with multisig public key
-const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+const multisigAccountPublicKey =
+  '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const multisigAccount = PublicAccount.createFromPublicKey(
+  multisigAccountPublicKey,
+  networkType,
+);
 // replace with cosignatory public key
-const cosignatoryToRemovePublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
-const cosignatoryToRemove = PublicAccount.createFromPublicKey(cosignatoryToRemovePublicKey, networkType);
+const cosignatoryToRemovePublicKey =
+  '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
+const cosignatoryToRemove = PublicAccount.createFromPublicKey(
+  cosignatoryToRemovePublicKey,
+  networkType,
+);
 // replace with cosignatory private key
-const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+const cosignatoryPrivateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const cosignatoryAccount = Account.createFromPrivateKey(
+  cosignatoryPrivateKey,
+  networkType,
+);
 
 const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
   Deadline.create(epochAdjustment),
@@ -61,8 +73,12 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 );
 
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = cosignatoryAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);

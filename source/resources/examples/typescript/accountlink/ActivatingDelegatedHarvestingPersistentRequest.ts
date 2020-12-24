@@ -14,17 +14,33 @@ const epochAdjustment = 123456789;
 // Set network type
 const networkType = NetworkType.TEST_NET;
 // Remote account private key
-const remoteAccountPrivateKey = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const remoteAccount = Account.createFromPrivateKey(remoteAccountPrivateKey, networkType);
+const remoteAccountPrivateKey =
+  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+const remoteAccount = Account.createFromPrivateKey(
+  remoteAccountPrivateKey,
+  networkType,
+);
 // Vrf account private key
-const vrfAccountPrivateKey = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
-const vrfAccount = Account.createFromPrivateKey(vrfAccountPrivateKey, networkType);
+const vrfAccountPrivateKey =
+  'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
+const vrfAccount = Account.createFromPrivateKey(
+  vrfAccountPrivateKey,
+  networkType,
+);
 // Announcer private key
-const announcerAccountPrivateKey = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const announcerAccount = Account.createFromPrivateKey(announcerAccountPrivateKey, networkType);
+const announcerAccountPrivateKey =
+  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+const announcerAccount = Account.createFromPrivateKey(
+  announcerAccountPrivateKey,
+  networkType,
+);
 // Node account - Replace with publicKey by querying http://<node-url>:3000/node/info
-const nodePublicTLSKey = '46DDDBCC4DB446BA1BEEF0294B51327BD2872625A235E658E3D1111F45FAD25D';
-const nodeAccount = PublicAccount.createFromPublicKey(nodePublicTLSKey, networkType);
+const nodePublicTLSKey =
+  '46DDDBCC4DB446BA1BEEF0294B51327BD2872625A235E658E3D1111F45FAD25D';
+const nodeAccount = PublicAccount.createFromPublicKey(
+  nodePublicTLSKey,
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -40,12 +56,16 @@ const persistentDelegationRequestTransaction = PersistentDelegationRequestTransa
 
 /* start block 03 */
 // Replace with networkGenerationHashSeed by querying http://<node-url>:3000/node/info
-const networkGenerationHash = '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';
+const networkGenerationHash =
+  '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';
 // Replace with any node in the network
 const nodeUrl = 'http://api-01.ap-northeast-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const signedTransaction = announcerAccount.sign(persistentDelegationRequestTransaction, networkGenerationHash);
+const signedTransaction = announcerAccount.sign(
+  persistentDelegationRequestTransaction,
+  networkGenerationHash,
+);
 console.log('Transaction hash:', signedTransaction.hash);
 
 transactionHttp.announce(signedTransaction).subscribe(

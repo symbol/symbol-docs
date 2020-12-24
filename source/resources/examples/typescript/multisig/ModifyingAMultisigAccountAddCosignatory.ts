@@ -38,11 +38,19 @@ const epochAdjustment = 123456789;
 // replace with network type
 const networkType = NetworkType.TEST_NET;
 // replace with multisig public key
-const multisigAccountPublicKey = '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-const multisigAccount = PublicAccount.createFromPublicKey(multisigAccountPublicKey, networkType);
+const multisigAccountPublicKey =
+  '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+const multisigAccount = PublicAccount.createFromPublicKey(
+  multisigAccountPublicKey,
+  networkType,
+);
 // replace with new cosignatory public key
-const newCosignatoryPublicKey = '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
-const newCosignatoryAccount = PublicAccount.createFromPublicKey(newCosignatoryPublicKey, networkType);
+const newCosignatoryPublicKey =
+  '17E42BDF5B7FF5001DC96A262A1141FFBE3F09A3A45DE7C095AAEA14F45C0DA0';
+const newCosignatoryAccount = PublicAccount.createFromPublicKey(
+  newCosignatoryPublicKey,
+  networkType,
+);
 /* end block 01 */
 
 /* start block 02 */
@@ -66,11 +74,19 @@ const aggregateTransaction = AggregateTransaction.createBonded(
 );
 
 // replace with cosignatory private key
-const cosignatoryPrivateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const cosignatoryAccount = Account.createFromPrivateKey(cosignatoryPrivateKey, networkType);
+const cosignatoryPrivateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const cosignatoryAccount = Account.createFromPrivateKey(
+  cosignatoryPrivateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = cosignatoryAccount.sign(aggregateTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = cosignatoryAccount.sign(
+  aggregateTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 /* end block 03 */
 
@@ -82,14 +98,20 @@ const networkCurrencyDivisibility = 6;
 
 const hashLockTransaction = HashLockTransaction.create(
   Deadline.create(epochAdjustment),
-  new Mosaic(networkCurrencyMosaicId, UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+  new Mosaic(
+    networkCurrencyMosaicId,
+    UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)),
+  ),
   UInt64.fromUint(480),
   signedTransaction,
   networkType,
   UInt64.fromUint(2000000),
 );
 
-const signedHashLockTransaction = cosignatoryAccount.sign(hashLockTransaction, networkGenerationHash);
+const signedHashLockTransaction = cosignatoryAccount.sign(
+  hashLockTransaction,
+  networkGenerationHash,
+);
 
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -100,10 +122,16 @@ const transactionHttp = repositoryFactory.createTransactionRepository();
 const transactionService = new TransactionService(transactionHttp, receiptHttp);
 
 listener.open().then(() => {
-  transactionService.announceHashLockAggregateBonded(signedHashLockTransaction, signedTransaction, listener).subscribe(
-    (x) => console.log(x),
-    (err) => console.log(err),
-    () => listener.close(),
-  );
+  transactionService
+    .announceHashLockAggregateBonded(
+      signedHashLockTransaction,
+      signedTransaction,
+      listener,
+    )
+    .subscribe(
+      (x) => console.log(x),
+      (err) => console.log(err),
+      () => listener.close(),
+    );
 });
 /* end block 04 */

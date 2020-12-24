@@ -29,7 +29,10 @@ const aliceAccount = Account.createFromPrivateKey(alicePrivatekey, networkType);
 
 // replace with bob public key
 const bobPublicKey = '';
-const bobPublicAccount = PublicAccount.createFromPublicKey(bobPublicKey, networkType);
+const bobPublicAccount = PublicAccount.createFromPublicKey(
+  bobPublicKey,
+  networkType,
+);
 
 const aliceTransferTransaction = TransferTransaction.create(
   Deadline.create(epochAdjustment),
@@ -49,7 +52,10 @@ const bobTransferTransaction = TransferTransaction.create(
 
 const aggregateTransaction = AggregateTransaction.createComplete(
   Deadline.create(epochAdjustment),
-  [aliceTransferTransaction.toAggregate(aliceAccount.publicAccount), bobTransferTransaction.toAggregate(bobPublicAccount)],
+  [
+    aliceTransferTransaction.toAggregate(aliceAccount.publicAccount),
+    bobTransferTransaction.toAggregate(bobPublicAccount),
+  ],
   networkType,
   [],
   UInt64.fromUint(2000000),
@@ -58,9 +64,13 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const generationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const generationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 
-const signedTransactionNotComplete = aliceAccount.sign(aggregateTransaction, generationHash);
+const signedTransactionNotComplete = aliceAccount.sign(
+  aggregateTransaction,
+  generationHash,
+);
 console.log(signedTransactionNotComplete.payload);
 /* end block 02 */
 

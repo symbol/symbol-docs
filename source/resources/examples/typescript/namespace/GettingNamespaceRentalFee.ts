@@ -24,7 +24,13 @@ const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 
 const networkHttp = repositoryHttp.createNetworkRepository();
 networkHttp.getRentalFees().subscribe((rentalFees) => {
-  console.log('RootNamespaceRentalFeePerBlock', rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact());
-  console.log('ChildNamespaceRentalFee', rentalFees.effectiveChildNamespaceRentalFee.compact());
+  console.log(
+    'RootNamespaceRentalFeePerBlock',
+    rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact(),
+  );
+  console.log(
+    'ChildNamespaceRentalFee',
+    rentalFees.effectiveChildNamespaceRentalFee.compact(),
+  );
 });
 /* end block 01 */
