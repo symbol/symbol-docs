@@ -1,5 +1,3 @@
-:orphan:
-
 .. post:: 8 Jun, 2020
     :category: Transfer Transaction
     :tags: SDK, CLI
