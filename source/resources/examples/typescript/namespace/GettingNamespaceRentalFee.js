@@ -16,49 +16,20 @@
  * limitations under the License.
  *
  */
-var __awaiter =
-  (this && this.__awaiter) ||
-  function (thisArg, _arguments, P, generator) {
-    function adopt(value) {
-      return value instanceof P
-        ? value
-        : new P(function (resolve) {
-            resolve(value);
-          });
-    }
-    return new (P || (P = Promise))(function (resolve, reject) {
-      function fulfilled(value) {
-        try {
-          step(generator.next(value));
-        } catch (e) {
-          reject(e);
-        }
-      }
-      function rejected(value) {
-        try {
-          step(generator['throw'](value));
-        } catch (e) {
-          reject(e);
-        }
-      }
-      function step(result) {
-        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-      }
-      step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-  };
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
-const example = () =>
-  __awaiter(void 0, void 0, void 0, function* () {
-    /* start block 01 */
-    const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
-    const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
-    const networkHttp = repositoryHttp.createNetworkRepository();
-    networkHttp.getRentalFees().subscribe((rentalFees) => {
-      console.log('RootNamespaceRentalFeePerBlock', rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact());
-      console.log('ChildNamespaceRentalFee', rentalFees.effectiveChildNamespaceRentalFee.compact());
-    });
-    /* end block 01 */
-  });
-example().then((result) => console.log(result));
+/* start block 01 */
+const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
+const networkHttp = repositoryHttp.createNetworkRepository();
+networkHttp.getRentalFees().subscribe((rentalFees) => {
+  console.log(
+    'RootNamespaceRentalFeePerBlock',
+    rentalFees.effectiveRootNamespaceRentalFeePerBlock.compact(),
+  );
+  console.log(
+    'ChildNamespaceRentalFee',
+    rentalFees.effectiveChildNamespaceRentalFee.compact(),
+  );
+});
+/* end block 01 */

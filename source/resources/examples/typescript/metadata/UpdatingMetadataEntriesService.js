@@ -20,24 +20,36 @@ Object.defineProperty(exports, '__esModule', { value: true });
 const rxjs_1 = require('rxjs');
 const operators_1 = require('rxjs/operators');
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with bob private key
-const bobPrivateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(bobPrivateKey, networkType);
+const bobPrivateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
+const bobAccount = symbol_sdk_1.Account.createFromPrivateKey(
+  bobPrivateKey,
+  networkType,
+);
 // replace with alice public key
-const alicePublicKey = 'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(alicePublicKey, networkType);
+const alicePublicKey =
+  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(
+  alicePublicKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const metadataHttp = new symbol_sdk_1.MetadataHttp(nodeUrl);
-const metadataService = new symbol_sdk_1.MetadataTransactionService(metadataHttp);
+const metadataService = new symbol_sdk_1.MetadataTransactionService(
+  metadataHttp,
+);
 // replace with key and new value
 const key = symbol_sdk_1.KeyGenerator.generateUInt64Key('CERT');
 const newValue = '000000';
 const accountMetadataTransaction = metadataService.createAccountMetadataTransaction(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   networkType,
   alicePublicAccount.address,
   key,
@@ -48,17 +60,21 @@ const accountMetadataTransaction = metadataService.createAccountMetadataTransact
 /* end block 01 */
 /* start block 02 */
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedAggregateTransaction = accountMetadataTransaction.pipe(
   operators_1.mergeMap((transaction) => {
     const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
-      symbol_sdk_1.Deadline.create(),
+      symbol_sdk_1.Deadline.create(epochAdjustment),
       [transaction.toAggregate(bobAccount.publicAccount)],
       networkType,
       [],
       symbol_sdk_1.UInt64.fromUint(2000000),
     );
-    const signedTransaction = bobAccount.sign(aggregateTransaction, networkGenerationHash);
+    const signedTransaction = bobAccount.sign(
+      aggregateTransaction,
+      networkGenerationHash,
+    );
     return rxjs_1.of(signedTransaction);
   }),
 );
@@ -69,19 +85,30 @@ const networkCurrencyDivisibility = 6;
 const signedAggregateHashLock = signedAggregateTransaction.pipe(
   operators_1.mergeMap((signedAggregateTransaction) => {
     const hashLockTransaction = symbol_sdk_1.HashLockTransaction.create(
-      symbol_sdk_1.Deadline.create(),
-      new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility))),
+      symbol_sdk_1.Deadline.create(epochAdjustment),
+      new symbol_sdk_1.Mosaic(
+        networkCurrencyMosaicId,
+        symbol_sdk_1.UInt64.fromUint(
+          10 * Math.pow(10, networkCurrencyDivisibility),
+        ),
+      ),
       symbol_sdk_1.UInt64.fromUint(480),
       signedAggregateTransaction,
       networkType,
       symbol_sdk_1.UInt64.fromUint(2000000),
     );
-    const signedTransaction = bobAccount.sign(hashLockTransaction, networkGenerationHash);
+    const signedTransaction = bobAccount.sign(
+      hashLockTransaction,
+      networkGenerationHash,
+    );
     const signedAggregateHashLock = {
       aggregate: signedAggregateTransaction,
       hashLock: signedTransaction,
     };
-    console.log('Aggregate Transaction Hash:', signedAggregateTransaction.hash + '\n');
+    console.log(
+      'Aggregate Transaction Hash:',
+      signedAggregateTransaction.hash + '\n',
+    );
     console.log('HashLock Transaction Hash:', signedTransaction.hash + '\n');
     return rxjs_1.of(signedAggregateHashLock);
   }),
@@ -92,16 +119,23 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
-const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
+const transactionService = new symbol_sdk_1.TransactionService(
+  transactionHttp,
+  receiptHttp,
+);
 listener.open().then(() => {
   signedAggregateHashLock
     .pipe(
       operators_1.mergeMap((signedAggregateHashLock) =>
-        transactionService.announceHashLockAggregateBonded(signedAggregateHashLock.hashLock, signedAggregateHashLock.aggregate, listener),
+        transactionService.announceHashLockAggregateBonded(
+          signedAggregateHashLock.hashLock,
+          signedAggregateHashLock.aggregate,
+          listener,
+        ),
       ),
     )
     .subscribe(
-      (ignored) => console.log('Transaction confirmed'),
+      () => console.log('Transaction confirmed'),
       (err) => console.log(err),
       () => listener.close(),
     );

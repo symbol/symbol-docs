@@ -36,7 +36,9 @@ restrictionHttp.getMosaicAddressRestriction(mosaicId, address).subscribe(
         console.log('\n', key, value);
       });
     } else {
-      console.log('\n The address does not have mosaic address restrictions assigned.');
+      console.log(
+        '\n The address does not have mosaic address restrictions assigned.',
+      );
     }
   },
   (err) => console.log(err),

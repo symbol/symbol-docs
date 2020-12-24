@@ -26,20 +26,31 @@ const validTransaction = (transaction, publicAccount) => {
     transaction.signer.equals(publicAccount) &&
     transaction.mosaics.length === 1 &&
     transaction.mosaics[0].id.equals(
-      new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A') || transaction.mosaics[0].id.equals(new symbol_sdk_1.NamespaceId('symbol.xym')),
+      new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A') ||
+        transaction.mosaics[0].id.equals(
+          new symbol_sdk_1.NamespaceId('symbol.xym'),
+        ),
     ) &&
-    transaction.mosaics[0].amount.compare(symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6))) < 0
+    transaction.mosaics[0].amount.compare(
+      symbol_sdk_1.UInt64.fromUint(100 * Math.pow(10, 6)),
+    ) < 0
   );
 };
 const cosignAggregateBondedTransaction = (transaction, account) => {
-  const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(transaction);
+  const cosignatureTransaction = symbol_sdk_1.CosignatureTransaction.create(
+    transaction,
+  );
   return account.signCosignatureTransaction(cosignatureTransaction);
 };
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with private key
-const privateKey = '0000000000000000000000000000000000000000000000000000000000000000';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '0000000000000000000000000000000000000000000000000000000000000000';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
@@ -56,9 +67,13 @@ listener.open().then(() => {
           validTransaction(_.innerTransactions[0], account.publicAccount) ||
           validTransaction(_.innerTransactions[1], account.publicAccount),
       ),
-      operators_1.map((transaction) => cosignAggregateBondedTransaction(transaction, account)),
+      operators_1.map((transaction) =>
+        cosignAggregateBondedTransaction(transaction, account),
+      ),
       operators_1.mergeMap((signedCosignatureTransaction) =>
-        transactionHttp.announceAggregateBondedCosignature(signedCosignatureTransaction),
+        transactionHttp.announceAggregateBondedCosignature(
+          signedCosignatureTransaction,
+        ),
       ),
     )
     .subscribe(

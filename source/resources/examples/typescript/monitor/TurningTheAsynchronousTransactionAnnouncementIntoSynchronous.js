@@ -20,10 +20,14 @@ Object.defineProperty(exports, '__esModule', { value: true });
 const rxjs_1 = require('rxjs');
 const operators_1 = require('rxjs/operators');
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
 // replace with recipient address
 const rawRecipientAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
-const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(rawRecipientAddress);
+const recipientAddress = symbol_sdk_1.Address.createFromRawAddress(
+  rawRecipientAddress,
+);
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 // replace with symbol.xym id
@@ -31,19 +35,34 @@ const networkCurrencyMosaicId = new symbol_sdk_1.MosaicId('5E62990DCAC5BE8A');
 // replace with network currency divisibility
 const networkCurrencyDivisibility = 6;
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(
-  symbol_sdk_1.Deadline.create(),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
   recipientAddress,
-  [new symbol_sdk_1.Mosaic(networkCurrencyMosaicId, symbol_sdk_1.UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)))],
+  [
+    new symbol_sdk_1.Mosaic(
+      networkCurrencyMosaicId,
+      symbol_sdk_1.UInt64.fromUint(
+        10 * Math.pow(10, networkCurrencyDivisibility),
+      ),
+    ),
+  ],
   symbol_sdk_1.EmptyMessage,
   networkType,
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with sender private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 /* end block 01 */
 /* start block 02 */
 const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
@@ -51,7 +70,10 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
-const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
+const transactionService = new symbol_sdk_1.TransactionService(
+  transactionHttp,
+  receiptHttp,
+);
 listener.open().then(() => {
   rxjs_1
     .merge(

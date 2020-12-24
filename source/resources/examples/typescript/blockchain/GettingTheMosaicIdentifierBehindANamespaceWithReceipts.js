@@ -19,26 +19,41 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 const operators_1 = require('rxjs/operators');
 const symbol_sdk_1 = require('symbol-sdk');
+// Retrieve from node's /network/properties or RepositoryFactory
+const epochAdjustment = 123456789;
 /* start block 01 */
-const aliasedMosaic = new symbol_sdk_1.Mosaic(new symbol_sdk_1.NamespaceId('symbol.xym'), symbol_sdk_1.UInt64.fromUint(1000000));
+const aliasedMosaic = new symbol_sdk_1.Mosaic(
+  new symbol_sdk_1.NamespaceId('symbol.xym'),
+  symbol_sdk_1.UInt64.fromUint(1000000),
+);
 /* end block 01 */
 /* start block 02 */
 // replace with network type
 const networkType = symbol_sdk_1.NetworkType.TEST_NET;
 const transferTransaction = symbol_sdk_1.TransferTransaction.create(
-  symbol_sdk_1.Deadline.create(),
-  symbol_sdk_1.Address.createFromRawAddress('TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I'),
+  symbol_sdk_1.Deadline.create(epochAdjustment),
+  symbol_sdk_1.Address.createFromRawAddress(
+    'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I',
+  ),
   [aliasedMosaic],
   symbol_sdk_1.PlainMessage.create('Test aliased mosaic'),
   networkType,
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with sender private key
-const privateKey = '1111111111111111111111111111111111111111111111111111111111111111';
-const account = symbol_sdk_1.Account.createFromPrivateKey(privateKey, networkType);
+const privateKey =
+  '1111111111111111111111111111111111111111111111111111111111111111';
+const account = symbol_sdk_1.Account.createFromPrivateKey(
+  privateKey,
+  networkType,
+);
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash = '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(transferTransaction, networkGenerationHash);
+const networkGenerationHash =
+  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+const signedTransaction = account.sign(
+  transferTransaction,
+  networkGenerationHash,
+);
 console.log(signedTransaction.hash);
 /* end block 02 */
 /* start block 03 */
@@ -48,12 +63,17 @@ const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const listener = repositoryFactory.createListener();
-const transactionService = new symbol_sdk_1.TransactionService(transactionHttp, receiptHttp);
+const transactionService = new symbol_sdk_1.TransactionService(
+  transactionHttp,
+  receiptHttp,
+);
 listener.open().then(() => {
   transactionService
     .announce(signedTransaction, listener)
     .pipe(
-      operators_1.mergeMap((transaction) => transactionService.resolveAliases([transaction.transactionInfo.hash])),
+      operators_1.mergeMap((transaction) =>
+        transactionService.resolveAliases([transaction.transactionInfo.hash]),
+      ),
       operators_1.map((transactions) => transactions[0]),
     )
     .subscribe(
