@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-27 12:49+0000\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,27 +22,27 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/cryptography.rst:12
+#: ../../source/concepts/cryptography.rst:36
 msgid "Cryptography"
 msgstr "暗号理論"
 
-#: ../../source/concepts/cryptography.rst:14
+#: ../../source/concepts/cryptography.rst:38
 msgid ""
 "|codename| uses **elliptic curve cryptography** to verify the data integrity"
 " and to authenticate the signer's identity."
 msgstr "|codename| はデータの整合性を検証し、署名者の身元を認証するために **楕円曲線暗号** を使用します。"
 
-#: ../../source/concepts/cryptography.rst:20
+#: ../../source/concepts/cryptography.rst:44
 msgid "Key pair"
 msgstr "キーペア"
 
-#: ../../source/concepts/cryptography.rst:22
+#: ../../source/concepts/cryptography.rst:46
 msgid ""
 "Elliptic curve cryptography is an approach to public key cryptography. The "
 "cryptographic system uses **pairs of keys**:"
 msgstr "楕円曲線暗号は公開鍵暗号のアプローチです。暗号化システムは **キーペア** を使用します:"
 
-#: ../../source/concepts/cryptography.rst:25
+#: ../../source/concepts/cryptography.rst:49
 msgid ""
 "**Private key**: A random 256-bit integer used to sign :ref:`entities "
 "<verifiable-entity>` known by the owner."
@@ -50,14 +50,14 @@ msgstr ""
 "**秘密鍵**: :ref:`エンティティ <verifiable-entity>` に署名するために使用する、所有者が知っているランダムな "
 "256-bit 整数"
 
-#: ../../source/concepts/cryptography.rst:27
+#: ../../source/concepts/cryptography.rst:51
 msgid ""
 "**Public key**: The public identifier of the key pair, which can be "
 "disseminated widely. It is used to prove that the entity was signed with the"
 " paired private key."
 msgstr "**公開鍵**: 広く普及させることのできるキーペアの公開識別子です。対となる秘密鍵でエンティティが署名されていることを証明します。"
 
-#: ../../source/concepts/cryptography.rst:29
+#: ../../source/concepts/cryptography.rst:53
 msgid ""
 "The public key is cryptographically derived from the private key. In "
 "particular, |codename| uses the |edwards| with the digital signature "
@@ -66,7 +66,7 @@ msgstr ""
 "公開鍵は暗号理論によって秘密鍵から導出されます。具体的には |codename| は |edwards| を |Ed25519| "
 "デジタル署名アルゴリズムと **SHA-512** ハッシュアルゴリズムを共に使用します。"
 
-#: ../../source/concepts/cryptography.rst:32
+#: ../../source/concepts/cryptography.rst:56
 msgid ""
 "You can find the |implementation-derivation| under the ``crypto`` module of "
 ":doc:`catapult-server <../server>`."
@@ -74,11 +74,11 @@ msgstr ""
 ":doc:`catapult-server <../server>` の ``crypto`` モジュール下に |implementation-"
 "derivation| があります。"
 
-#: ../../source/concepts/cryptography.rst:36
+#: ../../source/concepts/cryptography.rst:60
 msgid "Signature"
 msgstr "署名"
 
-#: ../../source/concepts/cryptography.rst:38
+#: ../../source/concepts/cryptography.rst:62
 msgid ""
 "With a private key, the algorithm can sign messages producing 64-byte "
 "signatures. A signature is used to validate that a given key pair signed an "
@@ -86,7 +86,7 @@ msgid ""
 msgstr ""
 "秘密鍵を使用して、アルゴリズムは64バイトの署名を生成するメッセージに署名できます。署名は、公開鍵を持つ特定のキーペアがエンティティに署名したことの検証に使用します。"
 
-#: ../../source/concepts/cryptography.rst:41
+#: ../../source/concepts/cryptography.rst:65
 msgid ""
 "You can find the implementation to |implementation-signature| and "
 "|implementation-verification| under the ``crypto`` module of :doc:`catapult-"
@@ -95,36 +95,36 @@ msgstr ""
 "実装は |implementation-signature| と :doc:`catapult-server <../server>` の "
 "``crypto`` モジュールの下で |implementation-verification| にあります。"
 
-#: ../../source/concepts/cryptography.rst:47
+#: ../../source/concepts/cryptography.rst:71
 msgid "Address"
 msgstr "アドレス"
 
-#: ../../source/concepts/cryptography.rst:49
+#: ../../source/concepts/cryptography.rst:73
 msgid ""
 "Public keys can be shared in a shorter form as addresses. A |codename| "
 "address is a **Base32 encoded triplet** consisting of:"
 msgstr ""
 "公開鍵はアドレスの短い形式で共有できます。 |codename| アドレスは次のものからなる **Base32 エンコードされたトリプレット** です:"
 
-#: ../../source/concepts/cryptography.rst:52
+#: ../../source/concepts/cryptography.rst:76
 msgid "The network byte."
 msgstr "ネットワークバイト"
 
-#: ../../source/concepts/cryptography.rst:53
+#: ../../source/concepts/cryptography.rst:77
 msgid "The 160-bit hash of the account's public key."
 msgstr "アカウントの公開鍵の 160-bit ハッシュ"
 
-#: ../../source/concepts/cryptography.rst:54
+#: ../../source/concepts/cryptography.rst:78
 msgid ""
 "The 3 byte checksum, to allow the quick recognition of mistyped addresses."
 msgstr "アドレスのミスタイプを素早く確認するための 3 byte チェックサム"
 
-#: ../../source/concepts/cryptography.rst:56
+#: ../../source/concepts/cryptography.rst:80
 msgid ""
 "The following steps are performed to |implementation-public-key-address|:"
 msgstr "次の手順を実行します |implementation-public-key-address|:"
 
-#: ../../source/concepts/cryptography.rst:80
+#: ../../source/concepts/cryptography.rst:104
 msgid ""
 "As you can see, it is possible to create an address without interacting with"
 " the blockchain. In fact, the blockchain only tracks addresses and public "
@@ -132,6 +132,6 @@ msgid ""
 msgstr ""
 "上記の説明通り、ブロックチェーンと疎通せずともアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。"
 
-#: ../../source/concepts/cryptography.rst:107
+#: ../../source/concepts/cryptography.rst:131
 msgid "Continue: :doc:`Block <block>`."
 msgstr "次項: :doc:`ブロック <block>`"

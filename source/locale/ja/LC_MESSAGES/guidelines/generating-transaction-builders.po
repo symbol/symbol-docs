@@ -1,32 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-06-04 17:23+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:36
 msgid "Generating transaction builders"
 msgstr "トランザクションビルダの生成"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:38
-msgid "Learn how to generate transaction builders for your target SDK language."
+msgid ""
+"Learn how to generate transaction builders for your target SDK language."
 msgstr "ターゲットとする SDK 用言語のトランザクションビルダを生成する方法を学習します。"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:42
@@ -35,11 +36,10 @@ msgstr "背景"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:44
 msgid ""
-"The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines "
-"the protocol to serialize and deserialize |codename| entities. The "
-"library comes with code generators for different languages. SDKs and "
-"applications use the generated code to interact with REST transaction "
-"endpoint."
+"The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
+"protocol to serialize and deserialize |codename| entities. The library comes"
+" with code generators for different languages. SDKs and applications use the"
+" generated code to interact with REST transaction endpoint."
 msgstr ""
 "`catbuffer ライブラリ <https://github.com/nemtech/catbuffer>`_ は |codename| "
 "のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。SDK とアプリケーションは REST "
@@ -59,10 +59,9 @@ msgstr "**効率的なメモリ使用**"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:58
 msgid ""
-"Large networks compute a large number of transactions. Working with "
-"binary optimized in size makes the communication faster. Furthermore, "
-"reading entities from memory buffers—or just a part of them—is memory "
-"efficient."
+"Large networks compute a large number of transactions. Working with binary "
+"optimized in size makes the communication faster. Furthermore, reading "
+"entities from memory buffers—or just a part of them—is memory efficient."
 msgstr ""
 "大きなネットワークはたくさんのトランザクションを計算します。バイナリに最適化された仕事はコミュニケーションを高速にします。さらに、メモリバッファからのエンティティ"
 " - またはそれらの一部 - の読み込みはメモリを効率的に使用します。"
@@ -72,18 +71,17 @@ msgid "**Flexibility**"
 msgstr "**柔軟性**"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:64
-#, fuzzy
 msgid ""
 "REST `transaction endpoints <https://docs.symbolplatform.com/symbol-"
 "openapi/#operation/announceTransaction>`_ handle the calls to update the "
-"blockchain state. The serialized payload of a transaction is appended to "
-"the body of the POST call. These endpoints allow the addition of new "
+"blockchain state. The serialized payload of a transaction is appended to the"
+" body of the POST call. These endpoints allow the addition of new "
 "functionality to the server-side without modifying the API contract."
 msgstr ""
-"REST `トランザクションエンドポイント <https://nemtech.github.io/symbol-"
+"REST `トランザクションエンドポイント <https://docs.symbolplatform/symbol-"
 "openapi/#operation/announceTransaction>`_ "
-"はブロックチェーンの状態を更新するための呼び出しをハンドリングします。シリアライズされたトランザクションのペイロードは POST "
-"呼び出しのボディに追加されます。これらのエンドポイントにより API の規約を変更せずに、サーバ側に新しい機能を追加することができます。"
+"はブロックチェーンの状態を更新する呼び出しをハンドリングします。シリアライズされたトランザクションのペイロードは POST "
+"呼び出しのボディに追加されます。これらのエンドポイントにより、API 規約を変更せずにサーバ側へ新しい機能を追加することができます。"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:68
 msgid "**Reusability**"
@@ -95,16 +93,16 @@ msgid ""
 "which is particularly desirable in highly-secure environments. Besides, "
 "sharing a common codebase enables the addition of new features with less "
 "effort."
-msgstr "アプリケーションは依存性の管理することなく、生成されたコードを組み込むことができ、安全性の高い環境において、特に望ましいです。さらに共通のコードベースを共有することは、より少ない労力で新しい機能を追加することを可能にします。"
+msgstr ""
+"アプリケーションは依存性の管理することなく、生成されたコードを組み込むことができ、安全性の高い環境において、特に望ましいです。さらに共通のコードベースを共有することは、より少ない労力で新しい機能を追加することを可能にします。"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:73
-#, fuzzy
 msgid ""
 "The `schemas <https://github.com/nemtech/catbuffer/tree/main/schemas>`_ "
-"define the entities' data structure. The library generates the leanest "
-"code necessary to serialize and deserialize defined entities."
+"define the entities' data structure. The library generates the leanest code "
+"necessary to serialize and deserialize defined entities."
 msgstr ""
-"`スキーマ <https://github.com/nemtech/catbuffer/tree/master/schemas>`_ "
+"`スキーマ <https://github.com/nemtech/catbuffer/tree/main/schemas>`_ "
 "はエンティティのデータ構造を定義します。このライブラリは定義済みエンティティを、シリアライズまたはデシリアライズするために必要な最低限のコードを生成します。"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:78
@@ -131,31 +129,31 @@ msgstr "使い方"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:103
 msgid ""
-"Under the ``schemas`` folder of the catbuffer repository, you can find "
-"the entities' data structure. With the help of a code generator, you can "
-"produce the leanest code necessary to serialize and deserialize those "
-"entities."
+"Under the ``schemas`` folder of the catbuffer repository, you can find the "
+"entities' data structure. With the help of a code generator, you can produce"
+" the leanest code necessary to serialize and deserialize those entities."
 msgstr ""
 "catbuffer リポジトリの ``schemas`` "
 "フォルダーの下にエンティティのデータ構造があります。コードジェネレーターを使用すると、これらのエンティティをシリアル化および逆シリアル化するために必要な、最もリーンなコードを生成できます。"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:105
 msgid ""
-"For example, run the following command to generate C++ transaction "
-"builders for a :ref:`TransferTransaction <transfer-transaction>`:"
+"For example, run the following command to generate C++ transaction builders "
+"for a :ref:`TransferTransaction <transfer-transaction>`:"
 msgstr ""
 "例えば、次のコマンドを実行して :ref:`TransferTransaction <transfer-transaction>` の C++ "
 "トランザクションビルダを生成します:"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:111
 msgid ""
-"You can also generate code for all the schemas running the following "
-"command under the ``catbuffer-generators`` directory:"
-msgstr "``catbuffer-generators`` ディレクトリで次のコマンドを実行することで、すべてのスキーマのコードを生成することもできます:"
+"You can also generate code for all the schemas running the following command"
+" under the ``catbuffer-generators`` directory:"
+msgstr ""
+"``catbuffer-generators`` ディレクトリで次のコマンドを実行することで、すべてのスキーマのコードを生成することもできます:"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:117
 msgid ""
 "The generator creates a new file for every schema under the "
 "``catbuffer/_generated/cpp_builder`` folder."
-msgstr "ジェネレータは ``catbuffer/_generated/cpp_builder`` フォルダの下に各スキーマの新しいファイルを作成します。"
-
+msgstr ""
+"ジェネレータは ``catbuffer/_generated/cpp_builder`` フォルダの下に各スキーマの新しいファイルを作成します。"

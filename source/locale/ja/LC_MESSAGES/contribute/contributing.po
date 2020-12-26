@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/contribute/contributing.rst:36
 msgid "Guidelines"
@@ -28,19 +28,19 @@ msgstr "ガイドライン"
 #: ../../source/contribute/contributing.rst:38
 msgid ""
 "First off, thank you for considering contributing to |codename|! Follow "
-"these guidelines for contributing to |codename| projects, achieving the "
-"best quality with the less effort."
+"these guidelines for contributing to |codename| projects, achieving the best"
+" quality with the less effort."
 msgstr ""
 "まずはじめに、|codename| への貢献に感謝します。これらのガイドラインに従って、|codename| "
 "プロジェクトに貢献し、より少ない労力で最高の品質を達成してください。"
 
 #: ../../source/contribute/contributing.rst:41
-#, fuzzy
 msgid ""
 "If you want to contribute to an existent project, read as well the "
-"``CONTRIBUTING.md`` file that you will find at the root-level folder of "
-"the project."
-msgstr "既存のプロジェクトに貢献したい場合は、そのリポジトリのプロジェクトフォルダのルートにある CONTRIBUTING.md ファイルを読んでください"
+"``CONTRIBUTING.md`` file that you will find at the root-level folder of the "
+"project."
+msgstr ""
+"既存のプロジェクトに貢献する場合は、プロジェクトのルートレベルのフォルダーにある ``CONTRIBUTING.md`` ファイルを読んでください。"
 
 #: ../../source/contribute/contributing.rst:57
 msgid "Server"
@@ -76,8 +76,8 @@ msgstr ":doc:`SDK のドキュメント <../guidelines/sdk-documentation>`"
 
 #: ../../source/contribute/contributing.rst:69
 msgid ""
-":doc:`Generating transaction builders <../guidelines/generating-"
-"transaction-builders>`"
+":doc:`Generating transaction builders <../guidelines/generating-transaction-"
+"builders>`"
 msgstr ":doc:`トランザクションビルダの生成 <../guidelines/generating-transaction-builders>`"
 
 #: ../../source/contribute/contributing.rst:73
@@ -101,4 +101,3 @@ msgid ""
 ":doc:`Translating the documentation <../guidelines/translating-the-"
 "documentation>`"
 msgstr ":doc:`ドキュメントの翻訳 <../guidelines/translating-the-documentation>`"
-

@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:42
 msgid "Creating an escrow contract"
@@ -32,17 +32,17 @@ msgstr "エスクローコントラクトの作成でアグリゲートボンド
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:48
 msgid "Use case"
-msgstr ""
+msgstr "ユースケース"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:50
 msgid ""
 "An **escrow** is a *contractual arrangement* in which a *third party "
 "receives and disburses money* or documents for the *primary transacting "
-"parties*. This disbursement is dependent on the *conditions agreed by the"
-" transacting parties*, or an *account established by a broker for holding"
-" funds* on behalf of the broker’s principal or some other person until "
-"the consummation or termination of a transaction. See the full "
-"description at |escrow_wikipedia|."
+"parties*. This disbursement is dependent on the *conditions agreed by the "
+"transacting parties*, or an *account established by a broker for holding "
+"funds* on behalf of the broker’s principal or some other person until the "
+"consummation or termination of a transaction. See the full description at "
+"|escrow_wikipedia|."
 msgstr ""
 "**エスクロー** とは *第三者が主要取引当事者のために、金銭または書類を受け取り・支払い* をする *契約上の取り決め* です。この支払いは "
 "*取引当事者によって合意された条件* または 取引の完了または終了までの間、ブローカーの本人または他の人物に代わって "
@@ -51,8 +51,8 @@ msgstr ""
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:55
 msgid ""
-"For this example, imagine that the two parties agree on a virtual "
-"service, implying that the escrow can be executed immediately:"
+"For this example, imagine that the two parties agree on a virtual service, "
+"implying that the escrow can be executed immediately:"
 msgstr "この例では2つの当事者が実質的なサービスに同意すると仮定して、エスクローが即時に実行できることを意味します:"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:57
@@ -97,8 +97,8 @@ msgstr ""
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:76
 msgid ""
-"**third party receives and disburses money**: There is no third party, we"
-" are going to use blockchain technology."
+"**third party receives and disburses money**: There is no third party, we "
+"are going to use blockchain technology."
 msgstr "**第三者がお金を受け取って支払いをする**: 第三者は介在しない、私たちはブロックチェーン技術を使うつもりです。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:78
@@ -109,14 +109,14 @@ msgstr "**主要取引当事者**: |codename| アカウントが参加者を表�
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:80
 msgid ""
-"**conditions agreed to by the transacting parties**: When every "
-"participant signs the AggregateTransaction."
+"**conditions agreed to by the transacting parties**: When every participant "
+"signs the AggregateTransaction."
 msgstr "**トランザクション当事者によって合意される条件**: すべての参加者が AggregateTransaction に署名するとき。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:82
 msgid ""
-"**account established by a broker for holding funds**: There will not be "
-"an intermediate account, the exchange will happen atomically using an "
+"**account established by a broker for holding funds**: There will not be an "
+"intermediate account, the exchange will happen atomically using an "
 "AggregateTransaction."
 msgstr ""
 "**資産を保持するためにブローカーによって確立された口座**: 中間口座はありません、交換は AggregateTransaction "
@@ -124,8 +124,8 @@ msgstr ""
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:84
 msgid ""
-"**until the consummation or termination of a transaction**: The "
-"transaction gets included in a block or expires."
+"**until the consummation or termination of a transaction**: The transaction "
+"gets included in a block or expires."
 msgstr "**取引の完了または終了まで**: トランザクションはブロックに含まれるか期限切れになります。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:88
@@ -175,24 +175,8 @@ msgid "Amount"
 msgstr "総量"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
-msgid "MosaicId"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
 msgid "Description"
 msgstr "説明"
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
-msgid "Alice"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
-msgid "100"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
-msgid "|networkcurrency|"
-msgstr ""
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
 msgid "Native currency mosaic"
@@ -203,14 +187,6 @@ msgid "Ticket distributor"
 msgstr "チケット販売者"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
-msgid "1"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
-msgid "``7cdf3b117a3c40cc``"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:1
 msgid "Represents a museum ticket."
 msgstr "ミュージアムチケットの表現"
 
@@ -218,8 +194,8 @@ msgstr "ミュージアムチケットの表現"
 msgid ""
 "Before continuing, :ref:`create the two accounts <setup-creating-a-test-"
 "account>` loaded with |networkcurrency|. You should also :doc:`create a "
-"mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's "
-"account. This new mosaic will represent the ticket."
+"mosaic <../mosaic/creating-a-mosaic>` with the ticket distributor's account."
+" This new mosaic will represent the ticket."
 msgstr ""
 "継続する前に |networkcurrency| を保有した :ref:`アカウントを２つ作成 <setup-creating-a-test-"
 "account>` します。チケット販売者アカウントで :doc:`モザイクを作成 <../mosaic/creating-a-mosaic>` "
@@ -249,78 +225,53 @@ msgstr ""
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:121
 msgid ""
-"The museum ticket does not have the id ``7cdf3b117a3c40cc`` in your "
-"network. Replace the mosaic identifier for the one you have created in "
-"the previous step."
+"The museum ticket does not have the id ``7cdf3b117a3c40cc`` in your network."
+" Replace the mosaic identifier for the one you have created in the previous "
+"step."
 msgstr ""
 "博物館のチケットはネットワーク内の ID ``7cdf3b117a3c40cc`` "
 "を持っていません。前の手順で作成したものにモザイク識別子を置き換えてください。"
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:125
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:147
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:167
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.ts`"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:130
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:152
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:172
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.js`"
-msgstr ""
-
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:135
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:157
-#: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:177
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CreatingAnEscrowContractWithAggregateBondedTransaction.java`"
-msgstr ""
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:140
 msgid ""
 "2. Wrap the defined transactions in an :ref:`AggregateTransaction "
 "<aggregate-transaction>` and sign it with Alice's account. An "
-"AggregateTransaction is *complete* if before announcing it to the "
-"network, all required cosigners have signed it. If valid, it will be "
-"included in a block. In case that signatures are required from other "
-"participants—the ticket distributor—it is considered *bonded*."
+"AggregateTransaction is *complete* if before announcing it to the network, "
+"all required cosigners have signed it. If valid, it will be included in a "
+"block. In case that signatures are required from other participants—the "
+"ticket distributor—it is considered *bonded*."
 msgstr ""
 "2. 定義されたトランザクションを :ref:`AggregateTransaction <aggregate-transaction>` "
-"でラップして署名します。AggregateTransaction はネットワークに通知する前に必要なすべての署名者が署名した場合に "
-"*コンプリート* です。妥当な場合はブロックに含まれます。他の参加者からの署名が必要なトランザクションがネットワークにアナウンスされた場合は "
-"*ボンデッド* と見なされます。"
+"でラップして署名します。AggregateTransaction はネットワークに通知する前に必要なすべての署名者が署名した場合に *コンプリート* "
+"です。妥当な場合はブロックに含まれます。他の参加者からの署名が必要なトランザクションがネットワークにアナウンスされた場合は *ボンデッド* "
+"と見なされます。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:162
 msgid ""
 "3. When an **AggregateTransaction is bonded**, Alice will need to lock "
-"``10`` |networkcurrency| to prevent spamming the network. Once the ticket"
-" distributor signs the AggregateTransaction, the amount of locked "
+"``10`` |networkcurrency| to prevent spamming the network. Once the ticket "
+"distributor signs the AggregateTransaction, the amount of locked "
 "|networkcurrency| becomes available again on Alice's account, and the "
 "exchange will get through."
 msgstr ""
 "3. **AggregateTransaction がボンデッド** であるとき、Alice はネットワークスパムを防止するための ``10`` "
-"|networkcurrency| でロックする必要があります。チケット販売者が AggregateTransaction "
-"に署名すると、ロックされた |networkcurrency| の総量が Alice のアカウントで再び利用可能になり、交換が完了します。"
+"|networkcurrency| でロックする必要があります。チケット販売者が AggregateTransaction に署名すると、ロックされた "
+"|networkcurrency| の総量が Alice のアカウントで再び利用可能になり、交換が完了します。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:182
 msgid ""
-"The distributor has not signed the AggregateBondedTransaction yet, so the"
-" exchange has not been completed."
+"The distributor has not signed the AggregateBondedTransaction yet, so the "
+"exchange has not been completed."
 msgstr "販売者はまだ AggregateBondedTransaction に署名していないため、交換は完了していません。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:184
 msgid ""
-"Copy the **AggregateTransaction hash** from (2), and check how to cosign "
-"the AggregateTransaction by :doc:`following the next guide <signing-"
-"announced-aggregate-bonded-transactions>`."
+"Copy the **AggregateTransaction hash** from (2), and check how to cosign the"
+" AggregateTransaction by :doc:`following the next guide <signing-announced-"
+"aggregate-bonded-transactions>`."
 msgstr ""
-"**AggregateTransaction のハッシュ** を (2) からコピーして :doc:`次のガイド <signing-"
-"announced-aggregate-bonded-transactions>` で AggregateTransaction "
-"に署名をする方法を確認してください。"
+"**AggregateTransaction のハッシュ** を (2) からコピーして :doc:`次のガイド <signing-announced-"
+"aggregate-bonded-transactions>` で AggregateTransaction に署名をする方法を確認してください。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:188
 msgid "Is it possible without aggregate transactions?"
@@ -331,7 +282,8 @@ msgid "**It is not secure**, since:"
 msgstr "**これは安全ではありません** なぜなら:"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:192
-msgid "Alice could decide not to pay the distributor after receiving the ticket."
+msgid ""
+"Alice could decide not to pay the distributor after receiving the ticket."
 msgstr "Alice はチケットを受け取った後に配給業者に支払いをしない可能性があります。"
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:193
@@ -342,17 +294,7 @@ msgstr "配給業者は支払いを受領した後にチケットを送付しな
 
 #: ../../source/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.rst:195
 msgid ""
-"Using the AggregateTransaction feature, we ensure that multiple "
-"transactions are executed at the same time when all the participants "
-"agree."
-msgstr "AggregateTransaction 機能を使用して、すべての参加者が合意したときに複数のトランザクションが同時に実行されるようにします。"
-
-#~ msgid "Background"
-#~ msgstr "背景"
-
-#~ msgid "What's next?"
-#~ msgstr "次は？"
-
-#~ msgid "Try to swap mosaics adding a third participant."
-#~ msgstr "3人目の関係者を追加して、モザイクの交換を試してみてください。"
-
+"Using the AggregateTransaction feature, we ensure that multiple transactions"
+" are executed at the same time when all the participants agree."
+msgstr ""
+"AggregateTransaction 機能を使用して、すべての参加者が合意したときに複数のトランザクションが同時に実行されるようにします。"

@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:37+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:42
 msgid "Creating a multi-level multisig account"
@@ -34,7 +34,7 @@ msgstr "このガイドでは、複数のマルチシグアカウントを接続
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:48
 msgid "Use case"
-msgstr ""
+msgstr "ユースケース"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:50
 msgid ""
@@ -58,12 +58,11 @@ msgstr "3 階層マルチシグアカウントの例"
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:60
 msgid ""
 "For example, if the **account #5** initiates an "
-"**AggregateBondedTransaction** involving the **account #1**, the accounts"
-" **#7 or #8** and **#4** should cosign the transaction in order to be "
+"**AggregateBondedTransaction** involving the **account #1**, the accounts "
+"**#7 or #8** and **#4** should cosign the transaction in order to be "
 "included in a block."
 msgstr ""
-"例えば、 **アカウント #5** が **アカウント #1** を含む **AggregateBondedTransaction** を開始する"
-"\n"
+"例えば、 **アカウント #5** が **アカウント #1** を含む **AggregateBondedTransaction** を開始する\n"
 "場合、ブロックに取り込まれるためには、アカウント **#7 または #8** および **#4** がトランザクションに署名する必要があります。"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:66
@@ -82,14 +81,14 @@ msgstr ":doc:`マルチシグアカウントへの変換 <creating-a-multisig-ac
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:74
 msgid ""
-"Create :doc:`accounts <../account/creating-an-account>` for every "
-"multisig level."
+"Create :doc:`accounts <../account/creating-an-account>` for every multisig "
+"level."
 msgstr "各マルチシグレベルの :doc:`アカウント <../account/creating-an-account>` を作成する。"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:75
 msgid ""
-"Load the root multisig account with enough |networkcurrency| to pay for "
-"the transaction fee."
+"Load the root multisig account with enough |networkcurrency| to pay for the "
+"transaction fee."
 msgstr "ルートマルチシグアカウントへ手数料を支払うために十分な |networkcurrency| を入金してください。"
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:79
@@ -99,24 +98,6 @@ msgstr "方法 #1: SDK を使用する"
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:81
 msgid "Define the **multisig account #2**."
 msgstr "**マルチシグアカウント #2** の定義"
-
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:85
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:99
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:113
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:128
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.ts`"
-msgstr ""
-
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:90
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:104
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:118
-#: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:133
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/multisig/CreatingAMultilevelMultisigAccount.js`"
-msgstr ""
 
 #: ../../source/guides/multisig/creating-a-multi-level-multisig-account.rst:95
 msgid "Define the **multisig account #3**."
@@ -140,13 +121,9 @@ msgstr ""
 msgid ""
 "5. The potential cosignatories must opt-in to become cosignatories. "
 ":doc:`Cosign the announced AggregateTransaction <../aggregate/signing-"
-"announced-aggregate-bonded-transactions>` with the accounts **#5**, "
-"**#6**, **#7**, **#8,** and **#4**."
+"announced-aggregate-bonded-transactions>` with the accounts **#5**, **#6**, "
+"**#7**, **#8,** and **#4**."
 msgstr ""
 "5. 署名者たちは署名者になるためにオプトインしなければなりません。アカウント #5, #6, #7, #8, #4 は "
 ":doc:`AggregateTransaction に署名 <../aggregate/signing-announced-aggregate-"
 "bonded-transactions>` します。"
-
-#~ msgid "Background"
-#~ msgstr "背景"
-

@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-03-18 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:42
 msgid "Getting the amount of assets sent to an account"
@@ -45,40 +45,21 @@ msgstr ":ref:`アカウント <setup-creating-a-test-account>` を作成しま�
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:52
 msgid ""
-"Send :doc:`mosaics <../transfer/sending-a-transfer-transaction>` from the"
-" account created to another account."
+"Send :doc:`mosaics <../transfer/sending-a-transfer-transaction>` from the "
+"account created to another account."
 msgstr ""
-"作成したアカウントから他のアカウントへ :doc:`モザイク <../transfer/sending-a-transfer-"
-"transaction>` を送信する"
+"作成したアカウントから他のアカウントへ :doc:`モザイク <../transfer/sending-a-transfer-transaction>`"
+" を送信する"
 
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:56
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:60
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/account/GettingTheAmountOfAssetsSentToAnAccount.ts`"
-msgstr ""
-
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:65
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/account/GettingTheAmountOfAssetsSentToAnAccount.js`"
-msgstr ""
-
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:70
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/account/GettingTheAmountOfAssetsSentToAnAccount.java`"
-msgstr ""
-
 #: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:75
 msgid ""
-"If you want to check another :doc:`mosaic <../../concepts/mosaic>` "
-"different than the native currency, change ``mosaicId`` and "
-"``divisibility`` for the target mosaic properties."
+"If you want to check another :doc:`mosaic <../../concepts/mosaic>` different"
+" than the native currency, change ``mosaicId`` and ``divisibility`` for the "
+"target mosaic properties."
 msgstr ""
 "もし他のネイティブ通貨とは異なる :doc:`モザイク <../../concepts/mosaic>` "
 "を確認したい場合は、対象とするモザイクプロパティのために ``mosaicId`` と ``divisibility`` を変えてください。"
-

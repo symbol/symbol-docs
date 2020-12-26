@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/mosaic-restriction.rst:36
 msgid "Mosaic Restriction"
@@ -28,17 +28,17 @@ msgstr "モザイク制限"
 
 #: ../../source/concepts/mosaic-restriction.rst:38
 msgid ""
-"Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which"
-" accounts can transact with the asset."
+"Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which "
+"accounts can transact with the asset."
 msgstr "モザイク制限により :doc:`モザイク <mosaic>` 作成者はどのアカウントがアセット取引できるかを決定することができます。"
 
 #: ../../source/concepts/mosaic-restriction.rst:40
 msgid ""
-"This feature has been specifically tailored for **Security Token "
-"Offerings (STO)**. In contrast to the unregulated tokens that were "
-"introduced through ICOs, security tokens are blockchain based "
-"representation of value that is subject to regulation under security "
-"laws, and thus need a way to bypass blockchain autonomy."
+"This feature has been specifically tailored for **Security Token Offerings "
+"(STO)**. In contrast to the unregulated tokens that were introduced through "
+"ICOs, security tokens are blockchain based representation of value that is "
+"subject to regulation under security laws, and thus need a way to bypass "
+"blockchain autonomy."
 msgstr ""
 "この機能は **Security Token Offerings (STO)** 用に特別に調整されています。ICO "
 "を通じて導入された規制されていないトークンとは対照的に、セキュリティトークンはセキュリティ法に基づく規制の対象となる、価値のブロックチェーンベースの表現であるため、ブロックチェーン自治を回避する方法が必要です。"
@@ -46,14 +46,13 @@ msgstr ""
 #: ../../source/concepts/mosaic-restriction.rst:43
 msgid ""
 "Not all the mosaics of a given network will be subject to mosaic "
-"restrictions. The feature will only affect those to which the issuer adds"
-" the ``restrictable`` :ref:`property <mosaic-properties>` explicitly at "
-"the moment of its creation. This property appears disabled by default, as"
-" it is undesirable for autonomous tokens like the public network "
-"currency."
+"restrictions. The feature will only affect those to which the issuer adds "
+"the ``restrictable`` :ref:`property <mosaic-properties>` explicitly at the "
+"moment of its creation. This property appears disabled by default, as it is "
+"undesirable for autonomous tokens like the public network currency."
 msgstr ""
-"特定のネットワークのすべてのモザイクがモザイク制限を受けるわけではありません。この機能は発行時に発行者が明示的に ``restrictable``"
-" :ref:`プロパティ <mosaic-properties>` "
+"特定のネットワークのすべてのモザイクがモザイク制限を受けるわけではありません。この機能は発行時に発行者が明示的に ``restrictable`` "
+":ref:`プロパティ <mosaic-properties>` "
 "を追加したもののみに影響します。このプロパティはパブリックネットワーク通貨のような自律トークンには望ましくないため、デフォルトでは無効になっています。"
 
 #: ../../source/concepts/mosaic-restriction.rst:47
@@ -75,82 +74,58 @@ msgstr "グローバル制限"
 #: ../../source/concepts/mosaic-restriction.rst:55
 msgid ""
 "The mosaic global restrictions are the **network-wide rules** that will "
-"determine whether an account will be able to send or receive a given "
-"mosaic."
+"determine whether an account will be able to send or receive a given mosaic."
 msgstr "モザイクのグローバル制限はアカウントが特定のモザイクを送受信できるかどうかを決定する **ネットワーク全体のルール** です。"
 
 #: ../../source/concepts/mosaic-restriction.rst:57
 msgid ""
-"One mosaic can handle up to ``20`` global restrictions, being this "
-"parameter :ref:`configurable per network <config-network-properties>`. A "
-":ref:`mosaic global restriction <mosaic-global-restriction-transaction>` "
-"is composed of:"
+"One mosaic can handle up to ``20`` global restrictions, being this parameter"
+" :ref:`configurable per network <config-network-properties>`. A :ref:`mosaic"
+" global restriction <mosaic-global-restriction-transaction>` is composed of:"
 msgstr ""
-"一つのモザイクは ``20`` までのグローバル制限を扱うことができます。このパラメータは :ref:`ネットワークごとに設定可能 "
-"<config-network-properties>` です。 :ref:`モザイクグローバル制限 <mosaic-global-"
-"restriction-transaction>` は次で構成されます:"
+"一つのモザイクは ``20`` までのグローバル制限を扱うことができます。このパラメータは :ref:`ネットワークごとに設定可能 <config-"
+"network-properties>` です。 :ref:`モザイクグローバル制限 <mosaic-global-restriction-"
+"transaction>` は次で構成されます:"
 
+#: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
+#: ../../source/concepts/mosaic-restriction.rst:1
+#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Type"
 msgstr "タイプ"
 
+#: ../../source/concepts/mosaic-restriction.rst:1
+#: ../../source/concepts/mosaic-restriction.rst:1
+#: ../../source/concepts/mosaic-restriction.rst:1
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Mosaic Id"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "MosaicId"
-msgstr ""
-
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid ""
-"Identifier of the affected mosaic. The mosaic creator must be the signer "
-"of this transaction."
+"Identifier of the affected mosaic. The mosaic creator must be the signer of "
+"this transaction."
 msgstr "影響を受けるモザイク識別子。モザイク作成者はトランザクションの署名者である必要があります。"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-#, fuzzy
-msgid "Restriction Key"
-msgstr "制限キー"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "uint64"
-msgstr ""
-
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Restriction key."
 msgstr "制限キー"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-#, fuzzy
-msgid "Restriction Value"
-msgstr "制限値"
-
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Restriction value."
 msgstr "制限値"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-#, fuzzy
-msgid "Restriction Type"
-msgstr "制限キー"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid ""
-"Type of constraint to apply. For example, the restriction value should be"
-" equal (EQ). See more :ref:`restriction types <mosaic-restriction-type>`."
+"Type of constraint to apply. For example, the restriction value should be "
+"equal (EQ). See more :ref:`restriction types <mosaic-restriction-type>`."
 msgstr ""
 "適用する制約の種類。たとえば、制限値は等しい(EQ)必要がある場合。もっと詳しく :ref:`制限タイプ <mosaic-restriction-"
 "type>` を参照してください。"
@@ -164,10 +139,10 @@ msgstr "条件を満たすキー識別子と値でタグ付けされたアカウ
 #: ../../source/concepts/mosaic-restriction.rst:71
 msgid ""
 "Additionally, the mosaic creator can define restrictions that depend "
-"directly on global restrictions set on another mosaic—known as "
-"**reference mosaic**. The referenced mosaic and the restricted mosaic do "
-"not necessarily have to be created by the same account, enabling the "
-"delegation of mosaic permissions to a third party."
+"directly on global restrictions set on another mosaic—known as **reference "
+"mosaic**. The referenced mosaic and the restricted mosaic do not necessarily"
+" have to be created by the same account, enabling the delegation of mosaic "
+"permissions to a third party."
 msgstr ""
 "さらに、モザイク作成者は別のモザイク - **参照モザイク** と呼びます - "
 "に設定されたグローバル制限に直接依存する制限を定義できます。参照モザイクと制限付きモザイクは必ずしも同じアカウントで作成する必要はないため、モザイク権限を第三者に委任することができます。"
@@ -178,29 +153,21 @@ msgstr "アドレス制限"
 
 #: ../../source/concepts/mosaic-restriction.rst:78
 msgid ""
-"Enabling accounts to transact with the token is similar to the process of"
-" adding elevated permissions to a user in a company computer network."
-msgstr "トークンを使用して取引するためにアカウントを有効にするのは、会社のコンピュータネットワーク内のユーザーに権限昇格を追加するプロセスに似ています。"
+"Enabling accounts to transact with the token is similar to the process of "
+"adding elevated permissions to a user in a company computer network."
+msgstr ""
+"トークンを使用して取引するためにアカウントを有効にするのは、会社のコンピュータネットワーク内のユーザーに権限昇格を追加するプロセスに似ています。"
 
 #: ../../source/concepts/mosaic-restriction.rst:80
 msgid ""
-"The mosaic creator can **modify the permissions of an account** by "
-"sending a mosaic restriction transaction targeting the account address. "
-"The :ref:`MosaicAddressRestrictionTransaction <mosaic-address-"
-"restriction-transaction>` is composed of:"
+"The mosaic creator can **modify the permissions of an account** by sending a"
+" mosaic restriction transaction targeting the account address. The "
+":ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-"
+"transaction>` is composed of:"
 msgstr ""
-"モザイク作成者はアカウントアドレスを対象としたモザイク制限トランザクションを送信することで **アカウントのアクセス権を変更する** "
-"ことができます。 :ref:`MosaicAddressRestrictionTransaction <mosaic-address-"
-"restriction-transaction>` は以下で構成されています:"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-#, fuzzy
-msgid "Target Address"
-msgstr "影響を受けるアドレス"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "address"
-msgstr ""
+"モザイク作成者はアカウントアドレスを対象としたモザイク制限トランザクションを送信することで **アカウントのアクセス権を変更する** ことができます。 "
+":ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-"
+"transaction>` は以下で構成されています:"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Affected address."
@@ -233,15 +200,15 @@ msgstr "モザイク制限の例"
 #: ../../source/concepts/mosaic-restriction.rst:109
 msgid ""
 "ComfyClothingCompany creates the mosaic ``comfyclothing.shares``. For "
-"regulatory reasons, the company wants only the participants that have "
-"passed the KYC process to buy and transact the asset. Thus, the company "
-"adds the restriction tier ``{comfyclothing.shares, Can_Buy, EQ = 1}`` to "
-"the mosaic ``comfyclothing.shares``."
+"regulatory reasons, the company wants only the participants that have passed"
+" the KYC process to buy and transact the asset. Thus, the company adds the "
+"restriction tier ``{comfyclothing.shares, Can_Buy, EQ = 1}`` to the mosaic "
+"``comfyclothing.shares``."
 msgstr ""
-"ComfyClothingCompany はモザイク ``comfyclothing.shares`` を作成しました。規制上の理由から、同社は "
-"KYC プロセスに合格した参加者だけが、資産の購入および取引をできるように望んでいます。したがって、同社はモザイク "
-"``comfyclothing.shares`` に制限階層 ``{comfyclothing.shares, Can_Buy, EQ = "
-"1}`` を追加しました。"
+"ComfyClothingCompany はモザイク ``comfyclothing.shares`` を作成しました。規制上の理由から、同社は KYC"
+" プロセスに合格した参加者だけが、資産の購入および取引をできるように望んでいます。したがって、同社はモザイク "
+"``comfyclothing.shares`` に制限階層 ``{comfyclothing.shares, Can_Buy, EQ = 1}`` "
+"を追加しました。"
 
 #: ../../source/concepts/mosaic-restriction.rst:113
 msgid ""
@@ -251,10 +218,9 @@ msgid ""
 "MosaicAddressRestrictionTransaction  ``{comfyclothing.shares, Alice, "
 "Can_Buy, 1}``."
 msgstr ""
-"潜在顧客である Alice は ComfyClothingCompany への投資に興味を持っており、彼女は KYC "
-"プロセスを通過します。Alice が検証されると会社は Alice のアカウントに "
-"MosaicAddressRestrictionTransaction で  ``{comfyclothing.shares, Alice, "
-"Can_Buy, 1}`` タグを付けます。"
+"潜在顧客である Alice は ComfyClothingCompany への投資に興味を持っており、彼女は KYC プロセスを通過します。Alice "
+"が検証されると会社は Alice のアカウントに MosaicAddressRestrictionTransaction で  "
+"``{comfyclothing.shares, Alice, Can_Buy, 1}`` タグを付けます。"
 
 #: ../../source/concepts/mosaic-restriction.rst:116
 msgid ""
@@ -281,11 +247,11 @@ msgstr "前例に従って ComfyClothingCompany は KYC プロセスを KYC と 
 
 #: ../../source/concepts/mosaic-restriction.rst:130
 msgid ""
-"The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the"
-" global restriction ``{kyc, Is_Verified, EQ = 1}`` to the mosaic."
+"The KYC provider registers a mosaic named ``kyc`` and adds the mosaic the "
+"global restriction ``{kyc, Is_Verified, EQ = 1}`` to the mosaic."
 msgstr ""
-"KYC プロバイダは ``kyc`` という名前のモザイクを登録し、そのモザイクにグローバル制限 ``{kyc, Is_Verified, EQ "
-"= 1}`` をモザイクに追加します。"
+"KYC プロバイダは ``kyc`` という名前のモザイクを登録し、そのモザイクにグローバル制限 ``{kyc, Is_Verified, EQ = "
+"1}`` をモザイクに追加します。"
 
 #: ../../source/concepts/mosaic-restriction.rst:132
 msgid "The KYC provider also defines the following permission tiers:"
@@ -296,33 +262,12 @@ msgid "Key"
 msgstr "キー"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-#, fuzzy
-msgid "Operator"
-msgstr "プロパティ"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Value"
 msgstr "値"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Is_Verified"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "EQ"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "1"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "The client has issued a valid passport."
 msgstr "クライアントが有効なパスポートを発行しました。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "2"
-msgstr ""
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "The client has issued a valid proof of address and passport."
@@ -331,8 +276,8 @@ msgstr "クライアントは有効な住所証明とパスポートを発行し
 #: ../../source/concepts/mosaic-restriction.rst:141
 msgid ""
 "ComfyClothingCompany decides that only accounts with the restriction ``{ "
-"kyc::Is_Verified, 2}`` should be enabled to transfer ``cc.shares``. For "
-"this reason, the company adds the global mosaic restriction "
+"kyc::Is_Verified, 2}`` should be enabled to transfer ``cc.shares``. For this"
+" reason, the company adds the global mosaic restriction "
 "``{comfyclothing.shares, kyc::Is_Verified, EQ = 2}``."
 msgstr ""
 "ComfyClothingCompany は制限 ``{ kyc::Is_Verified, 2}`` を持つアカウントだけが "
@@ -345,21 +290,20 @@ msgstr "KYC プロバイダーは 3 人の潜在的投資家と出会います�
 
 #: ../../source/concepts/mosaic-restriction.rst:146
 msgid ""
-"Alice provides a valid passport but no proof of address. The KYC provider"
-" awards Alice’s account with the mosaic restriction ``{kyc, Is_Verified, "
+"Alice provides a valid passport but no proof of address. The KYC provider "
+"awards Alice’s account with the mosaic restriction ``{kyc, Is_Verified, "
 "1}``."
 msgstr ""
-"Alice は有効なパスポートを提供しますがアドレスの証明は提供しません。KYC プロバイダは Alice のアカウントにモザイク制限の "
-"``{kyc, Is_Verified, 1}`` を授与します。"
+"Alice は有効なパスポートを提供しますがアドレスの証明は提供しません。KYC プロバイダは Alice のアカウントにモザイク制限の ``{kyc,"
+" Is_Verified, 1}`` を授与します。"
 
 #: ../../source/concepts/mosaic-restriction.rst:147
 msgid ""
-"Bob provides a valid passport and proof of address. The KYC provider "
-"awards Bob's account with the mosaic restriction ``{kyc, Is_Verified, "
-"2}``."
+"Bob provides a valid passport and proof of address. The KYC provider awards "
+"Bob's account with the mosaic restriction ``{kyc, Is_Verified, 2}``."
 msgstr ""
-"Bob は有効なパスポートと住所証明を提供します。KYC プロバイダは Bob のアカウントにモザイク制限の ``{kyc, "
-"Is_Verified, 2}`` を授与します。"
+"Bob は有効なパスポートと住所証明を提供します。KYC プロバイダは Bob のアカウントにモザイク制限の ``{kyc, Is_Verified, "
+"2}`` を授与します。"
 
 #: ../../source/concepts/mosaic-restriction.rst:148
 msgid ""
@@ -372,10 +316,9 @@ msgstr ""
 
 #: ../../source/concepts/mosaic-restriction.rst:150
 msgid ""
-"Now, Bob and Carol will be able to buy and send the "
-"``comfyclothing.shares`` units to each other. Nevertheless, Alice⁠—who "
-"has not provided a valid proof of address—will not be able to receive "
-"shares."
+"Now, Bob and Carol will be able to buy and send the ``comfyclothing.shares``"
+" units to each other. Nevertheless, Alice⁠—who has not provided a valid "
+"proof of address—will not be able to receive shares."
 msgstr ""
 "現在 Bob と Carol はお互いに ``comfyclothing.shares`` "
 "ユニットを購入して送ることができるでしょう。それでも、有効な住所証明を提示していない Alice は株式を受け取ることができません。"
@@ -385,32 +328,8 @@ msgid "Related transactions"
 msgstr "関連トランザクション"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "0x4151"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid ""
-":ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Set global rules to transfer a restrictable mosaic."
 msgstr "制限可能モザイクの転送にグローバルルールを設定します。"
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid "0x4251"
-msgstr ""
-
-#: ../../source/concepts/mosaic-restriction.rst:1
-msgid ""
-":ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-"
-"transaction>`"
-msgstr ""
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Set address specific rules to transfer a restrictable mosaic."
@@ -423,4 +342,3 @@ msgstr "ガイド"
 #: ../../source/concepts/mosaic-restriction.rst:177
 msgid "Continue: :doc:`Multisig Accounts <multisig-account>`."
 msgstr "次項: :doc:`マルチシグアカウント <multisig-account>`"
-

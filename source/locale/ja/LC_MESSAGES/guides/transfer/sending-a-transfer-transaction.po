@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:42
 msgid "Sending mosaics and messages between two accounts"
@@ -31,14 +31,13 @@ msgid "Define, sign, and announce a transfer transaction."
 msgstr "定義して、署名したら転送トランザクションをアナウンスします。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:46
-#, fuzzy
 msgid ""
-"This guide will show you how to send 10 |networkcurrency| from your "
-"account to Bob's, whose address is ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-"
-"KUK34I-YJQ``."
+"This guide will show you how to send 10 |networkcurrency| from your account "
+"to Bob's, whose address is ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-"
+"YJQ``."
 msgstr ""
-"ここでは、あなたのアカウントから Bob のアドレス ``TBONKW-COWBZY-ZB2I5J-D3LSDB-QVBYHB-"
-"757VN3-SKPP`` へ 10 |networkcurrency| を送る方法をガイドします。"
+"ここでは、あなたのアカウントから Bob のアドレス ``B6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` "
+"へ 10 |networkcurrency| を送る方法をガイドします。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:50
 msgid "Prerequisites"
@@ -56,8 +55,7 @@ msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作�
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:54
 msgid ""
-"Load the account with enough |networkcurrency| to pay for transaction "
-"fees."
+"Load the account with enough |networkcurrency| to pay for transaction fees."
 msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:58
@@ -72,32 +70,32 @@ msgstr "デスクトップウォレットのホームから **転送** タブを
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:66
 msgid ""
-"2. Fill out the necessary information for the transfer transaction. For "
-"this example, you need to specify that you are sending 10 XYM to Bob "
-"(``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ``).  You can add a "
-"message, but it is not necessary in this case."
+"2. Fill out the necessary information for the transfer transaction. For this"
+" example, you need to specify that you are sending 10 XYM to Bob (``TB6Q5E-"
+"YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ``).  You can add a message, but it is"
+" not necessary in this case."
 msgstr ""
+"2. 転送トランザクションに必要な情報を入力します。この例では、10 XYM を Bob (``TB6Q5E-YACWBP-CXKGIL-I6XWCH-"
+"DRFLTB-KUK34I-YJQ``) に送ることとします。メッセージを追加できますが、ここでは必要ありません。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:73
 msgid ""
-"3. Once you have filled out all the information, click \"**Send**\". A "
-"popup will show. Read and verify the information, then enter your wallet "
-"password and click \"**Confirm**\"."
+"3. Once you have filled out all the information, click \"**Send**\". A popup"
+" will show. Read and verify the information, then enter your wallet password"
+" and click \"**Confirm**\"."
 msgstr ""
-"3. 必要な情報を入力して \"**送信**\" "
-"をクリックします。ポップアップが表示されます。情報を読んで確認したら、ウォレットパスワードを入力して \"**確認**\" をクリックします。"
+"3. 必要な情報を入力して \"**送信**\" をクリックします。ポップアップが表示されます。情報を読んで確認したら、ウォレットパスワードを入力して "
+"\"**確認**\" をクリックします。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:76
 msgid ""
-"4. You can verify that the transaction was successful by going back to "
-"the \"**Dashboard**\" tab. At first, it might show up under "
-"\"**Unconfirmed**\" transactions as the transaction becomes included in a"
-" block, but you should soon be able to see it under the \"**Confirmed**\""
-" transactions."
+"4. You can verify that the transaction was successful by going back to the "
+"\"**Dashboard**\" tab. At first, it might show up under \"**Unconfirmed**\" "
+"transactions as the transaction becomes included in a block, but you should "
+"soon be able to see it under the \"**Confirmed**\" transactions."
 msgstr ""
-"4. \"**ダッシュボード**\" "
-"タブに戻り、トランザクションが成功したことを確認できます。トランザクションがブロックに取り込まれるようになると \"**未承認**\" "
-"トランザクションの下部に表示される場合がありますが、すぐに \"**承認済**\" トランザクションの下部に表示されるはずです。"
+"4. \"**ダッシュボード**\" タブに戻り、トランザクションが成功したことを確認できます。トランザクションがブロックに取り込まれるようになると "
+"\"**未承認**\" トランザクションの下部に表示される場合がありますが、すぐに \"**承認済**\" トランザクションの下部に表示されるはずです。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:81
 msgid "Method #02: Using the SDK"
@@ -105,8 +103,8 @@ msgstr "方法 #02: SDK を使用する"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:83
 msgid ""
-"In a new terminal, monitor the transactions involving the sender account "
-"to know if they are confirmed or rejected by the network."
+"In a new terminal, monitor the transactions involving the sender account to "
+"know if they are confirmed or rejected by the network."
 msgstr "新しいターミナルで、送信者のアカウントに関するトランザクションを監視して、ネットワークによって承認または拒否されたかを確認します。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:89
@@ -119,46 +117,23 @@ msgstr ""
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:92
 msgid ""
-"Mosaic units in |codename| are defined as **absolute amounts**. To get an"
-" absolute amount, multiply the number of assets you want to send by 10\\ "
+"Mosaic units in |codename| are defined as **absolute amounts**. To get an "
+"absolute amount, multiply the number of assets you want to send by 10\\ "
 ":sup:`divisibility`. For example, if the mosaic had :doc:`divisibility "
-"<../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) "
-"you should define 1000 (absolute) instead."
+"<../mosaic/getting-mosaic-information>` 2, to send 10 units (relative) you "
+"should define 1000 (absolute) instead."
 msgstr ""
 "|codename| では、モザイクの単位を **絶対量** で定義します。絶対量を取得するには、送りたいアセット量に 10\\ "
-":sup:`divisibility` を乗じてください。例えば、モザイクが :doc:`可分性 <../mosaic/getting-"
-"mosaic-information>` 2 である場合、10 単位 (相対量) を送信するには 1000 (絶対量) と定義します。"
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:98
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:141
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:160
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts`"
-msgstr ""
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:103
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:146
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:165
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.js`"
-msgstr ""
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:108
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:151
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:170
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java`"
-msgstr ""
+":sup:`divisibility` を乗じてください。例えば、モザイクが :doc:`可分性 <../mosaic/getting-mosaic-"
+"information>` 2 である場合、10 単位 (相対量) を送信するには 1000 (絶対量) と定義します。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:113
 msgid ""
-"As you may have noticed, transfer transactions require an array of "
-"mosaics as a parameter. This permits sending transfer transactions with "
-"multiple mosaics at the same time."
-msgstr "すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とします。これは一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
+"As you may have noticed, transfer transactions require an array of mosaics "
+"as a parameter. This permits sending transfer transactions with multiple "
+"mosaics at the same time."
+msgstr ""
+"すでにお気づきだと思いますが、転送トランザクションではモザイクの配列をパラメータとして必要とします。これは一度で複数のモザイクを添付したトランスファートランザクションを送ることができます。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:116
 msgid ""
@@ -166,31 +141,12 @@ msgid ""
 "transaction:"
 msgstr "複数のモザイクを所有している場合は、同じトランザクションでそれらを一緒に送信できます:"
 
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:120
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.ts`"
-msgstr ""
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:125
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.js`"
-msgstr ""
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:130
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransactionWithMultipleMosaics.java`"
-msgstr ""
-
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:135
 msgid ""
 "3. Sign the transaction with your account. Then, include the network "
-"generation hash seed to make the transaction only valid for your network."
-" To retrieve the network generration hash seed, open ``nodeUrl + "
-"'/node/info'`` in a new browser tab and copy "
-"``meta.networkGenerationHashSeed`` value."
+"generation hash seed to make the transaction only valid for your network. To"
+" retrieve the network generration hash seed, open ``nodeUrl + '/node/info'``"
+" in a new browser tab and copy ``meta.networkGenerationHashSeed`` value."
 msgstr ""
 "3. "
 "あなたのアカウントで署名します。次に、あなたのネットワークだけで有効なトランザクションを作るために、ネットワークジェネレーションハッシュを含めます。ネットワークジェネレーションハッシュシードを取得するために、新しいブラウザタブで"
@@ -199,24 +155,23 @@ msgstr ""
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:156
 msgid ""
-"Once signed, :doc:`announce the transaction <../../concepts/transaction>`"
-" to the network."
+"Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
+" the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:175
-#, fuzzy
 msgid ""
-"5. Open the terminal where you are monitoring the transaction's status. "
-"The transaction should appear as confirmed after ±15 seconds and the "
-"amount defined gets transferred from the sender's account to the "
-"recipient's account. If the terminal raises an error, you can check the "
-"error code description `here <https://github.com/nemtech/symbol-"
+"5. Open the terminal where you are monitoring the transaction's status. The "
+"transaction should appear as confirmed after ±15 seconds and the amount "
+"defined gets transferred from the sender's account to the recipient's "
+"account. If the terminal raises an error, you can check the error code "
+"description `here <https://github.com/nemtech/symbol-"
 "openapi/blob/main/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_."
 msgstr ""
 "5. "
 "トランザクションのステータスを監視しているターミナルを開いてください。トランザクションは15秒前後で承認済みとして現れ、定義した総量は送信者アカウントから受信者アカウントへ送られます。ターミナルでエラーが起きた場合はエラーコードの意味を"
 " `こちら <https://github.com/nemtech/symbol-"
-"openapi/blob/master/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_"
+"openapi/blob/main/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_"
 " で参照してください。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:181
@@ -224,40 +179,21 @@ msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:183
-#, fuzzy
 msgid ""
-"Open a terminal window and run the following command to transfer 10 XYM "
-"from your default account."
-msgstr "ターミナルを開き、あなたのデフォルトアカウントから Bob のアドレスへ 10 XYM を送るために、次のコマンドを実行します。"
+"Open a terminal window and run the following command to transfer 10 XYM from"
+" your default account."
+msgstr "ターミナルを開き、あなたのデフォルトアカウントか 10 XYM を送るために、次のコマンドを実行します。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:185
 msgid ""
-"Remember to replace ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` "
-"with the recipient address you want to send mosaics too and "
+"Remember to replace ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` with "
+"the recipient address you want to send mosaics too and "
 "``@symbol.xym::10000000`` with the desired absolute amount."
 msgstr ""
+"``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` と "
+"``@symbol.xym::10000000`` を送信したい受信者アドレスと意図したモザイク絶対総数に置き換えることを忘れないでください。"
 
 #: ../../source/guides/transfer/sending-a-transfer-transaction.rst:188
-msgid "Optionally, you can set a custom message with the option ``--message``."
-msgstr ""
-
-#: ../../source/guides/transfer/sending-a-transfer-transaction.rst:190
 msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/bash/transfer/SendingATransferTransaction.sh`"
-msgstr ""
-
-#~ msgid ""
-#~ "2. Fill out the necessary information"
-#~ " for the transfer transaction. For "
-#~ "this example, you need to specify "
-#~ "that you are sending 10 XYM to "
-#~ "Bob (``TCQSO3-LUEWJZ-X4ITOY-4YWVL5-TAOEJ5-6YXUMS-"
-#~ "AJHH``).  You can add a message, "
-#~ "but it is not necessary in this"
-#~ " case."
-#~ msgstr ""
-#~ "2. 転送トランザクションに必要な情報を入力します。この例では、10 XYM を Bob"
-#~ " (``TCQSO3-LUEWJZ-X4ITOY-4YWVL5-TAOEJ5-6YXUMS-"
-#~ "AJHH``) に送ることとします。メッセージを追加できますが、ここでは必要ありません。"
-
+"Optionally, you can set a custom message with the option ``--message``."
+msgstr "``--message`` オプションでメッセージを添付することもできます。"

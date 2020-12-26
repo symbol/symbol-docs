@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:42
 msgid "Sending multiple transactions together"
@@ -28,19 +28,19 @@ msgstr "複数のトランザクションを同時に送信"
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:44
 msgid ""
-"Send transactions to different accounts at the same time, using aggregate"
-" transactions."
+"Send transactions to different accounts at the same time, using aggregate "
+"transactions."
 msgstr "異なるアカウントへトランザクションを同時に送信するには、アグリゲートトランザクションを使用します。"
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:48
 msgid "Use case"
-msgstr ""
+msgstr "ユースケース"
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:50
 msgid ""
-"Dan wants to send mosaics to Alice and Bob. He could achieve this sending"
-" a couple of **TransferTransactions**. However, to make sure Alice and "
-"Bob receive the funds at the same time, he decides to use an "
+"Dan wants to send mosaics to Alice and Bob. He could achieve this sending a "
+"couple of **TransferTransactions**. However, to make sure Alice and Bob "
+"receive the funds at the same time, he decides to use an "
 ":ref:`AggregateTransaction <aggregate-transaction>`."
 msgstr ""
 "Dan は Alice と Bob にモザイクを送ろうとしています。彼は 2 つの **TransferTransactions** "
@@ -65,9 +65,10 @@ msgstr ""
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:65
 msgid ""
-"Create :ref:`accounts <setup-creating-a-test-account>` for Alice, Bob, "
-"and Dan."
-msgstr "Alice と Bob と Dan の :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
+"Create :ref:`accounts <setup-creating-a-test-account>` for Alice, Bob, and "
+"Dan."
+msgstr ""
+"Alice と Bob と Dan の :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:66
 msgid "Load Dans's account with at least 200 |networkcurrency| units."
@@ -85,59 +86,17 @@ msgstr ""
 "新しいファイルを作成して、10 |networkcurrency|  を異なる受信者へ送るための 2 つの :ref:`transfer "
 "transactions <transfer-transaction>` を定義します。"
 
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:76
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:96
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:115
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.ts`"
-msgstr ""
-
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:81
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:101
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:120
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.js`"
-msgstr ""
-
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:86
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:106
-#: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:125
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/SendingMultipleTransactionsTogetherWithAggregateCompleteTransaction.java`"
-msgstr ""
-
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:92
 msgid ""
 "Wrap both transactions in an :ref:`AggregateTransaction <aggregate-"
-"transaction>`, adding Dan's public account as the required signer. As one"
-" private key—Dan's account—can sign all the transactions in the "
-"aggregate, we can define the transaction as *complete*."
+"transaction>`, adding Dan's public account as the required signer. As one "
+"private key—Dan's account—can sign all the transactions in the aggregate, we"
+" can define the transaction as *complete*."
 msgstr ""
-"両方のトランザクションを :ref:`AggregateTransaction <aggregate-transaction>` "
-"でラップし、Dan の公開アカウントを必要な署名者として追加します。1 つの秘密鍵 - Dan のアカウント - "
+"両方のトランザクションを :ref:`AggregateTransaction <aggregate-transaction>` でラップし、Dan "
+"の公開アカウントを必要な署名者として追加します。1 つの秘密鍵 - Dan のアカウント - "
 "でアグリゲート内のすべてのトランザクションに署名できるため、トランザクションを *コンプリート* として定義できます。"
 
 #: ../../source/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.rst:111
 msgid "Sign and announce the transaction with Dan's account."
 msgstr "Dan のアカウントでトランザクションへ署名してアナウンスをします。"
-
-#~ msgid "Background"
-#~ msgstr "背景"
-
-#~ msgid "What's next?"
-#~ msgstr "次は？"
-
-#~ msgid ""
-#~ "Send an AggregateBondedTransaction following "
-#~ ":doc:`creating an escrow contract "
-#~ "<creating-an-escrow-contract-with-"
-#~ "aggregate-bonded-transaction>` guide."
-#~ msgstr ""
-#~ ":doc:`アグリゲートボンデッドトランザクションを使ったエスクローコントラクトの作成 <creating-"
-#~ "an-escrow-contract-with-aggregate-"
-#~ "bonded-transaction>` ガイドに従って AggregateBondedTransaction"
-#~ " を送信してください。"
-

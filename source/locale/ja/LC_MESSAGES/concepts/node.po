@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/node.rst:36
 msgid "Node"
@@ -27,10 +27,10 @@ msgstr "ノード"
 
 #: ../../source/concepts/node.rst:38
 msgid ""
-"|codename| blockchain platform is built from a **network of nodes**. "
-"These nodes provide a powerful, stable, and secure platform where Smart "
-"Assets transactions are conducted, searched, and immutably logged on the "
-"blockchain ledger."
+"|codename| blockchain platform is built from a **network of nodes**. These "
+"nodes provide a powerful, stable, and secure platform where Smart Assets "
+"transactions are conducted, searched, and immutably logged on the blockchain"
+" ledger."
 msgstr ""
 "|codename| ブロックチェーンプラットフォームは **ノードのネットワーク** "
 "によって構築されています。これらのノードはスマートアセットのトランザクションを実行、検索し、速やかにブロックチェーン台帳へ記録する、強力で、安定した、安全なプラットフォームを提供します。"
@@ -41,8 +41,8 @@ msgstr "|codename| のパフォーマンス優位性: 4層アーキテクチャ"
 
 #: ../../source/concepts/node.rst:47
 msgid ""
-"The **four-layered architecture** allows developers to update any of "
-"these tiers without disrupting the others, which improves security."
+"The **four-layered architecture** allows developers to update any of these "
+"tiers without disrupting the others, which improves security."
 msgstr "**4層アーキテクチャ** により、開発者に他の層への影響を避けたアップデートを可能にし、セキュリティを向上させることができます。"
 
 #: ../../source/concepts/node.rst:53
@@ -60,14 +60,14 @@ msgstr "Peer ノードコミュニケーション"
 #: ../../source/concepts/node.rst:63
 msgid ""
 "The peer nodes form the backbone of the blockchain, making the network "
-"robust since it cannot be shut down by eliminating a single entity. The "
-"role of the node is to :ref:`verify transactions <transaction-"
-"validation>` and :doc:`blocks<block>`, run the consensus algorithm, "
-"create new blocks, and propagate the changes through the network."
+"robust since it cannot be shut down by eliminating a single entity. The role"
+" of the node is to :ref:`verify transactions <transaction-validation>` and "
+":doc:`blocks<block>`, run the consensus algorithm, create new blocks, and "
+"propagate the changes through the network."
 msgstr ""
 "Peer "
-"ノードは、単一のエンティティを排除してもシャットダウンできない、堅牢なネットワークであるブロックチェーンのバックボーンを構成します。ノードの役割は"
-" :ref:`トランザクション <transaction-validation>` と :doc:`ブロック <block>` "
+"ノードは、単一のエンティティを排除してもシャットダウンできない、堅牢なネットワークであるブロックチェーンのバックボーンを構成します。ノードの役割は "
+":ref:`トランザクション <transaction-validation>` と :doc:`ブロック <block>` "
 "を検証すること、コンセンサスアルゴリズムの実行、新しいブロックの生成、ネットワークへの変更の伝播を実行することです。"
 
 #: ../../source/concepts/node.rst:66
@@ -76,8 +76,8 @@ msgid ""
 ":doc:`included in a block <harvesting>` or discarded. After the block is "
 "processed, the node saves:"
 msgstr ""
-"API ノードが新しいトランザクションを P2P ネットワークにプッシュすると、それらは :doc:`ブロックに含まれる "
-"<harvesting>` かまたは廃棄されます。ノードはブロックが処理された後にそれを保存します:"
+"API ノードが新しいトランザクションを P2P ネットワークにプッシュすると、それらは :doc:`ブロックに含まれる <harvesting>` "
+"かまたは廃棄されます。ノードはブロックが処理された後にそれを保存します:"
 
 #: ../../source/concepts/node.rst:69
 msgid "The binary of each block as a flat-file on disk."
@@ -87,25 +87,20 @@ msgstr "各ブロックのバイナリはフラットなファイルとしてデ
 msgid "The updated chain state in memory or RocksDB (configurable)."
 msgstr "更新されたチェーンの状態はメモリまたは RocksDB にあります。(設定可能)"
 
-#: ../../source/concepts/node.rst:73
-msgid "RocksDB"
-msgstr ""
-
 #: ../../source/concepts/node.rst:75
 msgid ""
-"Peer nodes store the chain state in |rocksdb|. The data structures cached"
-" are serialized and stored as values to corresponding keys. For example, "
-"a column in this database maps the public keys to addresses. Another one,"
-" the account state entries as the values to corresponding address keys."
+"Peer nodes store the chain state in |rocksdb|. The data structures cached "
+"are serialized and stored as values to corresponding keys. For example, a "
+"column in this database maps the public keys to addresses. Another one, the "
+"account state entries as the values to corresponding address keys."
 msgstr ""
 "Peer ノードは |rocksdb| "
 "へチェーンの状態を保存します。このキャッシュされたデータ構造はシリアライズされ、対応するキーに値として保存されます。例えば、データベース上のある列は公開鍵をアドレスにマップします。他には、対応するアドレスをキーの値とした、アカウント状態のエントリです。"
 
 #: ../../source/concepts/node.rst:80
 msgid ""
-"Storing the state in memory is faster than using RocksDB. However, "
-"storing state information in RocksDB demands less memory of the network "
-"nodes."
+"Storing the state in memory is faster than using RocksDB. However, storing "
+"state information in RocksDB demands less memory of the network nodes."
 msgstr ""
 "RocksDB を使用するよりも状態をメモリに保存しておくことのほうがより高速になります。しかし状態の情報を RocksDB "
 "に保存しておくことで、ネットワークのノードが必要とするメモリを少なくできます。"
@@ -122,41 +117,41 @@ msgstr "ノードレピュテーション"
 
 #: ../../source/concepts/node.rst:88
 msgid ""
-"Public networks enable anyone to run a node. Some of these nodes could "
-"share invalid information or try to disturb the network."
-msgstr "パブリックネットワークでは誰でもノードを実行できます。これらのノードの中には無効な情報を共有したり、ネットワークを妨害しようとするものがあります。"
+"Public networks enable anyone to run a node. Some of these nodes could share"
+" invalid information or try to disturb the network."
+msgstr ""
+"パブリックネットワークでは誰でもノードを実行できます。これらのノードの中には無効な情報を共有したり、ネットワークを妨害しようとするものがあります。"
 
 #: ../../source/concepts/node.rst:91
 msgid ""
-"To reduce miscommunication attempts, the nodes keep track of the results "
-"of preceding communications. Every node with P2P capabilities keeps a "
-"success and a failure counter for every other peer node that it has "
-"interacted with."
+"To reduce miscommunication attempts, the nodes keep track of the results of "
+"preceding communications. Every node with P2P capabilities keeps a success "
+"and a failure counter for every other peer node that it has interacted with."
 msgstr ""
 "誤解の機会を減らすために、ノードは先行する通信の結果を追跡します。P2P 機能を持つすべてのノードはそれが対話した他のすべての Peer "
 "ノードについて成功および失敗カウンタを保持します。"
 
 #: ../../source/concepts/node.rst:94
 msgid ""
-"Nodes update the counters accordingly after processing the data "
-"requested. If a node successfully connects to a remote peer, it first "
-"increments the success counter towards the remote peer. If the "
-"communication attempt fails, the node increments the remote peer’s "
-"failure counter. Likewise, the node updates the peer counters accordingly"
-" after processing data shared."
-msgstr "ノードは要求されたデータの処理をした後に、それに応じてカウンタを更新します。ノードがリモートピアへの接続に成功すると、最初にリモートピアに対しての成功カウンタをインクリメントします。通信の試行が失敗した場合、ノードはリモートピアの失敗カウンタを増やします。同様にノードは共有データの処理後にピアカウンタを適宜更新します。"
+"Nodes update the counters accordingly after processing the data requested. "
+"If a node successfully connects to a remote peer, it first increments the "
+"success counter towards the remote peer. If the communication attempt fails,"
+" the node increments the remote peer’s failure counter. Likewise, the node "
+"updates the peer counters accordingly after processing data shared."
+msgstr ""
+"ノードは要求されたデータの処理をした後に、それに応じてカウンタを更新します。ノードがリモートピアへの接続に成功すると、最初にリモートピアに対しての成功カウンタをインクリメントします。通信の試行が失敗した場合、ノードはリモートピアの失敗カウンタを増やします。同様にノードは共有データの処理後にピアカウンタを適宜更新します。"
 
 #: ../../source/concepts/node.rst:99
 msgid ""
-"Extrapolating from these scores, the node assigns a weight between 500 "
-"and 10000 to every peer reached."
+"Extrapolating from these scores, the node assigns a weight between 500 and "
+"10000 to every peer reached."
 msgstr "これらのスコアから推定して、ノードは到達したすべてのピアに500〜10000の重みを割り当てます。"
 
 #: ../../source/concepts/node.rst:101
 msgid ""
 "The probability of selecting a remote node to read data from depends "
-"linearly on its weight. Every four rounds of node selections, the "
-"criteria changes to prevent |sybil|."
+"linearly on its weight. Every four rounds of node selections, the criteria "
+"changes to prevent |sybil|."
 msgstr "データを読み取るリモートノードを選択する確率はその重みに比例します。4回のノード選択ごとに条件が変更され |sybil| が防止されます。"
 
 #: ../../source/concepts/node.rst:108
@@ -169,20 +164,19 @@ msgstr "Peer + API (Dual) ノードコミュニケーション"
 
 #: ../../source/concepts/node.rst:118
 msgid ""
-"The primary responsibility of an API node is to store the data in a "
-"readable form in MongoDB. The catapult-server software allows configuring"
-" standalone API nodes or with Peer capabilities (Dual)."
+"The primary responsibility of an API node is to store the data in a readable"
+" form in MongoDB. The catapult-server software allows configuring standalone"
+" API nodes or with Peer capabilities (Dual)."
 msgstr ""
 "API ノードの主な役割は、データを MongoDB に読み取り可能な形式で保存することです。 catapult-server "
 "ソフトウェアを使用すると、スタンドアロン API ノードまたは Peer 機能 (Dual) を構成できます。"
 
 #: ../../source/concepts/node.rst:121
 msgid ""
-"Instead of writing the data directly into MongoDB, the nodes write it "
-"into a file-based queue called ``spool``. A broker service consumes the "
-"data from the spool and updates MongoDB accordingly. Once a block is "
-"processed, the broker service notifies the changes to catapult-rest "
-"instances using ZMQ."
+"Instead of writing the data directly into MongoDB, the nodes write it into a"
+" file-based queue called ``spool``. A broker service consumes the data from "
+"the spool and updates MongoDB accordingly. Once a block is processed, the "
+"broker service notifies the changes to catapult-rest instances using ZMQ."
 msgstr ""
 "データを MongoDB に直接書き込む代わりに、ノードはそれを ``spool`` "
 "と呼ばれるファイルベースのキューに書き込みます。ブローカーサービスはスプールからのデータを消費し、それに応じて MongoDB "
@@ -196,10 +190,6 @@ msgid ""
 msgstr ""
 "API ノードは :doc:`アグリゲートボンドトランザクション<aggregate-transaction>` "
 "の連署名を集める役割も果たし、それが完成したときにだけ処理されます。"
-
-#: ../../source/concepts/node.rst:128
-msgid "MongoDB"
-msgstr ""
 
 #: ../../source/concepts/node.rst:130
 msgid ""
@@ -222,10 +212,6 @@ msgstr "新しい未承認トランザクションの処理を完了します。
 #: ../../source/concepts/node.rst:137
 msgid "MongoDB should not be accessed externally."
 msgstr "MongoDB は外部からアクセスされるべきではありません。"
-
-#: ../../source/concepts/node.rst:140
-msgid "ZMQ"
-msgstr ""
 
 #: ../../source/concepts/node.rst:142
 msgid ""
@@ -258,8 +244,8 @@ msgid ""
 "client using :ref:`WebSockets <websockets>`."
 msgstr ""
 "Catapult REST ゲートウェイは :doc:`JSON API <../api>` クライアントリクエストを処理します。ゲートウェイは "
-"MongoDB から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets"
-" <websockets>` でクライアントにイベントを返却する役割も果たします。"
+"MongoDB から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは :ref:`WebSockets "
+"<websockets>` でクライアントにイベントを返却する役割も果たします。"
 
 #: ../../source/concepts/node.rst:164
 msgid ""
@@ -273,4 +259,3 @@ msgstr ""
 #: ../../source/concepts/node.rst:192
 msgid "Guides"
 msgstr "ガイド"
-

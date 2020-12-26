@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:42
 msgid "Cosigning aggregate bonded transactions"
@@ -38,13 +38,13 @@ msgstr "前提条件"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:50
 msgid ""
-"This guide assumes that you have received an aggregate transaction. You "
-"can follow the guide :doc:`creating an escrow contract<creating-an-"
-"escrow-contract-with-aggregate-bonded-transaction>` to announce an "
-"aggregate transaction."
+"This guide assumes that you have received an aggregate transaction. You can "
+"follow the guide :doc:`creating an escrow contract<creating-an-escrow-"
+"contract-with-aggregate-bonded-transaction>` to announce an aggregate "
+"transaction."
 msgstr ""
-"このガイドでは、あなたがアグリゲートトランザクションを受信したことを前提とします。ガイド :doc:`エスクローコントラクトの作成 "
-"<creating-an-escrow-contract-with-aggregate-bonded-transaction>` "
+"このガイドでは、あなたがアグリゲートトランザクションを受信したことを前提とします。ガイド :doc:`エスクローコントラクトの作成 <creating-"
+"an-escrow-contract-with-aggregate-bonded-transaction>` "
 "に従って、アグリゲートトランザクションをアナウンスできます。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:55
@@ -62,8 +62,7 @@ msgid ""
 "At the home page, click on the “partial” tab. Click on the listed "
 "transaction and enter your wallet password to sign the transaction."
 msgstr ""
-"ホームで “partial” "
-"タブをクリックします。トランザクションリストをクリックし、ウォレットのパスワードを入力してトランザクションに署名します。"
+"ホームで “partial” タブをクリックします。トランザクションリストをクリックし、ウォレットのパスワードを入力してトランザクションに署名します。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:67
 msgid "Method #02: Using the SDK"
@@ -72,82 +71,48 @@ msgstr "方法 #02: SDK を使用する"
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:69
 msgid ""
 "1. First, check if your account has incoming aggregate transactions that "
-"have not been signed. Use the ``TransactionHttp`` repository to search "
-"all the incoming aggregate transactions pending to be signed by your "
-"account."
+"have not been signed. Use the ``TransactionHttp`` repository to search all "
+"the incoming aggregate transactions pending to be signed by your account."
 msgstr ""
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:74
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/GettingPartialTransactions.ts`"
-msgstr ""
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:79
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/GettingPartialTransactions.js`"
-msgstr ""
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:84
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/GettingPartialTransactions.java`"
-msgstr ""
+"1. はじめに、アカウントに未署名の受信アグリゲートトランザクションがあるかを確認します。 ``TransactionHttp`` "
+"リポジトリを使用して、アカウントによる署名が保留になっている、すべての受信アグリゲートトランザクションを検索します。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:89
-msgid "Copy and save the transaction hash you want to cosign with your account."
-msgstr ""
+msgid ""
+"Copy and save the transaction hash you want to cosign with your account."
+msgstr "あなたのアカウントで連署名するトランザクションハッシュをコピーして保存します。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:91
 msgid "Create a function to cosign any **AggregateBondedTransaction**."
 msgstr "**AggregateBondedTransaction** を共同署名する関数を作成します。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:95
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:115
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:137
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.ts`"
-msgstr ""
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:100
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:120
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:142
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactions.js`"
-msgstr ""
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:105
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:125
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:147
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactions.java`"
-msgstr ""
-
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:110
 msgid ""
-"3. Define the transaction hash to cosign and the signer account. If you "
-"want to cosign a transaction involving a multisig account, you should be "
-"using the cosignatory account instead."
+"3. Define the transaction hash to cosign and the signer account. If you want"
+" to cosign a transaction involving a multisig account, you should be using "
+"the cosignatory account instead."
 msgstr ""
+"3. "
+"連署名するトランザクションハッシュと連署者アカウントを定義します。マルチシグアカウントを含むトランザクションを連署名する場合は、代わりに連署名アカウントを使用する必要があります。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:130
 msgid ""
 "4. Retrieve the complete transaction object from the node using the "
 "``TransactionHttp`` repository. At this point, you might want to do some "
-"extra checks, like verifying the contents of the transaction. If "
-"everything looks ok, cosign the transaction with the signer account. "
-"Finally, announce the cosignature to network with "
+"extra checks, like verifying the contents of the transaction. If everything "
+"looks ok, cosign the transaction with the signer account. Finally, announce "
+"the cosignature to network with "
 "``transactionHttp.announceAggregateBondedCosignature``."
 msgstr ""
+"4. ``TransactionHttp`` "
+"リポジトリを使用して、ノードから完全なトランザクションオブジェクトを取得します。この時点で、トランザクションの内容を確認するなど、いくつかの追加のチェックを行うことができます。すべてが上手く行けば、署名者アカウントでトランザクションに署名します。"
+" 最後に ``transactionHttp.announceAggregateBondedCosignature`` "
+"でネットワークに署名をアナウンスします。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:152
 msgid ""
-"Once all the participants cosign the transaction, the transaction will be"
-" included in a block."
+"Once all the participants cosign the transaction, the transaction will be "
+"included in a block."
 msgstr "すべての参加者がトランザクションに署名すると、トランザクションはブロックに含まれます。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:156
@@ -155,61 +120,11 @@ msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:158
-#, fuzzy
 msgid "Get all aggregate transactions pending to be cosigned by your account."
-msgstr "署名待ちの :ref:`アグリゲート <aggregate-bonded>` トランザクションに署名"
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:160
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/bash/aggregate/GettingPartialTransactions.sh`"
-msgstr ""
+msgstr "あなたのアカウントで署名されるべき、保留中の全アグリゲートトランザクションを取得します。"
 
 #: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:164
 msgid ""
 "Cosign the aggregate bonded transaction. Replace the hash for the "
 "transaction hash retrieved from (1)."
-msgstr ""
-
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions.rst:166
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/bash/aggregate/CosigningAggregateBondedTransactions.sh`"
-msgstr ""
-
-#~ msgid ""
-#~ "2. Retrieve all the complete "
-#~ "transactions object pending to be signed"
-#~ " by your account using the "
-#~ "``TransactionHttp`` repository. At this point,"
-#~ " you might want to do some "
-#~ "extra checks, like verifying the "
-#~ "contents of the transaction."
-#~ msgstr ""
-#~ "2. ``TransactionHttp`` "
-#~ "リポジトリを使用して、あなたのアカウントによる署名が保留されている、すべての完了トランザクションオブジェクトを取得します。この時点で、トランザクション内容の確認などの、いくつかの予備確認を行うことができます。"
-
-#~ msgid ""
-#~ "To fetch aggregate bonded transactions "
-#~ "that must be signed by multisig "
-#~ "cosignatories, refer to the multisig "
-#~ "public key instead. See :ref:`how to "
-#~ "get multisig accounts where an account"
-#~ " is cosignatory<guide-get-multisig-"
-#~ "account-info>`."
-#~ msgstr ""
-#~ "マルチシグ連署者が署名しなければならないアグリゲートボンドトランザクションを取得するには、代わりにマルチシグ公開鍵を参照してください。:ref:`アカウントが連署者である場合にマルチシグアカウントを取得する方法"
-#~ "<guide-get-multisig-account-info>` "
-#~ "を参照してください。"
-
-#~ msgid ""
-#~ "3. If everything looks ok, cosign "
-#~ "the transaction with the signer account."
-#~ " Finally, announce the cosignature to "
-#~ "network with "
-#~ "``transactionHttp.announceAggregateBondedCosignature``."
-#~ msgstr ""
-#~ "3. すべてが上手く行けば、署名者アカウントでトランザクションに署名します。 最後に "
-#~ "``transactionHttp.announceAggregateBondedCosignature`` "
-#~ "でネットワークに署名をアナウンスします。"
-
+msgstr "アグリゲートボンデッドトランザクションを連署名します。(1) で取得したトランザクションハッシュのハッシュを置き換えてください。"

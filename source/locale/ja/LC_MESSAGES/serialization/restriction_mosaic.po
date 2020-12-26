@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/serialization/restriction_mosaic.rst:36
 msgid "Restriction Mosaic Schemas"
@@ -27,11 +27,11 @@ msgstr "モザイク制限スキーマ"
 
 #: ../../source/serialization/restriction_mosaic.rst:38
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ "
-"repository defines how each transaction type should be serialized. In "
-"combination with the `catbuffer-generators <https://github.com/nemtech"
-"/catbuffer-generators>`_ project, developers can generate builder classes"
-" for a given set of programming languages."
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
 msgstr ""
 "`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
@@ -42,25 +42,11 @@ msgstr ""
 msgid "Mosaic Address Restriction"
 msgstr "モザイクアドレス制限"
 
-#: ../../source/serialization/restriction_mosaic.rst:47
-#, fuzzy
-msgid "MosaicAddressRestrictionTransaction"
-msgstr "モザイクアドレス制限"
-
 #: ../../source/serialization/restriction_mosaic.rst:49
 msgid ""
 "Announce a MosaicAddressRestrictionTransaction transaction to set a "
 "restriction rule to an address."
 msgstr "MosaicAddressRestrictionTransaction をアナウンスして制限ルールをアドレスに設定します。"
-
-#: ../../source/serialization/restriction_mosaic.rst:51
-#: ../../source/serialization/restriction_mosaic.rst:80
-msgid "**Version**: 0x01"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:53
-msgid "**EntityType**: 0x4251"
-msgstr ""
 
 #: ../../source/serialization/restriction_mosaic.rst:55
 #: ../../source/serialization/restriction_mosaic.rst:84
@@ -77,48 +63,14 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-msgid "Property"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "Type"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "Description"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "mosaicId"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid ":schema:`UnresolvedMosaicId <types.cats>`"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid ""
 "Identifier of the mosaic to which the restriction applies. The mosaic "
 "creator must be the signer of the transaction."
 msgstr "制限が適用されるモザイクの識別子。モザイク作成者はトランザクションの署名者である必要があります。"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-#, fuzzy
-msgid "restrictionKey"
-msgstr "制限キー"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "uint64"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Restriction key."
 msgstr "制限キー"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-#, fuzzy
-msgid "previousRestrictionValue"
-msgstr "以前の制限値"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid ""
@@ -126,25 +78,13 @@ msgid ""
 "``FFFFFFFFFFFFFFFF`` if the target address does not have a previous "
 "restriction value for this mosaic identifier and restriction key."
 msgstr ""
-"以前の制限値。ターゲットアドレスにこのモザイク識別子と制限キーの以前の制限値がない場合は ``previousRestrictionValue``"
-" に ``FFFFFFFFFFFFFFFF`` を設定します。"
+"以前の制限値。ターゲットアドレスにこのモザイク識別子と制限キーの以前の制限値がない場合は ``previousRestrictionValue`` に "
+"``FFFFFFFFFFFFFFFF`` を設定します。"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-#, fuzzy
-msgid "newRestrictionValue"
-msgstr "新しい制限値"
-
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "New restriction value."
 msgstr "新しい制限値"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "targetAddress"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid ":schema:`UnresolvedAddress <types.cats>`"
-msgstr ""
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Address being restricted."
@@ -154,38 +94,24 @@ msgstr "制限されているアドレス"
 msgid "Mosaic Global Restriction"
 msgstr "モザイクグローバル制限"
 
-#: ../../source/serialization/restriction_mosaic.rst:76
-#, fuzzy
-msgid "MosaicGlobalRestrictionTransaction"
-msgstr "モザイクグローバル制限"
-
 #: ../../source/serialization/restriction_mosaic.rst:78
 msgid ""
-"Announce a MosaicGlobalRestrictionTransaction to set a restriction rule "
-"to a mosaic."
+"Announce a MosaicGlobalRestrictionTransaction to set a restriction rule to a"
+" mosaic."
 msgstr "MosaicGlobalRestrictionTransaction をアナウンスして制限ルールをモザイクに設定します。"
-
-#: ../../source/serialization/restriction_mosaic.rst:82
-msgid "**EntityType**: 0x4151"
-msgstr ""
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid ""
-"Identifier of the mosaic being restricted. The mosaic creator must be the"
-" signer of the transaction."
+"Identifier of the mosaic being restricted. The mosaic creator must be the "
+"signer of the transaction."
 msgstr "制限されるモザイク識別子。モザイク作成者はトランザクションの署名者である必要があります。"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-msgid "referenceMosaicId"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid ""
-"Identifier of the mosaic providing the restriction key. The mosaic global"
-" restriction for the mosaic identifier depends on global restrictions set"
-" on the reference mosaic. Set ``referenceMosaicId`` to "
-"``0000000000000000`` if the mosaic giving the restriction equals the "
-"mosaic identifier."
+"Identifier of the mosaic providing the restriction key. The mosaic global "
+"restriction for the mosaic identifier depends on global restrictions set on "
+"the reference mosaic. Set ``referenceMosaicId`` to ``0000000000000000`` if "
+"the mosaic giving the restriction equals the mosaic identifier."
 msgstr ""
 "制限キーを提供するモザイクの識別子。モザイクIDのモザイクグローバル制限は参照モザイクに設定されたグローバル制限によって異なります。制限を与えるモザイクがモザイク識別子と等しい場合"
 " ``referenceMosaicId`` に ``0000000000000000`` に設定します。"
@@ -199,22 +125,8 @@ msgid "Previous restriction value."
 msgstr "以前の制限値"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-#, fuzzy
-msgid "previousRestrictionType"
-msgstr "以前の制限タイプ"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid ":ref:`MosaicRestrictionType <mosaic-restriction-type>`"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Previous restriction type."
 msgstr "以前の制限タイプ"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-#, fuzzy
-msgid "newRestrictionType"
-msgstr "新しい制限タイプ"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "New restriction type."
@@ -224,72 +136,30 @@ msgstr "新しい制限タイプ"
 msgid "Restriction Mosaic Types"
 msgstr "モザイク制限タイプ"
 
-#: ../../source/serialization/restriction_mosaic.rst:107
-#, fuzzy
-msgid "MosaicRestrictionType"
-msgstr "新しい制限タイプ"
-
-#: ../../source/serialization/restriction_mosaic.rst:109
-msgid "Enumeration: uint8"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "0"
-msgstr ""
-
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Uninitialized value indicating no restriction."
 msgstr "制限が無いことを示す未初期化値。"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "1 (EQ)"
-msgstr ""
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Allow if equal."
 msgstr "同じ場合に許可"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-msgid "2 (NE)"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Allow if not equal."
 msgstr "同じでない場合に許可"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "3 (LT)"
-msgstr ""
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Allow if less than."
 msgstr "未満の場合に許可"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-msgid "4 (LTE)"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Allow if less than or equal."
 msgstr "以下の場合に許可"
-
-#: ../../source/serialization/restriction_mosaic.rst:1
-msgid "5 (GT)"
-msgstr ""
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Allow if greater than."
 msgstr "超える場合に許可"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
-msgid "6 (GTE)"
-msgstr ""
-
-#: ../../source/serialization/restriction_mosaic.rst:1
 msgid "Allow if greater than or equal."
 msgstr "以上の場合に許可"
-

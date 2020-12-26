@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:42
 msgid "Restricting mosaic transfers"
@@ -31,15 +31,15 @@ msgstr "モザイク制限でアカウントが処理できる手段を制限し
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:48
 msgid "Use case"
-msgstr ""
+msgstr "ユースケース"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:50
 msgid ""
 "Let's say a company, CharlieChocolateFactory, wants to go public by "
 "tokenizing their shares and conducting an STO. They create a mosaic "
 "``ccf.shares`` and configure it to be **restrictable**. To comply with "
-"regulations, the company wants only the participants that have passed the"
-" **KYC/AML** process to buy and transact their stock."
+"regulations, the company wants only the participants that have passed the "
+"**KYC/AML** process to buy and transact their stock."
 msgstr ""
 "たとえば、CharlieChocolateFactory という会社が株式をトークン化して STO を実施して、公開したいとします。モザイク "
 "``ccf.shares`` を作成して **制限可能** に設定します。規制を順守するために、会社は **KYC/AML** "
@@ -48,8 +48,8 @@ msgstr ""
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:52
 msgid ""
 "This guide shows you how to use |codename|'s :doc:`Mosaic Restriction "
-"<../../concepts/mosaic-restriction>` feature to define rules that "
-"determine which participants can transact with ``ccf.shares``."
+"<../../concepts/mosaic-restriction>` feature to define rules that determine "
+"which participants can transact with ``ccf.shares``."
 msgstr ""
 "このガイドでは、|codename| の :doc:`モザイク制限 <../../concepts/mosaic-restriction>` "
 "機能を使用して ``ccf.shares`` を取引できる参加者を決定するルールを定義する方法を示します。"
@@ -63,21 +63,19 @@ msgid "Complete :doc:`creating a mosaic <../mosaic/creating-a-mosaic>` guide."
 msgstr ":doc:`モザイクの作成  <../mosaic/creating-a-mosaic>` ガイドを完了している"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:59
-#, fuzzy
 msgid ""
 "Create :ref:`accounts <setup-creating-a-test-account>` for "
 "CharlieChocolateFactory, Alice, And Bob."
 msgstr ""
-"ComfyClothingCompany と Alice と Bob を表現するための :ref:`アカウント <setup-creating-a"
+"CharlieChocolateFactory と Alice と Bob を表現するための :ref:`アカウント <setup-creating-a"
 "-test-account>` を作成します。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:60
-#, fuzzy
 msgid ""
-"Load CharlieChocolateFactory's account with enough |networkcurrency| to "
-"pay for the transactions fees and creation of mosaics."
+"Load CharlieChocolateFactory's account with enough |networkcurrency| to pay "
+"for the transactions fees and creation of mosaics."
 msgstr ""
-"ComfyClothingCompany のアカウントに手数料の支払いとモザイクの作成に十分な |networkcurrency| "
+"CharlieChocolateFactory のアカウントに手数料の支払いとモザイクの作成に十分な |networkcurrency| "
 "を入金してください。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:64
@@ -86,28 +84,26 @@ msgstr "モザイク制限の作成"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:66
 msgid ""
-"Before starting to work with Mosaic Restrictions, we need to have created"
-" a restrictable mosaic. Only mosaics with the ``restrictable`` "
-":ref:`property <mosaic-properties>` set to true at the moment of their "
-"creation can accept mosaic restrictions."
+"Before starting to work with Mosaic Restrictions, we need to have created a "
+"restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property "
+"<mosaic-properties>` set to true at the moment of their creation can accept "
+"mosaic restrictions."
 msgstr ""
-"Mosaic Restrictions "
-"を使用する前に、制限可能なモザイクを作成する必要があります。モザイク制限を受け入れることができるのは、作成時に ``restrictable`` "
-":ref:`プロパティ <mosaic-properties>` が true に設定されているモザイクのみです。"
+"Mosaic Restrictions を使用する前に、制限可能なモザイクを作成する必要があります。モザイク制限を受け入れることができるのは、作成時に "
+"``restrictable`` :ref:`プロパティ <mosaic-properties>` が true に設定されているモザイクのみです。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:68
 msgid ""
-"Start creating the new restrictable mosaic ``ccf.shares`` with |cli| "
-"using the :doc:`CharlieChocolateFactory account <../account/creating-an-"
-"account>`."
+"Start creating the new restrictable mosaic ``ccf.shares`` with |cli| using "
+"the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`."
 msgstr ""
 "|cli| によって :doc:`CharlieChocolateFactory アカウント <../account/creating-an-"
 "account>` を使用して、新しい制限可能なモザイク  ``ccf.shares`` の作成を開始します"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:84
 msgid ""
-"Then, copy and save the mosaic identifier. We will need it later to "
-"define restrictions."
+"Then, copy and save the mosaic identifier. We will need it later to define "
+"restrictions."
 msgstr "次に、モザイク識別子をコピーして保存します。制限を定義するときに必要です。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:88
@@ -116,16 +112,15 @@ msgstr "グローバルモザイク制限の設定"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:90
 msgid ""
-"The company wants to add a restriction to only permit accounts with "
-"elevated statuses to interact with the asset. To achieve this, the "
-"company will add a mosaic global restriction as ``{ccf.shares, KYC, EQ = "
-"1}``, which can be read as \"only allow accounts to transact with the "
-"``ccf.shares`` mosaic if their ``KYC`` restriction key for it has a value"
-" equal to 1\"."
+"The company wants to add a restriction to only permit accounts with elevated"
+" statuses to interact with the asset. To achieve this, the company will add "
+"a mosaic global restriction as ``{ccf.shares, KYC, EQ = 1}``, which can be "
+"read as \"only allow accounts to transact with the ``ccf.shares`` mosaic if "
+"their ``KYC`` restriction key for it has a value equal to 1\"."
 msgstr ""
 "会社はステータスを昇格したアカウントだけがアセットをやり取りできるように制限を追加したいと考えています。これを実現するためには、会社はモザイクのグローバル制限として"
-" ``{ccf.shares, KYC, EQ = 1}`` を追加します。これは \"``KYC`` の制限キーの値が 1 "
-"である場合に、アカウントへ ``ccf.share`` のやり取りを許可する\" と解釈します。"
+" ``{ccf.shares, KYC, EQ = 1}`` を追加します。これは \"``KYC`` の制限キーの値が 1 である場合に、アカウントへ"
+" ``ccf.share`` のやり取りを許可する\" と解釈します。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:96
 msgid "Use case diagram"
@@ -133,42 +128,25 @@ msgstr "ユースケース図"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:98
 msgid ""
-"Open a new file and place the mosaic identifier value you got while "
-"creating the mosaic in a variable named ``mosaicId``. Also, you should "
-"represent the key ``KYC`` with a numeric value encoded as a UInt64."
+"Open a new file and place the mosaic identifier value you got while creating"
+" the mosaic in a variable named ``mosaicId``. Also, you should represent the"
+" key ``KYC`` with a numeric value encoded as a UInt64."
 msgstr ""
 "新しいファイルを作成し、モザイクの作成時に取得したモザイク識別子の値を ``mosaicId`` という名前の変数に入れます。また UInt64 "
 "としてエンコードされた数値でキー `` KYC`` を表現する必要があります。"
 
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:102
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:118
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:132
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.ts`"
-msgstr ""
-
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:107
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:123
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:137
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.js`"
-msgstr ""
-
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:112
 msgid ""
-"Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the "
-"mosaic id and keys you have defined in the previous step as arguments."
+"Then, define a new **MosaicGlobalRestrictionTransaction**. Pass the mosaic "
+"id and keys you have defined in the previous step as arguments."
 msgstr ""
 "次に、新しい **MosaicGlobalRestrictionTransaction** を定義します。前の手順で定義した mosaic id "
 "とキーを引数として渡します。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:114
-#, fuzzy
 msgid ""
-"The SDK will also request the previous mosaic restriction value and type "
-"for this key and mosaic. As it is the first global restriction we are "
+"The SDK will also request the previous mosaic restriction value and type for"
+" this key and mosaic. As it is the first global restriction we are "
 "announcing, set the ``previousRestrictionValue`` to ``0`` and the "
 "``mosaicRestrictionType`` to ``None``."
 msgstr ""
@@ -178,10 +156,10 @@ msgstr ""
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:128
 msgid ""
-"After defining the global restriction, sign the transaction with the "
-"mosaic creator's account—CharlieChocolateFactory—and announce it to the "
-"network."
-msgstr "グローバル制限を定義したら、モザイク作成者のアカウント—CharlieChocolateFactory—でトランザクションに署名してネットワークにアナウンスします。"
+"After defining the global restriction, sign the transaction with the mosaic "
+"creator's account—CharlieChocolateFactory—and announce it to the network."
+msgstr ""
+"グローバル制限を定義したら、モザイク作成者のアカウント—CharlieChocolateFactory—でトランザクションに署名してネットワークにアナウンスします。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:144
 msgid "Assigning Mosaic Address Restrictions"
@@ -190,63 +168,40 @@ msgstr "モザイクアドレス制限の割当"
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:146
 msgid ""
 "When investors complete the KYC/AML process, the CharlieChocolateFactory "
-"alters their accounts with a **MosaicAddressRestrictionTransaction** with"
-" parameters ``ccf.shares, KYC, 1``, allowing certified investors to "
+"alters their accounts with a **MosaicAddressRestrictionTransaction** with "
+"parameters ``ccf.shares, KYC, 1``, allowing certified investors to "
 "participate in the STO. Others who have not provided the necessary "
 "information will not be able to receive or trade the asset."
 msgstr ""
-"投資家が KYC/AML 手続きを完了すると CharlieChocolateFactory は、パタメータ ``ccf.shares, KYC,"
-" 1`` を持つ **MosaicAddressRestrictionTransaction** で彼らのアカウントを変更し、認定投資家として "
-"STO へ参加できるようにします。必要な情報を提供していない他の人はアセットを受け取ったり取引したりできません。"
+"投資家が KYC/AML 手続きを完了すると CharlieChocolateFactory は、パタメータ ``ccf.shares, KYC, "
+"1`` を持つ **MosaicAddressRestrictionTransaction** で彼らのアカウントを変更し、認定投資家として STO "
+"へ参加できるようにします。必要な情報を提供していない他の人はアセットを受け取ったり取引したりできません。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:148
 msgid ""
 "Alice, a potential investor, passes the KYC process. Once Alice has been "
 "verified, the company tags Alice's account with the mosaic address "
-"restriction ``{ccf.shares, Alice, KYC, 1}``. On the other hand, Bob, "
-"another interested investor, did not pass the KYC process. Bob’s account "
-"is not eligible to receive ``ccf.shares`` as it does not meet the mosaic "
-"global restriction requirements. Nevertheless, CharlieCholocalteFatory "
-"decides to tag the account with the **mosaic address restriction** "
-"``{ccf.shares, Bob, KYC, 0}``. Doing so, they know that Bob has attempted"
-" and failed the KYC process."
+"restriction ``{ccf.shares, Alice, KYC, 1}``. On the other hand, Bob, another"
+" interested investor, did not pass the KYC process. Bob’s account is not "
+"eligible to receive ``ccf.shares`` as it does not meet the mosaic global "
+"restriction requirements. Nevertheless, CharlieCholocalteFatory decides to "
+"tag the account with the **mosaic address restriction** ``{ccf.shares, Bob, "
+"KYC, 0}``. Doing so, they know that Bob has attempted and failed the KYC "
+"process."
 msgstr ""
-"潜在的な投資家である Alice は KYC 手続きに合格しました。Alice が承認されると、同社は Alice "
-"のアカウントにモザイクアドレス制限 ``{ccf.shares, Alice, KYC, 1}`` "
-"をタグ付けします。一方で、もう一人の興味を持っている投資家の Bob は KYC 手続きに合格しませんでした。Bob "
-"のアカウントはモザイクのグローバル制限による要件を満たしていないため ``ccf.shares`` を受け取る資格がありません。それでも "
-"CharlieCholocalteFatory は **モザイクアドレス制限**  ``{ccf.shares, Bob, KYC, 0}`` "
-"でアカウントにタグを付けることにしました。そうすることで Bob が KYC 手続きを試みて、失敗したことを知ることができます。"
+"潜在的な投資家である Alice は KYC 手続きに合格しました。Alice が承認されると、同社は Alice のアカウントにモザイクアドレス制限 "
+"``{ccf.shares, Alice, KYC, 1}`` をタグ付けします。一方で、もう一人の興味を持っている投資家の Bob は KYC "
+"手続きに合格しませんでした。Bob のアカウントはモザイクのグローバル制限による要件を満たしていないため ``ccf.shares`` "
+"を受け取る資格がありません。それでも CharlieCholocalteFatory は **モザイクアドレス制限**  ``{ccf.shares, "
+"Bob, KYC, 0}`` でアカウントにタグを付けることにしました。そうすることで Bob が KYC "
+"手続きを試みて、失敗したことを知ることができます。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:150
 msgid ""
 "Define both **MosaicAddressRestrictionTransaction** for Alice and Bob "
 "accounts as follows:"
 msgstr ""
-"Alice と Bob のアカウントの両方の **MosaicAddressRestrictionTransaction** "
-"を次のように定義します:"
-
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:152
-msgid "Alice: ``{ccf.shares, Alice, KYC, 1}``"
-msgstr ""
-
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:153
-msgid "Bob:  ``{ccf.shares, Bob, KYC, 0}``"
-msgstr ""
-
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:157
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:171
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicAddressRestriction.ts`"
-msgstr ""
-
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:162
-#: ../../source/guides/restriction/restricting-mosaics-transfers.rst:176
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicAddressRestriction.js`"
-msgstr ""
+"Alice と Bob のアカウントの両方の **MosaicAddressRestrictionTransaction** を次のように定義します:"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:167
 msgid ""
@@ -255,8 +210,8 @@ msgid ""
 "<../../concepts/aggregate-transaction>`. Remember that you will have to "
 "announce the transactions from the mosaic's creator account."
 msgstr ""
-"これでトランザクションをネットワークにアナウンスできます。これを行うために :doc:`アグリゲートトランザクション "
-"<../../concepts/aggregate-transaction>` "
+"これでトランザクションをネットワークにアナウンスできます。これを行うために :doc:`アグリゲートトランザクション <../../concepts"
+"/aggregate-transaction>` "
 "を使用して両方のトランザクションをまとめてアナウンスしてみてください。モザイクの作成者アカウントからトランザクションを発表する必要があることは気に留めておいてください。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:181
@@ -266,29 +221,20 @@ msgid ""
 msgstr "トランザクションが承認されたら、Alice と Bob のアカウントにモザイクを送信してみてください。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:183
-#, fuzzy
 msgid ""
 "Now, you should be able to send ``ccf.shares`` to Alice without any "
-"problems. Additionally, Alice will be able to transfer mosaics with other"
-" accounts with restrictions set to ``{ccf.shares, KYC, 1}``."
+"problems. Additionally, Alice will be able to transfer mosaics with other "
+"accounts with restrictions set to ``{ccf.shares, KYC, 1}``."
 msgstr ""
 "何の問題もなく Alice に ``ccf.shares`` を送ることができるはずです。さらに Alice  は ``{ccf.shares, "
 "KYC, 1}`` に設定された制限を持つ、他のアカウントとモザイクを転送できます。"
 
 #: ../../source/guides/restriction/restricting-mosaics-transfers.rst:189
 msgid ""
-"However, when you send the same mosaic to Bob's account, you should get "
-"the error ``Failure_RestrictionMosaic_Account_Unauthorized`` through the "
-"status error channel because he is not allowed to transact with "
-"``ccf.shares``."
+"However, when you send the same mosaic to Bob's account, you should get the "
+"error ``Failure_RestrictionMosaic_Account_Unauthorized`` through the status "
+"error channel because he is not allowed to transact with ``ccf.shares``."
 msgstr ""
 "ただし Bob のアカウントに同じモザイクを送信する場合は ``ccf.shares`` "
 "の取引が許可されていないため、ステータスエラーチャンネルを通じて "
 "``Failure_RestrictionMosaic_Account_Unauthorized`` エラーが表示されます。"
-
-#~ msgid "Background"
-#~ msgstr "背景"
-
-#~ msgid "Method #01: Using the SDK"
-#~ msgstr "方法 #01: SDK を使用する"
-

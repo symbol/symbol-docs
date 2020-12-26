@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-21 09:32+0000\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,6 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/tagcloud.html:2
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:43
+msgid "Tags"
+msgstr "タグ"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/locations.html:2
+msgid "Locations"
+msgstr "場所"
+
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postnavy.html:7
 msgid "Previous"
 msgstr "前へ"
@@ -29,19 +38,20 @@ msgstr "前へ"
 msgid "Next"
 msgstr "次へ"
 
-#: ../../source/_templates/collection.html:4
-msgid "guides"
-msgstr "ガイド"
-
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/collection.html:48
 #: ../../source/_templates/collection.html:19
 #: ../../source/_templates/catalog.html:17
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/collection.html:48
 msgid "Read more ..."
 msgstr "詳細を見る"
 
-#: ../../source/_templates/include/edit-github.html:2
-msgid "Improve this page"
-msgstr "このページを加筆修正する"
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/archives.html:2
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/authors.html:2
+#: ../../source/_templates/post-meta.html:5
+msgid "Authors"
+msgstr "投稿者"
 
 #: ../../source/_templates/layout.html:43
 #: ../../source/_templates/layout.html:60
@@ -56,32 +66,9 @@ msgstr "お探しのものは見つかりましたか？"
 msgid "Give us your feedback."
 msgstr "フィードバックをください。"
 
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/tagcloud.html:2
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:43
-msgid "Tags"
-msgstr "タグ"
-
-#: ../../source/_templates/catalog.html:3
-#: ../../source/_templates/catalog.html:7
-#: ../../source/_templates/include/navbar-right.html:9
-msgid "Guides"
-msgstr "ガイド"
-
-#: ../../source/_templates/catalog.html:8
-msgid ""
-"Step-by-step tutorials on how to use the tools, integrate Symbol with other "
-"technologies, and combine the built-in features to architect solutions."
-msgstr ""
-"チュートリアルでは、ツールの使用方法、Symbol "
-"と他のテクノロジーの統合方法、およびビルドイン機能をアーキテクトソリューションに組み合わせる方法について段階的に説明しています。"
-
-#: ../../source/_templates/include/language.html:7
-msgid "Translate"
-msgstr "翻訳する"
-
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/locations.html:2
-msgid "Locations"
-msgstr "場所"
+#: ../../source/_templates/include/edit-github.html:2
+msgid "Improve this page"
+msgstr "このページを加筆修正する"
 
 #: ../../source/_templates/include/navbar-right.html:3
 msgid "Getting Started"
@@ -90,6 +77,12 @@ msgstr "入門"
 #: ../../source/_templates/include/navbar-right.html:6
 msgid "Features"
 msgstr "機能"
+
+#: ../../source/_templates/include/navbar-right.html:9
+#: ../../source/_templates/catalog.html:3
+#: ../../source/_templates/catalog.html:7
+msgid "Guides"
+msgstr "ガイド"
 
 #: ../../source/_templates/include/navbar-right.html:12
 msgid "Tools"
@@ -103,22 +96,21 @@ msgstr "ヘルプ"
 msgid "Recent Posts"
 msgstr "最近の投稿"
 
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/languages.html:2
-msgid "Languages"
-msgstr "言語"
+#: ../../source/_templates/collection.html:4
+msgid "guides"
+msgstr "ガイド"
 
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/archives.html:2
-msgid "Archives"
-msgstr "アーカイブ"
+#: ../../source/_templates/catalog.html:8
+msgid ""
+"Step-by-step tutorials on how to use the tools, integrate Symbol with other "
+"technologies, and combine the built-in features to architect solutions."
+msgstr ""
+"チュートリアルでは、ツールの使用方法、Symbol "
+"と他のテクノロジーの統合方法、およびビルドイン機能をアーキテクトソリューションに組み合わせる方法について段階的に説明しています。"
 
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/categories.html:2
 msgid "Categories"
 msgstr "カテゴリ"
-
-#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/authors.html:2
-#: ../../source/_templates/post-meta.html:5
-msgid "Authors"
-msgstr "投稿者"
 
 #: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/postcard2.html:2
 msgid "Update"
@@ -146,5 +138,14 @@ msgid "Tag"
 msgstr "タグ"
 
 #: ../../source/_templates/navbar.html:39
+#: ../../source/_templates/globaltoc.html:2
 msgid "Navigation"
 msgstr "ナビゲーション"
+
+#: ../../../../../virtualenv/python3.7.1/lib/python3.7/site-packages/ablog/templates/languages.html:2
+msgid "Languages"
+msgstr "言語"
+
+#: ../../source/_templates/include/language.html:7
+msgid "Translate"
+msgstr "翻訳する"

@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/metadata.rst:36
 msgid "Metadata"
@@ -27,9 +27,9 @@ msgstr "メタデータ"
 
 #: ../../source/concepts/metadata.rst:38
 msgid ""
-"|codename| provides the option to associate custom data to an "
-":doc:`account <account>`, :doc:`mosaic <mosaic>` or :doc:`namespace "
-"<namespace>` with a transaction."
+"|codename| provides the option to associate custom data to an :doc:`account "
+"<account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a "
+"transaction."
 msgstr ""
 "|codename| はトランザクションとともに :doc:`アカウント <account>`, :doc:`モザイク <mosaic>`,  "
 ":doc:`ネームスペース <namespace>` にカスタムデータを関連付ける手段が用意されています。"
@@ -44,8 +44,8 @@ msgstr "アセットに関連する情報の添付。"
 
 #: ../../source/concepts/metadata.rst:43
 msgid ""
-"Validate the value attached to an asset to enable users in an application"
-" to perform an off-chain action."
+"Validate the value attached to an asset to enable users in an application to"
+" perform an off-chain action."
 msgstr "アセットに付加された価値を検証して、アプリケーション内のユーザがチェーン外のアクションを実行できるようにします。"
 
 #: ../../source/concepts/metadata.rst:45
@@ -59,11 +59,10 @@ msgstr ""
 
 #: ../../source/concepts/metadata.rst:48
 msgid ""
-"The **value** linked to an identifier is a string up to ``1024`` "
-"characters,  being this parameter :ref:`editable per network <config-"
-"network-properties>`. The client application is responsible for "
-"encrypting the message or keeping it visible for every blockchain "
-"participant."
+"The **value** linked to an identifier is a string up to ``1024`` characters,"
+"  being this parameter :ref:`editable per network <config-network-"
+"properties>`. The client application is responsible for encrypting the "
+"message or keeping it visible for every blockchain participant."
 msgstr ""
 "識別子にリンクされた **value** は ``1024`` 文字までの文字列です。このパラメータは :ref:`ネットワークごとに設定可能 "
 "<config-network-properties>` "
@@ -75,9 +74,9 @@ msgstr "永続性"
 
 #: ../../source/concepts/metadata.rst:55
 msgid ""
-"Metadata entries are stored on the blockchain—like the message of a "
-"regular :doc:`TransferTransaction <transfer-transaction>`—but also as a "
-"**key-value state**."
+"Metadata entries are stored on the blockchain—like the message of a regular "
+":doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value "
+"state**."
 msgstr ""
 "メタデータエントリはブロックチェーンへ — :doc:`TransferTransaction <transfer-transaction>` "
 "の通常メッセージのように — 格納されますが、 **key-value state** としてです。"
@@ -85,9 +84,9 @@ msgstr ""
 #: ../../source/concepts/metadata.rst:57
 msgid ""
 "This feature reduces the reading time of client applications; metadata "
-"allows information to be accessed by keys instead of processing the "
-"entire account transaction history off-chain to obtain the latest "
-"transaction message value."
+"allows information to be accessed by keys instead of processing the entire "
+"account transaction history off-chain to obtain the latest transaction "
+"message value."
 msgstr ""
 "この機能によりクライアントアプリケーションの読み込み時間が短縮されます; "
 "メタデータを使用すると最新のトランザクションメッセージ値を取得するために、アカウントのトランザクション履歴全体をオフチェーンで処理する代わりにキーで情報にアクセスできます。"
@@ -109,8 +108,8 @@ msgstr ""
 
 #: ../../source/concepts/metadata.rst:66
 msgid ""
-"The target account should cosign the aggregate to record the metadata on "
-"the blockchain and update the asset state."
+"The target account should cosign the aggregate to record the metadata on the"
+" blockchain and update the asset state."
 msgstr "対象アカウントはメタデータをブロックチェーンに記録して、アセットの状態を更新するためにアグリゲートに署名をする必要があります。"
 
 #: ../../source/concepts/metadata.rst:70
@@ -128,9 +127,9 @@ msgstr "メタデータはアセットに関連情報を添付するのに使用
 #: ../../source/concepts/metadata.rst:81
 msgid ""
 "Bob works as a digital notary that stamp accounts on |codename|'s public "
-"blockchain. When a customer comes to Bob to notarize a document, he "
-"checks the authentication of the customer’s documents then tags the "
-"account with a MetadataTransaction."
+"blockchain. When a customer comes to Bob to notarize a document, he checks "
+"the authentication of the customer’s documents then tags the account with a "
+"MetadataTransaction."
 msgstr ""
 "Bob はスタンプが |codename| "
 "パブリックブロックチェーン上に証印の責任を持つデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
@@ -138,12 +137,11 @@ msgstr ""
 
 #: ../../source/concepts/metadata.rst:84
 msgid ""
-"Alice a recent graduate and wants her educational certificate accredited "
-"to her |codename| account to avoid the hassle of repeatedly providing "
-"verification of her degree. So she goes to Bob and provides him with "
-"proof of her degree. Once Alice pays Bob a fee, Bob verifies the "
-"authenticity and stamps Alice’s account with metadata that signifies her "
-"degree."
+"Alice a recent graduate and wants her educational certificate accredited to "
+"her |codename| account to avoid the hassle of repeatedly providing "
+"verification of her degree. So she goes to Bob and provides him with proof "
+"of her degree. Once Alice pays Bob a fee, Bob verifies the authenticity and "
+"stamps Alice’s account with metadata that signifies her degree."
 msgstr ""
 "最近 Alice は学校を卒業し、彼女の教育証明を彼女の |codename| "
 "アカウントに認定することで、学位証明を繰り返して提供しなければならない面倒事を避けたいと思っています。そのため彼女は Bob "
@@ -169,27 +167,26 @@ msgstr ""
 
 #: ../../source/concepts/metadata.rst:100
 msgid ""
-"When a new employee, Carol, is hired, the HR department creates a new "
-"work account for her. For security reasons, HR sets the metadata of the "
-"account to ``{company, ACCESS, 9-18}``."
+"When a new employee, Carol, is hired, the HR department creates a new work "
+"account for her. For security reasons, HR sets the metadata of the account "
+"to ``{company, ACCESS, 9-18}``."
 msgstr ""
-"新しい従業員の Carol "
-"が雇われると、人事部は彼女の仕事用アカウントを新規作成します。セキュリティ上の理由で人事部はアカウントのメタデータとして ``{company, "
-"ACCESS, 9-18}`` を設定します。"
+"新しい従業員の Carol が雇われると、人事部は彼女の仕事用アカウントを新規作成します。セキュリティ上の理由で人事部はアカウントのメタデータとして "
+"``{company, ACCESS, 9-18}`` を設定します。"
 
 #: ../../source/concepts/metadata.rst:103
 msgid ""
-"Each time Carol attempts to access the company apps suite, the company "
-"app validates that Carol has permission and that the time falls under "
+"Each time Carol attempts to access the company apps suite, the company app "
+"validates that Carol has permission and that the time falls under "
 "*9:00-18:00* before granting her admission."
 msgstr ""
-"Carol が会社のアプリスイートにアクセスしようとするたびに、会社アプリは Carol に許可があること、および彼女の入室を許可する前に、時刻が"
-" *9:00-18:00* の範囲内にあることを検証します。"
+"Carol が会社のアプリスイートにアクセスしようとするたびに、会社アプリは Carol に許可があること、および彼女の入室を許可する前に、時刻が "
+"*9:00-18:00* の範囲内にあることを検証します。"
 
 #: ../../source/concepts/metadata.rst:105
 msgid ""
-"Similarly, if Derek, who has no permissions, attempts to access the "
-"company apps suite, the app will reject his request."
+"Similarly, if Derek, who has no permissions, attempts to access the company "
+"apps suite, the app will reject his request."
 msgstr "同様に、権限を持たない Derek が会社のアプリスイートにアクセスしようとすると、そのアプリは彼のリクエストを拒否します。"
 
 #: ../../source/concepts/metadata.rst:109
@@ -197,48 +194,12 @@ msgid "Related transactions"
 msgstr "関連トランザクション"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Type"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid "Description"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid "0x4144"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid ":ref:`AccountMetadataTransaction <account-metadata-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
 msgid "Associate a key-value state to an account."
 msgstr "アカウントに Key-Value 状態を関連付けます。"
 
 #: ../../source/concepts/metadata.rst:1
-msgid "0x4244"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid ":ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
 msgid "Associate a key-value state to a mosaic."
 msgstr "モザイクに Key-Value 状態を関連付けます。"
-
-#: ../../source/concepts/metadata.rst:1
-msgid "0x4344"
-msgstr ""
-
-#: ../../source/concepts/metadata.rst:1
-msgid ":ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/metadata.rst:1
 msgid "Associate a key-value state to a namespace."
@@ -251,4 +212,3 @@ msgstr "ガイド"
 #: ../../source/concepts/metadata.rst:131
 msgid "Continue: :doc:`Transfer Transaction <transfer-transaction>`."
 msgstr "次へ: :doc:`転送トランザクション <transfer-transaction>`"
-
