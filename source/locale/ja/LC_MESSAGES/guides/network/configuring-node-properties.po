@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/network/configuring-node-properties.rst:41
 msgid "Configuring node properties"
@@ -27,262 +27,46 @@ msgstr "ノードのプロパティ設定"
 
 #: ../../source/guides/network/configuring-node-properties.rst:43
 msgid ""
-"There is a large number of node-related settings that can be customized "
-"in |codename|."
-msgstr ""
+"There is a large number of node-related settings that can be customized in "
+"|codename|."
+msgstr "|codename| には多数のカスタマイズ可能なノード関連の設定があります。 "
 
 #: ../../source/guides/network/configuring-node-properties.rst:45
 msgid ""
 "The easiest way to change them is by using |symbol-bootstrap|'s custom "
-"presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put"
-" the settings in a YAML file and pass it to ``symbol-bootstrap config`` "
-"using the ``-c`` parameter. For example:"
+"presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put "
+"the settings in a YAML file and pass it to ``symbol-bootstrap config`` using"
+" the ``-c`` parameter. For example:"
 msgstr ""
+"これらを変更する最も簡単な方法は |symbol-bootstrap| のカスタムプリセットを使用することです。 (参照 :doc:`Symbol "
+"Bootstrap の使用 <using-symbol-bootstrap>`): 設定を YAML ファイルに記述して、-c パラメータを使用して "
+"``symbol-bootstrap config`` に渡します。例:"
 
 #: ../../source/guides/network/configuring-node-properties.rst:52
 msgid ""
-"These settings can also be directly provided to |catapult-server| through"
-" ``.properties`` files. The header of each of the tables below indicates "
+"These settings can also be directly provided to |catapult-server| through "
+"``.properties`` files. The header of each of the tables below indicates "
 "which file contains that table's properties."
 msgstr ""
+"これらの設定は ``.properties`` ファイルを介して |catapult-server| "
+"に直接提供することもできます。以下の各テーブルのヘッダーは、そのテーブルのプロパティが含まれているファイルを示しています。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:54
 msgid ""
 "For **network**-related properties, read the :doc:`Configuring network "
 "properties <configuring-network-properties>` guide."
 msgstr ""
+"**ネットワーク** 関連のプロパティについては、:doc:`ネットワークプロパティの設定 <configuring-network-"
+"properties>` ガイドを参照してください。"
 
 #: ../../source/guides/network/configuring-node-properties.rst:60
 msgid "User configuration"
-msgstr ""
+msgstr "ユーザー設定"
 
 #: ../../source/guides/network/configuring-node-properties.rst:67
 msgid "Node configuration"
-msgstr ""
+msgstr "ノード設定"
 
-#: ../../source/guides/network/configuring-node-properties.rst:74
+#: ../../source/guides/network/configuring-node-properties.rst:76
 msgid "Harvesting Configuration"
-msgstr ""
-
-#~ msgid "Customize the node configurable parameters."
-#~ msgstr "ノード設定パラメータの変更"
-
-#~ msgid "Packages"
-#~ msgstr "パッケージ"
-
-#~ msgid ""
-#~ "The instructions to configure the node"
-#~ " vary depending on the package used"
-#~ " to deploy the network."
-#~ msgstr "ノードを構成する手順はネットワークの展開に使用するパッケージによって異なります。"
-
-#~ msgid "Testnet Bootstrap"
-#~ msgstr "テストネットブートストラップ"
-
-#~ msgid ""
-#~ "After running a node for the first"
-#~ " time, the file ``config-input.yaml`` "
-#~ "will be generated in the folder"
-#~ "``symbol-testnet-bootstrap/identity``."
-#~ msgstr ""
-#~ "初めてノードを実行した後、ファイル ``config-input.yaml`` がフォルダ "
-#~ "``symbol-testnet-bootstrap/identity`` に生成されます。"
-
-#~ msgid "To edit the node properties, follow the next steps:"
-#~ msgstr "ノードプロパティを編集するには次の手順に従います:"
-
-#~ msgid ""
-#~ "If the node service is running, "
-#~ "run ``sudo docker-compose down`` under"
-#~ " the same directory you executed the"
-#~ " ``up`` command."
-#~ msgstr ""
-#~ "ノードサービスが稼働している場合は ``up`` コマンドを実行した同じディレクトリで ``sudo"
-#~ " docker-compose down`` を実行してください。"
-
-#~ msgid "Edit the properties file ``config-input.yaml`` with a text editor."
-#~ msgstr "テキストエディタで ``config-input.yaml`` プロパティファイルを編集してください。"
-
-#~ msgid ""
-#~ "Save and apply the changes with "
-#~ "the command ``sudo docker-compose up "
-#~ "--build --detach``."
-#~ msgstr "保存したら ``sudo docker-compose up --build --detach`` コマンドで反映してください。"
-
-#~ msgid "Service Bootstrap"
-#~ msgstr "サービスブートストラップ"
-
-#~ msgid ""
-#~ "After running a network for the "
-#~ "first time, the folder ``build/catapult-"
-#~ "config`` contains all the properties "
-#~ "files for the Peer and API nodes"
-#~ " that compose the network."
-#~ msgstr ""
-#~ "初めてネットワークを実行した後、フォルダ ``build/catapult-config`` "
-#~ "にはネットワークを構成するピアおよび API ノードのすべてのプロパティファイルが含まれます。"
-
-#~ msgid ""
-#~ "For example, if you want to edit"
-#~ " the ``peer-node-0`` properties, follow "
-#~ "the next steps:"
-#~ msgstr "例えば、 ``peer-node-0`` プロパティを編集するには次の手順に従います:"
-
-#~ msgid "Stop all the services with the command ``./cmds/stop-all``."
-#~ msgstr "すべてのサービスを停止するには ``./cmds/stop-all`` を使用します。"
-
-#~ msgid ""
-#~ "Open the properties file to edit "
-#~ "under ``peer-node-0/userconfig/resources`` with "
-#~ "a text editor."
-#~ msgstr "``peer-node-0/userconfig/resources`` にあるプロパティファイルをテキストエディタで開いて編集します。"
-
-#~ msgid "Save and apply the changes with the command ``./cmds/start-all -d``."
-#~ msgstr "保存して変更を ``./cmds/start-all -d`` コマンドで適用します。"
-
-#~ msgid "Properties"
-#~ msgstr "プロパティ"
-
-#~ msgid "Find below the list of configurable properties."
-#~ msgstr "設定可能なプロパティのリストは次の通りです。"
-
-#~ msgid "Property"
-#~ msgstr "プロパティ"
-
-#~ msgid "Type"
-#~ msgstr "タイプ"
-
-#~ msgid "Description"
-#~ msgstr "説明"
-
-#~ msgid "Default"
-#~ msgstr "デフォルト"
-
-#~ msgid ""
-#~ "Set to true if potential delegated "
-#~ "harvesters should be automatically detected."
-#~ msgstr "true の場合、デリゲートハーベスターを自動的に検出します。"
-
-#~ msgid "Data directory."
-#~ msgstr "データディレクトリ"
-
-#~ msgid "Certificate directory."
-#~ msgstr "証明書ディレクトリ"
-
-#~ msgid "Plugins directory."
-#~ msgstr "プラグインディレクトリ"
-
-#~ msgid "Server port."
-#~ msgstr "サーバポート"
-
-#~ msgid "Maximum number of incoming connections per identity over primary port."
-#~ msgstr "プライマリポート経由の着信接続の ID ごとの最大数。"
-
-#~ msgid "Set to true if the server should reuse ports already in use."
-#~ msgstr "true の場合、サーバは使用中のポートを再利用します。"
-
-#~ msgid ""
-#~ "Set to true if a single thread "
-#~ "pool should be used, Set to false"
-#~ " if multiple thread pools should be"
-#~ " used."
-#~ msgstr "単一のスレッドプールを使用する場合は true に設定し、複数のスレッドプールを使用する場合は false に設定します。"
-
-#~ msgid "Set to true if cache data should be saved in a database."
-#~ msgstr "true の場合、キャッシュデータのデータベース保存が有効になります。"
-
-#~ msgid ""
-#~ "Set to true if temporary sync "
-#~ "files should be automatically cleaned "
-#~ "up. *Note*: This should be Set to"
-#~ " false if broker process is running."
-#~ msgstr ""
-#~ "一時同期ファイルを自動的にクリーンアップする必要がある場合は true に設定します。*注意*: "
-#~ "ブローカープロセスが実行されている場合、これは false に設定する必要があります。"
-
-#~ msgid "Set to true if transaction spam throttling should be enabled."
-#~ msgstr "true の場合、スパムスロットルが有効になります。"
-
-#~ msgid ""
-#~ "Maximum fee that will boost a "
-#~ "transaction through the spam throttle "
-#~ "when spam throttling is enabled."
-#~ msgstr "スパムスロットルが有効な場合、スパムスロットルを介してのトランザクションをブーストさせる最大手数料。"
-
-#~ msgid "Maximum number of blocks per sync attempt."
-#~ msgstr "同期試行ごとの最大ブロック数。"
-
-#~ msgid "Maximum chain bytes per sync attempt."
-#~ msgstr "同期試行あたりの最大チェーンバイト。"
-
-#~ msgid ""
-#~ "Minimum fee multiplier of transactions "
-#~ "to propagate and include in blocks."
-#~ msgstr "トランザクションを伝播させてブロックへ含めるための最小手数料乗数。"
-
-#~ msgid ""
-#~ "Transaction selection strategy used for "
-#~ "syncing and harvesting unconfirmed "
-#~ "transactions."
-#~ msgstr "未承認トランザクションの同期とハーベスティングに使用するトランザクション選択ストラテジ"
-
-#~ msgid "Maximum packet data size."
-#~ msgstr "パケットデータの最大サイズ"
-
-#~ msgid "Size of the block disruptor circular buffer."
-#~ msgstr "ブロックディスラプタ循環バッファーのサイズ"
-
-#~ msgid "Maximum cache database write batch size."
-#~ msgstr "キャッシュデータベース書き込みバッチの最大サイズ"
-
-#~ msgid "Maximum number of nodes to track in memory."
-#~ msgstr "メモリに追跡保持するノードの最大数"
-
-#~ msgid "Networks that should be treated as local."
-#~ msgstr "ローカルとして扱われるべきネットワーク。"
-
-#~ msgid "Node host (leave empty to auto-detect IP)."
-#~ msgstr "ノードホスト (空の場合は自動的に IP アドレスを取得)"
-
-#~ msgid "Node friendly name (leave empty to use address)."
-#~ msgstr "ノードのフレンドリー名 (空の場合はアドレスを使用)"
-
-#~ msgid "Node version."
-#~ msgstr "ノードバージョン"
-
-#~ msgid "Node roles."
-#~ msgstr "ノードロール"
-
-#~ msgid "Maximum number of active connections."
-#~ msgstr "有効な接続の最大数"
-
-#~ msgid "Maximum size of the pending connections queue."
-#~ msgstr "保留中接続のキューの最大サイズ"
-
-#~ msgid "Default duration for banning."
-#~ msgstr "BAN 期間のデフォルト値"
-
-#~ msgid "Maximum duration for banning."
-#~ msgstr "BAN の最大期間"
-
-#~ msgid "Maximum number of banned nodes."
-#~ msgstr "BAN 済ノードの最大数"
-
-#~ msgid "Harvester signing private key."
-#~ msgstr "ハーベスタの署名秘密鍵"
-
-#~ msgid "Harvester vrf private key."
-#~ msgstr "ハーベスタの検証秘密鍵"
-
-#~ msgid "Set to true if auto harvesting is enabled."
-#~ msgstr "true の場合、自動ハーベスティングが有効になります。"
-
-#~ msgid "Maximum number of unlocked accounts."
-#~ msgstr "アンロックアカウントの最大数"
-
-#~ msgid "Delegate harvester prioritization policy."
-#~ msgstr "デリゲートハーベスターの優先順位付けポリシー"
-
-#~ msgid "Public key of the account receiving part of the harvested fee."
-#~ msgstr "ハーベスト手数料の一部を受け取るアカウントの公開鍵"
-
+msgstr "ハーベスティング設定"

@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/network/configuring-network-properties.rst:41
 msgid "Configuring network properties"
@@ -27,189 +27,42 @@ msgstr "ネットワークプロパティの設定"
 
 #: ../../source/guides/network/configuring-network-properties.rst:43
 msgid ""
-"There is a large number of network-related settings that can be "
-"customized in |codename|."
-msgstr ""
+"There is a large number of network-related settings that can be customized "
+"in |codename|."
+msgstr "|codename| には多数のカスタマイズ可能なネットワーク関連の設定があります。 "
 
 #: ../../source/guides/network/configuring-network-properties.rst:45
 msgid ""
 "The easiest way to change them is by using |symbol-bootstrap|'s custom "
-"presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put"
-" the settings in a YAML file and pass it to ``symbol-bootstrap config`` "
-"using the ``-c`` parameter."
+"presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put "
+"the settings in a YAML file and pass it to ``symbol-bootstrap config`` using"
+" the ``-c`` parameter."
 msgstr ""
+"これらを変更する最も簡単な方法は |symbol-bootstrap| のカスタムプリセットを使用することです。 (参照 :doc:`Symbol "
+"Bootstrap の使用 <using-symbol-bootstrap>`): 設定を YAML ファイルに記述して、-c パラメータを使用して "
+"``symbol-bootstrap config`` に渡します。"
 
 #: ../../source/guides/network/configuring-network-properties.rst:47
 msgid ""
-"These settings can also be directly provided to |catapult-server| through"
-" ``.properties`` files. The header of each of the tables below indicates "
+"These settings can also be directly provided to |catapult-server| through "
+"``.properties`` files. The header of each of the tables below indicates "
 "which file contains that table's properties."
 msgstr ""
+"これらの設定は ``.properties`` ファイルを介して |catapult-server| "
+"に直接提供することもできます。以下の各テーブルのヘッダーは、そのテーブルのプロパティが含まれているファイルを示しています。"
 
 #: ../../source/guides/network/configuring-network-properties.rst:49
 msgid ""
-"For **node**-related properties, read the :doc:`Configuring node "
-"properties <configuring-node-properties>` guide."
+"For **node**-related properties, read the :doc:`Configuring node properties "
+"<configuring-node-properties>` guide."
 msgstr ""
+"**ノード** 関連のプロパティについては、:doc:`ノードプロパティの設定 <configuring-node-properties>` "
+"ガイドを参照してください。"
 
 #: ../../source/guides/network/configuring-network-properties.rst:55
 msgid "Network configuration"
-msgstr ""
+msgstr "ネットワーク設定"
 
 #: ../../source/guides/network/configuring-network-properties.rst:62
 msgid "Inflation configuration"
-msgstr ""
-
-#~ msgid "Customize the network configurable parameters."
-#~ msgstr "ネットワーク設定パラメータの変更"
-
-#~ msgid ""
-#~ "The directory ``ruby/catapult-"
-#~ "templates/peer_node/resources`` of the |catapult-"
-#~ "service-bootstrap| repository comes with "
-#~ "a set of files to configure the"
-#~ " network."
-#~ msgstr ""
-#~ "|catapult-service-bootstrap| リポジトリの ``ruby"
-#~ "​/catapult-templates/peer_node/resources`` "
-#~ "ディレクトリにはネットワークを構成するための一連ファイルが付属しています。"
-
-#~ msgid ""
-#~ "The ``.properties`` files provided can "
-#~ "be edited with any text editor "
-#~ "before launching a network for the "
-#~ "first time."
-#~ msgstr "生成される ``.properties`` ファイルはネットワーク初回起動の前に任意のテキストエディタで編集できます。"
-
-#~ msgid "Properties"
-#~ msgstr "プロパティ"
-
-#~ msgid "Find below the list of configurable properties."
-#~ msgstr "設定可能なプロパティのリストは次の通りです。"
-
-#~ msgid "Property"
-#~ msgstr "プロパティ"
-
-#~ msgid "Type"
-#~ msgstr "タイプ"
-
-#~ msgid "Description"
-#~ msgstr "説明"
-
-#~ msgid "Network identifier."
-#~ msgstr "ネットワーク識別子"
-
-#~ msgid "Node equality strategy."
-#~ msgstr "ノード等価ストラテジ"
-
-#~ msgid "Nemesis public key."
-#~ msgstr "ネメシス公開鍵"
-
-#~ msgid "Nemesis generation hash."
-#~ msgstr "ネメシスジェネレーションハッシュ"
-
-#~ msgid "Nemesis epoch time adjustment."
-#~ msgstr "ネメシスエポックタイムの調整"
-
-#~ msgid "Mosaic id used as primary chain currency."
-#~ msgstr "モザイクID をプライマリなチェーン通貨として使用されています。"
-
-#~ msgid "Mosaic id used to provide harvesting ability."
-#~ msgstr "ハーベスティング可能なモザイクID"
-
-#~ msgid "Targeted time between blocks."
-#~ msgstr "ブロック間の生成時間"
-
-#~ msgid "Maximum number of blocks that can be rolled back."
-#~ msgstr "ロールバック可能な最大ブロック数"
-
-#~ msgid "Initial currency atomic units available in the network."
-#~ msgstr "ネットワークの初期通貨単位量"
-
-#~ msgid "Maximum number of transactions per block."
-#~ msgstr "ブロック毎のトランザクションの最大数"
-
-#~ msgid "Maximum number of transactions per aggregate."
-#~ msgstr "アグリゲート毎のトランザクションの最大数"
-
-#~ msgid "Maximum number of blocks for which a hash lock can exist."
-#~ msgstr "ハッシュロックが存在できる最大ブロック数。"
-
-#~ msgid "Maximum number of blocks for which a secret lock can exist."
-#~ msgstr "シークレットロックが存在できる最大ブロック数。"
-
-#~ msgid "Minimum size of a proof in bytes."
-#~ msgstr "バイト換算の最小 proof サイズ"
-
-#~ msgid "Maximum size of a proof in bytes."
-#~ msgstr "バイト換算の最大 proof サイズ"
-
-#~ msgid "Maximum metadata value size."
-#~ msgstr "メタデータ値の最大サイズ"
-
-#~ msgid "Maximum number of mosaics that an account can own."
-#~ msgstr "アカウントが保有できるモザイクの最大数"
-
-#~ msgid "Maximum mosaic duration."
-#~ msgstr "モザイク有効期限の最大値"
-
-#~ msgid "Maximum mosaic divisibility."
-#~ msgstr "モザイク可分性の最大値"
-
-#~ msgid "Public key of the mosaic rental fee sink account."
-#~ msgstr "モザイクレンタル手数料のシンクアカウント公開鍵"
-
-#~ msgid "Mosaic rental fee."
-#~ msgstr "モザイクレンタル手数料"
-
-#~ msgid "Maximum number of multisig levels."
-#~ msgstr "マルチシグ深度の最大数"
-
-#~ msgid "Maximum number of cosignatories per account."
-#~ msgstr "アカウント毎の連署者の最大数"
-
-#~ msgid "Maximum number of accounts a single account can cosign."
-#~ msgstr "シングルアカウントが署名できるアカウントの最大数"
-
-#~ msgid "Maximum namespace name size."
-#~ msgstr "最大ネームスペース名長"
-
-#~ msgid "Maximum number of children for a root namespace."
-#~ msgstr "最大子ネームスペース数"
-
-#~ msgid "Maximum namespace depth."
-#~ msgstr "最大ネームスペース深度"
-
-#~ msgid "Minimum namespace duration."
-#~ msgstr "最小ネームスペース期間"
-
-#~ msgid "Maximum namespace duration."
-#~ msgstr "最大ネームスペース期間"
-
-#~ msgid ""
-#~ "Grace period during which time only "
-#~ "the previous owner can renew an "
-#~ "expired namespace."
-#~ msgstr "期限切れネームスペースの更新猶予期間"
-
-#~ msgid "Reserved root namespaces that cannot be claimed."
-#~ msgstr "予約済みルートネームスペース"
-
-#~ msgid "Public key of the namespace rental fee sink account."
-#~ msgstr "ネームスペースレンタル手数料のシンクアカウント公開鍵"
-
-#~ msgid "Root namespace rental fee per block."
-#~ msgstr "ルートネームスペースレンタル手数料"
-
-#~ msgid "Child namespace rental fee."
-#~ msgstr "子ネームスペースレンタル手数料"
-
-#~ msgid "Maximum number of account restriction values."
-#~ msgstr "最大制限アカウント数"
-
-#~ msgid "Maximum number of mosaic restriction values."
-#~ msgstr "最大モザイク制限数"
-
-#~ msgid "Maximum transaction message size."
-#~ msgstr "最大メッセージサイズ"
-
+msgstr "インフレーション設定"

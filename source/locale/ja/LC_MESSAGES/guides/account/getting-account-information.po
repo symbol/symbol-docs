@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/getting-account-information.rst:42
 msgid "Getting the account information"
@@ -48,50 +48,24 @@ msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/account/getting-account-information.rst:57
-#, fuzzy
 msgid ""
 "Open a new file and call the ``getAccountInfo`` function from the "
 "``AccountHttp`` repository. Pass your account's address as a parameter."
 msgstr ""
-"新しいファイルを開き、アカウントのアドレスを引数として ``AccountHttp`` リポジトリの持つ ``getAccountInfo`` "
+"新しいファイルを開いて、アカウントのアドレスを引数として ``AccountHttp`` リポジトリから ``getAccountInfo`` "
 "関数を呼びます。"
-
-#: ../../source/guides/account/getting-account-information.rst:62
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/account/GettingAccountInformation.ts`"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:67
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/account/GettingAccountInformation.js`"
-msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:72
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/account/GettingAccountInformation.java`"
-msgstr ""
 
 #: ../../source/guides/account/getting-account-information.rst:79
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
 #: ../../source/guides/account/getting-account-information.rst:81
-#, fuzzy
 msgid "Open a terminal window and run the following command."
-msgstr "ターミナルを開き、アカウントの詳細を取得するために、次のコマンドを実行します。"
+msgstr "ターミナルを開き、次のコマンドを実行します。"
 
 #: ../../source/guides/account/getting-account-information.rst:83
 msgid ""
-"Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the "
-"address you want to query."
+"Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the address "
+"you want to query."
 msgstr ""
-
-#: ../../source/guides/account/getting-account-information.rst:85
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/bash/account/GettingAccountInformation.sh`"
-msgstr ""
-
+"``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` をあなたがクエリを発行したいアドレスに置き換えます。"

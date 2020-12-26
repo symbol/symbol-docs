@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:42
 msgid "Reading transactions from an account"
@@ -45,108 +45,59 @@ msgstr "方法 #01: SDK を使用する"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:56
 msgid "Open a new file and define the account address."
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:60
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:80
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/account/GettingConfirmedTransactions.ts`"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:65
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:85
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/account/GettingConfirmedTransactions.js`"
-msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:70
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:90
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/account/GettingConfirmedTransactions.java`"
-msgstr ""
+msgstr "新しくファイルを開いて、アカウントアドレスを定義します。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:75
-#, fuzzy
 msgid ""
-"2. Define a new ``TransactionHttp`` repository and the search criteria. "
-"In this example, we will retrieve all account-related transactions with "
-"at least one confirmation, but you could also query the unconfirmed and "
-"partial collections."
-msgstr "この例では、承認が 1 つ以上あるすべてのアカウント関連トランザクションを取得しますが、未承認とパーシャルのコレクションをクエリすることもできます。"
+"2. Define a new ``TransactionHttp`` repository and the search criteria. In "
+"this example, we will retrieve all account-related transactions with at "
+"least one confirmation, but you could also query the unconfirmed and partial"
+" collections."
+msgstr ""
+"2. 新しく ``TransactionHttp`` リポジトリと検索クリテリアをを定義します。この例では、承認が 1 "
+"つ以上あるすべてのアカウント関連トランザクションを取得しますが、未承認とパーシャルのコレクションをクエリすることもできます。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:97
 msgid ""
 "3. The API returns pages with up to 100 transactions. The `page object "
 "<https://docs.symbolplatform.com/symbol-sdk-typescript-"
-"javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains "
-"meta information about the total amount of transactions and pages "
-"available."
+"javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta "
+"information about the total amount of transactions and pages available."
 msgstr ""
+"3. API は最大 100 トランザクションを返却します。 `ページオブジェクト <https://docs.symbolplatform.com"
+"/symbol-sdk-typescript-"
+"javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ "
+"は総トランザクション数と有効なページのメタ情報を含みます。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:100
 msgid ""
 "To get more transactions, you will have to make further requests "
-"iteratively. For each extra call, increase the ``pageNumber`` by one "
-"unit."
+"iteratively. For each extra call, increase the ``pageNumber`` by one unit."
 msgstr ""
+"より多くのトランザクションを取得するには、リクエストを繰り返し行う必要があります。追加の呼び出しごとに ``pageNumber`` を 1 "
+"単位ずつ増やします。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:107
 msgid ""
 "4. Since the transaction collection might grow while paginating, it's "
-"advised to set the first transaction you want to start pagination. Set an"
-" ``offset`` value with the first transaction internal identifier."
+"advised to set the first transaction you want to start pagination. Set an "
+"``offset`` value with the first transaction internal identifier."
 msgstr ""
+"4. "
+"ページネーション中にトランザクションのコレクションが大きくなる場合があるので、ページネーションを開始する最初のトランザクションを設定することをお勧めします。最初のトランザクションの内部識別子で"
+" ``オフセット`` 値を設定します。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:116
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:118
-#, fuzzy
 msgid "Open a terminal window and run the following command."
-msgstr "ターミナルを開き、アカウントに関連する承認済みトランザクションを取得するために、次のコマンドを実行します。"
+msgstr "ターミナルウィンドウを開き、次のコマンドを実行します。"
 
 #: ../../source/guides/account/reading-transactions-from-an-account.rst:120
 msgid ""
-"Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the "
-"address you want to query."
+"Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the address "
+"you want to query."
 msgstr ""
-
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:122
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/bash/account/GettingConfirmedTransactions.sh`"
-msgstr ""
-
-#~ msgid ""
-#~ "1. Open a new file and define "
-#~ "the account address. Define a new "
-#~ "``TransactionHttp`` repository and the search"
-#~ " criteria."
-#~ msgstr ""
-#~ "1. 新しいファイルを開いて、アカウントアドレスを定義します。新しい ``TransactionHttp`` "
-#~ "リポジトリと検索条件を定義します。"
-
-#~ msgid ""
-#~ "2. The API returns pages with up"
-#~ " to 100 transactions. To `get more"
-#~ " than 100 transactions "
-#~ "<https://github.com/nemtech/symbol-"
-#~ "docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_,"
-#~ "  you will have to make further "
-#~ "requests iteratively. For each additional "
-#~ "call, add to the ``QueryParams`` the "
-#~ "optional parameter ``transactionId`` with the"
-#~ " latest transaction identifier known "
-#~ "returned by the previous request."
-#~ msgstr ""
-#~ "2. API は最大 100 トランザクションをページごとに返します。 `100"
-#~ " よりも多いトランザクションの取得 <https://github.com/nemtech/symbol-"
-#~ "docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts>`_"
-#~ " をするためには、あなたはさらなる要求をしなければなりません。各追加の呼び出しにおいて、``QueryParams`` "
-#~ "にオプションのパラメタである ``transactionId`` "
-#~ "に前の要求によって返された最新のトランザクション識別子を追加してください。"
-
+"``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` をあなたがクエリを発行したいアドレスに置き換えます。"

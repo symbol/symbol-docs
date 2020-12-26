@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-10-28 13:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:42
 msgid "Getting metadata entries attached to a namespace"
@@ -45,31 +45,6 @@ msgstr ""
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:58
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/metadata/GettingMetadataEntriesNamespace.ts`"
-msgstr ""
-
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:63
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/metadata/GettingMetadataEntriesNamespace.js`"
-msgstr ""
-
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:68
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/metadata/GettingMetadataEntriesNamespace.java`"
-msgstr ""
-
 #: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:75
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
-
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:77
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/bash/metadata/GettingMetadataEntriesNamespace.sh`"
-msgstr ""
-

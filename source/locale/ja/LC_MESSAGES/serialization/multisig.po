@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/serialization/multisig.rst:36
 msgid "Multisig Schemas"
@@ -27,11 +27,11 @@ msgstr "マルチシグスキーマ"
 
 #: ../../source/serialization/multisig.rst:38
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ "
-"repository defines how each transaction type should be serialized. In "
-"combination with the `catbuffer-generators <https://github.com/nemtech"
-"/catbuffer-generators>`_ project, developers can generate builder classes"
-" for a given set of programming languages."
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
 msgstr ""
 "`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
@@ -41,11 +41,6 @@ msgstr ""
 #: ../../source/serialization/multisig.rst:42
 msgid "Multisig Account Modification"
 msgstr "マルチシグアカウント変更"
-
-#: ../../source/serialization/multisig.rst:47
-#, fuzzy
-msgid "MultisigAccountModificationTransaction"
-msgstr "MultisigAccountModificationTransaction のアナウンス:"
 
 #: ../../source/serialization/multisig.rst:49
 msgid "Announce a MultisigAccountModificationTransaction to:"
@@ -63,14 +58,6 @@ msgstr "マルチシグアカウントの設定可能なプロパティを変更
 msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
 
-#: ../../source/serialization/multisig.rst:55
-msgid "**Version**: 0x01"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:57
-msgid "**EntityType**: 0x4155"
-msgstr ""
-
 #: ../../source/serialization/multisig.rst:59
 msgid "**Inlines**:"
 msgstr "**インライン**"
@@ -84,102 +71,35 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/serialization/multisig.rst:1
-msgid "Property"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "Type"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "Description"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "minRemovalDelta"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "int8"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
 msgid ""
-"Number of signatures needed to remove a cosignatory. If we are modifying "
-"an existing multisig account, this indicates the relative change of the "
-"minimum cosignatories."
+"Number of signatures needed to remove a cosignatory. If we are modifying an "
+"existing multisig account, this indicates the relative change of the minimum"
+" cosignatories."
 msgstr "連署者を削除するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
 #: ../../source/serialization/multisig.rst:1
-msgid "minApprovalDelta"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
 msgid ""
-"Number of signatures needed to approve a transaction. If we are modifying"
-" an existing multisig account, this indicates the relative change of the "
+"Number of signatures needed to approve a transaction. If we are modifying an"
+" existing multisig account, this indicates the relative change of the "
 "minimum cosignatories."
 msgstr "トランザクションを承認するために必要な署名の数。既存のマルチアカウントを変更している場合、最低限の連署者の相対的な変化を示します。"
 
 #: ../../source/serialization/multisig.rst:1
-msgid "addressAdditionsCount"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-#, fuzzy
 msgid "Number of cosignatory address additions."
-msgstr "連署者公開鍵追加数"
+msgstr "連署者アドレス追加数"
 
 #: ../../source/serialization/multisig.rst:1
-msgid "addressDeletionsCount"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-#, fuzzy
 msgid "Number of cosignatory address deletions."
-msgstr "連署者公開鍵削除数"
+msgstr "連署者アドレス削除数"
 
 #: ../../source/serialization/multisig.rst:1
-#, fuzzy
-msgid "multisigAccountModificationTransactionBody_Reserved1"
-msgstr "MultisigAccountModificationTransaction のアナウンス:"
-
-#: ../../source/serialization/multisig.rst:1
-msgid "uint32"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-#, fuzzy
 msgid "Reserved padding to align addressAdditions on 8-byte boundary."
-msgstr "publicKeyAdditions を 8 バイト境界に揃える予約パディング"
+msgstr "addressAdditions を 8 バイト境界に揃える予約パディング"
 
 #: ../../source/serialization/multisig.rst:1
-msgid "addressAdditions"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "array(:schema:`UnresolvedAddress <types.cats>`, addressAdditionsCount)"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-#, fuzzy
 msgid "Cosignatory address additions."
-msgstr "連署者公開鍵追加"
+msgstr "連署者アドレス追加数"
 
 #: ../../source/serialization/multisig.rst:1
-msgid "addressDeletions"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-msgid "array(:schema:`UnresolvedAddress <types.cats>`, addressDeletionsCount)"
-msgstr ""
-
-#: ../../source/serialization/multisig.rst:1
-#, fuzzy
 msgid "Cosignatory address deletions."
-msgstr "連署者公開鍵削除"
-
+msgstr "連署者アドレス削除数"

@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2020-02-28 13:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:41
 msgid "Migrating from NEM to Symbol"
@@ -28,137 +28,110 @@ msgstr "NEM から Symbol へのマイグレーション"
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:43
 msgid ""
 "With |codename|, most of the previously available NIS1 features have "
-"evolved. This document will help you **upgrade your application** "
-"previous NIS1 features, to the newly available |codename| technology."
+"evolved. This document will help you **upgrade your application** previous "
+"NIS1 features, to the newly available |codename| technology."
 msgstr ""
-"|codename| では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 "
-"の機能を、新たに利用可能な |codename| の技術に **あなたのアプリケーションをアップグレード** する手助けになるでしょう。"
+"|codename| では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 の機能を、新たに利用可能な"
+" |codename| の技術に **あなたのアプリケーションをアップグレード** する手助けになるでしょう。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:46
 msgid ""
-"This guide is a living document. The information could change as "
-"|codename| development advances."
+"This guide is a living document. The information could change as |codename| "
+"development advances."
 msgstr "このガイドは更新されています。情報は |codename| 開発が進むにつれて変更されます。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:48
 msgid "Comparison between NIS1 and Symbol"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "NEM NIS1"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "Symbol"
-msgstr ""
+msgstr "NIS1 と Symbol の比較"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "**Built-in features**"
-msgstr ""
+msgstr "**ビルドイン機能**"
 
+#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:153
 msgid "Mosaics"
-msgstr ""
+msgstr "モザイク"
 
+#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:168
-#, fuzzy
 msgid "Namespaces"
-msgstr "モザイクとネームスペース"
+msgstr "ネームスペース"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
+#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Delegated Harvesting"
-msgstr ""
+msgstr "デリゲートハーベスティング"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Multisig Accounts"
-msgstr ""
+msgstr "マルチシグアカウント"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Multi-level Multisig Accounts"
-msgstr ""
+msgstr "マルチレベルマルチシグアカウント"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Mosaic Restrictions"
-msgstr ""
+msgstr "モザイク制限"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Advanced Mosaic Restrictions"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "—"
-msgstr ""
+msgstr "応用モザイク制限"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Account Restrictions"
-msgstr ""
+msgstr "アカウント制限"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Metadata Controls"
-msgstr ""
+msgstr "メタデータコントロール"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-#, fuzzy
 msgid "Aggregated Transactions"
-msgstr "旧トランザクション"
+msgstr "アグリゲートトランザクション"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Inflation"
-msgstr ""
+msgstr "インフレーション"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Cross-Chain Swaps"
-msgstr ""
+msgstr "クロスチェーンスワップ"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Plug-Ins"
-msgstr ""
+msgstr "プラグイン"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "**Protocol**"
-msgstr ""
+msgstr "**プロトコル**"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Coded in Java"
-msgstr ""
+msgstr "Java 製"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Coded in C++"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "POI (Proof of Importance)"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "POS+ (Proof of Stake Plus)"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "Keccak-SHA3-512"
-msgstr ""
-
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
-msgid "SHA-512"
-msgstr ""
+msgstr "C++ 製"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Fixed Fees"
-msgstr ""
+msgstr "固定手数料"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Dynamic Fees"
-msgstr ""
+msgstr "変動手数料"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Receipts"
-msgstr ""
+msgstr "レシート"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:1
 msgid "Merkle Proofs"
-msgstr ""
+msgstr "マークル証明"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:74
 msgid "Test network"
@@ -166,32 +139,30 @@ msgstr "テストネットワーク"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:76
 msgid ""
-"At the time of writing, the main public network has not been launched. "
-"Right now, there are two options to start testing Symbol."
+"At the time of writing, the main public network has not been launched. Right"
+" now, there are two options to start testing Symbol."
 msgstr "執筆時点でメインのパブリックネットワークは開始されていません。現在、 Symbol のテストを開始するための2つのオプションがあります。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:79
 msgid ""
-"**Public test network** The public test network uses the same technology "
-"and features of the future main public network. You can use the testnet "
-"to experiment with the offered transaction set in a live network without "
-"the loss of valuable assets. To start using the test net, follow "
-":doc:`this guide <../../getting-started/setup-workstation>`."
+"**Public test network** The public test network uses the same technology and"
+" features of the future main public network. You can use the testnet to "
+"experiment with the offered transaction set in a live network without the "
+"loss of valuable assets. To start using the test net, follow :doc:`this "
+"guide <../../getting-started/setup-workstation>`."
 msgstr ""
 "**パブリックテストネットワーク**: "
 "パブリックテストネットワークは将来的なパブリックメインネットワークと同じテクノロジーと機能を使用しています。テストネットを実験的に使用することで、貴重な資産を失うことなく、トランザクションセットを試すことができます。テストネットを使用するには、次の"
 " :doc:`ガイド <../../getting-started/setup-workstation>` に従ってください。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:81
-#, fuzzy
 msgid ""
 "**Private test network**: To run a private test network, use the package "
-"|symbol-bootstrap|. This tool contains the necessary setup scripts to "
-"build a network for development and learning purposes with just one "
-"command."
+"|symbol-bootstrap|. This tool contains the necessary setup scripts to build "
+"a network for development and learning purposes with just one command."
 msgstr ""
-"**プライベートテストネットワーク**: プライベートテストネットネットワークを起動するには、 |catapult-service-"
-"bootstrap| パッケージを使用します。このソフトウェアスイートは開発と学習目的の構築を、コマンド一つで行うスクリプトが含まれています。"
+"**プライベートテストネットワーク**: プライベートテストネットネットワークを起動するには、 |symbol-bootstrap| "
+"パッケージを使用します。このツールは開発と学習目的の構築を、コマンド一つで行うスクリプトが含まれています。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:85
 msgid "Legacy API incompatibility"
@@ -200,59 +171,47 @@ msgstr "旧 API の非互換性"
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:87
 msgid ""
 "Legacy API calls that used to work for NIS1 network nodes are **not "
-"compatible** with |codename|. Now, API requests mostly happen with REST "
-"API nodes usually on port **3000**."
+"compatible** with |codename|. Now, API requests mostly happen with REST API "
+"nodes usually on port **3000**."
 msgstr ""
 "NIS1 ネットワークで動作していた旧 API 呼び出しは |codename| とは **非互換** です。REST API ノードのポート "
 "**3000** 番を用いて API リクエストを行います。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:90
 msgid ""
-"There are several **Software Development Kits** that have been—and some "
-"that are—under development for |codename| distributed ledgers consumer "
-"applications. As of now, the :doc:`planned SDKs <../../sdk>` to be "
-"supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go,"
-" Python and Swift."
+"There are several **Software Development Kits** that have been—and some that"
+" are—under development for |codename| distributed ledgers consumer "
+"applications. As of now, the :doc:`planned SDKs <../../sdk>` to be supported"
+" are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and "
+"Swift."
 msgstr ""
-"いくつかの **ソフトウェア開発キット** - 開発中の |codename| 分散型レッジャー用コンシューマアプリケーション - "
-"があります。現在 :doc:`計画中の SDK <../../sdk>` は Typescript / Javascript / NodeJS, "
-"Java, C#, Go, Python, Swift で書かれています。"
+"いくつかの **ソフトウェア開発キット** - 開発中の |codename| 分散型レッジャー用コンシューマアプリケーション - があります。現在 "
+":doc:`計画中の SDK <../../sdk>` は Typescript / Javascript / NodeJS, Java, C#, "
+"Go, Python, Swift で書かれています。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:93
 msgid ""
-"As a starting point, we suggest reviewing the |ts-js-sdk| as it is the "
-"most used SDK and leads in |ts-js-sdk-docs|. The architecture of the TS "
-"SDK is inspired by |nem-library| from NIS1."
+"As a starting point, we suggest reviewing the |ts-js-sdk| as it is the most "
+"used SDK and leads in |ts-js-sdk-docs|. The architecture of the TS SDK is "
+"inspired by |nem-library| from NIS1."
 msgstr ""
 "はじめに |ts-js-sdk| を見てみることを推奨します。最も使用されている SDK であり |ts-js-sdk-docs| "
 "の先頭にあります。TS SDK のアーキテクチャは NIS1 向け |nem-library| にインスパイアされています。"
 
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:96
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:113
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:132
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:147
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:162
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:182
-#: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:218
-msgid "**See also**:"
-msgstr ""
-
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:98
-#, fuzzy
 msgid "Protocol: :doc:`Nodes Architecture <../../concepts/node>`"
-msgstr "プロトコル: :doc:`アーキテクチャ <../../concepts/node>`"
+msgstr "プロトコル: :doc:`ノードアーキテクチャ <../../concepts/node>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:100
-#, fuzzy
 msgid "Reference: :doc:`REST Gateway <../../api>`"
-msgstr "リファレンス: :doc:`Catapult REST <../../api>`"
+msgstr "リファレンス: :doc:`REST Gateway <../../api>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:102
-#, fuzzy
 msgid ""
 "Reference: `REST API contract <https://docs.symbolplatform.com/symbol-"
 "openapi/>`_"
-msgstr "リファレンス: `REST API 接続 <https://nemtech.github.io/symbol-openapi/>`_"
+msgstr ""
+"リファレンス: `REST API 仕様 <https://docs.symbolplatform.com/symbol-openapi/>`_"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:106
 msgid "Accounts management"
@@ -260,8 +219,8 @@ msgstr "アカウントの管理"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:108
 msgid ""
-"Both platforms use the digital signature algorithm named Ed25519, but "
-"with different hashing algorithms. While NIS1 uses **Keccak-SHA3-512**, "
+"Both platforms use the digital signature algorithm named Ed25519, but with "
+"different hashing algorithms. While NIS1 uses **Keccak-SHA3-512**, "
 "|codename| changed to **SHA-512** to support TLS."
 msgstr ""
 "どちらのプラットフォームも Ed25519 というデジタル署名アルゴリズムを使用しますが、ハッシュアルゴリズムが異なります。NIS1 は "
@@ -269,11 +228,11 @@ msgstr ""
 "に変更されました。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:111
-#, fuzzy
 msgid ""
-"The change in the hashing algorithm used leads to have, for the same "
-"private key in NIS1 and |codename|, different public keys, and addresses."
-msgstr "使用されているハッシュアルゴリズムの変更により、同じ秘密鍵でも NIS1 と |codename| では、異なる公開鍵とアドレスが使用されます。"
+"The change in the hashing algorithm used leads to have, for the same private"
+" key in NIS1 and |codename|, different public keys, and addresses."
+msgstr ""
+"使用されているハッシュアルゴリズムの変更により、同じ秘密鍵でも NIS1 と |codename| では、異なる公開鍵とアドレスが使用されます。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:115
 msgid ""
@@ -294,8 +253,8 @@ msgstr "旧トランザクション"
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:122
 msgid ""
 "NIS1 transactions **serialization format is not compatible** with "
-"|codename|. Yet, most of the transaction types have only evolved and none"
-" have been removed. This implies a possible upgrade to |codename| "
+"|codename|. Yet, most of the transaction types have only evolved and none "
+"have been removed. This implies a possible upgrade to |codename| "
 "transactions that involve fewer changes."
 msgstr ""
 "NIS1 と |codename| でのトランザクションの "
@@ -304,11 +263,11 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:125
 msgid ""
-"The first notable change about transactions is that the status response "
-"is received through :ref:`WebSocket channels <websockets>`. In NIS1, the "
-"client received the response of the API call right after announcing a "
-"transaction. |codename| receives the response of the call "
-"**asynchronously**, eliminating blocking calls."
+"The first notable change about transactions is that the status response is "
+"received through :ref:`WebSocket channels <websockets>`. In NIS1, the client"
+" received the response of the API call right after announcing a transaction."
+" |codename| receives the response of the call **asynchronously**, "
+"eliminating blocking calls."
 msgstr ""
 "トランザクションについての最初の注目すべき変更は、ステータスレスポンスが :ref:`WebSocket チャンネル <websockets>` "
 "を通して受信されることです。NIS1 ではクライアントはトランザクションをアナウンスした直後に API "
@@ -316,14 +275,14 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:129
 msgid ""
-"Additionally, |codename| only has one version of "
-":doc:`TransferTransaction <../../concepts/transfer-transaction>`. The "
-"native currency is now pushed as a regular :doc:`mosaic "
-"<../../concepts/mosaic>` in the mosaics array of the transaction."
+"Additionally, |codename| only has one version of :doc:`TransferTransaction "
+"<../../concepts/transfer-transaction>`. The native currency is now pushed as"
+" a regular :doc:`mosaic <../../concepts/mosaic>` in the mosaics array of the"
+" transaction."
 msgstr ""
 "それに加え、 |codename| では :doc:`TransferTransaction <../../concepts/transfer-"
-"transaction>` は1つのバージョンだけになります。基軸通貨は通常の :doc:`モザイク "
-"<../../concepts/mosaic>` としてトランザクションのモザイク配列に追加されるようになりました。"
+"transaction>` は1つのバージョンだけになります。基軸通貨は通常の :doc:`モザイク <../../concepts/mosaic>` "
+"としてトランザクションのモザイク配列に追加されるようになりました。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:134
 msgid "Protocol: :doc:`Transaction life-cycle <../../concepts/transaction>`"
@@ -342,15 +301,18 @@ msgid ""
 "|codename| transaction fees are dynamic and decided by the network "
 "participants. Each transaction **effective fee** is calculated by "
 "multiplying a **fee multiplier** by the **transaction size**. The fee "
-"multiplier is attached in the block where the transaction gets confirmed,"
-" and it is defined by the node owner harvesting the block."
+"multiplier is attached in the block where the transaction gets confirmed, "
+"and it is defined by the node owner harvesting the block."
 msgstr ""
+"|codename| のトランザクション手数料は動的であり、ネットワーク参加者によって決定されます。各トランザクションの **実効手数料** は "
+"**手数料乗数** に **トランザクションサイズ** "
+"を掛けて算出されます。手数料乗数はトランザクションが承認されるブロックに付加され、ブロックをハーベストするノード所有者によって定義されます。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:145
 msgid ""
 "During the transaction definition, the sender limits the maximum fee "
 "authorized to include the transaction in a block."
-msgstr ""
+msgstr "トランザクションの定義中に、送信者はトランザクションをブロックに含めるための最大手数料を制限します。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:149
 msgid "Protocol: :doc:`Transaction fees <../../concepts/fees>`"
@@ -368,57 +330,56 @@ msgstr ""
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:157
 msgid ""
 "In fact, NIS1 namespaces expire altogether with assets linked to them. "
-"|codename| mosaics are configured to have their own ``duration``, as well"
-" as being assigned a unique ``nonce`` value."
+"|codename| mosaics are configured to have their own ``duration``, as well as"
+" being assigned a unique ``nonce`` value."
 msgstr ""
 "実際に NIS1 ではネームスペースにリンクされたアセットも完全に期限切れとなる可能性があります。 |codename| "
 "ではモザイクは代わりにそれ自身の ``期間`` を持つように設定され、一意な ``nonce`` 値が割り当てられます。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:160
-#, fuzzy
 msgid "Lastly, levies are not available on |codename|."
-msgstr "最後に |codename| において **Levy は使用できず** 、アグリゲートトランザクションによって再現する必要があります。"
+msgstr "最後に、 Levy は |codename| では使用できなくなりました。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:164
 msgid "Guide: :doc:`Creating a mosaic  <../mosaic/creating-a-mosaic>`"
 msgstr "ガイド: :doc:`モザイク作成  <../mosaic/creating-a-mosaic>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:170
-#, fuzzy
 msgid ""
-"Namespaces can still refer to mosaics using :ref:`AliasTransactions "
-"<mosaic-alias-transaction>`. A namespace owner can attach either of an "
-"account or a mosaic id to one of its namespaces. The namespace "
-"information endpoint will return the linked object in the alias field."
+"Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-"
+"alias-transaction>`. A namespace owner can attach either of an account or a "
+"mosaic id to one of its namespaces. The namespace information endpoint will "
+"return the linked object in the alias field."
 msgstr ""
 "ネームスペースは依然として :ref:`AliasTransactions <mosaic-alias-transaction>` "
 "によってモザイクを参照することができます。ネームスペースの所有者はアカウントまたはモザイク ID "
 "のいずれかをそのネームスペースのいずれかに添付できます。ネームスペース情報のエンドポイントはエイリアスフィールドにリンクされたオブジェクトを返します。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:174
-#, fuzzy
 msgid ""
 "Also, |codename| root namespaces have a ``duration`` field that is "
 "**expressed in a count of blocks** which means yearly renewal is not "
 "mandatory anymore."
-msgstr "またルートネームスペースには **ブロック数で表される** ``期間`` フィールドを持ち、年間更新が必須ではなくなったことを意味します。"
+msgstr ""
+"また |codename| ルートネームスペースには **ブロック数で表される** ``期間`` "
+"フィールドを持つことで、年間更新が必須ではなくなりました。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:176
 msgid ""
 "In order to facilitate the transfer of mosaics, a mosaic creator should "
-"register a namespace and alias the mosaic with that namespace. End-users "
-"can **send transactions using the alias** to refer to the mosaic."
+"register a namespace and alias the mosaic with that namespace. End-users can"
+" **send transactions using the alias** to refer to the mosaic."
 msgstr ""
 "モザイクの転送を促進するためにモザイク作成者はネームスペースを登録し、そのネームスペースをモザイクのエイリアスにすることができます。エンドユーザーはモザイクの参照に"
 " **エイリアスを使用してトランザクションを送信** することができます。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:179
 msgid ""
-"When a transaction includes an alias, a **resolution** reflects the "
-"resolved value of that alias in the block. To get the real identifier "
-"behind an aliased address or mosaic, the client application needs to "
-"fetch the related :doc:`resolution receipt <../../concepts/receipt>` "
-"linked to the block where the transaction gets included."
+"When a transaction includes an alias, a **resolution** reflects the resolved"
+" value of that alias in the block. To get the real identifier behind an "
+"aliased address or mosaic, the client application needs to fetch the related"
+" :doc:`resolution receipt <../../concepts/receipt>` linked to the block "
+"where the transaction gets included."
 msgstr ""
 "トランザクションがエイリアスを含む場合、 **resolution** "
 "はブロック内のそのエイリアスの解決された値を反映します。エイリアスアドレスやモザイクの背後にある実際の識別子を取得するには、クライアントアプリケーションはトランザクションが含まれるブロックにリンクされている関連の"
@@ -438,42 +399,42 @@ msgstr "ガイド: :doc:`サブネームスペースの作成 <../namespace/regi
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:186
 msgid ""
-"Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a"
-"-namespace-to-a-mosaic>`"
-msgstr "ガイド: :doc:`ネームスペースをモザイクへリンクする <../namespace/link-a-namespace-to-a-mosaic>`"
+"Guide: :doc:`Linking a namespace to a mosaic <../namespace/link-a-namespace-"
+"to-a-mosaic>`"
+msgstr ""
+"ガイド: :doc:`ネームスペースをモザイクへリンクする <../namespace/link-a-namespace-to-a-mosaic>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:187
 msgid ""
 "Guide: :doc:`Linking a namespace to an address <../namespace/link-a"
 "-namespace-to-an-address>`"
 msgstr ""
-"ガイド: :doc:`ネームスペースをアドレスへリンクする <../namespace/link-a-namespace-to-an-"
-"address>`"
+"ガイド: :doc:`ネームスペースをアドレスへリンクする <../namespace/link-a-namespace-to-an-address>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:188
 msgid ""
-"Guide: :ref:`Sending a TransferTransaction with an aliased mosaic "
-"<sending-a-transfer-transaction-with-an-aliased-mosaic>`"
+"Guide: :ref:`Sending a TransferTransaction with an aliased mosaic <sending-a"
+"-transfer-transaction-with-an-aliased-mosaic>`"
 msgstr ""
 "ガイド: :ref:`エイリアス済みモザイクの TransferTransaction の送信 <sending-a-transfer-"
 "transaction-with-an-aliased-mosaic>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:189
 msgid ""
-"Guide: :ref:`Sending a TransferTransaction to an aliased address "
-"<sending-a-transfer-transaction-to-an-aliased-address>`"
+"Guide: :ref:`Sending a TransferTransaction to an aliased address <sending-a"
+"-transfer-transaction-to-an-aliased-address>`"
 msgstr ""
 "ガイド: :ref:`エイリアス済みアドレスへの TransferTransaction の送信 <sending-a-transfer-"
 "transaction-to-an-aliased-address>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:190
 msgid ""
-"Guide: :doc:`Getting the asset identifier behind a namespace with "
-"receipts <../blockchain/getting-the-mosaic-identifier-behind-a-namespace-"
-"with-receipts>`"
+"Guide: :doc:`Getting the asset identifier behind a namespace with receipts "
+"<../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-"
+"receipts>`"
 msgstr ""
-"ガイド: :doc:`レシート付きネームスペースの背後にあるアセットの識別子を取得 <../blockchain/getting-the-"
-"mosaic-identifier-behind-a-namespace-with-receipts>`"
+"ガイド: :doc:`レシート付きネームスペースの背後にあるアセットの識別子を取得 <../blockchain/getting-the-mosaic-"
+"identifier-behind-a-namespace-with-receipts>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:194
 msgid "Multisignature management"
@@ -481,17 +442,16 @@ msgstr "マルチシグネチャの管理"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:196
 msgid ""
-"With multisignature accounts managed on-chain, |codename|'s "
-"multisignature implementation is different from many other—so-called "
-"client-side—multisignature implementations."
+"With multisignature accounts managed on-chain, |codename|'s multisignature "
+"implementation is different from many other—so-called client-"
+"side—multisignature implementations."
 msgstr ""
 "チェーン上で管理されたマルチシグネチャアカウントである |codename| "
 "のマルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:198
 msgid ""
-"Creating a :doc:`multisignature account <../../concepts/multisig-"
-"account>`."
+"Creating a :doc:`multisignature account <../../concepts/multisig-account>`."
 msgstr ":doc:`マルチシグアカウント <../../concepts/multisig-account>` の作成"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:200
@@ -509,24 +469,24 @@ msgstr "**最小削除数**: マルチシグアカウントから署名者を削
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:204
 msgid ""
-"**Minimum approval**: Defines how many cosignatories are required for any"
-" other type of transaction."
+"**Minimum approval**: Defines how many cosignatories are required for any "
+"other type of transaction."
 msgstr "**最小承認数**: 他のタイプのトランザクションに必要な署名者の数を定義します。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:206
 msgid ""
-"Additionally, cosignatories that are added to multisignature accounts now"
-" have to confirm the modification by sending a **cosignature** (opt-in "
+"Additionally, cosignatories that are added to multisignature accounts now "
+"have to confirm the modification by sending a **cosignature** (opt-in "
 "process). In order to facilitate this process, transactions with type "
-":ref:`MultisigAccountModificationTransaction <multisig-account-"
-"modification-transaction>` must be wrapped in an "
-":ref:`AggregateTransaction <aggregate-transaction>`."
+":ref:`MultisigAccountModificationTransaction <multisig-account-modification-"
+"transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-"
+"transaction>`."
 msgstr ""
 "さらに、マルチシグアカウントに追加される署名者は **署名** "
-"(オプトインプロセス)を送信して変更について承認する必要があります。このプロセスを促進するために "
-":ref:`ModifyMultisigAccount <multisig-account-modification-transaction>` "
-"のトランザクションタイプは :ref:`MultisigAccountModificationTransaction <aggregate-"
-"transaction>` でラップされる必要があります。"
+"(オプトインプロセス)を送信して変更について承認する必要があります。このプロセスを促進するために :ref:`ModifyMultisigAccount"
+" <multisig-account-modification-transaction>` のトランザクションタイプは "
+":ref:`MultisigAccountModificationTransaction <aggregate-transaction>` "
+"でラップされる必要があります。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:209
 msgid ""
@@ -538,34 +498,36 @@ msgstr ""
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:211
 msgid ""
-"The new AggregateTransaction permits to wrap multiple transactions "
-"together involving different participants. If all the participants cosign"
-" the aggregate, the inner transactions are included atomically in the "
-"block. Otherwise, none of the transactions will get confirmed."
+"The new AggregateTransaction permits to wrap multiple transactions together "
+"involving different participants. If all the participants cosign the "
+"aggregate, the inner transactions are included atomically in the block. "
+"Otherwise, none of the transactions will get confirmed."
 msgstr ""
 "新しい AggregateTransaction "
 "は異なる参加者が関わる複数のトランザクションをまとめてラップすることができます。すべての参加者がアグリゲートに共同署名すると、インナートランザクションはアトミックにブロックへ取り込まれます。それ以外の場合にはいずれのトランザクションも承認されません。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:215
 msgid ""
-"To send a multisig transaction as in NIS1, the initiator of the "
-"transaction has to add it **as an inner transaction of the aggregate**. "
-"Then, the minimum number of cosignatories defined in the multisignature "
-"will have to cosign the aggregate to allow announcing transactions from "
-"the shared account."
-msgstr "NIS1のようにマルチシグトランザクションを送信するには、トランザクションの開始者はそれをアグリゲートのインナートランザクションとして追加する必要があります。次にマルチシグで定義された最小数の署名者が、共有アカウントからのトランザクションのアナウンスを許可するために、アグリゲートに署名しなければなりません。"
+"To send a multisig transaction as in NIS1, the initiator of the transaction "
+"has to add it **as an inner transaction of the aggregate**. Then, the "
+"minimum number of cosignatories defined in the multisignature will have to "
+"cosign the aggregate to allow announcing transactions from the shared "
+"account."
+msgstr ""
+"NIS1のようにマルチシグトランザクションを送信するには、トランザクションの開始者はそれをアグリゲートのインナートランザクションとして追加する必要があります。次にマルチシグで定義された最小数の署名者が、共有アカウントからのトランザクションのアナウンスを許可するために、アグリゲートに署名しなければなりません。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:220
 msgid ""
-"Guide: :doc:`Creating a multisig account <../multisig/creating-a"
-"-multisig-account>`"
+"Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-"
+"account>`"
 msgstr "ガイド: :doc:`マルチシグアカウントの作成 <../multisig/creating-a-multisig-account>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:221
 msgid ""
 "Guide: :doc:`Sending a multisignature transaction <../aggregate/sending-a"
 "-multisig-transaction>`"
-msgstr "ガイド: :doc:`マルチシグトランザクションの送信 <../aggregate/sending-a-multisig-transaction>`"
+msgstr ""
+"ガイド: :doc:`マルチシグトランザクションの送信 <../aggregate/sending-a-multisig-transaction>`"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:225
 msgid "Need help?"
@@ -575,71 +537,19 @@ msgstr "お困りですか？"
 msgid ""
 "After reading this documentation, you might still have some unanswered "
 "questions."
-msgstr ""
+msgstr "ドキュメントを読み終えてもなお、解答を得られていないことがあるかもしれません。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:229
 msgid ""
 "In this site, you will find descriptions for every new :doc:`feature "
-"<../../concepts/overview>` and :ref:`self-paced guides <blog-categories>`"
-" on how to use the **software development kits**."
+"<../../concepts/overview>` and :ref:`self-paced guides <blog-categories>` on"
+" how to use the **software development kits**."
 msgstr ""
+"このサイトには **ソフトウェア開発キット** の使い方に、各 :doc:`機能 <../../concepts/overview>` および "
+":ref:`セルフペースガイド <blog-categories>` の説明があります。"
 
 #: ../../source/guides/migration/migrating-from-nem-to-symbol.rst:231
 msgid ""
 "We invite you to connect with our developer community by joining the "
 "|slack|."
-msgstr ""
-
-#~ msgid ""
-#~ "Also, a few notable changes have "
-#~ "happened as to public verifiability of"
-#~ " accounts and field names returned in"
-#~ " the REST endpoints."
-#~ msgstr "また、アカウントの公的検証可能性と REST エンドポイントが返却するフィールド名に関して、いくつか注目すべき変更が行われています。"
-
-#~ msgid ""
-#~ "The fee that needs to be paid "
-#~ "for a transaction now depends on "
-#~ "the transaction size and fee multiplier,"
-#~ " where node owners can specify a "
-#~ "positive (or zero) value. The "
-#~ "**effective fee** to be paid for a"
-#~ " transaction can be calculated by "
-#~ "reading the **fee multiplier** from the"
-#~ " block in which the transaction got"
-#~ " confirmed and multiplying it by the"
-#~ " **size of the transaction**."
-#~ msgstr ""
-#~ "トランザクションに対して支払う手数料は、トランザクションサイズとノードの所有者が指定した正(またはゼロ)の手数料乗数によります。トランザクションに対して支払われる"
-#~ " **実効手数料** は、トランザクションが承認されたブロックから **手数料乗数** を読み取り"
-#~ " **トランザクションのサイズ** で乗算して計算されます。"
-
-#~ msgid ""
-#~ "The ``maxFee`` field represents the "
-#~ "maximum fee allowed by the sender "
-#~ "to be paid for this transaction to"
-#~ " be confirmed in a block."
-#~ msgstr "``maxFee`` フィールドは送信者によって支払われる、トランザクションが承認されるために許可する最大支払い手数料を表現しています。"
-
-#~ msgid ""
-#~ "While migrating from NIS1 to |codename|,"
-#~ " you might still have some unanswered"
-#~ " questions. In this portal, you can"
-#~ " find everything you need to know "
-#~ "about |codename|'s features and :ref:`self-"
-#~ "paced guides <blog-categories>` on how"
-#~ " to use the **software development "
-#~ "kits**."
-#~ msgstr ""
-#~ "NIS1 から |codename| "
-#~ "へマイグレーションするにあたり、まだ解決していない質問があるかもしれません。このポータルでは |codename| "
-#~ "の機能及び **ソフトウェア開発キット** の使い方において :ref:`自己ペースガイド "
-#~ "<blog-categories>` のあなたが知るべきすべての情報が掲載されています。"
-
-#~ msgid ""
-#~ "You can also ask integration related "
-#~ "questions on |stack-overflow|, or reach"
-#~ " our community of developers joining "
-#~ "the official |slack|."
-#~ msgstr "|stack-overflow| で統合関連の質問をしたり、公式の |slack| に参加している開発者コミュニティに連絡することもできます。"
-
+msgstr "私達の開発者と繋がるために、 |slack| コミュニティに参加してください。"

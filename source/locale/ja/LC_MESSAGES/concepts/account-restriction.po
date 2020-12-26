@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-07-12 10:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/concepts/account-restriction.rst:36
 msgid "Account Restriction"
@@ -36,13 +36,13 @@ msgstr ""
 
 #: ../../source/concepts/account-restriction.rst:40
 msgid ""
-"The account owners—plural in case of multisig accounts—can edit the "
-"account restrictions at a later time announcing the specific "
+"The account owners—plural in case of multisig accounts—can edit the account "
+"restrictions at a later time announcing the specific "
 ":ref:`AccountRestrictionTransaction <account-address-restriction-"
 "transaction>`."
 msgstr ""
-"アカウントの保有者 - マルチシグアカウントの場合は複数 - は後に特定の :ref:`AccountRestrictionTransaction"
-" <account-address-restriction-transaction>` を発表してアカウント制限を編集できます。"
+"アカウントの保有者 - マルチシグアカウントの場合は複数 - は後に特定の :ref:`AccountRestrictionTransaction "
+"<account-address-restriction-transaction>` を発表してアカウント制限を編集できます。"
 
 #: ../../source/concepts/account-restriction.rst:42
 msgid ""
@@ -69,8 +69,8 @@ msgstr ""
 #: ../../source/concepts/account-restriction.rst:51
 msgid ""
 "Restricting **incoming transactions** is useful when the account will be "
-"only receiving transactions from known addresses, or when the account "
-"wants to block transactions coming from unknown senders."
+"only receiving transactions from known addresses, or when the account wants "
+"to block transactions coming from unknown senders."
 msgstr ""
 "**受信トランザクション** "
 "を制限することはアカウントが既知のアドレスからのトランザクションのみを受信する場合、またはアカウントが未知の送信者からのトランザクションをブロックしたい場合に役立ちます。"
@@ -82,8 +82,7 @@ msgstr "アドレス制限ダイアグラム"
 #: ../../source/concepts/account-restriction.rst:59
 msgid ""
 "Allow and block restrictions are mutually exclusive. In other words, an "
-"account can only configure a block or an allow list per type of "
-"restriction."
+"account can only configure a block or an allow list per type of restriction."
 msgstr "許可とブロックの制限は相互に排他的です。つまり、アカウントは制限タイプごとにブロックまたは許可リストを構成することしかできません。"
 
 #: ../../source/concepts/account-restriction.rst:61
@@ -105,21 +104,20 @@ msgstr "モザイク制限"
 
 #: ../../source/concepts/account-restriction.rst:69
 msgid ""
-"Similar to address restrictions, an account can configure a restriction "
-"to permit **incoming** transactions only if all the :doc:`mosaics "
-"<mosaic>` attached are allowed. On the other hand, the account can refuse"
-" to accept transactions containing a mosaic listed as blocked."
+"Similar to address restrictions, an account can configure a restriction to "
+"permit **incoming** transactions only if all the :doc:`mosaics <mosaic>` "
+"attached are allowed. On the other hand, the account can refuse to accept "
+"transactions containing a mosaic listed as blocked."
 msgstr ""
 "アドレス制限のように、アカウントは許可した :doc:`モザイク <mosaic>` "
 "が添付されている場合にだけ、受信トランザクションを許可する制限を構成できます。一方で、アカウントはブロックリストにあるモザイクを含んでいるトランザクションを拒否できます。"
 
 #: ../../source/concepts/account-restriction.rst:72
 msgid ""
-"Account mosaic restrictions are generally used to **prevent accounts "
-"being tagged with mosaics** not associated with their activity."
+"Account mosaic restrictions are generally used to **prevent accounts being "
+"tagged with mosaics** not associated with their activity."
 msgstr ""
-"一般的にアカウントのモザイク制限は、アカウントがそのアクティビティに関連付けられていない **モザイクでタグ付けされるのを防ぐ** "
-"ために使用されます。"
+"一般的にアカウントのモザイク制限は、アカウントがそのアクティビティに関連付けられていない **モザイクでタグ付けされるのを防ぐ** ために使用されます。"
 
 #: ../../source/concepts/account-restriction.rst:76
 msgid "Operation restriction"
@@ -129,8 +127,8 @@ msgstr "操作制限"
 msgid ""
 "An account can allow/block announcing **outgoing** transactions with a "
 "determined :ref:`operation type <transaction-types>`. By doing so, the "
-"account increases its security, preventing the announcement by mistake of"
-" undesired transactions."
+"account increases its security, preventing the announcement by mistake of "
+"undesired transactions."
 msgstr ""
 "アカウントは送信トランザクションのアナウンスを :ref:`操作タイプ <transaction-types>` "
 "によって許可/ブロックすることができます。そうすることで、セキュリティを向上され、ミスによる意図しないトランザクションのアナウンスを防止されます。"
@@ -156,16 +154,8 @@ msgid "Address Restriction"
 msgstr "アドレス制限"
 
 #: ../../source/concepts/account-restriction.rst:1
-msgid "✔️"
-msgstr ""
-
-#: ../../source/concepts/account-restriction.rst:1
 msgid "Mosaic Restriction"
 msgstr "モザイク制限"
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid "❌"
-msgstr ""
 
 #: ../../source/concepts/account-restriction.rst:1
 msgid "Operation Restriction"
@@ -182,8 +172,8 @@ msgstr "スパムトランザクションのブロック"
 
 #: ../../source/concepts/account-restriction.rst:97
 msgid ""
-"A pharmaceutical company is using the public chain to certify the quality"
-" of their products."
+"A pharmaceutical company is using the public chain to certify the quality of"
+" their products."
 msgstr "企業は自社製品の品質を証明するためにパブリックチェーンを使用しています。"
 
 #: ../../source/concepts/account-restriction.rst:99
@@ -194,16 +184,17 @@ msgstr "品質確認プロセスが終了すると、オペレータは  :doc:`�
 
 #: ../../source/concepts/account-restriction.rst:101
 msgid ""
-"The final customers can review the product mosaics scanning a QR code. "
-"For that reason, the company only wants to show related transactions, "
-"avoiding that others spam their products with non-related information."
-msgstr "最終的な顧客はQRコードを読み取って、製品モザイクを検証します。そのため、会社としては関連するトランザクションだけをを見せたく、それ以外のスパムなどの製品に関係ない情報を避けたいのです。"
+"The final customers can review the product mosaics scanning a QR code. For "
+"that reason, the company only wants to show related transactions, avoiding "
+"that others spam their products with non-related information."
+msgstr ""
+"最終的な顧客はQRコードを読み取って、製品モザイクを検証します。そのため、会社としては関連するトランザクションだけをを見せたく、それ以外のスパムなどの製品に関係ない情報を避けたいのです。"
 
 #: ../../source/concepts/account-restriction.rst:109
 msgid ""
-"The company opts to configure their product accounts restrictions, "
-"enabling only to receive transactions containing "
-"``pharmaceutical.quality.seal`` mosaics."
+"The company opts to configure their product accounts restrictions, enabling "
+"only to receive transactions containing ``pharmaceutical.quality.seal`` "
+"mosaics."
 msgstr "会社は ``company.quality.seal`` モザイクだけを受け入れる制限を製品アカウントに構成することにしました。"
 
 #: ../../source/concepts/account-restriction.rst:112
@@ -221,19 +212,15 @@ msgstr ""
 
 #: ../../source/concepts/account-restriction.rst:116
 msgid ""
-"As a temporary security measure, Alice opts to disable announcing "
-"transfer transactions from her main account. Doing so, Alice double-"
-"checks that the funds held in the main account are not going to be "
-"transferred by mistake."
-msgstr "一時的な処置として、アリスはメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
+"As a temporary security measure, Alice opts to disable announcing transfer "
+"transactions from her main account. Doing so, Alice double-checks that the "
+"funds held in the main account are not going to be transferred by mistake."
+msgstr ""
+"一時的な処置として、アリスはメインアカウントからの転送トランザクションのアナウンスを停止することにし、所有している資産が転送されることをダブルチェックしています。"
 
 #: ../../source/concepts/account-restriction.rst:121
 msgid "Related transactions"
 msgstr "関連トランザクション"
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Id"
-msgstr ""
 
 #: ../../source/concepts/account-restriction.rst:1
 msgid "Type"
@@ -244,44 +231,15 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/account-restriction.rst:1
-msgid "0x4150"
-msgstr ""
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid ""
-":ref:`AccountAddressRestrictionTransaction <account-address-restriction-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/account-restriction.rst:1
 msgid ""
 "Allow or block incoming and outgoing transactions for a given a set of "
 "addresses."
 msgstr "与えられたアドレスを含む送受信トランザクションの許可/ブロックします。"
 
 #: ../../source/concepts/account-restriction.rst:1
-msgid "0x4250"
-msgstr ""
-
-#: ../../source/concepts/account-restriction.rst:1
 msgid ""
-":ref:`AccountMosaicRestrictionTransaction <account-mosaic-restriction-"
-"transaction>`"
-msgstr ""
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid "Allow or block incoming transactions containing a given set of mosaics."
+"Allow or block incoming transactions containing a given set of mosaics."
 msgstr "与えられたモザイクを含む受信トランザクションの許可/ブロックします。"
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid "0x4350"
-msgstr ""
-
-#: ../../source/concepts/account-restriction.rst:1
-msgid ""
-":ref:`AccountOperationRestrictionTransaction <account-operation-"
-"restriction-transaction>`"
-msgstr ""
 
 #: ../../source/concepts/account-restriction.rst:1
 msgid "Allow or block outgoing transactions by transaction type."
@@ -294,4 +252,3 @@ msgstr "ガイド"
 #: ../../source/concepts/account-restriction.rst:144
 msgid "Continue: :doc:`Mosaic Restrictions <mosaic-restriction>`."
 msgstr "次項: :doc:`モザイク制限 <mosaic-restriction>`"
-

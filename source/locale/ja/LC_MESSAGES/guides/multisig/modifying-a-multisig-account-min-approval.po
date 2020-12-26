@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2020-04-24 12:29+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:42
 msgid "Modifying a multisig account min approval"
@@ -27,21 +27,24 @@ msgstr "マルチシグアカウントの最小承認の変更"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:44
 msgid ""
-"This guide will show you how to increase and decrease the minimum number "
-"of signatures needed to execute a multisig transaction."
+"This guide will show you how to increase and decrease the minimum number of "
+"signatures needed to execute a multisig transaction."
 msgstr "このガイドでは、マルチシグトランザクションを実行するために必要な署名の最小数を増減する方法について説明します。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:50
 msgid "Use case"
-msgstr ""
+msgstr "ユースケース"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:52
 msgid ""
-"Imagine that Alice and Bob are cosignatories of a 1-of-2 multisig "
-"account. This means that at least one of their account's signatures is "
-"required to authorize multisig transactions. In other words, we can say "
-"that the ``minApproval`` property of the multisig is currently set to 1."
+"Imagine that Alice and Bob are cosignatories of a 1-of-2 multisig account. "
+"This means that at least one of their account's signatures is required to "
+"authorize multisig transactions. In other words, we can say that the "
+"``minApproval`` property of the multisig is currently set to 1."
 msgstr ""
+"Alice と Bob は 1-of-2 "
+"マルチシグアカウントの連署者です。マルチシグトランザクションを承認するには、彼らのうち少なくとも一つのアカウントの署名が必要なことを意味します。つまり "
+"``最小承認数`` プロパティが現在は 1 に設定されているということになります。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:56
 msgid ""
@@ -49,6 +52,8 @@ msgid ""
 "**2-of-2 multisig** instead. To achieve this, we will be increasing "
 "**minApproval** by one unit."
 msgstr ""
+"このケースでは、両方の連署者を必要とするように **2-of-2** マルチシグへ変更します。これを達成するために **minApproval** を "
+"1 単位だけ増加します。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:63
 msgid "2-of-2 multisig account example"
@@ -70,8 +75,8 @@ msgstr "方法 #01: デスクトップウォレットを使用する"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:75
 msgid ""
-"Log in to an account that is a cosignatory (Alice or Bob) of the account "
-"you want to modify."
+"Log in to an account that is a cosignatory (Alice or Bob) of the account you"
+" want to modify."
 msgstr "変更するアカウントの連署者 (Alice または Bob) アカウントにログインします。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:77
@@ -80,18 +85,18 @@ msgstr "ウォレット左側の \"**マルチシグ**\" タブをクリック�
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:79
 msgid ""
-"Select the multisig wallet you want to modify from the dropdown menu from"
-" the top field. This will convert the “**Operation Type**” to "
-"“**Modifying account multisig properties**”."
+"Select the multisig wallet you want to modify from the dropdown menu from "
+"the top field. This will convert the “**Operation Type**” to “**Modifying "
+"account multisig properties**”."
 msgstr ""
-"上部のフィールドのドロップダウンメニューから変更するマルチシグウォレットを選択します。これにより \"**Operation Type**\" が"
-" \"**Modifying account multisig properties**\" に変換されます。"
+"上部のフィールドのドロップダウンメニューから変更するマルチシグウォレットを選択します。これにより \"**Operation Type**\" が "
+"\"**Modifying account multisig properties**\" に変換されます。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:85
 msgid ""
-"Select the new “**Min. Approval**” number. In this case, we want to "
-"change it to \"**2**\". Click “**Send**”. Review the information on the "
-"popup. Enter your wallet password and click “**Confirm**”."
+"Select the new “**Min. Approval**” number. In this case, we want to change "
+"it to \"**2**\". Click “**Send**”. Review the information on the popup. "
+"Enter your wallet password and click “**Confirm**”."
 msgstr ""
 "新しい \"**最小承認**\" 数を選択します。今回は \"**2**\" に変更します。\"**送信**\" "
 "をクリックします。ポップアップの情報を確認します。ウォレットパスワードを入力して \"**確認**\" をクリックします。"
@@ -99,10 +104,9 @@ msgstr ""
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:91
 msgid ""
 "If the multisig account has the \"**minimum approval**\" set to a number "
-"greater than 1, log in to another cosignatory account and :doc:`cosign "
-"the transaction <../aggregate/signing-announced-aggregate-bonded-"
-"transactions>`. Repeat this step until the minimum approval number is "
-"satisfied."
+"greater than 1, log in to another cosignatory account and :doc:`cosign the "
+"transaction <../aggregate/signing-announced-aggregate-bonded-transactions>`."
+" Repeat this step until the minimum approval number is satisfied."
 msgstr ""
 "マルチシグアカウントの \"**最小承認数**\" が 1 より大きい数に設定されている場合は、別の連署者アカウントにログインし "
 ":doc:`トランザクションに署名します <../aggregate/signing-announced-aggregate-bonded-"
@@ -121,54 +125,42 @@ msgstr "方法 #02: SDK を使用する"
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:107
 msgid ""
 "One of the cosignatory accounts, for example Alice's, will announce a "
-":ref:`MultisigAccountModificationTransaction <multisig-account-"
-"modification-transaction>` to increase ``minApprovalDelta``."
+":ref:`MultisigAccountModificationTransaction <multisig-account-modification-"
+"transaction>` to increase ``minApprovalDelta``."
 msgstr ""
 "連署アカウントのうちの一つの、例えば Alice が ``minApprovalDelta`` を増加させるために "
-":ref:`MultisigAccountModificationTransaction <multisig-account-"
-"modification-transaction>` をアナウンスします。"
+":ref:`MultisigAccountModificationTransaction <multisig-account-modification-"
+"transaction>` をアナウンスします。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:109
 msgid ""
-"Open a new file. Then, define Alice's account public key and the multisig"
-" account private key into new variables."
+"Open a new file. Then, define Alice's account public key and the multisig "
+"account private key into new variables."
 msgstr "新しいファイルを開きます。そして、 Alice のアカウントの公開鍵とマルチシグアカウントの秘密鍵を新しい変数へ格納します。"
-
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:113
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:127
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:147
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.ts`"
-msgstr ""
-
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:118
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:132
-#: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:152
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/multisig/ModifyingAMultisigAccountIncreaseMinApproval.js`"
-msgstr ""
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:123
 msgid ""
 "Define a **MultisigAccountModificationTransaction** to increase the "
 "``minAprovalDelta`` by one unit."
 msgstr ""
+"``minApprovalDelta`` を 1 単位を増加させる **MultisigAccountModificationTransaction**"
+" を定義します。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:137
 msgid ""
 "If you want to decrease the ``minApproval`` property, set "
 "``minApprovalDelta`` with a negative value. For example, to reduce the "
-"number of required signers by one unit, you should set "
-"``minApprovalDelta`` to ``-1``."
+"number of required signers by one unit, you should set ``minApprovalDelta`` "
+"to ``-1``."
 msgstr ""
+"``minApproval`` プロパティを減少させる場合は ``minApprovalDelta`` "
+"を負の値に設定してください。たとえば、必要な署名者の数の 1 単位を減らすには ``minApprovalDelta`` を ``-1`` "
+"に設定します。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:139
 msgid ""
 "Wrap the **MultisigAccountModificationTransaction** in an "
-"**AggregateTransaction**, attaching the multisig public key as the "
-"signer."
+"**AggregateTransaction**, attaching the multisig public key as the signer."
 msgstr ""
 "**MultisigAccountModificationTransaction** を **AggregateTransaction** "
 "で内包し、マルチシグの公開鍵を署名者として添付します。"
@@ -177,8 +169,8 @@ msgstr ""
 msgid ""
 "An AggregateTransaction is *complete* if, before announcing it to the "
 "network, all required cosignatories have signed it. If valid, it will be "
-"included in a block. As only one cosignature is required (1-of-2), Alice "
-"can sign define the aggregate as **complete**, sign the transaction, and "
+"included in a block. As only one cosignature is required (1-of-2), Alice can"
+" sign define the aggregate as **complete**, sign the transaction, and "
 "announce it to the network."
 msgstr ""
 "ネットワークへアナウンスされる前にすべての連署者が署名をすると、AggregateTransaction は *コンプリート* "
@@ -187,32 +179,28 @@ msgstr ""
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:157
 msgid ""
-"Once confirmed, the ``minApproval`` value of the multisig will be set to "
-"2, having our **2-of-2** multisig."
+"Once confirmed, the ``minApproval`` value of the multisig will be set to 2, "
+"having our **2-of-2** multisig."
 msgstr "承認されると、マルチシグの ``最小承認数`` は 2 となり **2-of-2** マルチシグになります。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:159
 msgid ""
-"If more than one cosignature is required to announce the transaction "
-"(e.g., the multisig is a **2-of-2** account), the transaction must be "
-"defined as aggregate **bonded**, and all other required multisig "
-"participants should cosign it in order to be confirmed. Follow the "
-":doc:`next guide <../aggregate/sending-a-multisig-transaction>` to "
-"announce aggregate bonded transactions involving a multisig account."
+"If more than one cosignature is required to announce the transaction (e.g., "
+"the multisig is a **2-of-2** account), the transaction must be defined as "
+"aggregate **bonded**, and all other required multisig participants should "
+"cosign it in order to be confirmed. Follow the :doc:`next guide "
+"<../aggregate/sending-a-multisig-transaction>` to announce aggregate bonded "
+"transactions involving a multisig account."
 msgstr ""
 "トランザクションのアナウンスに複数の署名が必要な (たとえば **2-of-2** マルチシグアカウント) トランザクションはアグリゲート "
-"**ボンデッド** として定義する必要があり、また、他のすべての必要なマルチシグ参加者は、承認のために署名する必要があります。 "
-":doc:`次のガイド <../aggregate/sending-a-multisig-transaction>` "
+"**ボンデッド** として定義する必要があり、また、他のすべての必要なマルチシグ参加者は、承認のために署名する必要があります。 :doc:`次のガイド "
+"<../aggregate/sending-a-multisig-transaction>` "
 "に従って、マルチシグアカウントに関連する、アグリゲートボンデッドトランザクションをアナウンスします。"
 
 #: ../../source/guides/multisig/modifying-a-multisig-account-min-approval.rst:161
 msgid ""
-"Follow :doc:`the next guide <adding-a-new-signer-to-a-multisig-account>` "
-"to add a new signer to the multisig account."
+"Follow :doc:`the next guide <adding-a-new-signer-to-a-multisig-account>` to "
+"add a new signer to the multisig account."
 msgstr ""
 ":doc:`次のガイド <adding-a-new-signer-to-a-multisig-account>` "
 "に従って、マルチシグアカウントに新しい署名者を追加します。"
-
-#~ msgid "Background"
-#~ msgstr "背景"
-

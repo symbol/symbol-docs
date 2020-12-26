@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guidelines/translating-the-documentation.rst:36
 msgid "Translating the documentation"
@@ -27,8 +27,8 @@ msgstr "ドキュメントの翻訳"
 
 #: ../../source/guidelines/translating-the-documentation.rst:38
 msgid ""
-"Symbol's awesome community actively localizes the contents of this site, "
-"and we're endlessly thankful for that."
+"Symbol's awesome community actively localizes the contents of this site, and"
+" we're endlessly thankful for that."
 msgstr "すばらしい Symbol のコミュニティは、このサイトのコンテンツを積極的にローカライズしており、私たちはそれを限りなく感謝しています。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:40
@@ -54,9 +54,9 @@ msgstr ""
 
 #: ../../source/guidelines/translating-the-documentation.rst:49
 msgid ""
-"Join `symbol-docs team <https://www.transifex.com/nemtech/symboldocs/>`_."
-" Click on **Help Translate \"symbol-docs\"** button on the right side of "
-"the header, selecting the language you want to contribute."
+"Join `symbol-docs team <https://www.transifex.com/nemtech/symboldocs/>`_. "
+"Click on **Help Translate \"symbol-docs\"** button on the right side of the "
+"header, selecting the language you want to contribute."
 msgstr ""
 "`symbol-docs team <https://www.transifex.com/nemtech/symboldocs/>`_ "
 "に参加します。ヘッダーの右サイドにある **Help Translate \"symbol-docs\"** "
@@ -67,7 +67,8 @@ msgid ""
 "Wait until the translation coordinator will approve your request. Once "
 "accepted, you will receive an email. At this moment, you will be able to "
 "start translating the docs."
-msgstr "翻訳コーディネーターがあなたのリクエストを承認するまで待機します。承認されるとメールを受け取ります。この時点であなたはドキュメント翻訳を始めることができます。"
+msgstr ""
+"翻訳コーディネーターがあなたのリクエストを承認するまで待機します。承認されるとメールを受け取ります。この時点であなたはドキュメント翻訳を始めることができます。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:53
 msgid ""
@@ -77,23 +78,24 @@ msgstr "チームに参加すると、新しいコンテンツの翻訳、また
 
 #: ../../source/guidelines/translating-the-documentation.rst:55
 msgid ""
-"Is the first time you use Transifex? We recommend you to read the "
-"following guides from Transifex's documentation:"
+"Is the first time you use Transifex? We recommend you to read the following "
+"guides from Transifex's documentation:"
 msgstr "Transifexを使用するのは初めてですか？次のTransifexドキュメントを閲覧することを推奨します:"
 
 #: ../../source/guidelines/translating-the-documentation.rst:57
 msgid ""
 "`Getting started as a translator <https://docs.transifex.com/getting-"
 "started-1/translators>`_"
-msgstr "`翻訳者として取り組む <https://docs.transifex.com/getting-started-1/translators>`_"
+msgstr ""
+"`翻訳者として取り組む <https://docs.transifex.com/getting-started-1/translators>`_"
 
 #: ../../source/guidelines/translating-the-documentation.rst:58
 msgid ""
 "`Translating with the web editor <https://docs.transifex.com/translation"
 "/translating-with-the-web-editor>`_"
 msgstr ""
-"`ウェブエディタで翻訳する <https://docs.transifex.com/translation/translating-with-"
-"the-web-editor>`_"
+"`ウェブエディタで翻訳する <https://docs.transifex.com/translation/translating-with-the-"
+"web-editor>`_"
 
 #: ../../source/guidelines/translating-the-documentation.rst:62
 msgid "Notes for developers"
@@ -121,8 +123,8 @@ msgstr "``transifex-client`` のインストール"
 
 #: ../../source/guidelines/translating-the-documentation.rst:77
 msgid ""
-"Download the latest translated files. Replace ``<lang>`` with your "
-"`language code <https://en.wikipedia.org/wiki/ISO_639-1>`_."
+"Download the latest translated files. Replace ``<lang>`` with your `language"
+" code <https://en.wikipedia.org/wiki/ISO_639-1>`_."
 msgstr ""
 "最新の翻訳ファイルをダウンロードします。 ``<lang>`` をあなたの `言語コード "
 "<https://en.wikipedia.org/wiki/ISO_639-1>`_ へ置き換えてください。"
@@ -131,28 +133,19 @@ msgstr ""
 msgid "Compile the docs for the target language."
 msgstr "ターゲットとしている言語へドキュメントをコンパイルします。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:85
-#: ../../source/guidelines/translating-the-documentation.rst:107
-msgid "**Linux/Mac**"
-msgstr ""
-
-#: ../../source/guidelines/translating-the-documentation.rst:91
-#: ../../source/guidelines/translating-the-documentation.rst:113
-msgid "**Windows**"
-msgstr ""
-
 #: ../../source/guidelines/translating-the-documentation.rst:99
 msgid "Push new literals"
 msgstr "新しい文言をプッシュ"
 
 #: ../../source/guidelines/translating-the-documentation.rst:101
-msgid "Follow these instructions to publish updated source literals to Transifex."
+msgid ""
+"Follow these instructions to publish updated source literals to Transifex."
 msgstr "以下の手順に従って更新された文言ソースを Transifex へパブリッシュします。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:103
 msgid ""
-"You will need explicit permissions from the Transifex project coordinator"
-" to push source files."
+"You will need explicit permissions from the Transifex project coordinator to"
+" push source files."
 msgstr "ソースファイルをプッシュするには Transifex プロジェクトコーディネーターからの明示的な許可が必要です。"
 
 #: ../../source/guidelines/translating-the-documentation.rst:105
@@ -170,4 +163,3 @@ msgid ""
 ":doc:`Submit your changes <suggesting-changes>` into the symbol-docs "
 "repository."
 msgstr "symbol-docs リポジトリへ :doc:`変更を提出<suggesting-changes>` してください。"
-

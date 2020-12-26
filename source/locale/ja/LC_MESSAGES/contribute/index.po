@@ -1,46 +1,50 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"PO-Revision-Date: 2020-12-18 17:38+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/contribute/index.rst:36
 msgid "Contributing"
-msgstr ""
+msgstr "貢献"
 
 #: ../../source/contribute/index.rst:38
 msgid ""
 "|codename| is an |open-source| project. Discover how our |community| is "
 "organized, and get started participating:"
 msgstr ""
+"|codename| は |open-source| プロジェクトです。私たちは |community| を編成しています。ぜひ参加してください:"
 
 #: ../../source/contribute/index.rst:41
 msgid "Reach our community joining the official |slack|"
-msgstr ""
+msgstr "公式 |slack| に参加してください。"
 
 #: ../../source/contribute/index.rst:42
-msgid "Check the :doc:`contributing guidelines <contributing>` to propose changes"
-msgstr ""
+msgid ""
+"Check the :doc:`contributing guidelines <contributing>` to propose changes"
+msgstr "変更を提案するためには :doc:`貢献ガイドライン <contributing>` を確認してください。"
 
 #: ../../source/contribute/index.rst:43
 msgid "Follow the development updates on |twitter|"
-msgstr ""
+msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
 #: ../../source/contribute/index.rst:44
 msgid "Explore our |github| repositories"
-msgstr ""
-
+msgstr "|github| リポジトリを探索しましょう。"

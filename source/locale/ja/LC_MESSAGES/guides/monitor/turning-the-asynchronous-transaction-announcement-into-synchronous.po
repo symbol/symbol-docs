@@ -1,46 +1,47 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:42
 msgid "Turning the asynchronous transaction announcement into synchronous"
 msgstr "非同期なトランザクションのアナウンスを同期的に変える"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:44
-msgid "Handy snippet to announce a transaction and wait until this is confirmed."
+msgid ""
+"Handy snippet to announce a transaction and wait until this is confirmed."
 msgstr "トランザクションをアナウンスして、承認されるまで待つ便利なスニペット。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:48
 msgid "Use case"
-msgstr ""
+msgstr "ユースケース"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:50
 msgid ""
-"When announcing a transaction in NIS1, you had to wait to get the "
-"response from the node. |codename| works differently: when a transaction "
-"is announced, the REST API server will always return an OK. As a result, "
-"the developer does not have to wait until the server returns a response, "
-"being able to make more responsive apps. However, now is the developer's "
+"When announcing a transaction in NIS1, you had to wait to get the response "
+"from the node. |codename| works differently: when a transaction is "
+"announced, the REST API server will always return an OK. As a result, the "
+"developer does not have to wait until the server returns a response, being "
+"able to make more responsive apps. However, now is the developer's "
 "responsibility to check the status of the transaction and ensure it is "
 "confirmed."
 msgstr ""
@@ -52,8 +53,8 @@ msgstr ""
 msgid ""
 "The negative aspect of announcing transactions asynchronously is that it "
 "adds unnecessary complexity to small projects. The |sdk| "
-"``TransactionService`` aims to solve this problem by providing a function"
-" that waits for the confirmation or rejection of the transaction."
+"``TransactionService`` aims to solve this problem by providing a function "
+"that waits for the confirmation or rejection of the transaction."
 msgstr ""
 "非同期的トランザクションのデメリットとして、小規模なプロジェクトを不必要に複雑にしてしまう場合があります。 |sdk| "
 "``TransactionService`` がトランザクションの承認または却下を待機する機能を提供することでこの問題を解決します。"
@@ -76,8 +77,7 @@ msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作�
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:64
 msgid ""
-"Load the account with enough |networkcurrency| to pay for transaction "
-"fees."
+"Load the account with enough |networkcurrency| to pay for transaction fees."
 msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:68
@@ -86,55 +86,37 @@ msgstr "同期的トランザクションの送信"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:70
 msgid ""
-"Alice is developing an app to send 10 |privatenetworkcurrency| to Bob and"
-" wants to know if the transaction has reached the network before sending "
-"Bob an email."
+"Alice is developing an app to send 10 |privatenetworkcurrency| to Bob and "
+"wants to know if the transaction has reached the network before sending Bob "
+"an email."
 msgstr ""
 "Alice は Bob に 10 |privatenetworkcurrency| を送るアプリケーションを開発しています。彼女は Bob "
 "にメールを送る前に、トランザクションがネットワークに到着したかどうかを知ろうとしています。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:72
 msgid ""
-"Create a new ``.ts`` file. Then, define and sign a "
-":doc:`TransferTransaction <../../concepts/transfer-transaction>`."
+"Create a new ``.ts`` file. Then, define and sign a :doc:`TransferTransaction"
+" <../../concepts/transfer-transaction>`."
 msgstr ""
 "新しい ``.ts`` ファイルを作成して :doc:`TransferTransaction <../../concepts/transfer-"
 "transaction>` を定義し署名します。"
 
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:76
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:90
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.ts`"
-msgstr ""
-
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:81
-#: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:95
-msgid ""
-":viewsource:`https://github.com/nemtech/symbol-"
-"docs/blob/main/source/resources/examples/typescript/monitor/TurningTheAsynchronousTransactionAnnouncementIntoSynchronous.js`"
-msgstr ""
-
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:86
 msgid ""
-"Once signed, :doc:`announce the transaction <../../concepts/transaction>`"
-" using ``TransactionService.announce`` instead of "
+"Once signed, :doc:`announce the transaction <../../concepts/transaction>` "
+"using ``TransactionService.announce`` instead of "
 "``TransactionHttp.announce``."
 msgstr ""
-"署名したら、 ``TransactionHttp.announce`` の代わりに ``TransactionService.announce``"
-" を使用して :doc:`トランザクションをアナウンス <../../concepts/transaction>` します。"
+"署名したら、 ``TransactionHttp.announce`` の代わりに ``TransactionService.announce`` "
+"を使用して :doc:`トランザクションをアナウンス <../../concepts/transaction>` します。"
 
 #: ../../source/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.rst:100
 msgid ""
-"The function ``TransactionService.announce()`` will respond successfully "
-"if the transaction reaches the network and does not have validation "
-"errors. You might still need to :doc:`wait for several confirmations  "
+"The function ``TransactionService.announce()`` will respond successfully if "
+"the transaction reaches the network and does not have validation errors. You"
+" might still need to :doc:`wait for several confirmations  "
 "<../../concepts/transaction>` before executing additional actions."
 msgstr ""
 "この関数 ``TransactionService.announce()`` "
 "トランザクションがネットワークに到達し、バリデーションエラーが発生しなければ、成功レスポンスを返します。まだ次のアクションを起こす前に、 "
 ":doc:`いくらかの承認を待つ  <../../concepts/transaction>` 必要があるかもしれません。"
-
-#~ msgid "Background"
-#~ msgstr "背景"
-

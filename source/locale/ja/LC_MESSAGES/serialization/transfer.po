@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: symbol-docs 0.21.4\n"
+"Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 17:38+0100\n"
+"POT-Creation-Date: 2020-12-24 12:17+0000\n"
 "PO-Revision-Date: 2020-06-19 17:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese "
-"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/serialization/transfer.rst:36
 msgid "Transfer Schemas"
@@ -27,40 +27,24 @@ msgstr "転送スキーマ"
 
 #: ../../source/serialization/transfer.rst:38
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ "
-"repository defines how each transaction type should be serialized. In "
-"combination with the `catbuffer-generators <https://github.com/nemtech"
-"/catbuffer-generators>`_ project, developers can generate builder classes"
-" for a given set of programming languages."
+"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"defines how each transaction type should be serialized. In combination with "
+"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"generators>`_ project, developers can generate builder classes for a given "
+"set of programming languages."
 msgstr ""
 "`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/transfer.rst:42
-msgid "Transfer"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:47
-msgid "TransferTransaction"
-msgstr ""
-
 #: ../../source/serialization/transfer.rst:49
 msgid ""
-"Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or "
-"messages between two :doc:`accounts <../concepts/account>`."
+"Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages "
+"between two :doc:`accounts <../concepts/account>`."
 msgstr ""
 ":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <../concepts/account>` "
 "間で送信するためには、転送トランザクションをアナウンスします。"
-
-#: ../../source/serialization/transfer.rst:51
-msgid "**Version**: 0x01"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:53
-msgid "**EntityType**: 0x4154"
-msgstr ""
 
 #: ../../source/serialization/transfer.rst:55
 msgid "**Inlines**:"
@@ -75,127 +59,46 @@ msgstr ""
 "transaction>`"
 
 #: ../../source/serialization/transfer.rst:1
-msgid "Property"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "Type"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "Description"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "recipientAddress"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid ":schema:`UnresolvedAddress <types.cats>`"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
 msgid "Transaction recipient."
 msgstr "トランザクション受信者"
-
-#: ../../source/serialization/transfer.rst:1
-msgid "messageSize"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "uint16"
-msgstr ""
 
 #: ../../source/serialization/transfer.rst:1
 msgid "Size of the attached message."
 msgstr "添付されたメッセージのサイズ"
 
 #: ../../source/serialization/transfer.rst:1
-msgid "mosaicsCount"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "uint8"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
 msgid "Number of attached mosaics."
 msgstr "添付モザイクの数"
 
 #: ../../source/serialization/transfer.rst:1
-msgid "transferTransactionBody_Reserved1"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "uint32"
-msgstr ""
-
 #: ../../source/serialization/transfer.rst:1
 msgid "Reserved padding to align mosaics on 8-byte boundary."
 msgstr "モザイクを 8 バイト境界に揃える予約パディング"
-
-#: ../../source/serialization/transfer.rst:1
-msgid "transferTransactionBody_Reserved2"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "mosaics"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "array(:ref:`UnresolvedMosaic <unresolved-mosaic>`, mosaicsCount)"
-msgstr ""
 
 #: ../../source/serialization/transfer.rst:1
 msgid "Attached mosaics to send."
 msgstr "送信する添付モザイク"
 
 #: ../../source/serialization/transfer.rst:1
-#, fuzzy
-msgid "message"
-msgstr "平文メッセージ"
-
-#: ../../source/serialization/transfer.rst:1
-msgid "array(byte, messageSize)"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
 msgid ":ref:`Message type <message-type>` and hexadecimal payload."
 msgstr ":ref:`メッセージタイプ <message-type>` と 16 進数のペイロード"
 
-#: ../../source/serialization/transfer.rst:74
-msgid "MessageType"
-msgstr ""
-
 #: ../../source/serialization/transfer.rst:76
-msgid "Enumeration: uint8"
+msgid ""
+"This is actually a :ref:`TransferTransaction <transfer-transaction>` with a "
+":ref:`Message type <message-type>` equal to ``0xFE``."
 msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "Id"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
-msgid "0x00"
-msgstr ""
+"これは実際に :ref:`メッセージタイプ <message-type>` を添付した :ref:`TransferTransaction "
+"<transfer-transaction>` は ``0xFE`` に一致します。"
 
 #: ../../source/serialization/transfer.rst:1
 msgid "Plain message."
 msgstr "平文メッセージ"
 
 #: ../../source/serialization/transfer.rst:1
-msgid "0x01"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
 msgid "Encrypted message."
 msgstr "暗号化メッセージ"
 
 #: ../../source/serialization/transfer.rst:1
-msgid "0xFE"
-msgstr ""
-
-#: ../../source/serialization/transfer.rst:1
 msgid "Persistent harvesting delegation."
 msgstr "永続的なハーベスティングのデリゲート"
-
