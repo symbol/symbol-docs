@@ -796,3 +796,58 @@ file_filter = source/locale/<lang>/LC_MESSAGES/serialization/transfer.po
 source_file = build/gettext/serialization/transfer.pot
 source_lang = en
 type = PO
+
+[symboldocs.glossary_]
+file_filter = source/locale/<lang>/LC_MESSAGES/glossary.po
+source_file = build/gettext/glossary.pot
+source_lang = en
+type = PO
+
+[symboldocs.references--typescript-sdk]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/typescript-sdk.po
+source_file = build/gettext/references/typescript-sdk.pot
+source_lang = en
+type = PO
+
+[symboldocs.references--symbol-uri-scheme]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/symbol-uri-scheme.po
+source_file = build/gettext/references/symbol-uri-scheme.pot
+source_lang = en
+type = PO
+
+[symboldocs.references--symbol-hd-wallets]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/symbol-hd-wallets.po
+source_file = build/gettext/references/symbol-hd-wallets.pot
+source_lang = en
+type = PO
+
+[symboldocs.references--symbol-qr-library]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/symbol-qr-library.po
+source_file = build/gettext/references/symbol-qr-library.pot
+source_lang = en
+type = PO
+
+[symboldocs.references--java-sdk]
+file_filter = source/locale/<lang>/LC_MESSAGES/references/java-sdk.po
+source_file = build/gettext/references/java-sdk.pot
+source_lang = en
+type = PO
+
+[symboldocs.getting-started--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/index.po
+source_file = build/gettext/getting-started/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/index.po
+source_file = build/gettext/guides/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.contribute--contributors]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributors.po
+source_file = build/gettext/contribute/contributors.pot
+source_lang = en
+type = PO
+
