@@ -71,7 +71,7 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-2. Create a :ref:`VrfKeyLinkTransaction <vrf-key-link>` to **link M to a VRF key**. Sign the transaction with  **M** and announce it to the network.
+2. Create a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to **link M to a VRF key**. Sign the transaction with  **M** and announce it to the network.
 
    .. example-code::
 
@@ -84,7 +84,7 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-3. Create a :ref:`NodeKeyLinkTransaction <node-key-link>` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
+3. Create a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
    .. note:: The node's public TLS key is typically provided by the node owner. However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) running a version of the :doc:`REST Gateway <../../api>` higher than **2.2.0** offer this information through the ``nodePublicKey`` field of the ``node/info`` `REST endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_.
 
