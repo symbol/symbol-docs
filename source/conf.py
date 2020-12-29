@@ -270,7 +270,7 @@ rst_prolog = """
 .. |desktop-wallet| replace:: Symbol Desktop Wallet
 .. |slack| raw:: html
 
-   <a href="https://join.slack.com/t/nem2/shared_invite/zt-j0xtyrr8-dJ9p0~Lua4lJx9ZoLbq7mg" target="_blank">Slack</a>
+   <a href="https://join.slack.com/t/nem2/shared_invite/zt-km50fzxd-I8dPNrPEV6cqYVrhyLvrfA" target="_blank">Slack</a>
 
 .. |nem| raw:: html
 
