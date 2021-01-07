@@ -8,7 +8,7 @@ Since the blocks in the chain are ordered, the complete :doc:`transaction <trans
 Subsequent blocks have increasing heights that differ by one.
 Each block can contain up to ``1,000`` transactions (public network), being this value :ref:`configurable per network <config-network-properties>`.
 
-|codename| blocks complete every ``15`` seconds, making transactions confirm quickly enough for everyday use.
+|codename| blocks complete every ``30`` seconds, making transactions confirm quickly enough for everyday use.
 
 ******
 Header
