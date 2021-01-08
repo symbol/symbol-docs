@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:41
 msgid "Using Symbol Bootstrap"
-msgstr "Symbol Bootstrap の利用"
+msgstr "Symbol Bootstrap の使用"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:45
 msgid "On systems using ``apt``:"
-msgstr "システムで ``apt`` を使用:"
+msgstr "``apt`` を使用するシステム:"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:54
 msgid ""
