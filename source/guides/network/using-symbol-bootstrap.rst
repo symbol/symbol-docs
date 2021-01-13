@@ -28,18 +28,6 @@ After reading this you will be able to better understand the :doc:`Creating priv
 Requirements
 ************
 
-========
-Hardware
-========
-
-|symbol-bootstrap| has been tested on computers with the following **minimum requirements**.
-
-* **CPU**: 2 cores.
-* **Memory**: 4GB.
-* **HD**: 20GB.
-
-.. note:: In less powerful instances you might encounter issues installing or running the node.
-
 ===========
 Environment
 ===========
