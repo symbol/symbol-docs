@@ -178,3 +178,34 @@ Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/R
 .. |symbol-testnet-bootstrap| raw:: html
 
     <a href="https://github.com/nemtech/symbol-testnet-bootstrap" target="_blank">Symbol Testnet Bootstrap</a>
+
+**********
+Troubleshooting
+**********
+
+* permission denied while trying to connect to the Docker daemon socket
+
+  Reproduce:
+
+  On a fresh `debian 10 <https://debian.org>` install, after installing the symbol-bootstrap program and its dependencies, .
+
+  .. code-block:: bash
+
+    marc-os:~$ symbol-bootstrap config -p testnet -a dual
+    2021-01-13T13:24:19.006Z info     Generating config from preset testnet
+    ...
+    2021-01-13T13:24:19.345Z error    Unknown error generating the configuration. Command failed: docker run --rm -u 1000:1000 [...]
+    docker: Got permission denied while trying to connect to the Docker daemon socket at ...]
+
+  Cause:
+
+  Current user (marc-os) does not belong to docker group.
+        
+  Fix:
+
+  .. code-block:: bash
+
+    sudo addgroup marc-os docker    
+
+
+
