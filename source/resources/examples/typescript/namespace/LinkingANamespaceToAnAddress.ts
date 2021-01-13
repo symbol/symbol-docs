@@ -23,53 +23,60 @@ import {
   AliasTransaction,
   Deadline,
   NamespaceId,
-  NetworkType,
   RepositoryFactoryHttp,
   UInt64,
 } from 'symbol-sdk';
 
-// Retrieve from node's /network/properties or RepositoryFactory
-const epochAdjustment = 123456789;
+const example = async (): Promise<void> => {
+  try {
+    // Network information
+    const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+    const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+    const epochAdjustment = await repositoryFactory
+      .getEpochAdjustment()
+      .toPromise();
+    const networkType = await repositoryFactory.getNetworkType().toPromise();
+    const networkGenerationHash = await repositoryFactory
+      .getGenerationHash()
+      .toPromise();
 
-/* start block 01 */
-// replace with namespace name
-const namespaceId = new NamespaceId('foo');
-// replace with address
-const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
-const address = Address.createFromRawAddress(rawAddress);
-/* end block 01 */
+    /* start block 01 */
+    // Replace with namespace name
+    const namespaceId = new NamespaceId('foo');
+    // Replace with address
+    const rawAddress = 'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I';
+    const address = Address.createFromRawAddress(rawAddress);
+    /* end block 01 */
 
-/* start block 02 */
-// replace with network type
-const networkType = NetworkType.TEST_NET;
+    /* start block 02 */
+    const addressAliasTransaction = AliasTransaction.createForAddress(
+      Deadline.create(epochAdjustment),
+      AliasAction.Link,
+      namespaceId,
+      address,
+      networkType,
+      UInt64.fromUint(2000000),
+    );
 
-const addressAliasTransaction = AliasTransaction.createForAddress(
-  Deadline.create(epochAdjustment),
-  AliasAction.Link,
-  namespaceId,
-  address,
-  networkType,
-  UInt64.fromUint(2000000),
-);
+    // Replace with private key
+    const privateKey =
+      '1111111111111111111111111111111111111111111111111111111111111111';
+    const account = Account.createFromPrivateKey(privateKey, networkType);
 
-// replace with private key
-const privateKey =
-  '1111111111111111111111111111111111111111111111111111111111111111';
-const account = Account.createFromPrivateKey(privateKey, networkType);
-// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash =
-  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(
-  addressAliasTransaction,
-  networkGenerationHash,
-);
-// replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const transactionHttp = repositoryFactory.createTransactionRepository();
+    const signedTransaction = account.sign(
+      addressAliasTransaction,
+      networkGenerationHash,
+    );
+    console.log('Signed transaction hash: ' + signedTransaction.hash);
 
-transactionHttp.announce(signedTransaction).subscribe(
-  (x) => console.log(x),
-  (err) => console.error(err),
-);
-/* end block 02 */
+    const transactionHttp = repositoryFactory.createTransactionRepository();
+    transactionHttp.announce(signedTransaction).subscribe(
+      (x) => console.log(x),
+      (err) => console.error(err),
+    );
+    /* end block 02 */
+  } catch (e) {
+    console.log(e);
+  }
+};
+example().then();
