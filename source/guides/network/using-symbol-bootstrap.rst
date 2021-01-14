@@ -116,7 +116,6 @@ This will create a folder called ``target`` by default (It can be changed with t
   
     sudo addgroup $USER docker
 
-
 ******************************
 Building the network and nodes
 ******************************
