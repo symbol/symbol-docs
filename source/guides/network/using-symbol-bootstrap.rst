@@ -185,5 +185,3 @@ Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/R
 .. |symbol-testnet-bootstrap| raw:: html
 
     <a href="https://github.com/nemtech/symbol-testnet-bootstrap" target="_blank">Symbol Testnet Bootstrap</a>
-
-
