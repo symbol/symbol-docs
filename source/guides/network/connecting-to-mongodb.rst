@@ -7,10 +7,13 @@
 How to connect to MongoDB
 #########################
 
-Learn how to access your API node MongoDB instance.
+Learn how to access your API node's MongoDB instance.
 
-The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so that you don't have to connect to MongoDB.
-Still, if you are developing new plugins for Symbol, or analyzing extensive blockchain data, you might want to consider connecting to MongoDB directly.
+.. note:: **This is an advanced feature**
+
+  The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so that you don't have to connect to an API node's internal database directly.
+
+  However, if you are developing new plugins for Symbol, or analyzing extensive blockchain data, you might need to connect directly to MongoDB **for debugging purposes**.
 
 By the end of this guide, you will be connected to your API node database instance and doing some basic queries.
 
@@ -18,10 +21,28 @@ By the end of this guide, you will be connected to your API node database instan
 Prerequisites
 *************
 
-- Complete the :doc:`getting started section <../../getting-started/setup-workstation>`.
-- Have an :doc:`API or Dual node running <running-a-test-net-node>`.
+- Have an :doc:`API or Dual node running <running-a-test-net-node>` inside Docker **with an open port to the database** (See next section).
 
-.. _install-robo3t:
+**********************
+Open the database port
+**********************
+
+In the :doc:`Running a test net node <running-a-test-net-node>` guide you have used ``symbol-bootstrap`` to instantiate and run the necessary node services (catapult-server, API endpoints, databases, etc). For security reasons, all these services run inside Docker containers and, except the public endpoints, they are isolated from the exterior.
+
+This means that the MongoDB database that API nodes use to cache the state of the blockchain is **inaccessible by default**. To forward its internal port to the host you need to give ``symbol-bootstrap`` a `custom preset file <symbol-bootstrap-presets>`_ containing the following lines:
+
+.. code-block:: yaml
+
+    databases:
+      - openPort: true
+
+And then use this file when configuring ``symbol-bootstrap``, for example:
+
+.. code-block:: bash
+
+    symbol-bootstrap start -p testnet -a dual -c custom_parameters.yml
+
+This will make the database's TCP port ``27017`` accessible from the host so be careful, and only use this feature **for development purposes**.
 
 ***************
 Install Robo 3T
@@ -38,44 +59,24 @@ In case of doubt, follow the `official installation docs <https://studio3t.com/k
 Create a new connection
 ***********************
 
-1. Open a new terminal on the computer you are running the node. Then, get the **container's identifier** running MongoDB with ``docker ps``.
-
-.. code-block:: bash
-
-    docker ps | grep mongo
-
-    ea62f033d2a6    mongo    "docker-entrypoint.s…"    9 minutes ago    27017/tcp    api-assembly_db_1
-
-2. Once you have the ID, get the **container's IP** with the command ``docker inspect <ID>``.
-
-.. code-block:: bash
-
-    docker inspect ea62f033d2a6 | grep "IPAddress"
-
-    "SecondaryIPAddresses": null,
-    "IPAddress": "",
-            "IPAddress": "172.20.0.7",
-
-3. Launch Robo 3T and click on the **"Create"** link to add a new connection.
+1. Launch Robo 3T and click on the **"Create"** link to add a new connection.
 
 .. figure:: ../../resources/images/screenshots/robo3t-open.png
     :align: center
-    :width: 700px
 
-4. Enter the following details under the **"Connection"** tab:
+2. Enter the following details under the **"Connection"** tab:
 
 .. figure:: ../../resources/images/screenshots/robo3t-connection.png
     :align: center
-    :width: 700px
 
 * **Type**: Direct Connection
 * **Name**: my-node
-* **Address**: 172.20.0.7 (retrieved from the second step)
+* **Address**: localhost
 * **Port**: 27017
 
-5. If the node is running locally, click **"Connect"** and move to the next section :ref:`Querying MongoDB <querying-mongodb>`.
+3. If the node is running locally, click **"Connect"** and move to the next section :ref:`Querying MongoDB <querying-mongodb>`.
 
-6. Otherwise, if you are running the node in a **virtual private server** (VPS), create a tunnel first between your computer and the server.
+4. Otherwise, if you are running the node in a **virtual private server** (VPS), create a tunnel first between your computer and the server.
 
 Go to the **SSH tab** and add the server's details:
 
@@ -85,7 +86,7 @@ Go to the **SSH tab** and add the server's details:
 
 Replace the **SSH Address**, **username**, and **authentication** method.
 
-7. After you click "Connect", you should see the MongoDB collections under the database named **"catapult"**.
+5. After you click "Connect", you should see the MongoDB collections under the database named **"catapult"**.
 
 .. _querying-mongodb:
 

@@ -61,6 +61,8 @@ Installation
 Configuration
 *************
 
+.. _symbol-bootstrap-presets:
+
 =======
 Presets
 =======
