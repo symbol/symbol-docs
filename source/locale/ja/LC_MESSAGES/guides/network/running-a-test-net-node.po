@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-01-18 16:34+0000\n"
 "PO-Revision-Date: 2019-12-17 09:31+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,24 +166,25 @@ msgstr "アカウントの鍵とアドレスは ``target`` フォルダ内の YA
 msgid "As an example:"
 msgstr "例:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:139
+#: ../../source/guides/network/running-a-test-net-node.rst:141
 msgid "Keep you Secret Keys secret at all times!"
 msgstr "シークレットキーは常に秘密を保ってください！"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:141
+#: ../../source/guides/network/running-a-test-net-node.rst:143
 msgid ""
-"Use the information in the ``signing`` section to access the node's account."
-" When activating :ref:`delegated harvesting <delegated-harvesting>`, use the"
-" information in the ``node`` section as the node's **public TLS key**."
+"Use the information in the ``main`` section to access the node's account. "
+"When activating :ref:`delegated harvesting <delegated-harvesting>`, use the "
+"information in the ``transport`` section as the node's **public TLS key**."
 msgstr ""
-"``署名`` セクションの情報を使用して、ノードのアカウントにアクセスします。:ref:`デリゲートハーベスティング <delegated-"
-"harvesting>` をアクティブ化する場合は ``ノード`` セクションの情報を、ノードの **公開TLSキー** として使用します。"
+"``main`` セクションの情報でノードのアカウントにアクセスします。 :ref:`delegated harvesting <delegated-"
+"harvesting>` をアクティブ化するときは ``transport`` セクションの情報をノードの **公開 TLS キー** "
+"として使用します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:145
+#: ../../source/guides/network/running-a-test-net-node.rst:147
 msgid "Providing funds to the node"
 msgstr "資産をノードへ提供する"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:147
+#: ../../source/guides/network/running-a-test-net-node.rst:149
 msgid ""
 "Before the node can begin harvesting or voting (see below) it needs a "
 "**minimum amount of funds**. In the ``testnet`` test environment you can use"
@@ -192,7 +193,7 @@ msgstr ""
 "ノードがハーベスティングまたは投票 (以下を参照) を開始する前に **最小資産** が必要です。 ``testnet`` テスト環境では "
 "|codename| の **Faucet** を使用して資産を調達できます。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:149
+#: ../../source/guides/network/running-a-test-net-node.rst:151
 msgid ""
 "Go to |faucet-1| (or |faucet-2|), insert the ``address`` of your node's "
 "account and the amount of |networkcurrency| you need and click on CLAIM."
@@ -200,7 +201,7 @@ msgstr ""
 "|faucet-1| (または |faucet-2| ) に移動して、ノードのアカウントの ``アドレス`` と必要なの量 "
 "|networkcurrency| を入力し、CLAIM をクリックします。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:151
+#: ../../source/guides/network/running-a-test-net-node.rst:153
 msgid ""
 "You will see that your request is first ``unconfirmed`` (pending) and after "
 "a few seconds it becomes ``confirmed``. Your node is now funded and ready to"
@@ -209,21 +210,21 @@ msgstr ""
 "リクエストは最初に ``未確認`` (保留中) になり、数秒後に ``承認済み`` "
 "になるでしょう。これでノードに資産が提供され、操作する準備が整いました。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:155
+#: ../../source/guides/network/running-a-test-net-node.rst:157
 msgid "Submitting link keys"
 msgstr "リンクキーを提出する"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:157
+#: ../../source/guides/network/running-a-test-net-node.rst:159
 msgid ""
 "**Harvesting** and **Voting** nodes require an extra configuration step "
 "before they can be used:"
 msgstr "**Harvesting** と **Voting** ノードを使用するには追加の構成手順が必要です:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:160
+#: ../../source/guides/network/running-a-test-net-node.rst:162
 msgid "Enabling harvesting"
 msgstr "ハーベスティングの有効化"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:162
+#: ../../source/guides/network/running-a-test-net-node.rst:164
 msgid ""
 "|symbol-bootstrap| creates peer nodes with :ref:`local harvesting <local-"
 "harvesting>` enabled by default, but they still need to be registered by "
@@ -236,7 +237,7 @@ msgstr ""
 "をネットワークにアナウンスして登録する必要があります。 (:ref:`デリゲートハーベスティング <delegated-harvesting>` "
 "の動作とは異なり ``ノード`` の鍵が必要です)"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:164
+#: ../../source/guides/network/running-a-test-net-node.rst:166
 msgid ""
 "This can be done by |symbol-bootstrap| too, but it needs to be a step "
 "separated from ``symbol-bootstrap start`` because funds are required to "
@@ -245,7 +246,7 @@ msgstr ""
 "これは |symbol-bootstrap| によって実行できます。しかしトランザクションのアナウンスには資産が必要なので ``symbol-"
 "bootstrap start`` とは別のステップで行います。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:166
+#: ../../source/guides/network/running-a-test-net-node.rst:168
 msgid ""
 "Once the node is running with ``symbol-bootstrap start`` and you have funded"
 " it account, from a different terminal (but from the same folder), simply "
@@ -254,7 +255,7 @@ msgstr ""
 "``symbol-bootstrap start`` を実行して、ノードが起動したら、アカウントに資産を提供し、別のターミナルから "
 "(ただし同じフォルダで) 入力してください:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:172
+#: ../../source/guides/network/running-a-test-net-node.rst:174
 msgid ""
 "This creates the required :ref:`VrfKeyLinkTransaction <vrf-key-link-"
 "transaction>` and submits it to the network. If it succeeds (it might take "
@@ -265,7 +266,7 @@ msgstr ""
 "を作成し、ネットワークへ送信します。数秒経って成功したら (トランザクションが承認される必要があるため、数秒かかる場合があります) "
 "新しいノードはハーベストする準備が整います。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:174
+#: ../../source/guides/network/running-a-test-net-node.rst:176
 msgid ""
 "Without extra parameters, ``symbol-bootstrap link`` tries to send the "
 "registration transaction to the local node (running on the other terminal) "
@@ -280,11 +281,11 @@ msgstr ""
 "``--url`` を使用してテストネットノードの URL を指定できます。 `ノードリスト <https://forum.nem.io/t/nem-"
 "symbol-0-10-0-release-announcement-testnet-launch/25863>`_ はこちらで確認できます。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:177
+#: ../../source/guides/network/running-a-test-net-node.rst:179
 msgid "Enabling voting"
 msgstr "投票の有効化"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:179
+#: ../../source/guides/network/running-a-test-net-node.rst:181
 msgid ""
 "The :ref:`block finalization <finalization>` process requires that network "
 "nodes vote about the correctness of blocks before they are added to the "
@@ -297,7 +298,7 @@ msgstr ""
 " <voting-key-link-transaction>` をネットワークにアナウンスして、投票者として登録する必要があります。これも "
 "|symbol-bootstrap| で処理します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:181
+#: ../../source/guides/network/running-a-test-net-node.rst:183
 msgid ""
 "We are going to create a new voting node. If you already created a non-"
 "voting node which you no longer need, you can remove the ``target`` folder "
@@ -307,7 +308,7 @@ msgstr ""
 "新しく投票ノードを作成します。非投票ノードをすでに作成している場合は ``target`` フォルダを削除するか、 ``symbol-"
 "bootstrap`` を実行する時に ``-r`` スイッチを使用してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:183
+#: ../../source/guides/network/running-a-test-net-node.rst:185
 msgid ""
 "First, you need to configure the node as a voter, so, besides selecting the "
 "``testnet`` preset and the desired assembly you have to provide a custom "
@@ -316,19 +317,19 @@ msgstr ""
 "最初に、投票ノードとして構成する必要があるため、 ``testnet`` "
 "プリセットと目的のアセンブリを選択する以外に、次の内容を含むカスタムプリセットファイルを提供します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:190
+#: ../../source/guides/network/running-a-test-net-node.rst:192
 msgid ""
 "So if you call the above file ``enable-voting-preset.yml`` the whole command"
 " would be:"
 msgstr "したがって、上記のファイル ``enable-voting-preset.yml`` を呼び出すと、コマンド全体は次のようになります:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:196
+#: ../../source/guides/network/running-a-test-net-node.rst:198
 msgid ""
 "Once the node is running, from a different terminal (but from the same "
 "folder), simply type:"
 msgstr "ノードが起動したら、別のターミナルから (ただし同じフォルダで) 入力してください:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:202
+#: ../../source/guides/network/running-a-test-net-node.rst:204
 msgid ""
 "Just like in the harvesting case, this creates the required "
 ":ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` and submits it"
@@ -337,33 +338,33 @@ msgstr ""
 "ハーベスティングの場合と同様に、これにより必要な :ref:`VotingKeyLinkTransaction <voting-key-link-"
 "transaction>` が作成され、ネットワークに送信されます。正常に完了すると、新しいノードは投票する準備が整います。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:206
+#: ../../source/guides/network/running-a-test-net-node.rst:208
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:208
+#: ../../source/guides/network/running-a-test-net-node.rst:210
 msgid ""
 "Follow the :ref:`Configuring node properties <node-properties>` guide to "
 "change parameters such as the public name of the node."
 msgstr ""
 ":ref:`ノードプロパティの設定 <node-properties>` ガイドに従って、ノードのパブリック名などのパラメータを変更します。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:212
+#: ../../source/guides/network/running-a-test-net-node.rst:214
 msgid "Interacting with the test network"
 msgstr "テストネットワークと疎通する"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:214
+#: ../../source/guides/network/running-a-test-net-node.rst:216
 msgid ""
 "You can use the following tools to test the functionality of your new node:"
 msgstr "次のツールを使用して、新しいノードの機能をテストできます:"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:216
+#: ../../source/guides/network/running-a-test-net-node.rst:218
 msgid ""
 "|blockchain-explorer|: Search for transactions, accounts, assets, and blocks"
 " in the test network."
 msgstr "|blockchain-explorer|: テストネットワーク内のトランザクション、アカウント、アセット、ブロックの検索"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:217
+#: ../../source/guides/network/running-a-test-net-node.rst:219
 msgid ""
 ":ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for "
 "|codename|. Available for Mac, Linux, and Windows."
@@ -371,13 +372,13 @@ msgstr ""
 ":ref:`デスクトップウォレット <wallet-desktop>`: |codename| 用Mac, Linux, Windows "
 "向けクロスプラットフォームクライアント."
 
-#: ../../source/guides/network/running-a-test-net-node.rst:218
+#: ../../source/guides/network/running-a-test-net-node.rst:220
 msgid ""
 ":ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used "
 "actions from your terminal."
 msgstr ":ref:`コマンドラインインターフェイス <wallet-cli>`: よく使用されるアクションをターミナルで実行します"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:219
+#: ../../source/guides/network/running-a-test-net-node.rst:221
 msgid ""
 "The |codename| |faucet-1|: Receive |networkcurrency| units to test "
 "|codename|'s services. If the default faucet is empty, try the |faucet-2|."
@@ -385,13 +386,13 @@ msgstr ""
 "|codename| |faucet-1|: テスト |codename| サービスへ |networkcurrency| "
 "を受信します。デフォルトフォーセットが空の場合は |faucet-2| を試してください。"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:220
+#: ../../source/guides/network/running-a-test-net-node.rst:222
 msgid ""
 ":doc:`Software Development Kits <../../sdk>`: Add |codename| to your "
 "project."
 msgstr ":doc:`ソフトウェア開発キット <../../sdk>`: |codename| をあなたのプロジェクトへ追加"
 
-#: ../../source/guides/network/running-a-test-net-node.rst:222
+#: ../../source/guides/network/running-a-test-net-node.rst:224
 msgid ""
 "And don't forget to check :ref:`the rest of the guides <blog-categories>` to"
 " continue learning about |codename|!"
