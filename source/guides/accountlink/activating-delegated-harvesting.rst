@@ -154,6 +154,6 @@ Final words
 
 - **Accounts with higher importance are selected more often to perform harvesting**. Even if you successfully register as a delegated harvester with a node, you will not harvest any block (nor receive any fees) unless your :ref:`importance score <importance-calculation>` is high enough.
 
-- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 180 blocks (about every 45 minutes). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
+- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 180 blocks (about every 90 minutes). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
 
 - Finally, as explained in :ref:`delegated-harvesting-verifying-activation` above, **announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester**. Nodes are free to comply with the request or even to lie about its status.
