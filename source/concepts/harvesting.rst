@@ -62,7 +62,7 @@ Local harvesting
 ****************
 
 Any :ref:`eligible account <account_eligibility>` can harvest new blocks by running a node.
-To harvest locally, a node must provide the following properties in the :properties:`config-harvesting.properties <config-node-properties>` file:
+To harvest locally, a node must provide the following properties in the :properties:`config-harvesting.properties <config-harvesting.properties>` file:
 
 .. raw:: html
     :file: ../_static/config-harvesting.properties.html
