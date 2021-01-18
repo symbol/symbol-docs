@@ -84,7 +84,8 @@ Presets can be further customized by specifying an **assembly** (or flavor) whic
     :delim: ;
     :widths: 20, 20, 60
 
-    ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).    
+    ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).
+    ``bootstrap``; ``full``; It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 faucet. Great for demonstration purposes. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__).
     ``testnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
     ``testnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__).
     ``testnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__).
