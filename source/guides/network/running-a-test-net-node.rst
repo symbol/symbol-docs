@@ -82,15 +82,17 @@ As an example:
             name: peer-node-0
             friendlyName: peer-node-0
             roles: 'Peer,Voting'
-            ssl:
+            main:
+                # Use these to access the node's account
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: 8E4B7B32C636E1749B1A4CDC345F1D3BDC6C4C33DEA8DC0BD0FFA5C873CDB232
-            node:
+                publicKey: E8A918BD78C0D9CFA8D0B53BB721E62925ACB4BF92068533A3D94210D01E1D39
+                address: TBMXGFREJRVWJY756BVHLJAHZCOP3BW53ALFYOY
+            transport:
                 # Use these in Delegated Harvesting requests
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-                publicKey: C1C278BCBF2B56918F41620E1AF89D3FCD94ACCA3F1BFE8AC877C1D10A933C82
-            signing:
-                # Use these to access the node's account
+                publicKey: 7C63AF4CECE2690944FAFE3D9D52EB400447F30CCAC185BC9BE5D54CF536DDE3
+                address: TBTRVMCJ7TEZNCV74IX3INJHGAOLMQOU2JQEX7Y
+            remote:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
                 publicKey: 6B1936560F85096E398AAF4647EADB6C748100E6D248D98B2916F003B806E725
                 address: TDN3G4REJA7BWDQ2TLB3M522RAYKV5AB55EEPGQ
@@ -105,7 +107,7 @@ As an example:
 
 .. note:: Keep you Secret Keys secret at all times!
 
-Use the information in the ``signing`` section to access the node's account. When activating :ref:`delegated harvesting <delegated-harvesting>`, use the information in the ``node`` section as the node's **public TLS key**.
+Use the information in the ``main`` section to access the node's account. When activating :ref:`delegated harvesting <delegated-harvesting>`, use the information in the ``transport`` section as the node's **public TLS key**.
 
 ***************************
 Providing funds to the node
