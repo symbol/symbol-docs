@@ -47,7 +47,7 @@ Creating the account
 
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.0.10.0.x.symboldev.network:3000/
+    Enter a Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.testnet.symboldev.network:3000/
     Insert profile name: alice
 
 *************************

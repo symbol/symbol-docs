@@ -54,7 +54,7 @@ const alicePublicAccount = PublicAccount.createFromPublicKey(
   networkType,
 );
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const metadataHttp = new MetadataHttp(nodeUrl);
 const metadataService = new MetadataTransactionService(metadataHttp);
 

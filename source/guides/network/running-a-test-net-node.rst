@@ -115,7 +115,7 @@ Providing funds to the node
 
 Before the node can begin harvesting or voting (see below) it needs a **minimum amount of funds**. In the ``testnet`` test environment you can use |codename|'s **Faucet** to provide these funds.
 
-Go to |faucet-1| (or |faucet-2|), insert the ``address`` of your node's account and the amount of |networkcurrency| you need and click on CLAIM.
+Go to |faucet|, insert the ``address`` of your node's account and the amount of |networkcurrency| you need and click on CLAIM.
 
 You will see that your request is first ``unconfirmed`` (pending) and after a few seconds it becomes ``confirmed``. Your node is now funded and ready to operate!
 
@@ -185,7 +185,7 @@ You can use the following tools to test the functionality of your new node:
 * |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
 * :ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
 * :ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used actions from your terminal.
-* The |codename| |faucet-1|: Receive |networkcurrency| units to test |codename|'s services. If the default faucet is empty, try the |faucet-2|.
+* The |codename| |faucet|: Receive |networkcurrency| units to test |codename|'s services.
 * :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
 
 And don't forget to check :ref:`the rest of the guides <blog-categories>` to continue learning about |codename|!
@@ -196,15 +196,11 @@ And don't forget to check :ref:`the rest of the guides <blog-categories>` to con
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer-0.10.0.x-01.symboldev.network/" target="_blank">Blockchain Explorer</a>
+   <a href="http://explorer.testnet.symboldev.network/" target="_blank">Blockchain Explorer</a>
 
-.. |faucet-1| raw:: html
+.. |faucet| raw:: html
 
-   <a href="http://faucet-0.10.0.x-01.symboldev.network/" target="_blank">faucet</a>
-
-.. |faucet-2| raw:: html
-
-   <a href="http://faucet-0.10.0.x-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet.testnet.symboldev.network/" target="_blank">faucet</a>
 
 .. |symbol-bootstrap| raw:: html
 

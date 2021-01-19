@@ -47,7 +47,7 @@ If you get an error or the version returned does not match v12.X, visit |node-js
     Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
     Select an import type: » PrivateKey
-    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.0.10.0.x.symboldev.network:3000/
+    Enter Symbol Node URL. (Example: http://localhost:3000): http://api-01.us-east-1.testnet.symboldev.network:3000/
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 
@@ -89,8 +89,6 @@ Now that you have created your first account, let's request |networkcurrency| un
 .. figure:: ../resources/images/screenshots/faucet.png
     :align: center
 
-.. note:: If the default faucet is empty, try this other |faucet-2|.
-
 After the transaction gets confirmed, check if your account has received |networkcurrency| using the command-line tool.
 
 .. code-block:: bash
@@ -104,7 +102,7 @@ After the transaction gets confirmed, check if your account has received |networ
     │ 5E62990DCAC5BE8A │ 750.0           │ 750000000       | Never             │
     └──────────────────┴─────────────────┴─────────────────┴───────────────────┘
 
-.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries out. If you don’t need your test |networkcurrency| units anymore, please send them back to the faucet's account ``TCFV4T-KV6RMN-7QPR3P-TBXDWI-JCLXDV-KSIPEE-UAQ``.
+.. note:: The faucet has a limited amount of |networkcurrency| and must be replenished before it dries out. If you don’t need your test |networkcurrency| units anymore, please send them back to the account indicated in the faucet's page.
 
 .. _setup-development-environment:
 
@@ -211,12 +209,8 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |network-list| raw:: html
 
-   <a href="http://explorer-0.10.0.x-01.symboldev.network/nodes" target="_blank">this list</a>
+   <a href="http://explorer.testnet.symboldev.network/nodes" target="_blank">this list</a>
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet-0.10.0.x-01.symboldev.network/" target="_blank">Navigate here</a>
-
-.. |faucet-2| raw:: html
-
-   <a href="http://faucet-0.10.0.x-02.symboldev.network/" target="_blank">alternative faucet</a>
+   <a href="http://faucet.testnet.symboldev.network/" target="_blank">Navigate here</a>

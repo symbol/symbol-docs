@@ -56,7 +56,7 @@ const signedTransaction = account.sign(
 /* end block 02 */
 /* start block 03 */
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp.announce(signedTransaction).subscribe(

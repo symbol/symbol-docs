@@ -24,7 +24,7 @@ const mosaicIdHex = '71415AC19C818709';
 const mosaicId = new MosaicId(mosaicIdHex);
 
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const mosaicHttp = repositoryFactory.createMosaicRepository();
 

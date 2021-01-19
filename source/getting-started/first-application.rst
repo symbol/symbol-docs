@@ -106,7 +106,7 @@ If your row after "Balance Information" is empty, follow the :doc:`previous guid
 
 .. code-block:: bash
 
-    symbol-cli account generate --network TEST_NET --save --url http://api-01.us-east-1.0.10.0.x.symboldev.network:3000 --profile customer
+    symbol-cli account generate --network TEST_NET --save --url http://api-01.us-east-1.testnet.symboldev.network:3000 --profile customer
 
     New Account
 

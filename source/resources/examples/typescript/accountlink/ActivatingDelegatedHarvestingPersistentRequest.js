@@ -50,7 +50,7 @@ const persistentDelegationRequestTransaction = symbol_sdk_1.PersistentDelegation
 const networkGenerationHash =
   '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';
 // Replace with any node in the network
-const nodeUrl = 'http://api-01.ap-northeast-1.0.10.0.x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const signedTransaction = announcerAccount.sign(

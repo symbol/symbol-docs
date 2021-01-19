@@ -19,7 +19,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 const symbol_sdk_1 = require('symbol-sdk');
 /* start block 01 */
-const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const repositoryHttp = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const networkHttp = repositoryHttp.createNetworkRepository();
 networkHttp.getRentalFees().subscribe((rentalFees) => {

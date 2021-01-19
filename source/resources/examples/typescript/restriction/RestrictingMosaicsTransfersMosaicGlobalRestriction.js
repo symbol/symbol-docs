@@ -55,7 +55,7 @@ const networkGenerationHash =
   '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
 const signedTransaction = account.sign(transaction, networkGenerationHash);
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.0.10.0.x.symboldev.network:3000';
+const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 transactionHttp.announce(signedTransaction).subscribe(
