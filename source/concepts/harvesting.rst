@@ -67,12 +67,9 @@ There are different kinds of harvesting available, depending on whether or not t
 Local harvesting
 ================
 
-This is the **simplest to set up**, and the **most insecure method**. It requires changing a node's configuration so it is only available to node owners. It is enabled by setting the following properties in the :properties:`config-harvesting.properties <config-harvesting.properties>` file:
+This is the **simplest to set up**, and the **most insecure method**. It requires changing a node's configuration, so it is only available to node owners. It is enabled by filling-in the appropriate harvesting properties in the :ref:`node configuration <node-properties-harvesting-configuration>` file.
 
-.. raw:: html
-    :file: ../_static/config-harvesting.properties.html
-
-As it can be seen, the harvester account's **private key** is stored in the node configuration, since it is needed to sign off created blocks. This is a **security concern** since this account contains funds and the configuration file might be accessed by uninvited actors if the node is compromised. Funded accounts' **private keys should always be stored offline**.
+As it can be seen, the harvester account's **private key** is stored in the ``harvesterSigningPrivateKey`` property, since it is needed to sign off created blocks. This is a **security concern** since this account contains funds and the configuration file might be accessed by uninvited actors if the node is compromised. Funded accounts' **private keys should always be stored offline**.
 
 Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-harvesting>` or :ref:`delegated <delegated-harvesting>` harvesting are recommended instead.
 
