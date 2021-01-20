@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-18 16:34+0000\n"
+"POT-Creation-Date: 2021-01-20 10:22+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -165,191 +165,158 @@ msgid ""
 msgstr ""
 "受益者の割合の計算は、ネットワークシンク計算後に行われます。ノードオペレーターが受取人またはネットワーク手数料シンクを定義しない場合、すべての報酬はブロック署名者に送られます。"
 
+#: ../../source/concepts/harvesting.rst:93
+msgid "Harvesting types"
+msgstr "ハーベスティングタイプ"
+
 #: ../../source/concepts/harvesting.rst:95
-#: ../../source/concepts/harvesting.rst:1
+msgid ""
+"There are different kinds of harvesting available, depending on whether or "
+"not the harvester account owns the node and the amount of desired security: "
+":ref:`Local <local-harvesting>`, :ref:`Remote <remote-harvesting>` and "
+":ref:`Delegated <delegated-harvesting>`."
+msgstr ""
+"ハーベスタアカウントがノードを所有しているか、および要求するセキュリティレベルに応じて、さまざまな種類のハーベスティングを利用できます。: "
+":ref:`ローカル <local-harvesting>`, :ref:`リモート <remote-harvesting>` そして "
+":ref:`デリゲート <delegated-harvesting>` です。"
+
+#: ../../source/concepts/harvesting.rst:101
 msgid "Local harvesting"
 msgstr "ローカルハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:97
-msgid ""
-"Any :ref:`eligible account <account_eligibility>` can harvest new blocks by "
-"running a node. To harvest locally, a node must provide the following "
-"properties in the :properties:`config-harvesting.properties <config-"
-"harvesting.properties>` file:"
-msgstr ""
-":ref:`適格アカウント <account_eligibility>` "
-"はノードを運用することで、新しいブロックをハーベストできます。ローカルハーベストを行うには :properties:`config-"
-"harvesting.properties <config-harvesting.properties>` ファイルに次のプロパティを提供します:"
-
 #: ../../source/concepts/harvesting.rst:103
 msgid ""
-"As it can be seen, the harvester account's **private key** must be stored in"
-" the node configuration, since it will be used to sign off created blocks. "
-"This is a **security concern** since this account contains funds (at the "
-"very least, the collected :ref:`harvesting fees <harvesting-rewards>`), and "
-"funded accounts' **private keys should always be stored offline**."
+"This is the **simplest to set up**, and the **most insecure method**. It "
+"requires changing a node's configuration, so it is only available to node "
+"owners. It is enabled by filling-in the appropriate harvesting properties in"
+" the :ref:`node configuration <node-properties-harvesting-configuration>` "
+"file."
 msgstr ""
-"ご覧のとおり、ハーベスタアカウントの **秘密鍵** は作成されたブロックに署名するために、ノードの構成に保存する必要があります。このアカウントには資産"
-" (少なくとも獲得した :ref:`ハーベスト手数料 <harvesting-rewards>`) を保有しており、資産を提供されたアカウントの "
-"**秘密鍵は常にオフラインで保存するべきである** ため、これは **セキュリティ上の懸念** となります。"
+"これは **最も簡単なセットアップ手順** ですが **最も安全ではない方法** "
+"です。ノード設定を変更する必要があるため、ノード所有者のみが利用できます。これは :ref:`ノード構成 <node-properties-"
+"harvesting-configuration>` ファイルにハーベスティングプロパティを適切に入力することで有効になります。"
 
 #: ../../source/concepts/harvesting.rst:105
 msgid ""
-"To avoid storing private keys on a node which is available online and "
-"therefore susceptible to attack, use :ref:`delegated harvesting <delegated-"
-"harvesting>`."
+"As it can be seen, the harvester account's **private key** is stored in the "
+"``harvesterSigningPrivateKey`` property, since it is needed to sign off "
+"created blocks. This is a **security concern** since this account contains "
+"funds and the configuration file might be accessed by uninvited actors if "
+"the node is compromised. Funded accounts' **private keys should always be "
+"stored offline**."
 msgstr ""
-"オンラインで攻撃を受けやすいノードに秘密鍵を保持しないようにするためには :ref:`デリゲートハーベスティング <delegated-"
-"harvesting>` を使用します。"
+"ご覧の通り、作成されたブロックに署名するために  ``harvesterSigningPrivateKey`` に指定されたハーベスタアカウントの "
+"**秘密鍵** が要求されます。このアカウントには資産が含まれており、ノードが侵害された場合、侵入者が設定ファイルにアクセスする可能性という "
+"**セキュリティ上の懸念** が存在します。資産が提供されたアカウントの **秘密鍵は常にオフラインで保存する必要があります** 。"
 
-#: ../../source/concepts/harvesting.rst:111
-#: ../../source/concepts/harvesting.rst:1
-msgid "Delegated harvesting"
-msgstr "デリゲートハーベスティング"
+#: ../../source/concepts/harvesting.rst:107
+msgid ""
+"Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-"
+"harvesting>` or :ref:`delegated <delegated-harvesting>` harvesting are "
+"recommended instead."
+msgstr ""
+"そのため **この方法はあまり良くありません** 。 :ref:`リモート <remote-harvesting>` または :ref:`デリゲート "
+"<delegated-harvesting>` ハーベスティングを推奨します。"
 
 #: ../../source/concepts/harvesting.rst:113
-msgid ""
-"Delegated harvesting allows using the :ref:`importance score <importance-"
-"calculation>` of an account to create new blocks and receive rewards without"
-" exposing the account's private key on a node."
-msgstr ""
-"デリゲートハーベストにより、アカウントの :ref:`インポータンススコア <importance-calculation>` "
-"を使用して、ノード上にアカウントの秘密鍵を晒すことなく、新しいブロックを作成して報酬を受け取ることができます。"
+msgid "Remote harvesting"
+msgstr "リモートハーベスティング"
 
 #: ../../source/concepts/harvesting.rst:115
 msgid ""
-"An :ref:`eligible account <account_eligibility>` can delegate its importance"
-" score to a **remote account** which acts as a proxy. The remote account "
-"signs off created blocks, sharing its **private key** with the a node, but "
-"**harvesting fees are sent to the original account**."
+"Node owners can use a **remote account** to **act as proxy** and sign off "
+"the newly created blocks, while harvesting fees are still collected by their"
+" main account. **The remote account has no funds**, so the fact that its "
+"private key is exposed in the configuration file is not a concern. The "
+":ref:`importance score <importance-calculation>` is still based on the main "
+"account's funds, and the remote account cannot transfer it."
 msgstr ""
-":ref:`適格なアカウント <account_eligibility>` は、そのインポータンススコアをプロキシとして機能する "
-"**リモートアカウント** に委任します。リモートアカウントは作成されたブロックに署名し、その **秘密鍵** をノードと共有しますが、 "
-"**ハーベスティング手数料は元のアカウント** に送られます。"
+"ノード所有者は **プロキシとして機能** する **リモートアカウント** "
+"を使用して、新しく作成されたブロックに署名しますが、ハーベスト手数料は引き続きメインアカウントによって徴収されます。 "
+"**リモートアカウントには資産がない** ので、その秘密鍵が設定ファイルに記述されていることは問題になりません。"
 
 #: ../../source/concepts/harvesting.rst:117
 msgid ""
-"With delegated harvesting, an account without a node can still collect "
-"harvesting fees, and a node with a low importance score can still be "
-"selected as a harvester, thanks to the delegated importance from the first "
-"account. **It is a beneficial agreement to both parties.**"
+"Remote harvesting is enabled just like :ref:`local harvesting <local-"
+"harvesting>` but using the remote account's private key in the "
+"``harvesterSigningPrivateKey`` property and announcing an "
+":ref:`AccountKeyLink transaction <account-key-link-transaction>` that links "
+"the remote and main accounts."
 msgstr ""
-"デリゲートハーベスティングを使用すると、ノードが無くてもアカウントでハーベスティング手数料をハーベストでき、最初のアカウントから委任されたインポータンスによって、インポータンススコアの低いノードをハーベスタとして選出できます。"
-" **これは両方の当事者にとって有益です** 。"
+"リモートハーベスティングは :ref:`ローカルハーベスティング <local-harvesting>` と同様に有効になりますが、 "
+"``harvesterSigningPrivateKey`` "
+"プロパティに設定されたリモートアカウントの秘密鍵を使用し、リモートアカウントとメインアカウントをリンクする "
+":ref:`AccountKeyLinkトランザクション <account-key-link-transaction>` をアナウンスします。"
 
 #: ../../source/concepts/harvesting.rst:119
-msgid ""
-"Due to its inherently higher security, node owners may prefer using "
-"delegated harvesting over local harvesting and this is indeed the "
-"recommended setup."
-msgstr ""
-"本質的に高いセキュリティのため、ノード所有者はローカルハーベスティングよりもデリゲートハーベスティングを使用するかもしれません。これは実際に推奨する設定です。"
-
-#: ../../source/concepts/harvesting.rst:121
-msgid ""
-"Security-wise, sharing a proxy private key involves **minimal risk** since:"
-msgstr "セキュリティに関して、プロキシ秘密鍵を共有しても **最小限のリスク** で済みます:"
-
-#: ../../source/concepts/harvesting.rst:123
-msgid "The remote account has **no funds**."
-msgstr "リモートアカウントに **残高はありません** 。"
+msgid "This is the **recommended method** for node owners."
+msgstr "これはノード所有者に **推奨される方法** です。"
 
 #: ../../source/concepts/harvesting.rst:125
-msgid ""
-"The remote account **can't transfer the delegated importance score** to a "
-"third account."
-msgstr "リモートアカウントは、3 つめのアカウントに **委任インポータンススコアを移すことはできません** 。"
+msgid "Delegated harvesting"
+msgstr "デリゲートハーベスティング"
 
 #: ../../source/concepts/harvesting.rst:127
 msgid ""
-"Keep in mind that remote harvesters may not receive the entire reward if:"
-msgstr "次の場合、リモートハーベスタは報酬全体を受け取れない可能性があることに注意してください:"
+":ref:`Eligible accounts <account_eligibility>` **not owning a node** can "
+"still benefit from harvesting by **requesting a node to harvest for them** "
+"and share the rewards. In return, the account delegates its :ref:`importance"
+" score <importance-calculation>` to the node so it has more chances to be "
+"selected as a harvester. **It is a beneficial agreement to both parties.**"
+msgstr ""
+"**ノードを所有していない** :ref:`適格なアカウント <account_eligibility>` は "
+"**適格アカウントのハーベスティングをノードにリクエスト** "
+"することで、ハーベスティングの恩恵を受け、報酬を共有できます。その見返りとして、アカウントはその :ref:`インポータンススコア "
+"<importance-calculation>` をノードにデリゲートするため、ハーベスタに選出される可能性が高くなります。 "
+"**これは両当事者にとって有益** なことです。"
 
 #: ../../source/concepts/harvesting.rst:129
+msgid ""
+"Delegated harvesting is enabled similarly to :ref:`remote harvesting "
+"<remote-harvesting>` but, since the account has no access to the node's "
+"configuration, it announces a :ref:`PersistentDelegationRequest transaction "
+"<persistent-delegation-request-transaction>` instead. Upon receiving the "
+"request, **the node may or may not grant it**, depending on its "
+"configuration and the rest of requests received."
+msgstr ""
+"デリゲートハーベスティングは :ref:`リモートハーベスティング <remote-harvesting>` "
+"と同じように有効になりますが、アカウントはノード設定にアクセスできないため、代わりに :ref:`PersistentDelegationRequest"
+" トランザクション <persistent-delegation-request-transaction>` "
+"をアナウンスします。リクエストを受信すると、その設定と残りのリクエスト数に応じて **ノードはリクエストを許可する場合と許可しない場合があります** 。"
+
+#: ../../source/concepts/harvesting.rst:131
+msgid ""
+"As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account "
+"is used so the main account's private key is never put at risk."
+msgstr ""
+":ref:`リモートハーベスティング <remote-harvesting>` "
+"と同様に、プロキシリモートアカウントが使用されるため、メインアカウントの秘密鍵が危険に晒されることはありません。"
+
+#: ../../source/concepts/harvesting.rst:133
+msgid "Keep in mind that the account may not receive the entire reward if:"
+msgstr "次の場合、このアカウントは報酬の全てを受け取れない可能性があることに注意してください:"
+
+#: ../../source/concepts/harvesting.rst:135
 msgid "The :ref:`network fee <harvesting-rewards>` is greater than 0."
 msgstr ":ref:`ネットワーク手数料 <harvesting-rewards>` は 0 よりも大きい。"
 
-#: ../../source/concepts/harvesting.rst:131
+#: ../../source/concepts/harvesting.rst:137
 msgid ""
 "The selected node has defined a :ref:`beneficiary account <harvesting-"
 "rewards>`."
 msgstr "選択されれノードは :ref:`受益者アカウント <harvesting-rewards>` を定義しています"
 
-#: ../../source/concepts/harvesting.rst:133
+#: ../../source/concepts/harvesting.rst:139
 msgid ""
 "See the :doc:`Activating Delegated Harvesting <../guides/accountlink"
 "/activating-delegated-harvesting>` guide for step-by-step instructions on "
-"how to activate this feature."
+"how to activate this feature and check if the delegation request has been "
+"granted."
 msgstr ""
-"この機能を有効にするステップ・バイ・ステップの手順 :doc:`リモートハーベスティングの有効化 <../guides/accountlink/activating-delegated-harvesting>` ガイドを参照してください。\n"
-"guide for step-by-step instructions on how to activate this feature."
+"この機能を有効にするステップ・バイ・ステップの手順 :doc:`リモートハーベスティングの有効化 <../guides/accountlink"
+"/activating-delegated-harvesting>` ガイドを参照して、デリゲートリクエストが許可されているかを確認します。"
 
-#: ../../source/concepts/harvesting.rst:137
-msgid "Comparison"
-msgstr "比較"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "**Setup**"
-msgstr "**セットアップ**"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid ""
-"Install a `catapult-server <https://github.com/nemtech/catapult-server>`_ "
-"node."
-msgstr ""
-"`catapult-server <https://github.com/nemtech/catapult-server>`_ ノードのインストール・"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid ""
-":doc:`Activate remote harvesting <../guides/accountlink/activating-"
-"delegated-harvesting>`."
-msgstr ""
-":doc:`リモートハーベスティングの有効化 <../guides/accountlink/activating-delegated-"
-"harvesting>`."
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "**Cost**"
-msgstr "**コスト**"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid ""
-"Node maintenance (electricity, VPN, ...) + :ref:`VrfKeyLinkTransaction <vrf-"
-"key-link-transaction>` announcement fees."
-msgstr ""
-"ノードのメンテナンス(電気、VPN...) + :ref:`VrfKeyLinkTransaction <vrf-key-link-"
-"transaction>` アナウンス手数料"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Announcement fees for **4** transactions."
-msgstr "**4** つのトランザクションのアナウンス手数料."
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "**Security**"
-msgstr "**セキュリティ**"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "The node stores the main account's private key."
-msgstr "ノードはメインアカウントの秘密鍵を保存します。"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "The node stores a proxy account's private key."
-msgstr "ノードはプロキシアカウントの秘密鍵を保存します。"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "**Reward**"
-msgstr "**報酬**"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid ""
-"Total reward. The node owner can share part of it with a beneficiary "
-"account."
-msgstr "合計報酬。ノード所有者はその一部を受益アカウントと共有できます。"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Total reward minus any beneficiary share set on the node."
-msgstr "合計報酬からノードに設定された受益者分配を差し引いたもの。"
-
-#: ../../source/concepts/harvesting.rst:151
+#: ../../source/concepts/harvesting.rst:143
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -370,9 +337,9 @@ msgstr "アカウントを VRF 公開鍵にリンクします。ハーベスト�
 #: ../../source/concepts/harvesting.rst:1
 msgid ""
 "Delegate the account importance to a proxy account. Required for all "
-"accounts willing to activate delegated harvesting."
+"accounts willing to activate remote or delegated harvesting."
 msgstr ""
-"アカウントのインポータンスをプロキシアカウントに委任します。デリゲートハーベスティングをアクティブ化したい、すべてのアカウントに必要なことです。"
+"アカウントのインポータンスをプロキシアカウントに委任します。リモートまたはデリゲートハーベスティングをアクティブ化しようとする、すべてのアカウントに必要なことです。"
 
 #: ../../source/concepts/harvesting.rst:1
 msgid ""
@@ -383,13 +350,18 @@ msgstr ""
 "が使用する公開鍵とリンクしてセッションを作成します。デリゲートハーベスティングをアクティブ化することをいとわない、すべてのアカウントに必要です。"
 
 #: ../../source/concepts/harvesting.rst:1
-msgid "Request a node to add an account as a delegated harvester."
-msgstr "デリゲートハーベスタとしてアカウントを追加するようにノードへリクエストします。"
+msgid ""
+"Request a node to add an account as a delegated harvester. This is actually "
+"a :ref:`TransferTransaction <transfer-transaction>` with a special message "
+"type."
+msgstr ""
+"デリゲートハーベスターとしてアカウントを追加するためにノードへ要求します。これは特別なメッセージを持たせた "
+":ref:`TransferTransaction <transfer-transaction>` です。"
 
-#: ../../source/concepts/harvesting.rst:165
+#: ../../source/concepts/harvesting.rst:157
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/harvesting.rst:175
+#: ../../source/concepts/harvesting.rst:167
 msgid "Continue: :doc:`Inflation <inflation>`."
 msgstr "次項: :doc:`インフレーション <inflation>`"

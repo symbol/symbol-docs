@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-18 16:34+0000\n"
+"POT-Creation-Date: 2021-01-20 10:22+0000\n"
 "PO-Revision-Date: 2019-12-17 09:31+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -195,11 +195,11 @@ msgstr ""
 
 #: ../../source/guides/network/running-a-test-net-node.rst:151
 msgid ""
-"Go to |faucet-1| (or |faucet-2|), insert the ``address`` of your node's "
-"account and the amount of |networkcurrency| you need and click on CLAIM."
+"Go to |faucet|, insert the ``address`` of your node's account and the amount"
+" of |networkcurrency| you need and click on CLAIM."
 msgstr ""
-"|faucet-1| (または |faucet-2| ) に移動して、ノードのアカウントの ``アドレス`` と必要なの量 "
-"|networkcurrency| を入力し、CLAIM をクリックします。"
+"|faucet| に移動して、ノードのアカウントの ``アドレス`` と必要な量 |networkcurrency| を入力し、CLAIM "
+"をクリックします。"
 
 #: ../../source/guides/network/running-a-test-net-node.rst:153
 msgid ""
@@ -380,11 +380,9 @@ msgstr ":ref:`コマンドラインインターフェイス <wallet-cli>`: よ�
 
 #: ../../source/guides/network/running-a-test-net-node.rst:221
 msgid ""
-"The |codename| |faucet-1|: Receive |networkcurrency| units to test "
-"|codename|'s services. If the default faucet is empty, try the |faucet-2|."
-msgstr ""
-"|codename| |faucet-1|: テスト |codename| サービスへ |networkcurrency| "
-"を受信します。デフォルトフォーセットが空の場合は |faucet-2| を試してください。"
+"The |codename| |faucet|: Receive |networkcurrency| units to test "
+"|codename|'s services."
+msgstr "|codename| |faucet| : テスト |networkcurrency| を |codename| サービスが受け取ります。"
 
 #: ../../source/guides/network/running-a-test-net-node.rst:222
 msgid ""

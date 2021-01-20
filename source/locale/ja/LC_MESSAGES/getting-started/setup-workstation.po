@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-27 14:34+0000\n"
+"POT-Creation-Date: 2021-01-20 10:22+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -168,32 +168,27 @@ msgstr ""
 " |faucet| で受信したい |networkcurrency| の量とアドレスを指定して \"**CLAIM!**\" をクリックします。"
 
 #: ../../source/getting-started/setup-workstation.rst:125
-msgid "If the default faucet is empty, try this other |faucet-2|."
-msgstr "デフォルトフォーセットが枯渇している場合は |faucet-2| を試してください。"
-
-#: ../../source/getting-started/setup-workstation.rst:127
 msgid ""
 "After the transaction gets confirmed, check if your account has received "
 "|networkcurrency| using the command-line tool."
 msgstr ""
 "トランザクションが承認されたら、あなたのアカウントが |networkcurrency| を受信していることをコマンドラインツールを使用して確認します。"
 
-#: ../../source/getting-started/setup-workstation.rst:140
+#: ../../source/getting-started/setup-workstation.rst:138
 msgid ""
 "The faucet has a limited amount of |networkcurrency| and must be replenished"
 " before it dries out. If you don’t need your test |networkcurrency| units "
-"anymore, please send them back to the faucet's account ``TCFV4T-KV6RMN-"
-"7QPR3P-TBXDWI-JCLXDV-KSIPEE-UAQ``."
+"anymore, please send them back to the account indicated in the faucet's "
+"page."
 msgstr ""
 "フォーセットの |networkcurrency| の量が限られているため、不足する前に補充する必要があります。 |networkcurrency| "
-"が必要なくなった場合はフォーセットアカウントの ``TCFV4T-KV6RMN-7QPR3P-TBXDWI-JCLXDV-KSIPEE-UAQ`` "
-"へ送り返してください。"
+"が必要なくなった場合は、フォーセットのページに表示されているアドレスへ送り返してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:146
+#: ../../source/getting-started/setup-workstation.rst:144
 msgid "Creating a project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:148
+#: ../../source/getting-started/setup-workstation.rst:146
 msgid ""
 "Now that you have your account filled with |networkcurrency| units, it is "
 "time to **choose a programming language**. Pick the one you feel most "
@@ -202,7 +197,7 @@ msgstr ""
 "アカウントに |networkcurrency| 単位が入力されたので **プログラミング言語を選択** "
 "します。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
 
-#: ../../source/getting-started/setup-workstation.rst:151
+#: ../../source/getting-started/setup-workstation.rst:149
 msgid ""
 "Then, **create a folder for your new project** and run the instructions for "
 "the selected language. If none of the languages fits your project, you can "
@@ -212,55 +207,55 @@ msgstr ""
 "。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  :doc:`REST ゲートウェイ "
 "<../api>` を使用して直接ブロックチェーンに問い合わせできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:158
+#: ../../source/getting-started/setup-workstation.rst:156
 msgid "Symbol SDK require Node.js 12 LTS to execute."
 msgstr "Symbol SDK は Node.js 12 LTS を実行に必要とします。"
 
-#: ../../source/getting-started/setup-workstation.rst:160
-#: ../../source/getting-started/setup-workstation.rst:189
+#: ../../source/getting-started/setup-workstation.rst:158
+#: ../../source/getting-started/setup-workstation.rst:187
 msgid "Create a ``package.json`` file."
 msgstr "``package.json`` ファイルを作成します。"
 
-#: ../../source/getting-started/setup-workstation.rst:166
-#: ../../source/getting-started/setup-workstation.rst:195
+#: ../../source/getting-started/setup-workstation.rst:164
+#: ../../source/getting-started/setup-workstation.rst:193
 msgid "Install |sdk| and RxJS library."
 msgstr "|sdk| と RxJS ライブラリのインストール。"
 
-#: ../../source/getting-started/setup-workstation.rst:172
+#: ../../source/getting-started/setup-workstation.rst:170
 msgid "Install globally TypeScript dependency:"
 msgstr "TypeScript の依存をグローバルにインストールします:"
 
-#: ../../source/getting-started/setup-workstation.rst:179
+#: ../../source/getting-started/setup-workstation.rst:177
 msgid "Install `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ をインストールすると TypeScript ファイルを node で実行できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:187
+#: ../../source/getting-started/setup-workstation.rst:185
 msgid "Symbol SDK requires Node.js 12 LTS to execute."
 msgstr "Symbol SDK は Node.js 12 LTS を実行に必要とします。"
 
-#: ../../source/getting-started/setup-workstation.rst:203
+#: ../../source/getting-started/setup-workstation.rst:201
 msgid "Symbol SDK requires JDK 8 to execute."
 msgstr "Symbol SDK は JDK 8 を実行に必要とします。"
 
-#: ../../source/getting-started/setup-workstation.rst:205
+#: ../../source/getting-started/setup-workstation.rst:203
 msgid ""
 "Open a new Java `gradle`_ project.  Use your favourite IDE or create a "
 "project from the command line."
 msgstr ""
 "新しく Java `gradle`_ プロジェクトを開いてください。お好みの IDE を使用するか、コマンドラインからプロジェクトを作成してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:211
+#: ../../source/getting-started/setup-workstation.rst:209
 msgid "Edit ``build.gradle`` to use Maven central repository."
 msgstr "Maven セントラルリポジトリを使うため ``build.gradle`` を編集します。"
 
-#: ../../source/getting-started/setup-workstation.rst:219
+#: ../../source/getting-started/setup-workstation.rst:217
 msgid "Add ``symbol-sdk`` as a dependency."
 msgstr "``symbol-sdk`` を依存として追加します。"
 
-#: ../../source/getting-started/setup-workstation.rst:227
+#: ../../source/getting-started/setup-workstation.rst:225
 msgid "Execute ``gradle build`` and ``gradle run`` to run your program."
 msgstr "プログラムを開始するために ``gradle build`` と ``gradle run`` を実行します。"
 
-#: ../../source/getting-started/setup-workstation.rst:229
+#: ../../source/getting-started/setup-workstation.rst:227
 msgid "Continue: :doc:`Writing your first application <first-application>`."
 msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>`"
