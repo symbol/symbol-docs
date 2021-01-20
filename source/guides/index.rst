@@ -27,14 +27,6 @@ To see the guides grouped by **tags** instead, see the `complete guides catalog 
 
 .. rst-class:: h3
 
-:doc:`accountlink/index`
-
-.. include:: accountlink/index.rst
-    :start-line: 4
-    :end-line: 5
-
-.. rst-class:: h3
-
 :doc:`aggregate/index`
 
 .. include:: aggregate/index.rst
@@ -46,6 +38,14 @@ To see the guides grouped by **tags** instead, see the `complete guides catalog 
 :doc:`blockchain/index`
 
 .. include:: blockchain/index.rst
+    :start-line: 4
+    :end-line: 5
+
+.. rst-class:: h3
+
+:doc:`harvesting/index`
+
+.. include:: harvesting/index.rst
     :start-line: 4
     :end-line: 5
 
@@ -133,9 +133,9 @@ To see the guides grouped by **tags** instead, see the `complete guides catalog 
     :hidden:
 
     account/index
-    accountlink/index
     aggregate/index
     blockchain/index
+    harvesting/index
     metadata/index
     migration/index
     monitor/index

@@ -380,15 +380,15 @@ source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
 source_lang = en
 type = PO
 
-[symboldocs.guides--accountlink--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/index.po
-source_file = build/gettext/guides/accountlink/index.pot
+[symboldocs.guides--harvesting--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/index.po
+source_file = build/gettext/guides/harvesting/index.pot
 source_lang = en
 type = PO
 
-[symboldocs.guides--accountlink--activating-delegated-harvesting]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/accountlink/activating-delegated-harvesting.po
-source_file = build/gettext/guides/accountlink/activating-delegated-harvesting.pot
+[symboldocs.guides--harvesting--activating-delegated-harvesting]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting.po
+source_file = build/gettext/guides/harvesting/activating-delegated-harvesting.pot
 source_lang = en
 type = PO
 
