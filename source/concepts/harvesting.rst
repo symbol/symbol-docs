@@ -55,63 +55,58 @@ The sharing ratios for the beneficiary and network sink accounts are :ref:`confi
 
 .. note:: The calculation of the beneficiary percentage will occur after the network sink calculation. When the node operator does not define a beneficiary or a Network Fee Sink, all the rewards go to the block signer.
 
+****************
+Harvesting types
+****************
+
+There are different kinds of harvesting available, depending on whether or not the harvester account owns the node and the amount of desired security: :ref:`Local <local-harvesting>`, :ref:`Remote <remote-harvesting>` and :ref:`Delegated <delegated-harvesting>`.
+
 .. _local-harvesting:
 
-****************
+================
 Local harvesting
-****************
+================
 
-Any :ref:`eligible account <account_eligibility>` can harvest new blocks by running a node.
-To harvest locally, a node must provide the following properties in the :properties:`config-harvesting.properties <config-harvesting.properties>` file:
+This is the **simplest to set up**, and the **most insecure method**. It requires changing a node's configuration so it is only available to node owners. It is enabled by setting the following properties in the :properties:`config-harvesting.properties <config-harvesting.properties>` file:
 
 .. raw:: html
     :file: ../_static/config-harvesting.properties.html
 
-As it can be seen, the harvester account's **private key** must be stored in the node configuration, since it will be used to sign off created blocks. This is a **security concern** since this account contains funds (at the very least, the collected :ref:`harvesting fees <harvesting-rewards>`), and funded accounts' **private keys should always be stored offline**.
+As it can be seen, the harvester account's **private key** is stored in the node configuration, since it is needed to sign off created blocks. This is a **security concern** since this account contains funds and the configuration file might be accessed by uninvited actors if the node is compromised. Funded accounts' **private keys should always be stored offline**.
 
-To avoid storing private keys on a node which is available online and therefore susceptible to attack, use :ref:`delegated harvesting <delegated-harvesting>`.
+Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-harvesting>` or :ref:`delegated <delegated-harvesting>` harvesting are recommended instead.
+
+.. _remote-harvesting:
+
+=================
+Remote harvesting
+=================
+
+Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account's funds, and the remote account cannot transfer it.
+
+Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>` that links the remote and main accounts.
+
+This is the **recommended method** for node owners.
 
 .. _delegated-harvesting:
 
-********************
+====================
 Delegated harvesting
-********************
+====================
 
-Delegated harvesting allows using the :ref:`importance score <importance-calculation>` of an account to create new blocks and receive rewards without exposing the account's private key on a node.
+:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them** and share the rewards. In return, the account delegates its :ref:`importance score <importance-calculation>` to the node so it has more chances to be selected as a harvester. **It is a beneficial agreement to both parties.**
 
-An :ref:`eligible account <account_eligibility>` can delegate its importance score to a **remote account** which acts as a proxy. The remote account signs off created blocks, sharing its **private key** with the a node, but **harvesting fees are sent to the original account**.
+Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
 
-With delegated harvesting, an account without a node can still collect harvesting fees, and a node with a low importance score can still be selected as a harvester, thanks to the delegated importance from the first account. **It is a beneficial agreement to both parties.**
+As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
 
-Due to its inherently higher security, node owners may prefer using delegated harvesting over local harvesting and this is indeed the recommended setup.
-
-Security-wise, sharing a proxy private key involves **minimal risk** since:
-
-* The remote account has **no funds**.
-
-* The remote account **can't transfer the delegated importance score** to a third account.
-
-Keep in mind that remote harvesters may not receive the entire reward if:
+Keep in mind that the account may not receive the entire reward if:
 
 *  The :ref:`network fee <harvesting-rewards>` is greater than 0.
 
 *  The selected node has defined a :ref:`beneficiary account <harvesting-rewards>`.
 
-.. note:: See the :doc:`Activating Delegated Harvesting <../guides/accountlink/activating-delegated-harvesting>` guide for step-by-step instructions on how to activate this feature.
-
-**********
-Comparison
-**********
-
-.. csv-table::
-    :header: "", "Local harvesting", "Delegated harvesting"
-    :delim: ;
-    :widths: 15, 43, 42
-
-    **Setup** ; Install a `catapult-server <https://github.com/nemtech/catapult-server>`_ node.; :doc:`Activate remote harvesting <../guides/accountlink/activating-delegated-harvesting>`.
-    **Cost** ; Node maintenance (electricity, VPN, ...) + :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` announcement fees.; Announcement fees for **4** transactions.
-    **Security**; The node stores the main account's private key.;  The node stores a proxy account's private key.
-    **Reward**; Total reward. The node owner can share part of it with a beneficiary account.; Total reward minus any beneficiary share set on the node.
+See the :doc:`Activating Delegated Harvesting <../guides/accountlink/activating-delegated-harvesting>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
 
 ********************
 Related transactions
@@ -123,9 +118,9 @@ Related transactions
     :delim: ;
 
     0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
-    0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
+    0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate remote or delegated harvesting.
     0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
-    ; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a delegated harvester.
+    0x4154; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a delegated harvester. This is actually a :ref:`TransferTransaction <transfer-transaction>` with a special message type.
 
 ******
 Guides
