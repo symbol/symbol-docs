@@ -17,10 +17,9 @@ Eligibility criteria
 The :ref:`importance score <importance-calculation>` determines the probability that an account is chosen to harvest the next block among all the accounts which have harvesting enabled.
 
 |codename|'s public network defines that an account needs to hold at least **10,000** :ref:`harvesting mosaics <harvesting-mosaic>` to have an importance score greater than zero.
-Eligible accounts can use their importance score to create new blocks either by :ref:`running a node <local-harvesting>` or :ref:`delegating harvesting <delegated-harvesting>` to another node.
+Eligible accounts can use their importance score to create new blocks either by :ref:`running a node <local-harvesting>` or enabling :ref:`delegated harvesting <delegated-harvesting>`.
 
-Regardless of the method chosen, **any account willing to activate harvesting must first announce a valid** :ref:`VrfKeyTransaction <vrf-key-link-transaction>`.
-The VRF transaction links the harvester account with a second key pair to randomize block production and leader selection.
+Regardless of the method chosen, **any account willing to activate harvesting must first announce a valid** :ref:`VrfKey transaction <vrf-key-link-transaction>`. This key is required by |codename| to randomize harvester selection.
 
 .. _harvesting-mosaic:
 
@@ -91,17 +90,15 @@ This is the **recommended method** for node owners.
 Delegated harvesting
 ====================
 
-:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them** and share the rewards. In return, the account delegates its :ref:`importance score <importance-calculation>` to the node so it has more chances to be selected as a harvester. **It is a beneficial agreement to both parties.**
+:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them** and share the rewards. In return, the account lends its :ref:`importance score <importance-calculation>` to the node so it has more chances to be selected as the next harvester. **It is a beneficial agreement to both parties.**
+
+It is then said that the node **delegates harvesting** to the requesting account.
 
 Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
 
-Keep in mind that the account may not receive the entire reward if:
-
-*  The :ref:`network fee <harvesting-rewards>` is greater than 0.
-
-*  The selected node has defined a :ref:`beneficiary account <harvesting-rewards>`.
+All fees derived from harvesting a block are sent to the delegated harvester account, after substraction of the **network fee** and the **beneficiary account**'s percentage (as explained in the :ref:`Rewards <harvesting-rewards>` section).
 
 See the :doc:`Activating Delegated Harvesting <../guides/accountlink/activating-delegated-harvesting>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
 
