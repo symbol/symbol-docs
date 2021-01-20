@@ -1,29 +1,49 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-01-20 12:59+0100\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/guides/index.rst:36
 msgid "Guides"
 msgstr "ガイド"
+
+#: ../../source/guides/index.rst:40
+msgid ":doc:`transfer/sending-a-transfer-transaction`"
+msgstr ""
+
+#: ../../source/guides/index.rst:42
+msgid ":doc:`mosaic/creating-a-mosaic`"
+msgstr ""
+
+#: ../../source/guides/index.rst:44
+msgid ":doc:`multisig/creating-a-multisig-account`"
+msgstr ""
+
+#: ../../source/guides/index.rst:46
+msgid ":doc:`network/running-a-test-net-node`"
+msgstr ""
+
+#: ../../source/guides/index.rst:48
+msgid ":doc:`network/creating-a-private-test-net`"
+msgstr ""
 
 #: ../../source/guides/index.rst:50
 msgid ""
@@ -34,58 +54,102 @@ msgstr ""
 "ガイドは次の **トピック** に分割されています。 **タグ** でグループ化されたガイドを表示するには `ガイドカタログ "
 "<https://docs.symbolplatform.com/guides/category.html>`__ を参照してください。"
 
+#: ../../source/guides/index.rst:55
+msgid ":doc:`account/index`"
+msgstr ""
+
 #: ../../source/guides/account/index.rst:1
 msgid "Guides related to :doc:`account <../../concepts/account>` handling."
 msgstr ":doc:`アカウント <../../concepts/account>` の扱いに関するガイド"
 
-#: ../../source/guides/accountlink/index.rst:1
-msgid ""
-"Guides related to linking different :doc:`accounts <../../concepts/account>`"
-" between them."
-msgstr ":doc:`アカウント <../../concepts/account>` 間のリンクの扱いに関するガイド"
+#: ../../source/guides/index.rst:63
+msgid ":doc:`aggregate/index`"
+msgstr ""
 
 #: ../../source/guides/aggregate/index.rst:1
 msgid ""
 "Guides related to :doc:`aggregate transaction <../../concepts/aggregate-"
 "transaction>` handling."
+msgstr ":doc:`アグリゲートトランザクション <../../concepts/aggregate-transaction>` の扱いに関するガイド"
+
+#: ../../source/guides/index.rst:71
+msgid ":doc:`blockchain/index`"
 msgstr ""
-":doc:`アグリゲートトランザクション <../../concepts/aggregate-transaction>` の扱いに関するガイド"
 
 #: ../../source/guides/blockchain/index.rst:1
 msgid "Guides related to the handling the blockchain itself."
 msgstr "ブロックチェーンの扱いに関するガイド"
 
+#: ../../source/guides/index.rst:79
+msgid ":doc:`harvesting/index`"
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:1
+#, fuzzy
+msgid "Guides related to mosaic harvesting."
+msgstr ""
+
+#: ../../source/guides/index.rst:87
+msgid ":doc:`metadata/index`"
+msgstr ""
+
 #: ../../source/guides/metadata/index.rst:1
 msgid "Guides related to :doc:`metadata <../../concepts/metadata>` handling."
 msgstr ":doc:`メタデータ <../../concepts/metadata>` の扱いに関するガイド"
+
+#: ../../source/guides/index.rst:95
+msgid ":doc:`migration/index`"
+msgstr ""
 
 #: ../../source/guides/migration/index.rst:1
 msgid "Guides related to migrating from NIS1 to |codename|."
 msgstr "NIS1 から |codename| へ移行に関するガイド"
 
+#: ../../source/guides/index.rst:103
+msgid ":doc:`monitor/index`"
+msgstr ""
+
 #: ../../source/guides/monitor/index.rst:1
 msgid "Guides related to monitoring transactions."
 msgstr "トランザクションの監視に関するガイド"
+
+#: ../../source/guides/index.rst:111
+msgid ":doc:`mosaic/index`"
+msgstr ""
 
 #: ../../source/guides/mosaic/index.rst:1
 msgid "Guides related to :doc:`mosaics <../../concepts/mosaic>` handling."
 msgstr ":doc:`モザイク <../../concepts/mosaic>` の扱いに関するガイド"
 
+#: ../../source/guides/index.rst:119
+msgid ":doc:`multisig/index`"
+msgstr ""
+
 #: ../../source/guides/multisig/index.rst:1
 msgid ""
 "Guides related to :doc:`multisignature account <../../concepts/multisig-"
 "account>` (multisig) handling."
+msgstr ":doc:`マルチシグネチャアカウント <../../concepts/multisig-account>` (マルチシグ) の扱いに関するガイド"
+
+#: ../../source/guides/index.rst:127
+msgid ":doc:`namespace/index`"
 msgstr ""
-":doc:`マルチシグネチャアカウント <../../concepts/multisig-account>` (マルチシグ) の扱いに関するガイド"
 
 #: ../../source/guides/namespace/index.rst:1
-msgid ""
-"Guides related to :doc:`namespace <../../concepts/namespace>` handling."
+msgid "Guides related to :doc:`namespace <../../concepts/namespace>` handling."
 msgstr ":doc:`ネームスペース <../../concepts/namespace>` の扱いに関するガイド"
+
+#: ../../source/guides/index.rst:135
+msgid ":doc:`network/index`"
+msgstr ""
 
 #: ../../source/guides/network/index.rst:1
 msgid "Guides related to creating nodes and test networks."
 msgstr "ノードの作成とテストネットワークの扱いに関するガイド"
+
+#: ../../source/guides/index.rst:143
+msgid ":doc:`restriction/index`"
+msgstr ""
 
 #: ../../source/guides/restriction/index.rst:1
 msgid ""
@@ -93,12 +157,27 @@ msgid ""
 "restriction>` handling."
 msgstr ":doc:`モザイク制限 <../../concepts/mosaic-restriction>` の扱いに関するガイド"
 
+#: ../../source/guides/index.rst:151
+msgid ":doc:`secretlock/index`"
+msgstr ""
+
 #: ../../source/guides/secretlock/index.rst:1
 msgid "Guides related to secret lock handling."
 msgstr "シークレットロックの扱いに関するガイド"
+
+#: ../../source/guides/index.rst:159
+msgid ":doc:`transfer/index`"
+msgstr ""
 
 #: ../../source/guides/transfer/index.rst:1
 msgid ""
 "Guides related to :doc:`transfer transactions <../../concepts/transfer-"
 "transaction>` handling."
 msgstr ":doc:`転送トランザクション <../../concepts/transfer-transaction>` の扱いに関するガイド"
+
+#~ msgid ""
+#~ "Guides related to linking different "
+#~ ":doc:`accounts <../../concepts/account>` between "
+#~ "them."
+#~ msgstr ":doc:`アカウント <../../concepts/account>` 間のリンクの扱いに関するガイド"
+
