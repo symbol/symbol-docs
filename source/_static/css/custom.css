@@ -605,6 +605,14 @@ div.sidebar {
     border-radius: 4px;
     width: 50%;
 }
-.right-align {
+img.with-shadow {
+    border: 1px lightgray;
+    box-shadow: 1px 1px 5px lightgray;
+}
+img.with-rounded-shadow {
+    border: 1px lightgray;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px lightgray;
+}.right-align {
     text-align: right;
 }
