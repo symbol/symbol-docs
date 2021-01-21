@@ -78,9 +78,9 @@ Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-harvest
 Remote harvesting
 =================
 
-Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account's funds, and the remote account cannot transfer it.
+Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account.
 
-In this setup the main account is still called the Harvester, for simplicity, whereas the remote account is called a proxy.
+In this setup the main account is still called the Harvester, for simplicity, whereas the remote account is called a Proxy.
 
 Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>` that links the remote and main accounts.
 
