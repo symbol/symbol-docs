@@ -114,7 +114,7 @@ Related transactions
     0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
     0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate remote or delegated harvesting.
     0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
-    0x4154; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a delegated harvester. This is actually a :ref:`TransferTransaction <transfer-transaction>` with a special message type.
+    0x4154; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a harvester. This is actually a :ref:`TransferTransaction <transfer-transaction>` with a special message type.
 
 ******
 Guides
