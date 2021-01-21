@@ -80,6 +80,8 @@ Remote harvesting
 
 Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account's funds, and the remote account cannot transfer it.
 
+In this setup the main account is still called the Harvester, for simplicity, whereas the remote account is called a proxy.
+
 Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>` that links the remote and main accounts.
 
 This is the **recommended method** for node owners.
@@ -90,15 +92,13 @@ This is the **recommended method** for node owners.
 Delegated harvesting
 ====================
 
-:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them** and share the rewards. In return, the account lends its :ref:`importance score <importance-calculation>` to the node so it has more chances to be selected as the next harvester. **It is a beneficial agreement to both parties.**
+:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them**. The account's :ref:`importance score <importance-calculation>` is used and any collected fees are divided among the account and the node's beneficiary (as explained in the :ref:`Rewards <harvesting-rewards>` section). **It is a advantageous agreement to both the account and the node.**
 
-It is then said that the node **delegates harvesting** to the requesting account.
+It is then said that the account **delegates harvesting** to the node, but the account is still considered the harvester.
 
 Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
-
-All fees derived from harvesting a block are sent to the delegated harvester account, after substraction of the **network fee** and the **beneficiary account**'s percentage (as explained in the :ref:`Rewards <harvesting-rewards>` section).
 
 See the :doc:`Activating Delegated Harvesting <../guides/accountlink/activating-delegated-harvesting>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
 
