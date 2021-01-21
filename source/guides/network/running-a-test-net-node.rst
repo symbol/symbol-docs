@@ -89,6 +89,8 @@ You really don't need to use anything else but ``symbol-bootstrap start``.  Use 
 
 Alternatively, you can start in detached mode (``--detached``) to run in the background.
 
+.. _retrieving-node-account:
+
 ***************************
 Retrieving the node account
 ***************************

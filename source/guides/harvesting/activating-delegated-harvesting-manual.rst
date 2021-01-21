@@ -1,24 +1,30 @@
-.. post:: 11 Oct, 2019
+.. post:: 25 Jan, 2021
     :category: Harvesting
     :tags: SDK
     :excerpt: 1
     :nocomments:
 
-###############################
-Activating delegated harvesting
-###############################
+########################################
+Activating delegated harvesting manually
+########################################
 
-Share your account's importance securely with a node.
+Share your account's importance securely with a node and get rewarded.
 
 ************
 Introduction
 ************
 
-:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to receive rewards from creating new blocks without running a node. At the same time, it allows nodes to benefit from an account's (possibly higher) :ref:`importance score <importance-calculation>`.
+:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to **receive rewards** from creating new blocks **without running a node**. At the same time, it allows nodes to benefit from an account's (possibly higher) :ref:`importance score <importance-calculation>`.
 
-The account's **private key** is never shared with the node so this method is inherently safer than :ref:`local harvesting <local-harvesting>` since all nodes must be publicly accessible and therefore open to attack. For this reason it is recommended that node owners also use delegated harvesting even though setting up a node for local harvesting is simpler.
+.. note:: Node owners have access to the node's configuration so it's more convenient for them to use :ref:`Remote harvesting <remote-harvesting>` instead.
 
-Summary of the required steps:
+This guide explains how to **manually** activate delegated harvesting using the :doc:`SDK </sdk>` or the :doc:`CLI </cli>` interface and is therefore **intended for developers**. Users should use the :doc:`Desktop Wallet guide <activating-delegated-harvesting-wallet>` instead.
+
+*******
+Summary
+*******
+
+Required steps:
 
 1. Delegate the **main account (M)** importance to a **remote account (R)** using an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
 
@@ -26,7 +32,7 @@ Summary of the required steps:
 
 3. Link the main account **M** to a node in order to harvest through that node using a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
 
-4. Request the node to add the remote account **R** as a delegated harvester using a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`. Conversely, if the node configuration is accessible, the remote account's private key can be set in the node configuration.
+4. Request the node to add the remote account **R** as a harvester using a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`. Conversely, if the node configuration is accessible, the remote account's private key can be set in the node configuration.
 
 Please note that it is entirely up to the node to comply with the request. Some nodes can be asked for their current list of delegated harvesters but this information is not always available (see :ref:`delegated-harvesting-verifying-activation` below).
 

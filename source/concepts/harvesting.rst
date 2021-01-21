@@ -100,7 +100,7 @@ Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-har
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
 
-See the :doc:`Activating Delegated Harvesting <../guides/accountlink/activating-delegated-harvesting>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
+See the :doc:`Activating Delegated Harvesting <../guides/harvesting/activating-delegated-harvesting-wallet>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
 
 ********************
 Related transactions
