@@ -17,10 +17,9 @@ Eligibility criteria
 The :ref:`importance score <importance-calculation>` determines the probability that an account is chosen to harvest the next block among all the accounts which have harvesting enabled.
 
 |codename|'s public network defines that an account needs to hold at least **10,000** :ref:`harvesting mosaics <harvesting-mosaic>` to have an importance score greater than zero.
-Eligible accounts can use their importance score to create new blocks either by :ref:`running a node <local-harvesting>` or :ref:`delegating harvesting <delegated-harvesting>` to another node.
+Eligible accounts can use their importance score to create new blocks either by :ref:`running a node <local-harvesting>` or enabling :ref:`delegated harvesting <delegated-harvesting>`.
 
-Regardless of the method chosen, **any account willing to activate harvesting must first announce a valid** :ref:`VrfKeyTransaction <vrf-key-link-transaction>`.
-The VRF transaction links the harvester account with a second key pair to randomize block production and leader selection.
+Regardless of the method chosen, **any account willing to activate harvesting must first announce a valid** :ref:`VrfKey transaction <vrf-key-link-transaction>`. This key is required by |codename| to randomize harvester selection.
 
 .. _harvesting-mosaic:
 
@@ -79,7 +78,9 @@ Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-harvest
 Remote harvesting
 =================
 
-Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account's funds, and the remote account cannot transfer it.
+Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account.
+
+In this setup the main account is still called the Harvester, for simplicity, whereas the remote account is called a Proxy.
 
 Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>` that links the remote and main accounts.
 
@@ -91,17 +92,13 @@ This is the **recommended method** for node owners.
 Delegated harvesting
 ====================
 
-:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them** and share the rewards. In return, the account delegates its :ref:`importance score <importance-calculation>` to the node so it has more chances to be selected as a harvester. **It is a beneficial agreement to both parties.**
+:ref:`Eligible accounts <account_eligibility>` **not owning a node** can still benefit from harvesting by **requesting a node to harvest for them**. The account's :ref:`importance score <importance-calculation>` is used and any collected fees are divided among the account and the node's beneficiary (as explained in the :ref:`Rewards <harvesting-rewards>` section). **It is a advantageous agreement to both the account and the node.**
+
+It is then said that the account **delegates harvesting** to the node, but the account is still considered the harvester.
 
 Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
-
-Keep in mind that the account may not receive the entire reward if:
-
-*  The :ref:`network fee <harvesting-rewards>` is greater than 0.
-
-*  The selected node has defined a :ref:`beneficiary account <harvesting-rewards>`.
 
 See the :doc:`Activating Delegated Harvesting <../guides/accountlink/activating-delegated-harvesting>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
 
@@ -117,7 +114,7 @@ Related transactions
     0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
     0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate remote or delegated harvesting.
     0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
-    0x4154; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a delegated harvester. This is actually a :ref:`TransferTransaction <transfer-transaction>` with a special message type.
+    0x4154; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a harvester. This is actually a :ref:`TransferTransaction <transfer-transaction>` with a special message type.
 
 ******
 Guides
