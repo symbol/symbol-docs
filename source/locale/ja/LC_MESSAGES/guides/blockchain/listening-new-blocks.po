@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-01 10:05+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,9 +71,9 @@ msgstr "接続フェーズ中に受信した uid と、次の形式のチャネ�
 
 #: ../../source/guides/blockchain/listening-new-blocks.rst:102
 msgid ""
-"From that moment, every ``15`` seconds more or less, you will receive a new "
+"From that moment, every ``30`` seconds more or less, you will receive a new "
 "notification with the content of the new harvested blocks."
-msgstr "その瞬間から ``15`` 秒ごとに新しくハーベストされたブロックの内容を含む新しい通知を受け取ります。"
+msgstr "その瞬間から ``30`` 秒ごとに新しくハーベストされたブロックの内容を含む新しい通知を受け取ります。"
 
 #: ../../source/guides/blockchain/listening-new-blocks.rst:106
 msgid "Method #02: Using the SDK"

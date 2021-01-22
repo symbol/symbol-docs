@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-15 11:23+0000\n"
+"POT-Creation-Date: 2021-02-01 10:05+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -182,6 +182,18 @@ msgstr ""
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
+"It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 "
+"faucet. Great for demonstration purposes. Nemesis block is generated "
+"(`configuration file <https://github.com/nemtech/symbol-"
+"bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__)."
+msgstr ""
+"これはデフォルトの ``bootstrap`` プリセットに、ウォレット 1 つ、エクスプローラ 1 つ、フォーセット 1 "
+"つを加えます。デモンストレーション目的に最適な構成です。 Nemesis ブロックが生成されます。 (`構成ファイル "
+"<https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap"
+"/assembly-full.yml>`__)"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:1
+msgid ""
 "The node is a harvester (`configuration file <https://github.com/nemtech"
 "/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__)."
 msgstr ""
@@ -206,7 +218,7 @@ msgstr ""
 "ノードは mongo データベースと REST ゲートウェイを起動しています (`設定ファイル <https://github.com/nemtech"
 "/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__)"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:125
+#: ../../source/guides/network/using-symbol-bootstrap.rst:126
 msgid ""
 "Finally, if additional configuration is required, a **custom YAML file** can"
 " be provided. Any value in this file overrides the default values set by the"
@@ -218,11 +230,11 @@ msgstr ""
 "ファイル**で提供します。このファイルの値は、プリセットまたはアセンブリによって設定されたデフォルト値を上書きするので、それらの設定に組み合わせることができます。使用可能なパラメータについては、"
 " :doc:`ネットワークプロパティの設定 <configuring-network-properties>` ガイドを参照してください。。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:129
+#: ../../source/guides/network/using-symbol-bootstrap.rst:130
 msgid "Creating the configuration file"
 msgstr "設定ファイルの作成"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:131
+#: ../../source/guides/network/using-symbol-bootstrap.rst:132
 msgid ""
 "Before building the network the full configuration file has to be created by"
 " using the `symbol-bootstrap config <https://github.com/nemtech/symbol-"
@@ -233,22 +245,21 @@ msgstr ""
 "<https://github.com/nemtech/symbol-bootstrap/blob/main/docs/config.md>`_ "
 "コマンドを実行し、構成ファイル全体を作成します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:137
+#: ../../source/guides/network/using-symbol-bootstrap.rst:138
 msgid "Some examples:"
 msgstr "例:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:146
+#: ../../source/guides/network/using-symbol-bootstrap.rst:147
 msgid ""
-"This will create a folder called ``target`` by default (It can be changed "
-"with the ``-t`` option). Inside there's a folder called ``config`` "
-"containing, among other things, the generated complete configuration file "
-"(``target/config/preset.yml``) ready to be used to build the network."
+"This will create a folder, called ``target`` by default (It can be changed "
+"with the ``-t`` option), containing among other things the generated "
+"complete configuration file (``target/preset.yml``) ready to be used to "
+"build the network."
 msgstr ""
-"これにより、デフォルトでは ``target`` というフォルダが作成されます。 (``-t`` オプションで指定できます) "
-"フォルダ内にはネットワークを構築するために生成された完全な構成ファイル (``target/config/prefix.yml``) を含む "
-"``config`` フォルダが存在します。"
+"これはデフォルトで ``target`` フォルダ ( ``-t`` オプションで指定できます) "
+"を作成し、ネットワークを構築するために生成された完全な構成ファイル (``target/preset.yml``) が含まれています。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:148
+#: ../../source/guides/network/using-symbol-bootstrap.rst:149
 msgid ""
 "If you get the error ``Permission denied while trying to connect to the "
 "Docker daemon socket`` it means that your user does not belong to the "
@@ -257,35 +268,35 @@ msgstr ""
 "ユーザが ``docker`` グループに属していないと ``Permission denied while trying to connect to "
 "the Docker daemon socket`` というエラーが表示される場合があります。このように追加します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:156
+#: ../../source/guides/network/using-symbol-bootstrap.rst:157
 msgid "Building the network and nodes"
 msgstr "ネットワークとノードを構築"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:158
+#: ../../source/guides/network/using-symbol-bootstrap.rst:159
 msgid ""
 "This command prepares the necessary Docker files based on the provided "
 "configuration:"
 msgstr "このコマンドは提供した構成に基づいて、必要な Docker ファイルを準備します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:164
+#: ../../source/guides/network/using-symbol-bootstrap.rst:165
 msgid "It only needs to be run once."
 msgstr "これは一度実行する必要があります。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:168
+#: ../../source/guides/network/using-symbol-bootstrap.rst:169
 msgid "Running the network"
 msgstr "ネットワークの立ち上げ"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:170
+#: ../../source/guides/network/using-symbol-bootstrap.rst:171
 msgid ""
 "Finally, execute this command to start the necessary Docker instances and "
 "boot your network:"
 msgstr "最後に、次のコマンドを実行して必要な Docker インスタンスを起動し、ネットワークを起動します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:176
+#: ../../source/guides/network/using-symbol-bootstrap.rst:177
 msgid "Stop the process by pressing ``Ctrl+C``."
 msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:178
+#: ../../source/guides/network/using-symbol-bootstrap.rst:179
 msgid ""
 "To run the docker containers in the background of your terminal, you can run"
 " the service in detached mode using the option ``--detach`` or ``-d``."
@@ -293,32 +304,32 @@ msgstr ""
 "ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` または ``-d`` "
 "オプション使用してサービスをデタッチモードで実行します。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:184
+#: ../../source/guides/network/using-symbol-bootstrap.rst:185
 msgid "The all-in-one ``start`` command"
 msgstr "オールインワンの ``start`` コマンド"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:186
+#: ../../source/guides/network/using-symbol-bootstrap.rst:187
 msgid ""
 "The above three commands (``config``, ``compose`` and ``run``) can be merged"
 " into one:"
 msgstr "上記３つのコマンドは (``config``, ``compose``, ``run``) １つにまとまります:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:192
+#: ../../source/guides/network/using-symbol-bootstrap.rst:193
 msgid ""
 "That's right, a test network or node can be instantiated and booted with a "
 "single command!"
 msgstr "そうです、テストネットワークまたはノードを 1 つのコマンドでインスタンス化して起動することができます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:196
+#: ../../source/guides/network/using-symbol-bootstrap.rst:197
 msgid "Next steps"
 msgstr "次の手順"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:198
+#: ../../source/guides/network/using-symbol-bootstrap.rst:199
 msgid ""
 "Proceed to the following guides to put what you have learned into practice!"
 msgstr "次のガイドに進み、学習したことを実践してください！"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:200
+#: ../../source/guides/network/using-symbol-bootstrap.rst:201
 msgid ""
 ":doc:`Creating private test networks <creating-a-private-test-net>`: How to "
 "set up your own private network and access its nodes."
@@ -326,7 +337,7 @@ msgstr ""
 ":doc:`プライベートテストネットワークの作成 <creating-a-private-test-net>`: "
 "自分のプライベートネットワークのセットアップとアクセスの方法"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:201
+#: ../../source/guides/network/using-symbol-bootstrap.rst:202
 msgid ""
 ":doc:`Running a test net node <running-a-test-net-node>`: How to set up your"
 " own node and join |codename|'s test network."
@@ -334,7 +345,7 @@ msgstr ""
 ":doc:`テストネットノードの実行 <running-a-test-net-node>`: 自分のノードのセットアップと |codename| "
 "テストネットワークへ参加する方法"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:203
+#: ../../source/guides/network/using-symbol-bootstrap.rst:204
 msgid ""
 "Read the `complete list <https://github.com/nemtech/symbol-"
 "bootstrap/blob/main/README.md#commands>`_ of ``symbol-bootstrap`` commands."
