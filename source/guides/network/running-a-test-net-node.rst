@@ -128,11 +128,11 @@ Submitting link keys
 Enabling harvesting
 ===================
 
-|symbol-bootstrap| creates peer nodes with :ref:`local harvesting <local-harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to the network (:ref:`delegated harvesting <delegated-harvesting>` works differently and requires the ``node`` keys).
+|symbol-bootstrap| creates peer nodes with :ref:`remote harvesting <remote-harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to the network.
 
 This can be done by |symbol-bootstrap| too, but it needs to be a step separated from ``symbol-bootstrap start`` because funds are required to announce transactions.
 
-Once the node is running with ``symbol-bootstrap start`` and you have funded it account, from a different terminal (but from the same folder), simply type:
+Once the node is running with ``symbol-bootstrap start`` and you have funded its account, from a different terminal (but from the same folder), simply type:
 
 .. code-block:: bash
 
