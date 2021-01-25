@@ -183,10 +183,6 @@ You now have a test network running and access to each node's account. You can a
 
 We recommend you continue reading the rest of :ref:`the guides <blog-categories>` to keep learning more |codename|'s features!
 
-.. |symbol-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
-
 .. |symbol-cli| raw:: html
 
    <a href="https://github.com/nemtech/symbol-cli" target="_blank">symbol-cli</a>

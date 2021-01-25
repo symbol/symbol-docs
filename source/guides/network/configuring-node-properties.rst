@@ -45,10 +45,6 @@ Harvesting Configuration
 .. raw:: html
     :file: ../../_static/config-harvesting.properties.html
 
-.. |symbol-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
-
 .. |catapult-server| raw:: html
 
    <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>

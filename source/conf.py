@@ -292,6 +292,10 @@ rst_prolog = """
 
    <a href="https://github.com/nemtech" target="_blank">open source</a>
 
+.. |symbol-bootstrap| raw:: html
+
+   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
+
 """
 
 # -- Options for Epub output ----------------------------------------------
