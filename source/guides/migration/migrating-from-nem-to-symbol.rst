@@ -187,10 +187,6 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 * Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-account>`
 * Guide: :doc:`Sending a multisignature transaction <../aggregate/sending-a-multisig-transaction>`
 
-.. |symbol-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">symbol-bootstrap</a>
-
 .. |ts-js-sdk| raw:: html
 
    <a href="https://github.com/nemtech/symbol-sdk-typescript-javascript" target="_blank">TS/JS SDK</a>

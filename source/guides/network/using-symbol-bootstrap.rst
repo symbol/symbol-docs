@@ -176,10 +176,6 @@ Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/R
 
 .. _docker-compose: https://docs.docker.com/compose/install/
 
-.. |symbol-bootstrap| raw:: html
-
-   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
-
 .. |catapult-service-bootstrap| raw:: html
 
     <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
