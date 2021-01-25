@@ -137,9 +137,7 @@ body > .container {
     color: #5200c6;
 }
 .content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
+    list-style: disc;
 }
 .content ul.simple li {
     padding-bottom: 5px;
@@ -149,9 +147,6 @@ body > .container {
 }
 .content ol li {
     margin-bottom: 15px;
-}
-.content ul li::before {
-    content: "• ";
 }
 .content .headerlink {
     visibility: hidden !important;
