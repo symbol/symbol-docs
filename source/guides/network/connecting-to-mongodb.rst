@@ -29,7 +29,7 @@ Open the database port
 
 In the :doc:`Running a test net node <running-a-test-net-node>` guide you have used ``symbol-bootstrap`` to instantiate and run the necessary node services (catapult-server, API endpoints, databases, etc). For security reasons, all these services run inside Docker containers and, except the public endpoints, they are isolated from the exterior.
 
-This means that the MongoDB database that API nodes use to cache the state of the blockchain is **inaccessible by default**. To forward its internal port to the host you need to give ``symbol-bootstrap`` a `custom preset file <symbol-bootstrap-presets>`_ containing the following lines:
+This means that the MongoDB database that API nodes use to cache the state of the blockchain is **inaccessible by default**. To forward its internal port to the host you need to give ``symbol-bootstrap`` a :ref:`custom preset file <symbol-bootstrap-presets>` containing the following lines:
 
 .. code-block:: yaml
 
