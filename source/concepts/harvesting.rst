@@ -54,6 +54,8 @@ The sharing ratios for the beneficiary and network sink accounts are :ref:`confi
 
 .. note:: The calculation of the beneficiary percentage will occur after the network sink calculation. When the node operator does not define a beneficiary or a Network Fee Sink, all the rewards go to the block signer.
 
+.. _harvesting-types:
+
 ****************
 Harvesting types
 ****************
@@ -78,7 +80,7 @@ Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-harvest
 Remote harvesting
 =================
 
-Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in the configuration file is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account.
+Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in a configuration file on the node is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account.
 
 In this setup the main account is still called the Harvester, for simplicity, whereas the remote account is called a Proxy.
 
