@@ -356,3 +356,23 @@ def viewsource_resolve_link(file_path, language=None):
 
 extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/main/schemas/%s', 'file '),
             'properties': ('https://github.com/nemtech/catapult-server/blob/main/resources/%s', 'file ')}
+
+# -- Custom Pygments lexers ----------------------------------------------
+
+from pygments.lexers.shell import BashLexer
+from sphinx.highlighting import lexers
+
+# These are just plain Bash lexers with different names, so we can have tabbed code snippets
+# with custom names on the tabs, instead of just the language code.
+# If we ever feel like it, we can add custom coloring:
+# https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
+
+class CatapultLexer(BashLexer):
+    name = 'catapult-server'
+
+lexers['catapult-server'] = CatapultLexer()
+
+class CliLexer(BashLexer):
+    name = 'symbol-cli'
+
+lexers['symbol-cli'] = CliLexer()
