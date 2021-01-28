@@ -43,7 +43,17 @@ The harvesting nodes :ref:`can set their transaction inclusion strategy <node-pr
 * **Minimize-fees**: Philanthropic nodes. Include first the transactions that other nodes do not want to include.
 * **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-To ensure that the transaction will get included without setting a ``max_fee`` unnecessarily high, the sender of the transaction can ask the :doc:`REST Gateway <../api>` for the median, average, highest, or lowest multiplier of the network over the last N blocks. For example, the sender could set the transaction max_fee as follows:
+To ensure that the transaction will get included without setting a ``max_fee`` unnecessarily high, the sender of the transaction can ask the :doc:`REST Gateway <../api>` for the median, average, highest, or lowest multiplier of the network over the last N blocks. 
+
+.. note::
+    A quick way of retrieving this information is pointing your browser to:
+
+    .. code-block:: bash
+
+        http://api-01.us-east-1.testnet.symboldev.network:3000/network/fees/transaction
+
+
+For example, the sender could set the transaction max_fee as follows:
 
 .. math::
 
