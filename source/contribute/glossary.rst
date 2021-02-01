@@ -56,7 +56,7 @@ Glossary
       The property of mosaics that enable fractional amounts. The number of divisibility refers to the decimal place to which the mosaic can be divided.
 
     Duration
-      Length of time measured in :doc:`blocks <../concepts/block>`. Each block on the Symbol blockchain takes about ~15 seconds to harvest.
+      Length of time measured in :doc:`blocks <../concepts/block>`. Each block on the Symbol blockchain takes about 30 seconds to harvest.
 
     Effective Fee
       The :doc:`fee <../concepts/fees>` to be paid for a transaction. Calculated by reading the fee multiplier from the block in which the transaction got confirmed and multiplying it by the size of the transaction.
