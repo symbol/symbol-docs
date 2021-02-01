@@ -23,7 +23,7 @@ Duration
 At the time of the namespace registration, you must set the number of confirmed blocks you would like to rent the namespace for.
 
 The public network defines a minimum namespace duration of ``30`` days and a maximum of ``365`` days, being these parameters :ref:`editable per network <config-network-properties>`.
-By default, the network is configured to generate a block every ``15`` seconds.
+By default, the network is configured to generate a block every ``30`` seconds.
 You can use the following formula to convert approximately days to blocks:
 
 .. math::
