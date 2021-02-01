@@ -66,7 +66,7 @@ Check :ref:`here <websockets>` the complete list of channels available.
         }
     });
 
-From that moment, every ``15`` seconds more or less, you will receive a new notification with the content of the new harvested blocks.
+From that moment, every ``30`` seconds more or less, you will receive a new notification with the content of the new harvested blocks.
 
 *************************
 Method #02: Using the SDK

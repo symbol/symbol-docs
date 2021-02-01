@@ -173,7 +173,7 @@ This means that the customer can only send the ticket back to the mosaic's creat
 
    The new mosaic id is: 7cdf3b117a3c40cc
 
-The transaction should appear as confirmed after ±15 seconds.
+The transaction should appear as confirmed after 30 seconds at most.
 If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusTypeEnum.yml>`_.
 
 ******************
