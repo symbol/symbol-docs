@@ -111,7 +111,7 @@ Some examples:
     symbol-bootstrap config -p testnet -a dual
     symbol-bootstrap config -p testnet -a dual -c custom_parameters.yml
 
-This will create a folder called ``target`` by default (It can be changed with the ``-t`` option). Inside there's a folder called ``config`` containing, among other things, the generated complete configuration file (``target/config/preset.yml``) ready to be used to build the network.
+This will create a folder, called ``target`` by default (It can be changed with the ``-t`` option), containing among other things the generated complete configuration file (``target/preset.yml``) ready to be used to build the network.
 
 .. note:: If you get the error ``Permission denied while trying to connect to the Docker daemon socket`` it means that your user does not belong to the ``docker`` group. Add it with:
 
