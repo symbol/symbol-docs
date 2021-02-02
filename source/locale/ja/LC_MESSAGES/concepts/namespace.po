@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-01 10:05+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,11 +73,11 @@ msgid ""
 "The public network defines a minimum namespace duration of ``30`` days and a"
 " maximum of ``365`` days, being these parameters :ref:`editable per network "
 "<config-network-properties>`. By default, the network is configured to "
-"generate a block every ``15`` seconds. You can use the following formula to "
+"generate a block every ``30`` seconds. You can use the following formula to "
 "convert approximately days to blocks:"
 msgstr ""
 "パブリックネットワークはネームスペース期間を最小で ``30`` 日間、最大で ``365`` 日間として定義しています。パラメータは  "
-":ref:`ネットワークごとに設定可能 <config-network-properties>` です。デフォルトではネットワークは ``15`` "
+":ref:`ネットワークごとに設定可能 <config-network-properties>` です。デフォルトではネットワークは ``30`` "
 "秒毎にブロック生成するように設定されています。次の式を使用しておよその日数をブロックに変換できます。"
 
 #: ../../source/concepts/namespace.rst:70
