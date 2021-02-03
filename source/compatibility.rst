@@ -12,7 +12,9 @@ APIs
     :header: "Milestone", "OpenAPI", "Rest", "SDK TS", "SDK Java"
     :delim: ;
 
-    `v0.10.0.4 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01004---04-dec-2020>`_; v0.10.5; v2.3.0; v0.23.0; v0.23.0
+    `v0.10.0.6 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01006---02-feb-2021>`_; v0.11.2; v2.3.2; v0.23.1; v0.23.1
+    `v0.10.0.5 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01005---14-jan-2021>`_; v0.11.1; v2.3.0; v0.23.0; v0.23.0
+    `v0.10.0.4 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01004---04-dec-2020>`_; v0.10.5; v2.2.0; v0.22.2; v0.22.2
     `v0.10.0.3 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01003---25-sep-2020>`_; v0.10.0; v2.1.0; v0.21.0; v0.21.0
     `v0.9.6.4 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0964---27-jul-2020>`_; v0.9.6; v1.2.1; v0.20.7; v0.20.3
     `v0.9.6.3 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#0963---10-jul-2020>`_; v0.9.4; v1.1.3; v0.20.6; v0.20.2
@@ -24,20 +26,23 @@ APIs
 - `SDK TS CHANGELOG <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/CHANGELOG.md>`_
 - `SDK Java CHANGELOG <https://github.com/nemtech/symbol-sdk-java/blob/main/CHANGELOG.md>`_
 
-*******
-Wallets
-*******
+*****
+Tools
+*****
 
 .. csv-table::
-    :header: "Milestone", "Desktop", "CLI"
+    :header: "Milestone", "Desktop Wallet", "symbol-cli", "symbol-bootstrap"
     :delim: ;
 
-    `v0.10.0.4`_; v0.13.6; v0.22.1
-    `v0.10.0.3`_; v0.13.1; v0.22
+    `v0.10.0.6`_; v0.14.0; v0.24.0; v0.4.2
+    `v0.10.0.5`_; v0.13.8; v0.23.0; v0.4.0
+    `v0.10.0.4`_; v0.13.6; v0.22.1; v0.3.1
+    `v0.10.0.3`_; v0.13.1; v0.22; v0.2.1
     `v0.9.6.4`_; v0.12.1;
     `v0.9.6.3`_; v0.12; v0.21.1
     `v0.9.5.1`_; v0.10.0; v0.20.2
     `v0.9.4.1`_; v0.9.11; v0.19.4
 
-- `Desktop CHANGELOG <https://github.com/nemgrouplimited/symbol-desktop-wallet/blob/main/CHANGELOG.md>`_
-- `CLI CHANGELOG <https://github.com/nemtech/symbol-cli/blob/main/CHANGELOG.md>`_
+- `Desktop Wallet CHANGELOG <https://github.com/nemgrouplimited/symbol-desktop-wallet/blob/main/CHANGELOG.md>`_
+- `symbol-cli CHANGELOG <https://github.com/nemtech/symbol-cli/blob/main/CHANGELOG.md>`_
+- `symbol-bootstrap CHANGELOG <https://github.com/nemtech/symbol-bootstrap/blob/main/CHANGELOG.md>`_
