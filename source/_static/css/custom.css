@@ -613,3 +613,6 @@ div.sidebar {
     border-radius: 4px;
     width: 50%;
 }
+.right-align {
+    text-align: right;
+}
