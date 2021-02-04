@@ -64,7 +64,8 @@ Run this from a terminal:
 
     .. code-block:: catapult-server
 
-      catapult.tools.address -g 1
+      catapult.tools.addressgen --network public
+      # Change the network type to suit your needs
 
     .. code-block:: symbol-cli
 
@@ -99,14 +100,15 @@ Otherwise, create another account just like you did in Step 1, to act as the VRF
 
     .. code-block:: catapult-server
 
-      catapult.tools.address -g 1
+      catapult.tools.addressgen --network public
+      # Change the network type to suit your needs
 
     .. code-block:: symbol-cli
 
       symbol-cli account generate
       # Do NOT save the account, and set the import type to PrivateKey
 
-Write the **private** key in the ``harvesterVrfPrivateKey`` field of the configuration file, and announce a :ref:`VrfKeyLink transaction <vrf-key-link-transaction>` to link the VRF and main accounts:
+Write the **private key** in the ``harvesterVrfPrivateKey`` field of the configuration file, and announce a :ref:`VrfKeyLink transaction <vrf-key-link-transaction>` to link the VRF and main accounts:
 
 .. code-block:: symbol-cli
 
