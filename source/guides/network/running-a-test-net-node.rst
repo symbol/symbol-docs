@@ -142,6 +142,8 @@ This creates the required :ref:`VrfKeyLink transaction <vrf-key-link-transaction
 
 .. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-release-announcement-testnet-launch/25863>`_.
 
+.. _bootstrap-enable-voting:
+
 Enabling voting
 ===============
 

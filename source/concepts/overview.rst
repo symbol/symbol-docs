@@ -26,5 +26,6 @@ These are the important concepts behind blockchain technology and the |codename|
     node
     plugin
     receipt
+    reward-programs
     transaction
     transfer-transaction
