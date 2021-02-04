@@ -13,3 +13,4 @@ Guides related to creating nodes and test networks.
     configuring-network-properties
     connecting-to-mongodb
     using-symbol-bootstrap
+    supernode-enrollment
