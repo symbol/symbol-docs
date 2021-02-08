@@ -43,6 +43,8 @@ Supernodes are regular nodes meeting the following additional hardware and opera
     **Ping**; **200ms response or less**. Node is requested to ping 20 other random nodes on the network and at least one ping time must pass the test (each node will be pinged 5 times and response times averaged).
     **Responsiveness**; **1 second**. 10 blockchain height requests will be made and at least 9 must answer in less than 1 second.
 
+.. _reward-programs-controller:
+
 To ensure all of the above, a **lightweight monitoring agent** is installed on the node which reports to a controller on the network. The controller performs all the above checks **a few times per day** on each registered supernode and makes daily payments.
 
 Rewards
