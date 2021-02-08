@@ -145,9 +145,6 @@ body > .container {
 .content ol {
     padding: 0 15px 0 15px;
 }
-.content ol li {
-    margin-bottom: 15px;
-}
 .content .headerlink {
     visibility: hidden !important;
     color: #00c8ff;
