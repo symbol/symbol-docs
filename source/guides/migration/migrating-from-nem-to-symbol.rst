@@ -3,14 +3,14 @@
     :excerpt: 1
     :nocomments:
 
-############################
-Migrating from NEM to Symbol
-############################
+#############################
+Migrating from NIS1 to Symbol
+#############################
 
 With |codename|, most of the previously available NIS1 features have evolved.
 This document will help you **upgrade your application** previous NIS1 features, to the newly available |codename| technology.
 
-.. note:: This guide is a living document. The information could change as |codename| development advances.
+.. note:: To learn how to move your NIS1 assets to a Symbol account read `the Symbol opt-in guide <https://nemplatform.com/symbol-migration/#acc-tb_mrzh282-5>`__.
 
 .. csv-table:: Comparison between NIS1 and Symbol
    :header: "NEM NIS1", "Symbol"
@@ -186,16 +186,6 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 * Guide: :doc:`Creating a multisig account <../multisig/creating-a-multisig-account>`
 * Guide: :doc:`Sending a multisignature transaction <../aggregate/sending-a-multisig-transaction>`
-
-**********
-Need help?
-**********
-
-After reading this documentation, you might still have some unanswered questions.
-
-In this site, you will find descriptions for every new :doc:`feature <../../concepts/overview>` and :ref:`self-paced guides <blog-categories>` on how to use the **software development kits**.
-
-We invite you to connect with our developer community by joining the |slack|.
 
 .. |symbol-bootstrap| raw:: html
 
