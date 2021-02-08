@@ -1,6 +1,6 @@
-#########
-Migration
-#########
+###################
+Migration from NIS1
+###################
 
 Guides related to migrating from NIS1 to |codename|.
 
