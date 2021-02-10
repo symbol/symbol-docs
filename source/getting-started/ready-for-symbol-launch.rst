@@ -14,7 +14,7 @@ Introduction
 
 Now, **harvesting nodes must have their keys registered in the blockchain** (at least the VRF key), so in order to harvest from block 2, these keys must be **present in the Nemesis block**.
 
-This guide explains the required steps to **make sure that your node's keys will be included in the Nemesis block**. You can always register as a harvester later on :ref:`using the regular mechanisms <../guides/harvesting>`, but being a harvester from block 2 is a requirement for some of the node :doc:`Reward Programs <../concepts/reward-programs>`.
+This guide explains the required steps to **make sure that your node's keys will be included in the Nemesis block**. You can always register as a harvester later on :ref:`using the regular mechanisms <../guides/harvesting>`, but being a harvester early on is a requirement for some of the node :doc:`Reward Programs <../concepts/reward-programs>`.
 
 The process is automated through a **registration tool** built specifically for this purpose.
 
@@ -27,9 +27,9 @@ Prerequisites
 - Your NIS1 account must be `opted-in <https://nemplatform.com/symbol-migration/>`__. The opt-in process creates a new |codename| account that will receive a copy of the NIS1 account's **tokens and associated keys** once |codename| launches. Again, the easiest way to do this is through the **Nano Wallet's opt-in module**:
 
   - Make sure you obtain a **Paper Wallet** for the new account to simplify the process.
-  - When asked about the VRF key, **do not include it** in the opt-in; it's simpler to do it later.
+  - When asked about the VRF key, **do not include it** in the opt-in; it's simpler to do it later. There is no problem if you already included it, it will be detected automatically.
 
-- Your NIS1 account must hold at least **10'000 XEMs**. :ref:`Only accounts holding this amount can harvest <account_eligibility>` on the |codename| network so only these accounts will have their keys added to the Nemesis block.
+- Your NIS1 account must hold at least **10'000 XEMs** at the snapshot block height. :ref:`Only accounts holding this amount can harvest <account_eligibility>` on the |codename| network so only accounts holding this amount at the snapshot will have their keys added to the Nemesis block.
 
 *********************************
 1. Download the registration tool
@@ -52,9 +52,12 @@ Open a terminal, unzip the file and move into the ``symbol-node-registration-cli
 
 The tool will ask you **your NIS1 account address** and query the NIS1 blockchain to retrieve its opted-in |codename| account (Remember that your NIS1 account must be opted-in). Afterwards, the registration tool:
 
-- **Creates VRF, Remote and Voting keys** for the new |codename| account. If the VRF key had already been registered by Nano Wallet, it is reused.
+- **Creates VRF, Remote and (optionally) Voting keys** for the new |codename| account. If the VRF key had already been registered by Nano Wallet, it is reused.
 - **Announces a NIS1 transaction** linking the new |codename| account to its keys. This transaction will be used to populate the Nemesis block on the launch date.
-- **Generates a preset file** that can be used by :doc:`Symbol Bootstrap <../guides/network/using-symbol-bootstrap>` to start with an already-configured node on the launch date.
+
+  .. note:: This transaction must be signed so your NIS1 account **private key** will be requested. The registration tool does not store it **anywhere**.
+
+- **Generates an encrypted preset file** that can be used by :doc:`Symbol Bootstrap <../guides/network/using-symbol-bootstrap>` to start with an already-configured node on the launch date.
 
 All this is done by the ``register`` command:
 
@@ -69,7 +72,7 @@ All this is done by the ``register`` command:
    » Enter password to use to encrypt the Symbol Bootstrap custom preset: ●●●●●●●●
    ...
 
-**Write down** the password you use to encrypt the preset file, you will need it on launch day.
+**Write down** the password you use to encrypt the preset file, you will need it later to configure your node.
 
 At the end of the process a **summary screen** is shown. It is specially worth noting:
 
@@ -109,6 +112,8 @@ Then, **on the launch day**, run ``symbol-bootstrap`` (this command was printed 
 This will use the **preset file** that the registration tool created, which contains your account and related keys. The file is **encrypted** so use the correct password in the command line.
 
 Your node should now be up and running.
+
+.. note:: A mechanism is being researched so you can start your node **in advance** and leave it on "stand by", waiting for the network to boot. This page will be updated with the outcome of this research.
 
 Manually
 ========
