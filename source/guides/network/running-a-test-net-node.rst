@@ -128,7 +128,7 @@ Submitting link keys
 Enabling harvesting
 ===================
 
-|symbol-bootstrap| creates peer nodes with :ref:`remote harvesting <remote-harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to the network.
+|symbol-bootstrap| creates peer nodes with :ref:`remote harvesting <remote-harvesting>` enabled by default, but they still need to be registered by announcing a :ref:`VrfKeyLink transaction <vrf-key-link-transaction>` to the network.
 
 This can be done by |symbol-bootstrap| too, but it needs to be a step separated from ``symbol-bootstrap start`` because funds are required to announce transactions.
 
@@ -138,14 +138,14 @@ Once the node is running with ``symbol-bootstrap start`` and you have funded its
 
     symbol-bootstrap link
 
-This creates the required :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` and submits it to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
+This creates the required :ref:`VrfKeyLink transaction <vrf-key-link-transaction>` and submits it to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
 
 .. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-release-announcement-testnet-launch/25863>`_.
 
 Enabling voting
 ===============
 
-The :ref:`block finalization <finalization>` process requires that network nodes vote about the correctness of blocks before they are added to the blockchain. For your new node to participate it has to register as a voter by announcing a :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` to the network. |symbol-bootstrap| can take care of this too.
+The :ref:`block finalization <finalization>` process requires that network nodes vote about the correctness of blocks before they are definitely added to the blockchain. For your new node to participate it has to register as a voter by announcing a :ref:`VotingKeyLink transaction <voting-key-link-transaction>` to the network. |symbol-bootstrap| can take care of this too.
 
 .. note:: We are going to create a new voting node. If you already created a non-voting node which you no longer need, you can remove the ``target`` folder or, more conveniently, use the ``-r`` switch next time you invoke ``symbol-bootstrap``.
 
@@ -168,7 +168,7 @@ Once the node is running, from a different terminal (but from the same folder), 
 
     symbol-bootstrap link
 
-Just like in the harvesting case, this creates the required :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` and submits it to the network. Upon successful completion, your new node is ready to vote.
+Just like in the harvesting case, this creates the required :ref:`VotingKeyLink transaction <voting-key-link-transaction>` and submits it to the network. Upon successful completion, your new node is ready to vote.
 
 ***************************
 Configuring node properties
