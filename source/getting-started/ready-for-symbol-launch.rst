@@ -113,35 +113,17 @@ This will use the **preset file** that the registration tool created, which cont
 
 Your node should now be up and running.
 
-.. note:: A mechanism is being researched so you can start your node **in advance** and leave it on "stand by", waiting for the network to boot. This page will be updated with the outcome of this research.
+.. note:: A mechanism is being researched so you can **start your node in advance** and leave it on "stand by", waiting for the network to boot. This page will be updated with the outcome of this research.
 
 Manually
 ========
 
-.. note::
-
-   Section coming soon.
+   **Section coming soon.**
 
    You need to extract the information from the preset file using:
-   
+
    .. code-block:: bash
-   
-      bin/symbol-node-registration-cli decrypt
-      
+
+      bin/symbol-node-registration-cli decrypt --showPrivateKeys
+
    And then build the necessary ``catapult-server`` configuration files.
-
-***************
-4. Verification
-***************
-
-.. note::
-
-   Section coming soon.
-
-   Check that your node is properly configured by querying its REST API:
-
-   .. code-block:: bash
-
-      curl http://yourNodeURL:3000/node/info
-
-   **How do we check that harvesting is working?**
