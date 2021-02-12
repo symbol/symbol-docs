@@ -152,6 +152,8 @@ The process requires **installing a monitoring agent** and **announcing a specia
                  --message "enrol NODE_PUBLIC_KEY AGENT_URL" \
                  --mosaics @symbol.xym::0
 
+   **This transaction must be signed by your node's main account**, so make sure it is the default profile in ``symbol-cli``.
+
    This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure your main account has **extra funds** beyond the requirements of the Supernode program.
 
 ******************
