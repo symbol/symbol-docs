@@ -76,6 +76,8 @@ The available **Total daily rewards** are split among all program participants a
 
 - Tier 3 nodes get the remainder, uniformly distributed among them.
 
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q51SJNxeKVFWXQOogRSUrcn8e1Le-k2-/view?usp=sharing>`__.
+
 .. note::
 
     :doc:`Follow this guide to enroll to the Supernode program <../guides/network/supernode-enrollment>`.
@@ -121,6 +123,8 @@ Rewards
         symbol-cli account generate
         symbol-cli transaction votingkeylink
 
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-Ph2KGKN3Vr6GVampFvlfitZHirhthA/view?usp=sharing>`__.
+
 .. _early-adoption-node-program:
 
 ***************************
@@ -143,7 +147,7 @@ Requirements
     * - **Bonded Deposit**
       - At least **500'000** |networkcurrency| must be stacked on the node during the whole period.
     * - **Maximum nodes**
-      - Only **1** node per person is allowed. Account validation and `KYC <https://en.wikipedia.org/wiki/Know_your_customer>`__ is required.
+      - Only **1** node per person is allowed.
     * - **Incompatibility**
       - This program is **not available** to:
           * Nodes registered to the :ref:`ecosystem-node-program`.
@@ -158,6 +162,8 @@ This is a **one-time bonus**, paid in full **one year after the Symbol launch**,
 At the end of the period the node owner will receive **25'000** |networkcurrency|.
 
 Only **the first 75 nodes** to register in this program will be eligible.
+
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-o0MMAFt2JDSIK_pa8k6LLbgGIK7laK/view?usp=sharing>`__.
 
 .. note::
 
@@ -187,7 +193,7 @@ Requirements
 
         At least **250'000** ``xem`` must be stacked on a NIS1 node during the whole period.
     * - **Maximum nodes**
-      - No more than **5** nodes per person are allowed. Account validation and `KYC <https://en.wikipedia.org/wiki/Know_your_customer>`__ is required.
+      - No more than **5** nodes per person are allowed.
     * - **Incompatibility**
       - This program is **not available** to:
           * Nodes registered to the :ref:`early-adoption-node-program`.
@@ -198,6 +204,8 @@ Rewards
 This is a **one-time bonus**, paid in full **18 months after the Symbol launch**, if requirements have been met.
 
 At the end of the period, **3'125'000** |networkcurrency| will be evenly distributed among all participating nodes.
+
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-ipGZ6zsFGwuWjkTcOOof6DS1cJZjbS/view?usp=sharing>`__.
 
 .. note::
 
