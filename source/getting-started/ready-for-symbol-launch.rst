@@ -70,6 +70,7 @@ All this is done by the ``register`` command:
    » Enter the NIS1 opted-in main account address: ●●●●●●●●●●●●●●●●
    » Enter the Mnemonic Phrase from the Paper Wallet: ●●●● ●●●● ●●●● ●●●● ●●●●
    » Enter password to use to encrypt the Symbol Bootstrap custom preset: ●●●●●●●●
+   » Select your Symbol Reward Program: None, EarlyAdoption or Ecosystem
    ...
 
 **Write down** the password you use to encrypt the preset file, you will need it later to configure your node.

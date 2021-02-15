@@ -167,7 +167,7 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-o0MMAFt
 
 .. note::
 
-    Enrolling instructions???
+    :doc:`Follow this guide to enroll to the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``EarlyAdoption`` reward program when prompted.
 
 .. _ecosystem-node-program:
 
@@ -209,4 +209,4 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-ipGZ6zs
 
 .. note::
 
-    Enrolling instructions
+    :doc:`Follow this guide to enroll to the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``Ecosystem`` reward program when prompted.
