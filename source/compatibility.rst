@@ -12,6 +12,7 @@ APIs
     :header: "Milestone", "OpenAPI", "Rest", "SDK TS", "SDK Java"
     :delim: ;
 
+    `v0.10.0.7 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01007---15-feb-2021>`_; v0.11.2; v2.3.3; v0.23.2; v0.23.1
     `v0.10.0.6 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01006---02-feb-2021>`_; v0.11.2; v2.3.2; v0.23.1; v0.23.1
     `v0.10.0.5 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01005---14-jan-2021>`_; v0.11.1; v2.3.0; v0.23.0; v0.23.0
     `v0.10.0.4 <https://github.com/nemtech/catapult-server/blob/main/CHANGELOG.md#01004---04-dec-2020>`_; v0.10.5; v2.2.0; v0.22.2; v0.22.2
@@ -34,6 +35,7 @@ Tools
     :header: "Milestone", "Desktop Wallet", "symbol-cli", "symbol-bootstrap"
     :delim: ;
 
+    `v0.10.0.7`_; v0.14.0; v0.24.1; v0.4.3
     `v0.10.0.6`_; v0.14.0; v0.24.0; v0.4.2
     `v0.10.0.5`_; v0.13.8; v0.23.0; v0.4.0
     `v0.10.0.4`_; v0.13.6; v0.22.1; v0.3.1
