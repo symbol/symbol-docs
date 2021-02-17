@@ -140,7 +140,7 @@ Once the node is running with ``symbol-bootstrap start`` and you have funded its
 
 This creates the required :ref:`AccountKeyLink <account-key-link-transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` transactions and announces them to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
 
-.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-release-announcement-testnet-launch/25863>`_.
+.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-7-release-15-feb-2021/27565>`_.
 
 Enabling voting
 ===============
