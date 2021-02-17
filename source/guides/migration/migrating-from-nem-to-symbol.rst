@@ -66,7 +66,7 @@ The architecture of the TS SDK is inspired by |nem-library| from NIS1.
 
 * Reference: :doc:`REST Gateway <../../api>`
 
-* Reference: `REST API contract <https://docs.symbolplatform.com/symbol-openapi/>`_
+* Reference: `REST API contract <https://docs.symbolplatform.com/symbol-openapi/v0.11.3/>`_
 
 *******************
 Accounts management

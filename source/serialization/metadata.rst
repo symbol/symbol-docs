@@ -58,7 +58,7 @@ Announce a MosaicMetadataTransaction to associate a key-value state to a mosaic.
 
     targetAddress; :schema:`UnresolvedAddress <types.cats>`; Metadata target address.
     scopedMetadataKey; uint64; Metadata key scoped to source, target and type.
-    targetMosaicId; :schema:`UnresolvedMosaicId <L6>`; Target mosaic identifier.
+    targetMosaicId; :schema:`UnresolvedMosaicId <types.cats>`; Target mosaic identifier.
     valueSizeDelta; int16; Change in value size in bytes.
     valueSize; uint16; New value size in bytes.
     value; array(byte, valueSize); Difference between the previous value and new value. You can calculate value as ``xor(previous-value, new-value)``. If there is no previous value, use directly the new value.

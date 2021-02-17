@@ -168,7 +168,7 @@ Proceed to the following guides to put what you have learned into practice!
 - :doc:`Creating private test networks <creating-a-private-test-net>`: How to set up your own private network and access its nodes.
 - :doc:`Running a test net node <running-a-test-net-node>`: How to set up your own node and join |codename|'s test network.
 
-Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#commands>`_ of ``symbol-bootstrap`` commands.
+Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
 
 .. _nodejs: https://nodejs.org/en/download/
 
