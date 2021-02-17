@@ -3,6 +3,7 @@ set -e
 
 echo "Build docs"
 make alldocs
+make linkcheck
 cp CNAME build/html
 
 echo "Moving to build folder"
