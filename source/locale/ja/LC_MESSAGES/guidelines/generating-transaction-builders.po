@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-17 18:38+0000\n"
 "PO-Revision-Date: 2019-06-04 17:23+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,13 +73,13 @@ msgstr "**柔軟性**"
 #: ../../source/guidelines/generating-transaction-builders.rst:64
 msgid ""
 "REST `transaction endpoints <https://docs.symbolplatform.com/symbol-"
-"openapi/#operation/announceTransaction>`_ handle the calls to update the "
-"blockchain state. The serialized payload of a transaction is appended to the"
-" body of the POST call. These endpoints allow the addition of new "
+"openapi/v0.11.3/#operation/announceTransaction>`_ handle the calls to update"
+" the blockchain state. The serialized payload of a transaction is appended "
+"to the body of the POST call. These endpoints allow the addition of new "
 "functionality to the server-side without modifying the API contract."
 msgstr ""
-"REST `トランザクションエンドポイント <https://docs.symbolplatform/symbol-"
-"openapi/#operation/announceTransaction>`_ "
+"REST `トランザクションエンドポイント <https://docs.symbolplatform.com/symbol-"
+"openapi/v0.11.3/#operation/announceTransaction>`_ "
 "はブロックチェーンの状態を更新する呼び出しをハンドリングします。シリアライズされたトランザクションのペイロードは POST "
 "呼び出しのボディに追加されます。これらのエンドポイントにより、API 規約を変更せずにサーバ側へ新しい機能を追加することができます。"
 

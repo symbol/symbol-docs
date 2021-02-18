@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-17 18:38+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,22 +118,22 @@ msgstr ""
 msgid ""
 "You can find under the ``crypto`` module how to `encode "
 "<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/main/src/core/crypto/Crypto.ts#L253-L264>`_ and `decode "
+"javascript/blob/main/src/core/crypto/Crypto.ts#L116-L126>`_ and `decode "
 "<https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/main/src/core/crypto/Crypto.ts#L304-L315>`_ encrypted "
+"javascript/blob/main/src/core/crypto/Crypto.ts#L162-L178>`_ encrypted "
 "messages, but we recommend you to use the available `SDK public methods "
 "<https://docs.symbolplatform.com/symbol-sdk-typescript-"
-"javascript/classes/_model_account_account_.account.html#decryptmessage>`_ "
-"instead."
+"javascript/0.23.2/classes/_model_account_account_.account.html#decryptmessage>`_"
+" instead."
 msgstr ""
 "``crypto`` モジュールの下に暗号化メッセージの `エンコード <https://github.com/nemtech/symbol-sdk-"
-"typescript-javascript/blob/main/src/core/crypto/Crypto.ts#L253-L264>`_ と "
+"typescript-javascript/blob/main/src/core/crypto/Crypto.ts#L116-L126>`_ と "
 "`デコード <https://github.com/nemtech/symbol-sdk-typescript-"
-"javascript/blob/main/src/core/crypto/Crypto.ts#L304-L315>`_ "
+"javascript/blob/main/src/core/crypto/Crypto.ts#L162-L178>`_ "
 "の方法を発見することができますが、替わりに `SDK のパブリックメソッド <https://docs.symbolplatform.com"
 "/symbol-sdk-typescript-"
-"javascript/classes/_model_account_account_.account.html#decryptmessage>`_ "
-"を使用することを推奨します。"
+"javascript/0.23.2/classes/_model_account_account_.account.html#decryptmessage>`_"
+" を使用することを推奨します。"
 
 #: ../../source/concepts/transfer-transaction.rst:83
 msgid "Related transactions"

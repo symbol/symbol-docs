@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-17 18:38+0000\n"
 "PO-Revision-Date: 2020-06-19 17:51+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -35,15 +35,3 @@ msgstr ""
 #: ../../source/compatibility.rst:1 ../../source/compatibility.rst:1
 msgid "Milestone"
 msgstr "マイルストーン"
-
-#: ../../source/compatibility.rst:61
-msgid "Wallets"
-msgstr "ウォレット"
-
-#: ../../source/compatibility.rst:1
-msgid "Desktop"
-msgstr "デスクトップ"
-
-#: ../../source/compatibility.rst:1
-msgid "CLI"
-msgstr "CLI"
