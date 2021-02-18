@@ -2,11 +2,13 @@
 Consensus
 #########
 
-The consensus protocol is the dynamic method through which blockchain systems reach an agreement and make decisions.
-|codename| utilizes an innovative mechanism called the Proof-of-Stake Plus, a modified version of the popular Proof-of-Stake (|pos|) protocol. 
+The consensus protocol is the dynamic method through which nodes in a blockchain system **reach an agreement** and **make decisions**.
 
-In a basic Proof of Stake consensus algorithm, the formation of a subsequent block in a blockchain is stochastically assigned to a coin-holding stakeholder of the blockchain weighed by a combination of factors relating to the stakeholders' wealth.
-The PoS+ protocol also considers accounts' stakes, but it is designed to promote the ecosystem's health by rewarding participants based on their activity.
+|codename| utilizes an innovative mechanism called the **Proof-of-Stake Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) protocol. 
+
+In a basic **PoS** consensus algorithm, the formation of a new block in the blockchain is stochastically assigned to a node based on a combination of factors **related exclusively to the node owner's wealth**.
+
+The **PoS+** protocol considers the account's stakes too, but it also promotes the ecosystem's health by rewarding participants **based on their activity**.
 
 .. _importance-calculation:
 
@@ -14,55 +16,66 @@ The PoS+ protocol also considers accounts' stakes, but it is designed to promote
 Factors
 *******
 
-The algorithm considers the following factors to improve the ecosystem’s health perspective:
+The algorithm considers the following factors when calculating an account's **importance**, the measure that will ultimately be used to choose the next harvesting node:
 
-* **Stake**: The total amount of the :ref:`harvesting mosaic <harvesting-mosaic>` owned. Owners with larger balances have the incentive to see the ecosystem flourish.
-* **Transactions**: The total amount of fees paid by an account. Being an active account in the network is encouraged.
-* **Nodes**: The number of times an account is a beneficiary of a block. The network incentivizes active accounts running nodes for securing the network.
+* **Stake**: The total amount of :ref:`harvesting mosaic <harvesting-mosaic>` held, since owners with larger balances have the incentive to see the ecosystem flourish. Only accounts holding more than 10'000 harvesting mosaics (**high-value accounts**) are :ref:`eligible <account_eligibility>` for harvesting.
+* **Transactions**: The total amount of :doc:`fees <fees>` paid by an account. This encourages being an active account in the network.
+* **Nodes**: The number of times an account has been the :ref:`beneficiary <harvesting-rewards>` of the fees collected by a node. Thus the network incentivizes accounts which run nodes.
 
-All high-value accounts receive an **importance score** based on these three factors that determines the probability to :doc:`harvest <harvesting>` a block.
+Periodically, an **importance score** based on these three factors is calculated for all high-value accounts. The importance score determines an account's probability to :doc:`harvest <harvesting>` the next block.
 
-******
-Scores
-******
+**************
+Partial scores
+**************
 
-The network calculates the following sub scores for all high-value accounts for each factor:
+The network calculates first the following **partial scores** for all high-value accounts at the end of each importance period (180 blocks, roughly 90 minutes. See ``importanceGrouping`` in :ref:`config-network-properties`):
 
-* **Stake Score (S`)**: Percentage of the effective balance of all high value accounts at time P.
-* **Transaction Score (T`)**: Percentage of total transaction fees among all high-value accounts in period P-1 to P.
-* **Node Score (N`)**: Percentage of total beneficiaries among all blocks in period P-1 to P.
+* **Stake Score** (:math:`S`): Account's balance divided by the balance of all high value accounts, at the end of the period.
+* **Transaction Score** (:math:`T`): Total amount of fees paid by the account divided by the total amount of fees paid by all high value accounts during the period.
+* **Node Score** (:math:`N`): Number of times the account has been the :ref:`beneficiary <harvesting-rewards>` of a node fee divided by the number of times all high value accounts have been the beneficiary of a node fee, during the period.
+* **Activity Score** (:math:`A`): Average of the :math:`T` and :math:`N` scores weighted **80%** and **20%** respectively, divided by the account's balance. Dividing by the account's balance gives some boost to small accounts, because their importance score will depend more on their activity and less on their stake.
 
-*********
-Constants
-*********
+  An absolute activity score (:math:`A'`) is calculated first:
 
-Each network can define custom consensus algorithm :ref:`constants <config-network-properties>`.
+  .. math::
+  
+     A' = \frac{10000}{Balance}(0.8T+0.2N)
 
-.. csv-table::
-    :header: "Constant", "Value", "Description"
-    :delim: ;
-    :widths: 30 30 40
+  And the actual activity score (:math:`A`) is calculated by dividing :math:`A'` by the sum of the absolute activity scores of all high value accounts.
 
-    a; 0.05; Network wide contribution of activity score.
-    p; 10000; Constants to tune phasing out of activity score.
-    t; 0.8; Transaction score multiplier.
-    n; 0.2; Node score multiplier.
+The importance score is then calculated based on the above partial scores.
 
-***********
-Calculation
-***********
+****************
+Importance score
+****************
 
-The importance can be calculated for each account in the following manner:
+The importance score :math:`I` is finally calculated as the average of the :math:`S` and :math:`A` scores, weighted by an activity factor :math:`\gamma`:
 
 .. math::
 
-    (1 - a) * (S') + a * || p / (S') * (t * (T') + n * (N')) ||
+    I = \gamma A + (1-\gamma)S
 
-The combination of Transaction Score and Node Score has a multiplier effect when Stake Score is low.
-Conversely, the multiplier effect is insignificant when Stake Score is high.
+In the |codename| network :math:`\gamma` is 0.05 (**5%**)
+
+Finally, among all accounts :ref:`eligible for harvesting <account_eligibility>`, the probability that a particular one is chosen is proportional to its importance score :math:`I`.
+
+*************
+Customization
+*************
+
+Private networks can **customize the consensus algorithm** by changing the following configuration properties. See :ref:`config-network-properties`.
+
+.. csv-table::
+    :header: "Property", "Default", "Description"
+    :delim: ;
+    :widths: 40 15 45
+
+    ``importanceGrouping``; 180 blocks; How often importance is calculated.
+    ``minHarvesterBalance``; 10000; Minimum balance required to be eligible for harvesting.
+    ``importanceActivityPercentage``; 0.05; Contribution of the activity score (:math:`\gamma`). When it is 0, PoS+ consensus behaves like conventional PoS.
+
+Continue: :doc:`Harvesting <harvesting>`.
 
 .. |pos| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">PoS</a>
-
-Continue: :doc:`Harvesting <harvesting>`.
