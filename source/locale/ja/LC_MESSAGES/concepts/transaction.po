@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-17 18:38+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -360,11 +360,11 @@ msgid ""
 "Signed transactions are ready to be announced to the network. You can either"
 " use the SDK ``TransactionHttp`` service or append the payload to the "
 "request of the `transaction endpoint <https://docs.symbolplatform.com"
-"/symbol-openapi/#operation/announceTransaction>`_."
+"/symbol-openapi/v0.11.3/#operation/announceTransaction>`_."
 msgstr ""
 "署名されたトランザクションはネットワークにアナウンスする準備ができています。SDK ``TransactionHttp`` "
 "サービスを使用するか、ペイロードを `トランザクションエンドポイント <https://docs.symbolplatform.com/symbol-"
-"openapi/#operation/announceTransaction>`_ のリクエストに追加することができます。"
+"openapi/v0.11.3/#operation/announceTransaction>`_ のリクエストに追加することができます。"
 
 #: ../../source/concepts/transaction.rst:170
 msgid ""

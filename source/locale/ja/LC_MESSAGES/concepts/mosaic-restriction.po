@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-02-17 18:38+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgstr "モザイク制限"
 msgid ""
 "Mosaic restrictions allow :doc:`mosaic <mosaic>` creators to decide which "
 "accounts can transact with the asset."
-msgstr "モザイク制限により :doc:`モザイク <mosaic>` 作成者はどのアカウントがアセット取引できるかを決定することができます。"
+msgstr "モザイク制限は :doc:`モザイク <mosaic>` 作成者に、どのアカウントがアセットを取引できるかを決定できるようにします。"
 
 #: ../../source/concepts/mosaic-restriction.rst:40
 msgid ""
@@ -40,7 +40,7 @@ msgid ""
 "subject to regulation under security laws, and thus need a way to bypass "
 "blockchain autonomy."
 msgstr ""
-"この機能は **Security Token Offerings (STO)** 用に特別に調整されています。ICO "
+"この機能は特に **Security Token Offerings (STO)** に向けて調整されています。ICO "
 "を通じて導入された規制されていないトークンとは対照的に、セキュリティトークンはセキュリティ法に基づく規制の対象となる、価値のブロックチェーンベースの表現であるため、ブロックチェーン自治を回避する方法が必要です。"
 
 #: ../../source/concepts/mosaic-restriction.rst:43
@@ -127,7 +127,7 @@ msgid ""
 "Type of constraint to apply. For example, the restriction value should be "
 "equal (EQ). See more :ref:`restriction types <mosaic-restriction-type>`."
 msgstr ""
-"適用する制約の種類。たとえば、制限値は等しい(EQ)必要がある場合。もっと詳しく :ref:`制限タイプ <mosaic-restriction-"
+"適用する制約の種類。たとえば、制限値が等しい (EQ) 必要がある場合。より詳細は :ref:`制限タイプ <mosaic-restriction-"
 "type>` を参照してください。"
 
 #: ../../source/concepts/mosaic-restriction.rst:69
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 "モザイク作成者はアカウントアドレスを対象としたモザイク制限トランザクションを送信することで **アカウントのアクセス権を変更する** ことができます。 "
 ":ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-"
-"transaction>` は以下で構成されています:"
+"transaction>` は以下で構成されます:"
 
 #: ../../source/concepts/mosaic-restriction.rst:1
 msgid "Affected address."
