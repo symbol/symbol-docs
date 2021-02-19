@@ -26,6 +26,8 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    If you already have some of the node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#specify-the-nodes-keys>`__.
 
+   .. note:: If you want to manage your node through a :doc:`multisig account <../../concepts/multisig-account>` you need to :doc:`create it <../multisig/creating-a-multisig-account>` first and then provide the multisig account as the **main** account in the preset file as explained above.
+
 2. **Create and run the node** using the new preset file:
 
    Along with the standard node services, this will also download and install the **monitoring agent**.
