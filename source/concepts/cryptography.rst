@@ -2,7 +2,7 @@
 Cryptography
 ############
 
-|codename| uses **elliptic curve cryptography** to verify the data integrity and to authenticate the signer's identity.
+|codename| uses `elliptic curve cryptography <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__ to verify data integrity and to authenticate a signer's identity.
 
 .. _keypair:
 
@@ -10,26 +10,51 @@ Cryptography
 Key pair
 ********
 
-Elliptic curve cryptography is an approach to public key cryptography.
-The cryptographic system uses **pairs of keys**:
+Elliptic curve cryptography is based on **key pairs**: a private and a matching public key. In particular, |codename| uses the `Twisted Edwards curve <https://en.wikipedia.org/wiki/Twisted_Edwards_curve>`__ with the digital signature algorithm named `Ed25519 <https://ed25519.cr.yp.to>`__ and hashing algorithm **SHA-512**:
 
-* **Private key**: A random 256-bit integer used to sign :ref:`entities <verifiable-entity>` known by the owner.
+* **Private key**: A random 256-bit (64 byte) integer used to sign :ref:`entities <verifiable-entity>` known by the owner.
 
-* **Public key**: The public identifier of the key pair, which can be disseminated widely. It is used to prove that the entity was signed with the paired private key.
+* **Public key**: A 128-bit (32 bytes) integer derived from the private key. It serves as the public identifier of the key pair and can be disseminated widely. It is used to prove that an entity was signed with the paired private key.
 
-The public key is cryptographically derived from the private key.
-In particular, |codename| uses the |edwards| with the digital signature algorithm named |Ed25519| and hashing algorithm **SHA-512**.
+The public key can be derived from the private key, but **not the other way around**.
 
-You can find the |implementation-derivation| under the ``crypto`` module of :doc:`catapult-server <../server>`.
+The implementation can be found in the `crypto module <https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto>`__  of :doc:`catapult-server <../server>`.
+
+|codename| keys
+===============
+
+Key pairs are used in |codename| in different places, for **different purposes**. This is a summary of the keys used:
+
+* **Main**: This key pair manages a **regular** :doc:`account`, containing mosaics.
+* **Remote**: This key pair manages the **remote account** used in :ref:`remote-harvesting`.
+* **VRF**: Required :ref:`for harvesting <account_eligibility>`.
+* **Voting**: Required for nodes participating in the :ref:`finalization` process.
+* **Transport**: This key pair is used by nodes for secure transport over `TLS <https://en.wikipedia.org/wiki/Transport_Layer_Security>`__.
+
+.. note::
+
+   As a rule of thumb, the **private key** in any key pair should be kept secret at all times. However, **how bad is it to have a private key stolen?**
+
+   .. csv-table::
+      :header: "Key", "Severity", "Impact"
+      :widths: 20,20,60
+      :delim: ;
+
+      **Main**; 🔴 HIGH; Funds could be transferred to another account.
+      **Remote**; 🟠 MED; Harmless to the account or the node. Easily reverted by linking another remote account. An attacker grabbing a large number of remote keys could gain a lot of harvesting power, influencing which blocks are added to the blockchain.
+      **VRF**; 🟡 LOW; Harmless without the key used for harvesting.
+      **Voting**; 🟠 MED; Harmless to the account or the node. Easily reverted by linking another voting account. An attacker grabbing more than 50% of the network's voting keys could influence block finalization.
+      **Transport**; 🟡 LOW; An attacker could steal harvesting delegations away from the node, but harmless otherwise.
 
 *********
 Signature
 *********
 
-With a private key, the algorithm can sign messages producing 64-byte signatures.
-A signature is used to validate that a given key pair signed an entity just having the public key.
+**Messages can be signed** using a private key, producing 512-bit (128 byte) **signatures**.
 
-You can find the implementation to |implementation-signature| and |implementation-verification| under the ``crypto`` module of :doc:`catapult-server <../server>`.
+Using the matching public key signatures can then **validate** that the key pair signed an entity.
+
+The implementation can be found in the `Signer class <https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp>`__ under the ``crypto`` module of :doc:`catapult-server <../server>`.
 
 .. _address:
 
@@ -37,62 +62,18 @@ You can find the implementation to |implementation-signature| and |implementatio
 Address
 *******
 
-Public keys can be shared in a shorter form as addresses.
-A |codename| address is a **Base32 encoded triplet** consisting of:
+|codename| public keys can be shared in a **shorter form** as 39-character addresses.
 
-* The network byte.
-* The 160-bit hash of the account's public key.
-* The 3 byte checksum, to allow the quick recognition of mistyped addresses.
+First, a 24-byte triplet is built, consisting of:
 
-The following steps are performed to |implementation-public-key-address|:
+* A network-id byte.
+* A 160-bit (20 byte) hash of the account's public key.
+* A 3-byte checksum, to allow the quick recognition of mistyped addresses.
 
-.. code-block:: cpp
+Then, the whole string is `Base32-encoded <https://en.wikipedia.org/wiki/Base32>`__ to produce the 39-character address.
 
-	Address PublicKeyToAddress(const Key& publicKey, NetworkIdentifier networkIdentifier) {
-		// step 1: sha3 hash of the public key
-		Hash256 publicKeyHash;
-		crypto::Sha3_256(publicKey, publicKeyHash);
+The implementation can be found in the `PublicKeyToAddress() <https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp>`__ method of :doc:`catapult-server <../server>`.
 
-		// step 2: ripemd160 hash of (1)
-		Address decoded;
-		crypto::Ripemd160(publicKeyHash, reinterpret_cast<Hash160&>(decoded[1]));
-
-		// step 3: add network identifier byte in front of (2)
-		decoded[0] = utils::to_underlying_type(networkIdentifier);
-
-		// step 4: concatenate (3) and the checksum of (3)
-		Hash256 step3Hash;
-		crypto::Sha3_256(RawBuffer{ decoded.data(), Hash160::Size + 1 }, step3Hash);
-		std::copy(step3Hash.cbegin(), step3Hash.cbegin() + Checksum_Size, decoded.begin() + Hash160::Size + 1);
-
-		return decoded;
-	}
-
-As you can see, it is possible to create an address without interacting with the blockchain.
-In fact, the blockchain only tracks addresses and public keys when they first appear in one transaction.
-
-.. |edwards| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Twisted_Edwards_curve" target="_blank">Twisted Edwards curve</a>
-
-.. |Ed25519| raw:: html
-
-   <a href="https://ed25519.cr.yp.to/" target="_blank">Ed25519</a>
-
-.. |implementation-derivation| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto" target="_blank">implementation</a>
-
-.. |implementation-signature| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp" target="_blank">sign entities</a>
-
-.. |implementation-verification| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp" target="_blank">verify them</a>
-
-.. |implementation-public-key-address| raw:: html
-
-   <a href="https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp" target="_blank">convert a public key to an address</a>
+It is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in a transaction.
 
 Continue: :doc:`Block <block>`.
