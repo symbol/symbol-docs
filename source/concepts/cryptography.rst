@@ -12,9 +12,9 @@ Key pair
 
 Elliptic curve cryptography is based on **key pairs**: a private and a matching public key. In particular, |codename| uses the `Twisted Edwards curve <https://en.wikipedia.org/wiki/Twisted_Edwards_curve>`__ with the digital signature algorithm named `Ed25519 <https://ed25519.cr.yp.to>`__ and hashing algorithm **SHA-512**:
 
-* **Private key**: A random 256-bit (64 byte) integer used to sign :ref:`entities <verifiable-entity>` known by the owner.
+* **Private key**: A random 256-bit (32 byte) integer used to sign :ref:`entities <verifiable-entity>` known by the owner.
 
-* **Public key**: A 128-bit (32 bytes) integer derived from the private key. It serves as the public identifier of the key pair and can be disseminated widely. It is used to prove that an entity was signed with the paired private key.
+* **Public key**: A 256-bit (32 bytes) integer derived from the private key. It serves as the public identifier of the key pair and can be disseminated widely. It is used to prove that an entity was signed with the paired private key.
 
 The public key can be derived from the private key, but **not the other way around**.
 
@@ -25,7 +25,7 @@ The implementation can be found in the `crypto module <https://github.com/nemtec
 
 Key pairs are used in |codename| in different places, for **different purposes**. This is a summary of the keys used:
 
-* **Main**: This key pair manages a **regular** :doc:`account`, containing mosaics.
+* **Main**: This key pair manages a **regular** :doc:`account`, containing assets like mosaics or namespaces.
 * **Remote**: This key pair manages the **remote account** used in :ref:`remote-harvesting`.
 * **VRF**: Required :ref:`for harvesting <account_eligibility>`.
 * **Voting**: Required for nodes participating in the :ref:`finalization` process.
@@ -50,9 +50,9 @@ Key pairs are used in |codename| in different places, for **different purposes**
 Signature
 *********
 
-**Messages can be signed** using a private key, producing 512-bit (128 byte) **signatures**.
+**Messages can be signed** using a private key, producing 512-bit (64 byte) **signatures**.
 
-Using the matching public key signatures can then **validate** that the key pair signed an entity.
+Using the matching public key, signatures can then **validate** that the key pair signed an entity.
 
 The implementation can be found in the `Signer class <https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp>`__ under the ``crypto`` module of :doc:`catapult-server <../server>`.
 
