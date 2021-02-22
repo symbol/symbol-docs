@@ -18,8 +18,6 @@ Elliptic curve cryptography is based on **key pairs**: a private and a matching 
 
 The public key can be derived from the private key, but **not the other way around**.
 
-The implementation can be found in the `crypto module <https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto>`__  of :doc:`catapult-server <../server>`.
-
 |codename| keys
 ===============
 
@@ -54,8 +52,6 @@ Signature
 
 Using the matching public key, signatures can then **validate** that the key pair signed an entity.
 
-The implementation can be found in the `Signer class <https://github.com/nemtech/catapult-server/blob/main/src/catapult/crypto/Signer.cpp>`__ under the ``crypto`` module of :doc:`catapult-server <../server>`.
-
 .. _address:
 
 *******
@@ -71,8 +67,6 @@ First, a 24-byte triplet is built, consisting of:
 * A 3-byte checksum, to allow the quick recognition of mistyped addresses.
 
 Then, the whole string is `Base32-encoded <https://en.wikipedia.org/wiki/Base32>`__ to produce the 39-character address.
-
-The implementation can be found in the `PublicKeyToAddress() <https://github.com/nemtech/catapult-server/blob/main/src/catapult/model/Address.cpp>`__ method of :doc:`catapult-server <../server>`.
 
 It is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in a transaction.
 
