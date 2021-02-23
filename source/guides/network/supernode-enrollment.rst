@@ -80,11 +80,11 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
 1. **Download the node monitoring agent**:
 
-   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/agent_binary/agent-linux.bin>`__ and make it executable:
+   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/0.1.0/agent_binary/agent-linux.bin>`__ and make it executable:
 
    .. code-block:: bash
 
-      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/agent_binary/agent-linux.bin
+      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/0.1.0/agent_binary/agent-linux.bin
       chmod +x agent-linux.bin
 
 2. **Create certificates** for the monitoring agent:
@@ -164,12 +164,12 @@ Validate the setup
 
 You can **validate your node** by checking that all services are running properly. Check that the following URLs return valid data:
 
-* `localhost:3000/chain/info <https://localhost:3000/chain/info>`__: Node's connection to the network.
-* `localhost:3000/node/info <https://localhost:3000/node/info>`__: Node's health.
-* `localhost:7880/metadata <https://localhost:7880/metadata>`__: Agent's report.
+* `localhost:3000/chain/info <http://localhost:3000/chain/info>`__: Node's connection to the network.
+* `localhost:3000/node/info <http://localhost:3000/node/info>`__: Node's health.
+* `localhost:7880/metadata <http://localhost:7880/metadata>`__: Agent's report.
 
 And then check again that they are accessible through your public host name:
 
-* `myNodePublicHostName:3000/chain/info <https://myNodePublicHostName:3000/chain/info>`__: Node's connection to the network.
-* `myNodePublicHostName:3000/node/info <https://myNodePublicHostName:3000/node/info>`__: Node's health.
-* `myNodePublicHostName:7880/metadata <https://myNodePublicHostName:7880/metadata>`__: Agent's report.
+* `myNodePublicHostName:3000/chain/info <http://myNodePublicHostName:3000/chain/info>`__: Node's connection to the network.
+* `myNodePublicHostName:3000/node/info <http://myNodePublicHostName:3000/node/info>`__: Node's health.
+* `myNodePublicHostName:7880/metadata <http://myNodePublicHostName:7880/metadata>`__: Agent's report.
