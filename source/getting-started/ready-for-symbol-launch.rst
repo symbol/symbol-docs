@@ -14,7 +14,7 @@ Introduction
 
 Now, **harvesting nodes must have their keys registered in the blockchain** (at least the VRF key), so in order to harvest from block 2, these keys must be **present in the Nemesis block**.
 
-This guide explains the required steps to **make sure that your node's keys will be included in the Nemesis block**. You can always register as a harvester later on :ref:`using the regular mechanisms <../guides/harvesting>`, but being a harvester early on is a requirement for some of the node :doc:`Reward Programs <../concepts/reward-programs>`.
+This guide explains the required steps to **make sure that your node's keys will be included in the Nemesis block**. You can always register as a harvester later on :doc:`using the regular mechanisms <../guides/accountlink/activating-delegated-harvesting>`, but being a harvester early on is a requirement for some of the node :doc:`Reward Programs <../concepts/reward-programs>`.
 
 The process is automated through a **registration tool** built specifically for this purpose.
 
