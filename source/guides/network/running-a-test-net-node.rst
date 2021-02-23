@@ -16,6 +16,34 @@ You can use the test net to experiment with the offered |codename|'s transaction
 
 To run the network, we are going to use the package |symbol-bootstrap|. To better understand how this package works it is highly recommended to read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide.
 
+*********************
+Hardware requirements
+*********************
+
+Running a blockchain node is **very demanding** in terms of disk space, memory and CPU requirements. Failure to meet the **following minimum requirements** will produce a node that will struggle to keep up with the rest of the network. The global blockchain will not be affected but the node will rarely be eligible to collect any node rewards.
+
+.. note:: It is **strongly recommended** to use **dedicated CPU and RAM**. When they are shared (as is the case on some Virtual Server providers) performance is heavily impacted.
+
+.. csv-table:: Minimum node specifications
+   :header: "Requirement", "Peer node", "API node", "Dual & Voting node"
+   :delim: ;
+
+   CPU; 2 cores; 4 cores; 4 cores
+   RAM; 8GB; 16GB; 16GB
+   Disk size; 500 GB; 750 GB; 750 GB
+   Disk speed; 1500 |iops| |ssd|; 1500 |iops| |ssd|; 1500 |iops| |ssd|
+
+The following table shows the **recommended requirements**. Using these will provide a much smoother experience and provide a certain degree of future proofing.
+
+.. csv-table:: Recommended node specifications
+   :header: "Requirement", "Peer node", "API node", "Dual & Voting node"
+   :delim: ;
+
+   CPU; 4 cores; 8 cores; 8 cores
+   RAM; 16GB; 32GB; 32GB
+   Disk size; 500 GB; 750 GB; 750 GB
+   Disk speed; 1500 |iops| |ssd|; 1500 |iops| |ssd|; 1500 |iops| |ssd|
+
 **********************
 The ``testnet`` preset
 **********************
@@ -205,3 +233,11 @@ And don't forget to check :ref:`the rest of the guides <blog-categories>` to con
 .. |symbol-bootstrap| raw:: html
 
    <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
+
+.. |ssd| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Solid-state_drive" target="_blank">SSD</a>
+
+.. |iops| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/IOPS" target="_blank">IOPS</a>
