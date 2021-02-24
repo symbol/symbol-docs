@@ -24,7 +24,7 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true``.
 
-   If you already have some of the node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#specify-the-nodes-keys>`__.
+   If you already have some of the node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-keys>`__.
 
    .. note:: If you want to manage your node through a :doc:`multisig account <../../concepts/multisig-account>` you need to :doc:`create it <../multisig/creating-a-multisig-account>` first and then provide the multisig account as the **main** account in the preset file as explained above.
 
@@ -168,8 +168,4 @@ You can **validate your node** by checking that all services are running properl
 * `localhost:3000/node/info <http://localhost:3000/node/info>`__: Node's health.
 * `localhost:7880/metadata <http://localhost:7880/metadata>`__: Agent's report.
 
-And then check again that they are accessible through your public host name:
-
-* `myNodePublicHostName:3000/chain/info <http://myNodePublicHostName:3000/chain/info>`__: Node's connection to the network.
-* `myNodePublicHostName:3000/node/info <http://myNodePublicHostName:3000/node/info>`__: Node's health.
-* `myNodePublicHostName:7880/metadata <http://myNodePublicHostName:7880/metadata>`__: Agent's report.
+And then check again that they are accessible through your public host name.
