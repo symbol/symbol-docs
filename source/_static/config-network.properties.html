@@ -1,6 +1,6 @@
 <!-- File generated using catapult-docs-cli -->
 Network configuration settings.<br/>
-<small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v0.10.0.3
+<small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v0.10.0.7
 </small>
 
 <table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>TESTNET</th></tr></thead><tbody valign="top">
@@ -17,9 +17,9 @@ Network configuration settings.<br/>
 <tr><td><code class="docutils literal"><span class="pre">epochAdjustment</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>1573430400s</td><td>1573430400s</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis epoch time adjustment.</small></td></tr>
 <tr style="background-color:#E0E0E0"><td colspan=4><b>chain</b></td><td></td><td></td><td></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">enableVerifiableState</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableVerifiableState</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate state hashes so that state is fully verifiable at each block.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">enableVerifiableReceipts</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableVerifiableReceipts</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate receipts so that state changes are fully verifiable at each block.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">currencyMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used as primary chain currency.</small></td></tr>
@@ -43,11 +43,11 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum lifetime a transaction can have before it expires.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxBlockFutureTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>500ms</td><td>500ms</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum future time of a block that can be accepted.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">initialCurrencyAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>8'998'999'998'000'000</td><td>7'831'975'436'000'000</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">initialCurrencyAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>8'999'999'998'000'000</td><td>7'831'975'436'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Initial currency atomic units available in the network.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMosaicAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>9'000'000'000'000'000</td><td>9'000'000'000'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum atomic units (total-supply * 10 ^ divisibility) of a mosaic allowed in the network.</small></td></tr>
-<tr><td><code class="docutils literal"><span class="pre">totalChainImportance</span></code></td><td><code class="docutils literal"><span class="pre">Importance</span></code></td><td>15'000'000</td><td>7'831'975'436'000'000</td></tr>
+<tr><td><code class="docutils literal"><span class="pre">totalChainImportance</span></code></td><td><code class="docutils literal"><span class="pre">Importance</span></code></td><td>17'000'000</td><td>7'831'975'436'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Total whole importance units available in the network.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">minHarvesterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>10'000'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.</small></td></tr>
