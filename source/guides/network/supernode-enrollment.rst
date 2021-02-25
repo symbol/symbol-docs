@@ -24,9 +24,9 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true``.
 
-   If you already have some of the node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-keys>`__.
+   If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-keys>`__.
 
-   .. note:: If you want to manage your node through a :doc:`multisig account <../../concepts/multisig-account>` you need to :doc:`create it <../multisig/creating-a-multisig-account>` first and then provide the multisig account as the **main** account in the preset file as explained above.
+   .. note:: When managing your node through a :doc:`multisig account <../../concepts/multisig-account>`, the **main** account in the above preset file must be **the multisig account** (and **not** any of its cosignatories).
 
 2. **Create and run the node** using the new preset file:
 
