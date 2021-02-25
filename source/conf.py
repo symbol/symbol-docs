@@ -337,7 +337,7 @@ blog_authors = {}
 
 # -- Options for linkcheck ------------------------------------------------
 
-linkcheck_ignore = [r'http://localhost', r'https://docs.symbolplatform.com/symbol-openapi/[^/]*/#', r'.*\.ts', r'.*\.js', r'.*\.java']
+linkcheck_ignore = [r'http://localhost', r'https://localhost', r'https://docs.symbolplatform.com/symbol-openapi/[^/]*/#', r'.*\.ts', r'.*\.js', r'.*\.java']
 linkcheck_anchors_ignore = [r'L\d+']
 
 # -- Options for viewsource ------------------------------------------------

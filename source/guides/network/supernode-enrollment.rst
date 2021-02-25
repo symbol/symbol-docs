@@ -164,8 +164,8 @@ Validate the setup
 
 You can **validate your node** by checking that all services are running properly. Check that the following URLs return valid data:
 
-* `localhost:3000/chain/info <http://localhost:3000/chain/info>`__: Node's connection to the network.
-* `localhost:3000/node/info <http://localhost:3000/node/info>`__: Node's health.
-* `localhost:7880/metadata <http://localhost:7880/metadata>`__: Agent's report.
+* `http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: Node's connection to the network.
+* `http://localhost:3000/node/info <http://localhost:3000/node/info>`__: Node's health.
+* `https://localhost:7880/metadata <https://localhost:7880/metadata>`__: Agent's report.
 
 And then check again that they are accessible through your public host name.
