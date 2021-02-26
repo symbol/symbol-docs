@@ -43,9 +43,9 @@ Guide
       :class: with-shadow
       :target: /_images/delegated-harvesting-wallet-0.png
 
-   Note that the **Harvesting status** is **INACTIVE**.
+   Note that the **Harvesting status** is **🔴 INACTIVE**.
 
-2. **Click on the Node Url box** to see a list of nodes currently connected to the network:
+2. **Click on the "Node Url" box** to see a list of nodes currently connected to the network:
    
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-1.png
       :align: center
@@ -63,59 +63,65 @@ Guide
       
          http://api-01.eu-west-1.testnet.symboldev.network:3000
 
-3. **Select a node from the list and click on the Start button**. You will be asked to sign two transactions (in a single dialog box). The first one is an **aggregate transaction**:
+3. **Select a node from the list and click on the "Link all keys" button** (You will probably need to scroll down past the "Keys Info" section).
+
+   You will be asked to sign an :doc:`../../concepts/aggregate-transaction`:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-2.png
       :align: center
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-2.png
 
-   This aggregate transaction registers 3 different keys to your account which are needed for harvesting. The second transaction:
+   This aggregate transaction registers :ref:`3 different keys <keypair>` to your account which are needed for harvesting. 
+
+4. **Enter your password and click "Confirm"**.
+
+   The Desktop Wallet will then **sign the transaction** and **announce it to the network**. After a little while (shouldn't take longer than 30 seconds), the screen should update:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-3.png
       :align: center
-      :class: with-rounded-shadow
+      :class: with-shadow
       :target: /_images/delegated-harvesting-wallet-3.png
 
-   Is a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` which is the actual request to the node.
+   You can see that the **Harvesting status** has changed to **🟡 KEYS LINKED** and the different keys appear in the form.
 
-4. **Enter your password and click Confirm**.
+   All that is left now is to send a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` which is the actual request to the node.
 
-   The Desktop Wallet will then **sign both transactions** and **announce the first one**:
+5. **Click on the "Activate" button**.
+
+   Your password is needed again to encrypt the persistent delegation message sent to the node:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-4.png
       :align: center
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-4.png
 
-   (The second transaction cannot be announced until the first one is **confirmed**).
+6. **Enter your password and click "Confirm"**.
 
-5. **Wait until the first transaction is confirmed** (shouldn't take more than 30 seconds):
+   Your password is needed one last time to sign and announce the persistent delegation request (which is a special type of :doc:`transfer <../../concepts/transfer-transaction>` transaction):
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-5.png
       :align: center
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-5.png
 
-   Once you receive the confirmation message, the Harvesting status should change to **KEYS LINKED**:
+7. **Enter your password and click "Confirm"** (again).
+
+   Once you receive the confirmation message (shouldn't take longer than 30 seconds), the **Harvesting status** should change to **🟡 ACTIVATION IN PROGRESS**:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-6.png
       :align: center
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-6.png
 
-   You are now ready to **send the second transaction**. Keep in mind that the transactions have a **deadline** so you must send them before it expires (typically **before 2 hours** after signing them).
-
-6. **Click the Activate button** to send the second transaction and wait for its confirmation (again, it shouldn't take more than 30 seconds).
-
-   Once confirmed, the harvesting status should change to **ACTIVE**:
+   At this point it is up to the node to accept the request and add your account as a harvester. When this happens, the **Harvesting status** will change to **🟢 ACTIVE**:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-7.png
       :align: center
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-7.png
 
-   At this point delegated harvesting is enabled.
+   Delegated harvesting is now enabled and you should start collecting fees, at a rate proportional to your node's :ref:`importance score <importance-calculation>` (See the **Final words** section below for some remarks).
 
 .. note::
 
@@ -124,6 +130,23 @@ Guide
    Therefore, there is no **reliable** way to know if your account has become a harvester or not besides waiting to see if your account starts receiving harvesting fees.
 
    You can find more details about this process in the :doc:`manual version of this guide <activating-delegated-harvesting-manual>`.
+
+***************
+Troubleshooting
+***************
+
+The **Harvesting status** indicator can help you find out the state of your account's delegated harvesting:
+
+.. csv-table::
+   :header: "Status", "Meaning"
+   :widths: 30, 70
+   :delim: ;
+
+   🔴 INACTIVE; Some keys are missing. Go to step 2.
+   🟡 KEYS LINKED; Keys are present but the harvesting delegation request has not been sent. Go to step 5.
+   🟡 IN PROGRESS; The harvesting delegation request has been sent but the node has not acknowledged it yet. It might take a while, or it might never happen. Go to the Home screen and back to the Harvesting screen and see if the status updates. There is not much you can do at this point.
+   🟢 ACTIVE; Harvesting is enabled. Harvested blocks and their fees should start arriving, depending on your account's importance.
+
 
 ***********
 Final words
