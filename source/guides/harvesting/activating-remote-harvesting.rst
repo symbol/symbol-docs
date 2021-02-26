@@ -18,7 +18,7 @@ Introduction
 
 .. note:: Blocks can only be harvested by nodes. If you do not own a node but still want to receive harvesting fees you will have to **request a node to harvest for you** using :ref:`Delegated harvesting <delegated-harvesting>`.
 
-This guide has **two sections**, depending on how you created your node: Using |symbol-bootstrap| or manually. Use the Table on Contents on the right to jump to the appropriate section.
+This guide has **two sections**, depending on how you created your node: Using |symbol-bootstrap| or manually.
 
 ***********************************
 Activation through Symbol Bootstrap
@@ -43,7 +43,7 @@ Manual activation
 
 If you have deployed a node yourself, for example by following `the catapult-server instructions <https://github.com/nemtech/catapult-server/blob/main/docs/RUNPEERLIN.md>`__, then you have to **enable harvesting manually**.
 
-The `catapult-server documentation <https://github.com/nemtech/catapult-server/blob/main/docs/RUNPEERLIN.md#enable-harvesting>`__ explains how to enable :ref:`local harvesting <local-harvesting>`, which stores your main account's private key on the server. This section explains how to enable :ref:`remote harvesting <remote-harvesting>` instead, which uses a proxy account and is therefore **much more secure**.
+The `catapult-server documentation <https://github.com/nemtech/catapult-server/blob/main/docs/RUNPEERLIN.md#user-content-enable-harvesting>`__ explains how to enable :ref:`local harvesting <local-harvesting>`, which stores your main account's private key on the server. This section explains how to enable :ref:`remote harvesting <remote-harvesting>` instead, which uses a proxy account and is therefore **much more secure**.
 
 This will be done using the :doc:`symbol-cli </cli>` tool. The required steps are:
 
