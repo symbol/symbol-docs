@@ -34,103 +34,112 @@ import {
 // Retrieve from node's /network/properties or RepositoryFactory
 const epochAdjustment = 123456789;
 
-/* start block 01 */
-// replace with network type
-const networkType = NetworkType.TEST_NET;
-// replace with candidate multisig private key
-const privateKey =
-  'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
-const account = Account.createFromPrivateKey(privateKey, networkType);
-// replace with cosignatory 1 public key
-const cosignatory1PublicKey =
-  'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
-const cosignatory1 = PublicAccount.createFromPublicKey(
-  cosignatory1PublicKey,
-  networkType,
-);
-// replace with cosignatory 2 public key
-const cosignatory2PublicKey =
-  '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
-const cosignatory2 = PublicAccount.createFromPublicKey(
-  cosignatory2PublicKey,
-  networkType,
-);
-/* end block 01 */
+const example = async (): Promise<void> => {
+  const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+  const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+  const epochAdjustment = await repositoryFactory
+    .getEpochAdjustment()
+    .toPromise();
+  const networkType = await repositoryFactory.getNetworkType().toPromise();
+  /* start block 01 */
+  // replace with candidate multisig private key
+  const privateKey =
+    'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
+  const account = Account.createFromPrivateKey(privateKey, networkType);
+  // replace with cosignatory 1 public key
+  const cosignatory1PublicKey =
+    'D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737';
+  const cosignatory1 = PublicAccount.createFromPublicKey(
+    cosignatory1PublicKey,
+    networkType,
+  );
+  // replace with cosignatory 2 public key
+  const cosignatory2PublicKey =
+    '462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE';
+  const cosignatory2 = PublicAccount.createFromPublicKey(
+    cosignatory2PublicKey,
+    networkType,
+  );
+  /* end block 01 */
 
-/* start block 02 */
-const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
-  Deadline.create(epochAdjustment),
-  1,
-  1,
-  [cosignatory1.address, cosignatory2.address],
-  [],
-  networkType,
-);
-/* end block 02 */
+  /* start block 02 */
+  const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
+    Deadline.create(epochAdjustment),
+    1,
+    1,
+    [cosignatory1.address, cosignatory2.address],
+    [],
+    networkType,
+  );
+  /* end block 02 */
 
-/* start block 03 */
-const aggregateTransaction = AggregateTransaction.createBonded(
-  Deadline.create(epochAdjustment),
-  [multisigAccountModificationTransaction.toAggregate(account.publicAccount)],
-  networkType,
-  [],
-  UInt64.fromUint(2000000),
-);
-/* end block 03 */
+  /* start block 03 */
+  const aggregateTransaction = AggregateTransaction.createBonded(
+    Deadline.create(epochAdjustment),
+    [multisigAccountModificationTransaction.toAggregate(account.publicAccount)],
+    networkType,
+    [],
+    UInt64.fromUint(2000000),
+  );
+  /* end block 03 */
 
-/* start block 04 */
-// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash =
-  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = account.sign(
-  aggregateTransaction,
-  networkGenerationHash,
-);
-console.log(signedTransaction.hash);
-/* end block 04 */
+  /* start block 04 */
+  // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
+  const networkGenerationHash =
+    '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+  const signedTransaction = account.sign(
+    aggregateTransaction,
+    networkGenerationHash,
+  );
+  console.log(signedTransaction.hash);
+  /* end block 04 */
 
-/* start block 05 */
-// replace with symbol.xym id
-const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
-// replace with network currency divisibility
-const networkCurrencyDivisibility = 6;
+  /* start block 05 */
+  // replace with symbol.xym id
+  const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
+  // replace with network currency divisibility
+  const networkCurrencyDivisibility = 6;
 
-const hashLockTransaction = HashLockTransaction.create(
-  Deadline.create(epochAdjustment),
-  new Mosaic(
-    networkCurrencyMosaicId,
-    UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)),
-  ),
-  UInt64.fromUint(480),
-  signedTransaction,
-  networkType,
-  UInt64.fromUint(2000000),
-);
+  const hashLockTransaction = HashLockTransaction.create(
+    Deadline.create(epochAdjustment),
+    new Mosaic(
+      networkCurrencyMosaicId,
+      UInt64.fromUint(10 * Math.pow(10, networkCurrencyDivisibility)),
+    ),
+    UInt64.fromUint(480),
+    signedTransaction,
+    networkType,
+    UInt64.fromUint(2000000),
+  );
 
-const signedHashLockTransaction = account.sign(
-  hashLockTransaction,
-  networkGenerationHash,
-);
+  const signedHashLockTransaction = account.sign(
+    hashLockTransaction,
+    networkGenerationHash,
+  );
 
-// replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const listener = repositoryFactory.createListener();
-const receiptHttp = repositoryFactory.createReceiptRepository();
-const transactionHttp = repositoryFactory.createTransactionRepository();
-const transactionService = new TransactionService(transactionHttp, receiptHttp);
+  // replace with node endpoint
+  const listener = repositoryFactory.createListener();
+  const receiptHttp = repositoryFactory.createReceiptRepository();
+  const transactionHttp = repositoryFactory.createTransactionRepository();
+  const transactionService = new TransactionService(
+    transactionHttp,
+    receiptHttp,
+  );
 
-listener.open().then(() => {
-  transactionService
-    .announceHashLockAggregateBonded(
-      signedHashLockTransaction,
-      signedTransaction,
-      listener,
-    )
-    .subscribe(
-      (x) => console.log(x),
-      (err) => console.log(err),
-      () => listener.close(),
-    );
-});
-/* end block 05 */
+  listener.open().then(() => {
+    transactionService
+      .announceHashLockAggregateBonded(
+        signedHashLockTransaction,
+        signedTransaction,
+        listener,
+      )
+      .subscribe(
+        (x) => console.log(x),
+        (err) => console.log(err),
+        () => listener.close(),
+      );
+  });
+  /* end block 05 */
+};
+
+example().then();
