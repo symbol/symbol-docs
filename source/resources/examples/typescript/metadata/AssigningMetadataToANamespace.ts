@@ -28,98 +28,105 @@ import {
   UInt64,
 } from 'symbol-sdk';
 
-// Retrieve from node's /network/properties or RepositoryFactory
-const epochAdjustment = 123456789;
+const example = async (): Promise<void> => {
+  const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+  const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
+  // Retrieve from node's /network/properties or RepositoryFactory
+  const epochAdjustment = await repositoryFactory
+    .getEpochAdjustment()
+    .toPromise();
+  
+  /* start block 01 */
+  // replace with network type
+  const networkType = await repositoryFactory.getNetworkType().toPromise();
+  // replace with company private key
+  const companyPrivateKey =
+    'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+  const companyAccount = Account.createFromPrivateKey(
+    companyPrivateKey,
+    networkType,
+  );
+  // replace with namespace name
+  const namespaceId = new NamespaceId('cc');
+  const name = 'ComfyClothingCompany';
+  const email = 'info@comfyclothingcompany';
+  const address = 'ComfyClothingCompany HQ';
+  const phone = '000-0000';
+  
+  const nameMetadataTransaction = NamespaceMetadataTransaction.create(
+    Deadline.create(epochAdjustment),
+    companyAccount.address,
+    KeyGenerator.generateUInt64Key('NAME'),
+    namespaceId,
+    name.length,
+    name,
+    networkType,
+  );
+  
+  const emailMetadataTransaction = NamespaceMetadataTransaction.create(
+    Deadline.create(epochAdjustment),
+    companyAccount.address,
+    KeyGenerator.generateUInt64Key('EMAIL'),
+    namespaceId,
+    email.length,
+    email,
+    networkType,
+  );
+  
+  const addressMetadataTransaction = NamespaceMetadataTransaction.create(
+    Deadline.create(epochAdjustment),
+    companyAccount.address,
+    KeyGenerator.generateUInt64Key('ADDRESS'),
+    namespaceId,
+    address.length,
+    address,
+    networkType,
+  );
+  
+  const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
+    Deadline.create(epochAdjustment),
+    companyAccount.address,
+    KeyGenerator.generateUInt64Key('PHONE'),
+    namespaceId,
+    phone.length,
+    phone,
+    networkType,
+  );
+  /* end block 01 */
+  
+  /* start block 02 */
+  const aggregateTransaction = AggregateTransaction.createComplete(
+    Deadline.create(epochAdjustment),
+    [
+      nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
+      emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
+      addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
+      phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
+    ],
+    networkType,
+    [],
+    UInt64.fromUint(2000000),
+  );
+  /* end block 02 */
+  
+  /* start block 03 */
+  // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
+  const networkGenerationHash = await repositoryFactory
+    .getGenerationHash()
+    .toPromise();
+  const signedTransaction = companyAccount.sign(
+    aggregateTransaction,
+    networkGenerationHash,
+  );
+  console.log(signedTransaction.hash);
 
-/* start block 01 */
-// replace with network type
-const networkType = NetworkType.TEST_NET;
-// replace with company private key
-const companyPrivateKey =
-  'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-const companyAccount = Account.createFromPrivateKey(
-  companyPrivateKey,
-  networkType,
-);
-// replace with namespace name
-const namespaceId = new NamespaceId('cc');
-const name = 'ComfyClothingCompany';
-const email = 'info@comfyclothingcompany';
-const address = 'ComfyClothingCompany HQ';
-const phone = '000-0000';
+  const transactionHttp = repositoryFactory.createTransactionRepository();
+  
+  transactionHttp.announce(signedTransaction).subscribe(
+    (x) => console.log(x),
+    (err) => console.error(err),
+  );
+  /* end block 03 */
 
-const nameMetadataTransaction = NamespaceMetadataTransaction.create(
-  Deadline.create(epochAdjustment),
-  companyAccount.address,
-  KeyGenerator.generateUInt64Key('NAME'),
-  namespaceId,
-  name.length,
-  name,
-  networkType,
-);
-
-const emailMetadataTransaction = NamespaceMetadataTransaction.create(
-  Deadline.create(epochAdjustment),
-  companyAccount.address,
-  KeyGenerator.generateUInt64Key('EMAIL'),
-  namespaceId,
-  email.length,
-  email,
-  networkType,
-);
-
-const addressMetadataTransaction = NamespaceMetadataTransaction.create(
-  Deadline.create(epochAdjustment),
-  companyAccount.address,
-  KeyGenerator.generateUInt64Key('ADDRESS'),
-  namespaceId,
-  address.length,
-  address,
-  networkType,
-);
-
-const phoneMetadataTransaction = NamespaceMetadataTransaction.create(
-  Deadline.create(epochAdjustment),
-  companyAccount.address,
-  KeyGenerator.generateUInt64Key('PHONE'),
-  namespaceId,
-  phone.length,
-  phone,
-  networkType,
-);
-/* end block 01 */
-
-/* start block 02 */
-const aggregateTransaction = AggregateTransaction.createComplete(
-  Deadline.create(epochAdjustment),
-  [
-    nameMetadataTransaction.toAggregate(companyAccount.publicAccount),
-    emailMetadataTransaction.toAggregate(companyAccount.publicAccount),
-    addressMetadataTransaction.toAggregate(companyAccount.publicAccount),
-    phoneMetadataTransaction.toAggregate(companyAccount.publicAccount),
-  ],
-  networkType,
-  [],
-  UInt64.fromUint(2000000),
-);
-/* end block 02 */
-
-/* start block 03 */
-// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash =
-  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = companyAccount.sign(
-  aggregateTransaction,
-  networkGenerationHash,
-);
-console.log(signedTransaction.hash);
-
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const transactionHttp = repositoryFactory.createTransactionRepository();
-
-transactionHttp.announce(signedTransaction).subscribe(
-  (x) => console.log(x),
-  (err) => console.error(err),
-);
-/* end block 03 */
+}
+example().then();

@@ -27,62 +27,69 @@ import {
   UInt64,
 } from 'symbol-sdk';
 
-// Retrieve from node's /network/properties or RepositoryFactory
-const epochAdjustment = 123456789;
+const example = async (): Promise<void> => {
+  const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+  const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 
-/* start block 01 */
-// replace with network type
-const networkType = NetworkType.TEST_NET;
-// replace with cosignatory private key
-const cosignatoryPrivateKey =
-  '1111111111111111111111111111111111111111111111111111111111111111';
-const cosignatoryAccount = Account.createFromPrivateKey(
-  cosignatoryPrivateKey,
-  networkType,
-);
-// replace with multisig account private key
-const multisigAccountPublicKey =
-  '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
-const multisigAccount = PublicAccount.createFromPublicKey(
-  multisigAccountPublicKey,
-  networkType,
-);
-/* end block 01 */
-
-/* start block 02 */
-const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
-  Deadline.create(epochAdjustment),
-  1,
-  0,
-  [],
-  [],
-  networkType,
-);
-/* end block 02 */
-
-/* start block 03 */
-const aggregateTransaction = AggregateTransaction.createComplete(
-  Deadline.create(epochAdjustment),
-  [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
-  networkType,
-  [],
-  UInt64.fromUint(2000000),
-);
-
-// replace with meta.networkGenerationHash (nodeUrl + '/node/info')
-const networkGenerationHash =
-  '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
-const signedTransaction = cosignatoryAccount.sign(
-  aggregateTransaction,
-  networkGenerationHash,
-);
-// replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
-const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
-const transactionHttp = repositoryFactory.createTransactionRepository();
-
-transactionHttp.announce(signedTransaction).subscribe(
-  (x) => console.log(x),
-  (err) => console.error(err),
-);
-/* end block 03 */
+  // Retrieve from node's /network/properties or RepositoryFactory
+  const epochAdjustment = await repositoryFactory
+    .getEpochAdjustment()
+    .toPromise();
+  
+  /* start block 01 */
+  // replace with network type
+  const networkType = await repositoryFactory.getNetworkType().toPromise();
+  // replace with cosignatory private key
+  const cosignatoryPrivateKey =
+    '1111111111111111111111111111111111111111111111111111111111111111';
+  const cosignatoryAccount = Account.createFromPrivateKey(
+    cosignatoryPrivateKey,
+    networkType,
+  );
+  // replace with multisig account private key
+  const multisigAccountPublicKey =
+    '3A537D5A1AF51158C42F80A199BB58351DBF3253C4A6A1B7BD1014682FB595EA';
+  const multisigAccount = PublicAccount.createFromPublicKey(
+    multisigAccountPublicKey,
+    networkType,
+  );
+  /* end block 01 */
+  
+  /* start block 02 */
+  const multisigAccountModificationTransaction = MultisigAccountModificationTransaction.create(
+    Deadline.create(epochAdjustment),
+    1,
+    0,
+    [],
+    [],
+    networkType,
+  );
+  /* end block 02 */
+  
+  /* start block 03 */
+  const aggregateTransaction = AggregateTransaction.createComplete(
+    Deadline.create(epochAdjustment),
+    [multisigAccountModificationTransaction.toAggregate(multisigAccount)],
+    networkType,
+    [],
+    UInt64.fromUint(2000000),
+  );
+  
+  // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
+  const networkGenerationHash =
+    '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
+  const signedTransaction = cosignatoryAccount.sign(
+    aggregateTransaction,
+    networkGenerationHash,
+  );
+  // replace with node endpoint
+  
+  const transactionHttp = repositoryFactory.createTransactionRepository();
+  
+  transactionHttp.announce(signedTransaction).subscribe(
+    (x) => console.log(x),
+    (err) => console.error(err),
+  );
+  /* end block 03 */
+}
+example().then();
