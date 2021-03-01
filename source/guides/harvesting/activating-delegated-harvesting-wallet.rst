@@ -144,7 +144,7 @@ The **Harvesting status** indicator can help you find out the state of your acco
 
    🔴 INACTIVE; Some keys are missing. Go to step 2.
    🟡 KEYS LINKED; Keys are present but the harvesting delegation request has not been sent. Go to step 5.
-   🟡 IN PROGRESS; The harvesting delegation request has been sent but the node has not acknowledged it yet. It might take a while, or it might never happen. Go to the Home screen and back to the Harvesting screen and see if the status updates. There is not much you can do at this point.
+   🟡 IN PROGRESS; The harvesting delegation request has been sent but the node has not acknowledged it yet. It might take a few minutes, or it might never happen. There is not much you can do at this point, except trying a different node.
    🟢 ACTIVE; Harvesting is enabled. Harvested blocks and their fees should start arriving, depending on your account's importance.
 
 
