@@ -1,0 +1,424 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-02 09:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:46
+msgid "Activating delegated harvesting manually"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:48
+msgid "Share your account's importance securely with a node and get rewarded."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:52
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:54
+msgid ""
+":ref:`Delegated harvesting <delegated-harvesting>` enables accounts to "
+"**receive rewards** from creating new blocks **without running a node**. "
+"At the same time, it allows nodes to benefit from an account's (possibly "
+"higher) :ref:`importance score <importance-calculation>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:56
+msgid ""
+"Node owners have access to the node's configuration so it's more "
+"convenient for them to use :ref:`Remote harvesting <remote-harvesting>` "
+"instead."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:58
+msgid ""
+"This guide explains how to **manually** activate delegated harvesting "
+"using the :doc:`SDK </sdk>` or the :doc:`CLI </cli>` interface and is "
+"therefore **intended for developers**. Users should use the :doc:`Desktop"
+" Wallet guide <activating-delegated-harvesting-wallet>` instead."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:62
+msgid "Summary"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:64
+msgid "Required steps:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:66
+msgid ""
+"Delegate the **main account (M)** importance to a **remote account (R)** "
+"using an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:68
+msgid ""
+"Link the main account **M** to a **VRF account (V)** for randomized block"
+" production and account selection using a :ref:`VrfKeyLinkTransaction "
+"<vrf-key-link-transaction>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:70
+msgid ""
+"Link the main account **M** to a node in order to harvest through that "
+"node using a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:72
+msgid ""
+"Request the node to add the remote account **R** as a harvester using a "
+":ref:`PersistentDelegationRequestTransaction <persistent-delegation-"
+"request-transaction>`. Conversely, if the node configuration is "
+"accessible, the remote account's private key can be set in the node "
+"configuration."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:74
+msgid ""
+"Please note that it is entirely up to the node to comply with the "
+"request. Some nodes can be asked for their current list of delegated "
+"harvesters but this information is not always available (see :ref"
+":`delegated-harvesting-verifying-activation` below)."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:78
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:80
+msgid ""
+"Complete the :doc:`sending mosaics and messages between two accounts "
+"<../transfer/sending-a-transfer-transaction>` guide to have a basic "
+"understanding of transactions."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:82
+msgid ""
+"Before you can activate delegated harvesting, you need the following "
+"items:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:84
+msgid ""
+"A **Main account (M)** with at least **10,000** |networkcurrency| to be "
+":ref:`eligible <account_eligibility>` and then some more to pay for "
+"transaction fees. This is the account that will receive the harvesting "
+"fees. Keep its private key secret at all times."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:86
+msgid ""
+"A **Remote account (R)** that will act as a proxy between **M** and the "
+"node. This account **must have never sent or received any transaction**, "
+"and it cannot be involved in any transaction while it is a delegated "
+"account."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:88
+msgid ""
+"A **VRF account (V)** that has never sent or received any transactions. "
+"It is a regular account used to add randomness to the account selection "
+"process."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:90
+msgid ""
+"The **node's public TLS key**. This is the key the node uses to "
+"authenticate data for transport over `TLS "
+"<https://en.wikipedia.org/wiki/Transport_Layer_Security>`__ and is "
+"typically provided by the node owner."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:92
+msgid "Optionally:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:94
+msgid ""
+"An **Announcer account (A)** with enough |networkcurrency| to pay for "
+"transaction fees. By announcing the final harvesting delegation request "
+"through this account instead of **M**, even the fact that **M** is "
+"involved in delegated harvesting is hidden from the network. Use this "
+"account for added privacy."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:96
+msgid ""
+"Refer to the :doc:`Creating an account <../account/creating-an-account>` "
+"guide to know how to create new accounts if you need to."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:98
+msgid ""
+"The following bash code snippets make use of :doc:`symbol-cli "
+"<../../cli>` and assume that the **main account (M)** is set as the "
+"**default** profile. Use the ``‑‑profile`` parameter if this is not the "
+"case."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:102
+msgid "Guide"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:104
+msgid ""
+"Create an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`"
+" to **delegate M's importance to R**. Sign the transaction with **M** and"
+" announce it to the network."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:108
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingAccountLink.ts`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:113
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingAccountLink.sh`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:117
+msgid ""
+"Create a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to "
+"**link M to a VRF key**. Sign the transaction with  **M** and announce it"
+" to the network."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:121
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.ts`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:126
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.sh`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:130
+msgid ""
+"Create a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>` to "
+"**link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with "
+"**M** and announce it to the network."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:134
+msgid ""
+"The node's public TLS key is typically provided by the node owner. "
+"However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API"
+" <api-node>` nodes) running a version of the :doc:`REST Gateway "
+"<../../api>` higher than **2.2.0** offer this information through the "
+"``nodePublicKey`` field of the ``node/info`` `REST endpoint "
+"<https://docs.symbolplatform.com/symbol-"
+"openapi/v0.10.6/#operation/getNodeInfo>`_."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:136
+msgid ""
+"Just point your browser to `http://<NODE_URL>:3000/node/info "
+"<http://NODE_URL:3000/node/info>`__."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:140
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingNodeKeyLink.ts`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:145
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingNodeKeyLink.sh`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:149
+msgid ""
+"Once the transactions are confirmed, the next step is to **share R's "
+"private key with the node**. This can be done in one of two ways "
+"depending on whether you are the node owner and have access to the node's"
+" configuration or not."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:151
+msgid ""
+"If you are the **node owner**, you simply need to set the remote "
+"account's private signing key in the ``harvesterSigningPrivateKey`` field"
+" in the :ref:`node-properties-harvesting-configuration`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:153
+msgid ""
+"**Otherwise**, a :ref:`PersistentDelegationRequestTransaction "
+"<persistent-delegation-request-transaction>` must be used. As the private"
+" key will be shared in an **encrypted message**, only the node will be "
+"able to see it. Moreover, **R** does not own any mosaic."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:155
+msgid ""
+"The harvesting fees will be sent to **M** as it has established a link "
+"with the node through the :ref:`NodeKeyLinkTransaction <node-key-link-"
+"transaction>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:157
+msgid ""
+"Sign the :ref:`PersistentDelegationRequestTransaction <persistent-"
+"delegation-request-transaction>` with **M** (or **A** for added privacy, "
+"as stated in the Prerequisites) and announce it to the network."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:161
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingPersistentRequest.ts`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:166
+msgid ""
+":viewsource:`https://github.com/nemtech/symbol-"
+"docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingPersistentRequest.sh`"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:170
+msgid ""
+"All the above transactions can be announced together in a single "
+":ref:`Aggregate Transaction <aggregate-transaction>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:172
+msgid ""
+"If everything is successful, the node will receive the encrypted message "
+"through :ref:`WebSockets <websockets>`. Once the node decrypts the "
+"private key of the potential delegated harvester, the node owner may "
+"**add R as a delegated harvester** if the following requirements are met:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:174
+msgid "The node permits delegated harvesting."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:175
+msgid "The node has harvesting slots available (See next section)."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:176
+msgid "The remote account has never sent or received transactions before."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:178
+msgid ""
+"As the remote private key is **saved on disk** by the node, even if the "
+"node disconnects temporarily the persistent delegated harvesters will be "
+"reestablished once the node reconnects to the network."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:180
+msgid ""
+"Additionally, the use of an encrypted message creates a **backup** of the"
+" information for the nodes. If the disk containing the delegated keys "
+"becomes corrupted or destroyed, the node owner can still retrieve the "
+"data by querying the blockchain."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:186
+msgid "Verifying activation"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:188
+msgid ""
+"When requesting delegation through a "
+":ref:`PersistentDelegationRequestTransaction <persistent-delegation-"
+"request-transaction>` instead of directly configuring the node, whether "
+"the node enables delegated harvesting depends entirely on the node and "
+"**not on the network**. It is entirely up to the node to comply with the "
+"request or even to lie about its state."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:190
+msgid ""
+"Therefore, there is no **reliable** way to know if your account has "
+"become a harvester or not (besides waiting to see if any blocks appear on"
+" the blockchain signed by your remote account and your main account "
+"starts collecting harvesting fees)."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:192
+msgid ""
+"That said, nodes configured to act as **Dual** nodes (being both "
+":ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) can be queried "
+"for their current list of delegated harvesters. To reiterate, this "
+"information comes from the node and is not backed up by the blockchain, "
+"so take it with a grain of salt."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:194
+msgid ""
+"You can retrieve this list using the ``getUnlockedAccount`` `API endpoint"
+" <https://docs.symbolplatform.com/symbol-"
+"openapi/v0.10.6/#operation/getUnlockedAccount>`_ (point your browser to "
+"`http://<NODE_URL>:3000/node/unlockedaccount "
+"<http://NODE_URL:3000/node/unlockedaccount>`__) or the `Typescript SDK "
+"<https://docs.symbolplatform.com/symbol-sdk-typescript-"
+"javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_"
+" for example). It contains the public keys of all registered delegated "
+"harvesters in the node, so your **remote account (R)** public key should "
+"appear here."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:196
+msgid ""
+"By default a node can have up to 5 delegated harvesters (harvesting "
+"slots) and excess requests can be priorized as the node sees fit. This "
+"can be configured on the node through the ``maxUnlockedAccounts`` and "
+"``delegatePrioritizationPolicy`` :ref:`node-properties-harvesting-"
+"configuration`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:200
+msgid "Final words"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:202
+msgid ""
+"**Accounts with higher importance are selected more often to perform "
+"harvesting**. Even if you successfully register as a delegated harvester "
+"with a node, you will not harvest any block (nor receive any fees) unless"
+" your :ref:`importance score <importance-calculation>` is high enough."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:204
+msgid ""
+"**Importance score calculation does not happen continuously**. By "
+"default, account importance scores are recalculated every 180 blocks "
+"(about every 90 minutes). See the ``importanceGrouping`` property in the "
+":ref:`Configuring network properties <config-network-properties>` guide."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:206
+msgid ""
+"Finally, as explained in :ref:`delegated-harvesting-verifying-activation`"
+" above, **announcing a Harvesting Delegation request does not guarantee "
+"being added as a delegated harvester**. Nodes are free to comply with the"
+" request or even to lie about its status."
+msgstr ""
+

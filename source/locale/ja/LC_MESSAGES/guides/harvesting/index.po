@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-20 12:59+0100\n"
+"POT-Creation-Date: 2021-03-02 09:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/harvesting/index.rst:36
+#: ../../source/guides/harvesting/index.rst:40
 msgid "Harvesting"
 msgstr ""
 
-#: ../../source/guides/harvesting/index.rst:38
-msgid "Guides related to mosaic harvesting."
+#: ../../source/guides/harvesting/index.rst:42
+msgid ""
+"|codename| supports **different harvesting methods** depending on whether"
+" you own a node or not, and the tools you want to use to enable it."
 msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:44
+msgid ""
+"Make sure you understand the :ref:`different harvesting types "
+"<harvesting-types>` first and then choose the appropriate guide from the "
+"list below."
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:46
+msgid "**If you do not own a node:**"
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:48
+msgid ":doc:`activating-delegated-harvesting-wallet`"
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:50
+msgid "For **users** wishing to enable harvesting using their wallet application."
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:52
+msgid ":doc:`activating-delegated-harvesting-manual`"
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:54
+msgid ""
+"For **developers** wanting to understand how to manually enable "
+"harvesting on their applications."
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:56
+msgid "**If you own a node:**"
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:58
+msgid ":doc:`activating-remote-harvesting`"
+msgstr ""
+
+#: ../../source/guides/harvesting/index.rst:60
+msgid ""
+"For **node owners** wishing to enable harvesting, whether through "
+"|symbol-bootstrap| or not."
+msgstr ""
+
+#~ msgid "Guides related to mosaic harvesting."
+#~ msgstr ""
 

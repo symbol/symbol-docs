@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-02 09:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:46
+msgid "Activating remote harvesting"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:48
+msgid "Harvest new blocks through a proxy account for added security."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:52
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:54
+msgid ""
+":ref:`Remote harvesting <remote-harvesting>` enables **node owners** to "
+"receive rewards from creating new blocks **without exposing their main "
+"account's private key** in the node's configuration files."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:56
+msgid ""
+"Blocks can only be harvested by nodes. If you do not own a node but still"
+" want to receive harvesting fees you will have to **request a node to "
+"harvest for you** using :ref:`Delegated harvesting <delegated-"
+"harvesting>`."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:58
+msgid ""
+"This guide has **two sections**, depending on how you created your node: "
+"Using |symbol-bootstrap| or manually."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:62
+msgid "Activation through Symbol Bootstrap"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:64
+msgid ""
+"If you have followed the :doc:`../network/running-a-test-net-node` guide "
+"then you have used |symbol-bootstrap| to create your node. **The out-of-"
+"the-box presets enable remote harvesting by default** so there is nothing"
+" you need to do if you enabled harvesting when following that guide."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:66
+msgid ""
+"To clarify, |symbol-bootstrap| automatically creates a remote account "
+"(labelled ``remote`` in the ``addresses.yml`` file) and sets it as the "
+"signer of the new blocks (using its private key in the "
+"``harvesterSigningPrivateKey`` property). Then, the ``symbol-bootstrap "
+"link`` command announces the :ref:`AccountKeyLink <account-key-link-"
+"transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` "
+"transactions required to finish the activation."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:69
+msgid ""
+"It is worth noting that, although **this is NOT recommended**, you can "
+"omit the remote account and sign the new block **directly with your main "
+"account** by using a :ref:`custom preset file <symbol-bootstrap-presets>`"
+" with this line:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:75
+msgid ""
+"Needless to say your main account's private key will then be present in "
+"the node configuration files and will be accessible if the node is "
+"compromised."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:79
+msgid "Manual activation"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:81
+msgid ""
+"If you have deployed a node yourself, for example by following `the "
+"catapult-server instructions <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/RUNPEERLIN.md>`__, then you have to **enable "
+"harvesting manually**."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:83
+msgid ""
+"The `catapult-server documentation <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/RUNPEERLIN.md#user-content-enable-harvesting>`__ "
+"explains how to enable :ref:`local harvesting <local-harvesting>`, which "
+"stores your main account's private key on the server. This section "
+"explains how to enable :ref:`remote harvesting <remote-harvesting>` "
+"instead, which uses a proxy account and is therefore **much more "
+"secure**."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:85
+msgid ""
+"This will be done using the :doc:`symbol-cli </cli>` tool. The required "
+"steps are:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:87
+msgid "Set the **remote account** as the harvester in the node configuration."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:89
+msgid ""
+"Announce an :ref:`AccountKeyLink transaction <account-key-link-"
+"transaction>` linking your main and your remote accounts."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:91
+msgid "(Optional) Configure the **VRF account** if it is not already set."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:94
+msgid "Step 1: Setup the remote account"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:96
+msgid ""
+"Create a brand new account to act as the **remote account**. This account"
+" **must have never sent nor received any transaction**, and it cannot be "
+"involved in any transaction while it acts as remote account, so it is "
+"safest to create it from scratch."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:98
+msgid "Run this from a terminal:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:112
+msgid "Note the **public** and **private** keys for this new account."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:114
+msgid ""
+"Now edit the ``config-harvesting.properties`` file (it should be in a "
+"``resources`` directory if you followed `the catapult-server instructions"
+" <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/RUNPEERLIN.md>`__). Look for the "
+"``harvesterSigningPrivateKey`` field and write the remote account's "
+"private key."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:117
+msgid "Step 2: Link the remote and main accounts"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:119
+msgid ""
+"Make sure you have configured :doc:`symbol-cli </cli>` so that your main "
+"account is your default profile (if this is not the case, use the "
+"``--profile`` parameter)."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:121
+msgid "Then run this command from a terminal:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:127
+msgid ""
+"Use the ``<PUBLIC-REMOTE-KEY>`` obtained in Step 1. The ``--sync`` "
+"parameter will wait until the transaction is confirmed. Check out the "
+":doc:`fees documentation </concepts/fees>` to know how much to pay to "
+"announce this transaction."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:130
+msgid "Step 3: Configure the VRF account"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:132
+msgid ""
+"All :ref:`eligible accounts <account_eligibility>` must have registered a"
+" VRF key. Check out the ``harvesterVrfPrivateKey`` field in the ``config-"
+"harvesting.properties`` file. If it's already filled-in, you can skip "
+"this step."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:134
+msgid ""
+"Otherwise, create another account just like you did in Step 1, to act as "
+"the VRF account:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:148
+msgid ""
+"Write the **private key** in the ``harvesterVrfPrivateKey`` field of the "
+"configuration file, and announce a :ref:`VrfKeyLink transaction <vrf-key-"
+"link-transaction>` to link the VRF and main accounts:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:156
+msgid "Final words"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:158
+msgid ""
+"The node should now be configured with remote harvesting. Keep these "
+"important points in mind, though:"
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:160
+msgid ""
+"**Accounts with higher importance are selected more often to perform "
+"harvesting**. Even if you successfully enable remote harvesting, you will"
+" not harvest any block (nor receive any fees) unless your main account's "
+":ref:`importance score <importance-calculation>` is high enough."
+msgstr ""
+
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:162
+msgid ""
+"**Importance score calculation does not happen continuously**. By "
+"default, account importance scores are recalculated every 180 blocks "
+"(about every 90 minutes). See the ``importanceGrouping`` property in the "
+":ref:`Configuring network properties <config-network-properties>` guide."
+msgstr ""
+

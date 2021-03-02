@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-20 12:59+0100\n"
+"POT-Creation-Date: 2021-03-02 09:14+0100\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese "
@@ -21,31 +21,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../source/guides/index.rst:36
+#: ../../source/guides/index.rst:40
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/guides/index.rst:40
+#: ../../source/guides/index.rst:44
 msgid ":doc:`transfer/sending-a-transfer-transaction`"
 msgstr ""
 
-#: ../../source/guides/index.rst:42
+#: ../../source/guides/index.rst:46
 msgid ":doc:`mosaic/creating-a-mosaic`"
 msgstr ""
 
-#: ../../source/guides/index.rst:44
+#: ../../source/guides/index.rst:48
 msgid ":doc:`multisig/creating-a-multisig-account`"
 msgstr ""
 
-#: ../../source/guides/index.rst:46
+#: ../../source/guides/index.rst:50
 msgid ":doc:`network/running-a-test-net-node`"
 msgstr ""
 
-#: ../../source/guides/index.rst:48
+#: ../../source/guides/index.rst:52
 msgid ":doc:`network/creating-a-private-test-net`"
 msgstr ""
 
-#: ../../source/guides/index.rst:50
+#: ../../source/guides/index.rst:54
 msgid ""
 "The guides are further divided into the following **topics**. To see the "
 "guides grouped by **tags** instead, see the `complete guides catalog "
@@ -54,7 +54,7 @@ msgstr ""
 "ガイドは次の **トピック** に分割されています。 **タグ** でグループ化されたガイドを表示するには `ガイドカタログ "
 "<https://docs.symbolplatform.com/guides/category.html>`__ を参照してください。"
 
-#: ../../source/guides/index.rst:55
+#: ../../source/guides/index.rst:59
 msgid ":doc:`account/index`"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Guides related to :doc:`account <../../concepts/account>` handling."
 msgstr ":doc:`アカウント <../../concepts/account>` の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:63
+#: ../../source/guides/index.rst:67
 msgid ":doc:`aggregate/index`"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgid ""
 "transaction>` handling."
 msgstr ":doc:`アグリゲートトランザクション <../../concepts/aggregate-transaction>` の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:71
+#: ../../source/guides/index.rst:75
 msgid ":doc:`blockchain/index`"
 msgstr ""
 
@@ -80,16 +80,17 @@ msgstr ""
 msgid "Guides related to the handling the blockchain itself."
 msgstr "ブロックチェーンの扱いに関するガイド"
 
-#: ../../source/guides/index.rst:79
+#: ../../source/guides/index.rst:83
 msgid ":doc:`harvesting/index`"
 msgstr ""
 
 #: ../../source/guides/harvesting/index.rst:1
-#, fuzzy
-msgid "Guides related to mosaic harvesting."
+msgid ""
+"|codename| supports **different harvesting methods** depending on whether"
+" you own a node or not, and the tools you want to use to enable it."
 msgstr ""
 
-#: ../../source/guides/index.rst:87
+#: ../../source/guides/index.rst:91
 msgid ":doc:`metadata/index`"
 msgstr ""
 
@@ -97,7 +98,7 @@ msgstr ""
 msgid "Guides related to :doc:`metadata <../../concepts/metadata>` handling."
 msgstr ":doc:`メタデータ <../../concepts/metadata>` の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:95
+#: ../../source/guides/index.rst:99
 msgid ":doc:`migration/index`"
 msgstr ""
 
@@ -105,7 +106,7 @@ msgstr ""
 msgid "Guides related to migrating from NIS1 to |codename|."
 msgstr "NIS1 から |codename| へ移行に関するガイド"
 
-#: ../../source/guides/index.rst:103
+#: ../../source/guides/index.rst:107
 msgid ":doc:`monitor/index`"
 msgstr ""
 
@@ -113,7 +114,7 @@ msgstr ""
 msgid "Guides related to monitoring transactions."
 msgstr "トランザクションの監視に関するガイド"
 
-#: ../../source/guides/index.rst:111
+#: ../../source/guides/index.rst:115
 msgid ":doc:`mosaic/index`"
 msgstr ""
 
@@ -121,7 +122,7 @@ msgstr ""
 msgid "Guides related to :doc:`mosaics <../../concepts/mosaic>` handling."
 msgstr ":doc:`モザイク <../../concepts/mosaic>` の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:119
+#: ../../source/guides/index.rst:123
 msgid ":doc:`multisig/index`"
 msgstr ""
 
@@ -131,7 +132,7 @@ msgid ""
 "account>` (multisig) handling."
 msgstr ":doc:`マルチシグネチャアカウント <../../concepts/multisig-account>` (マルチシグ) の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:127
+#: ../../source/guides/index.rst:131
 msgid ":doc:`namespace/index`"
 msgstr ""
 
@@ -139,7 +140,7 @@ msgstr ""
 msgid "Guides related to :doc:`namespace <../../concepts/namespace>` handling."
 msgstr ":doc:`ネームスペース <../../concepts/namespace>` の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:135
+#: ../../source/guides/index.rst:139
 msgid ":doc:`network/index`"
 msgstr ""
 
@@ -147,7 +148,7 @@ msgstr ""
 msgid "Guides related to creating nodes and test networks."
 msgstr "ノードの作成とテストネットワークの扱いに関するガイド"
 
-#: ../../source/guides/index.rst:143
+#: ../../source/guides/index.rst:147
 msgid ":doc:`restriction/index`"
 msgstr ""
 
@@ -157,7 +158,7 @@ msgid ""
 "restriction>` handling."
 msgstr ":doc:`モザイク制限 <../../concepts/mosaic-restriction>` の扱いに関するガイド"
 
-#: ../../source/guides/index.rst:151
+#: ../../source/guides/index.rst:155
 msgid ":doc:`secretlock/index`"
 msgstr ""
 
@@ -165,7 +166,7 @@ msgstr ""
 msgid "Guides related to secret lock handling."
 msgstr "シークレットロックの扱いに関するガイド"
 
-#: ../../source/guides/index.rst:159
+#: ../../source/guides/index.rst:163
 msgid ":doc:`transfer/index`"
 msgstr ""
 
@@ -176,8 +177,8 @@ msgid ""
 msgstr ":doc:`転送トランザクション <../../concepts/transfer-transaction>` の扱いに関するガイド"
 
 #~ msgid ""
-#~ "Guides related to linking different "
-#~ ":doc:`accounts <../../concepts/account>` between "
-#~ "them."
 #~ msgstr ":doc:`アカウント <../../concepts/account>` 間のリンクの扱いに関するガイド"
+
+#~ msgid "Guides related to mosaic harvesting."
+#~ msgstr ""
 
