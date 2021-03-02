@@ -391,9 +391,21 @@ source_file = build/gettext/guides/harvesting/index.pot
 source_lang = en
 type = PO
 
-[symboldocs.guides--harvesting--activating-delegated-harvesting]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting.po
-source_file = build/gettext/guides/harvesting/activating-delegated-harvesting.pot
+[symboldocs.guides--harvesting--activating-remote-harvesting]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-remote-harvesting.po
+source_file = build/gettext/guides/harvesting/activating-remote-harvesting.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--harvesting--activating-delegated-harvesting-manual]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting-manual.po
+source_file = build/gettext/guides/harvesting/activating-delegated-harvesting-manual.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--harvesting--activating-delegated-harvesting-wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting-wallet.po
+source_file = build/gettext/guides/harvesting/activating-delegated-harvesting-wallet.pot
 source_lang = en
 type = PO
 
