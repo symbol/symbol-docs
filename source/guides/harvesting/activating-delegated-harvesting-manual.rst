@@ -44,13 +44,13 @@ Prerequisites
 
 Before you can activate delegated harvesting, you need the following items:
 
-- A **Main account (M)** with at least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees. This is the account that will receive the harvesting fees. Keep its secret key secret at all times.
+- A **Main account (M)** with at least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees. This is the account that will receive the harvesting fees. Keep its private key secret at all times.
 
 - A **Remote account (R)** that will act as a proxy between **M** and the node. This account **must have never sent or received any transaction**, and it cannot be involved in any transaction while it is a delegated account.
 
 - A **VRF account (V)** that has never sent or received any transactions. It is a regular account used to add randomness to the account selection process.
 
-- The **node's public TLS key**. This is the key the node uses to authenticate data for transport over TLS and is typically provided by the node owner.
+- The **node's public TLS key**. This is the key the node uses to authenticate data for transport over `TLS <https://en.wikipedia.org/wiki/Transport_Layer_Security>`__ and is typically provided by the node owner.
 
 Optionally:
 
@@ -58,7 +58,7 @@ Optionally:
 
 Refer to the :doc:`Creating an account <../account/creating-an-account>` guide to know how to create new accounts if you need to.
 
-.. note:: The bash code snippets make use of :doc:`symbol-cli <../../cli>` and assume that the **main account (M)** is set as the **default** profile. Use the ``‑‑profile`` parameter if this is not the case.
+.. note:: The following bash code snippets make use of :doc:`symbol-cli <../../cli>` and assume that the **main account (M)** is set as the **default** profile. Use the ``‑‑profile`` parameter if this is not the case.
 
 *****
 Guide
@@ -92,7 +92,11 @@ Guide
 
 3. Create a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
-   .. note:: The node's public TLS key is typically provided by the node owner. However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) running a version of the :doc:`REST Gateway <../../api>` higher than **2.2.0** offer this information through the ``nodePublicKey`` field of the ``node/info`` `REST endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_.
+   .. note::
+   
+      The node's public TLS key is typically provided by the node owner. However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) running a version of the :doc:`REST Gateway <../../api>` higher than **2.2.0** offer this information through the ``nodePublicKey`` field of the ``node/info`` `REST endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_.
+
+      Just point your browser to `http://<NODE_URL>:3000/node/info <http://NODE_URL:3000/node/info>`__.
 
    .. example-code::
 
@@ -150,7 +154,7 @@ Therefore, there is no **reliable** way to know if your account has become a har
 
 That said, nodes configured to act as **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) can be queried for their current list of delegated harvesters. To reiterate, this information comes from the node and is not backed up by the blockchain, so take it with a grain of salt.
 
-You can retrieve this list using the ``getUnlockedAccount`` API endpoint (using the `REST API <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ or the `Typescript SDK <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_ for example). It contains the public keys of all registered delegated harvesters in the node.
+You can retrieve this list using the ``getUnlockedAccount`` `API endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ (point your browser to `http://<NODE_URL>:3000/node/unlockedaccount <http://NODE_URL:3000/node/unlockedaccount>`__) or the `Typescript SDK <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_ for example). It contains the public keys of all registered delegated harvesters in the node, so your **remote account (R)** public key should appear here.
 
 By default a node can have up to 5 delegated harvesters (harvesting slots) and excess requests can be priorized as the node sees fit. This can be configured on the node through the ``maxUnlockedAccounts`` and ``delegatePrioritizationPolicy`` :ref:`node-properties-harvesting-configuration`.
 

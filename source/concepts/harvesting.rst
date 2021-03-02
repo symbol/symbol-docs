@@ -82,11 +82,11 @@ Remote harvesting
 
 Node owners can use a **remote account** to **act as proxy** and sign off the newly created blocks, while harvesting fees are still collected by their main account. **The remote account has no funds**, so the fact that its private key is exposed in a configuration file on the node is not a concern. The :ref:`importance score <importance-calculation>` is still based on the main account.
 
-In this setup the main account is still called the Harvester, for simplicity, whereas the remote account is called a Proxy.
+In this setup the main account is still called the **Harvester**, for simplicity, whereas the remote account is called a **Proxy**.
 
 Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>` that links the remote and main accounts.
 
-This is the **recommended method** for node owners.
+This is the **recommended method** for node owners. See the :doc:`Harvesting guides <../guides/harvesting/index>` for step-by-step instructions on how to activate remote harvesting.
 
 .. _delegated-harvesting:
 
@@ -102,7 +102,7 @@ Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-har
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
 
-See the :doc:`Activating Delegated Harvesting <../guides/harvesting/activating-delegated-harvesting-wallet>` guide for step-by-step instructions on how to activate this feature and check if the delegation request has been granted.
+See the :doc:`Harvesting guides <../guides/harvesting/index>` for step-by-step instructions on how to activate delegated harvesting and check if the delegation request has been granted.
 
 ********************
 Related transactions
