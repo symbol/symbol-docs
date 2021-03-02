@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-02 09:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/network/supernode-enrollment.rst:40
+msgid "Enrolling to the Supernode program"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:42
+msgid ""
+"This guide shows how to create a node and register it as a **Supernode**."
+" Make sure you know about the :ref:`supernode-program` before continuing "
+"with this guide."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:44
+msgid ""
+"You can create your node using :ref:`Symbol Bootstrap <enroll-supernode-"
+"with-bootstrap>`, which is the easiest method, or :ref:`manually <enroll-"
+"supernode-manually>`."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:50
+msgid "Using Symbol Bootstrap"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:52
+msgid ""
+"Symbol Bootstrap is the **easiest way** to create and run |codename| "
+"nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are "
+"not familiar with it."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:54
+msgid ""
+"Create a `custom preset file <symbol-bootstrap-presets>`_ named, for "
+"example, ``supernode.yml``:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:62
+msgid ""
+"If you want the node to be also a :ref:`Voting node <finalization>` (and "
+"benefit from the :ref:`Voting Node rewards program <voting-node-"
+"program>`) add also ``voting: true``."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:64
+msgid ""
+"If you already have some of the required node accounts (main, transport, "
+"remote, VRF or voting) `you can provide them in the preset file too "
+"<https://github.com/nemtech/symbol-"
+"bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-"
+"keys>`__."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:66
+msgid ""
+"When managing your node through a :doc:`multisig account <../../concepts"
+"/multisig-account>`, the **main** account in the above preset file must "
+"be **the multisig account** (and **not** any of its cosignatories)."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:68
+msgid "**Create and run the node** using the new preset file:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:70
+msgid ""
+"Along with the standard node services, this will also download and "
+"install the **monitoring agent**."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:76
+msgid ""
+"The ``start`` command will create the node configuration and then launch "
+"it."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:78
+msgid "For test purposes you can use |codename|'s TESTNET using ``-p testnet``."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:80
+msgid ""
+"Make sure your node is **sufficiently funded**. Your main account must "
+"hold at least **1M** |networkcurrency| :ref:`to be eligible as a "
+"supernode <supernode-program>`."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:82
+msgid ""
+"You can find the node's main account address in the "
+"``target/addresses.yml`` file."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:84
+msgid ""
+"On the TESTNET, you can **send tokens** to your node's main account using"
+" the `Symbol Faucet <http://faucet.testnet.symboldev.network>`__."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:86
+msgid "**Register the node** by linking its remote, VRF and voting keys:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:92
+msgid ""
+"This sends a transaction linking the supplemental keys to the main "
+"account. This transaction pays a small :doc:`fee <../../concepts/fees>` "
+"so make sure your main account has **extra funds** beyond the "
+"requirements of the Supernode program."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:94
+msgid "**Enroll in the Supernode program**."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:100
+msgid ""
+"This sends a transaction to the Controller address, which includes the "
+"node's public key and its monitoring agent's public URL."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:102
+msgid ""
+"From this point, the :ref:`reward programs controller <reward-programs-"
+"controller>` on the network will monitor the node."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:108
+msgid "Manually"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:110
+msgid ""
+"If you don't want (or cannot) use Symbol Bootstrap you can still enroll "
+"your node in the Supernode program manually. These instructions are only "
+"available **for Linux**."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:112
+msgid ""
+"First off, make sure your node is up and running (or ready to run). `This"
+" guide <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/RUNPEERLIN.md>`__ explains how to setup the "
+"``catapult-server`` service, but you will need other services as well to "
+"fully configure a node (**Guide coming soon**)."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:114
+msgid ""
+"The process requires **installing a monitoring agent** and **announcing a"
+" special transaction**. You are going to create a few files, so please "
+"create a folder to keep your filesystem tidy."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:116
+msgid ""
+"The following instructions are for |codename|'s test network (TESTNET). "
+"Once |codename| launches they will be updated for the main network "
+"(MAINNET)."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:118
+msgid "**Download the node monitoring agent**:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:120
+msgid ""
+"`Download the Linux binary <https://symbol-node-reward.s3-eu-"
+"west-1.amazonaws.com/packages/0.1.0/agent_binary/agent-linux.bin>`__ and "
+"make it executable:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:127
+msgid "**Create certificates** for the monitoring agent:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:129
+msgid ""
+"The agent **authenticates** every connection to the :ref:`reward programs"
+" controller <reward-programs-controller>`, so you will need to create SSL"
+" certificates."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:131
+msgid ""
+"Make sure you have `OpenSSL <https://www.openssl.org/>`__ installed (for "
+"example running ``sudo apt install openssl``) and then run:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:140
+msgid ""
+"You also need to download the **Symbol network CA certificate**. This "
+"allows the agent to authenticate connections to the node it is "
+"monitoring."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:146
+msgid "**Configure the monitoring agent**:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:148
+msgid ""
+"Create a text file named ``agent.properties`` and add the content below, "
+"replacing ``NODE_PRIVATE_KEY`` and ``REST_GATEWAY_URL`` with the "
+"appropriate values:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:163
+msgid "**Run the agent**:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:165
+msgid ""
+"Run this command and **keep it running** for as long as your node runs. "
+"Remember that the Controller will periodically query the agent and your "
+"node might be **removed from the Supernode reward program** if the agent "
+"fails to answer enough times."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:171
+msgid "**Send the enrolling message**"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:173
+msgid ""
+"The last bit is to **notify the Controller** that your node wants to "
+"enroll the Supernode program. This is done through a conventional "
+":ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a "
+"special message:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:179
+msgid ""
+"Replace ``NODE_PUBLIC_KEY`` with your node's **transport** public key. "
+"You can get it from the ``nodePublicKey`` field in "
+"http://localhost:3000/node/info, for example, when your node is running."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:181
+msgid ""
+"Replace ``AGENT_URL`` with ``htps://`` + the host name of the machine "
+"where you are running the agent + ``:7880``. This URL must be **publicly "
+"accessible**. For example: ``https://myNodePublicHostName:7880``."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:183
+msgid ""
+"Finally, the recipient address of this transaction is "
+"``TDETDMT5S2ADAYGJXPATUHQUYVGSLSVJ6TLSXQQ``."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:185
+msgid "The transaction can be announced using :doc:`symbol-cli <../../cli>`:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:194
+msgid ""
+"**This transaction must be signed by your node's main account**, so make "
+"sure it is the default profile in ``symbol-cli``."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:196
+msgid ""
+"This transaction pays a small :doc:`fee <../../concepts/fees>` so make "
+"sure your main account has **extra funds** beyond the requirements of the"
+" Supernode program."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:200
+msgid "Validate the setup"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:202
+msgid ""
+"You can **validate your node** by checking that all services are running "
+"properly. Check that the following URLs return valid data:"
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:204
+msgid ""
+"`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
+"Node's connection to the network."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:205
+msgid ""
+"`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
+"Node's health."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:206
+msgid ""
+"`https://localhost:7880/metadata <https://localhost:7880/metadata>`__: "
+"Agent's report."
+msgstr ""
+
+#: ../../source/guides/network/supernode-enrollment.rst:208
+msgid ""
+"And then check again that they are accessible through your public host "
+"name."
+msgstr ""
+
