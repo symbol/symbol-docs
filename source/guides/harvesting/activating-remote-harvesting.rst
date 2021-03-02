@@ -89,7 +89,7 @@ Then run this command from a terminal:
 
 Use the ``<PUBLIC-REMOTE-KEY>`` obtained in Step 1. The ``--sync`` parameter will wait until the transaction is confirmed. Check out the :doc:`fees documentation </concepts/fees>` to know how much to pay to announce this transaction.
 
-Step 3: Configure the VFR account
+Step 3: Configure the VRF account
 =================================
 
 All :ref:`eligible accounts <account_eligibility>` must have registered a VRF key. Check out the ``harvesterVrfPrivateKey`` field in the ``config-harvesting.properties`` file. If it's already filled-in, you can skip this step.
