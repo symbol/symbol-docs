@@ -48,9 +48,9 @@ Key pairs are used in |codename| in different places, for **different purposes**
 Signature
 *********
 
-**Messages can be signed** using a private key, producing 512-bit (64 byte) **signatures**.
+**All transactions are signed** using a private key, producing 512-bit (64 byte) **signatures**.
 
-Using the matching public key, signatures can then **validate** that the key pair signed an entity.
+As part of the regular workflow of the protocol, signatures are **validated** using the matching public key. This ensures the authenticity of the signer of an entity.
 
 .. _address:
 
