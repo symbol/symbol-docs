@@ -78,9 +78,9 @@ Manually
 
 If you don't want (or cannot) use Symbol Bootstrap you can still enroll your node in the Supernode program manually. These instructions are only available **for Linux**.
 
-First off, make sure your node is up and running (or ready to run). `This guide <https://github.com/nemtech/catapult-server/blob/main/docs/RUNPEERLIN.md>`__ explains how to setup the ``catapult-server`` service, but you will need other services as well to fully configure a node (**Guide coming soon**).
+First off, make sure your node is up and running (or ready to run). The :doc:`running-a-symbol-node-manually` guide explains how to setup the node.
 
-The process requires **installing a monitoring agent** and **announcing a special transaction**. You are going to create a few files, so please create a folder to keep your filesystem tidy.
+After following that guide, you need to **install a monitoring agent** and **announce a special transaction**. You are going to create a few files, so please create a folder to keep your filesystem tidy (for example called ``agent`` inside Catapult Server's ``_build`` folder).
 
 1. **Download the node monitoring agent**:
 
