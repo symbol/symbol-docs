@@ -10,6 +10,8 @@ Each of these programs rewards **a different aspect of the network**:
 
 - :ref:`supernode-program`: For powerful, high-availability and high-throughput nodes.
 - :ref:`voting-node-program`: For nodes supporting Finalization, |codename|'s fork resolution mechanism.
+- :ref:`early-adoption-node-program`: For nodes that support |codename|'s network from the onset but do not qualify for the Supernode program.
+- :ref:`ecosystem-node-program`: For nodes supporting **both** the NIS1 and |codename| networks.
 
 In most cases, node owners wishing to benefit from these programs must explicitly **enroll** to them. The descriptions below contain **guides** explaining how to enroll to each program.
 
@@ -122,3 +124,89 @@ Rewards
         symbol-cli transaction votingkeylink
 
 See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-Ph2KGKN3Vr6GVampFvlfitZHirhthA/view?usp=sharing>`__.
+
+.. _early-adoption-node-program:
+
+***************************
+Early Adoption Node Program
+***************************
+
+It is critical that enough nodes are available from block 1, at the moment |codename| launches. This program rewards nodes that agree to be online during |codename|'s first year.
+
+Requirements
+============
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 1
+
+    * - Parameter
+      - Requirement
+    * - **Availability**
+      - The node must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the **first year**.
+    * - **Bonded Deposit**
+      - At least **500'000** |networkcurrency| must be stacked on the node during the whole period.
+    * - **Maximum nodes**
+      - Only **1** node per person is allowed.
+    * - **Incompatibility**
+      - This program is **not available** to:
+          * Nodes registered to the :ref:`ecosystem-node-program`.
+          * Core Developers, NEM entities and NEM employees.
+          * Tier 3 supernodes.
+
+Rewards
+=======
+
+This is a **one-time bonus**, paid in full **one year after the Symbol launch**, if requirements have been met.
+
+At the end of the period the node owner will receive **25'000** |networkcurrency|.
+
+Only **the first 75 nodes** to register in this program will be eligible.
+
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-o0MMAFt2JDSIK_pa8k6LLbgGIK7laK/view?usp=sharing>`__.
+
+.. note::
+
+    :doc:`Follow this guide to enroll to the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``EarlyAdoption`` reward program when prompted.
+
+.. _ecosystem-node-program:
+
+**********************
+Ecosystem Node Program
+**********************
+
+This program is aimed at maintaining **both the NIS1 and the Symbol networks** for a year and a half.
+
+Requirements
+============
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 1
+
+    * - Parameter
+      - Requirement
+    * - **Availability**
+      - The node must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the first **18 months**.
+    * - **Bonded Deposit**
+      - At least **250'000** |networkcurrency| must be stacked on a |codename| node during the whole period.
+
+        At least **250'000** ``xem`` must be stacked on a NIS1 node during the whole period.
+    * - **Maximum nodes**
+      - No more than **5** nodes per person are allowed.
+    * - **Incompatibility**
+      - This program is **not available** to:
+          * Nodes registered to the :ref:`early-adoption-node-program`.
+
+Rewards
+=======
+
+This is a **one-time bonus**, paid in full **18 months after the Symbol launch**, if requirements have been met.
+
+At the end of the period, **3'125'000** |networkcurrency| will be evenly distributed among all participating nodes.
+
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-ipGZ6zsFGwuWjkTcOOof6DS1cJZjbS/view?usp=sharing>`__.
+
+.. note::
+
+    :doc:`Follow this guide to enroll to the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``Ecosystem`` reward program when prompted.
