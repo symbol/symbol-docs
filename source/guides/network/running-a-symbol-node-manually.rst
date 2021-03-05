@@ -117,7 +117,7 @@ Build and run the REST gateway
       cd rest
       yarn build
 
-7. **Configure** the REST gateway:
+8. **Configure** the REST gateway:
 
    All configuration is stored in the ``resources/rest.json`` file.
    
@@ -149,7 +149,7 @@ Build and run the REST gateway
          "nodePropertyFilePath": "~/catapult-server/_build/resources/config-node.properties"
       }
 
-8. **Run the REST gateway**:
+9. **Run the REST gateway**:
 
    .. code-block:: bash
 
