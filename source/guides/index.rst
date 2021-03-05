@@ -10,7 +10,7 @@ Guides
 
     - :doc:`multisig/creating-a-multisig-account`
 
-    - :doc:`network/running-a-test-net-node`
+    - :doc:`network/running-a-symbol-node`
 
     - :doc:`network/creating-a-private-test-net`
 

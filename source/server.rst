@@ -26,7 +26,7 @@ Test network node
 
 Developers can deploy test net nodes to experiment with the offered transaction set in a live network without the loss of valuable assets.
 
-To run a test net node, follow :doc:`this guide <guides/network/running-a-test-net-node>`.
+To run a test net node, follow :doc:`this guide <guides/network/running-a-symbol-node>`.
 
 Main network node
 =================

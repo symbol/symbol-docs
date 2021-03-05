@@ -4,7 +4,7 @@ Enrolling to the Supernode program
 
 This guide shows how to create a node and register it as a **Supernode**. Make sure you know about the :ref:`supernode-program` before continuing with this guide.
 
-The :doc:`running-a-test-net-node` guide contains more details on how to create a |codename| node and its content **partially overlaps** this guide. You can either follow that guide to build a **regular node** or this one to build a **supernode**, but **not both**.
+The :doc:`running-a-symbol-node` guide contains more details on how to create a |codename| node and its content **partially overlaps** this guide. You can either follow that guide to build a **regular node** or this one to build a **supernode**, but **not both**.
 
 You can create your supernode using :ref:`Symbol Bootstrap <enroll-supernode-with-bootstrap>`, which is the easiest method, or :ref:`manually <enroll-supernode-manually>`.
 

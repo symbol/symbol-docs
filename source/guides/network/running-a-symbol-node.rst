@@ -3,18 +3,15 @@
     :excerpt: 1
     :nocomments:
 
-#######################
-Running a test net node
-#######################
+#####################
+Running a Symbol node
+#####################
 
-This guide walks you through the process of setting up a node to join |codename|'s **public test network**.
+This guide walks you through the process of setting up a node to join |codename|'s **public network**.
 
-The test network mirrors the same technology and features of the future main public network.
-You can use the test net to experiment with the offered |codename|'s transaction set in a live network.
+You can safely experiment connecting to |codename|'s network by connecting to the test network (testnet) instead of the main public network (mainnet). Testnet **might be offline or replaced without notice** because it is used extensively for testing purposes, though. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>` instead.
 
-.. note:: The network **might be offline or replaced without notice** because it is used extensively for testing purposes. To work in a private environment network, install :doc:`a local network for learning and development purposes <creating-a-private-test-net>`.
-
-To run the network, we are going to use the package |symbol-bootstrap|. To better understand how this package works it is highly recommended to read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide.
+To run the network, you are going to use the package |symbol-bootstrap|. To better understand how this package works it is highly recommended to read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide.
 
 *********************
 Hardware requirements
@@ -44,11 +41,13 @@ The following table shows the **recommended requirements**. Using these will pro
    Disk size; 500 GB; 750 GB; 750 GB
    Disk speed; 1500 |iops| |ssd|; 1500 |iops| |ssd|; 1500 |iops| |ssd|
 
-**********************
-The ``testnet`` preset
-**********************
+***************************************
+The ``testnet`` and ``mainnet`` presets
+***************************************
 
-|symbol-bootstrap| has a preset called ``testnet`` which instantiates a node that connects to the current public test network (testnet). The capabilities of this node are selected through the ``assembly`` option.
+|symbol-bootstrap| has presets called ``testnet`` and ``mainnet`` which instantiate a node that connects to the appropriate public network. The particular capabilities of this node are selected through the ``assembly`` option.
+
+This guide uses ``testnet`` as an example, feel free to change it to ``mainnet`` once the main network has officially launched.
 
 To create a peer node:
 ======================
@@ -88,6 +87,8 @@ Running the node
 You really don't need to use anything else but ``symbol-bootstrap start``.  Use any of the commands above to instantiate and boot a |codename| node and ``Ctrl+C`` to shut it down.
 
 Alternatively, you can start in detached mode (``--detached``) to run in the background.
+
+.. note:: Upon first launch the node will **synchronize** with the rest of the network, downloading the **complete blockchain**. This might take a few hours and during this time REST requests directed to your node (if it is an API node) might be delayed and report an incorrect chain height.
 
 .. _retrieving-node-account:
 
@@ -170,7 +171,7 @@ Once the node is running with ``symbol-bootstrap start`` and you have funded its
 
 This creates the required :ref:`AccountKeyLink <account-key-link-transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` transactions and announces them to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
 
-.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of a testnet node using ``--url``. Find a `list of nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-7-release-15-feb-2021/27565>`_.
+.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of another node using ``--url``. Find a `list of testnet nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-7-release-15-feb-2021/27565>`_.
 
 .. _bootstrap-enable-voting:
 
@@ -181,7 +182,7 @@ The :ref:`block finalization <finalization>` process requires that network nodes
 
 .. note:: We are going to create a new voting node. If you already created a non-voting node which you no longer need, you can remove the ``target`` folder or, more conveniently, use the ``-r`` switch next time you invoke ``symbol-bootstrap``.
 
-First, you need to configure the node as a voter, so, besides selecting the ``testnet`` preset and the desired assembly you have to provide a custom preset file with the following content:
+First, you need to configure the node as a voter, so, besides selecting the desired preset and assembly you have to provide a custom preset file with the following content:
 
 .. code-block:: yaml
 
@@ -208,9 +209,9 @@ Configuring node properties
 
 Follow the :ref:`Configuring node properties <node-properties>` guide to change parameters such as the public name of the node.
 
-*********************************
-Interacting with the test network
-*********************************
+****************************
+Interacting with the network
+****************************
 
 You can use the following tools to test the functionality of your new node:
 

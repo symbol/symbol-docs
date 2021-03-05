@@ -55,7 +55,7 @@ Guide
    .. note::
       Only nodes which act **both** as :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes are shown on this list, but you can still request harvesting from pure Peer nodes by **manually writing their URL** in the box. In this case, though, you will also need to provide the node's **transport public key**.
 
-      **This key must be provided by the node owner**. If you have instantiated the node using :doc:`Symbol Bootstrap <../network/running-a-test-net-node>`, you can find this key in the :ref:`addresses.yml <retrieving-node-account>` file.
+      **This key must be provided by the node owner**. If you have instantiated the node using :doc:`Symbol Bootstrap <../network/running-a-symbol-node>`, you can find this key in the :ref:`addresses.yml <retrieving-node-account>` file.
 
       A node URL looks like:
       

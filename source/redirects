@@ -1,2 +1,3 @@
 libraries.rst sdk.rst
 guides/accountlink/activating-delegated-harvesting.rst ../harvesting/activating-delegated-harvesting-manual.rst
+guides/network/running-a-test-net-node.rst running-a-symbol-node.rst

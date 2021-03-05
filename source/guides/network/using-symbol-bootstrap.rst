@@ -20,7 +20,7 @@ Using Symbol Bootstrap
 
 This guide explains the concepts behind |symbol-bootstrap|, a package which contains the necessary setup scripts to help developers quickly configure and run their own network or node.
 
-After reading this you will be able to better understand the :doc:`Creating private test networks <creating-a-private-test-net>` and :doc:`Running a test net node <running-a-test-net-node>` guides.
+After reading this you will be able to better understand the :doc:`creating-a-private-test-net` and :doc:`running-a-symbol-node` guides.
 
 **This package replaces the previous tools** |catapult-service-bootstrap| and |symbol-testnet-bootstrap|.
 
@@ -177,8 +177,8 @@ Next steps
 
 Proceed to the following guides to put what you have learned into practice!
 
-- :doc:`Creating private test networks <creating-a-private-test-net>`: How to set up your own private network and access its nodes.
-- :doc:`Running a test net node <running-a-test-net-node>`: How to set up your own node and join |codename|'s test network.
+- :doc:`creating-a-private-test-net`: How to set up your own private network and access its nodes.
+- :doc:`running-a-symbol-node`: How to set up your own node and join |codename|'s test network.
 
 Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
 

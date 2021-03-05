@@ -24,7 +24,7 @@ This guide has **two sections**, depending on how you created your node: Using |
 Activation through Symbol Bootstrap
 ***********************************
 
-If you have followed the :doc:`../network/running-a-test-net-node` guide then you have used |symbol-bootstrap| to create your node. **The out-of-the-box presets enable remote harvesting by default** so there is nothing you need to do if you enabled harvesting when following that guide.
+If you have followed the :doc:`../network/running-a-symbol-node` guide then you have used |symbol-bootstrap| to create your node. **The out-of-the-box presets enable remote harvesting by default** so there is nothing you need to do if you enabled harvesting when following that guide.
 
 To clarify, |symbol-bootstrap| automatically creates a remote account (labelled ``remote`` in the ``addresses.yml`` file) and sets it as the signer of the new blocks (using its private key in the ``harvesterSigningPrivateKey`` property). Then, the ``symbol-bootstrap link`` command announces the :ref:`AccountKeyLink <account-key-link-transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` transactions required to finish the activation.
 

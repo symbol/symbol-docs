@@ -70,7 +70,7 @@ If you get an error or the version returned does not match v12.X, visit |node-js
 
 If you get the error ``The CLI cannot reach the node``, the most common causes are:
 
-* **Incorrect node URL**: The URL used does not belong to an active node. Open the URL provided in a new browser tab and check if you get a response. If the test network node is not working, you can **use another node url** from |network-list| or **run your own testnet node** by following :doc:`the next guide <../guides/network/running-a-test-net-node>`.
+* **Incorrect node URL**: The URL used does not belong to an active node. Open the URL provided in a new browser tab and check if you get a response. If the test network node is not working, you can **use another node url** from |network-list| or **run your own testnet node** by following :doc:`the next guide <../guides/network/running-a-symbol-node>`.
 
 * **Internet connection**: The CLI resolves some values from the node. If you decide to use the tool without being connected to the internet, you will have to pass the options ``--network``, ``--generation-hash``, ``--namespace-id``, and ``divisibility``. Type ``symbol-cli account generate --help`` to know more about each parameter.
 
