@@ -22,7 +22,7 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
       nodes:
         - rewardProgram: SuperNode
-          host: myNodePublicHostName
+          host: my-symbol-node.com # Could also be an IP address
 
    If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true``.
 
@@ -46,7 +46,7 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    You can find the node's main account address in the ``target/addresses.yml`` file. 
 
-   On the TESTNET, you can **send tokens** to your node's main account using the `Symbol Faucet <http://faucet.testnet.symboldev.network>`__.
+   On the TESTNET, you can **send tokens** to your node's main account using the `Symbol Faucet <http://faucet.testnet.symboldev.network>`__. If you need more tokens than the faucet can serve, connect to `NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__ and contact `cryptobeliever <https://t.me/cryptobeliever>`__.
 
 4. **Register the node** by linking its remote, VRF and voting keys:
 
@@ -56,6 +56,8 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    This sends a transaction linking the supplemental keys to the main account. This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure your main account has **extra funds** beyond the requirements of the Supernode program.
 
+   .. note:: During the test period, heavy testing might artificially increase transaction fees. If ``symbol-bootstrap`` appears to be frozen with the message ``Announcing Simple Transaction hash...`` try increasing the transaction fee with adding a ``--maxFee 10000000`` parameter, for example.
+
 5. **Enroll in the Supernode program**.
 
    .. code-block:: bash
@@ -63,6 +65,8 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
       symbol-bootstrap enrolRewardProgram --useKnownRestGateways
 
    This sends a transaction to the Controller address, which includes the node's public key and its monitoring agent's public URL.
+
+   See the note regarding fees in the previous step.
 
    From this point, the :ref:`reward programs controller <reward-programs-controller>` on the network will monitor the node.
 
@@ -117,13 +121,17 @@ The process requires **installing a monitoring agent** and **announcing a specia
       ; Node's transport private key
       NODE_PRIVATE_KEY=●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
       LOGGER_FILE=agent.log
-      ; Replace host-name with the public host name of your node
-      REST_GATEWAY_URL=http://node-hostname:3000
+      ; Replace with the public host where your node is running (hostname or IP address)
+      REST_GATEWAY_URL=http://my-symbol-node.com:3000
       REWARD_PROGRAM=SuperNode
       CONTROLLER_PUBLIC_KEY=68B6A1D2F292E75F9BB8E9EDDA086A7C293A198C9968FF7528374075AAF4D983
       CERTS_CA_FILE=ca-crt.pem
       CERTS_KEY_FILE=agent-key.pem
       CERTS_CERT_FILE=agent-crt.pem
+
+   .. note:: By default the agent uses port number ``7880`` to communicate. If this port is already in use (by a NIS1 supernode agent, for example) add an ``HTTP_PORT=`` line with a different port number.
+
+   You need to specify ``REST_GATEWAY_URL`` because the agent and the node's REST gateway might be running on different machines. This URL is how the agent will contact the node's REST interface. If they are on the same machine you can simply use ``REST_GATEWAY_URL=http://localhost:3000``.
 
 4. **Run the agent**:
 
@@ -143,7 +151,7 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
    - Replace ``NODE_PUBLIC_KEY`` with your node's **transport** public key. You can get it from the ``nodePublicKey`` field in http://localhost:3000/node/info, for example, when your node is running.
 
-   - Replace ``AGENT_URL`` with ``htps://`` + the host name of the machine where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://myNodePublicHostName:7880``.
+   - Replace ``AGENT_URL`` with ``htps://`` + the host where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://my-symbol-node.com:7880``. IP addresses are also valid. Use the port number you specified in step 3 above if you didn't use the standard one.
 
    Finally, the recipient address of this transaction is ``TDETDMT5S2ADAYGJXPATUHQUYVGSLSVJ6TLSXQQ``.
 
