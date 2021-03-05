@@ -177,6 +177,8 @@ Ecosystem Node Program
 
 This program is aimed at maintaining **both the NIS1 and the Symbol networks** for a year and a half.
 
+Successfull candidates will maintain a **NIS1 supernode** and a **Symbol node** both online for 18 months.
+
 Requirements
 ============
 
@@ -187,11 +189,11 @@ Requirements
     * - Parameter
       - Requirement
     * - **Availability**
-      - The node must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the first **18 months**.
+      - Both NIS1 and Symbol nodes must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the first **18 months**.
     * - **Bonded Deposit**
-      - At least **250'000** |networkcurrency| must be stacked on a |codename| node during the whole period.
+      - At least **250'000** |networkcurrency| must be stacked on the |codename| node during the whole period.
 
-        At least **250'000** ``xem`` must be stacked on a NIS1 node during the whole period.
+        At least **250'000** ``xem`` must be stacked on the NIS1 node during the whole period.
     * - **Maximum nodes**
       - No more than **5** nodes per person are allowed.
     * - **Incompatibility**
