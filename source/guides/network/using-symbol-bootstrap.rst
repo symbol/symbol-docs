@@ -57,6 +57,12 @@ Installation
 
     npm install -g symbol-bootstrap
 
+.. note::
+
+    You can run the above command again to install a newer version of ``symbol-bootstrap`` every time one becomes available.
+
+    Remember to stop ``symbol-bootstrap`` before upgrading and then start it again afterwards, as shown below.
+
 *************
 Configuration
 *************
@@ -116,7 +122,7 @@ This will create a folder, called ``target`` by default (It can be changed with 
 .. note:: If you get the error ``Permission denied while trying to connect to the Docker daemon socket`` it means that your user does not belong to the ``docker`` group. Add it with:
 
   .. code-block:: bash
-  
+
     sudo addgroup $USER docker
 
 ******************************
@@ -143,7 +149,11 @@ Finally, execute this command to start the necessary Docker instances and boot y
 
 Stop the process by pressing ``Ctrl+C``.
 
-.. note:: To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
+.. note::
+
+    To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
+
+    You then have to stop them with ``symbol-bootstrap stop``.
 
 .. _symbol-bootstrap-all-in-one:
 
