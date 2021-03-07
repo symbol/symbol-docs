@@ -16,7 +16,7 @@ Using Symbol Bootstrap
 
 Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are not familiar with it.
 
-1. Create a `custom preset file <symbol-bootstrap-presets>`_ named, for example, ``supernode.yml``:
+1. Create a :ref:`custom preset file <symbol-bootstrap-presets>`_ named, for example, ``supernode.yml``:
 
    .. code-block:: yaml
 
@@ -26,7 +26,7 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true``.
 
-   If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-keys>`__.
+   If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-private-keys>`__.
 
    .. note:: When managing your node through a :doc:`multisig account <../../concepts/multisig-account>`, the **main** account in the above preset file must be **the multisig account** (and **not** any of its cosignatories).
 
