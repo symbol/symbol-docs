@@ -13,7 +13,7 @@ Each of these programs rewards **a different aspect of the network**:
 - :ref:`early-adoption-node-program`: For nodes that support |codename|'s network from the onset but do not qualify for the Supernode program.
 - :ref:`ecosystem-node-program`: For nodes supporting **both** the NIS1 and |codename| networks.
 
-In most cases, node owners wishing to benefit from these programs must explicitly **enroll** to them. The descriptions below contain **guides** explaining how to enroll to each program.
+In most cases, node owners wishing to benefit from these programs must explicitly **enroll** in them. The descriptions below contain **guides** explaining how to enroll in each program.
 
 .. _supernode-program:
 
@@ -80,7 +80,7 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q51SJNxeK
 
 .. note::
 
-    :doc:`Follow this guide to enroll to the Supernode program <../guides/network/supernode-enrollment>`.
+    :doc:`Follow this guide to enroll in the Supernode program <../guides/network/supernode-enrollment>`.
 
 .. _voting-node-program:
 
@@ -105,7 +105,7 @@ Voting nodes are regular nodes meeting the following additional requirements:
     **Bonded Deposit**; At least **3 million** |networkcurrency| must be stacked on the node.
     **Voting keys**; The node must signal its interest in becoming a voting node by registering its :ref:`Voting Key <voting-key-link-transaction>`.
 
-Although not mandatory, it is **recommended** that voting nodes meet the same hardware requirements as :ref:`supernodes <supernode-program>`. In fact, it is expected that participants of the Voting Node Program will also enroll to the Supernode program.
+Although not mandatory, it is **recommended** that voting nodes meet the same hardware requirements as :ref:`supernodes <supernode-program>`. In fact, it is expected that participants of the Voting Node Program will also enroll in the Supernode program.
 
 Rewards
 =======
@@ -167,7 +167,7 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-o0MMAFt
 
 .. note::
 
-    :doc:`Follow this guide to enroll to the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``EarlyAdoption`` reward program when prompted.
+    :doc:`Follow this guide to enroll in the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``EarlyAdoption`` reward program when prompted.
 
 .. _ecosystem-node-program:
 
@@ -211,4 +211,4 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-ipGZ6zs
 
 .. note::
 
-    :doc:`Follow this guide to enroll to the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``Ecosystem`` reward program when prompted.
+    :doc:`Follow this guide to enroll in the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``Ecosystem`` reward program when prompted.

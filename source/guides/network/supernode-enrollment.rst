@@ -1,5 +1,5 @@
 ##################################
-Enrolling to the Supernode program
+Enrolling in the Supernode program
 ##################################
 
 This guide shows how to create a node and register it as a **Supernode**. Make sure you know about the :ref:`supernode-program` before continuing with this guide.
@@ -143,7 +143,7 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
 5. **Send the enrolling message**
 
-   The last bit is to **notify the Controller** that your node wants to enroll the Supernode program. This is done through a conventional :ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a special message:
+   The last bit is to **notify the Controller** that your node wants to enroll in the Supernode program. This is done through a conventional :ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a special message:
 
    .. code-block:: text
 
