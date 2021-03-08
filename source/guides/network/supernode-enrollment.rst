@@ -151,7 +151,7 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
    - Replace ``NODE_PUBLIC_KEY`` with your node's **transport** public key. You can get it from the ``nodePublicKey`` field in http://localhost:3000/node/info, for example, when your node is running.
 
-   - Replace ``AGENT_URL`` with ``htps://`` + the host where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://my-symbol-node.com:7880``. IP addresses are also valid. Use the port number you specified in step 3 above if you didn't use the standard one.
+   - Replace ``AGENT_URL`` with ``https://`` + the host where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://my-symbol-node.com:7880``. IP addresses are also valid. Use the port number you specified in step 3 above if you didn't use the standard one.
 
    Finally, the recipient address of this transaction is ``TDETDMT5S2ADAYGJXPATUHQUYVGSLSVJ6TLSXQQ``.
 
