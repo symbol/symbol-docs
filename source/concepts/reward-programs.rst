@@ -131,7 +131,7 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-Ph2KGKN
 Early Adoption Node Program
 ***************************
 
-It is critical that enough nodes are available from block 1, at the moment |codename| launches. This program rewards nodes that agree to be online during |codename|'s first year.
+It is critical that enough nodes are already available once |codename| launches. This program rewards nodes that agree to be online during |codename|'s **first year**.
 
 Requirements
 ============
@@ -144,6 +144,8 @@ Requirements
       - Requirement
     * - **Availability**
       - The node must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the **first year**.
+
+        **Availability tests will start 24 hours after Symbol's launch**.
     * - **Bonded Deposit**
       - At least **500'000** |networkcurrency| must be stacked on the node during the whole period.
     * - **Maximum nodes**
@@ -167,7 +169,7 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-o0MMAFt
 
 .. note::
 
-    :doc:`Follow this guide to enroll in the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``EarlyAdoption`` reward program when prompted.
+    :doc:`Follow this guide to enroll in the Early Adoption program <../getting-started/ready-for-symbol-launch>`.
 
 .. _ecosystem-node-program:
 
@@ -190,6 +192,8 @@ Requirements
       - Requirement
     * - **Availability**
       - Both NIS1 and Symbol nodes must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the first **18 months**.
+
+        **Availability tests will start 24 hours after Symbol's launch**.
     * - **Bonded Deposit**
       - At least **250'000** |networkcurrency| must be stacked on the |codename| node during the whole period.
 
@@ -211,4 +215,4 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-ipGZ6zs
 
 .. note::
 
-    :doc:`Follow this guide to enroll in the Early Adoption program <../getting-started/ready-for-symbol-launch>` and select the ``Ecosystem`` reward program when prompted.
+    :doc:`Follow this guide to enroll in the Ecosystem program <../getting-started/ready-for-symbol-launch>`.

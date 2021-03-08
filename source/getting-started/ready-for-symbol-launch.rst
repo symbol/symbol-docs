@@ -2,9 +2,9 @@
 Getting your node ready for Symbol launch
 #########################################
 
-This guide shows the steps required to have your node **ready for action from the first block**, on |codename|'s launch day. This is important for node owners wanting to benefit from some of the :doc:`Reward Programs <../concepts/reward-programs>`.
+This guide shows the steps required to have your node **ready for action**, on |codename|'s launch day. This is important for node owners wanting to benefit from some of the :doc:`Reward Programs <../concepts/reward-programs>`.
 
-If you are not planning to run **your own Symbol node**, or do not need to have it running **right the minute Symbol launches**, you do not need to worry about this guide.
+If you are not planning to run **your own Symbol node**, or do not need to have it running **right the day Symbol launches**, you do not need to worry about this guide.
 
 ************
 Introduction
@@ -12,119 +12,166 @@ Introduction
 
 **A beginning is a very delicate time**. The first block in the |codename| blockchain (the **Nemesis** block) is handcrafted but the following blocks are **produced by the nodes in the network**. This means that the moment the network launches there must be enough :ref:`Harvesting Nodes <peer-node>` present to keep block creation flowing.
 
-Now, **harvesting nodes must have their keys registered in the blockchain** (at least the VRF key), so in order to harvest from block 2, these keys must be **present in the Nemesis block**.
+NEM Group provides a few nodes to bootstrap the network, but it's critical that community-run nodes are added quickly afterwards to ensure **network resilience and independence**.
 
-This guide explains the required steps to **make sure that your node's keys will be included in the Nemesis block**. You can always register as a harvester later on :doc:`using the regular mechanisms <../guides/harvesting/index>`, but being a harvester early on is a requirement for some of the node :doc:`Reward Programs <../concepts/reward-programs>`.
+This guide explains:
 
-The process is automated through a **registration tool** built specifically for this purpose.
+- How to enroll in the different :doc:`Reward Programs <../concepts/reward-programs>`, created to **incentivize nodes** to come online as soon as possible.
 
-*************
+- How to configure your node so that it **starts harvesting as quickly as possible** when |codename|'s network launches.
+
+Snapshot and launch
+===================
+
+As you should be well aware by now, |codename|'s launch will happen in two phases.
+
+1. **Snapshot**: When the NIS1 chain reaches block height 3'105'500 a **snapshot** of the contents of all NIS1 accounts will be taken. `This is expected to happen on 12 March 2021, at around 00:50 UTC <https://nem.io/#symbol-countdown>`__.
+
+2. **Launch**: Afterwards, on March 15th (exact time to be determined), the new |codename| network will **launch** meaning that the nodes managed by NEM Group will be brought online and they will start adding blocks to the shinny new |codename| blockchain.
+
+These two concepts are used throughout this guide.
+
+*********
+Enrolling
+*********
+
+If you want to participate in either the :ref:`early-adoption-node-program` or the :ref:`ecosystem-node-program` you need to enroll in them **before the snapshot**. This section explains how to do this.
+
+If you are interested only in the :ref:`supernode-program` or the :ref:`voting-node-program` (or if you are not interested in any of the reward programs) you don't need to enroll beforehand so you can skip this section and jump to :ref:`getting-ready-launching-your-node`.
+
+.. _getting-ready-prerequisites:
+
 Prerequisites
-*************
+=============
 
-- You must have a `NIS1 <https://nemplatform.com/>`__ account. `NIS1 <https://nemplatform.com/>`__ is NEM's current blockchain, which is used in this process to **register all harvesting requests** before |codename|'s launch. The easiest way to create an account is through the `NEM Desktop Client <https://nemplatform.com/wallets/#desktop>`__ (also known as the **NEM Nano Wallet**).
+- You must have a `NIS1 <https://nemplatform.com/>`__ account. `NIS1 <https://nemplatform.com/>`__ is NEM's current blockchain, which is used in this process to **register all requests** before |codename|'s launch. The easiest way to create an account is through the `NEM Desktop Client <https://nemplatform.com/wallets/#desktop>`__ (also known as the **NEM Nano Wallet**) and click the **SIGN UP** button at the top-right.
 
-- Your NIS1 account must be `opted-in <https://nemplatform.com/symbol-migration/>`__. The opt-in process creates a new |codename| account that will receive a copy of the NIS1 account's **tokens and associated keys** once |codename| launches. Again, the easiest way to do this is through the **Nano Wallet's opt-in module**:
+- Your NIS1 account must be `opted-in <https://nemplatform.com/symbol-migration/>`__. The opt-in process creates a new |codename| account that will receive a copy of the NIS1 account's **tokens** once |codename| launches. Again, the easiest way to do this is through the **Nano Wallet's opt-in module**:
 
-  - Make sure you obtain a **Paper Wallet** for the new account to simplify the process.
-  - When asked about the VRF key, **do not include it** in the opt-in; it's simpler to do it later. There is no problem if you already included it, it will be detected automatically.
+  - Make sure you obtain a **Paper Wallet** for the new |codename| account, or, at least, its **private key**.
+  - Do not worry about opting-in the **VRF key**, it is currently being ignored (there is no problem if you already included it).
 
-- Your NIS1 account must hold at least **10'000 XEMs** at the snapshot block height. :ref:`Only accounts holding this amount can harvest <account_eligibility>` on the |codename| network so only accounts holding this amount at the snapshot will have their keys added to the Nemesis block.
+- Your NIS1 account must hold at least **10'000 XEMs** at the snapshot block height (3'105'500). :ref:`Only accounts holding this amount of XYMs can harvest <account_eligibility>` on the |codename| network so only accounts holding this amount at the snapshot can benefit from the Reward Programs.
 
-*********************************
-1. Download the registration tool
-*********************************
+Enrollment request
+==================
 
-Choose the right link for your platform:
+The request is **a specially-crafted NIS1 transaction** sent from your NIS1 account to a specific address using the Nano Wallet (or any other wallet that allows sending NIS1 transactions with a message).
 
-- `macOS (Darwin) <https://symbol-node-registration-cli.s3-eu-west-1.amazonaws.com/dist/v0.0.0/symbol-node-registration-cli-v0.0.0-darwin-x64.tar.gz>`__
-- `Linux (ARM) <https://symbol-node-registration-cli.s3-eu-west-1.amazonaws.com/dist/v0.0.0/symbol-node-registration-cli-v0.0.0-linux-arm.tar.gz>`__
-- `Linux (x64) <https://symbol-node-registration-cli.s3-eu-west-1.amazonaws.com/dist/v0.0.0/symbol-node-registration-cli-v0.0.0-linux-x64.tar.gz>`__
-- `Windows (x64) <https://symbol-node-registration-cli.s3-eu-west-1.amazonaws.com/dist/v0.0.0/symbol-node-registration-cli-v0.0.0-win32-x64.tar.gz>`__
-- `Windows (x86) <https://symbol-node-registration-cli.s3-eu-west-1.amazonaws.com/dist/v0.0.0/symbol-node-registration-cli-v0.0.0-win32-x86.tar.gz>`__
-- `Source code <https://symbol-node-registration-cli.s3-eu-west-1.amazonaws.com/dist/v0.0.0/symbol-node-registration-cli-v0.0.0.tar.gz>`__
+Detailed instructions for the Nano Wallet follow, but this is the summary:
 
-Open a terminal, unzip the file and move into the ``symbol-node-registration-cli`` directory.
+- The **destination address** must be ``NAQ7RCYM4PRUAKA7AMBLN4NPBJEJMRCHHJYAVA72``.
+- The **amount** to transfer must be **0**.
+- The **message** must be un-encrypted and adhere to one of the following templates, depending on the program you are interested in:
 
-****************************
-2. Run the registration tool
-****************************
+  .. list-table::
+      :widths: 50 50
+      :header-rows: 1
 
-The tool will ask you **your NIS1 account address** and query the NIS1 blockchain to retrieve its opted-in |codename| account (Remember that your NIS1 account must be opted-in). Afterwards, the registration tool:
+      * - Early Adoption
+        - Ecosystem
+      * - .. code-block:: json
 
-- **Creates VRF, Remote and (optionally) Voting keys** for the new |codename| account. If the VRF key had already been registered by Nano Wallet, it is reused.
-- **Announces a NIS1 transaction** linking the new |codename| account to its keys. This transaction will be used to populate the Nemesis block on the launch date.
+            {
+              "type":10,
+              "p":"earlyadoption",
+              "d":"SYMBOL_ACCOUNT_PUBLIC_KEY",
+              "sh":"SYMBOL_NODE_HOST"
+            }
 
-  .. note:: This transaction must be signed so your NIS1 account **private key** will be requested. The registration tool does not store it **anywhere**.
+        - .. code-block:: json
 
-- **Generates an encrypted preset file** that can be used by :doc:`Symbol Bootstrap <../guides/network/using-symbol-bootstrap>` to start with an already-configured node on the launch date.
+            {
+              "type":10,
+              "p":"ecosystem",
+              "d":"SYMBOL_ACCOUNT_PUBLIC_KEY",
+              "sh":"SYMBOL_NODE_HOST",
+              "nh":"NIS1_NODE_HOST"
+            }
 
-All this is done by the ``register`` command:
+Replace ``SYMBOL_ACCOUNT_PUBLIC_KEY`` with the **public key** of the new |codename| account you received when you opted-in. **Read the next subsection to know how to obtain it**.
 
-.. code-block:: bash
+Replace ``SYMBOL_NODE_HOST`` with the public host (hostname or IP address) of your **Symbol node**. If you don't know it yet, you can leave it blank and **send another transaction during the first 24 hours after launch**. The new host will be used.
 
-   bin/symbol-node-registration-cli register
+Replace ``NIS1_NODE_HOST`` with the public host (hostname or IP address) of a **NIS1 node** you own (only for the Ecosystem program).
 
-   » Do you have your Paper Wallet? Yes
-   » Select a network: mainnet
-   » Enter the NIS1 opted-in main account address: ●●●●●●●●●●●●●●●●
-   » Enter the Mnemonic Phrase from the Paper Wallet: ●●●● ●●●● ●●●● ●●●● ●●●●
-   » Enter password to use to encrypt the Symbol Bootstrap custom preset: ●●●●●●●●
-   » Select your Symbol Reward Program: None, EarlyAdoption or Ecosystem
-   ...
+The node's public key
+=====================
 
-**Write down** the password you use to encrypt the preset file, you will need it later to configure your node.
+When you opted-in you should have received a **Paper Wallet**. This is just a PDF file meant to be **printed or stored offline** for added security.
 
-At the end of the process a **summary screen** is shown. It is specially worth noting:
+This file contains your new Symbol account's **private key**, which you will need to produce the corresponding **public key** required for enrolling (See :ref:`keypair` for more information).
 
-- The ``symbol-bootstrap`` command needed to start the node with this configuration.
-
-- `A link to a preview <http://explorer.experimental.symboldev.network>`__ of the blockchain as it will be on launch day.
-
-  - This preview updates roughly every hour.
-  - Only accounts with enough XEMs to be successfully opted-in are shown.
-
-- `A link to an opt-in report <http://report.experimental.symboldev.network>`__ which you can use to check if the opt-in succeeded or why it failed.
-
-Finally, the registration tool produces a Symbol Bootstrap custom preset file called ``symbol-bootstrap-custom-preset.yml`` by default. The next step shows how to use it.
-
-**********************
-3. Configure your node
-**********************
-
-Your node has now been **registered** and all the keys required for harvesting and voting will be available in the |codename| blockchain on the launch date.
-
-The only step missing is **configuring your node** so it uses the registered account and its related keys. You can do it **automatically** using Symbol Bootstrap or you can do it **manually**.
-
-Using Symbol Bootstrap
-======================
-
-This is the **recommended method**, due to its simplicity.
-
-First off, get used to :doc:`creating nodes using Symbol Bootstrap <../guides/network/running-a-test-net-node>`. Create some experimental nodes and connect them to the TESTNET (using the ``-p testnet`` preset).
-
-Then, **on the launch day**, run ``symbol-bootstrap`` (this command was printed on the screen by the registration tool at the end of the process):
+This will be accomplished using the :doc:`symbol-cli <../cli>` tool. If you don't have it installed already, do it now. On Linux, for example, you can enter this on a terminal:
 
 .. code-block:: bash
 
-   symbol-bootstrap start -p mainnet -a dual \
-     -c symbol-bootstrap-custom-preset.yml --password ●●●●●●●●
+   sudo apt install nodejs npm
+   npm install -g symbol-cli
 
-This will use the **preset file** that the registration tool created, which contains your account and related keys. The file is **encrypted** so use the correct password in the command line.
+Note that on Windows you need to `install node and npm manually <https://nodejs.org/en/download/>`__.
 
-Your node should now be up and running.
+This tool can perform a large number of operations on the |codename|'s blockchain but we're only interested in **obtaining a public key from a private key**. This does not require creating a ``symbol-cli`` profile or even being online. Just enter this on a terminal:
 
-.. note:: A mechanism is being researched so you can **start your node in advance** and leave it on "stand by", waiting for the network to boot. This page will be updated with the outcome of this research.
+.. code-block:: symbol-cli
 
-Manually
-========
+   symbol-cli converter privateKeyToPublicKey --network MAIN_NET
 
-   **Section coming soon.**
+Your private key will be requested (it will not be stored anywhere) and the matching public key will be returned:
 
-   You need to extract the information from the preset file using:
+.. code-block:: symbol-cli
 
-   .. code-block:: bash
+   $ symbol-cli converter privateKeyToPublicKey --network MAIN_NET
+   √ Enter your account private key: ... ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+   B49D19106E08C1E655FA5A02D85FD628BE9CE13FF3A09D7D25C7C9190E515DBA
 
-      bin/symbol-node-registration-cli decrypt --showPrivateKeys
+This hexadecimal string (64-characters long) is the |codename| account's public key that you need to use in the above enrollment message in the ``d`` field (replacing ``SYMBOL_ACCOUNT_PUBLIC_KEY`` in the templates).
 
-   And then build the necessary ``catapult-server`` configuration files.
+Nano Wallet guide
+=================
+
+Your enrollment message should now look something like this (depending on the chosen reward program):
+
+.. code-block:: json
+
+   {
+     "type":10,
+     "p":"earlyadoption",
+     "d":"B49D19106E08C1E655FA5A02D85FD628BE9CE13FF3A09D7D25C7C9190E515DBA",
+     "sh":"my-symbol-node.com"
+   }
+
+Remember that **if you don't know your host name yet**, you can leave it blank (``"sh":""``) and send another transaction during the first 24 hours after launch to update it.
+
+Let's use **NEM's Nano Wallet** to send the message and complete the enrollment. You should already have the wallet installed if you followed the :ref:`getting-ready-prerequisites` section.
+
+This is how the Nano Wallet looks like after you fire it up:
+
+.. image:: /resources/images/screenshots/nano-wallet-reward-enrollment-tx.png
+  :align: center
+  :class: with-shadow
+  :target: /_images/nano-wallet-reward-enrollment-tx.png
+
+Click on the **LOGIN** button at the top-right and then follow these instructions:
+
+.. image:: /resources/images/screenshots/nano-wallet-reward-enrollment-tx-instructions.png
+  :align: center
+  :class: with-shadow
+  :target: /_images/nano-wallet-reward-enrollment-tx-instructions.png
+
+1. Click on the **Send** button at the top.
+2. Check that you have **enough funds** to pay for the transaction fee (the required amount is shown below in the **Fee** box).
+3. Check that you are using the **correct account**. To enroll in the **Ecosystem** program this transaction has to be sent from the account owning the NIS1 node. For the **Early Adoption** program it does not matter.
+4. Enter the destination address ``NAQ7RCYM4PRUAKA7AMBLN4NPBJEJMRCHHJYAVA72``.
+5. Enter the **enrollment message** you prepared and make sure it is correct. It is worth pasting it into a `JSON Validator <https://jsonformatter.curiousconcept.com>`__ to ensure it is correctly formatted.
+6. Enter your wallet's password and click on the wide **Send** button at the bottom.
+
+Once the transaction is announced and accepted, **your enrollment is complete**.
+
+The next section explains how to setup your node so that it is ready to harvest on day one, as required by the Early Adoption and Ecosystem programs.
+
+.. _getting-ready-launching-your-node:
+
+*******************
+Launching your node
+*******************
