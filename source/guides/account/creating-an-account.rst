@@ -34,16 +34,16 @@ Once you have filled out the page with the appropriate information, click "**Nex
     :align: center
     :width: 800px
 
-3. On the next page, the Desktop Wallet uses the movement of your mouse cursor to generate a random mnemonic passphrase for your wallet.
+3. On the next page, the Desktop Wallet uses the movement of your mouse cursor to generate a random mnemonic phrase for your wallet.
 Shift your mouse around the screen until the progress bar reaches 100% and the application automatically moves you to the next page.
 
 .. figure:: ../../resources/images/screenshots/desktop-create-account-3.gif
     :align: center
     :width: 800px
 
-4. Click "**Display mnemonic words**" to view your private passphrase. Backup this information securely offline and do not share it with anyone, as it stores the key to recover your assets. Click "**Next**".
+4. Click "**Display mnemonic words**" to view your private mnemonic phrase. Backup this information securely offline and do not share it with anyone, as it stores the key to recover your assets. Click "**Next**".
 
-5. Verify that you have backed up your mnemonic passphrase. Click the passphrase in the correct order. Click "**Next**".
+5. Verify that you have backed up your mnemonic phrase. Click each word in the phrase in the correct order. Click "**Next**".
 
 .. figure:: ../../resources/images/screenshots/desktop-create-account-4.gif
     :align: center

@@ -63,13 +63,7 @@ Accounts may configure a set of smart rules to block announcing or receiving tra
 HD Wallets
 **********
 
-An HD Wallet, or Hierarchical Deterministic Wallet, enables the generation of multiple accounts from a single binary seed.
-The seed is encoded as a mnemonic passphrase - a group of 24 human-readable words - using elliptic curve mathematics.
-
-|codename| supports multi-account hierarchy on the client-side.
-The `NIP-6 <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ defines the protocol to create HD Wallets on |codename|.
-
-To generate new HD Wallets, use the library `symbol-hd-wallets <https://github.com/nemtech/symbol-hd-wallets>`_.
+An HD Wallet, or Hierarchical Deterministic Wallet, enables the generation of multiple accounts from a single binary seed. See the :ref:`hdwallets-and-mnemonics` concept page.
 
 ******
 Guides

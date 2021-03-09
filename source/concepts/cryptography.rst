@@ -70,4 +70,21 @@ Then, the whole string is `Base32-encoded <https://en.wikipedia.org/wiki/Base32>
 
 It is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in a transaction.
 
+.. _hdwallets-and-mnemonics:
+
+************************
+HD-Wallets and Mnemonics
+************************
+
+**Hierarchical Deterministic Wallets** (HD-Wallets for short) can **derive a series of accounts** from a single seed account. This allows handling a group of accounts using a single :ref:`key pair <keypair>`, greatly simplifying their management:
+
+- Only one key to protect.
+- Multiple accounts can be stored in a single QR code or **mnemonic phrase**.
+
+A **Mnemonic Phrase** is human-friendly representation for a private key, composed of **24 random English words**. Mnemonic phrases are sometimes used instead of private keys as they are **easier for humans to remember and write down**.
+
+However, they are **equivalent to private keys** so it is critical that they are kept secret at all times. Even more so in the |codename| :ref:`wallet-desktop`, where **the mnemonic phrase encodes the seed account's key**.
+
+See the `NIP-6 <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ document for technical details on |codename|'s mechanism to create HD Wallets.
+
 Continue: :doc:`Block <block>`.
