@@ -38,7 +38,7 @@ Supernodes are regular nodes meeting the following additional hardware and opera
     **Chain Height**; Chain must be synchronized no more than **4 blocks** behind the reference height.
     **Chain Part**; Upload **50 random blocks hashes** of the chain accurately. These are compared to the reference chain hashes for accuracy.
     **Computing Power**; Hash at least **2'000 iterations per second**. Node is requested to calculate 10'000 iterations of a 32 byte seed. Speed and accuracy are measured.
-    **Bonded Deposit**; At least **1, 2 or 3 million** |networkcurrency| must be stacked on the node. The amount will decide the reward tier (see below).
+    **Bonded Deposit**; At least **1, 2 or 3 million** |networkcurrency| must be staked on the node. The amount will decide the reward tier (see below).
     **Version**; |codename| must be **up to date**. Nodes should be updated within **10 days** of each new |codename| release.
     **Ping**; **200ms response or less**. Node is requested to ping 20 other random nodes on the network and at least one ping time must pass the test (each node will be pinged 5 times and response times averaged).
     **Responsiveness**; **1 second**. 10 blockchain height requests will be made and at least 9 must answer in less than 1 second.
@@ -102,7 +102,7 @@ Voting nodes are regular nodes meeting the following additional requirements:
     :delim: ;
     :widths: 30 70
 
-    **Bonded Deposit**; At least **3 million** |networkcurrency| must be stacked on the node.
+    **Bonded Deposit**; At least **3 million** |networkcurrency| must be staked on the node.
     **Voting keys**; The node must signal its interest in becoming a voting node by registering its :ref:`Voting Key <voting-key-link-transaction>`.
 
 Although not mandatory, it is **recommended** that voting nodes meet the same hardware requirements as :ref:`supernodes <supernode-program>`. In fact, it is expected that participants of the Voting Node Program will also enroll in the Supernode program.
@@ -147,7 +147,7 @@ Requirements
 
         **Availability tests will start 24 hours after Symbol's launch**.
     * - **Bonded Deposit**
-      - At least **500'000** |networkcurrency| must be stacked on the node during the whole period.
+      - At least **500'000** |networkcurrency| must be staked on the node during the whole period.
     * - **Maximum nodes**
       - Only **1** node per person is allowed.
     * - **Incompatibility**
@@ -195,9 +195,9 @@ Requirements
 
         **Availability tests will start 24 hours after Symbol's launch**.
     * - **Bonded Deposit**
-      - At least **250'000** |networkcurrency| must be stacked on the |codename| node during the whole period.
+      - At least **250'000** |networkcurrency| must be staked on the |codename| node during the whole period.
 
-        At least **250'000** ``xem`` must be stacked on the NIS1 node during the whole period.
+        At least **3'000'000** ``xem`` must be staked on the NIS1 node during the whole period (to comply with the NIS1 supernode program).
     * - **Maximum nodes**
       - No more than **5** nodes per person are allowed.
     * - **Incompatibility**
