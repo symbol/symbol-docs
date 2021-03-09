@@ -264,7 +264,7 @@ msgstr ""
 #: ../../source/guides/network/supernode-enrollment.rst:183
 msgid ""
 "Finally, the recipient address of this transaction is "
-"``TDETDMT5S2ADAYGJXPATUHQUYVGSLSVJ6TLSXQQ``."
+"``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ``."
 msgstr ""
 
 #: ../../source/guides/network/supernode-enrollment.rst:185
