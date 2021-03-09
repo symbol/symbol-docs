@@ -153,14 +153,14 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
    - Replace ``AGENT_URL`` with ``https://`` + the host where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://my-symbol-node.com:7880``. IP addresses are also valid. Use the port number you specified in step 3 above if you didn't use the standard one.
 
-   Finally, the recipient address of this transaction is ``TDETDMT5S2ADAYGJXPATUHQUYVGSLSVJ6TLSXQQ``.
+   Finally, the recipient address of this transaction is ``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ``.
 
    The transaction can be announced using :doc:`symbol-cli <../../cli>`:
 
    .. code-block:: symbol-cli
 
       symbol-cli transaction transfer --mode normal --sync \
-                 --recipient-address TDETDMT5S2ADAYGJXPATUHQUYVGSLSVJ6TLSXQQ \
+                 --recipient-address TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ \
                  --message "enrol NODE_PUBLIC_KEY AGENT_URL" \
                  --mosaics @symbol.xym::0
 
