@@ -146,6 +146,8 @@ Obviously the wallet will not be **fully operative** until |codename| launches, 
      :class: with-shadow
      :target: /_images/mnemonic-to-pubkey-wallet-4.png
 
+   .. note:: If your opted-in address does **not appear** in the list, make sure the NIS1 account has **enough funds** as stated in the :ref:`getting-ready-prerequisites` section. Only accounts with at least **100 XEMs** can opt-in, and only accounts with at least **10'000 XEMs** can harvest.
+
 6. Accept the terms and conditions and click ``Finish``:
 
    .. image:: /resources/images/screenshots/mnemonic-to-pubkey-wallet-5.png
@@ -188,7 +190,7 @@ Your enrollment message should now look something like this (depending on the ch
 
 Remember that **if you don't know your host name yet**, you can leave it blank (``"sh":""``) and send another transaction during the first 24 hours after launch to update it.
 
-.. note:: It is worth pasting the message into a `JSON Validator <https://jsonformatter.curiousconcept.com>`__ to ensure it is correctly formatted.
+.. note:: Paste the message into a `JSON Validator <https://jsonformatter.curiousconcept.com>`__ to ensure it is correctly formatted.
 
 You will now use **NEM's Nano Wallet** to send the message and complete the enrollment (Not to be confused with the |desktop-wallet| that you used before). You should already have the wallet installed if you followed the :ref:`getting-ready-prerequisites` section.
 
