@@ -4,7 +4,7 @@ Getting your node ready for Symbol launch
 
 This guide shows the steps required to have your node **ready for action**, on |codename|'s launch day. This is important for node owners wanting to benefit from some of the :doc:`Reward Programs <../concepts/reward-programs>`.
 
-If you are not planning to run **your own Symbol node**, or do not need to have it running **right the day Symbol launches**, you do not need to worry about this guide.
+If you are not planning to run **your own Symbol node**, or do not need to have it running **the day Symbol launches**, you do not need to worry about this guide.
 
 ************
 Introduction
@@ -25,7 +25,7 @@ Snapshot and launch
 
 As you should be well aware by now, |codename|'s launch will happen in two phases.
 
-1. **Snapshot**: When the NIS1 chain reaches block height 3'105'500 a **snapshot** of the contents of all NIS1 accounts will be taken. `This is expected to happen on 12 March 2021, at around 00:50 UTC <https://nem.io/#symbol-countdown>`__.
+1. **Snapshot**: When the NIS1 chain reaches block height 3'105'500 a **snapshot** of the contents of all NIS1 accounts will be taken. `This is expected to happen on 12 March 2021, at around 03:50 UTC <https://nem.io/#symbol-countdown>`__.
 
 2. **Launch**: Afterwards, on March 15th (exact time to be determined), the new |codename| network will **launch** meaning that the nodes managed by NEM Group will be brought online and they will start adding blocks to the shinny new |codename| blockchain.
 
@@ -49,7 +49,7 @@ Prerequisites
 - Your NIS1 account must be **opted-in**. The `opt-in process <https://nemplatform.com/symbol-migration/#acc-tb_mrzh282-5>`__ creates a new |codename| account that will receive a copy of the NIS1 account's **tokens** once |codename| launches. Again, the easiest way to do this is through the **Nano Wallet's opt-in module** (Click on the ``Services`` tab and select ``Symbol Opt In``).
 
   - Make sure you obtain a **Paper Wallet** for the new |codename| account, or, at least, take note of the **mnemonic phrase**.
-  - Do not worry about opting-in the **VRF key**, it is currently being ignored (there is no problem if you already included it).
+  - Do not opt-in the **VRF keys**, the process has changed and they are registered post-launch now (there is no problem if you already opted them in).
 
 - Your NIS1 account must hold at least **10'000 XEMs** at the snapshot block height (3'105'500). :ref:`Only accounts holding this amount of XYMs can harvest <account_eligibility>` on the |codename| network so only accounts holding this amount at the snapshot can benefit from the Reward Programs.
 
