@@ -23,7 +23,6 @@ import {
   HashLockTransaction,
   Mosaic,
   MosaicId,
-  NetworkType,
   PlainMessage,
   PublicAccount,
   RepositoryFactoryHttp,
@@ -40,14 +39,17 @@ const example = async (): Promise<void> => {
   const epochAdjustment = await repositoryFactory
     .getEpochAdjustment()
     .toPromise();
-  
+
   /* start block 01 */
   // replace with network type
   const networkType = await repositoryFactory.getNetworkType().toPromise();
   // replace with alice private key
   const alicePrivateKey =
     '1111111111111111111111111111111111111111111111111111111111111111';
-  const aliceAccount = Account.createFromPrivateKey(alicePrivateKey, networkType);
+  const aliceAccount = Account.createFromPrivateKey(
+    alicePrivateKey,
+    networkType,
+  );
   // replace with ticket distributor public key
   const ticketDistributorPublicKey =
     '20330294DC18D96BDEEF32FB02338A6462A0469CB451A081DE2F05B4302C0C0A';
@@ -63,7 +65,7 @@ const example = async (): Promise<void> => {
   const networkCurrencyMosaicId = new MosaicId('5E62990DCAC5BE8A');
   // replace with network currency divisibility
   const networkCurrencyDivisibility = 6;
-  
+
   const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(epochAdjustment),
     ticketDistributorPublicAccount.address,
@@ -76,7 +78,7 @@ const example = async (): Promise<void> => {
     PlainMessage.create('send 100 symbol.xym to distributor'),
     networkType,
   );
-  
+
   const ticketDistributorToAliceTx = TransferTransaction.create(
     Deadline.create(epochAdjustment),
     aliceAccount.address,
@@ -90,7 +92,7 @@ const example = async (): Promise<void> => {
     networkType,
   );
   /* end block 01 */
-  
+
   /* start block 02 */
   const aggregateTransaction = AggregateTransaction.createBonded(
     Deadline.create(epochAdjustment),
@@ -102,7 +104,7 @@ const example = async (): Promise<void> => {
     [],
     UInt64.fromUint(2000000),
   );
-  
+
   // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
   const networkGenerationHash =
     '1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B';
@@ -112,7 +114,7 @@ const example = async (): Promise<void> => {
   );
   console.log('Aggregate Transaction Hash:', signedTransaction.hash);
   /* end block 02 */
-  
+
   /* start block 03 */
   const hashLockTransaction = HashLockTransaction.create(
     Deadline.create(epochAdjustment),
@@ -125,19 +127,22 @@ const example = async (): Promise<void> => {
     networkType,
     UInt64.fromUint(2000000),
   );
-  
+
   const signedHashLockTransaction = aliceAccount.sign(
     hashLockTransaction,
     networkGenerationHash,
   );
-  
+
   // replace with node endpoint
-  
+
   const listener = repositoryFactory.createListener();
   const receiptHttp = repositoryFactory.createReceiptRepository();
   const transactionHttp = repositoryFactory.createTransactionRepository();
-  const transactionService = new TransactionService(transactionHttp, receiptHttp);
-  
+  const transactionService = new TransactionService(
+    transactionHttp,
+    receiptHttp,
+  );
+
   listener.open().then(() => {
     transactionService
       .announceHashLockAggregateBonded(
@@ -152,5 +157,5 @@ const example = async (): Promise<void> => {
       );
   });
   /* end block 03 */
-}
+};
 example().then();

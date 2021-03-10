@@ -23,7 +23,6 @@ import {
   Deadline,
   Mosaic,
   MosaicId,
-  NetworkType,
   PlainMessage,
   PublicAccount,
   RepositoryFactoryHttp,

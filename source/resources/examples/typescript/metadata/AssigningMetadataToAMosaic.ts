@@ -23,7 +23,6 @@ import {
   KeyGenerator,
   MosaicMetadataTransaction,
   NamespaceId,
-  NetworkType,
   RepositoryFactoryHttp,
   UInt64,
 } from 'symbol-sdk';
@@ -48,7 +47,7 @@ const example = async (): Promise<void> => {
   );
   // replace with mosaic id
   const mosaicId = new NamespaceId('cc.shares');
-  
+
   const isin = 'US00000000';
   const isinMetadataTransaction = MosaicMetadataTransaction.create(
     Deadline.create(epochAdjustment),
@@ -60,7 +59,7 @@ const example = async (): Promise<void> => {
     networkType,
   );
   /* end block 01 */
-  
+
   /* start block 02 */
   const name = 'ComfyClothingCompany';
   const nameMetadataTransaction = MosaicMetadataTransaction.create(
@@ -73,7 +72,7 @@ const example = async (): Promise<void> => {
     networkType,
   );
   /* end block 02 */
-  
+
   /* start block 03 */
   const aggregateTransaction = AggregateTransaction.createComplete(
     Deadline.create(epochAdjustment),
@@ -85,9 +84,9 @@ const example = async (): Promise<void> => {
     [],
     UInt64.fromUint(2000000),
   );
-  
+
   /* end block 03 */
-  
+
   /* start block 04 */
   // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
   const networkGenerationHash = await repositoryFactory
@@ -98,16 +97,15 @@ const example = async (): Promise<void> => {
     networkGenerationHash,
   );
   console.log(signedTransaction.hash);
-  
+
   // replace with node endpoint
-  
+
   const transactionHttp = repositoryFactory.createTransactionRepository();
-  
+
   transactionHttp.announce(signedTransaction).subscribe(
     (x) => console.log(x),
     (err) => console.error(err),
   );
   /* end block 04 */
-
-}
+};
 example().then();
