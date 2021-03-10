@@ -57,11 +57,13 @@ Installation
 
     npm install -g symbol-bootstrap
 
-.. note::
+Notes:
 
-    You can run the above command again to install a newer version of ``symbol-bootstrap`` every time one becomes available.
+- You can run the above command again to install a newer version of ``symbol-bootstrap`` every time one becomes available.
 
-    Remember to stop ``symbol-bootstrap`` before upgrading and then start it again afterwards, as shown below.
+  Remember to stop ``symbol-bootstrap`` before upgrading and then start it again afterwards, as shown below.
+
+- If you get permission errors read nodejs's guide to `Resolving EACCES permissions errors when installing packages globally <https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally>`__.
 
 *************
 Configuration
