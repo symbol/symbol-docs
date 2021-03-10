@@ -95,16 +95,22 @@ Replace ``SYMBOL_NODE_HOST`` with the public host (hostname or IP address) of yo
 
 Replace ``NIS1_NODE_HOST`` with the public host (hostname or IP address) of a **NIS1 node** you own (only for the Ecosystem program).
 
-The node's public key
-=====================
+.. note::
+
+  If you are not planning to use the standard port for the monitoring agent (7880) you can add an ``"ap":PORT_NUMBER`` line to the registration message.
+
+.. _getting-ready-node-public-key:
+
+The account's keys
+==================
 
 When you opted-in you should have received a **Paper Wallet**. This is just a PDF file meant to be **printed or stored offline** for added security.
 
-This file contains your new Symbol account's **mnemonic phrase**, which you will need to produce the corresponding **public key** required for enrolling (See the :ref:`hdwallets-and-mnemonics` page for more information).
+This file contains your new Symbol account's **mnemonic phrase**, which you will need to produce a :ref:`keypair`: a **public key** required for enrolling and a **private key** required to configure your node (See the :ref:`hdwallets-and-mnemonics` page for more information).
 
 This will be accomplished using the |codename| :ref:`wallet-desktop` (Not to be confused with the NIS1 Nano Wallet used to opt-in). You will be using the new |desktop-wallet| for all your operations on the |codename| blockchain, so :ref:`install it now <wallet-desktop>` to start getting acquainted to it.
 
-Obviously the wallet will not be **fully operative** until |codename| launches, but it can already be used to extract your account's public key from its mnemonic phrase.
+Obviously the wallet will not be **fully operative** until |codename| launches, but it can already be used to extract your account's keys from the mnemonic phrase.
 
 1. Fire up the wallet and click on the ``Create a new profile`` link:
 
@@ -164,7 +170,7 @@ Obviously the wallet will not be **fully operative** until |codename| launches, 
      :class: with-shadow
      :target: /_images/mnemonic-to-pubkey-wallet-6.png
 
-8. This is the **accounts screen**. You only imported one account from your mnemonic, so there is only one entry in the list. Verify on the right that the **address** shown matches your paper wallet and note that below there is a **Public Key**. This is what we were looking for. Click the **copy** button to the right of the key (do not try to select and copy the key's text directly as it is too long and it is truncated):
+8. This is the **accounts screen**. You only imported one account from your mnemonic, so there is only one entry in the list. Verify on the right that the **address** shown matches your paper wallet and note that below there is a **Public Key**. This is the first key we were looking for. Click the **copy** button to the right of the key (do not try to select and copy the key's text directly as it is too long and it is truncated):
 
    .. image:: /resources/images/screenshots/mnemonic-to-pubkey-wallet-7.png
      :align: center
@@ -172,7 +178,25 @@ Obviously the wallet will not be **fully operative** until |codename| launches, 
      :class: with-shadow
      :target: /_images/mnemonic-to-pubkey-wallet-7.png
 
-This hexadecimal string (64-characters long) is the |codename| account's public key that you need to use in the enrollment message in the ``d`` field (replacing ``SYMBOL_ACCOUNT_PUBLIC_KEY`` in the templates). Paste the key you copied from the Desktop Wallet into your enrollment message and you are ready to continue.
+   This hexadecimal string (64-characters long) is the |codename| account's public key that you need to use in the enrollment message in the ``d`` field (replacing ``SYMBOL_ACCOUNT_PUBLIC_KEY`` in the templates). **Paste the key you copied from the Desktop Wallet into your enrollment message**.
+
+9. Now click on the ``Show`` link right below the public key and enter your password.
+
+   .. image:: /resources/images/screenshots/mnemonic-to-pubkey-wallet-8.png
+     :align: center
+     :width: 50%
+     :class: with-shadow
+     :target: /_images/mnemonic-to-pubkey-wallet-8.png
+
+10. Your account's **Private Key** will be shown for a few seconds. This is the second key we were looking for. Click the **copy** button to the right of the key (do not try to select and copy the key's text directly as it is too long and it is truncated):
+
+    .. image:: /resources/images/screenshots/mnemonic-to-pubkey-wallet-9.png
+      :align: center
+      :width: 50%
+      :class: with-shadow
+      :target: /_images/mnemonic-to-pubkey-wallet-9.png
+
+    This hexadecimal string (64-characters long) is the |codename| account's private key that you need to configure your node in the next section. **Paste the key into a temporary file for later use**.
 
 Send the transaction
 ====================
@@ -224,3 +248,75 @@ The next section explains how to setup your node so that it is ready to harvest 
 *******************
 Launching your node
 *******************
+
+Nodes can register as :doc:`harvester <../guides/harvesting/index>`, :ref:`supernodes <supernode-program>` or :ref:`voting nodes <voting-node-program>` **at any time**.
+
+**However**, to participate in either the :ref:`early-adoption-node-program` or the :ref:`ecosystem-node-program` your node needs to become online during **the first 24 hours after Symbol's launch**.
+
+More specifically, **before the Symbol blockchain reaches block 2880**.
+
+This section explains how to start your node **during the first day after the launch**, either **using Symbol Bootstrap** or **manually**.
+
+.. warning:: Follow these instructions only after |codename|'s launch.
+
+Using symbol-bootstrap
+======================
+
+1. **Install the latest version** using the method described in :doc:`../guides/network/using-symbol-bootstrap`.
+
+   The day |codename| launches, a new version of Symbol Bootstrap will be made available containing the necessary configuration to connect to the new network.
+
+2. **Create a custom preset file**.
+
+   You need to create a :ref:`custom preset file <symbol-bootstrap-presets>` for Symbol Bootstrap so it **uses the account you opted-in** instead of creating a new one.
+
+   **The custom preset contains your account's private key**, but Symbol Bootstrap will store it **encrypted**. You can delete the preset file afterwards.
+
+   Create a file named, for example, ``custom.yml`` with this content:
+
+   .. code-block:: yaml
+
+      nodes:
+          - voting: true
+            mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+
+3. **Start Symbol Bootstrap**.
+
+   .. code-block:: bash
+
+      symbol-bootstrap start -p mainnet -a dual -c custom.yml
+
+   (Read the :doc:`../guides/network/running-a-test-net-node` guide to know more about this command.)
+
+   This will ask you for a password to encrypt the configuration files:
+
+   .. code-block:: plain
+
+      ? Enter password to use to encrypt and decrypt custom presets, addresses.yml, and preset.yml files. When providing a password, private keys will be encrypted. Keep this password in a secure place!
+
+   **Remember this password** as Symbol Bootstrap will request it every time you work with an encrypted configuration file.
+
+4. **Wait for the node to boot**.
+
+   You should see a lot of debug output on the console while all the node's services are booted. Meanwhile, on a different terminal, go to the same directory where you ran the previous command and run:
+
+   .. code-block:: bash
+
+      symbol-bootstrap healthCheck
+      
+   When all indicators are green your node is up and running and you can continue with this guide.
+
+5. **Register the rest of the keys**
+
+   There are more keys involved in running a node than the main account's key. If you only added your main key to the custom preset file, Symbol Bootstrap will have created the rest for you (remote, VRF and voting) but they still need to be linked to the main account. This is done with the ``link`` command.
+
+   Once your node is running, from a different terminal (but in the same folder where you ran ``symbol-bootstrap start``), run:
+
+   .. code-block:: bash
+
+      symbol-bootstrap link --useKnownRestGateways
+
+   This will announce a few link transactions (there's a :doc:`fee <../concepts/fees>` involved) and your node will become fully configured.
+
+Manually
+========
