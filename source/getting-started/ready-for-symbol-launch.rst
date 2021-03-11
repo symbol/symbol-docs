@@ -290,7 +290,7 @@ Using symbol-bootstrap
 
    This will ask you for a password to encrypt the configuration files:
 
-   .. code-block:: plain
+   .. code-block:: text
 
       ? Enter password to use to encrypt and decrypt custom presets, addresses.yml, and preset.yml files. When providing a password, private keys will be encrypted. Keep this password in a secure place!
 
