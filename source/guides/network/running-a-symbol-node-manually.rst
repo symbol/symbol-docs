@@ -62,7 +62,7 @@ Run the database
    .. code-block:: bash
 
       mkdir dbfiles
-      mongod --dbpath=dbfiles --wiredTigerCacheSizeGb 2 --bind_ip 127.0.0.1
+      mongod --dbpath=dbfiles --wiredTigerCacheSizeGB 2 --bind_ip 127.0.0.1
 
    Keep ``mongod`` running for as long as your node runs.
 
@@ -72,7 +72,7 @@ Run the database
 
    .. code-block:: bash
 
-      mongo 127.0.0.1/catapult < ../../scripts/mongo/mongoDbPrepare.js
+      mongo 127.0.0.1/catapult < ../scripts/mongo/mongoDbPrepare.js
 
    Without this step database performance will be unacceptably slow.
 
@@ -108,7 +108,7 @@ Build and run the REST gateway
       git clone https://github.com/nemtech/catapult-rest.git
       cd catapult-rest
       npm install -g yarn
-      ./yarn-setup.sh
+      ./yarn_setup.sh
 
 7. **Build** the REST gateway:
 
@@ -134,7 +134,7 @@ Build and run the REST gateway
       ``networkPropertyFilePath``; ``config-network.properties``; ``_build/resources/``
       ``nodePropertyFilePath``; ``config-node.properties``; ``_build/resources/``
 
-   For example:
+   Use absolute paths, for example:
 
    .. code-block:: json
 
@@ -142,11 +142,16 @@ Build and run the REST gateway
          "host": "127.0.0.1",
          "port": 7900,
          "timeout": 1000,
-         "tlsClientCertificatePath": "~/catapult-server/_build/certificate/node.crt.pem",
-         "tlsClientKeyPath": "~/catapult-server/_build/certificate/node.key.pem",
-         "tlsCaCertificatePath": "~/catapult-server/_build/certificate/ca.cert.pem",
-         "networkPropertyFilePath": "~/catapult-server/_build/resources/config-network.properties",
-         "nodePropertyFilePath": "~/catapult-server/_build/resources/config-node.properties"
+         "tlsClientCertificatePath":
+               "/home/symbol/catapult-server/_build/certificate/node.crt.pem",
+         "tlsClientKeyPath":
+               "/home/symbol/catapult-server/_build/certificate/node.key.pem",
+         "tlsCaCertificatePath":
+               "/home/symbol/catapult-server/_build/certificate/ca.cert.pem",
+         "networkPropertyFilePath":
+               "/home/symbol/catapult-server/_build/resources/config-network.properties",
+         "nodePropertyFilePath":
+               "/home/symbol/catapult-server/_build/resources/config-node.properties"
       }
 
 9. **Run the REST gateway**:
@@ -164,7 +169,7 @@ If the REST gateway is working correctly, you can now make queries at port 3000.
 
 Point a browser to the following URLs and check that the returned values are similar to the expected ones:
 
-* `http://localhost:3000/node/info <http://localhost:3000/node/info>`__
+* `http://localhost:3000/node/info <http://localhost:3000/node/info>`__: Services status.
 
   .. code-block:: json
 
