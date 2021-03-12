@@ -236,15 +236,17 @@ On the **Configuration machine**, while still online:
 
    .. note::
 
-      If you have customizations to make, like **enabling Voting** or using a **particular main account** (instead of letting Symbol Bootstrap create one), provide them through a custom preset file (for example ``custom.yml``):
+      If you have customizations to make, like **enabling Voting**, using a **particular main account** (instead of letting Symbol Bootstrap create one), or **enrolling in a reward program**, provide them through a custom preset file (for example ``custom.yml``):
 
       .. code-block:: yaml
 
          nodes:
          - voting: true
-         - mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+           mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+           rewardProgram: SuperNode
+           host: my-symbol-node.com # Could also be an IP address
 
-      And add ``-c custom.yml`` to the command.
+      And add ``-c custom.yml`` to the command. You can delete this file afterwards.
 
       This is particularly useful when using opted-in accounts.
 
@@ -270,7 +272,7 @@ On the **Configuration machine**, while still online:
       info     Non-voting node api-node.
       info     Configuration generated.
 
-5. **Copy** the whole ``target`` directory to the target machine (without using the Internet)
+5. **Copy** the whole ``target`` directory to the target machine (without using the Internet).
 
 On the **Host machine**, the one that will run the node and be permanently online:
 
