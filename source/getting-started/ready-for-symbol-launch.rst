@@ -286,7 +286,7 @@ Using symbol-bootstrap
 
       symbol-bootstrap start -p mainnet -a dual -c custom.yml
 
-   (Read the :doc:`../guides/network/running-a-test-net-node` guide to know more about this command.)
+   (Read the :doc:`../guides/network/running-a-symbol-node` guide to know more about this command.)
 
    This will ask you for a password to encrypt the configuration files:
 
