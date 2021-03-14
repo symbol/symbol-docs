@@ -125,6 +125,12 @@ Then, on the **online machine**, the one that will run the node and be permanent
 
    This command not only announces all required link transactions, it also checks if the links already exist, finds a good node to use for the announcement, calculates the appropriate fee and aggregates all links in a single transaction for added efficiency.
 
+   .. note::
+   
+      This step (and the next one) can be performed from **any online machine**. It does not need to be the same machine that will be running the node. By doing so, the node will **never have the main private key**, not even encrypted.
+
+      The key will have been briefly present in *some* online machine, though. To completely avoid this use the guide in the `Offline signatures <secure-node-offline-signatures>`_ section.
+
 8. If you want to enroll to any :doc:`Reward Program <../../concepts/reward-programs>`, do so now:
 
    .. code-block:: bash
