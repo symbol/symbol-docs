@@ -621,3 +621,8 @@ img.with-rounded-shadow {
 .highlight .s2 {
     background-color: transparent;
 }
+.warning {
+    border-left: 6px solid red;
+    background-color: pink;
+    text-align:center;
+}
