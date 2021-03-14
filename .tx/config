@@ -631,6 +631,12 @@ source_file = build/gettext/guides/network/running-a-symbol-node-manually.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--network--running-a-secure-symbol-node]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-secure-symbol-node.po
+source_file = build/gettext/guides/network/running-a-secure-symbol-node.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--network--supernode-enrollment]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/supernode-enrollment.po
 source_file = build/gettext/guides/network/supernode-enrollment.pot
