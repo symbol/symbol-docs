@@ -2,8 +2,6 @@
 Tools
 #####
 
-.. note:: |codename|'s **MAIN_NET** has not been released yet. The tooling presented may suffer variations before the network launch. See the :doc:`Product Compatiblity Matrix <../compatibility>`.
-
 *****************
 Assets Management
 *****************

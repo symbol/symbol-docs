@@ -82,15 +82,13 @@ First off, make sure your node is up and running (or ready to run). `This guide 
 
 The process requires **installing a monitoring agent** and **announcing a special transaction**. You are going to create a few files, so please create a folder to keep your filesystem tidy.
 
-.. note:: The following instructions are for |codename|'s test network (TESTNET). Once |codename| launches they will be updated for the main network (MAINNET).
-
 1. **Download the node monitoring agent**:
 
-   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/0.1.0/agent_binary/agent-linux.bin>`__ and make it executable:
+   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/1.0.0/agent_binary/agent-linux.bin>`__ and make it executable:
 
    .. code-block:: bash
 
-      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/0.1.0/agent_binary/agent-linux.bin
+      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/1.0.0/agent_binary/agent-linux.bin
       chmod +x agent-linux.bin
 
 2. **Create certificates** for the monitoring agent:
@@ -110,7 +108,7 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
    .. code-block:: bash
 
-      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/testnet/certs/ca-crt.pem
+      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/mainnet/certs/ca-crt.pem
 
 3. **Configure the monitoring agent**:
 
@@ -118,6 +116,7 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
    .. code-block:: properties
 
+      NETWORK_TYPE=104 ; 104 for MAINNET, 152 for TESTNET
       ; Node's transport private key
       NODE_PRIVATE_KEY=●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
       LOGGER_FILE=agent.log

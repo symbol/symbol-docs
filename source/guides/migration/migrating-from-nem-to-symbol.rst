@@ -40,10 +40,9 @@ This document will help you **upgrade your application** previous NIS1 features,
 Test network
 ************
 
-At the time of writing, the main public network has not been launched.
-Right now, there are two options to start testing Symbol.
+Right now, there are two options to start testing Symbol which do not involve spending funds.
 
-* **Public test network** The public test network uses the same technology and features of the future main public network. You can use the testnet to experiment with the offered transaction set in a live network without the loss of valuable assets. To start using the test net, follow :doc:`this guide <../../getting-started/setup-workstation>`.
+* **Public test network** The public test network uses the same technology and features of the main public network. You can use the testnet to experiment with the offered transaction set in a live network without the loss of valuable assets. To start using the test net, follow :doc:`this guide <../../getting-started/setup-workstation>`.
 
 * **Private test network**: To run a private test network, use the package |symbol-bootstrap|. This tool contains the necessary setup scripts to build a network for development and learning purposes with just one command.
 
