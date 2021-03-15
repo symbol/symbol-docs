@@ -82,8 +82,9 @@ Node configuration is done through a **YAML configuration file** which specifies
     :delim: ;
     :widths: 20, 80
 
+    ``mainnet``; A **single node** that connects to the current public **main** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/network.yml>`__).
     ``bootstrap``; **Autonomous network** with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/network.yml>`__). This is the default preset.
-    ``testnet``; A **single node** that connects to the current public testnet. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
+    ``testnet``; A **single node** that connects to the current public **test** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
 
 Presets can be further customized by specifying an **assembly** (or flavor) which provides additional parameters:
 
@@ -92,6 +93,9 @@ Presets can be further customized by specifying an **assembly** (or flavor) whic
     :delim: ;
     :widths: 20, 20, 60
 
+    ``mainnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__).
+    ``mainnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__).
+    ``mainnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__).
     ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).
     ``bootstrap``; ``full``; It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 faucet. Great for demonstration purposes. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__).
     ``testnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
@@ -178,7 +182,7 @@ Next steps
 Proceed to the following guides to put what you have learned into practice!
 
 - :doc:`creating-a-private-test-net`: How to set up your own private network and access its nodes.
-- :doc:`running-a-symbol-node`: How to set up your own node and join |codename|'s test network.
+- :doc:`running-a-symbol-node`: How to set up your own node and join |codename|'s network.
 
 Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
 

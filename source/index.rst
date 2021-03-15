@@ -20,8 +20,6 @@ All content is accessible through the **navigation menu**, which is divided into
 
 **Don't know where to start?** Try :doc:`What is Symbol? <getting-started/what-is-symbol>`.
 
-.. note:: |codename|'s **public main network (MAINNET)** has not been released yet. The network specification, documentation, and tooling presented may suffer variations before the network launch. See here the complete roadmap for the public launch: `Symbol Launch Plan <https://forum.nem.io/t/symbol-launch-reporting-single-source-of-information/24863/9>`_.
-
 .. toctree::
     :hidden:
 
