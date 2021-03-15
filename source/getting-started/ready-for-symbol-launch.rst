@@ -2,9 +2,9 @@
 Getting your node ready for Symbol launch
 #########################################
 
-This guide shows the steps required to have your node **ready for action**, on |codename|'s launch day. This is important for node owners wanting to benefit from some of the :doc:`Reward Programs <../concepts/reward-programs>`.
+This guide shows the steps required to have your node **ready for action**, during |codename|'s first days. This is important for node owners wanting to benefit from some of the :doc:`Reward Programs <../concepts/reward-programs>`.
 
-If you are not planning to run **your own Symbol node**, or do not need to have it running **the day Symbol launches**, you do not need to worry about this guide.
+If you are not planning to run **your own Symbol node**, or to enroll in the :ref:`Early Adoption <early-adoption-node-program>` or :ref:`Ecosystem <ecosystem-node-program>` reward programs, you do not need to worry about this guide.
 
 ************
 Introduction
@@ -23,9 +23,9 @@ This guide explains:
 Snapshot and launch
 ===================
 
-As you should be well aware by now, |codename|'s launch will happen in two phases.
+As you should be well aware by now, |codename|'s launch is happenning in two phases.
 
-1. **Snapshot**: When the NIS1 chain reaches block height 3'105'500 a **snapshot** of the contents of all NIS1 accounts will be taken. `This is expected to happen on 12 March 2021, at around 03:50 UTC <https://nem.io/#symbol-countdown>`__.
+1. **Snapshot**: When the NIS1 chain reached block height 3'105'500 a **snapshot** of the contents of all NIS1 accounts was taken.
 
 2. **Launch**: Afterwards, on March 15th (exact time to be determined), the new |codename| network will **launch** meaning that the nodes managed by NEM Group will be brought online and they will start adding blocks to the shinny new |codename| blockchain.
 
@@ -35,23 +35,44 @@ These two concepts are used throughout this guide.
 Enrolling
 *********
 
-If you want to participate in either the :ref:`early-adoption-node-program` or the :ref:`ecosystem-node-program` you need to enroll in them **before the snapshot**. This section explains how to do this.
+.. warning:: Enrollment to the :ref:`Early Adoption <early-adoption-node-program>` and :ref:`Ecosystem <ecosystem-node-program>` reward programs is now **closed**.
 
-If you are interested only in the :ref:`supernode-program` or the :ref:`voting-node-program` (or if you are not interested in any of the reward programs) you don't need to enroll beforehand so you can skip this section and jump to :ref:`getting-ready-launching-your-node`.
+If you wanted to participate in either of these programs you needed to enroll in them **before the snapshot**. This section explains how to **update your node information**, as there is a **12-day grace period** to have the node fully configured and functional.
+
+If you are interested only in the :ref:`supernode-program` or the :ref:`voting-node-program` (or if you are not interested in any of the reward programs) you didn't need to enroll beforehand so you can skip this section and jump to :ref:`getting-ready-launching-your-node`.
 
 .. _getting-ready-prerequisites:
 
 Prerequisites
 =============
 
-- You must have a `NIS1 <https://nemplatform.com/>`__ account. `NIS1 <https://nemplatform.com/>`__ is NEM's current blockchain, which is used in this process to **register all requests** before |codename|'s launch. The easiest way to create an account is through the `NEM Desktop Client <https://nemplatform.com/wallets/#desktop>`__ (also known as the **NEM Nano Wallet**) and click the ``SIGN UP`` button at the top-right.
+Since you are already enrolled in one of the Reward Programs, you should already have:
 
-- Your NIS1 account must be **opted-in**. The `opt-in process <https://nemplatform.com/symbol-migration/#acc-tb_mrzh282-5>`__ creates a new |codename| account that will receive a copy of the NIS1 account's **tokens** once |codename| launches. Again, the easiest way to do this is through the **Nano Wallet's opt-in module** (Click on the ``Services`` tab and select ``Symbol Opt In``).
+- An **opted-in** `NIS1 <https://nemplatform.com/>`__ account, that held at least **10'000 XEMs** at the snapshot block height (3'105'500).
+- A Paper Wallet with the information of your new Symbol account, obtained during opt-in.
+- Sent an enrollment request before the snapshot.
 
-  - Make sure you obtain a **Paper Wallet** for the new |codename| account, or, at least, take note of the **mnemonic phrase**.
-  - Do not opt-in the **VRF keys**, the process has changed and they are registered post-launch now (there is no problem if you already opted them in).
+.. _getting-ready-grace-period:
 
-- Your NIS1 account must hold at least **10'000 XEMs** at the snapshot block height (3'105'500). :ref:`Only accounts holding this amount of XYMs can harvest <account_eligibility>` on the |codename| network so only accounts holding this amount at the snapshot can benefit from the Reward Programs.
+Grace period
+============
+
+.. warning:: All nodes that enrolled in either the :ref:`Early Adoption <early-adoption-node-program>` or :ref:`Ecosystem <ecosystem-node-program>` reward programs are expected to be **online** within 24 hours of |codename|'s launch.
+
+However, there is a **12-day grace period** (until March 27th) during which:
+
+- The node **availability test** are allowed to fail (These are the same tests as for the :ref:`supernode-program`).
+- Your **enrollment information** can be updated in case you made a mistake.
+
+The rest of this section is a reminder of how to submit the enrollment request.
+
+Updating the request
+====================
+
+You can update your enrollment information as many times as you need by:
+
+- **Sending another NIS1 transaction** (as described below) **from the same account** as you did initially.
+- Tell `NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__ about the update.
 
 Enrollment request
 ==================
@@ -91,13 +112,23 @@ Detailed instructions for the Nano Wallet follow, but this is the summary:
 
 Replace ``SYMBOL_ACCOUNT_PUBLIC_KEY`` with the **public key** of the new |codename| account you received when you opted-in. **Read the next subsection to know how to obtain it**.
 
-Replace ``SYMBOL_NODE_HOST`` with the public host (hostname or IP address) of your **Symbol node**. If you don't know it yet, you can leave it blank and **send another transaction during the first 24 hours after launch**. The new host will be used.
+Replace ``SYMBOL_NODE_HOST`` with the public host (hostname or IP address) of your **Symbol node**.
 
 Replace ``NIS1_NODE_HOST`` with the public host (hostname or IP address) of a **NIS1 node** you own (only for the Ecosystem program).
 
 .. note::
 
-  If you are not planning to use the standard port for the monitoring agent (7880) you can add an ``"ap":PORT_NUMBER`` line to the registration message.
+  If you are not using the standard port for the monitoring agent (7880) you can add an ``"ap":PORT_NUMBER`` line to the registration message. For example:
+
+  .. code-block:: json
+
+     {
+       "type":10,
+       "p":"earlyadoption",
+       "d":"SYMBOL_ACCOUNT_PUBLIC_KEY",
+       "sh":"SYMBOL_NODE_HOST",
+       "ap":7881
+     }
 
 .. _getting-ready-node-public-key:
 
@@ -162,7 +193,7 @@ Obviously the wallet will not be **fully operative** until |codename| launches, 
      :class: with-shadow
      :target: /_images/mnemonic-to-pubkey-wallet-5.png
 
-7. You will be taken to the wallet's **main screen**. Do not worry about the balance shown as the snapshot hasn't taken place yet. Select the ``Accounts`` tab on the left:
+7. You will be taken to the wallet's **main screen** (The balance shown might not be accurate until |codename| launches). Select the ``Accounts`` tab on the left:
 
    .. image:: /resources/images/screenshots/mnemonic-to-pubkey-wallet-6.png
      :align: center
@@ -196,7 +227,7 @@ Obviously the wallet will not be **fully operative** until |codename| launches, 
       :class: with-shadow
       :target: /_images/mnemonic-to-pubkey-wallet-9.png
 
-    This hexadecimal string (64-characters long) is the |codename| account's private key that you need to configure your node in the next section. **Paste the key into a temporary file for later use**.
+    This hexadecimal string (64-characters long) is the |codename| account's **private key** that you need to configure your node in the next section. **Paste the key into a temporary file for later use**.
 
 Send the transaction
 ====================
@@ -212,7 +243,7 @@ Your enrollment message should now look something like this (depending on the ch
      "sh":"my-symbol-node.com"
    }
 
-Remember that **if you don't know your host name yet**, you can leave it blank (``"sh":""``) and send another transaction during the first 24 hours after launch to update it.
+Remember that **if you don't know your host name yet**, you can leave it blank (``"sh":""``) and send another transaction during the grace period to update it.
 
 .. note:: Paste the message into a `JSON Validator <https://jsonformatter.curiousconcept.com>`__ to ensure it is correctly formatted.
 
@@ -225,7 +256,7 @@ This is how the Nano Wallet looks like after you fire it up:
   :class: with-shadow
   :target: /_images/nano-wallet-reward-enrollment-tx.png
 
-Click on the **LOGIN** button at the top-right and then follow these instructions:
+Click on the **LOGIN** button at the top-right, complete the login procedure, and then follow these instructions:
 
 .. image:: /resources/images/screenshots/nano-wallet-reward-enrollment-tx-instructions.png
   :align: center
@@ -241,7 +272,9 @@ Click on the **LOGIN** button at the top-right and then follow these instruction
 
 Once the transaction is announced and accepted, **your enrollment is complete**.
 
-The next section explains how to setup your node so that it is ready to harvest on day one, as required by the Early Adoption and Ecosystem programs.
+.. note:: Don't forget to tell `NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__ about the update!.
+
+The next section explains how to setup your node so that it is ready to harvest as soon as possible, as required by the Early Adoption and Ecosystem programs.
 
 .. _getting-ready-launching-your-node:
 
@@ -249,22 +282,16 @@ The next section explains how to setup your node so that it is ready to harvest 
 Launching your node
 *******************
 
-Nodes can register as :doc:`harvester <../guides/harvesting/index>`, :ref:`supernodes <supernode-program>` or :ref:`voting nodes <voting-node-program>` **at any time**.
+Nodes can register as :doc:`harvesters <../guides/harvesting/index>`, :ref:`supernodes <supernode-program>` or :ref:`voting nodes <voting-node-program>` **at any time**.
 
-**However**, to participate in either the :ref:`early-adoption-node-program` or the :ref:`ecosystem-node-program` your node needs to become online during **the first 24 hours after Symbol's launch**.
+**However**, to participate in either the :ref:`early-adoption-node-program` or the :ref:`ecosystem-node-program` your node needs to:
 
-More specifically, **before the Symbol blockchain reaches block 2880**.
+- Become online during **the first 24 hours after Symbol's launch**.
+- Start passing all **availability tests** during the `grace period <getting-ready-grace-period>`_.
 
-This section explains how to start your node **during the first day after the launch**, either **using Symbol Bootstrap** or **manually**.
-
-.. warning:: Follow these instructions only after |codename|'s launch.
-
-Using symbol-bootstrap
-======================
+This section explains how to start your node **once the Symbol network is up and running**, using the Symbol Bootstrap tool.
 
 1. **Install the latest version** using the method described in :doc:`../guides/network/using-symbol-bootstrap`.
-
-   The day |codename| launches, a new version of Symbol Bootstrap will be made available containing the necessary configuration to connect to the new network.
 
 2. **Create a custom preset file**.
 
@@ -314,9 +341,14 @@ Using symbol-bootstrap
 
    .. code-block:: bash
 
-      symbol-bootstrap link --useKnownRestGateways
+      symbol-bootstrap link
 
    This will announce a few link transactions (there's a :doc:`fee <../concepts/fees>` involved) and your node will become fully configured.
 
-Manually
-========
+************
+Verification
+************
+
+Browse to `Symbol Explorer <http://explorer.symbolblockchain.io/>`__, locate your node, and check that all information is correct.
+
+You should be able to see a lot of information (including the node's name and URL, for example), and, if it is enrolled in any reward program, a special card stating the program's name and the latest availability test results.

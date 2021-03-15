@@ -144,8 +144,10 @@ Requirements
       - Requirement
     * - **Availability**
       - The node must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the **first year**.
+    * - **Grace period**
+      - Availability tests are allowed to fail **the first 12 days**.
 
-        **Availability tests will start 24 hours after Symbol's launch**.
+        However, the node must be **online within 24 hours of Symbol's launch**.
     * - **Bonded Deposit**
       - At least **500'000** |networkcurrency| must be staked on the node during the whole period.
     * - **Maximum nodes**
@@ -192,8 +194,10 @@ Requirements
       - Requirement
     * - **Availability**
       - Both NIS1 and Symbol nodes must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the first **18 months**.
+    * - **Grace period**
+      - Availability tests are allowed to fail **the first 12 days**.
 
-        **Availability tests will start 24 hours after Symbol's launch**.
+        However, the node must be **online within 24 hours of Symbol's launch**.
     * - **Bonded Deposit**
       - At least **250'000** |networkcurrency| must be staked on the |codename| node during the whole period.
 
