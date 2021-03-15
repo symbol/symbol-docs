@@ -26,7 +26,7 @@ Document functions and classes with comments while you write your code.
 A reference generator should be able to read these comments and generate HTML as an output.
 
 Some examples of reference generators are `TypeDoc <https://typedoc.org/>`_ for Javascript,
-whereas in Java, we are using `Javadoc <https://www.oracle.com/technetwork/java/javase/javadoc-137458.html>`_.
+whereas in Java, we are using `Javadoc <https://www.oracle.com/java/technologies/javase/javadoc-tool.html>`_.
 
 We recommend you to research and determine which is the reference generator most convenient for the selected programming language.
 
