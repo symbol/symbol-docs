@@ -11,3 +11,4 @@ This is probably the first section you'll be interested in reading in your journ
     setup-workstation
     first-application
     ../guides/migration/migrating-from-nem-to-symbol
+    ready-for-symbol-launch

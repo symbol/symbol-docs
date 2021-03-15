@@ -15,13 +15,10 @@ Desktop Wallet
 Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and issue transactions.
 |desktop-wallet| is available for Mac, Windows, and as a web application.
 
-.. note:: The desktop wallet is only available for the public test network.
-
 Installation
 ============
 
 1. Download the |desktop-wallet| from the `releases section <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_.
-The executable file for your operative system is under the "Assets" tab.
 
 2. Launch the executable file and follow the installation instructions.
 

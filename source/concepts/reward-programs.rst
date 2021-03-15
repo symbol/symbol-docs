@@ -10,8 +10,10 @@ Each of these programs rewards **a different aspect of the network**:
 
 - :ref:`supernode-program`: For powerful, high-availability and high-throughput nodes.
 - :ref:`voting-node-program`: For nodes supporting Finalization, |codename|'s fork resolution mechanism.
+- :ref:`early-adoption-node-program`: For nodes that support |codename|'s network from the onset but do not qualify for the Supernode program.
+- :ref:`ecosystem-node-program`: For nodes supporting **both** the NIS1 and |codename| networks.
 
-In most cases, node owners wishing to benefit from these programs must explicitly **enroll** to them. The descriptions below contain **guides** explaining how to enroll to each program.
+In most cases, node owners wishing to benefit from these programs must explicitly **enroll** in them. The descriptions below contain **guides** explaining how to enroll in each program.
 
 .. _supernode-program:
 
@@ -36,7 +38,7 @@ Supernodes are regular nodes meeting the following additional hardware and opera
     **Chain Height**; Chain must be synchronized no more than **4 blocks** behind the reference height.
     **Chain Part**; Upload **50 random blocks hashes** of the chain accurately. These are compared to the reference chain hashes for accuracy.
     **Computing Power**; Hash at least **2'000 iterations per second**. Node is requested to calculate 10'000 iterations of a 32 byte seed. Speed and accuracy are measured.
-    **Bonded Deposit**; At least **1, 2 or 3 million** |networkcurrency| must be stacked on the node. The amount will decide the reward tier (see below).
+    **Bonded Deposit**; At least **1, 2 or 3 million** |networkcurrency| must be staked on the node. The amount will decide the reward tier (see below).
     **Version**; |codename| must be **up to date**. Nodes should be updated within **10 days** of each new |codename| release.
     **Ping**; **200ms response or less**. Node is requested to ping 20 other random nodes on the network and at least one ping time must pass the test (each node will be pinged 5 times and response times averaged).
     **Responsiveness**; **1 second**. 10 blockchain height requests will be made and at least 9 must answer in less than 1 second.
@@ -78,7 +80,7 @@ See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q51SJNxeK
 
 .. note::
 
-    :doc:`Follow this guide to enroll to the Supernode program <../guides/network/supernode-enrollment>`.
+    :doc:`Follow this guide to enroll in the Supernode program <../guides/network/supernode-enrollment>`.
 
 .. _voting-node-program:
 
@@ -100,10 +102,10 @@ Voting nodes are regular nodes meeting the following additional requirements:
     :delim: ;
     :widths: 30 70
 
-    **Bonded Deposit**; At least **3 million** |networkcurrency| must be stacked on the node.
+    **Bonded Deposit**; At least **3 million** |networkcurrency| must be staked on the node.
     **Voting keys**; The node must signal its interest in becoming a voting node by registering its :ref:`Voting Key <voting-key-link-transaction>`.
 
-Although not mandatory, it is **recommended** that voting nodes meet the same hardware requirements as :ref:`supernodes <supernode-program>`. In fact, it is expected that participants of the Voting Node Program will also enroll to the Supernode program.
+Although not mandatory, it is **recommended** that voting nodes meet the same hardware requirements as :ref:`supernodes <supernode-program>`. In fact, it is expected that participants of the Voting Node Program will also enroll in the Supernode program.
 
 Rewards
 =======
@@ -122,3 +124,99 @@ Rewards
         symbol-cli transaction votingkeylink
 
 See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-Ph2KGKN3Vr6GVampFvlfitZHirhthA/view?usp=sharing>`__.
+
+.. _early-adoption-node-program:
+
+***************************
+Early Adoption Node Program
+***************************
+
+It is critical that enough nodes are already available once |codename| launches. This program rewards nodes that agree to be online during |codename|'s **first year**.
+
+Requirements
+============
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 1
+
+    * - Parameter
+      - Requirement
+    * - **Availability**
+      - The node must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the **first year**.
+    * - **Grace period**
+      - Availability tests are allowed to fail **the first 12 days**.
+
+        However, the node must be **online within 24 hours of Symbol's launch**.
+    * - **Bonded Deposit**
+      - At least **500'000** |networkcurrency| must be staked on the node during the whole period.
+    * - **Maximum nodes**
+      - Only **1** node per person is allowed.
+    * - **Incompatibility**
+      - This program is **not available** to:
+          * Nodes registered to the :ref:`ecosystem-node-program`.
+          * Core Developers, NEM entities and NEM employees.
+          * Tier 3 supernodes.
+
+Rewards
+=======
+
+This is a **one-time bonus**, paid in full **one year after the Symbol launch**, if requirements have been met.
+
+At the end of the period the node owner will receive **25'000** |networkcurrency|.
+
+Only **the first 75 nodes** to register in this program will be eligible.
+
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-o0MMAFt2JDSIK_pa8k6LLbgGIK7laK/view?usp=sharing>`__.
+
+.. note::
+
+    :doc:`Follow this guide to enroll in the Early Adoption program <../getting-started/ready-for-symbol-launch>`.
+
+.. _ecosystem-node-program:
+
+**********************
+Ecosystem Node Program
+**********************
+
+This program is aimed at maintaining **both the NIS1 and the Symbol networks** for a year and a half.
+
+Successfull candidates will maintain a **NIS1 supernode** and a **Symbol node** both online for 18 months.
+
+Requirements
+============
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 1
+
+    * - Parameter
+      - Requirement
+    * - **Availability**
+      - Both NIS1 and Symbol nodes must pass the same tests that :ref:`supernodes <supernode-program>` do, at least during **95%** of the time the first **18 months**.
+    * - **Grace period**
+      - Availability tests are allowed to fail **the first 12 days**.
+
+        However, the node must be **online within 24 hours of Symbol's launch**.
+    * - **Bonded Deposit**
+      - At least **250'000** |networkcurrency| must be staked on the |codename| node during the whole period.
+
+        At least **3'000'000** ``xem`` must be staked on the NIS1 node during the whole period (to comply with the NIS1 supernode program).
+    * - **Maximum nodes**
+      - No more than **5** nodes per person are allowed.
+    * - **Incompatibility**
+      - This program is **not available** to:
+          * Nodes registered to the :ref:`early-adoption-node-program`.
+
+Rewards
+=======
+
+This is a **one-time bonus**, paid in full **18 months after the Symbol launch**, if requirements have been met.
+
+At the end of the period, **3'125'000** |networkcurrency| will be evenly distributed among all participating nodes.
+
+See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-ipGZ6zsFGwuWjkTcOOof6DS1cJZjbS/view?usp=sharing>`__.
+
+.. note::
+
+    :doc:`Follow this guide to enroll in the Ecosystem program <../getting-started/ready-for-symbol-launch>`.
