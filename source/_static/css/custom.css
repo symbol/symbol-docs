@@ -618,7 +618,7 @@ img.with-rounded-shadow {
 }
 /* Override Pygment's default for json string values which I don't like
  * until I know how to do it properly. */
-.highlight .s2 {
+.highlight .s, .highlight .s2 {
     background-color: transparent;
 }
 .warning {
