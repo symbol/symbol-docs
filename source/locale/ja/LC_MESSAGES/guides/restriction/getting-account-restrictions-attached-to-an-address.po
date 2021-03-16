@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-11 07:16+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:42
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:46
 msgid "Getting the account restrictions attached to an address"
 msgstr "アドレスにアカウント制限をアタッチする"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:44
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:48
 msgid "Get the list of account's restrictions."
 msgstr "アカウントの制限リストの取得"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:48
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:52
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:50
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:54
 msgid ""
 "Complete :doc:`preventing spam attacks with account restrictions "
 "<preventing-spam-attacks-with-account-restrictions>` guide."
@@ -41,10 +41,10 @@ msgstr ""
 ":doc:`アカウント制限でスパム攻撃を防止する <preventing-spam-attacks-with-account-"
 "restrictions>` ガイドを完了している"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:54
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:58
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:75
+#: ../../source/guides/restriction/getting-account-restrictions-attached-to-an-address.rst:79
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

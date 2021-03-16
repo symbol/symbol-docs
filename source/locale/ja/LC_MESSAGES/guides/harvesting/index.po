@@ -1,76 +1,65 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-02 09:14+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"PO-Revision-Date: 2021-03-02 08:42+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/guides/harvesting/index.rst:40
 msgid "Harvesting"
-msgstr ""
+msgstr "ハーベスティング"
 
 #: ../../source/guides/harvesting/index.rst:42
 msgid ""
-"|codename| supports **different harvesting methods** depending on whether"
-" you own a node or not, and the tools you want to use to enable it."
+"|codename| supports **different harvesting methods** depending on whether "
+"you own a node or not, and the tools you want to use to enable it."
 msgstr ""
+"|codename| はノードを所有しているかどうか、有効のために使用するツールに応じて **異なるハーベスティング方法** がサポートされています。"
 
 #: ../../source/guides/harvesting/index.rst:44
 msgid ""
-"Make sure you understand the :ref:`different harvesting types "
-"<harvesting-types>` first and then choose the appropriate guide from the "
-"list below."
+"Make sure you understand the :ref:`different harvesting types <harvesting-"
+"types>` first and then choose the appropriate guide from the list below."
 msgstr ""
+"まずは :ref:`異なるハーベスティングタイプ <harvesting-types>` を理解して、以下のリストから適切なガイドを選んでください。"
 
 #: ../../source/guides/harvesting/index.rst:46
 msgid "**If you do not own a node:**"
-msgstr ""
-
-#: ../../source/guides/harvesting/index.rst:48
-msgid ":doc:`activating-delegated-harvesting-wallet`"
-msgstr ""
+msgstr "**ノードを保有していない:**"
 
 #: ../../source/guides/harvesting/index.rst:50
-msgid "For **users** wishing to enable harvesting using their wallet application."
-msgstr ""
-
-#: ../../source/guides/harvesting/index.rst:52
-msgid ":doc:`activating-delegated-harvesting-manual`"
-msgstr ""
+msgid ""
+"For **users** wishing to enable harvesting using their wallet application."
+msgstr "ウォレットアプリケーションを使用してハーベスティングを有効にしたい **ユーザ** 向け"
 
 #: ../../source/guides/harvesting/index.rst:54
 msgid ""
-"For **developers** wanting to understand how to manually enable "
-"harvesting on their applications."
-msgstr ""
+"For **developers** wanting to understand how to manually enable harvesting "
+"on their applications."
+msgstr "アプリケーションでハーベスティングを手動で有効にする方法を理解したい **開発者** 向け"
 
 #: ../../source/guides/harvesting/index.rst:56
 msgid "**If you own a node:**"
-msgstr ""
-
-#: ../../source/guides/harvesting/index.rst:58
-msgid ":doc:`activating-remote-harvesting`"
-msgstr ""
+msgstr "**ノードを保有している:**"
 
 #: ../../source/guides/harvesting/index.rst:60
 msgid ""
-"For **node owners** wishing to enable harvesting, whether through "
-"|symbol-bootstrap| or not."
-msgstr ""
-
-#~ msgid "Guides related to mosaic harvesting."
-#~ msgstr ""
-
+"For **node owners** wishing to enable harvesting, whether through |symbol-"
+"bootstrap| or not."
+msgstr "|symbol-bootstrap| の利用に関わらない、ハーベスティングを有効にしたい **ノード所有者** 向け"

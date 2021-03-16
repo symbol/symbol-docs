@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/aggregate/index.rst:36
+#: ../../source/guides/aggregate/index.rst:40
 msgid "Aggregate transactions"
 msgstr "アグリゲートトランザクション"
 
-#: ../../source/guides/aggregate/index.rst:38
+#: ../../source/guides/aggregate/index.rst:42
 msgid ""
 "Guides related to :doc:`aggregate transaction <../../concepts/aggregate-"
 "transaction>` handling."

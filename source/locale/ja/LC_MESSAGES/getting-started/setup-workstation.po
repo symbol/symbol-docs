@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-20 10:22+0000\n"
+"POT-Creation-Date: 2021-03-17 07:47+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,28 +21,28 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/setup-workstation.rst:41
+#: ../../source/getting-started/setup-workstation.rst:45
 msgid "Setting up your workstation"
 msgstr "ワークステーションのセットアップ"
 
-#: ../../source/getting-started/setup-workstation.rst:43
+#: ../../source/getting-started/setup-workstation.rst:47
 msgid ""
 "This first guide will walk you through a step-by-step installation of the "
 "required tools to **start developing applications** on |codename|."
 msgstr ""
 "最初のガイドでは |codename| **アプリケーションの開発を始める** ために必要なツールのインストールをステップバイステップに進めていきます。"
 
-#: ../../source/getting-started/setup-workstation.rst:45
+#: ../../source/getting-started/setup-workstation.rst:49
 msgid ""
 "We will be using the **test network**, which uses the same technology and "
-"features of the future main public network. The testnet allows developers to"
-" experiment with the offered |codename|'s transaction set in a live network "
+"features of the **main network**. The testnet allows developers to "
+"experiment with the offered |codename|'s transaction set in a live network "
 "without the loss of valuable assets."
 msgstr ""
-"将来のパブリックメインネットワークと同じテクノロジーと機能を使用している **テストネットワーク** "
+"**メインネットワーク** と同じテクノロジーと機能を使用している **テストネットワーク** "
 "を使用します。テストネットは開発者の貴重な資産を失うことなく |codename| が提供するトランザクションセットを試用することができます。"
 
-#: ../../source/getting-started/setup-workstation.rst:48
+#: ../../source/getting-started/setup-workstation.rst:52
 msgid ""
 "Not a developer? Download our :doc:`client <../wallets>` to manage XYM and "
 "issue transactions."
@@ -50,11 +50,11 @@ msgstr ""
 "開発者ではないですか？ XYM を管理したり、トランザクションを発信するには :doc:`クライアント <../wallets>` "
 "をダウンロードしてください。"
 
-#: ../../source/getting-started/setup-workstation.rst:54
+#: ../../source/getting-started/setup-workstation.rst:58
 msgid "Creating an account"
 msgstr "アカウントの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:56
+#: ../../source/getting-started/setup-workstation.rst:60
 msgid ""
 "An :doc:`account <../concepts/account>` is a deposit box where you can hold "
 ":doc:`mosaics <../concepts/mosaic>` (tokens) and interact with them by "
@@ -64,7 +64,7 @@ msgstr ""
 "(トークン) を保有することのできる、預け入れ箱であり、 :doc:`トランザクションをアナウンス <../concepts/transaction>`"
 " することでこれらと疎通できます。 "
 
-#: ../../source/getting-started/setup-workstation.rst:58
+#: ../../source/getting-started/setup-workstation.rst:62
 msgid ""
 "We are creating a new account with the :doc:`Symbol CLI <../cli>`, a "
 "command-line tool designed to architect solutions and interact with Symbol "
@@ -73,7 +73,7 @@ msgstr ""
 ":doc:`Symbol CLI <../cli>` を使用して新しいアカウントを作成します。これはソリューションを構築して Symbol "
 "ネットワークと効率的に対話するために設計されたコマンドラインツールです。"
 
-#: ../../source/getting-started/setup-workstation.rst:60
+#: ../../source/getting-started/setup-workstation.rst:64
 msgid ""
 "Symbol CLI requires **Node.js 12 LTS** to execute. Open a new terminal and "
 "check the version installed with:"
@@ -81,53 +81,53 @@ msgstr ""
 "Symbol CLI を実行するには **Node.js 12 LTS** "
 "が必要です。新しいターミナルを開き、インストールされているバージョンを確認します:"
 
-#: ../../source/getting-started/setup-workstation.rst:66
+#: ../../source/getting-started/setup-workstation.rst:70
 msgid ""
 "If you get an error or the version returned does not match v12.X, visit "
 "|node-js| to install the requirement."
 msgstr ""
 "エラーが発生する場合、またはバージョンが v12.X と一致しない場合は |node-js| にアクセスして、要求バージョンをインストールしてください。"
 
-#: ../../source/getting-started/setup-workstation.rst:68
+#: ../../source/getting-started/setup-workstation.rst:72
 msgid "To install |cli|, run the next command."
 msgstr "|cli| をインストールするには、次のコマンドを実行します。"
 
-#: ../../source/getting-started/setup-workstation.rst:74
+#: ../../source/getting-started/setup-workstation.rst:78
 msgid "Then, generate a new account and save it as a **profile**."
 msgstr "新しいアカウントを生成して **profile** として保存します。"
 
-#: ../../source/getting-started/setup-workstation.rst:87
+#: ../../source/getting-started/setup-workstation.rst:91
 msgid ""
 "If everything goes well, you should see the account credentials displayed in"
 " the terminal."
 msgstr "すべてがうまくいけば、アカウントの資格情報がターミナルに表示されます。"
 
-#: ../../source/getting-started/setup-workstation.rst:102
+#: ../../source/getting-started/setup-workstation.rst:106
 msgid ""
 "Make sure to keep the private key secret and backed up safely somewhere "
 "offline."
 msgstr "プライベートキーは秘密にして、オフラインのどこか安全な場所にバックアップしてください。"
 
-#: ../../source/getting-started/setup-workstation.rst:104
+#: ../../source/getting-started/setup-workstation.rst:108
 msgid ""
 "If you get the error ``The CLI cannot reach the node``, the most common "
 "causes are:"
 msgstr "エラー ``CLI がノードに到達できません`` が発生した場合、次が原因の可能性があります:"
 
-#: ../../source/getting-started/setup-workstation.rst:106
+#: ../../source/getting-started/setup-workstation.rst:110
 msgid ""
 "**Incorrect node URL**: The URL used does not belong to an active node. Open"
 " the URL provided in a new browser tab and check if you get a response. If "
 "the test network node is not working, you can **use another node url** from "
 "|network-list| or **run your own testnet node** by following :doc:`the next "
-"guide <../guides/network/running-a-test-net-node>`."
+"guide <../guides/network/running-a-symbol-node>`."
 msgstr ""
 "**不正なノード URL**: 使用された URL はアクティブノードに属していません。提供された URL "
 "を新しいブラウザータブで開き、レスポンスが返されるかどうかを確認します。テストネットワークノードが動いていない場合は |network-list| から"
-" **他のノード URL を使用** するか、この :doc:`ガイド  <../guides/network/running-a-test-net-"
+" **他のノード URL を使用** するか、この :doc:`ガイド  <../guides/network/running-a-symbol-"
 "node>` に従って **あなたのテストネットノードを実行** することもできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:108
+#: ../../source/getting-started/setup-workstation.rst:112
 msgid ""
 "**Internet connection**: The CLI resolves some values from the node. If you "
 "decide to use the tool without being connected to the internet, you will "
@@ -140,11 +140,11 @@ msgstr ""
 "オプションを渡す必要があります。各パラメーターの詳細を確認するには ``symbol-cli account generate --help`` "
 "と入力します。"
 
-#: ../../source/getting-started/setup-workstation.rst:114
+#: ../../source/getting-started/setup-workstation.rst:118
 msgid "Getting test currency"
 msgstr "テスト通貨の取得"
 
-#: ../../source/getting-started/setup-workstation.rst:116
+#: ../../source/getting-started/setup-workstation.rst:120
 msgid ""
 "To announce a transaction, the sender should pay a :doc:`fee "
 "<../concepts/fees>` to provide an incentive to those who validate and secure"
@@ -157,7 +157,7 @@ msgstr ""
 "を支払う必要があります。このコストはデフォルトのパブリックネットワークのネットワーク通貨である |networkcurrency|  "
 "モザイクで支払われます。"
 
-#: ../../source/getting-started/setup-workstation.rst:119
+#: ../../source/getting-started/setup-workstation.rst:123
 msgid ""
 "Now that you have created your first account, let's request "
 "|networkcurrency| units from the **testnet faucet**. |faucet|, indicate the "
@@ -167,14 +167,14 @@ msgstr ""
 "あなたは初めてのアカウントを作成したので、 **テストネットフォーセット** から |networkcurrency| の取得をリクエストしてください。"
 " |faucet| で受信したい |networkcurrency| の量とアドレスを指定して \"**CLAIM!**\" をクリックします。"
 
-#: ../../source/getting-started/setup-workstation.rst:125
+#: ../../source/getting-started/setup-workstation.rst:129
 msgid ""
 "After the transaction gets confirmed, check if your account has received "
 "|networkcurrency| using the command-line tool."
 msgstr ""
 "トランザクションが承認されたら、あなたのアカウントが |networkcurrency| を受信していることをコマンドラインツールを使用して確認します。"
 
-#: ../../source/getting-started/setup-workstation.rst:138
+#: ../../source/getting-started/setup-workstation.rst:142
 msgid ""
 "The faucet has a limited amount of |networkcurrency| and must be replenished"
 " before it dries out. If you don’t need your test |networkcurrency| units "
@@ -184,11 +184,11 @@ msgstr ""
 "フォーセットの |networkcurrency| の量が限られているため、不足する前に補充する必要があります。 |networkcurrency| "
 "が必要なくなった場合は、フォーセットのページに表示されているアドレスへ送り返してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:144
+#: ../../source/getting-started/setup-workstation.rst:148
 msgid "Creating a project"
 msgstr "プロジェクトの作成"
 
-#: ../../source/getting-started/setup-workstation.rst:146
+#: ../../source/getting-started/setup-workstation.rst:150
 msgid ""
 "Now that you have your account filled with |networkcurrency| units, it is "
 "time to **choose a programming language**. Pick the one you feel most "
@@ -197,7 +197,7 @@ msgstr ""
 "アカウントに |networkcurrency| 単位が入力されたので **プログラミング言語を選択** "
 "します。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。"
 
-#: ../../source/getting-started/setup-workstation.rst:149
+#: ../../source/getting-started/setup-workstation.rst:153
 msgid ""
 "Then, **create a folder for your new project** and run the instructions for "
 "the selected language. If none of the languages fits your project, you can "
@@ -207,55 +207,55 @@ msgstr ""
 "。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  :doc:`REST ゲートウェイ "
 "<../api>` を使用して直接ブロックチェーンに問い合わせできます。"
 
-#: ../../source/getting-started/setup-workstation.rst:156
+#: ../../source/getting-started/setup-workstation.rst:160
 msgid "Symbol SDK require Node.js 12 LTS to execute."
 msgstr "Symbol SDK は Node.js 12 LTS を実行に必要とします。"
 
-#: ../../source/getting-started/setup-workstation.rst:158
-#: ../../source/getting-started/setup-workstation.rst:187
+#: ../../source/getting-started/setup-workstation.rst:162
+#: ../../source/getting-started/setup-workstation.rst:191
 msgid "Create a ``package.json`` file."
 msgstr "``package.json`` ファイルを作成します。"
 
-#: ../../source/getting-started/setup-workstation.rst:164
-#: ../../source/getting-started/setup-workstation.rst:193
+#: ../../source/getting-started/setup-workstation.rst:168
+#: ../../source/getting-started/setup-workstation.rst:197
 msgid "Install |sdk| and RxJS library."
 msgstr "|sdk| と RxJS ライブラリのインストール。"
 
-#: ../../source/getting-started/setup-workstation.rst:170
+#: ../../source/getting-started/setup-workstation.rst:174
 msgid "Install globally TypeScript dependency:"
 msgstr "TypeScript の依存をグローバルにインストールします:"
 
-#: ../../source/getting-started/setup-workstation.rst:177
+#: ../../source/getting-started/setup-workstation.rst:181
 msgid "Install `ts-node`_ to execute TypeScript files with node."
 msgstr "`ts-node`_ をインストールすると TypeScript ファイルを node で実行できます。"
 
-#: ../../source/getting-started/setup-workstation.rst:185
+#: ../../source/getting-started/setup-workstation.rst:189
 msgid "Symbol SDK requires Node.js 12 LTS to execute."
 msgstr "Symbol SDK は Node.js 12 LTS を実行に必要とします。"
 
-#: ../../source/getting-started/setup-workstation.rst:201
+#: ../../source/getting-started/setup-workstation.rst:205
 msgid "Symbol SDK requires JDK 8 to execute."
 msgstr "Symbol SDK は JDK 8 を実行に必要とします。"
 
-#: ../../source/getting-started/setup-workstation.rst:203
+#: ../../source/getting-started/setup-workstation.rst:207
 msgid ""
 "Open a new Java `gradle`_ project.  Use your favourite IDE or create a "
 "project from the command line."
 msgstr ""
 "新しく Java `gradle`_ プロジェクトを開いてください。お好みの IDE を使用するか、コマンドラインからプロジェクトを作成してください。"
 
-#: ../../source/getting-started/setup-workstation.rst:209
+#: ../../source/getting-started/setup-workstation.rst:213
 msgid "Edit ``build.gradle`` to use Maven central repository."
 msgstr "Maven セントラルリポジトリを使うため ``build.gradle`` を編集します。"
 
-#: ../../source/getting-started/setup-workstation.rst:217
+#: ../../source/getting-started/setup-workstation.rst:221
 msgid "Add ``symbol-sdk`` as a dependency."
 msgstr "``symbol-sdk`` を依存として追加します。"
 
-#: ../../source/getting-started/setup-workstation.rst:225
+#: ../../source/getting-started/setup-workstation.rst:229
 msgid "Execute ``gradle build`` and ``gradle run`` to run your program."
 msgstr "プログラムを開始するために ``gradle build`` と ``gradle run`` を実行します。"
 
-#: ../../source/getting-started/setup-workstation.rst:227
+#: ../../source/getting-started/setup-workstation.rst:231
 msgid "Continue: :doc:`Writing your first application <first-application>`."
 msgstr "次へ: :doc:`はじめてのアプリケーションを作成 <first-application>`"

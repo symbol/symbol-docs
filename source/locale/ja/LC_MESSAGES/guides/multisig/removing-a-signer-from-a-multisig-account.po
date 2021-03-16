@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2020-04-24 12:29+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,43 +21,43 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:42
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:46
 msgid "Removing a signer from a multisig account"
 msgstr "マルチシグアカウントからの署名者の削除"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:44
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:48
 msgid ""
 "This guide will show you how to remove a cosignatory from a multisig "
 "account."
 msgstr "このガイドでは、マルチシグアカウントから署名者を削除する方法を説明します。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:50
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:54
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:52
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:56
 msgid ""
 "Complete :doc:`converting an account to multisig <creating-a-multisig-"
 "account>` guide."
 msgstr ":doc:`マルチシグアカウントへの変換 <creating-a-multisig-account>` ガイドを完了している"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:56
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:60
 msgid "Method #01: Using the Desktop Wallet"
 msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:58
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:62
 msgid "Log in to one of the cosignatory accounts of the multisig account."
 msgstr "マルチシグアカウントの署名者アカウントのいずれかにログインします。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:60
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:64
 msgid "Click on “**Multisig**” on the left-side menu."
 msgstr "左側のメニューの \"**マルチシグ**\" をクリックします。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:62
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:66
 msgid "Select the multisig account in the dropdown menu."
 msgstr "ドロップダウンメニューでマルチシグアカウントを選択します。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:64
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:68
 msgid ""
 "Find the cosignatory address that you want to remove in the cosignatories "
 "listed. Click the trash icon - this should highlight the account you want to"
@@ -67,7 +67,7 @@ msgstr ""
 "リストされている署名者の中から、削除したい署名者アドレスを見つけます。ゴミ箱アイコンをクリックすると、削除するアカウントが強調表示されます。次に "
 "\"**送信**\" をクリックします。ポップアップの情報を確認し、ウォレットパスワードを入力します。最後に \"**確認**\" をクリックします。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:70
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:74
 msgid ""
 "If the multisig account has the \"**minimum approval**\" set to a number "
 "greater than 1, log in to another cosignatory account and :doc:`cosign the "
@@ -78,24 +78,24 @@ msgstr ""
 ":doc:`トランザクションに署名します <../aggregate/signing-announced-aggregate-bonded-"
 "transactions>` 。最小承認数が満たされるまで、この手順を繰り返します。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:76
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:80
 msgid ""
 "You can check that the signer has been removed by going back to the "
 "“**multisig**” page."
 msgstr "\"**マルチシグ**\" ページに戻って、署名者が削除されたことを確認できます。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:84
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:88
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:86
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:90
 msgid ""
 "The following code shows how to remove a cosignatory from a **2-of-3** "
 "multisig account with ``minRemoval`` set to 1."
 msgstr ""
 "次のコードは ``minRemoval`` を 1 に設定して **2-of-3** マルチシグアカウントから署名者を削除する方法を示しています。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:100
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:104
 msgid ""
 "The **minRemoval property** indicates the number of required signatures to "
 "delete an account from the multisig. This value can be increased or "
@@ -106,7 +106,7 @@ msgstr ""
 ":doc:`minApproval プロパティ <modifying-a-multisig-account-min-approval>` "
 "を変更するのと同じ方法で増減できます。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:102
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:106
 msgid ""
 "This time, the MultisigModificationTransaction is wrapped in an "
 "**AggregateCompleteTransaction** because just one account is required to "
@@ -115,7 +115,7 @@ msgstr ""
 "今回 MultisigModificationTransaction はマルチシグから他のアカウントを削除するために必要なアカウントは 1 "
 "つだけなので、 **AggregateCompleteTransaction** によってラップされています。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:104
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:108
 msgid ""
 "If more than one cosignature is required to announce the transaction (e.g., "
 "``minRemoval`` is set to 2), the transaction must be defined as aggregate "
@@ -130,7 +130,7 @@ msgstr ""
 "<../aggregate/sending-a-multisig-transaction>` "
 "に従って、マルチシグアカウントに関連する、アグリゲートボンデッドトランザクションをアナウンスします。"
 
-#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:106
+#: ../../source/guides/multisig/removing-a-signer-from-a-multisig-account.rst:110
 msgid ""
 "Follow :doc:`the next guide <creating-a-multi-level-multisig-account>` to "
 "create a multi-level multisig account."

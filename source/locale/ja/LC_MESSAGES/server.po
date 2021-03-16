@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,18 +21,18 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/server.rst:36
+#: ../../source/server.rst:40
 msgid "Server"
 msgstr "サーバ"
 
-#: ../../source/server.rst:38
+#: ../../source/server.rst:42
 msgid ""
 "|codename|-based networks rely on nodes to provide a trustless, high-"
 "performance, and secure blockchain platform."
 msgstr ""
 "|codename| ベースのネットワークは、トラストレスな、高性能で安全なブロックチェーンプラットフォームを提供するためにノードに依存しています。"
 
-#: ../../source/server.rst:40
+#: ../../source/server.rst:44
 msgid ""
 "These nodes are deployed using |catapult-server| software, a C++ rewrite of "
 "the previous Java-written NEM distributed ledger that has been running since"
@@ -41,27 +41,27 @@ msgstr ""
 "これらのノードは2015年から稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした |catapult-"
 "server| ソフトウェアを使用してデプロイされます。"
 
-#: ../../source/server.rst:42
+#: ../../source/server.rst:46
 msgid ""
 "Learn more about the protocol by reading the |whitepaper| and this "
 ":doc:`documentation <concepts/node>`."
 msgstr ""
 "プロトコルについてより詳しい情報は |whitepaper| と :doc:`ドキュメント <concepts/node>` を参照してください。"
 
-#: ../../source/server.rst:46
+#: ../../source/server.rst:50
 msgid "Building the image"
 msgstr "イメージのビルド"
 
-#: ../../source/server.rst:48
+#: ../../source/server.rst:52
 msgid ""
 "To compile catapult-server source code, follow the building |instructions|."
 msgstr "catapult-server をソースコードからコンパイルするには |instructions| に従ってください。"
 
-#: ../../source/server.rst:52
+#: ../../source/server.rst:56
 msgid "Running catapult-server"
 msgstr "catapult-server の起動"
 
-#: ../../source/server.rst:54
+#: ../../source/server.rst:58
 msgid ""
 "catapult-server executable can be used either to run different types of "
 "nodes or to launch new networks. This section contains the instructions on "
@@ -71,40 +71,40 @@ msgstr ""
 "実行可能ファイルは、様々なタイプのノードを立ち上げたり、新しいネットワークを起動したりするために使用できます。このセクションでは色々な目的で "
 "catapult-server を実行する方法について説明します。"
 
-#: ../../source/server.rst:58
+#: ../../source/server.rst:62
 msgid "Test network node"
 msgstr "テストネットワークノード"
 
-#: ../../source/server.rst:60
+#: ../../source/server.rst:64
 msgid ""
 "Developers can deploy test net nodes to experiment with the offered "
 "transaction set in a live network without the loss of valuable assets."
 msgstr "開発者はテストネットノードを実験的に使用することで、貴重な資産を失うことなく、様々なトランザクションを試すことができます。"
 
-#: ../../source/server.rst:62
+#: ../../source/server.rst:66
 msgid ""
 "To run a test net node, follow :doc:`this guide <guides/network/running-a"
-"-test-net-node>`."
+"-symbol-node>`."
 msgstr ""
-"テストネットのノードを起動するには、:doc:`このガイド <guides/network/running-a-test-net-node>` "
+"テストネットのノードを起動するには、:doc:`このガイド <guides/network/running-a-symbol-node>` "
 "に従ってください。"
 
-#: ../../source/server.rst:65
+#: ../../source/server.rst:69
 msgid "Main network node"
 msgstr "メインネットワークノード"
 
-#: ../../source/server.rst:67
+#: ../../source/server.rst:71
 msgid ""
 "At the time of writing, the main public network has not been launched. "
 "Follow the latest updates about the public launch on the |forum|."
 msgstr ""
 "執筆時点でメインのパブリックネットワークは開始されていません。 |forum| にてパブリックのローンチに関する最新情報を捕捉してください。"
 
-#: ../../source/server.rst:71
+#: ../../source/server.rst:75
 msgid "Private test network"
 msgstr "プライベートテストネットワーク"
 
-#: ../../source/server.rst:73
+#: ../../source/server.rst:77
 msgid ""
 "With |codename|, businesses can launch and extend private networks by "
 "developing :doc:`custom plugins <concepts/plugin>` and extensions at the "
@@ -116,7 +116,7 @@ msgstr ""
 "と拡張機能を開発することにより、プライベートネットワークを起動および拡張できます。|symbol-bootstrap| "
 "パッケージは開発と学習目的の構築を、一つのコマンドで行うスクリプトが含まれています。"
 
-#: ../../source/server.rst:76
+#: ../../source/server.rst:80
 msgid ""
 "To run a private test net, follow :doc:`this guide "
 "<guides/network/creating-a-private-test-net>`."
@@ -124,11 +124,11 @@ msgstr ""
 "プライベートのテストネットを起動するには、:doc:`このガイド <guides/network/creating-a-private-test-"
 "net>` に従ってください。"
 
-#: ../../source/server.rst:79
+#: ../../source/server.rst:83
 msgid "Private network"
 msgstr "プライベートネットワーク"
 
-#: ../../source/server.rst:81
+#: ../../source/server.rst:85
 msgid ""
 "Instructions on how to launch a secure and production-ready private chain "
 "will be released here."

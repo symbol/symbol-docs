@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/index.rst:42
+#: ../../source/index.rst:46
 msgid "Technical Documentation"
 msgstr "テクニカルドキュメント"
 
-#: ../../source/index.rst:44
+#: ../../source/index.rst:48
 msgid ""
 "Welcome to |codename|'s **technical documentation site**, your primary "
 "source of information to integrate |codename|'s blockchain technology into "
@@ -34,39 +34,39 @@ msgstr ""
 "|codename| のブロックチェーンテクノロジーをプロジェクトに統合するための情報源である |codename| の "
 "**テクニカルドキュメントサイト** へようこそ。"
 
-#: ../../source/index.rst:46
+#: ../../source/index.rst:50
 msgid ""
 "All content is accessible through the **navigation menu**, which is divided "
 "into the following sections:"
 msgstr "セクションごとに分かれているすべてのコンテンツには、 **ナビゲーションメニュー** からアクセスできます。"
 
-#: ../../source/index.rst:48
+#: ../../source/index.rst:52
 msgid ":doc:`Getting Started <getting-started/index>`: Introductory material."
 msgstr ":doc:`入門 <getting-started/index>`: 入門教材"
 
-#: ../../source/index.rst:49
+#: ../../source/index.rst:53
 msgid ""
 ":doc:`Guides <guides/index>`: Step-by-step tutorials focused on use-cases."
 msgstr ":doc:`ガイド <guides/index>`: ユースケースに注目したステップ・バイ・ステップチュートリアル"
 
-#: ../../source/index.rst:50
+#: ../../source/index.rst:54
 msgid ""
 ":doc:`Concepts <concepts/overview>`: Detailed explanation of |codename|'s "
 "most important ideas."
 msgstr ":doc:`コンセプト <concepts/overview>`: |codename| の重要なアイディアの詳細な説明"
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:55
 msgid ""
 ":doc:`References <references/index>`: Usage guides for |codename|'s tools "
 "and SDKs."
 msgstr ":doc:`リファレンス <references/index>`: |codename| のツールや SDK の利用ガイド"
 
-#: ../../source/index.rst:52
+#: ../../source/index.rst:56
 msgid ""
 ":doc:`Contribute <contribute/index>`: How to contribute to this project."
 msgstr ":doc:`貢献 <contribute/index>`: プロジェクトへ貢献する方法"
 
-#: ../../source/index.rst:54
+#: ../../source/index.rst:58
 msgid ""
 "**Don't know where to start?** Try :doc:`What is Symbol? <getting-started"
 "/what-is-symbol>`."
@@ -74,7 +74,7 @@ msgstr ""
 "**どこから始めたらいいかわからない？** ここから始めましょう :doc:`Symbol とは？ <getting-started/what-is-"
 "symbol>`"
 
-#: ../../source/index.rst:56
+#: ../../source/index.rst:60
 msgid ""
 "|codename|'s **public main network (MAINNET)** has not been released yet. "
 "The network specification, documentation, and tooling presented may suffer "

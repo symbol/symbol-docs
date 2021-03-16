@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-06-06 23:26+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,28 +21,28 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/mosaic/getting-mosaic-information.rst:42
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:46
 msgid "Getting the mosaic information"
 msgstr "モザイクの情報を取得する"
 
-#: ../../source/guides/mosaic/getting-mosaic-information.rst:44
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:48
 msgid ""
 "Get the ownership, divisibility, duration, and flags for a given mosaic "
 "identifier."
 msgstr "モザイク識別子による所有権、可分性、期間、フラグの取得"
 
-#: ../../source/guides/mosaic/getting-mosaic-information.rst:48
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:52
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/mosaic/getting-mosaic-information.rst:50
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:54
 msgid "Complete :doc:`creating a mosaic <creating-a-mosaic>` guide."
 msgstr ":doc:`モザイクの作成  <creating-a-mosaic>` ガイドを完了している"
 
-#: ../../source/guides/mosaic/getting-mosaic-information.rst:54
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:58
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/mosaic/getting-mosaic-information.rst:75
+#: ../../source/guides/mosaic/getting-mosaic-information.rst:79
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-17 18:38+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/first-application.rst:36
+#: ../../source/getting-started/first-application.rst:40
 msgid "Writing your first application"
 msgstr "はじめてのアプリケーションを作成"
 
-#: ../../source/getting-started/first-application.rst:38
+#: ../../source/getting-started/first-application.rst:42
 msgid "This guide will take you through the |codename| development cycle."
 msgstr "このガイドでは |sitename| 開発サイクルについて説明します。"
 
-#: ../../source/getting-started/first-application.rst:40
+#: ../../source/getting-started/first-application.rst:44
 msgid ""
 "First, we will architect our solution combining some built-in features "
 "available in |codename|, such as :doc:`mosaics <../concepts/mosaic>` and "
@@ -40,11 +40,11 @@ msgstr ""
 " <../concepts/account>` "
 "を組み合わせてソリューションを設計します。このガイドを修了すれば、ブロックチェーンでトランザクションの発行および監視する方法を理解しているでしょう。"
 
-#: ../../source/getting-started/first-application.rst:45
+#: ../../source/getting-started/first-application.rst:49
 msgid "Use case"
 msgstr "ユースケース"
 
-#: ../../source/getting-started/first-application.rst:47
+#: ../../source/getting-started/first-application.rst:51
 msgid ""
 "The secondary ticket market, also known as the resale market, is the "
 "exchange of tickets that happens between individuals after they have "
@@ -54,7 +54,7 @@ msgid ""
 msgstr ""
 "チケット二次市場は、再販市場としても知られており、最初の販売者からチケットを購入した後に個人間で行われるチケット交換です。最初の販売者は、イベントウェブサイト、オンラインチケット販売プラットフォーム、イベントの入口にあるショップまたは売店であったりします。"
 
-#: ../../source/getting-started/first-application.rst:50
+#: ../../source/getting-started/first-application.rst:54
 msgid ""
 "Buying a ticket from someone that is not the initial vendor does not "
 "necessarily mean paying more for the ticket. There is the chance to be a "
@@ -63,51 +63,51 @@ msgid ""
 msgstr ""
 "最初の販売者ではない人からチケットを購入しても、必ずしもそのチケットの追加料金を支払うという意味ではありません。これは最初の販売者が問題の解決に何もできず、偽造もしくは複製されたチケットを購入してしまう、被害者となる機会です。"
 
-#: ../../source/getting-started/first-application.rst:54
+#: ../../source/getting-started/first-application.rst:58
 msgid "What do we want to solve?"
 msgstr "私達は何を解決したいのでしょう？"
 
-#: ../../source/getting-started/first-application.rst:60
+#: ../../source/getting-started/first-application.rst:64
 msgid "Authorization model"
 msgstr "認証モデル"
 
-#: ../../source/getting-started/first-application.rst:63
+#: ../../source/getting-started/first-application.rst:67
 msgid "A ticket vendor wants to set up a system to:"
 msgstr "チケット販売者はシステムのセットアップを望んでいます:"
 
-#: ../../source/getting-started/first-application.rst:65
+#: ../../source/getting-started/first-application.rst:69
 msgid "Identify each ticket and customer."
 msgstr "各チケットと購入者の識別。"
 
-#: ../../source/getting-started/first-application.rst:66
+#: ../../source/getting-started/first-application.rst:70
 msgid "Avoid ticket reselling."
 msgstr "チケット転売の防止。"
 
-#: ../../source/getting-started/first-application.rst:67
+#: ../../source/getting-started/first-application.rst:71
 msgid "Avoid non-authentic tickets and duplicate ones."
 msgstr "未認証チケットとその複製の防止。"
 
-#: ../../source/getting-started/first-application.rst:70
+#: ../../source/getting-started/first-application.rst:74
 msgid "Why Symbol is the right choice?"
 msgstr "なぜ Symbol は正しい選択なのでしょう？"
 
-#: ../../source/getting-started/first-application.rst:72
+#: ../../source/getting-started/first-application.rst:76
 msgid "Blockchain technology makes sense in cases where:"
 msgstr "ブロックチェーンテクノロジーはこのようなケースに適用できます:"
 
-#: ../../source/getting-started/first-application.rst:74
+#: ../../source/getting-started/first-application.rst:78
 msgid "There are different participants involved."
 msgstr "様々な参加者が関係します。"
 
-#: ../../source/getting-started/first-application.rst:75
+#: ../../source/getting-started/first-application.rst:79
 msgid "These participants need to trust each other."
 msgstr "参加者はお互いに信頼する必要があります。"
 
-#: ../../source/getting-started/first-application.rst:76
+#: ../../source/getting-started/first-application.rst:80
 msgid "There is a need to keep track of an immutable set of events."
 msgstr "不変のイベントの集合を追跡し続ける必要があります。"
 
-#: ../../source/getting-started/first-application.rst:78
+#: ../../source/getting-started/first-application.rst:82
 msgid ""
 "|codename| is a **flexible blockchain** technology. Instead of uploading all"
 " the application logic into the blockchain, you can use its tested features "
@@ -118,30 +118,30 @@ msgstr ""
 "テクノロジーです。すべてのアプリケーションロジックをブロックチェーンにアップロードする代わりに、 **API 呼び出し** "
 "によってテスト済みの機能を使用して、価値、認可、トレーサビリティ、そして認証の移転と格納を行うことができます。"
 
-#: ../../source/getting-started/first-application.rst:81
+#: ../../source/getting-started/first-application.rst:85
 msgid ""
 "The rest of the code will remain **off-chain**. This reduces the inherent "
 "immutability risk, as you could change the process when necessary."
 msgstr "残りのコードは **オフチェーン** のままです。これにより必要に応じてプロセスを変更できるため、固有の不変性リスクが軽減されます。"
 
-#: ../../source/getting-started/first-application.rst:86
+#: ../../source/getting-started/first-application.rst:90
 msgid "Creating an account for each participant"
 msgstr "各参加者のアカウントを作成"
 
-#: ../../source/getting-started/first-application.rst:88
+#: ../../source/getting-started/first-application.rst:92
 msgid ""
 "First, let's identify the actors involved in the use case we want to solve:"
 msgstr "まず、解決したいユースケースに関与するアクターを特定します:"
 
-#: ../../source/getting-started/first-application.rst:90
+#: ../../source/getting-started/first-application.rst:94
 msgid "The ticket vendor."
 msgstr "チケット販売者"
 
-#: ../../source/getting-started/first-application.rst:91
+#: ../../source/getting-started/first-application.rst:95
 msgid "The customer."
 msgstr "購入者"
 
-#: ../../source/getting-started/first-application.rst:93
+#: ../../source/getting-started/first-application.rst:97
 msgid ""
 "We have decided to represent the ticket vendor and customer as separate "
 ":doc:`accounts <../concepts/account>`. Think of accounts as deposit boxes on"
@@ -151,7 +151,7 @@ msgstr ""
 "チケット販売者と顧客を別々の :doc:`アカウント <../concepts/account>` "
 "として表現することにしました。アカウントとは対応する秘密鍵で変更できる、ブロックチェーン上の預金金庫と考えてください。各アカウントは一意であり、アドレスによって識別されます。"
 
-#: ../../source/getting-started/first-application.rst:97
+#: ../../source/getting-started/first-application.rst:101
 msgid ""
 "Have you loaded an account with test |networkcurrency|? In the "
 ":ref:`previous guide <setup-creating-a-test-account>`, you have learned how "
@@ -161,17 +161,17 @@ msgstr ""
 "テスト |networkcurrency| をアカウントへ入金しましたか？ :ref:`前のガイド <setup-creating-a-test-"
 "account>` では |cli| を使用してアカウントの作り方を学習しました。このアカウントは **チケット販売者** アカウントとして表現します。"
 
-#: ../../source/getting-started/first-application.rst:101
+#: ../../source/getting-started/first-application.rst:105
 msgid ""
 "Run the following command to verify if the ticket vendor account has "
 "|networkcurrency| units."
 msgstr "次のコマンドを実行して、チケット販売者のアカウントに |networkcurrency| 単位があることを確認します。"
 
-#: ../../source/getting-started/first-application.rst:107
+#: ../../source/getting-started/first-application.rst:111
 msgid "You should see on your screen a line similar to:"
 msgstr "このような行がスクリーンに表示されているはずです:"
 
-#: ../../source/getting-started/first-application.rst:135
+#: ../../source/getting-started/first-application.rst:139
 msgid ""
 "This account owns 750 |networkcurrency| relative units. If your row after "
 "\"Balance Information\" is empty, follow the :doc:`previous guide <setup-"
@@ -180,15 +180,15 @@ msgstr ""
 "アカウントは 750 |networkcurrency| 相対単位を保有しています。もし \"Balance Information\" "
 "の次の行が空の場合は、テスト用通貨を手に入れるために :doc:`前のガイド <setup-workstation>` に従ってください。"
 
-#: ../../source/getting-started/first-application.rst:138
+#: ../../source/getting-started/first-application.rst:142
 msgid "Create a second account with the CLI to identify the **customer**."
 msgstr "**販売者** を識別するための2つ目のアカウントを CLI で作成します。"
 
-#: ../../source/getting-started/first-application.rst:158
+#: ../../source/getting-started/first-application.rst:162
 msgid "Monitoring the blockchain"
 msgstr "ブロックチェーンの監視"
 
-#: ../../source/getting-started/first-application.rst:160
+#: ../../source/getting-started/first-application.rst:164
 msgid ""
 "Accounts change the blockchain state through transactions. Once an account "
 "announces a transaction, the server will return an OK response if it is "
@@ -197,7 +197,7 @@ msgstr ""
 "アカウントはトランザクションを通じてブロックチェーンの状態を変更します。アカウントがトランザクションをアナウンスすると、正しく構成されている場合、サーバーは"
 " OK のレスポンスを返します。"
 
-#: ../../source/getting-started/first-application.rst:163
+#: ../../source/getting-started/first-application.rst:167
 msgid ""
 "However, receiving an OK response does not mean the transaction is valid or "
 "included in a block. For example, the transaction could be rejected because "
@@ -207,24 +207,24 @@ msgstr ""
 "ただし OK レスポンスを受信して​​も、トランザクションが有効であったり、ブロックに含まれるわけではありません。たとえば、発行者に十分な "
 "|networkcurrency| がない、メッセージセットが大きすぎる、手数料の指定が少なすぎるなど、トランザクションが拒否される可能性があります。"
 
-#: ../../source/getting-started/first-application.rst:166
+#: ../../source/getting-started/first-application.rst:170
 msgid ""
 "A good practice is to **monitor transactions** before being announced to "
 "know when they get confirmed or rejected by the network."
 msgstr ""
 "ネットワークによって承認または拒否されるタイミングを検知するために、アナウンスする前に **トランザクションを監視する** ことを推奨します。"
 
-#: ../../source/getting-started/first-application.rst:168
+#: ../../source/getting-started/first-application.rst:172
 msgid ""
 "1In a new terminal, monitor the transactions involving the ticket vendor's "
 "account to know if they are confirmed or rejected by the network."
 msgstr "新しいターミナルで、チケット販売者のアカウントに関するトランザクションを監視して、ネットワークによって承認または拒否されたかを確認します。"
 
-#: ../../source/getting-started/first-application.rst:176
+#: ../../source/getting-started/first-application.rst:180
 msgid "Creating the ticket"
 msgstr "チケットの作成"
 
-#: ../../source/getting-started/first-application.rst:178
+#: ../../source/getting-started/first-application.rst:182
 msgid ""
 "We are representing the ticket with |codename| :doc:`mosaics "
 "<../concepts/mosaic>`. This feature can be used to represent any asset on "
@@ -234,7 +234,7 @@ msgstr ""
 "|codename| :doc:`モザイク <../concepts/mosaic>` "
 "でチケットを表現します。この機能は物体、チケット、クーポン、株式に相当するもの、あなたの暗号通貨さえも、いかなるアセットをブロックチェーン上に表現することができます。"
 
-#: ../../source/getting-started/first-application.rst:181
+#: ../../source/getting-started/first-application.rst:185
 msgid ""
 "Mosaics have configurable properties, which are defined at the moment of "
 "their creation. For example, we opt to set **transferable property to "
@@ -244,7 +244,7 @@ msgstr ""
 "モザイクは作成時に定義される変更可能なプロパティを持ちます。例えば **転送可能プロパティを false** "
 "に設定します。これは、チケットの転売を防止するために、購入者がモザイク作成者だけに送り返すことしかできないことを意味します。"
 
-#: ../../source/getting-started/first-application.rst:185
+#: ../../source/getting-started/first-application.rst:189
 msgid ""
 "Use the CLI with the ticket vendor account to create a new mosaic that will "
 "represent the ticket. This new mosaic can be configured as follows:"
@@ -287,13 +287,13 @@ msgstr "モザイク供給量は後に変更可能です。"
 msgid "The mosaic can be only transferred back to the mosaic creator."
 msgstr "モザイクはモザイク作成者だけに送り返すことしかできません。"
 
-#: ../../source/getting-started/first-application.rst:203
+#: ../../source/getting-started/first-application.rst:207
 msgid ""
 "After announcing the transaction, copy the mosaic id displayed in the "
 "terminal."
 msgstr "トランザクションをアナウンスしたら、ターミナルに表示された MosaicID コピーしてください。"
 
-#: ../../source/getting-started/first-application.rst:209
+#: ../../source/getting-started/first-application.rst:213
 msgid ""
 "The transaction should appear as confirmed after 30 seconds at most. If the "
 "terminal raises an error, you can check the error code description `here "
@@ -305,11 +305,11 @@ msgstr ""
 "openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml>`_"
 " を参照してください。"
 
-#: ../../source/getting-started/first-application.rst:214
+#: ../../source/getting-started/first-application.rst:218
 msgid "Sending the ticket"
 msgstr "チケットの送信"
 
-#: ../../source/getting-started/first-application.rst:216
+#: ../../source/getting-started/first-application.rst:220
 msgid ""
 "Now that we have defined the mosaic, we will send one ticket unit to a "
 "customer announcing a :ref:`TransferTransaction <transfer-transaction>`."
@@ -317,7 +317,7 @@ msgstr ""
 "モザイクを定義したので、1 つのチケット単位を  :ref:`TransferTransaction <transfer-transaction>` "
 "をアナウンスして顧客に送信します。"
 
-#: ../../source/getting-started/first-application.rst:218
+#: ../../source/getting-started/first-application.rst:222
 msgid ""
 "Open a new file, and define a **TransferTransaction** with the following "
 "values."
@@ -352,19 +352,19 @@ msgstr "添付されたメッセージ"
 msgid "The network type."
 msgstr "ネットワークタイプ"
 
-#: ../../source/getting-started/first-application.rst:248
+#: ../../source/getting-started/first-application.rst:252
 msgid ""
 "Although the transaction is defined, it has not been announced to the "
 "network yet."
 msgstr "トランザクションは定義されましたが、まだネットワークへはアナウンスされていません。"
 
-#: ../../source/getting-started/first-application.rst:250
+#: ../../source/getting-started/first-application.rst:254
 msgid ""
 "Sign the transaction with the **ticket vendor account**, so that the network"
 " can verify the authenticity of the transaction."
 msgstr "ネットワークがトランザクションの信頼性を検証できるように **チケット販売者のアカウント** でトランザクションに署名をします。"
 
-#: ../../source/getting-started/first-application.rst:252
+#: ../../source/getting-started/first-application.rst:256
 msgid ""
 "Include the network generation hash to make the transaction only valid for "
 "your network. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy "
@@ -373,11 +373,11 @@ msgstr ""
 "あなたのネットワークでだけ妥当なトランザクションを作るには、ネットワークジェネレーションハッシュを含めてください。新しいブラウザタブで "
 "``nodeUrl + '/node/info'`` を開いて ``meta.networkGenerationHash`` の値をコピーします。"
 
-#: ../../source/getting-started/first-application.rst:271
+#: ../../source/getting-started/first-application.rst:275
 msgid "Once signed, announce the transaction to the network."
 msgstr "署名が終わったら、トランザクションをネットワークへアナウンスします。"
 
-#: ../../source/getting-started/first-application.rst:294
+#: ../../source/getting-started/first-application.rst:298
 msgid ""
 "Look at the terminal window where you are monitoring transactions. When the "
 "transaction appears as confirmed, you can check if the customer has received"
@@ -385,25 +385,25 @@ msgid ""
 msgstr ""
 "トランザクションを監視しているターミナルウィンドウを確認します。トランザクションが承認されたら、次のコマンドで顧客がチケットを受け取ったかどうかを確認できます。"
 
-#: ../../source/getting-started/first-application.rst:302
+#: ../../source/getting-started/first-application.rst:306
 msgid "Did we solve the use case?"
 msgstr "このユースケースを解決できたのでしょうか？"
 
-#: ../../source/getting-started/first-application.rst:304
+#: ../../source/getting-started/first-application.rst:308
 msgid ""
 "✅ Identify each customer: Creating |codename| accounts for each customer."
 msgstr "✅ 各購入者の識別: 各購入者の |codename| アカウントの作成"
 
-#: ../../source/getting-started/first-application.rst:306
+#: ../../source/getting-started/first-application.rst:310
 msgid "✅ Avoid ticket reselling: Creating a non-transferable mosaic."
 msgstr "✅ チケットの転売防止: 転送不可能なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:308
+#: ../../source/getting-started/first-application.rst:312
 msgid ""
 "✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic."
 msgstr "✅ 未認証なチケットとその複製: 一意なモザイクの作成"
 
-#: ../../source/getting-started/first-application.rst:310
+#: ../../source/getting-started/first-application.rst:314
 msgid ""
 "Continue learning about more about |codename| :doc:`built-in features "
 "<../concepts/overview>`."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,33 +21,33 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:42
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:46
 msgid "Reading transactions from an account"
 msgstr "トランザクションをアカウントから読み込む"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:44
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:48
 msgid "Get the complete list of transactions involving an account."
 msgstr "アカウントに関連するトランザクションの完全なリストの取得"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:48
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:52
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:50
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:54
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:54
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:58
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:56
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:60
 msgid "Open a new file and define the account address."
 msgstr "新しくファイルを開いて、アカウントアドレスを定義します。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:75
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:79
 msgid ""
 "2. Define a new ``TransactionHttp`` repository and the search criteria. In "
 "this example, we will retrieve all account-related transactions with at "
@@ -57,7 +57,7 @@ msgstr ""
 "2. 新しく ``TransactionHttp`` リポジトリと検索クリテリアをを定義します。この例では、承認が 1 "
 "つ以上あるすべてのアカウント関連トランザクションを取得しますが、未承認とパーシャルのコレクションをクエリすることもできます。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:97
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:101
 msgid ""
 "3. The API returns pages with up to 100 transactions. The `page object "
 "<https://docs.symbolplatform.com/symbol-sdk-typescript-"
@@ -69,7 +69,7 @@ msgstr ""
 "javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ "
 "は総トランザクション数と有効なページのメタ情報を含みます。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:100
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:104
 msgid ""
 "To get more transactions, you will have to make further requests "
 "iteratively. For each extra call, increase the ``pageNumber`` by one unit."
@@ -77,7 +77,7 @@ msgstr ""
 "より多くのトランザクションを取得するには、リクエストを繰り返し行う必要があります。追加の呼び出しごとに ``pageNumber`` を 1 "
 "単位ずつ増やします。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:107
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:111
 msgid ""
 "4. Since the transaction collection might grow while paginating, it's "
 "advised to set the first transaction you want to start pagination. Set an "
@@ -87,15 +87,15 @@ msgstr ""
 "ページネーション中にトランザクションのコレクションが大きくなる場合があるので、ページネーションを開始する最初のトランザクションを設定することをお勧めします。最初のトランザクションの内部識別子で"
 " ``オフセット`` 値を設定します。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:116
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:120
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:118
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:122
 msgid "Open a terminal window and run the following command."
 msgstr "ターミナルウィンドウを開き、次のコマンドを実行します。"
 
-#: ../../source/guides/account/reading-transactions-from-an-account.rst:120
+#: ../../source/guides/account/reading-transactions-from-an-account.rst:124
 msgid ""
 "Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the address "
 "you want to query."
