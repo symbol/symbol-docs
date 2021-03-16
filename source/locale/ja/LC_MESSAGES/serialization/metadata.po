@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-17 18:38+0000\n"
+"POT-Creation-Date: 2021-03-11 07:16+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/metadata.rst:36
+#: ../../source/serialization/metadata.rst:40
 msgid "Metadata Schemas"
 msgstr "メタデータスキーマ"
 
-#: ../../source/serialization/metadata.rst:38
+#: ../../source/serialization/metadata.rst:42
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -38,25 +38,31 @@ msgstr ""
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/metadata.rst:42
+#: ../../source/serialization/metadata.rst:46
 msgid "Account Metadata"
 msgstr "アカウントメタデータ"
 
-#: ../../source/serialization/metadata.rst:49
+#: ../../source/serialization/metadata.rst:53
 msgid ""
 "Announce an AccountMetadataTransaction to associate a key-value state to an "
 "account."
 msgstr "AccountMetadataTransaction をアナウンスして Key-Value 状態をアカウントに関連付けます。"
 
-#: ../../source/serialization/metadata.rst:57
-#: ../../source/serialization/metadata.rst:86
-#: ../../source/serialization/metadata.rst:116
+#: ../../source/serialization/metadata.rst:61
+#: ../../source/serialization/metadata.rst:90
+#: ../../source/serialization/metadata.rst:120
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
 msgstr ""
 ":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
+
+#: ../../source/serialization/metadata.rst:1
+#: ../../source/serialization/metadata.rst:1
+#: ../../source/serialization/metadata.rst:1
+msgid "Property"
+msgstr "プロパティ"
 
 #: ../../source/serialization/metadata.rst:1
 #: ../../source/serialization/metadata.rst:1
@@ -91,11 +97,11 @@ msgstr ""
 "前の値と新しい値の差分。値は ``xor(previous-value, new-value)`` "
 "として計算できます。前の値がない場合は新しい値を直接使用します。"
 
-#: ../../source/serialization/metadata.rst:71
+#: ../../source/serialization/metadata.rst:75
 msgid "Mosaic Metadata"
 msgstr "モザイクメタデータ"
 
-#: ../../source/serialization/metadata.rst:78
+#: ../../source/serialization/metadata.rst:82
 msgid ""
 "Announce a MosaicMetadataTransaction to associate a key-value state to a "
 "mosaic."
@@ -110,11 +116,11 @@ msgstr "対象のモザイク識別子"
 msgid "New value size in bytes."
 msgstr "バイト換算の新しい値のサイズ"
 
-#: ../../source/serialization/metadata.rst:101
+#: ../../source/serialization/metadata.rst:105
 msgid "Namespace Metadata"
 msgstr "ネームスペースメタデータ"
 
-#: ../../source/serialization/metadata.rst:108
+#: ../../source/serialization/metadata.rst:112
 msgid ""
 "Announce a NamespaceMetadataTransaction to associate a key-value state to a "
 "namespace."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-18 12:03+0000\n"
+"POT-Creation-Date: 2021-03-11 07:16+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/account_link.rst:36
+#: ../../source/serialization/account_link.rst:40
 msgid "Account Link Schemas"
 msgstr "アカウントリンクアクションスキーマ"
 
-#: ../../source/serialization/account_link.rst:38
+#: ../../source/serialization/account_link.rst:42
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -38,36 +38,52 @@ msgstr ""
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/account_link.rst:42
+#: ../../source/serialization/account_link.rst:46
 msgid "Account Key Link"
 msgstr "アカウントキーリンク"
 
-#: ../../source/serialization/account_link.rst:49
+#: ../../source/serialization/account_link.rst:53
 msgid ""
-"This transaction is required for all accounts wanting to activate delegated "
-"harvesting."
-msgstr "このトランザクションはすべてのデリゲートハーベスティングを有効にしたいアカウントに必要です。"
+"This transaction is required for all accounts wanting to activate remote or "
+"delegated harvesting."
+msgstr "このトランザクションはすべてのリモートまたはデリゲートハーベスティングを有効にしたいアカウントに必要です。"
 
-#: ../../source/serialization/account_link.rst:51
+#: ../../source/serialization/account_link.rst:55
 msgid ""
 "Announce an AccountKeyLinkTransaction to delegate the account importance "
 "score to a proxy account."
 msgstr ""
 "アカウントのインポータンススコアをプロキシアカウントに移譲するために、AccountKeyLinkTransaction をアナウンスします。"
 
-#: ../../source/serialization/account_link.rst:57
-#: ../../source/serialization/account_link.rst:99
+#: ../../source/serialization/account_link.rst:61
+#: ../../source/serialization/account_link.rst:103
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/serialization/account_link.rst:59
-#: ../../source/serialization/account_link.rst:101
+#: ../../source/serialization/account_link.rst:63
+#: ../../source/serialization/account_link.rst:105
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
 msgstr ""
 ":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
+
+#: ../../source/serialization/account_link.rst:1
+#: ../../source/serialization/account_link.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/serialization/account_link.rst:1
+#: ../../source/serialization/account_link.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/serialization/account_link.rst:1
+#: ../../source/serialization/account_link.rst:1
+#: ../../source/serialization/account_link.rst:1
+msgid "Description"
+msgstr "説明"
 
 #: ../../source/serialization/account_link.rst:1
 #: ../../source/serialization/account_link.rst:1
@@ -79,6 +95,10 @@ msgstr "リンクした公開鍵"
 msgid "Account link action."
 msgstr "アカウントリンクアクション"
 
+#: ../../source/serialization/account_link.rst:75
+msgid "LinkAction"
+msgstr "リンクアクション"
+
 #: ../../source/serialization/account_link.rst:1
 msgid "Unlink account."
 msgstr "アカウントの関連付けをやめる"
@@ -87,17 +107,17 @@ msgstr "アカウントの関連付けをやめる"
 msgid "Link account."
 msgstr "アカウントを関連付ける"
 
-#: ../../source/serialization/account_link.rst:84
+#: ../../source/serialization/account_link.rst:88
 msgid "Node Key Link"
 msgstr "ノードキーリンク"
 
-#: ../../source/serialization/account_link.rst:91
+#: ../../source/serialization/account_link.rst:95
 msgid ""
 "This transaction is required for all accounts willing to activate delegated "
 "harvesting."
 msgstr "このトランザクションはすべてのデリゲートハーベスティングを有効にしたいアカウントに必要です。"
 
-#: ../../source/serialization/account_link.rst:93
+#: ../../source/serialization/account_link.rst:97
 msgid ""
 "Announce a NodeKeyLinkTransaction to link an account with a public key used "
 "by TLS to create sessions."

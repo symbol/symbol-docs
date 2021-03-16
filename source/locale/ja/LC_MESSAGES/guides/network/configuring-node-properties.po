@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/configuring-node-properties.rst:41
+#: ../../source/guides/network/configuring-node-properties.rst:45
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/configuring-node-properties.rst:43
+#: ../../source/guides/network/configuring-node-properties.rst:47
 msgid ""
 "There is a large number of node-related settings that can be customized in "
 "|codename|."
 msgstr "|codename| には多数のカスタマイズ可能なノード関連の設定があります。 "
 
-#: ../../source/guides/network/configuring-node-properties.rst:45
+#: ../../source/guides/network/configuring-node-properties.rst:49
 msgid ""
 "The easiest way to change them is by using |symbol-bootstrap|'s custom "
 "presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put "
@@ -42,7 +42,7 @@ msgstr ""
 "Bootstrap の使用 <using-symbol-bootstrap>`): 設定を YAML ファイルに記述して、-c パラメータを使用して "
 "``symbol-bootstrap config`` に渡します。例:"
 
-#: ../../source/guides/network/configuring-node-properties.rst:52
+#: ../../source/guides/network/configuring-node-properties.rst:56
 msgid ""
 "These settings can also be directly provided to |catapult-server| through "
 "``.properties`` files. The header of each of the tables below indicates "
@@ -51,7 +51,7 @@ msgstr ""
 "これらの設定は ``.properties`` ファイルを介して |catapult-server| "
 "に直接提供することもできます。以下の各テーブルのヘッダーは、そのテーブルのプロパティが含まれているファイルを示しています。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:54
+#: ../../source/guides/network/configuring-node-properties.rst:58
 msgid ""
 "For **network**-related properties, read the :doc:`Configuring network "
 "properties <configuring-network-properties>` guide."
@@ -59,14 +59,14 @@ msgstr ""
 "**ネットワーク** 関連のプロパティについては、:doc:`ネットワークプロパティの設定 <configuring-network-"
 "properties>` ガイドを参照してください。"
 
-#: ../../source/guides/network/configuring-node-properties.rst:60
+#: ../../source/guides/network/configuring-node-properties.rst:64
 msgid "User configuration"
 msgstr "ユーザー設定"
 
-#: ../../source/guides/network/configuring-node-properties.rst:67
+#: ../../source/guides/network/configuring-node-properties.rst:71
 msgid "Node configuration"
 msgstr "ノード設定"
 
-#: ../../source/guides/network/configuring-node-properties.rst:76
+#: ../../source/guides/network/configuring-node-properties.rst:80
 msgid "Harvesting Configuration"
 msgstr "ハーベスティング設定"

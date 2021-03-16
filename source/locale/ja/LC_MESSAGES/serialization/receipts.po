@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-18 12:03+0000\n"
+"POT-Creation-Date: 2021-03-11 07:16+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/receipts.rst:36
+#: ../../source/serialization/receipts.rst:40
 msgid "Receipts Schemas"
 msgstr "レシートスキーマ"
 
-#: ../../source/serialization/receipts.rst:38
+#: ../../source/serialization/receipts.rst:42
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -42,18 +42,18 @@ msgstr ""
 msgid "Reserved."
 msgstr "予約済み"
 
-#: ../../source/serialization/receipts.rst:62
+#: ../../source/serialization/receipts.rst:66
 msgid ""
 "Receipts provide proof for every state change not retrievable from the "
 "block."
 msgstr "レシートはブロックから取得できないすべての状態変化の証明を提供します。"
 
-#: ../../source/serialization/receipts.rst:64
-#: ../../source/serialization/receipts.rst:85
-#: ../../source/serialization/receipts.rst:107
-#: ../../source/serialization/receipts.rst:128
-#: ../../source/serialization/receipts.rst:148
-#: ../../source/serialization/receipts.rst:169
+#: ../../source/serialization/receipts.rst:68
+#: ../../source/serialization/receipts.rst:89
+#: ../../source/serialization/receipts.rst:111
+#: ../../source/serialization/receipts.rst:132
+#: ../../source/serialization/receipts.rst:152
+#: ../../source/serialization/receipts.rst:173
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
@@ -65,7 +65,7 @@ msgstr "レシートバージョン"
 msgid "Receipt type."
 msgstr "レシートタイプ"
 
-#: ../../source/serialization/receipts.rst:80
+#: ../../source/serialization/receipts.rst:84
 msgid "The invisible state change triggered a mosaic transfer."
 msgstr "モザイク転送によりトリガされた不可視の状態変化。"
 
@@ -77,7 +77,7 @@ msgstr "転送されたモザイク"
 msgid "Address of the recipient."
 msgstr "受信者のアドレス"
 
-#: ../../source/serialization/receipts.rst:102
+#: ../../source/serialization/receipts.rst:106
 msgid "The invisible state change changed an account balance."
 msgstr "アカウントの残高変化によりトリガされた不可視の状態変化。"
 
@@ -89,7 +89,7 @@ msgstr "増加または減少したモザイク"
 msgid "Address of the target account."
 msgstr "ターゲットアカウントのアドレス"
 
-#: ../../source/serialization/receipts.rst:123
+#: ../../source/serialization/receipts.rst:127
 msgid "An :doc:`mosaic <mosaic>` expired."
 msgstr "期限切れの :doc:`モザイク <mosaic>`"
 
@@ -97,7 +97,7 @@ msgstr "期限切れの :doc:`モザイク <mosaic>`"
 msgid "Mosaic identifier."
 msgstr "モザイク識別子"
 
-#: ../../source/serialization/receipts.rst:143
+#: ../../source/serialization/receipts.rst:147
 msgid ""
 "Network currency mosaics were created due to :doc:`inflation "
 "<../concepts/inflation>`."
@@ -111,7 +111,7 @@ msgstr "作成されたモザイクの識別子"
 msgid "Number of mosaics created."
 msgstr "作成されたモザイクの数"
 
-#: ../../source/serialization/receipts.rst:164
+#: ../../source/serialization/receipts.rst:168
 msgid "The collection of receipts related to a transaction."
 msgstr "トランザクションに関するレシートのコレクション。"
 

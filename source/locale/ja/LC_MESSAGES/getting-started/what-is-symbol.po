@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2020-06-11 06:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/what-is-symbol.rst:36
+#: ../../source/getting-started/what-is-symbol.rst:40
 msgid "What is Symbol?"
 msgstr "Symbol とは？"
 
-#: ../../source/getting-started/what-is-symbol.rst:40
+#: ../../source/getting-started/what-is-symbol.rst:44
 msgid "Symbol is built for developers"
 msgstr "Symbol は開発者のために立ち上げられました"
 
-#: ../../source/getting-started/what-is-symbol.rst:42
+#: ../../source/getting-started/what-is-symbol.rst:46
 msgid ""
 "|codename| is a feature-rich development platform that lets you build "
 "blockchain projects faster and more efficiently, so you can exceed "
@@ -38,7 +38,7 @@ msgstr ""
 "|codename| "
 "は機能豊富な開発プラットフォームであり、ブロックチェーンプロジェクトをより速く、効率的に構築できるため、期待以上の成果を得られます。"
 
-#: ../../source/getting-started/what-is-symbol.rst:48
+#: ../../source/getting-started/what-is-symbol.rst:52
 msgid ""
 "|codename| uses familiar **APIs** to interface with your existing platform "
 "so the learning curve is lower and you can develop your way. This means you "
@@ -49,15 +49,15 @@ msgstr ""
 "を使用して、既存のプラットフォームとインターフェースで接続するため、学習曲線が低く、あなたのやり方で開発できます。つまり "
 "**任意のプログラミング言語** で軽量コードを使用して、さまざまなアーキテクチャソリューションを効率的に作成できるということです。"
 
-#: ../../source/getting-started/what-is-symbol.rst:51
+#: ../../source/getting-started/what-is-symbol.rst:55
 msgid ":doc:`Try the API <../api>`"
 msgstr ":doc:`API を試す <../api>`"
 
-#: ../../source/getting-started/what-is-symbol.rst:55
+#: ../../source/getting-started/what-is-symbol.rst:59
 msgid "Built-in features"
 msgstr "ビルドイン機能"
 
-#: ../../source/getting-started/what-is-symbol.rst:57
+#: ../../source/getting-started/what-is-symbol.rst:61
 msgid ""
 "Connect and combine |codename|'s built-in features to architect your "
 "blockchain solution. Use our ready-made plugin configurations for your most "
@@ -67,15 +67,15 @@ msgstr ""
 "|codename| "
 "の組み込み機能に接続および組み合わせて、ブロックチェーンソリューションを構築します。最も一般的なビジネスニーズに合わせて既製のプラグイン構成を使用するか、プラグインプリミティブを構成して、パフォーマンスを犠牲にすることなくネットワークの機能をカスタマイズします。"
 
-#: ../../source/getting-started/what-is-symbol.rst:60
+#: ../../source/getting-started/what-is-symbol.rst:64
 msgid ":doc:`Discover the built-in features <../concepts/overview>`"
 msgstr ":doc:`ビルドイン機能を見る <../concepts/overview>`"
 
-#: ../../source/getting-started/what-is-symbol.rst:64
+#: ../../source/getting-started/what-is-symbol.rst:68
 msgid "Private, public and hybrid chain deployments"
 msgstr "プライベート、パブリックそしてハイブリッドのチェーン展開"
 
-#: ../../source/getting-started/what-is-symbol.rst:70
+#: ../../source/getting-started/what-is-symbol.rst:74
 msgid ""
 "|codename| provides access to both public and private blockchains, "
 "individually or as a hybrid, providing options to best suit your project "
@@ -84,7 +84,7 @@ msgstr ""
 "|codename| "
 "はパブリックとプライベートブロックチェーンの両方を提供し、それぞれまたはハイブリッドで、あなたのプロジェクトのニーズに最適な選択肢を提供します。"
 
-#: ../../source/getting-started/what-is-symbol.rst:72
+#: ../../source/getting-started/what-is-symbol.rst:76
 msgid ""
 "**Public chain**: The |codename| public chain is a platform supported by a "
 "decentralized network of nodes. Entities on the platform can freely "
@@ -97,7 +97,7 @@ msgstr ""
 " `XYM <https://symbolplatform.com/xym/>`_ は |codename| "
 "パブリックブロックチェーンのネイティブ通貨として機能します。"
 
-#: ../../source/getting-started/what-is-symbol.rst:74
+#: ../../source/getting-started/what-is-symbol.rst:78
 msgid ""
 "**Private chain** Private chains, on the other hand, are permissioned "
 "blockchains that prefer privacy, compliance, customization, and efficiency "
@@ -109,7 +109,7 @@ msgstr ""
 "一方でプライベートチェーンは分散よりもプライバシー、コンプライアンス、カスタマイズ、および効率を優先する、認可型ブロックチェーンです。クローズドなエコシステムでのブロックチェーン技術が望まれる場合は"
 " |codename| を使用して独自のプライベートチェーンをデプロイすることも選択できます。"
 
-#: ../../source/getting-started/what-is-symbol.rst:76
+#: ../../source/getting-started/what-is-symbol.rst:80
 msgid ""
 "**Hybrid chain**: By utilizing both public and private blockchains, you can "
 "preserve an intimate ecosystem in a private chain and communicate freely "
@@ -118,13 +118,13 @@ msgstr ""
 "**ハイブリッドチェーン**: "
 "パブリックブロックチェーンとプライベートブロックチェーンの両方を利用することで、プライベートチェーン内の親密なエコシステムを維持し、データの分散ハブとしてパブリックチェーンと自由に通信できます。"
 
-#: ../../source/getting-started/what-is-symbol.rst:78
+#: ../../source/getting-started/what-is-symbol.rst:82
 msgid ""
 ":doc:`Run your private test network <../guides/network/creating-a-private-"
 "test-net>`"
 msgstr ""
 ":doc:`プライベートテストネットワークを立ち上げる <../guides/network/creating-a-private-test-net>`"
 
-#: ../../source/getting-started/what-is-symbol.rst:80
+#: ../../source/getting-started/what-is-symbol.rst:84
 msgid "Continue: :doc:`Setting up your workstation <setup-workstation>`."
 msgstr "次へ: :doc:`ワークステーションのセットアップ <setup-workstation>`"

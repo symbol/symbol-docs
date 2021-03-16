@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:42
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:46
 msgid "Adding cosignatures to aggregate complete trasactions"
 msgstr "アグリゲートコンプリートトランザクションに連署名を追加する"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:44
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:48
 msgid ""
 "This guide will show you how to add cosignatures to an aggregate complete "
 "transaction without using the partial cache."
 msgstr "このガイドでは、パーシャルキャッシュを使用せずに、アグリゲートコンプリートトランザクションに連署名を追加する方法を説明します。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:46
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:50
 msgid ""
 "This can be useful for when you are keeping your private keys in an offline "
 "device (cold wallet) for security reasons. By signing adding the "
@@ -45,15 +45,15 @@ msgstr ""
 " :ref:`aggregate bonded transactions <aggregate-bonded>` "
 "による、意図しない資産ロックを回避することもできます。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:51
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:55
 msgid "Use case"
 msgstr "ユースケース"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:57
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:61
 msgid "Multi-Asset Escrowed Transactions"
 msgstr "マルチアセットエスクロートランザクション"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:59
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:63
 msgid ""
 "We will set up an aggregate complete transaction where Alice "
 "(``TDPXWF2H5G7U2NKZRJD47QR4KZPRULPAMQ4O54IK``) will send 100 "
@@ -64,25 +64,25 @@ msgstr ""
 " を Bob (``TCHS3AOXFGWGTN2QUUHDCXJ4SBYLIQIPNUPHHA2N``) に送信し、1 `collectible` "
 "モザイクを返却する、アグリゲートコンプリートトランザクションを構築していきます。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:63
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:67
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:65
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:69
 msgid "Have 2 accounts :ref:`account <setup-creating-a-test-account>`."
 msgstr "2 つのアカウント :ref:`アカウント <setup-creating-a-test-account>` "
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:66
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:70
 msgid ""
 "Load the accounts with enough |networkcurrency| to pay for transaction fees."
 msgstr "アカウントに手数料を支払うために十分な |networkcurrency| を入金してください。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:67
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:71
 msgid ""
 "One of the accounts must own a mosaic other than the |networkcurrency|."
 msgstr "アカウントのうち 1 つは |networkcurrency| 以外のモザイクを所有している必要があります。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:68
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:72
 msgid ""
 "Both your offline and online :doc:`workstations <../../getting-started"
 "/setup-workstation>` are set up for Symbol-CLI and Symbol-SDK."
@@ -90,41 +90,41 @@ msgstr ""
 "オフラインとオンラインの両方で :doc:`ワークステーション <../../getting-started/setup-workstation>` は"
 " Symbol-CLI と Symbol-SDK 用に設定されています。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:72
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:76
 msgid "Step 1: Construct the aggregate complete transaction"
 msgstr "ステップ 1: アグリゲートコンプリートトランザクションの構築"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:74
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:78
 msgid ""
 "Open up a text editor. Then, construct the Aggregate Complete Transaction "
 "using Alice's account."
 msgstr "テキストエディタを開きます。そして、Alice のアカウントを使用して、アグリゲートコンプリートトランザクションを構築します。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:93
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:97
 msgid ""
 "Make sure to place Alice's private key and Bob's public key in the "
 "appropriate places."
 msgstr "Alice の秘密鍵と Bob の公開鍵が適切に設定されていることを確認してください。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:95
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:99
 msgid "Sign the transaction with Alice's key."
 msgstr "Alice のキーでトランザクションに署名します。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:114
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:118
 msgid ""
 "3. Save the TypeScript file, then run it on your terminal. Copy the returned"
 " payload and send it over to Bob."
 msgstr "3. TypeScript ファイルを保存し、ターミナルで実行します。返却されたペイロードをコピーし、Bob へ送信します。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:119
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:123
 msgid "Step 2: Add the second cosignature"
 msgstr "ステップ 2: 二つ目の連署名を追加"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:121
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:125
 msgid "Bob cosigns the payload obtained from the previous step."
 msgstr "Bob は前回のステップで取得したペイロードに連署名します。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:141
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:145
 msgid ""
 "2. Bob runs the code snippet in the terminal and obtains the transaction "
 "signature and the parent hash. Finally, he shares the information back with "
@@ -132,18 +132,18 @@ msgid ""
 msgstr ""
 "2. Bob はターミナルでコードスニペットを実行し、トランザクション署名と親ハッシュを取得します。最後に、彼はその情報を Alice と共有します。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:146
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:150
 msgid "Step 3: Announce the Aggregate Complete Transaction"
 msgstr "ステップ 3: アグリゲートコンプリートトランザクションのアナウンス"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:148
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:152
 msgid ""
 "Using Bob's public key, cosignature transaction hash, and signature, "
 "recreate the transaction and announce it to the network as complete."
 msgstr ""
 "Bob の公開鍵、連署トランザクションハッシュ、署名を使用してトランザクションを再作成し、コンプリートとしてネットワークへアナウンスします。"
 
-#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:168
+#: ../../source/guides/aggregate/adding-cosginatures-aggregate-complete.rst:172
 msgid ""
 "If successful, Alice will have sent 100 |networkcurrency| to Bob and "
 "received 1 ``collectible`` mosaic in return."

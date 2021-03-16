@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-07-30 20:01+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/metadata.rst:36
+#: ../../source/concepts/metadata.rst:40
 msgid "Metadata"
 msgstr "メタデータ"
 
-#: ../../source/concepts/metadata.rst:38
+#: ../../source/concepts/metadata.rst:42
 msgid ""
 "|codename| provides the option to associate custom data to an :doc:`account "
 "<account>`, :doc:`mosaic <mosaic>` or :doc:`namespace <namespace>` with a "
@@ -34,21 +34,21 @@ msgstr ""
 "|codename| はトランザクションとともに :doc:`アカウント <account>`, :doc:`モザイク <mosaic>`,  "
 ":doc:`ネームスペース <namespace>` にカスタムデータを関連付ける手段が用意されています。"
 
-#: ../../source/concepts/metadata.rst:40
+#: ../../source/concepts/metadata.rst:44
 msgid "The most common uses of metadata are:"
 msgstr "メタデータの一般的な使い方:"
 
-#: ../../source/concepts/metadata.rst:42
+#: ../../source/concepts/metadata.rst:46
 msgid "Attach relevant information to assets."
 msgstr "アセットに関連する情報の添付。"
 
-#: ../../source/concepts/metadata.rst:43
+#: ../../source/concepts/metadata.rst:47
 msgid ""
 "Validate the value attached to an asset to enable users in an application to"
 " perform an off-chain action."
 msgstr "アセットに付加された価値を検証して、アプリケーション内のユーザがチェーン外のアクションを実行できるようにします。"
 
-#: ../../source/concepts/metadata.rst:45
+#: ../../source/concepts/metadata.rst:49
 msgid ""
 "Metadata is uniquely **identified** by the tuple ``{ signer, target-id, "
 "metadata-key }``. Including a signer in this composite identifier allows "
@@ -57,7 +57,7 @@ msgstr ""
 "メタデータはタプル ``{signer, target-id, metadata-key}`` によって一意に **識別** "
 "されます。この複合識別子に署名者を含めることで、複数のアカウントで競合することなく同じメタデータを指定できます。"
 
-#: ../../source/concepts/metadata.rst:48
+#: ../../source/concepts/metadata.rst:52
 msgid ""
 "The **value** linked to an identifier is a string up to ``1024`` characters,"
 "  being this parameter :ref:`editable per network <config-network-"
@@ -68,11 +68,11 @@ msgstr ""
 "<config-network-properties>` "
 "です。クライアントアプリケーションはメッセージを暗号化するか、またはすべてのブロックチェーン参加者が見える必要があります。"
 
-#: ../../source/concepts/metadata.rst:53
+#: ../../source/concepts/metadata.rst:57
 msgid "Persistence"
 msgstr "永続性"
 
-#: ../../source/concepts/metadata.rst:55
+#: ../../source/concepts/metadata.rst:59
 msgid ""
 "Metadata entries are stored on the blockchain—like the message of a regular "
 ":doc:`TransferTransaction <transfer-transaction>`—but also as a **key-value "
@@ -81,7 +81,7 @@ msgstr ""
 "メタデータエントリはブロックチェーンへ — :doc:`TransferTransaction <transfer-transaction>` "
 "の通常メッセージのように — 格納されますが、 **key-value state** としてです。"
 
-#: ../../source/concepts/metadata.rst:57
+#: ../../source/concepts/metadata.rst:61
 msgid ""
 "This feature reduces the reading time of client applications; metadata "
 "allows information to be accessed by keys instead of processing the entire "
@@ -91,11 +91,11 @@ msgstr ""
 "この機能によりクライアントアプリケーションの読み込み時間が短縮されます; "
 "メタデータを使用すると最新のトランザクションメッセージ値を取得するために、アカウントのトランザクション履歴全体をオフチェーンで処理する代わりにキーで情報にアクセスできます。"
 
-#: ../../source/concepts/metadata.rst:61
+#: ../../source/concepts/metadata.rst:65
 msgid "Permissions"
 msgstr "パーミッション"
 
-#: ../../source/concepts/metadata.rst:63
+#: ../../source/concepts/metadata.rst:67
 msgid ""
 "The account, namespace or mosaic creator must **opt-in** to all metadata "
 "requests received by giving explicit permission. In practice, this means "
@@ -106,25 +106,25 @@ msgstr ""
 "する必要があります。これはすべての MetadataTransactions を :doc:`AggregateTransaction "
 "<aggregate-transaction>` にラップする必要があることを意味します。"
 
-#: ../../source/concepts/metadata.rst:66
+#: ../../source/concepts/metadata.rst:70
 msgid ""
 "The target account should cosign the aggregate to record the metadata on the"
 " blockchain and update the asset state."
 msgstr "対象アカウントはメタデータをブロックチェーンに記録して、アセットの状態を更新するためにアグリゲートに署名をする必要があります。"
 
-#: ../../source/concepts/metadata.rst:70
+#: ../../source/concepts/metadata.rst:74
 msgid "Examples"
 msgstr "例"
 
-#: ../../source/concepts/metadata.rst:73
+#: ../../source/concepts/metadata.rst:77
 msgid "Adding a certificate to an account"
 msgstr "アカウントに証明書を追加する。"
 
-#: ../../source/concepts/metadata.rst:79
+#: ../../source/concepts/metadata.rst:83
 msgid "Metadata used to attach relevant information to an asset"
 msgstr "メタデータはアセットに関連情報を添付するのに使用されます"
 
-#: ../../source/concepts/metadata.rst:81
+#: ../../source/concepts/metadata.rst:85
 msgid ""
 "Bob works as a digital notary that stamp accounts on |codename|'s public "
 "blockchain. When a customer comes to Bob to notarize a document, he checks "
@@ -135,7 +135,7 @@ msgstr ""
 "パブリックブロックチェーン上に証印の責任を持つデジタル公証人として働いています。顧客がドキュメントを公証するために Bob "
 "の元へ訪れると、彼は顧客のドキュメントの認証をチェックし、アカウントに MetadataTransaction をタグ付けをします。"
 
-#: ../../source/concepts/metadata.rst:84
+#: ../../source/concepts/metadata.rst:88
 msgid ""
 "Alice a recent graduate and wants her educational certificate accredited to "
 "her |codename| account to avoid the hassle of repeatedly providing "
@@ -148,15 +148,15 @@ msgstr ""
 "を訪れ、学位を彼に提供します。Alice が Bob に手数料を支払うと Bob は真正性を検証し Alice "
 "のアカウントに学位を表すメタデータをスタンプします。"
 
-#: ../../source/concepts/metadata.rst:89
+#: ../../source/concepts/metadata.rst:93
 msgid "Access management"
 msgstr "アクセス管理"
 
-#: ../../source/concepts/metadata.rst:95
+#: ../../source/concepts/metadata.rst:99
 msgid "Validating metadata to restrict performing an off-chain action"
 msgstr "オフチェーンアクションの実行を制限するためのメタデータのバリデーション"
 
-#: ../../source/concepts/metadata.rst:97
+#: ../../source/concepts/metadata.rst:101
 msgid ""
 "The HR department of the SneakersCompany uses the |codename| for access "
 "management of sensitive work resources. Each account is tagged with the "
@@ -165,7 +165,7 @@ msgstr ""
 "SneakersCompany の人事部門は機密作業リソースのアクセス管理に |codename| "
 "を使用しています。各アカウントには会社のアプリスイートへのアクセスを規制するメタデータがタグ付けされています。"
 
-#: ../../source/concepts/metadata.rst:100
+#: ../../source/concepts/metadata.rst:104
 msgid ""
 "When a new employee, Carol, is hired, the HR department creates a new work "
 "account for her. For security reasons, HR sets the metadata of the account "
@@ -174,7 +174,7 @@ msgstr ""
 "新しい従業員の Carol が雇われると、人事部は彼女の仕事用アカウントを新規作成します。セキュリティ上の理由で人事部はアカウントのメタデータとして "
 "``{company, ACCESS, 9-18}`` を設定します。"
 
-#: ../../source/concepts/metadata.rst:103
+#: ../../source/concepts/metadata.rst:107
 msgid ""
 "Each time Carol attempts to access the company apps suite, the company app "
 "validates that Carol has permission and that the time falls under "
@@ -183,13 +183,13 @@ msgstr ""
 "Carol が会社のアプリスイートにアクセスしようとするたびに、会社アプリは Carol に許可があること、および彼女の入室を許可する前に、時刻が "
 "*9:00-18:00* の範囲内にあることを検証します。"
 
-#: ../../source/concepts/metadata.rst:105
+#: ../../source/concepts/metadata.rst:109
 msgid ""
 "Similarly, if Derek, who has no permissions, attempts to access the company "
 "apps suite, the app will reject his request."
 msgstr "同様に、権限を持たない Derek が会社のアプリスイートにアクセスしようとすると、そのアプリは彼のリクエストを拒否します。"
 
-#: ../../source/concepts/metadata.rst:109
+#: ../../source/concepts/metadata.rst:113
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -205,10 +205,10 @@ msgstr "モザイクに Key-Value 状態を関連付けます。"
 msgid "Associate a key-value state to a namespace."
 msgstr "ネームスペースに Key-Value 状態を関連付けます。"
 
-#: ../../source/concepts/metadata.rst:122
+#: ../../source/concepts/metadata.rst:126
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/metadata.rst:131
+#: ../../source/concepts/metadata.rst:135
 msgid "Continue: :doc:`Transfer Transaction <transfer-transaction>`."
 msgstr "次へ: :doc:`転送トランザクション <transfer-transaction>`"

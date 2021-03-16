@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/community.rst:36
+#: ../../source/contribute/community.rst:40
 msgid "Community"
 msgstr "コミュニティ"
 
-#: ../../source/contribute/community.rst:38
+#: ../../source/contribute/community.rst:42
 msgid ""
 "After reading the docs, you probably have some unanswered questions. Most of"
 " the documentation and guides that the |sitename| has today have been added "
@@ -34,27 +34,27 @@ msgstr ""
 "ドキュメントを読み終えても、あなたには未解決の質問があるかもしれません。私たちのコミュニティが必要性を感じていたため、今日の |sitename| "
 "のドキュメントとガイドのほとんどが追加されています。"
 
-#: ../../source/contribute/community.rst:41
+#: ../../source/contribute/community.rst:45
 msgid ""
 "Discover how the open source |community| works, and get started "
 "participating:"
 msgstr "|community| がどのように機能しているか見て、参加してみましょう:"
 
-#: ../../source/contribute/community.rst:43
+#: ../../source/contribute/community.rst:47
 msgid "Reach our community by joining the |slack|."
 msgstr "私達のコミュニティは |slack| から参加できます。"
 
-#: ../../source/contribute/community.rst:45
+#: ../../source/contribute/community.rst:49
 msgid ""
 "Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` "
 "to propose changes."
 msgstr ""
 "変更を提案するためには :doc:`貢献ガイドライン <../guidelines/suggesting-changes>` を確認してください。"
 
-#: ../../source/contribute/community.rst:47
+#: ../../source/contribute/community.rst:51
 msgid "Follow the development updates on |twitter|."
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
-#: ../../source/contribute/community.rst:49
+#: ../../source/contribute/community.rst:53
 msgid "Explore our |github| repositories"
 msgstr "|github| リポジトリを探索しましょう。"

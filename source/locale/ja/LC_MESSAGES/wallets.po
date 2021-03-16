@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2020-04-07 17:42+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/wallets.rst:36
+#: ../../source/wallets.rst:40
 msgid "Wallets"
 msgstr "ウォレット"
 
-#: ../../source/wallets.rst:42
+#: ../../source/wallets.rst:46
 msgid "Desktop Wallet"
 msgstr "デスクトップウォレット"
 
-#: ../../source/wallets.rst:48
+#: ../../source/wallets.rst:52
 msgid ""
 "Cross-platform client for Symbol to manage accounts, mosaics, namespaces, "
 "and issue transactions. |desktop-wallet| is available for Mac, Windows, and "
@@ -38,15 +38,15 @@ msgstr ""
 "アカウント、モザイク、名前空間を管理し、トランザクションを発行するための Symbol 用クロスプラットフォームクライアント。 |desktop-"
 "wallet| は Mac, Windows と Web アプリケーションが提供されています。"
 
-#: ../../source/wallets.rst:51
+#: ../../source/wallets.rst:55
 msgid "The desktop wallet is only available for the public test network."
 msgstr "デスクトップウォレットはパブリックテストネットワークでのみ使用できます。"
 
-#: ../../source/wallets.rst:54
+#: ../../source/wallets.rst:58
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/wallets.rst:56
+#: ../../source/wallets.rst:60
 msgid ""
 "1. Download the |desktop-wallet| from the `releases section "
 "<https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_. The "
@@ -56,11 +56,11 @@ msgstr ""
 "wallet/releases>`_ から |desktop-wallet| をダウンロードします。あなたの OS 向け実行可能ファイルは "
 "\"Assets\" タブの下にあります。"
 
-#: ../../source/wallets.rst:59
+#: ../../source/wallets.rst:63
 msgid "Launch the executable file and follow the installation instructions."
 msgstr "実行可能ファイルを起動し、インストール手順に従います。"
 
-#: ../../source/wallets.rst:61
+#: ../../source/wallets.rst:65
 msgid ""
 "Follow this :doc:`step-by-step guide <guides/account/creating-an-account>` "
 "to create a new account."
@@ -68,6 +68,6 @@ msgstr ""
 ":doc:`ステップ・バイ・ステップガイド <guides/account/creating-an-account>` "
 "に従って新しいアカウントを作成します。"
 
-#: ../../source/wallets.rst:64
+#: ../../source/wallets.rst:68
 msgid "Guides"
 msgstr "ガイド"

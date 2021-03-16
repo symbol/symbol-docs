@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-11 07:16+0000\n"
 "PO-Revision-Date: 2020-06-26 09:14+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/references/overview.rst:36
+#: ../../source/references/overview.rst:40
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/references/overview.rst:38
+#: ../../source/references/overview.rst:42
 msgid ""
 "|codename|'s **MAIN_NET** has not been released yet. The tooling presented "
 "may suffer variations before the network launch. See the :doc:`Product "
@@ -34,15 +34,15 @@ msgstr ""
 "まだ |codename| の **MAIN_NET** はリリースされていません。ツールはネットワークの公開前に変化する可能性があります。 "
 ":doc:`製品互換性表 <../compatibility>` を参照してください。"
 
-#: ../../source/references/overview.rst:42
+#: ../../source/references/overview.rst:46
 msgid "Assets Management"
 msgstr "アセットの管理"
 
-#: ../../source/references/overview.rst:45
+#: ../../source/references/overview.rst:49
 msgid "Desktop Wallet"
 msgstr "デスクトップウォレット"
 
-#: ../../source/references/overview.rst:47
+#: ../../source/references/overview.rst:51
 msgid ""
 "Cross-platform client for Symbol to manage accounts, mosaics, namespaces, "
 "and issue transactions. Symbol Desktop Wallet is available is available for "
@@ -51,15 +51,15 @@ msgstr ""
 "アカウント、モザイク、名前空間を管理し、トランザクションを発行するための Symbol 用クロスプラットフォームクライアント。Symbol "
 "デスクトップウォレットは Mac, Windows と Web アプリケーションが提供されています。"
 
-#: ../../source/references/overview.rst:50
+#: ../../source/references/overview.rst:54
 msgid ":doc:`Read more ...<../wallets>`."
 msgstr ":doc:`詳細を見る ...<../wallets>`"
 
-#: ../../source/references/overview.rst:58
+#: ../../source/references/overview.rst:62
 msgid "Development"
 msgstr "開発"
 
-#: ../../source/references/overview.rst:63
+#: ../../source/references/overview.rst:67
 msgid ""
 "The package ``catapult-rest`` REST Combines HTTP and WebSockets to perform "
 "read and write actions on the blockchain."
@@ -67,15 +67,15 @@ msgstr ""
 "``catapult-rest`` REST パッケージは HTTP と WebSockets "
 "をブロックチェーン上で読み書きアクションが実行できるように併合します。"
 
-#: ../../source/references/overview.rst:65
+#: ../../source/references/overview.rst:69
 msgid ":doc:`Read more ...<../api>`."
 msgstr ":doc:`詳細を見る ...<../api>`"
 
-#: ../../source/references/overview.rst:72
+#: ../../source/references/overview.rst:76
 msgid "Software Development Kit (SDK)"
 msgstr "ソフトウェア開発キット (SDK)"
 
-#: ../../source/references/overview.rst:74
+#: ../../source/references/overview.rst:78
 msgid ""
 "The primary software development tool to create Symbol components, such as "
 "additional tools, libraries, or applications. It enables developers to focus"
@@ -86,36 +86,36 @@ msgstr ""
 "コンポーネント、このような追加ツール、ライブラリ、アプリケーションなどを作成するためのものです。高度な抽象化により、開発者は特定の API "
 "詳細ではなく製品に集中できます。"
 
-#: ../../source/references/overview.rst:77
+#: ../../source/references/overview.rst:81
 msgid ":doc:`Read more ...<../sdk>`."
 msgstr ":doc:`詳細を見る ...<../sdk>`"
 
-#: ../../source/references/overview.rst:84
+#: ../../source/references/overview.rst:88
 msgid "Command-Line Interface (CLI)"
 msgstr "コマンドラインインターフェイス (CLI)"
 
-#: ../../source/references/overview.rst:86
+#: ../../source/references/overview.rst:90
 msgid ""
 "The open-source command-line interface to interact with the Symbol "
 "blockchain."
 msgstr "Symbol ブロックチェーンと疎通する、オープンソースのコマンドラインインターフェイスです。"
 
-#: ../../source/references/overview.rst:88
+#: ../../source/references/overview.rst:92
 msgid ":doc:`Read more ...<../cli>`."
 msgstr ":doc:`詳細を見る ...<../cli>`"
 
-#: ../../source/references/overview.rst:96
+#: ../../source/references/overview.rst:100
 msgid "System Administration"
 msgstr "システム管理者"
 
-#: ../../source/references/overview.rst:101
+#: ../../source/references/overview.rst:105
 msgid ""
 "Symbol-based networks rely on nodes to provide a trustless, high-"
 "performance, and secure blockchain platform."
 msgstr ""
 "Symbol ベースのネットワークは、トラストレスな、高性能で安全なブロックチェーンプラットフォームを提供するためにノードに依存しています。"
 
-#: ../../source/references/overview.rst:103
+#: ../../source/references/overview.rst:107
 msgid ""
 "These nodes are deployed using ``catapult-server`` software, a C++ rewrite "
 "of the previous Java-written NEM distributed ledger that has been running "
@@ -124,11 +124,11 @@ msgstr ""
 "これらのノードは2015年から稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした ``catapult-"
 "server`` ソフトウェアを使用してデプロイされます。"
 
-#: ../../source/references/overview.rst:105
+#: ../../source/references/overview.rst:109
 msgid ":doc:`Read more ...<../server>`."
 msgstr ":doc:`詳細を見る ...<../server>`"
 
-#: ../../source/references/overview.rst:114
+#: ../../source/references/overview.rst:118
 msgid ""
 "The ``symbol-bootstrap`` package contains the necessary setup scripts to "
 "deploy a network for testing and development purposes with just one command."
@@ -136,6 +136,6 @@ msgstr ""
 "``symbol-bootstrap`` "
 "パッケージは、コマンドの実行だけで、テストまたは開発目的のネットワークをデプロイするために必要なセットアップスクリプトを含んでいます。"
 
-#: ../../source/references/overview.rst:116
+#: ../../source/references/overview.rst:120
 msgid ":doc:`Read more ...<../guides/network/creating-a-private-test-net>`."
 msgstr ":doc:`詳細を見る ...<../guides/network/creating-a-private-test-net>`"

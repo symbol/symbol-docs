@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-24 12:17+0000\n"
+"POT-Creation-Date: 2021-03-15 10:52+0000\n"
 "PO-Revision-Date: 2019-10-28 13:07+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:42
+#: ../../source/guides/metadata/updating-metadata-entries.rst:46
 msgid "Updating metadata entries"
 msgstr "メタデータエントリの更新"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:44
+#: ../../source/guides/metadata/updating-metadata-entries.rst:48
 msgid "Update any existent metadata entry."
 msgstr "存在するメタデータエントリの更新"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:48
+#: ../../source/guides/metadata/updating-metadata-entries.rst:52
 msgid "Use case"
 msgstr "ユースケース"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:50
+#: ../../source/guides/metadata/updating-metadata-entries.rst:54
 msgid ""
 ":doc:`Metadata <../../concepts/metadata>`  transactions are stored on the "
 "blockchain. Once a transaction is included in a block—and the block receives"
@@ -44,7 +44,7 @@ msgstr ""
 "トランザクションはブロックチェーンに記録されます。トランザクションがブロックに取り込まれ —十分な承認を得ると— "
 "チェーン全体が無効にならない限りは記録を変更することはできません"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:53
+#: ../../source/guides/metadata/updating-metadata-entries.rst:57
 msgid ""
 "What we can do to update a metadata entry is to announce a second metadata "
 "transaction. This action will record a new transaction while keeping the "
@@ -56,7 +56,7 @@ msgstr ""
 "メタデータエントリを更新するには、次のメタデータトランザクションをアナウンスします。このアクションは変遷を不変のまま保ちながら新しいトランザクションを記録します。しかし、どうやってチェーン全体に問い合わせることなく、アセットに割り当てられた最新のメタデータ値を取得すればよいのでしょうか？|codename|"
 " はメタデータエントリに割り当てられた **最新の値** のコピーを **状態** として保持することで、これを可能にしています。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:56
+#: ../../source/guides/metadata/updating-metadata-entries.rst:60
 msgid ""
 "This guide shows you how to **update a metadata entry** attached to an "
 "account. However, you could follow a similar approach to update namespace "
@@ -65,17 +65,17 @@ msgstr ""
 "このガイドでは、アカウントに添付された **メタデータエントリの更新** "
 "する方法を示します。なお、同じアプローチでネームスペースとモザイクのメタデータエントリを更新することができます。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:61
+#: ../../source/guides/metadata/updating-metadata-entries.rst:65
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:63
+#: ../../source/guides/metadata/updating-metadata-entries.rst:67
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:64
+#: ../../source/guides/metadata/updating-metadata-entries.rst:68
 msgid ""
 "Complete :doc:`assigning metadata entries to an account <assigning-metadata-"
 "entries-to-an-account>` guide."
@@ -83,11 +83,11 @@ msgstr ""
 ":doc:`アカウントへのメタデータの割り当て <assigning-metadata-entries-to-an-account>` "
 "ガイドを完了している"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:68
+#: ../../source/guides/metadata/updating-metadata-entries.rst:72
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:70
+#: ../../source/guides/metadata/updating-metadata-entries.rst:74
 msgid ""
 "Bob—the notary from the :doc:`assigning metadata entries to an account guide"
 " <assigning-metadata-entries-to-an-account>`— is requested to remove Alice's"
@@ -97,7 +97,7 @@ msgstr ""
 "account>` からの公証人 — は証明書の有効期限が切れているため、アリスのアカウントの ``CERT`` "
 "メタデータエントリを削除するように要求されます。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:76
+#: ../../source/guides/metadata/updating-metadata-entries.rst:80
 msgid ""
 "1. Define a new **AccountMetadataTransaction** setting Alice's account as "
 "the metadata target. To indicate that the certificate has expired, Bob "
@@ -109,7 +109,7 @@ msgstr ""
 "を定義します。証明書の有効期限が切れたことを示すために、 Bob はキー ``CERT`` を使用してメタデータエントリに新しい値 ``000000``"
 " を追加することにしました。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:80
+#: ../../source/guides/metadata/updating-metadata-entries.rst:84
 msgid ""
 "By definition, :ref:`blockchains can rollback <rollbacks>` up to a certain "
 "pre-established depth to resolve forks. In case that the state needs to be "
@@ -120,14 +120,14 @@ msgstr ""
 "があります。状態を元に戻す必要がある場合、メタデータエントリに割り当てられた ``previousValue`` と ``newValue`` "
 "のサイズの違いを示す必要があります。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:83
+#: ../../source/guides/metadata/updating-metadata-entries.rst:87
 msgid ""
 "A) Retrieve the previous metadata value and calculate the difference of size"
 " with the newest value. Then, return the AccountMetadataTransaction object."
 msgstr ""
 "A) 以前のメタデータ値を取得して最新の値とサイズの差を計算します。次に AccountMetadataTransaction オブジェクトを返します。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:98
+#: ../../source/guides/metadata/updating-metadata-entries.rst:102
 msgid ""
 "B)  You can achieve the same result with less effort using the "
 "``MetadataService``. Behind the scenes, the |sdk| handles the complexity of "
@@ -136,7 +136,7 @@ msgstr ""
 "B) ``MetadataService`` を使用すると、少ない労力で同じ結果を得ることができます。裏では |sdk| "
 "がメタデータエントリの更新の複雑さを処理します。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:108
+#: ../../source/guides/metadata/updating-metadata-entries.rst:112
 msgid ""
 "2. To avoid spamming the account with invalid metadata, all metadata is "
 "attached only with the consent of the account owner through Aggregate "
@@ -151,7 +151,7 @@ msgstr ""
 ":ref:`AggregateBondedTransaction <aggregate-bonded>` でラップし、 Bob "
 "のアカウントを使用してトランザクションに署名します。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:118
+#: ../../source/guides/metadata/updating-metadata-entries.rst:122
 msgid ""
 "3. Before sending an aggregate transaction to the network, Bob has to lock "
 "10 |networkcurrency|. Define a new :ref:`HashLockTransaction <hash-lock-"
@@ -162,13 +162,13 @@ msgstr ""
 ":ref:`HashLockTransaction <hash-lock-transaction>` を定義して、Bob "
 "のアカウントで署名し、集約トランザクションのアナウンスに必要な |networkcurrency| の量をロックします。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:128
+#: ../../source/guides/metadata/updating-metadata-entries.rst:132
 msgid ""
 "Bob will receive the locked funds back if Alice cosigns the aggregate during"
 " the next ``480`` blocks."
 msgstr "Alice が次の ``480`` ブロック中にアグリゲートに署名すると、 Bob はロックされた資産を取り戻します。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:130
+#: ../../source/guides/metadata/updating-metadata-entries.rst:134
 msgid ""
 "4. Announce the **HashLockTransaction**. Monitor the network until the "
 "transaction gets confirmed, and then announce the **AggregateTransaction** "
@@ -177,13 +177,13 @@ msgstr ""
 "4. **HashLockTransaction** をアナウンスします。トランザクションが承認されるまでネットワークを監視し、次に "
 "AccountMetadataTransaction を含む **AggregateTransaction** をアナウンスします。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:140
+#: ../../source/guides/metadata/updating-metadata-entries.rst:144
 msgid ""
 "Once the transaction gets confirmed, cosign the hash obtained in the third "
 "step using Alice's profile."
 msgstr "トランザクションが承認されたら、Alice のプロファイルを使用して、3番目のステップで取得したハッシュに署名します。"
 
-#: ../../source/guides/metadata/updating-metadata-entries.rst:146
+#: ../../source/guides/metadata/updating-metadata-entries.rst:150
 msgid ""
 "Retrieve the metadata entries assigned to Alice's account following "
 ":doc:`the next guide <getting-metadata-entries-attached-to-an-account>`."
