@@ -8,24 +8,24 @@ Wallets
 Desktop Wallet
 **************
 
-.. figure:: resources/images/screenshots/wallet.png
+.. image:: resources/images/screenshots/wallet.png
     :align: center
-    :width: 600px
+    :class: with-shadow
+    :target: /_images/wallet.png
 
 Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and issue transactions.
-|desktop-wallet| is available for Mac, Windows, and as a web application.
-
-.. note:: The desktop wallet is only available for the public test network.
+|desktop-wallet| is available for Linux, Mac, Windows, and as a web application.
 
 Installation
 ============
 
-1. Download the |desktop-wallet| from the `releases section <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_.
-The executable file for your operative system is under the "Assets" tab.
+1. **Download** the |desktop-wallet| installer from the `releases section <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_.
+   
+   The executable file for your operating system is in the **Assets** section.
 
-2. Launch the executable file and follow the installation instructions.
+2. **Run** the installer and follow the installation instructions.
 
-3. Follow this :doc:`step-by-step guide <guides/account/creating-an-account>` to create a new account.
+3. **Create a new account** by following this :doc:`step-by-step guide <guides/account/creating-an-account>`.
 
 Guides
 ======
