@@ -346,7 +346,7 @@ linkcheck_ignore = [
     r'https://localhost',
     r'https://docs.symbolplatform.com/symbol-openapi/[^/]*/#', # Dynamic mpage
     r'.*\.ts', r'.*\.js', r'.*\.java', r'.*\.cats', # Too many of them, GitHub complains
-    r'https://nemplatform.com/.*#' # DDoS protection delays serving the real page
+    r'https://nemplatform.com/.*#', r'https://forum.nem.io' # DDoS protection delays serving the real page
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 
