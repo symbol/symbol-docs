@@ -18,7 +18,10 @@ All content is accessible through the **navigation menu**, which is divided into
 - :doc:`References <references/index>`: Usage guides for |codename|'s tools and SDKs.
 - :doc:`Contribute <contribute/index>`: How to contribute to this project.
 
-**Don't know where to start?** Try :doc:`What is Symbol? <getting-started/what-is-symbol>`.
+**Don't know where to start?** Try these links:
+
+- :doc:`getting-started/what-is-symbol`
+- :doc:`Install the Symbol Desktop Wallet <wallets>`
 
 .. toctree::
     :hidden:
