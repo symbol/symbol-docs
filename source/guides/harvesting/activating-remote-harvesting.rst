@@ -122,4 +122,4 @@ The node should now be configured with remote harvesting. Keep these important p
 
 - **Accounts with higher importance are selected more often to perform harvesting**. Even if you successfully enable remote harvesting, you will not harvest any block (nor receive any fees) unless your main account's :ref:`importance score <importance-calculation>` is high enough.
 
-- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 180 blocks (about every 90 minutes). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
+- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 720 blocks (about every 6 hours). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.

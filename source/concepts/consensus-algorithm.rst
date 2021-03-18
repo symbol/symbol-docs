@@ -28,7 +28,7 @@ Periodically, an **importance score** based on these three factors is calculated
 Partial scores
 **************
 
-The network calculates first the following **partial scores** for all high-value accounts at the end of each importance period (180 blocks, roughly 90 minutes. See ``importanceGrouping`` in :ref:`config-network-properties`):
+The network calculates first the following **partial scores** for all high-value accounts at the end of each importance period (720 blocks, roughly 6 hours. See ``importanceGrouping`` in :ref:`config-network-properties`):
 
 * **Stake Score** (:math:`S`): Account's balance divided by the balance of all high value accounts, at the end of the period.
 * **Transaction Score** (:math:`T`): Total amount of fees paid by the account divided by the total amount of fees paid by all high value accounts during the period.
@@ -70,7 +70,7 @@ Private networks can **customize the consensus algorithm** by changing the follo
     :delim: ;
     :widths: 40 15 45
 
-    ``importanceGrouping``; 180 blocks; How often importance is calculated.
+    ``importanceGrouping``; 720 blocks; How often importance is calculated.
     ``minHarvesterBalance``; 10000; Minimum balance required to be eligible for harvesting.
     ``importanceActivityPercentage``; 0.05; Contribution of the activity score (:math:`\gamma`). When it is 0, PoS+ consensus behaves like conventional PoS.
 
