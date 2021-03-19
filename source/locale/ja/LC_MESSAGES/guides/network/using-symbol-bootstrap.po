@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 07:47+0000\n"
+"POT-Creation-Date: 2021-03-23 18:32+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,16 +26,18 @@ msgid "Using Symbol Bootstrap"
 msgstr "Symbol Bootstrap の使用"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:49
-msgid "On systems using ``apt``:"
-msgstr "``apt`` を使用するシステム:"
+msgid "On Linux systems using ``apt``:"
+msgstr "``apt`` を使用する Linux システム:"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:58
 msgid ""
 "This guide explains the concepts behind |symbol-bootstrap|, a package which "
 "contains the necessary setup scripts to help developers quickly configure "
-"and run their own network or node."
+"and run their own network or node in any of the **supported operating "
+"systems** (Windows, Linux and Mac)."
 msgstr ""
-"このガイドでは、開発者が独自のネットワークまたはノードを手早く構成し、実行するために必要なセットアップスクリプトを含むパッケージである |symbol-"
+"このガイドでは、**サポートしている OS** (Windows, Linux, Mac) "
+"で、開発者が独自のネットワークまたはノードを手早く構成し、実行するために必要なセットアップスクリプトを含むパッケージである |symbol-"
 "bootstrap| のコンセプトについて説明します。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:60
@@ -101,10 +103,11 @@ msgstr "インストール"
 #: ../../source/guides/network/using-symbol-bootstrap.rst:91
 msgid ""
 "|symbol-bootstrap| is provided as an installable tool, there is no need to "
-"clone a repository and build it. Just do:"
+"clone a repository and build it. Just run this from a terminal or command "
+"prompt:"
 msgstr ""
 "|symbol-bootstrap| "
-"はインストール可能なツールとして提供されており、リポジトリからクローンやビルドする必要はありません。次のようにします:"
+"はインストール可能なツールとして提供されており、リポジトリからクローンやビルドする必要はありません。ターミナルまたはコマンドプロンプトから次を実行します:"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:97
 msgid "Notes:"
@@ -148,7 +151,7 @@ msgid ""
 "several hundred lines long, a number of **presets** are available to "
 "simplify its handling:"
 msgstr ""
-"ノードの設定は、すべてのネットワークパラメータを指定する **YAML 設定ファイル** "
+"ノードの設定は、すべてのネットワークパラメータを指定する **YAML設定ファイル** "
 "を介して行われます。ファイル全体の長さは数百行に及ぶため、処理の簡素化のために **プリセット** を使用できます:"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
@@ -324,12 +327,12 @@ msgstr ""
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:165
 msgid ""
-"If you get the error ``Permission denied while trying to connect to the "
-"Docker daemon socket`` it means that your user does not belong to the "
-"``docker`` group. Add it with:"
+"On Linux, if you get the error ``Permission denied while trying to connect "
+"to the Docker daemon socket`` it means that your user does not belong to the"
+" ``docker`` group. Add it with:"
 msgstr ""
-"ユーザが ``docker`` グループに属していないと ``Permission denied while trying to connect to "
-"the Docker daemon socket`` というエラーが表示される場合があります。このように追加します:"
+"Linux では、ユーザが ``docker`` グループに属していないと ``Permission denied while trying to "
+"connect to the Docker daemon socket`` というエラーが表示される場合があります。その場合は次のように追加します:"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:173
 msgid "Building the network and nodes"
