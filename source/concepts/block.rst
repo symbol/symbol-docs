@@ -93,7 +93,7 @@ Before blocks reach finality, they still might need to be rolled back in the pre
 
 Finalization occurs in rounds. In each round, a **sorting algorithm** selects the accounts responsible for validating all blocks pending finalization. If a proposed block matches an account's node's records, the account emits a positive vote.
 
-Once **2/3 of the stakes** selected for voting have emitted positive votes, the block becomes finalized. At that point the transactions linked to the block are permanently recorded on the blockchain.
+Once **70% of the stakes** selected for voting have emitted positive votes, the block becomes finalized. At that point the transactions linked to the block are permanently recorded on the blockchain.
 
 .. note::
     In order to be eligible as a voter, an account must:
