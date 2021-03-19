@@ -3,7 +3,7 @@ alabaster==0.7.8
 Babel==2.3.4
 docutils==0.12
 imagesize==0.7.1
-Jinja2==2.10.1
+Jinja2==2.11.3
 MarkupSafe==0.23
 PyGithub==1.46
 Pygments==2.6.1
