@@ -40,7 +40,7 @@ By contrast, public networks might use the same mosaic for paying transaction fe
 Rewards
 *******
 
-Network operators can define a **network fee sink account** that will receive a percentage of the harvesting rewards (block :doc:`fees <fees>` and :doc:`inflation <inflation>`). In the case of the public network, this fee could be used to create supernode programs, reward accounts that participate in the finalization process or advance the network development. By default, the public test network sets this percentage to **5%**.
+Network operators can define a **network fee sink account** that will receive a percentage of the harvesting rewards (block :doc:`fees <fees>` and :doc:`inflation <inflation>`). In the case of the public main network, this fee is set to **5%** and is used to support the different :doc:`reward-programs`.
 
 Additionally, each node can set a **beneficiary account** to share a percentage (up to 25%) of the harvesting rewards. The node operators can use this feature to create incentive structures for their node supporters.
 
