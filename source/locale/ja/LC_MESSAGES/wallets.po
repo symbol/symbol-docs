@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-03-18 06:54+0000\n"
 "PO-Revision-Date: 2020-04-07 17:42+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,44 +29,43 @@ msgstr "ウォレット"
 msgid "Desktop Wallet"
 msgstr "デスクトップウォレット"
 
-#: ../../source/wallets.rst:52
+#: ../../source/wallets.rst:53
 msgid ""
 "Cross-platform client for Symbol to manage accounts, mosaics, namespaces, "
-"and issue transactions. |desktop-wallet| is available for Mac, Windows, and "
-"as a web application."
+"and issue transactions. |desktop-wallet| is available for Linux, Mac, "
+"Windows, and as a web application."
 msgstr ""
 "アカウント、モザイク、名前空間を管理し、トランザクションを発行するための Symbol 用クロスプラットフォームクライアント。 |desktop-"
-"wallet| は Mac, Windows と Web アプリケーションが提供されています。"
+"wallet| は Linux, Mac, Windows と Web アプリケーションが提供されています。"
 
-#: ../../source/wallets.rst:55
-msgid "The desktop wallet is only available for the public test network."
-msgstr "デスクトップウォレットはパブリックテストネットワークでのみ使用できます。"
-
-#: ../../source/wallets.rst:58
+#: ../../source/wallets.rst:57
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/wallets.rst:60
+#: ../../source/wallets.rst:59
 msgid ""
-"1. Download the |desktop-wallet| from the `releases section "
-"<https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_. The "
-"executable file for your operative system is under the \"Assets\" tab."
+"**Download** the |desktop-wallet| installer from the `releases section "
+"<https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_."
 msgstr ""
-"1. `リリースセクション <https://github.com/nemgrouplimited/symbol-desktop-"
-"wallet/releases>`_ から |desktop-wallet| をダウンロードします。あなたの OS 向け実行可能ファイルは "
-"\"Assets\" タブの下にあります。"
+"`リリースセクション <https://github.com/nemgrouplimited/symbol-desktop-"
+"wallet/releases>`_ から |desktop-wallet| インストーラを **ダウンロード** してください。"
+
+#: ../../source/wallets.rst:61
+msgid ""
+"The executable file for your operating system is in the **Assets** section."
+msgstr "各 OS 用の実行可能ファイルは **アセット** のセクションにあります。"
 
 #: ../../source/wallets.rst:63
-msgid "Launch the executable file and follow the installation instructions."
-msgstr "実行可能ファイルを起動し、インストール手順に従います。"
+msgid "**Run** the installer and follow the installation instructions."
+msgstr "インストーラを *実行* して、手順に従います。"
 
 #: ../../source/wallets.rst:65
 msgid ""
-"Follow this :doc:`step-by-step guide <guides/account/creating-an-account>` "
-"to create a new account."
+"**Create a new account** by following this :doc:`step-by-step guide "
+"<guides/account/creating-an-account>`."
 msgstr ""
-":doc:`ステップ・バイ・ステップガイド <guides/account/creating-an-account>` "
-"に従って新しいアカウントを作成します。"
+"**新しいアカウントを作成** するには :doc:`ステップ・バイ・ステップガイド <guides/account/creating-an-"
+"account>` に従ってください。"
 
 #: ../../source/wallets.rst:68
 msgid "Guides"
