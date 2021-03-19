@@ -371,6 +371,7 @@ extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/main/schemas/%
 # -- Custom Pygments lexers ----------------------------------------------
 
 from pygments.lexers.shell import BashLexer
+from pygments import token
 from sphinx.highlighting import lexers
 
 # These are just plain Bash lexers with different names, so we can have tabbed code snippets
@@ -385,5 +386,14 @@ lexers['catapult-server'] = CatapultLexer()
 
 class CliLexer(BashLexer):
     name = 'symbol-cli'
+
+    tokens = {
+        'root': [
+            (r'^\? ', token.Keyword), # Blue, with the inkpot style
+            (r'(^SUCCESS |^✔ )', token.Generic.Inserted),  # Green
+            (r'^ERR ', token.Name.Exception), # Red
+            (r'.', token.Text)
+        ]
+    }
 
 lexers['symbol-cli'] = CliLexer()
