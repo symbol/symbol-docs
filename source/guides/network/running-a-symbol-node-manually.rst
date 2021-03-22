@@ -406,4 +406,4 @@ Point a browser to the following URLs and check that the returned values are sim
 
   The ``height`` field should match the actual height of the blockchain, but, upon first starting the node, it might take a while to synchronize.
 
-Finally, go to the `Symbol Explorer page <http://explorer.symbolblockchain.io/nodes>`__ and check that your node appears on the list.
+Finally, go to the `Symbol Explorer page <http://explorer.symbolblockchain.io/nodes>`__ and check that your node appears in the list (It refreshes very 30 seconds).
