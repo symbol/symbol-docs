@@ -114,11 +114,6 @@ Rewards
 
     If you created your node using Symbol Bootstrap, :ref:`follow this guide to enable voting <bootstrap-enable-voting>`.
 
-    Otherwise, you only need to create and register your :ref:`voting key <voting-key-link-transaction>`, for example, using :doc:`the symbol-cli tool <../cli>`:
-
-    .. code-block:: symbol-cli
-
-        symbol-cli account generate
-        symbol-cli transaction votingkeylink
+    Otherwise, :ref:`follow this guide to enable voting manually <manual-enable-voting>`.
 
 See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-Ph2KGKN3Vr6GVampFvlfitZHirhthA/view?usp=sharing>`__.
