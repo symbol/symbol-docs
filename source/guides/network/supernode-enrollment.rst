@@ -123,7 +123,8 @@ The process requires **installing a monitoring agent** and **announcing a specia
       ; Replace with the public host where your node is running (hostname or IP address)
       REST_GATEWAY_URL=http://my-symbol-node.com:3000
       REWARD_PROGRAM=SuperNode
-      CONTROLLER_PUBLIC_KEY=68B6A1D2F292E75F9BB8E9EDDA086A7C293A198C9968FF7528374075AAF4D983
+      CONTROLLER_PUBLIC_KEY=645FE86EAED04747DE066D838FE6E77BA2B146DC8BBC505617323D5DF01106A5 ; MAINNET
+      ; CONTROLLER_PUBLIC_KEY=68B6A1D2F292E75F9BB8E9EDDA086A7C293A198C9968FF7528374075AAF4D983 ; TESTNET
       CERTS_CA_FILE=ca-crt.pem
       CERTS_KEY_FILE=agent-key.pem
       CERTS_CERT_FILE=agent-crt.pem
@@ -142,7 +143,7 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
 5. **Send the enrolling message**
 
-   The last bit is to **notify the Controller** that your node wants to enroll the Supernode program. This is done through a conventional :ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a special message:
+   The last bit is to **notify the Controller** that your node wants to enroll in the Supernode program. This is done through a conventional :ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a special message:
 
    .. code-block:: text
 
@@ -152,14 +153,17 @@ The process requires **installing a monitoring agent** and **announcing a specia
 
    - Replace ``AGENT_URL`` with ``https://`` + the host where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://my-symbol-node.com:7880``. IP addresses are also valid. Use the port number you specified in step 3 above if you didn't use the standard one.
 
-   Finally, the recipient address of this transaction is ``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ``.
+   Finally, the recipient address for this transaction is:
+
+   - ``NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA`` for MAINNET.
+   - ``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` for TESTNET.
 
    The transaction can be announced using :doc:`symbol-cli <../../cli>`:
 
    .. code-block:: symbol-cli
 
       symbol-cli transaction transfer --mode normal --sync \
-                 --recipient-address TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ \
+                 --recipient-address NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA \
                  --message "enrol NODE_PUBLIC_KEY AGENT_URL" \
                  --mosaics @symbol.xym::0
 
