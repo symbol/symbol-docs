@@ -76,6 +76,8 @@ Follow Catapult server's `instructions to run a node <https://github.com/nemtech
 - The ``HARVESTER_SIGNING_PRIVATE_KEY`` is the **Remote** private key.
 - The ``HARVESTER_VRF_PRIVATE_KEY``  is the **VRF** private key.
 
+This configuration, paired with the key link below, will enable :ref:`remote-harvesting`.
+
 Make sure your node is up and running before continuing with this guide.
 
 Configure the server
@@ -340,7 +342,7 @@ Build and run the REST gateway
       ``networkPropertyFilePath``; ``config-network.properties``; ``_build/resources/``
       ``nodePropertyFilePath``; ``config-node.properties``; ``_build/resources/``
 
-   Use absolute paths, for example:
+   **Use absolute paths**. For example:
 
    .. code-block:: json
 
@@ -403,3 +405,5 @@ Point a browser to the following URLs and check that the returned values are sim
      }
 
   The ``height`` field should match the actual height of the blockchain, but, upon first starting the node, it might take a while to synchronize.
+
+Finally, go to the `Symbol Explorer page <http://explorer.symbolblockchain.io/nodes>`__ and check that your node appears on the list.
