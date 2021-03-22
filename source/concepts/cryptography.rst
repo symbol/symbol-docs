@@ -18,6 +18,8 @@ Elliptic curve cryptography is based on **key pairs**: a private and a matching 
 
 The public key can be derived from the private key, but **not the other way around**.
 
+.. _symbol-keys:
+
 |codename| keys
 ===============
 
