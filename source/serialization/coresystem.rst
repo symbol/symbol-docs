@@ -46,7 +46,7 @@ Vrf Key Link
 VrfKeyLinkTransaction
 =====================
 
-This transaction is required for all harvesting eligible accounts.
+This transaction is required for all :ref:`harvesting eligible accounts <account_eligibility>`.
 
 Announce a VrfKeyLinkTransaction to link an account with a VRF public key.
 The linked key is used to randomize block production and leader/participant selection.
@@ -65,7 +65,3 @@ The linked key is used to randomize block production and leader/participant sele
 
     linkedPublicKey; :schema:`Key <types.cats>`; Linked public key.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
-
-.. |BLS| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham" target="_blank">BLS</a>
