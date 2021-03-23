@@ -9,7 +9,7 @@ Using Symbol Bootstrap
 
 .. sidebar:: Quick Installation
 
-    On systems using ``apt``:
+    On Linux systems using ``apt``:
 
     .. code-block:: bash
 
@@ -18,7 +18,7 @@ Using Symbol Bootstrap
           docker docker-compose
       npm install -g symbol-bootstrap
 
-This guide explains the concepts behind |symbol-bootstrap|, a package which contains the necessary setup scripts to help developers quickly configure and run their own network or node.
+This guide explains the concepts behind |symbol-bootstrap|, a package which contains the necessary setup scripts to help developers quickly configure and run their own network or node in any of the **supported operating systems** (Windows, Linux and Mac).
 
 After reading this you will be able to better understand the :doc:`creating-a-private-test-net` and :doc:`running-a-symbol-node` guides.
 
@@ -51,7 +51,7 @@ Make sure that the server's host is accessible from the internet and that **the 
 Installation
 ************
 
-|symbol-bootstrap| is provided as an installable tool, there is no need to clone a repository and build it. Just do:
+|symbol-bootstrap| is provided as an installable tool, there is no need to clone a repository and build it. Just run this from a terminal or command prompt:
 
 .. code-block:: bash
 
@@ -125,7 +125,7 @@ Some examples:
 
 This will create a folder, called ``target`` by default (It can be changed with the ``-t`` option), containing among other things the generated complete configuration file (``target/preset.yml``) ready to be used to build the network.
 
-.. note:: If you get the error ``Permission denied while trying to connect to the Docker daemon socket`` it means that your user does not belong to the ``docker`` group. Add it with:
+.. note:: On Linux, if you get the error ``Permission denied while trying to connect to the Docker daemon socket`` it means that your user does not belong to the ``docker`` group. Add it with:
 
   .. code-block:: bash
 
