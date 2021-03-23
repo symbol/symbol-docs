@@ -13,11 +13,11 @@ Voting Key Link
 VotingKeyLinkTransaction
 ========================
 
-This transaction is required for node operators wanting to vote for finalized blocks.
+This transaction is required for node operators wanting to vote for :ref:`finalized <finalization>` blocks.
 
-Announce a VotingKeyLinkTransaction to associate a |BLS| public key with an account during a fixed period. An account can have active up to ``3`` different voting keys at the same time.
+Announce a VotingKeyLinkTransaction to associate a voting key with an account during a fixed period. An account can be linked to up to ``3`` different voting keys at the same time.
 
-The recommended production setting is always to have registered at least  ``2`` keys with different ``endPoint`` values to ensure a key is registered after the first key expires.
+The recommended production setting is to always have at least ``2`` linked keys with different ``endPoint`` values to ensure a key is registered after the first one expires. See more details here :ref:`in this guide <manual-enable-voting>`.
 
 **Version**: 0x01
 
@@ -30,10 +30,11 @@ The recommended production setting is always to have registered at least  ``2`` 
 .. csv-table::
     :header: "Property", "Type", "Description"
     :delim: ;
+    :widths: 25 30 45
 
     linkedPublicKey; :schema:`VotingKey <types.cats>`; Linked public key.
-    startPoint; :schema:`FinalizationPoint <types.cats>`; Start finalization point. The value must be higher than the current finalization round.
-    endPoint; :schema:`FinalizationPoint <types.cats>`; End finalization point. The value must be in the range between ``startPoint`` and ``startPoint`` + ``maxVotingKeyLifetime`` - ``minVotingKeyLifetime``.The lifetime properties are :ref:`configurable per network <config-network-properties>`.
+    startPoint; :schema:`FinalizationPoint <types.cats>`; Start finalization point.
+    endPoint; :schema:`FinalizationPoint <types.cats>`; End finalization point. The value must be higher than ``startPoint + minVotingKeyLifetime`` and lower than ``startPoint + maxVotingKeyLifetime``.The lifetime properties are :ref:`configurable per network <config-network-properties>`.
     linkAction; :ref:`LinkAction <link-action>`; Account link action.
 
 ************

@@ -9,9 +9,9 @@ Running a Symbol node manually
 
 This guide walks you through the process of setting up a node to join |codename|'s network **without** using Symbol Bootstrap.
 
-|symbol-bootstrap| is a very handy tool that allows the **quick deployment** of |codename| nodes. However, it relies on `Docker <http://docker.com>`__ technology which might not be available (or allowed) in all scenarios. This guide takes the longer route and explains how to setup a |codename| node **manually**. If you would like to use Symbol Bootstrap use :doc:`this guide <running-a-symbol-node>` instead.
+|symbol-bootstrap| is a very handy tool that allows the **quick deployment** of |codename| nodes. However, it relies on `Docker <http://docker.com>`__ technology which might not be available (or allowed) in all scenarios. **This guide takes the longer route** and explains how to setup a |codename| node **manually**. If you would like to use Symbol Bootstrap use :doc:`this guide <running-a-symbol-node>` instead.
 
-The next sections explain first how to build a :ref:`peer-node` and then expand it to convert it into an :ref:`api-node`.
+The following section explains how to build a :ref:`peer-node` and the next one expands the node to convert it into an :ref:`api-node`.
 
 .. note:: The following instructions have only been verified to work on **Linux**.
 
@@ -61,7 +61,7 @@ Run the server
 
 - `Seed folder available in the Catapult Server repository <https://github.com/nemtech/catapult-server/releases/download/v1.0.0.0/nemesis-seed.zip>`__.
 
-- Resources folder **not yet available**.
+- The resources folder is **not yet available for download**.
 
   .. note:: In the meantime, you can create your own test configuration :doc:`using-symbol-bootstrap` by running:
 
@@ -69,7 +69,7 @@ Run the server
 
         symbol-bootstrap config -p testnet -a peer
 
-     Retrieve the configuration folders from ``target/nodes/peer-node/seed`` and ``target/nodes/peer-node/server-config/resources``. You can delete the ``target`` folder afterwards.
+     Retrieve the resources folder from ``target/nodes/peer-node/server-config/resources``. You can delete the ``target`` folder afterwards.
 
 Follow Catapult server's `instructions to run a node <https://github.com/nemtech/catapult-server/blob/main/docs/RUNPEERLIN.md>`__ using the downloaded network configuration. Use the keys you generated above when requested as follows:
 
