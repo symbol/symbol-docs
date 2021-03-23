@@ -47,7 +47,7 @@ Glossary
       A built-in feature of Symbol which enables the trading of tokens across different blockchains without using an intermediary party (e.g. an exchange service). Read :doc:`more <../concepts/cross-chain-swaps>`.
 
     Deadline
-      A time window for a transaction to be accepted before it reaches its expiration. The transaction is eliminated when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 24 hours.
+      A time window for a transaction to be accepted before it reaches its expiration. The transaction is eliminated when the deadline is reached and all the nodes reject the transaction. Read :ref:`more <transaction-definition>`.
 
     Delegated Harvesting
       A method of harvesting that allows users to receive rewards without having to run a node locally by delegating their importance scores to a brand new proxy account. Read :ref:`more <delegated-harvesting>`.

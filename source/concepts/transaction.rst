@@ -73,7 +73,7 @@ Every transaction extends from the base :ref:`transaction schema definition <tra
 
 All transactions should define a deadline and a max_fee:
 
-* ``deadline``: A transaction has a time window to be accepted before it reaches its deadline. The transaction expires when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 24 hours.
+* ``deadline``: A transaction has a time window to be accepted before it reaches its deadline. The transaction expires when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 6 hours (or 48 for :ref:`aggregate-bonded` transactions).
 
 * ``max_fee``: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. :doc:`The next documentation <fees>` shows you how to set the optimal max_fee value.
 
