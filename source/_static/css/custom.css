@@ -292,8 +292,12 @@ body > .container {
 .bs-sidenav ul ul ul ul > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 40px;
+    padding-left: 35px;
     font-size: 90%;
+}
+/* Add a bullet point in front of level 3 nav items */
+.bs-sidenav ul ul ul ul > li > a:before {
+    content:"\2022  ";
 }
 .bs-sidenav.affix-bottom, .bs-sidenav.affix {
     width: initial;
