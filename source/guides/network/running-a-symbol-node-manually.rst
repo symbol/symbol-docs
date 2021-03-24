@@ -27,7 +27,12 @@ Follow the `Catapult server <https://github.com/nemtech/catapult-server>`__ inst
 Generate keys
 =============
 
-A |codename| node requires a number of :ref:`keys <symbol-keys>` to function properly. These keys are **randomly generated** so you need to create a few ones to be used in the following steps.
+A |codename| node requires a number of :ref:`keys <symbol-keys>` to function properly. These keys are generally **randomly generated** so you need to create a few ones to be used in the following steps.
+
+**This step can be performed on an offline machine for added security.**
+
+Main, Remote and VRF
+--------------------
 
 From within the ``_build`` directory you created in the previous section, run:
 
@@ -54,34 +59,195 @@ Each block is a key pair (there is one block shown above) composed of a ``privat
 
    The most relevant scenario is when using a **main account opted-in from a NIS1 account**. In this case you can directly use the key obtained in the opt-in process as your **Main** key instead of the randomly-generated one.
 
-Run the server
-==============
+Voting
+------
 
-**Download** the network configuration files:
+If your node is to be a :ref:`voting node <finalization>` it must have linked a voting key for the period in which you intend to vote. This is interesting as voting nodes receive :ref:`voting rewards <voting-node-program>`.
 
-- `Seed folder available in the Catapult Server repository <https://github.com/nemtech/catapult-server/releases/download/v1.0.0.0/nemesis-seed.zip>`__.
+The generation of the voting key, though, is a bit more complex than the previous ones:
 
-- The resources folder is **not yet available for download**.
+1. Still from within the ``_build`` directory **create another directory** called ``votingkeys``.
 
-  .. note:: In the meantime, **as a workaround**, you can create your own test configuration :doc:`using-symbol-bootstrap` on another machine by running:
+.. sidebar:: Epochs
+
+   One voting epoch lasts **1440 blocks** or about **12h** (see ``votingSetGrouping`` in the :ref:`network properties <config-network-properties>`).
+
+   The maximum voting key duration (End Epoch - Start Epoch) is **360 epochs** or about **6 months** (see ``maxVotingKeyLifetime``).
+
+   You can find out the current epoch of the blockchain by running:
+
+   .. code-block:: symbol-cli
+
+      symbol-cli chain info
+
+      ├────────────────────┼─────
+      │ Finalization Epoch │ 292
+      └────────────────────┴─────
+
+2. **Create the voting key**:
+
+   Voting keys are different from the other keys in that they have a **period of validity**, for example. They are only valid from a **Start Epoch** to an **End Epoch** (see side box).
+
+   Nodes are only eligible as voters if they are linked to a **valid voting key** for the current blockchain epoch, so **remember to renew your voting key periodically.**
+
+   To help you with that task, you can have **up to 3 linked voting keys**, with different periods, so you can easily renew one key while there's still another one active (you will need to **unlink** an older key to be able to link more than 3 keys).
+
+   A voting key is created using ``catapult.tools.votingkey`` and providing its **period of validity** (note you do not use ``catapult.tools.addressgen`` as before):
+
+   .. code-block:: bash
+
+      bin/catapult.tools.votingkey --output votingkeys/private_key_tree1.dat \
+                                   --startEpoch 100 --endEpoch 460
+
+   This creates a file named ``votingkeys/private_key_tree1.dat`` and **prints the voting key on the terminal**. As your voting keys expire and you create new ones, **increase the number** on the file name.
+
+   .. code-block:: text
+
+      generating 361 keys, this might take a while
+      votingkeys\private_key_tree1.dat generated
+      verifying generated file
+       saved voting public key: ****************
+      loaded voting public key: ****************
+
+   Copy the voting key public key into the temporary text file where you keep the rest of the keys, label it **Voting** and save it for later.
+
+Configuration
+=============
+
+|codename| is **highly customizable** and this means there are a lot of parameters that can be adjusted to suit your node's needs. Some of these parameters are **network-related** and must match the rest of nodes in the network (for example ``currencyMosaicId``) whereas some others are **node-related** and you can set freely (for example ``friendlyName``).
+
+You can edit these files manually (Take a look at `these templates <https://github.com/nemtech/catapult-server/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/nemtech/symbol-node-configurator>`__ as shown next.
+
+.. information::
+
+**This step can be performed on an offline machine for added security.**
+
+0. **Prerequisites**.
+
+   - Install `Python 3 <https://www.python.org/downloads/>`__.
+   - Install `OpenSSL <https://wiki.openssl.org/index.php/Binaries>`__ (for example running ``sudo apt install openssl`` on Linux).
+
+1. **Install symbol-node-configurator**.
+
+   - Download and extract `symbol-node-configurator.zip <https://github.com/nemtech/symbol-node-configurator/archive/refs/heads/main.zip>`__. Alternatively, clone the `GitHub repository <https://github.com/nemtech/symbol-node-configurator>`__ if you know how to use Git.
+
+   - Move into the ``symbol-node-configurator`` directory and install the tool's requirements by running:
 
      .. code-block:: bash
 
-        symbol-bootstrap config -p mainnet -a peer
+        python3 -m pip install -r requirements.txt
 
-     Retrieve the resources folder from ``target/nodes/peer-node/server-config/resources``. You can delete the ``target`` folder afterwards.
+2. **Create certificates**.
 
-Follow Catapult server's `instructions to run a node <https://github.com/nemtech/catapult-server/blob/main/docs/RUNPEERLIN.md>`__ using the downloaded network configuration. Use the keys you generated above when requested as follows:
+   - Create a folder named ``certificates`` and move into it.
+   - Create a text file named ``private.main.txt`` and put the **Main account private key** inside.
+   - Download and run this `certificate generation script </_static/bash/cert-generate.sh>`__.
+   - Delete ``private.main.txt``.
+   - Get back to the parent folder.
 
-- The ``HARVESTER_SIGNING_PRIVATE_KEY`` is the **Remote** private key.
-- The ``HARVESTER_VRF_PRIVATE_KEY``  is the **VRF** private key.
+   You should now have at least the following files in the ``certificates`` folder: ``ca.pubkey.pem``, ``ca.crt.pem``, ``node.full.crt.pem``, ``node.crt.pem`` and ``node.key.pem``.
 
-This configuration, paired with the key link below, will enable :ref:`remote-harvesting`.
+3. **Create harvester and VRF key files**.
 
-Make sure your node is up and running before continuing with this guide.
+   - Create a file named ``private.harvesting.txt`` and put the **Remote private key** inside.
+   - Create a file named ``private.vrf.txt`` and put the **VRF private key** inside.
 
-Configure the server
-====================
+4. **Run the configurator tool**.
+
+   The node configurator tool is called ``generator.py`` and it accepts a number of parameters depending on the kind of node you want:
+
+   .. csv-table::
+      :header: "Parameter", "Description"
+      :delim: ;
+      :widths: 30 70
+
+      ``--mode``; (Mandatory) Type of node. Accepted values are ``api``, ``peer`` and ``dual``.
+      ``--harvesting``; (Optional) To create a harvesting node. The **Remote** key will automatically be used so that :ref:`remote-harvesting` is enabled by default.
+      ``--voting``; (Optional) To create a voting node. If you enable this copy the ``private_key_tree1.dat`` file you created above into this directory.
+      ``--output``; (Optional) Folder where resulting configuration will be stored.
+
+   For example:
+
+   .. code-block:: text
+
+      python3 generator.py --mode dual --harvesting --voting --output settings
+        i     | extracting nemesis seed
+        i     | preparing base settings
+        i     | turning on harvesting
+        i     | turning on voting
+        i     | extracting mongo scripts
+        i     | copying certificates
+        i     | moving private_key_tree1.dat
+
+   This command will produce all the required **node configuration** files in the ``settings`` directory and you need to copy them to ``_build``, in the machine where your node will run:
+
+   - Copy ``settings/resources`` to ``_build/resources``.
+   - Copy ``settings/certificates`` to ``_build/certificates``.
+   - Copy ``settings/nemesis/seed`` to ``_build/seed`` (Omit the ``nemesis`` part).
+
+5. **Edit config-user.properties**.
+   
+   - Go back to the ``_build`` directory.
+   - Edit ``resources/config-user.properties`` so that it points to the right places:
+
+     .. code-block:: ini
+
+        [storage]
+
+        seedDirectory = ../seed
+        certificateDirectory = ../certificates
+        dataDirectory = ../data
+        pluginsDirectory = ../lib
+        votingKeysDirectory = ../votingkeys
+
+6. **Edit config-node.properties**.
+
+   Edit ``resources/config-node.properties`` to customize the node. Learn more about the available properties in the :doc:`configuring-node-properties` guide.
+
+   The most common ones are in the ``[localnode]`` section:
+
+   .. csv-table::
+      :header: "Property", "Description"
+      :delim: ;
+      :widths: 30 70
+
+      ``host``; IP address or domain name of your node.
+      ``friendlyName``; Name of your node for display purposes.
+      ``version``; Version of catapult-server used by your node. Leave empty to use the current one.
+      ``roles``; A comma-separated list of the following values: ``Peer``, ``Api``, ``Voting``, ``IPv4``, ``IPv6``.
+
+   For example:
+
+   .. code-block:: ini
+
+      [localnode]
+      host = <YOUR_NODE_IP>
+      friendlyName = myPeerNode
+      version = 0.10.0.4
+      roles = IPv4,Peer
+
+Run the server
+==============
+
+Fire up your server:
+
+.. code-block:: bash
+
+   cd bin
+   ./catapult.server
+
+You should see a lot of debug output while the node starts synchronizing with the rest of the network:
+
+.. code-block:: text
+
+   ... peer returned 42 blocks (heights 2 - 43)
+
+The node can be stopped by pressing :kbd:`Ctrl-C` and restarted simply by running ``catapult.server`` again.
+
+If you see no error messages, your server is up and running and you can continue with this guide.
+
+Link the keys
+=============
 
 The server is now running but it will not be able **harvest** because a number of :ref:`keys <symbol-keys>` need to be **linked** to it. These links are created through **transactions announced to the network**.
 
@@ -158,78 +324,27 @@ In order to be :ref:`eligible for harvesting <account_eligibility>` an account m
 Voting key
 ----------
 
-Finally, if your node is to be a :ref:`voting node <finalization>` it must have linked a voting key for the period in which you intend to vote. This is interesting as voting nodes receive :ref:`voting rewards <voting-node-program>`. The link is accomplished by announcing a :ref:`VotingKeyLink transaction <voting-key-link-transaction>`, but the generation of the key is slightly more complex.
+If your node is to be a :ref:`voting node <finalization>` it must link the voting key you generated above. The link is accomplished by announcing a :ref:`VotingKeyLink transaction <voting-key-link-transaction>`:
 
-1. From within the ``_build`` directory **create another directory** called ``votingkeys`` and **make sure** the file ``resources\config-user.properties`` points to this new directory. It should contain this line:
+.. code-block:: symbol-cli
 
-   .. code-block:: ini
+   symbol-cli transaction votingkeylink --sync --action Link \
+               --max-fee 1000000 --mode normal
+   ✔ Enter your wallet password: ... *********
+   ✔ Enter the public key of the voting key account:  ****************
+   ✔ Enter the start point: ... 100
+   ✔ Enter the end point: ... 460
 
-      votingKeysDirectory = ../votingkeys
+- Enter your profile password.
+- Enter the **voting public key** you obtained previously.
+- Enter the Start and End epochs you used when creating the voting key.
 
-.. sidebar:: Epochs
+.. code-block:: symbol-cli
 
-   One voting epoch lasts **1440 blocks** or about **12h** (see ``votingSetGrouping`` in the :ref:`network properties <config-network-properties>`).
-
-   The maximum voting key duration (End Epoch - Start Epoch) is **360 epochs** or about **6 months** (see ``maxVotingKeyLifetime``).
-
-   You can find out the current epoch of the blockchain by running:
-
-   .. code-block:: symbol-cli
-
-      symbol-cli chain info
-
-      ├────────────────────┼─────
-      │ Finalization Epoch │ 292
-      └────────────────────┴─────
-
-2. **Create the voting key**
-
-   Voting keys are different from the other keys in that they have a **period of validity**, for example. They are only valid from a **Start Epoch** to an **End Epoch** (see side box).
-
-   Nodes are only eligible as voters if they are linked to a **valid voting key** for the current blockchain epoch, so **remember to renew your voting key periodically.**
-
-   To help you with that task, you can have **up to 3 linked voting keys**, with different periods, so you can easily renew one key while there's still another one active (you will need to **unlink** an older key to be able to link more than 3 keys).
-
-   A voting key is created using ``catapult.tools.votingkey`` and providing its **period of validity** (note you do not use ``catapult.tools.addressgen`` as before):
-
-   .. code-block:: bash
-
-      bin/catapult.tools.votingkey --output votingkeys/private_key_tree1.dat \
-                                   --startEpoch 100 --endEpoch 460
-
-   This creates a file named ``votingkeys/private_key_tree1.dat`` and **prints the voting key on the terminal**. As your voting keys expire and you create new ones, **increase the number** on the file name.
-
-   .. code-block:: text
-
-      generating 361 keys, this might take a while
-      votingkeys\private_key_tree1.dat generated
-      verifying generated file
-       saved voting public key: ****************
-      loaded voting public key: ****************
-
-3. **Link the voting key**
-
-   Finally announce the :ref:`VotingKeyLink transaction <voting-key-link-transaction>`:
-
-   .. code-block:: symbol-cli
-
-      symbol-cli transaction votingkeylink --sync --action Link \
-                 --max-fee 1000000 --mode normal
-      ✔ Enter your wallet password: ... *********
-      ✔ Enter the public key of the voting key account:  ****************
-      ✔ Enter the start point: ... 100
-      ✔ Enter the end point: ... 460
-
-   - Enter your profile password.
-   - Enter the **voting public key** you got in the previous step.
-   - Enter the Star and End epochs you used in the previous step.
-
-   .. code-block:: symbol-cli
-
-      ...
-      ✔ Do you want to announce this transaction? ... yes
-      SUCCESS Transaction announced
-      SUCCESS Transaction confirmed
+   ...
+   ✔ Do you want to announce this transaction? ... yes
+   SUCCESS Transaction announced
+   SUCCESS Transaction confirmed
 
 When the next epoch starts, if it is inside the Start and End epochs of one of your registered keys, your node should participate in the :ref:`finalization process <finalization>` and collect :ref:`voting rewards <voting-node-program>`.
 
