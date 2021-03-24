@@ -9,7 +9,7 @@ Running a Symbol node manually
 
 This guide walks you through the process of setting up a node to join |codename|'s network **without** using Symbol Bootstrap.
 
-|symbol-bootstrap| is a very handy tool that allows the **quick deployment** of |codename| nodes. However, it relies on `Docker <http://docker.com>`__ technology which might not be available (or allowed) in all scenarios. **This guide takes the longer route** and explains how to setup a |codename| node **manually**. If you would like to use Symbol Bootstrap use :doc:`this guide <running-a-symbol-node>` instead.
+|symbol-bootstrap| is a very handy tool that allows the **quick deployment** of |codename| nodes. However, it relies on `Docker <http://docker.com>`__ and `node.js <http://nodejs.org>`__ technology which might not be available (or allowed) in all scenarios. **This guide takes the longer route** and explains how to setup a |codename| node **manually**. If you would like to use Symbol Bootstrap use :doc:`this guide <running-a-symbol-node>` instead.
 
 The following section explains how to build a :ref:`peer-node` and the next one expands the node to convert it into an :ref:`api-node`.
 
@@ -52,7 +52,7 @@ Each block is a key pair (there is one block shown above) composed of a ``privat
 
    If you **already have** any of these keys, you can use them instead of the randomly-generated ones.
 
-   The most relevant scenario is when using a **main account opted-in from a NIS1 account**. In this case use the key obtained in the opt-in process as your **Main** key instead of the randomly-generated one.
+   The most relevant scenario is when using a **main account opted-in from a NIS1 account**. In this case you can directly use the key obtained in the opt-in process as your **Main** key instead of the randomly-generated one.
 
 Run the server
 ==============
@@ -63,11 +63,11 @@ Run the server
 
 - The resources folder is **not yet available for download**.
 
-  .. note:: In the meantime, you can create your own test configuration :doc:`using-symbol-bootstrap` by running:
+  .. note:: In the meantime, **as a workaround**, you can create your own test configuration :doc:`using-symbol-bootstrap` on another machine by running:
 
      .. code-block:: bash
 
-        symbol-bootstrap config -p testnet -a peer
+        symbol-bootstrap config -p mainnet -a peer
 
      Retrieve the resources folder from ``target/nodes/peer-node/server-config/resources``. You can delete the ``target`` folder afterwards.
 
