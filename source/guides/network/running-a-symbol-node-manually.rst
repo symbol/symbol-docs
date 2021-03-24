@@ -95,7 +95,7 @@ You will use the :doc:`symbol-cli <../../cli>` tool for this. **Install** ``symb
 
 All transactions will be sent from (and the :doc:`../../concepts/fees` paid by) your **main** account, so you need to tell ``symbol-cli`` about it by creating a **profile**.
 
-.. note:: This profile will contain your main account's private key in **encrypted** form. A password will be requested every time it is accessed.
+.. note:: This profile will contain your **main account's private key** in **encrypted** form. A password will be requested every time it is accessed.
 
 Run:
 
@@ -113,7 +113,7 @@ Run:
 - Select ``PrivateKey`` as the import type.
 - Enter your **Main** private key.
 
-The profile information is stored in ``~/symbol-cli.config.json`` and ``symbol-cli`` is now ready to use.
+The profile information is stored (encrypted) in ``~/symbol-cli.config.json`` and ``symbol-cli`` is now ready to use.
 
 .. note:: All the key links created in the next subsections can be **undone** at any time by announcing an equivalent **unlink** transaction (``--action Unlink``). Therefore you can always mend any mistake or change your node configuration (Each transaction has a :doc:`fee <../../concepts/fees>`, though).
 
