@@ -70,19 +70,11 @@ The generation of the voting key, though, is a bit more complex than the previou
 
 .. sidebar:: Epochs
 
-   One voting epoch lasts **1440 blocks** or about **12h** (see ``votingSetGrouping`` in the :ref:`network properties <config-network-properties>`).
+   :ref:`Voting <finalization>` occurs once every epoch. One voting epoch lasts **1440 blocks** or about **12h** (see ``votingSetGrouping`` in the :ref:`network properties <config-network-properties>`).
 
    The maximum voting key duration (End Epoch - Start Epoch) is **360 epochs** or about **6 months** (see ``maxVotingKeyLifetime``).
 
-   You can find out the current epoch of the blockchain by running:
-
-   .. code-block:: symbol-cli
-
-      symbol-cli chain info
-
-      ├────────────────────┼─────
-      │ Finalization Epoch │ 292
-      └────────────────────┴─────
+   You can find out the current epoch by dividing the `current blockchain height <http://explorer.testnet.symboldev.network/>`__ by 1440.
 
 2. **Create the voting key**:
 
