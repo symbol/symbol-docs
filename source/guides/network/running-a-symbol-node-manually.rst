@@ -74,7 +74,7 @@ The generation of the voting key, though, is a bit more complex than the previou
 
    The maximum voting key duration (End Epoch - Start Epoch) is **360 epochs** or about **6 months** (see ``maxVotingKeyLifetime``).
 
-   You can find out the current epoch by dividing the `current blockchain height <http://explorer.testnet.symboldev.network/>`__ by 1440.
+   You can find out the current epoch by dividing the `current blockchain height <http://explorer.testnet.symboldev.network/>`__ by 1440 and discarding the decimals.
 
 2. **Create the voting key**:
 
