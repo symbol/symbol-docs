@@ -223,7 +223,7 @@ You can edit these files manually (Take a look at `these templates <https://gith
       [localnode]
       host = <YOUR_NODE_IP>
       friendlyName = myPeerNode
-      version = 0.10.0.4
+      version = 1.0.0.0
       roles = IPv4,Peer
 
 Run the server
