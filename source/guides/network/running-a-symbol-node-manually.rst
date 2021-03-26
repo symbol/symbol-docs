@@ -461,7 +461,7 @@ Build and run the REST gateway
 
       ``tlsClientCertificatePath``; ``node.crt.pem``; ``_build/certificate/``
       ``tlsClientKeyPath``; ``node.key.pem``; ``_build/certificate/``
-      ``tlsCaCertificatePath``; ``ca.cert.pem``; ``_build/certificate/``
+      ``tlsCaCertificatePath``; ``ca.crt.pem``; ``_build/certificate/``
       ``networkPropertyFilePath``; ``config-network.properties``; ``_build/resources/``
       ``nodePropertyFilePath``; ``config-node.properties``; ``_build/resources/``
 
@@ -478,7 +478,7 @@ Build and run the REST gateway
          "tlsClientKeyPath":
                "/home/symbol/catapult-server/_build/certificate/node.key.pem",
          "tlsCaCertificatePath":
-               "/home/symbol/catapult-server/_build/certificate/ca.cert.pem",
+               "/home/symbol/catapult-server/_build/certificate/ca.crt.pem",
          "networkPropertyFilePath":
                "/home/symbol/catapult-server/_build/resources/config-network.properties",
          "nodePropertyFilePath":
