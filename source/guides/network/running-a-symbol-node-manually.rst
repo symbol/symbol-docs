@@ -221,7 +221,13 @@ You can edit these files manually (Take a look at `these templates <https://gith
 Run the server
 ==============
 
-Fire up your server:
+Create one last folder:
+
+.. code-block:: bash
+
+   mkdir data
+
+And finally fire up the server!
 
 .. code-block:: bash
 
