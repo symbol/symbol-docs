@@ -431,8 +431,11 @@ Build and run the REST gateway
 
 6. **Clone** the ``catapult-rest`` repository and **install its dependencies**:
 
+   (Going back to the ``_build`` directory first)
+
    .. code-block:: bash
 
+      cd ..
       git clone https://github.com/nemtech/catapult-rest.git
       cd catapult-rest
       npm install -g yarn
