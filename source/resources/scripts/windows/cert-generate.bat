@@ -9,7 +9,7 @@ echo database = index.txt
 echo serial   = serial.dat
 echo[
 echo private_key = ca.key.pem
-echo certificate = ca.cert.pem
+echo certificate = ca.crt.pem
 echo[
 echo policy = policy_catapult
 echo[
@@ -42,8 +42,8 @@ openssl pkey -inform pem -in ca.key.pem -text -noout
 openssl pkey -in ca.key.pem -pubout -out ca.pubkey.pem
 
 rem create CA cert and self-sign it
-openssl req -config ca.cnf -keyform PEM -key ca.key.pem -new -x509 -days 7300 -out ca.cert.pem
-openssl x509 -in ca.cert.pem  -text -noout
+openssl req -config ca.cnf -keyform PEM -key ca.key.pem -new -x509 -days 7300 -out ca.crt.pem
+openssl x509 -in ca.crt.pem  -text -noout
 
 
 rem create node key
@@ -61,7 +61,11 @@ openssl rand -hex 19 > ./serial.dat
 rem sign cert for 375 days
 openssl ca -config ca.cnf -days 375 -notext -in node.csr.pem -out node.crt.pem
 
-openssl verify -CAfile ca.cert.pem node.crt.pem
+openssl verify -CAfile ca.crt.pem node.crt.pem
 
 rem finally create full crt
-copy node.crt.pem + ca.cert.pem node.full.crt.pem
+copy node.crt.pem + ca.crt.pem node.full.crt.pem
+
+rem remove leftover files
+del ca.cnf ca.key.pem index.txt index.txt.attr index.txt.old node.cnf node.csr.pem serial.dat serial.dat.old
+rmdir /s /q new_certs
