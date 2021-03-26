@@ -34,7 +34,7 @@ Environment
 
 The setup scripts are automated using **docker**. To run a test net or node, you will need to have installed the following tools:
 
-* `nodejs`_ version 10 or higher
+* `node.js`_ version 10 or higher (It is recommended that you install node.js using `nvm <https://github.com/nvm-sh/nvm>`__)
 * `docker`_
 * `docker-compose`_
 
@@ -187,7 +187,7 @@ Proceed to the following guides to put what you have learned into practice!
 
 Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
 
-.. _nodejs: https://nodejs.org/en/download/
+.. _node.js: https://nodejs.org/en/download/
 
 .. _docker: https://docs.docker.com/install/
 

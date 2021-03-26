@@ -16,7 +16,7 @@ Installation
 
 |cli| is distributed using the node package manager ``npm``.
 
-.. note:: Symbol CLI require Node.js 12 LTS to execute.
+.. note:: Symbol CLI requires `node.js <http://nodejs.org>`__  12 LTS to run. It is recommended that you install node.js using `nvm <https://github.com/nvm-sh/nvm>`__.
 
 Execute the following command in a new terminal:
 
