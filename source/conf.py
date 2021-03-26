@@ -391,7 +391,8 @@ class CliLexer(BashLexer):
         'root': [
             (r'^\? ', token.Keyword), # Blue, with the inkpot style
             (r'(^SUCCESS |^✔ )', token.Generic.Inserted),  # Green
-            (r'^ERR ', token.Name.Exception), # Red
+            (r'^ERR ', token.Name.Exception),  # Red
+            (r'(Account|Property|Value)', token.Comment.Preproc), # Blue
             (r'.', token.Text)
         ]
     }
