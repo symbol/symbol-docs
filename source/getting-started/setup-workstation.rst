@@ -30,7 +30,7 @@ We are creating a new account with the :doc:`Symbol CLI <../cli>`, a command-lin
 
     node --version
 
-If you get an error or the version returned does not match v12.X, visit |node-js| to install the requirement.
+If you get an error or the version returned does not match v12.X, visit |node-js| to install the requirement (Although it is recommended to install through `nvm <https://github.com/nvm-sh/nvm>`__).
 
 2. To install |cli|, run the next command.
 
