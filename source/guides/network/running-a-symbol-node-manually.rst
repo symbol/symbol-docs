@@ -259,19 +259,26 @@ You will use the :doc:`symbol-cli <../../cli>` tool for this. **Install** ``symb
 
 All transactions will be sent from (and the :doc:`../../concepts/fees` paid by) your **main** account, so you need to tell ``symbol-cli`` about it by creating a **profile**.
 
-.. note:: This profile will contain your **main account's private key** in **encrypted** form. A password will be requested every time it is accessed.
+.. note::
+   
+   This profile will contain your **main account's private key** in **encrypted** form. A password will be requested every time it is accessed.
+
+   The profile is stored in ``~/symbol-cli.config.json``. You can remove this file once you are done using symbol-cli.
+
+Your node's API server is not running yet (this will be done later) so you cannot use it to announce transactions. Fortunately, you have a **list of available API nodes** in the network in ``../resources/peers-api.json``.
+
+- Open this file and pick any of the hosts listed in the lines starting with ``"host":``. You will use this in the next command instead of ``HOST``.
 
 Run:
 
 .. code-block:: symbol-cli
 
-   $ symbol-cli profile import --network MAIN_NET --url http://localhost:3000 --default
+   $ symbol-cli profile import --network MAIN_NET --url http://HOST:3000 --default
    ✔ Enter a profile name: ... Main
    ✔ Enter your wallet password: ... *********
    ✔ Select an import type: › PrivateKey
    ✔ Enter your account private key: ... ********************************
 
-- If you are not running this on the same machine as the node, use the URL of the node instead of ``localhost``.
 - Enter a name for your profile (for example, ``Main``).
 - Enter a password to protect the profile.
 - Select ``PrivateKey`` as the import type.
@@ -310,7 +317,7 @@ In order to be :ref:`eligible for harvesting <account_eligibility>` an account m
 
 .. code-block:: symbol-cli
 
-   symbol-cli transaction vrfkeylink --sync --action Link
+   symbol-cli transaction vrfkeylink --sync --action Link \
                           --max-fee 1000000 --mode normal
    ✔ Enter your wallet password: ... *********
    ✔ Enter the public key to link: ... ********************************
