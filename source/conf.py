@@ -397,3 +397,17 @@ class CliLexer(BashLexer):
     }
 
 lexers['symbol-cli'] = CliLexer()
+
+class BootstrapLexer(BashLexer):
+    name = 'symbol-bootstrap'
+
+    tokens = {
+        'root': [
+            (r'^\? ', token.Generic.Inserted), # Green, with the inkpot style
+            (r'^info ', token.Generic.Inserted), # Green
+            (r'^error ', token.Name.Exception), # Red
+            (r'.', token.Text)
+        ]
+    }
+
+lexers['symbol-bootstrap'] = BootstrapLexer()
