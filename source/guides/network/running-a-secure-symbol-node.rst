@@ -493,8 +493,154 @@ If all key link transactions were confirmed the node is now configured and you c
 
 Your node should now be **up and running** and its main private key has never left the configuration (offline) machine.
 
+The next section deals with the scenario when you don't have access to the node's main account key.
+
 .. _secure-node-non-custodial-setup:
 
 *******************
 Non-custodial setup
 *******************
+
+It is possible to completely setup a node and then **relinquish its main account to an external account**.
+
+This is useful, for example, for node providers that work in a **non-custodial** manner. This is, **customers** hire the **node provider** to setup nodes for them and have any node rewards sent to their main accounts, without ever sending their account keys to the node provider.
+
+There are **many mechanisms** to achieve this in |codename|. This section explains the **simplest one**, assuming that the customer is not tech-savvy and therefore prefers not to use command-line tools like ``symbol-cli``.
+
+In summary, the node must be completely setup as explained before (using either the :ref:`secure-node-bootstrap-only` or :ref:`secure-node-offline-signatures`) and then full control of the node's **main account** is given to the customer account (called **extern account**) by turning main into a :doc:`../../concepts/multisig-account`.
+
+1. **Have a running node**, set up using either one of the two methods described in the previous sections.
+
+2. **Install** :doc:`symbol-cli <../../cli>`:
+
+   .. code-block:: bash
+
+      npm install --global symbol-cli
+
+3. **Prepare a multisig modification transaction**.
+
+   - This will add the **external** account (the customer's) as the only cosignatory for the **main** account.
+   - This will use ``symbol-cli`` so make sure you have a profile for the main account as explained in **Step 2** of the :ref:`secure-node-offline-signatures` section.
+
+   Run:
+
+   .. code-block:: bash
+
+      symbol-cli transaction multisigmodification --max-fee 1000000 \
+        --mode normal --min-removal-delta 1 --min-approval-delta 1 \
+        --action Add --aggregate-type AGGREGATE_COMPLETE \
+        --cosignatory-addresses ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+
+   - Use the **external account address** as cosignatory.
+   - Do **not** announce the transaction.
+
+   .. code-block:: symbol-cli
+
+      ✔ Enter your wallet password: … *********
+      ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+      │                                               AGGREGATE_COMPLETE                                                │
+      ├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
+      │ Max fee:                                     │ 1,000,000                                                        │
+      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+      │ Network type:                                │ TEST_NET                                                         │
+      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+      │ Deadline:                                    │ 2021-03-27 14:51:01.099                                          │
+      ├──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┤
+      │                            Inner transaction 1 of 1 - MULTISIG_ACCOUNT_MODIFICATION                             │
+      ├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
+      │ [Inner tx. 1 of 1] Min approval delta:       │ 1                                                                │
+      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+      │ [Inner tx. 1 of 1] Min removal delta:        │ 1                                                                │
+      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+      │ [Inner tx. 1 of 1] Address addition (1 / 1): │ TAJ3DW-DCRWBU-V6CXBQ-TNAAKH-UPRPQ6-I2QW7V-7JA                    │
+      ├──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┤
+      │                                                Signature details                                                │
+      ├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
+      │ Payload:                                     │ F800000000000000FAE63B1603A8FA30BF5F8A7E5C7906349AAA89591BD20651 │
+      │                                              │ 013704F4E03894206D6543339716A8E4391E53873F8F43BEC10D9706F74764C7 │
+      │                                              │ 940C07A756F4950ACC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
+      │                                              │ B902600CB7DA1033000000000198414140420F0000000000EB39311C0A000000 │
+      │                                              │ 5B8F6FEBA2C4D0C7E1C084DA1E828B68C46EE7EE247811BE3DBDCE913E40E027 │
+      │                                              │ 50000000000000005000000000000000CC6D13D64FB9BF69B72846C3FE99127D │
+      │                                              │ 48C3293F473D528FB902600CB7DA103300000000019855410101010000000000 │
+      │                                              │ 9813B1D8628D834AF8570C26D00147A3E2F8791A85BF5FA4                 │
+      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+      │ Hash:                                        │ 13241107ACC87B4F7B047C335856326D86AC0F4FF2C0F52CCA1D7FC4E6491CB8 │
+      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+      │ Signer:                                      │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
+      └──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┘
+      ✔ Do you want to announce this transaction? … no
+
+   Select all the text in the ``Payload`` box and paste it into a new text file named ``payloads.txt``. **Remove all spaces and other decorations** to obtain a single, long line of numbers and uppercase letters:
+
+   .. code-block:: text
+
+      F800000000000000FAE63B1603A8FA30BF5F8A7E5C7906349AAA89591BD20651013704F4E03894206D6543339716A8E4391E53873F8F43BEC10D9706F74764C7940C07A756F4950ACC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033000000000198414140420F0000000000EB39311C0A0000005B8F6FEBA2C4D0C7E1C084DA1E828B68C46EE7EE247811BE3DBDCE913E40E02750000000000000005000000000000000CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033000000000198554101010100000000009813B1D8628D834AF8570C26D00147A3E2F8791A85BF5FA4
+
+   This payload **cannot be announced** without a **signature from the external account**, since it has been added as a cosignatory.
+
+4. **Send the payload to the customer**.
+
+5. The customer uses their :ref:`Symbol Desktop Wallet <wallet-desktop>` to create a signature for this payload:
+
+   - Open the Desktop Wallet and click on ``Go to offline transactions`` on the top right corner.
+   - Select the ``Cosign transaction`` tab.
+   - Paste the full payload into the big box labeled ``Paste the transaction payload``.
+   - Click on ``Import payload``.
+   - Select the ``Profile name`` and the **external** account (in the ``From:`` box).
+   - Enter the wallet's ``Password`` and click on ``Confirm``.
+   - A QR code and a long line of text will be obtained, looking similar to this one:
+
+     .. code-block:: json
+
+        {"parentHash":"13241107ACC87B4F7B047C335856326D86AC0F4FF2C0F52CCA1D7FC4E6491CB8","signature":"1D8FD3A815C45B9FFCCD48FF9DE24FAD172D373E889D25F3005FDAA0F87DB70AB9ABD2ECB79E467577FCE49B760729706247B24479CB32A88A4A1C1974D4220A","signerPublicKey":"7F71566C57A8E5B03EADBA28E4CA057428DDB37C766604B2827BC2D79BB195B8","version":{"lower":0,"higher":0}}
+
+   - Copy the whole line of text (for example by triple-clicking on it) and send it back to the node provider.
+
+6. **Announce the multisig modification**.
+
+   From any online machine that has installed ``symbol-cli`` and has an **announcer profile** (as explained in **Step 8** of the :ref:`secure-node-offline-signatures` section):
+
+   .. code-block:: symbol-cli
+
+      symbol-cli transaction payload --sync --announce --profile C --payload 
+      ? Enter the transaction payload: F8000000000...
+      SUCCESS Transaction loaded:
+      ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+      │                                      AGGREGATE_COMPLETE                                      │
+      ├──────────────────────────────────────────────┬───────────────────────────────────────────────┤
+      │ Max fee:                                     │ 1,000,000                                     │
+      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+      │ Network type:                                │ TEST_NET                                      │
+      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+      │ Deadline:                                    │ 2021-03-27 14:51:01.099                       │
+      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+      │ Signer:                                      │ TBGPYD-CO35V2-AMOYEJ-LEM44H-372M3I-6RWVFY-QCY │
+      ├──────────────────────────────────────────────┴───────────────────────────────────────────────┤
+      │                   Inner transaction 1 of 1 - MULTISIG_ACCOUNT_MODIFICATION                   │
+      ├──────────────────────────────────────────────┬───────────────────────────────────────────────┤
+      │ [Inner tx. 1 of 1] Min approval delta:       │ 1                                             │
+      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+      │ [Inner tx. 1 of 1] Min removal delta:        │ 1                                             │
+      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+      │ [Inner tx. 1 of 1] Address addition (1 / 1): │ TAJ3DW-DCRWBU-V6CXBQ-TNAAKH-UPRPQ6-I2QW7V-7JA │
+      └──────────────────────────────────────────────┴───────────────────────────────────────────────┘
+      ? Cosignature JSON array in square brackets (Enter to skip): [{"parentHash"...
+      ✔ Do you want to announce this transaction? … yes
+
+   - When prompted for the transaction payload, paste it (the long single line of hexadecimal characters).
+   - When prompted for the cosignature, paste it (the long single line of JSON text) **BUT ENCLOSE IT IN SQUARE BRACKETS**.
+
+     This is, the cosignature should start with ``[`` and end with ``]``.
+
+   After a few seconds you should get:
+
+   .. code-block:: symbol-cli
+
+      ...
+      SUCCESS Transaction announced
+      SUCCESS Transaction confirmed
+
+From this point onwards, no operation can be performed on the node's **main** account without authorization from the **external** account, which is controlled by the customer.
+
+The customer can perform operations on the **main** account using the :ref:`Symbol Desktop Wallet <wallet-desktop>` and its **multisig** facilities.
