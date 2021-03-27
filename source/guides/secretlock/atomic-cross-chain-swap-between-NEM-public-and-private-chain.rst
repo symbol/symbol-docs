@@ -14,7 +14,7 @@ Use case
 ********
 
 Alice and Bob want to exchange **10 alice.tokens for 10 bob.tokens**.
-The problem is that they are not in the same blockchain: alice.token is defined in |codename|'s public chain, whereas bob.token is only present in a private chain using |codename| technology.
+The problem is that they are not in the same network: alice.token is defined in a private chain using |codename| tech, whereas bob.token is only present in |codename|'s public chain.
 
 One non-atomic solution could be:
 
@@ -47,8 +47,8 @@ Prerequisites
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-- Alice account in the public chain must own at least 10 alice.tokens.
-- Bob account in the private chain must own at least 10 bob.tokens.
+- Alice account in the private chain must own at least 10 alice.tokens.
+- Bob account in the public chain must own at least 10 bob.tokens.
 - Both accounts should have enough network currency to pay for the transaction fees.
 
 *************************
@@ -117,7 +117,7 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 04 */
         :end-before: /* end block 04 */
 
-5. Bob defines announces the following **SecretLockTransaction TX2** to the **public network**
+5. Bob announces the following **SecretLockTransaction TX2** to the **public network**
 
 .. csv-table::
     :header: "TX2 Property", "Value"
@@ -222,12 +222,12 @@ Once announced, this transaction will remain locked until someone discovers the 
 Is the process atomic?
 **********************
 
-The process is atomic, but should be completed with lots of time before the deadlines:
+The process is atomic but should be completed with lots of time before the deadlines:
 
 * ✅ Bob does not want to announce TX2: Alice will receive her funds back after 94 hours.
 
 * ✅ Alice does not announce TX3: Bob will receive his refund after 84h. Alice will unlock her funds as well after 94 hours.
 
-* ⚠️Alice signs and announces TX3: Alice receives Bob funds. Bob will have enough time to sign TX4 because TX1's duration is longer than TX2's.
+* ⚠️Alice signs and announces TX3: Alice receives Bob's funds. Bob will have enough time to sign TX4 because TX1's duration is longer than TX2's.
 
 * ⚠️A rollback rewrites the history: Alice and Bob have waited at least ``maxRollBackBlocks`` between each transaction confirmation.

@@ -15,7 +15,8 @@ The protocol guarantees that if all participants agree, the swap will take place
 On the contrary, each participant should receive their locked funds back if some of them decide not to conclude the process.
 
 HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk.
-Every participant in the exchange of tokens needs to present proof (hashlock) to complete it. Failing to do so, the locked assets are released back to each original owner after the timelock expires.
+Every participant in the exchange of tokens needs to present proof (hashlock) to complete it.
+Failing to do so, the locked assets are released back to each original owner after the timelock expires.
 
 A thorough explanation of the protocol can be found on the `Bitcoin Wiki <https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_.
 
@@ -25,22 +26,19 @@ Protocol
 
 Alice and Bob want to exchange **10 alice.tokens for 10 bob.tokens**.
 
-The problem is that they are not in the same network: alice.token is defined in |codename|'s public chain whereas bob.token is only present in a private chain using |codename| tech.
+The problem is that they are not in the same network: alice.token is defined in a private chain using |codename| tech, whereas bob.token is only present in |codename|'s public chain.
 
-Trading tokens directly from one blockchain to the other is not possible, due to the technological differences between them.
-
+Trading tokens directly from one blockchain to the other is impossible due to the technological differences between them.
 In the case of |codename| public and private chain, the same mosaic name could have a different definition, distribution, or even not exist.
 Between Bitcoin and |codename|, the difference is even more evident, as each blockchain uses an entirely different technology.
 
-Instead of transferring tokens between different chains literally, the trade will be performed inside each chain.
-
-The cross chan swap protocol will ensure that the token swap occurs atomically.
+Instead of transferring tokens between different chains literally, the trade will be performed inside each chain. The cross-chain swap protocol ensures that the token swap occurs atomically.
 
 .. mermaid:: ../resources/diagrams/cross-chain-swap.mmd
     :caption: Cross-chain swap sequence diagram
     :align: center
 
-Before starting with the swap, all participants involved int the swap must own at least one account in each blockchain.
+Before starting with the swap, all participants involved in the swap must own at least an account in each blockchain.
 
 1. Alice generates a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
 
@@ -110,7 +108,7 @@ Once announced, this transaction will remain locked until someone discovers the 
     Proof; proof
     Network; Private Chain
 
-The process is atomic, but should be completed with lots of time before the deadlines:
+The process is atomic but should be completed with lots of time before the deadlines:
 
 * TX1's duration should be significantly bigger than TX2's to guarantee that the second participant will have time to unlock TX1 after the first one reveals the proof.
 * Each participant must wait for at least ``maxRollBackBlocks`` between announcements to prevent experiencing :ref:`transaction rollbacks <rollbacks>`.
