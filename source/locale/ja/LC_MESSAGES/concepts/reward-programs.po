@@ -1,22 +1,366 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018-present, NEM
-# This file is distributed under the same license as the symbol-docs package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-23 18:32+0000\n"
+"POT-Creation-Date: 2021-04-06 16:00+0200\n"
 "PO-Revision-Date: 2021-03-02 08:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
-"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"Language-Team: Japanese "
+"(https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/concepts/reward-programs.rst:40
+msgid "Reward Programs"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:42
+msgid ""
+":doc:`Nodes <node>` **are the backbone of any blockchain**, since they "
+"are the ones creating and storing the blocks, among other things. It is "
+"therefore **critical** that as many nodes as possible are active in the "
+"network at all times."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:44
+msgid ""
+"Beyond the direct **block rewards** (:doc:`fees` and :doc:`inflation`) "
+"that nodes obtain for producing blocks, |codename| **provides a series of"
+" special Reward Programs** aimed at further encouraging users to create "
+"and maintain nodes."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:46
+msgid "Each of these programs rewards **a different aspect of the network**:"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:48
+msgid ""
+":ref:`supernode-program`: For powerful, high-availability and high-"
+"throughput nodes."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:49
+msgid ""
+":ref:`voting-node-program`: For nodes supporting Finalization, "
+"|codename|'s fork resolution mechanism."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:51
+msgid ""
+"In most cases, node owners wishing to benefit from these programs must "
+"explicitly **enroll** to them. The descriptions below contain **guides** "
+"explaining how to enroll to each program."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:57
+msgid "Supernode Program"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:59
+msgid ""
+"This program aims at ensuring that a sufficiently large number of "
+"**powerful nodes** will always be available to guarantee the smooth "
+"functioning of the network."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:62
+#: ../../source/concepts/reward-programs.rst:131
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:64
+msgid ""
+"Supernodes are regular nodes meeting the following additional hardware "
+"and operational requirements:"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Requirement"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Node type**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"Must be a Dual node (Both a :ref:`Peer <peer-node>` and an :ref:`API "
+"<api-node>` node)."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Bandwidth**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"**5'000 kbit/s** or higher, calculated by downloading 2MB files from 3 "
+"other random nodes on the network."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Chain Height**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"Chain must be synchronized no more than **4 blocks** behind the reference"
+" height."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Chain Part**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"Upload **50 random blocks hashes** of the chain accurately. These are "
+"compared to the reference chain hashes for accuracy."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Computing Power**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"Hash at least **2'000 iterations per second**. Node is requested to "
+"calculate 10'000 iterations of a 32 byte seed. Speed and accuracy are "
+"measured."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Bonded Deposit**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"At least **1, 2 or 3 million** |networkcurrency| must be stacked on the "
+"node. The amount will decide the reward tier (see below)."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Version**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"|codename| must be **up to date**. Nodes should be updated within **10 "
+"days** of each new |codename| release."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Ping**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"**200ms response or less**. Node is requested to ping 20 other random "
+"nodes on the network and at least one ping time must pass the test (each "
+"node will be pinged 5 times and response times averaged)."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Responsiveness**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"**1 second**. 10 blockchain height requests will be made and at least 9 "
+"must answer in less than 1 second."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:83
+msgid ""
+"To ensure all of the above, a **lightweight monitoring agent** is "
+"installed on the node which reports to a controller on the network. The "
+"controller performs all the above checks **a few times per day** on each "
+"registered supernode and makes daily payments."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:86
+#: ../../source/concepts/reward-programs.rst:146
+msgid "Rewards"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Year 1"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "15'000 |networkcurrency|"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Year 2"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Year 3"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Year 4"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "14'000 |networkcurrency|"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Year 5"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "10'000 |networkcurrency|"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "Year 6"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "5'000 |networkcurrency|"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:102
+msgid ""
+"This program will last for **6 years** after the launch date of "
+"|codename|, with decreasing rewards each year."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:104
+msgid ""
+"Supernodes are divided in **3 tiers** according to their staked "
+"|networkcurrency|: More than 1 million, more than 2 million and more than"
+" 3 million."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:106
+msgid ""
+"The available **Total daily rewards** are split among all program "
+"participants according to their tier in the following fashion:"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:108
+#, python-format
+msgid ""
+"Each tier 1 nodes gets 17.33% of the **Total daily reward** divided by "
+"the total number of participating nodes."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:110
+#, python-format
+msgid ""
+"Each tier 2 nodes gets 46.67% of the **Total daily reward** divided by "
+"the total number of participating nodes."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:112
+msgid "Tier 3 nodes get the remainder, uniformly distributed among them."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:114
+msgid ""
+"See the complete `Terms & Conditions "
+"<https://drive.google.com/file/d/1Q51SJNxeKVFWXQOogRSUrcn8e1Le-k2-/view?usp=sharing>`__."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:118
+msgid ""
+":doc:`Follow this guide to enroll to the Supernode program "
+"<../guides/network/supernode-enrollment>`."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:124
+msgid "Voting Node Program"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:126
+msgid ""
+"|codename| provides **fast response times** even when **network "
+"disconnections** isolate some of the nodes. When connectivity is restored"
+" any **conflicts** which might have arisen (network forks) are resolved "
+"by the :ref:`finalization` process. This process requires some nodes to "
+"periodically **vote** on which branches are valid according to their "
+"records. Blocks deemed invalid are then :ref:`rolled back <rollbacks>`."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:128
+msgid ""
+"This program aims at ensuring that enough **voting nodes** are always "
+"present in the network so fork resolution is conducted reliably."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:133
+msgid ""
+"Voting nodes are regular nodes meeting the following additional "
+"requirements:"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "At least **3 million** |networkcurrency| must be stacked on the node."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid "**Voting keys**"
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:1
+msgid ""
+"The node must signal its interest in becoming a voting node by "
+"registering its :ref:`Voting Key <voting-key-link-transaction>`."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:143
+msgid ""
+"Although not mandatory, it is **recommended** that voting nodes meet the "
+"same hardware requirements as :ref:`supernodes <supernode-program>`. In "
+"fact, it is expected that participants of the Voting Node Program will "
+"also enroll to the Supernode program."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:148
+#, python-format
+msgid ""
+"**5% of all block harvesting rewards** is set aside for voting nodes. "
+"After each :ref:`finalization round <finalization>` these rewards are "
+"**evenly distributed** among all nodes that participated in that round "
+"(and paid on a daily basis). There is **no explicit enrollment required**"
+" for this program."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:152
+msgid ""
+"If you created your node using Symbol Bootstrap, :ref:`follow this guide "
+"to enable voting <bootstrap-enable-voting>`."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:154
+msgid ""
+"Otherwise, :ref:`follow this guide to enable voting manually <manual-"
+"enable-voting>`."
+msgstr ""
+
+#: ../../source/concepts/reward-programs.rst:156
+msgid ""
+"See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-"
+"Ph2KGKN3Vr6GVampFvlfitZHirhthA/view?usp=sharing>`__."
+msgstr ""
+
