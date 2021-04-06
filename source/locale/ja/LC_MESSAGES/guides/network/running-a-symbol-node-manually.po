@@ -1,0 +1,920 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-06 16:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:45
+msgid "Running a Symbol node manually"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:47
+msgid ""
+"This guide walks you through the process of setting up a node to join "
+"|codename|'s network **without** using Symbol Bootstrap."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:49
+msgid ""
+"|symbol-bootstrap| is a very handy tool that allows the **quick "
+"deployment** of |codename| nodes. However, it relies on `Docker "
+"<http://docker.com>`__ and `node.js <http://nodejs.org>`__ technology "
+"which might not be available (or allowed) in all scenarios. **This guide "
+"takes the longer route** and explains how to setup a |codename| node "
+"**manually**. If you would like to use Symbol Bootstrap use :doc:`this "
+"guide <running-a-symbol-node>` instead."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:51
+msgid ""
+"The following section explains how to build a :ref:`peer-node` and the "
+"next one expands the node to convert it into an :ref:`api-node`."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:53
+msgid "The following instructions have only been verified to work on **Linux**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:57
+msgid "Build a Peer node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:60
+msgid "Build the server"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:62
+msgid ""
+"Follow the `Catapult server <https://github.com/nemtech/catapult-"
+"server>`__ instructions to **build** its binaries, either `manually "
+"<https://github.com/nemtech/catapult-server/blob/main/docs/BUILD-"
+"manual.md>`__ or using `Conan <https://github.com/nemtech/catapult-"
+"server/blob/main/docs/BUILD-conan.md>`__."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:65
+msgid "Generate keys"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:67
+msgid ""
+"A |codename| node requires a number of :ref:`keys <symbol-keys>` to "
+"function properly. These keys are generally **randomly generated** so you"
+" need to create a few ones to be used in the following steps."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:69
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:152
+msgid "**This step can be performed on an offline machine for added security.**"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:72
+msgid "Main, Remote and VRF"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:74
+msgid ""
+"From within the ``_build`` directory you created in the previous section,"
+" run:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:80
+msgid "This will output 3 :ref:`key pairs <keypair>` similar to this one:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:89
+msgid ""
+"Each block is a key pair (there is one block shown above) composed of a "
+"``private key``, a ``public key`` and an ``address``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:91
+msgid ""
+"**Copy all of them to a temporary text file** for later use and label the"
+" key pairs **Main**, **Remote** and **VRF**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:95
+msgid ""
+"If you **already have** any of these keys, you can use them instead of "
+"the randomly-generated ones."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:97
+msgid ""
+"The most relevant scenario is when using a **main account opted-in from a"
+" NIS1 account**. In this case you can directly use the key obtained in "
+"the opt-in process as your **Main** key instead of the randomly-generated"
+" one."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:100
+msgid "Voting"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:102
+msgid ""
+"If your node is to be a :ref:`voting node <finalization>` it must have "
+"linked a voting key for the period in which you intend to vote. This is "
+"interesting as voting nodes receive :ref:`voting rewards <voting-node-"
+"program>`."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:104
+msgid ""
+"The generation of the voting key, though, is a bit more complex than the "
+"previous ones:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:106
+msgid ""
+"Still from within the ``_build`` directory **create another directory** "
+"called ``votingkeys``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:110
+msgid ""
+":ref:`Voting <finalization>` occurs once every epoch. One voting epoch "
+"lasts **1440 blocks** or about **12h** (see ``votingSetGrouping`` in the "
+":ref:`network properties <config-network-properties>`)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:112
+msgid ""
+"The maximum voting key duration (End Epoch - Start Epoch) is **360 "
+"epochs** or about **6 months** (see ``maxVotingKeyLifetime``)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:114
+msgid ""
+"You can find out the current epoch by dividing the `current blockchain "
+"height <http://explorer.testnet.symboldev.network/>`__ by 1440 and "
+"discarding the decimals."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:116
+msgid "**Create the voting key**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:118
+msgid ""
+"Voting keys are different from the other keys in that they have a "
+"**period of validity**, for example. They are only valid from a **Start "
+"Epoch** to an **End Epoch** (see side box)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:120
+msgid ""
+"Nodes are only eligible as voters if they are linked to a **valid voting "
+"key** for the current blockchain epoch, so **remember to renew your "
+"voting key periodically.**"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:122
+msgid ""
+"To help you with that task, you can have **up to 3 linked voting keys**, "
+"with different periods, so you can easily renew one key while there's "
+"still another one active (you will need to **unlink** an older key to be "
+"able to link more than 3 keys)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:124
+msgid ""
+"A voting key is created using ``catapult.tools.votingkey`` and providing "
+"its **period of validity** (note you do not use "
+"``catapult.tools.addressgen`` as before):"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:131
+msgid ""
+"This creates a file named ``votingkeys/private_key_tree1.dat`` and "
+"**prints the voting key on the terminal**. As your voting keys expire and"
+" you create new ones, **increase the number** on the file name."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:141
+msgid ""
+"Copy the voting key public key into the temporary text file where you "
+"keep the rest of the keys, label it **Voting** and save it for later."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:144
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:146
+msgid ""
+"|codename| is **highly customizable** and this means there are a lot of "
+"parameters that can be adjusted to suit your node's needs. Some of these "
+"parameters are **network-related** and must match the rest of nodes in "
+"the network (for example ``currencyMosaicId``) whereas some others are "
+"**node-related** and you can set freely (for example ``friendlyName``)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:148
+msgid ""
+"You can edit these files manually (Take a look at `these templates "
+"<https://github.com/nemtech/catapult-server/tree/main/resources>`__ to "
+"know how they look) but it is more convenient to use the `Symbol Node "
+"Configurator tool <https://github.com/nemtech/symbol-node-"
+"configurator>`__ as shown next."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:154
+msgid "**Prerequisites**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:156
+msgid "Install `Python 3 <https://www.python.org/downloads/>`__."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:157
+msgid ""
+"Install `OpenSSL <https://wiki.openssl.org/index.php/Binaries>`__ (for "
+"example running ``sudo apt install openssl`` on Linux)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:159
+msgid "**Install symbol-node-configurator**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:161
+msgid ""
+"Download and extract `symbol-node-configurator.zip "
+"<https://github.com/nemtech/symbol-node-"
+"configurator/archive/refs/heads/main.zip>`__. Alternatively, clone the "
+"`GitHub repository <https://github.com/nemtech/symbol-node-"
+"configurator>`__ if you know how to use Git."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:163
+msgid ""
+"Move into the ``symbol-node-configurator`` directory and install the "
+"tool's requirements by running:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:169
+msgid "**Create certificates**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:171
+msgid "Create a folder named ``certificates`` and move into it."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:172
+msgid ""
+"Create a text file named ``private.main.txt`` and put the **Main account "
+"private key** inside."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:173
+msgid ""
+"Download and run this `certificate generation script </_static/bash/cert-"
+"generate.sh>`__."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:174
+msgid "Delete ``private.main.txt``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:175
+msgid "Get back to the parent folder."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:177
+msgid ""
+"You should now have at least the following files in the ``certificates`` "
+"folder: ``ca.pubkey.pem``, ``ca.crt.pem``, ``node.full.crt.pem``, "
+"``node.crt.pem`` and ``node.key.pem``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:179
+msgid "**Create harvester and VRF key files**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:181
+msgid ""
+"Create a file named ``private.harvesting.txt`` and put the **Remote "
+"private key** inside."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:182
+msgid ""
+"Create a file named ``private.vrf.txt`` and put the **VRF private key** "
+"inside."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:184
+msgid "**Run the configurator tool**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:186
+msgid ""
+"The node configurator tool is called ``generator.py`` and it accepts a "
+"number of parameters depending on the kind of node you want:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``--mode``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"(Mandatory) Type of node. Accepted values are ``api``, ``peer`` and "
+"``dual``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``--harvesting``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"(Optional) To create a harvesting node. The **Remote** key will "
+"automatically be used so that :ref:`remote-harvesting` is enabled by "
+"default."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``--voting``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"(Optional) To create a voting node. If you enable this copy the "
+"``private_key_tree1.dat`` file you created above into this directory."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``--output``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "(Optional) Folder where resulting configuration will be stored."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:198
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:248
+msgid "For example:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:211
+msgid ""
+"This command will produce all the required **node configuration** files "
+"in the ``settings`` directory and you need to copy them to ``_build``, in"
+" the machine where your node will run:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:213
+msgid "Copy ``settings/resources`` to ``_build/resources``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:214
+msgid "Copy ``settings/certificates`` to ``_build/certificates``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:215
+msgid ""
+"Copy ``settings/nemesis/seed`` to ``_build/seed`` (Omit the ``nemesis`` "
+"part)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:217
+msgid "**Edit config-user.properties**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:219
+msgid "Go back to the ``_build`` directory."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:220
+msgid ""
+"Edit ``resources/config-user.properties`` so that it points to the right "
+"places:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:232
+msgid "**Edit config-node.properties**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:234
+msgid ""
+"Edit ``resources/config-node.properties`` to customize the node. Learn "
+"more about the available properties in the :doc:`configuring-node-"
+"properties` guide."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:236
+msgid "The most common ones are in the ``[localnode]`` section:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "Property"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``host``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "IP address or domain name of your node."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``friendlyName``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "Name of your node for display purposes."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``version``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"Version of catapult-server used by your node. Leave empty to use the "
+"current one."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``roles``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"A comma-separated list of the following values: ``Peer``, ``Api``, "
+"``Voting``, ``IPv4``, ``IPv6``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:259
+msgid "Run the server"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:261
+msgid "Create one last folder:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:267
+msgid "And finally fire up the server!"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:274
+msgid ""
+"You should see a lot of debug output while the node starts synchronizing "
+"with the rest of the network:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:280
+msgid ""
+"The node can be stopped by pressing :kbd:`Ctrl-C` and restarted simply by"
+" running ``catapult.server`` again."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:282
+msgid ""
+"If you see no error messages, your server is up and running and you can "
+"continue with this guide."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:285
+msgid "Link the keys"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:287
+msgid ""
+"The server is now running but it will not be able **harvest** because a "
+"number of :ref:`keys <symbol-keys>` need to be **linked** to it. These "
+"links are created through **transactions announced to the network**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:289
+msgid ""
+"**These transactions can be announced from ANY machine**. In particular, "
+"this can be done from a machine other than the one running your node so "
+"your main account's private key is never stored on the node."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:291
+msgid ""
+"You will use the :doc:`symbol-cli <../../cli>` tool for this. **Install**"
+" ``symbol-cli`` by running:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:297
+msgid ""
+"All transactions will be sent from (and the :doc:`../../concepts/fees` "
+"paid by) your **main** account, so you need to tell ``symbol-cli`` about "
+"it by creating a **profile**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:301
+msgid ""
+"This profile will contain your **main account's private key** in "
+"**encrypted** form. A password will be requested every time it is "
+"accessed."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:303
+msgid ""
+"The profile is stored in ``~/symbol-cli.config.json``. You can remove "
+"this file once you are done using symbol-cli."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:305
+msgid ""
+"Your node's API server is not running yet (this will be done later) so "
+"you cannot use it to announce transactions. Fortunately, you have a "
+"**list of available API nodes** in the network in ``../resources/peers-"
+"api.json``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:307
+msgid ""
+"Open this file and pick any of the hosts listed in the lines starting "
+"with ``\"host\":``. You will use this in the next command instead of "
+"``HOST``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:309
+msgid "Run:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:319
+msgid "Enter a name for your profile (for example, ``Main``)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:320
+msgid "Enter a password to protect the profile."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:321
+msgid "Select ``PrivateKey`` as the import type."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:322
+msgid "Enter your **Main** private key."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:324
+msgid ""
+"The profile information is stored (encrypted) in ``~/symbol-"
+"cli.config.json`` and ``symbol-cli`` is now ready to use."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:326
+msgid ""
+"All the key links created in the next subsections can be **undone** at "
+"any time by announcing an equivalent **unlink** transaction (``--action "
+"Unlink``). Therefore you can always mend any mistake or change your node "
+"configuration (Each transaction has a :doc:`fee <../../concepts/fees>`, "
+"though)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:329
+msgid "Remote key"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:331
+msgid ""
+"You configured the node to sign created blocks using the **Remote** key, "
+"but the harvesting fees should go to your **Main** account. This is "
+"accomplished by announcing an :ref:`AccountKeyLink transaction <account-"
+"key-link-transaction>`:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:340
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:380
+msgid "Enter your profile password."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:341
+msgid "Enter your **Remote public** key."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:351
+msgid "VRF key"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:353
+msgid ""
+"In order to be :ref:`eligible for harvesting <account_eligibility>` an "
+"account must have linked a VRF key. This is accomplished by announcing a "
+":ref:`VrfKeyLink transaction <vrf-key-link-transaction>`:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:362
+msgid "Enter your **VRF public** key."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:367
+msgid "Voting key"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:369
+msgid ""
+"If your node is to be a :ref:`voting node <finalization>` it must link "
+"the voting key you generated above. The link is accomplished by "
+"announcing a :ref:`VotingKeyLink transaction <voting-key-link-"
+"transaction>`:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:381
+msgid "Enter the **voting public key** you obtained previously."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:382
+msgid "Enter the Start and End epochs you used when creating the voting key."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:391
+msgid ""
+"When the next epoch starts, if it is inside the Start and End epochs of "
+"one of your registered keys, your node should participate in the "
+":ref:`finalization process <finalization>` and collect :ref:`voting "
+"rewards <voting-node-program>`."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:395
+msgid ""
+"Every epoch, at least **70%** of all eligible voting nodes need to cast "
+"their votes or **finalization stalls**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:397
+msgid ""
+"Therefore, **if you are planning to take your node offline** (for "
+"example, for maintenance) it is important that you **unlink your voting "
+"keys** for that period so that finalization is not impaired."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:401
+msgid "Build an API node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:403
+msgid ""
+"Once you have the Catapult Server running, you can add **extra services**"
+" to turn it into an API node:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:408
+msgid ""
+"As shown in the diagram above, besides the **Catapult Server** you will "
+"also need:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:410
+msgid "A **Database** holding the REST data."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:411
+msgid "A **Catapult Broker** serializing accesses to the database."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:412
+msgid ""
+"A **REST gateway** accepting client requests and turning them into server"
+" commands or database queries."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:414
+msgid ""
+"The following sections explain how to install each service. You will need"
+" all of them."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:416
+msgid ""
+"Move to the ``_build`` folder created while building the server and "
+"create any additional folders requested in the next steps inside "
+"``_build``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:419
+msgid "Run the database"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:421
+msgid "**Install** `MongoDB <http://mongodb.com>`__ (at least version 4.4)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:423
+msgid ""
+"It is recommended to follow the `program's own installation instructions "
+"<https://docs.mongodb.com/manual/administration/install-community/>`__, "
+"and NOT install from your distro's packages."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:425
+msgid "Create a directory to store the data files and **run the database**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:432
+msgid "Keep ``mongod`` running for as long as your node runs."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:434
+msgid "**Build indices** to optimize database accesses."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:436
+msgid ""
+"The ``catapult-server`` repository you cloned to build the server in the "
+"first step contains `a folder with mongo scripts "
+"<https://github.com/nemtech/catapult-server/blob/main/scripts/mongo>`__. "
+"Run this one:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:442
+msgid "Without this step database performance will be unacceptably slow."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:445
+msgid "Run the broker"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:447
+msgid ""
+"**Edit** ``resources/config-database.properties`` and point "
+"``databaseUri`` to ``127.0.0.1:27017``:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:456
+msgid "**Run the broker**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:458
+msgid "Move into the ``bin`` directory and run:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:464
+msgid "Keep the broker running for as long as your node runs."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:467
+msgid "Build and run the REST gateway"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:469
+msgid ""
+"**Clone** the ``catapult-rest`` repository and **install its "
+"dependencies**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:471
+msgid "(Going back to the ``_build`` directory first)"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:481
+msgid "**Build** the REST gateway:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:488
+msgid "**Configure** the REST gateway:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:490
+msgid "All configuration is stored in the ``resources/rest.json`` file."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:492
+msgid ""
+"**Edit this file** to make sure that the following properties point to "
+"the right files:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "File"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "Default location"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``tlsClientCertificatePath``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``node.crt.pem``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``_build/certificate/``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``tlsClientKeyPath``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``node.key.pem``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``tlsCaCertificatePath``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``ca.crt.pem``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``networkPropertyFilePath``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``config-network.properties``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``_build/resources/``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``nodePropertyFilePath``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid "``config-node.properties``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:505
+msgid "**Use absolute paths**. For example:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:525
+msgid "**Run the REST gateway**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:531
+msgid "Keep the REST gateway running for as long as your node runs."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:534
+msgid "Verification"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:536
+msgid ""
+"If the REST gateway is working correctly, you can now make queries at "
+"port 3000. If the Catapult Server, Broker and MongoDB are working "
+"correctly, the values returned by REST will be correctly synchronized "
+"with the rest of the blockchain."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:538
+msgid ""
+"Point a browser to the following URLs and check that the returned values "
+"are similar to the expected ones:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:540
+msgid ""
+"`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
+"Services status."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:551
+msgid ""
+"`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
+"Node's connection to the network."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:567
+msgid ""
+"The ``height`` field should match the actual height of the blockchain, "
+"but, upon first starting the node, it might take a while to synchronize."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:569
+msgid ""
+"Finally, go to the `Symbol Explorer page "
+"<http://explorer.symbolblockchain.io/nodes>`__ and check that your node "
+"appears in the list (It refreshes every 30 seconds)."
+msgstr ""
+

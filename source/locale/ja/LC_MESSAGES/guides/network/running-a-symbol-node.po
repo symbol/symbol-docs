@@ -1,0 +1,472 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-06 16:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/network/running-a-symbol-node.rst:45
+msgid "Running a Symbol node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:47
+msgid ""
+"This guide walks you through the process of setting up a node to join "
+"|codename|'s **public network**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:49
+msgid ""
+"You can safely experiment connecting to |codename|'s network by "
+"connecting to the test network (testnet) instead of the main public "
+"network (mainnet). Testnet **might be offline or replaced without "
+"notice** because it is used extensively for testing purposes, though. To "
+"work in a private environment network, install :doc:`a local network for "
+"learning and development purposes <creating-a-private-test-net>` instead."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:51
+msgid ""
+"To run the network, you are going to use the package |symbol-bootstrap|. "
+"To better understand how this package works it is highly recommended to "
+"read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:53
+msgid ""
+"|symbol-bootstrap| runs on all the supported Operating Systems "
+"(**Windows**, **Mac** and **Linux**). This guide works out-of-the-box on "
+"**Ubuntu 20.04** but other Linux distributions might require some "
+"adjustments. For instructions specific to **CentOS 8** please follow "
+"`spizzerb's CentOS 8 guide <https://forum.nem.io/t/complete-guide-to-"
+"run-a-dual-node-on-centos-8-using-symbol-bootstrap>`__ (developed by a "
+"NEM community member)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:57
+msgid "Hardware requirements"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:59
+msgid ""
+"Running a blockchain node is **very demanding** in terms of disk space, "
+"memory and CPU requirements. Failure to meet the **following minimum "
+"requirements** will produce a node that will struggle to keep up with the"
+" rest of the network. The global blockchain will not be affected but the "
+"node will rarely be eligible to collect any node rewards."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:61
+msgid ""
+"It is **strongly recommended** to use **dedicated CPU and RAM**. When "
+"they are shared (as is the case on some Virtual Server providers) "
+"performance is heavily impacted."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:63
+msgid "Minimum node specifications"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "Requirement"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "Peer node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "API node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "Dual & Voting node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "CPU"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "2 cores"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "4 cores"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "RAM"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "8GB"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "16GB"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "Disk size"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "500 GB"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "750 GB"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "Disk speed"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "1500 |iops| |ssd|"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:72
+msgid ""
+"The following table shows the **recommended requirements**. Using these "
+"will provide a much smoother experience and provide a certain degree of "
+"future proofing."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:74
+msgid "Recommended node specifications"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "8 cores"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:1
+msgid "32GB"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:85
+msgid "The ``testnet`` and ``mainnet`` presets"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:87
+msgid ""
+"|symbol-bootstrap| has presets called ``testnet`` and ``mainnet`` which "
+"instantiate a node that connects to the appropriate public network. The "
+"particular capabilities of this node are selected through the "
+"``assembly`` option."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:89
+msgid ""
+"This guide uses ``testnet`` as an example, feel free to change it to "
+"``mainnet`` once the main network has officially launched."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:92
+msgid "To create a peer node:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:94
+msgid ""
+":ref:`Peer nodes <peer-node>`, also called a *harvester* nodes, are the "
+"backbone of the network. Among other things, they verify transactions and"
+" add new blocks to the blockchain, collecting fees in the process."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:101
+msgid "To create an API node:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:103
+msgid ""
+":ref:`API nodes <api-node>` provide external access to the network "
+"through a REST API."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:109
+msgid ""
+"To check that the node is up and running open a new browser tab and go to"
+" ``localhost:3000/chain/info``. You should get a response from the API "
+"node."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:111
+msgid ""
+"API nodes take up more memory and storage than Peer nodes. If you have "
+"memory or storage constraints and you are running into issues, it is "
+"recommended that you switch to running a Peer only node instead."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:114
+msgid "To create a dual node:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:116
+msgid ""
+"Dual nodes provide the functionality of both :ref:`Peer <peer-node>` and "
+":ref:`API <api-node>` nodes."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:124
+msgid "Running the node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:126
+msgid ""
+"You really don't need to use anything else but ``symbol-bootstrap "
+"start``.  Use any of the commands above to instantiate and boot a "
+"|codename| node and ``Ctrl+C`` to shut it down."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:128
+msgid ""
+"Alternatively, you can start in detached mode (``--detached``) to run in "
+"the background."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:130
+msgid ""
+"Upon first launch the node will **synchronize** with the rest of the "
+"network, downloading the **complete blockchain**. This might take a few "
+"hours and during this time REST requests directed to your node (if it is "
+"an API node) might be delayed and report an incorrect chain height."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:136
+msgid "Retrieving the node account"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:138
+msgid ""
+"The node you just created has an associated |codename| account which you "
+"can use to interact with the node. For instance, you need this account to"
+" provide funds to the node so it can emit transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:140
+msgid ""
+"The account's keys and address can be retrieved from a YAML file in the "
+"``target`` folder:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:142
+msgid "``target/addresses.yml``"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:144
+msgid "As an example:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:178
+msgid "Keep you Secret Keys secret at all times!"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:180
+msgid ""
+"Use the information in the ``main`` section to access the node's account."
+" When activating :ref:`delegated harvesting <delegated-harvesting>`, use "
+"the information in the ``transport`` section as the node's **public TLS "
+"key**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:184
+msgid "Providing funds to the node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:186
+msgid ""
+"Before the node can begin harvesting or voting (see below) it needs a "
+"**minimum amount of funds**. In the ``testnet`` test environment you can "
+"use |codename|'s **Faucet** to provide these funds."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:188
+msgid ""
+"Go to |faucet|, insert the ``address`` of your node's account and the "
+"amount of |networkcurrency| you need and click on CLAIM."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:190
+msgid ""
+"You will see that your request is first ``unconfirmed`` (pending) and "
+"after a few seconds it becomes ``confirmed``. Your node is now funded and"
+" ready to operate!"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:194
+msgid "Submitting link keys"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:196
+msgid ""
+"**Harvesting** and **Voting** nodes require an extra configuration step "
+"before they can be used:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:199
+msgid "Enabling harvesting"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:201
+msgid ""
+"|symbol-bootstrap| creates peer nodes with :ref:`remote harvesting "
+"<remote-harvesting>` enabled by default, but they still need to be "
+"registered by announcing the :ref:`AccountKeyLink <account-key-link-"
+"transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` "
+"transactions to the network."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:203
+msgid ""
+"This can be done by |symbol-bootstrap| too, but it needs to be a step "
+"separated from ``symbol-bootstrap start`` because funds are required to "
+"announce transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:205
+msgid ""
+"Once the node is running with ``symbol-bootstrap start`` and you have "
+"funded its account, from a different terminal (but from the same folder),"
+" simply type:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:211
+msgid ""
+"This creates the required :ref:`AccountKeyLink <account-key-link-"
+"transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` "
+"transactions and announces them to the network. If it succeeds (it might "
+"take some seconds, as the transaction needs to be confirmed) your new "
+"node is ready to harvest."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:213
+msgid ""
+"Without extra parameters, ``symbol-bootstrap link`` tries to send the "
+"registration transaction to the local node (running on the other "
+"terminal) which will forward it to the rest of the network. If your node "
+"is not running at this moment, or it is not an API node, you can use the "
+"``--useKnownRestGateways`` parameter, or provide the URL of another node "
+"using ``--url``. Find a `list of testnet nodes here "
+"<https://forum.nem.io/t/nem-symbol-0-10-0-7-release-15-feb-2021/27565>`_."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:218
+msgid "Enabling voting"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:220
+msgid ""
+"The :ref:`block finalization <finalization>` process requires that "
+"network nodes vote about the correctness of blocks before they are "
+"definitely added to the blockchain. For your new node to participate it "
+"has to register as a voter by announcing a :ref:`VotingKeyLink "
+"transaction <voting-key-link-transaction>` to the network. |symbol-"
+"bootstrap| can take care of this too."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:222
+msgid ""
+"We are going to create a new voting node. If you already created a non-"
+"voting node which you no longer need, you can remove the ``target`` "
+"folder or, more conveniently, use the ``-r`` switch next time you invoke "
+"``symbol-bootstrap``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:224
+msgid ""
+"First, you need to configure the node as a voter, so, besides selecting "
+"the desired preset and assembly you have to provide a custom preset file "
+"with the following content:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:231
+msgid ""
+"So if you call the above file ``enable-voting-preset.yml`` the whole "
+"command would be:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:237
+msgid ""
+"Once the node is running, from a different terminal (but from the same "
+"folder), simply type:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:243
+msgid ""
+"Just like in the harvesting case, this creates the required "
+":ref:`VotingKeyLink transaction <voting-key-link-transaction>` and "
+"submits it to the network. Upon successful completion, your new node is "
+"ready to vote."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:247
+msgid "Configuring node properties"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:249
+msgid ""
+"Follow the :ref:`Configuring node properties <node-properties>` guide to "
+"change parameters such as the public name of the node."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:253
+msgid "Interacting with the network"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:255
+msgid ""
+"You can use the following tools to test the functionality of your new "
+"node:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:257
+msgid ""
+"|blockchain-explorer|: Search for transactions, accounts, assets, and "
+"blocks in the test network."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:258
+msgid ""
+":ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for "
+"|codename|. Available for Mac, Linux, and Windows."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:259
+msgid ""
+":ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly "
+"used actions from your terminal."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:260
+msgid ""
+"The |codename| |faucet|: Receive |networkcurrency| units to test "
+"|codename|'s services."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:261
+msgid ""
+":doc:`Software Development Kits <../../sdk>`: Add |codename| to your "
+"project."
+msgstr ""
+
+#: ../../source/guides/network/running-a-symbol-node.rst:263
+msgid ""
+"And don't forget to check :ref:`the rest of the guides <blog-categories>`"
+" to continue learning about |codename|!"
+msgstr ""
+
