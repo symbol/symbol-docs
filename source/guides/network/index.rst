@@ -10,6 +10,7 @@ Guides related to creating nodes and test networks.
     running-a-symbol-node
     running-a-symbol-node-manually
     running-a-secure-symbol-node
+    non-custodial-node-setup
     configuring-node-properties
     creating-a-private-test-net
     configuring-network-properties
