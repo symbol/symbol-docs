@@ -7,9 +7,9 @@
 Running a Secure Symbol node
 ############################
 
-The :doc:`running-a-symbol-node` guide explains how to easily **create a node using Symbol Bootstrap**. In that guide, a single machine is used throughout the whole process, meaning that private keys are generated in a machine connected to the Internet. If you need a **hardened level of security** you can follow this guide instead, at the cost of a bit more involved setup.
+The :doc:`running-a-symbol-node` guide explains how to easily **create a node using Symbol Bootstrap**. In that guide, the setup process is conducted on the same machine that will host the node, meaning that private keys are generated on a machine connected to the Internet. If you need a **hardened level of security** you can follow this guide instead, at the cost of a more involved setup process.
 
-The summary of it is that the ``symbol-bootstrap start`` command is split into a ``config`` phase run offline, which generates an encrypted configuration, and then the rest of the ``start`` command is run in the destination online machine that will host the node.
+The **summary** of it is that the ``symbol-bootstrap start`` command is split into a ``config`` phase run offline, which generates a configuration folder, and the rest of the ``start`` command is then run on the destination online machine that will host the node. **The main account's private key never leaves the offline machine**.
 
 .. list-table::
    :header-rows: 1
@@ -19,628 +19,480 @@ The summary of it is that the ``symbol-bootstrap start`` command is split into a
      - Function
    * - **Configuration**
      -
-         - Creates configuration files.
          - Online to install software, then offline.
+         - Creates configuration files.
+         - Prepares setup transactions.
    * - **Node**
      -
-         - Runs the node.
          - Permanently online.
-         - Announces all transactions.
+         - Runs the node.
+         - Announces the setup transactions.
 
-You have a number of choices, differing in how your **main account's private key** is managed:
+A node can also be setup in such a way that all harvesting rewards go to an **external account** without requiring this account's private key. This is known as a **non-custodial setup** and must be configured **once the node is up and running**, so a pointer to the appropriate guide is given at the end of this page.
 
-- The :ref:`secure-node-bootstrap-only` section is the most convenient. It creates an **encrypted configuration file** containing the main private key which is then moved to the Node machine.
+*********************
+Configuration machine
+*********************
 
-  You have the option (described in a note) to **omit the main private key from the configuration file**, but then Symbol Bootstrap will ask you to enter it on the Node machine when signing transactions.
-
-- The :ref:`secure-node-offline-signatures` section uses Symbol Bootstrap for most of the steps, but you **manually sign some transactions** on the Configuration machine and then **announce them** on the Node machine. This is a more convoluted procedure but allows the main private key to **never be present on the online machine**, not even encrypted.
-
-- Finally, the :ref:`secure-node-non-custodial-setup` section explains how to **relinquish control of the main account to an external account**, so that the external account's private key is never required in the node setup process.
-
-.. _secure-node-bootstrap-only:
-
-********************
-Bootstrap-only setup
-********************
+Setup
+=====
 
 On the **Configuration machine**, while still online:
 
-1. **Install** Symbol Bootstrap as instructed in the :doc:`using-symbol-bootstrap` guide (make sure you read also the **Configuration** section of that guide to get acquainted with presets and assemblies).
+- **Install Symbol Bootstrap** as instructed in the :doc:`using-symbol-bootstrap` guide. Make sure you read also the **Configuration** section of that guide to get acquainted with presets and assemblies.
 
-2. **Run Symbol Bootstrap a first time**, so that it can download the required Docker images:
+- **Install Symbol CLI** as instructed in the :doc:`symbol-cli <../../cli>` guide. You just need to run:
 
-   .. code-block:: bash
+  .. code-block:: bash
 
-      symbol-bootstrap config -p mainnet -a <assembly> --noPassword
-      rm -rf target
+     npm install --global symbol-cli
 
-   The output of this first run is irrelevant, that's why ``--noPassword`` is used and the ``target`` folder is removed.
+- **Run Symbol Bootstrap a first time**, so that it can download the required Docker images:
 
-3. **Disconnect the Configuration machine from the Internet**. Private keys will be generated on this machine from this point.
+  .. code-block:: bash
 
-4. **Run Symbol Bootstrap again**, this time with all required parameters:
+     symbol-bootstrap config -p mainnet -a <assembly> --noPassword
+     rm -rf target
 
-   .. code-block:: bash
+  The output of this first run is irrelevant, that's why ``--noPassword`` is used and the ``target`` folder is removed.
 
-      symbol-bootstrap config -p mainnet -a <assembly> -c <custom-presets>
+- **Disconnect the Configuration machine from the Internet** since private keys will be generated on this machine from this point.
 
-   .. note::
+Create configuration
+====================
 
-      If you have customizations to make, like **enabling Voting**, using a **particular main account** (instead of letting Symbol Bootstrap create one), or **enrolling in a reward program**, you can provide them through a custom preset file (for example ``custom.yml``):
+Profile
+-------
 
-      .. code-block:: yaml
+**Create the main account profile**. This is the account that will receive all harvesting fees and whose :ref:`importance score <importance-calculation>` will be used when harvesting.
 
-         nodes:
-         - voting: true
-           mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-           rewardProgram: SuperNode
-           host: my-symbol-node.com # Could also be an IP address
+**The purpose of this guide is making sure that this account's private key is never used on an online machine**.
 
-      And add ``-c custom.yml`` to the ``symbol-bootstrap`` command. You can delete this file afterwards.
+This step will create a ``symbol-cli`` profile to hold the main account and sign transactions using its private key. The machine is offline now, so you need to provide some network-related data.
 
-      This is particularly useful when using opted-in accounts.
+.. note:: The commands below assume you want to create a **new** main account and use the ``profile create`` command. If you **already have an account** that you would like to use as main use the ``profile import`` command instead.
 
-   You will be asked for the **password** to use to encrypt the **configuration files**.
+.. tabs::
 
-   This will generate a ``target`` directory containing an ``addresses.yml`` file and multiple configuration files. The **key point** is that the **main account's private key is encrypted in these files**.
+   .. tab:: MAINNET
 
-   .. code-block:: symbol-bootstrap
+      .. code-block:: bash
 
-      ? Enter password to use to encrypt and decrypt custom presets, addresses.yml,
-        and preset.yml files. When providing a password, private keys will be
-        encrypted. Keep this password in a secure place! ******
-      info     Password has been provided
-      info     Generating config from preset testnet
-      info     Assembly preset dual
-      info     Generating Main account...
-      info     Generating Transport account...
-      info     Generating Remote account...
-      info     Generating VRF account...
-      info     User for docker resolved: 1000:1000
-      info     Running image using Exec: symbolplatform/symbol-server:tools-gcc-0.10.1.8 bash createNodeCertificates.sh
-      info     Certificate for node api-node created
-      info     Generating api-node server configuration
-      info     Generating api-broker broker configuration
-      info     Non-voting node api-node.
-      info     Configuration generated.
+         symbol-cli profile create --profile offline-main --default \
+            --url http://localhost:3000 --network MAIN_NET \
+            --generation-hash 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6 \
+            --namespace-id symbol.xym --divisibility 6 \
+            --epoch-adjustment 1615853185
 
-   .. note::
+   .. tab:: TESTNET
 
-      If you do not want your main account's private key to appear in the config files, **not even in encrypted form**, you can add this line in the custom preset explained in the previous note, at the top of the file:
+      .. code-block:: bash
 
-      .. code-block:: yaml
+         symbol-cli profile create --profile offline-test --default \
+            --url http://localhost:3000 --network TEST_NET \
+            --generation-hash 45FBCF2F0EA36EFA7923C9BC923D6503169651F7FA4EFC46A8EAF5AE09057EBD \
+            --namespace-id symbol.xym --divisibility 6 \
+            --epoch-adjustment 1573430400
 
-         privateKeySecurityMode: PROMPT_MAIN
+When prompted, enter a password to secure your profile and select the ``PrivateKey`` import type:
 
-      Bear in mind that **every time a transaction needs to be signed** on the online machine, you will be asked for your private key. This is only relevant for steps 7 and 8 below.
-      
-      Read more about this property in the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
+.. code-block:: symbol-cli
 
-5. **Copy** the whole ``target`` directory to the **Node machine**. For example, using a pen drive, since you do not want to connect the **Configuration machine** to the Internet.
+   ✔ Enter your wallet password: … *********
+   ✔ Select an import type: › PrivateKey
 
-Then, on the **Node machine**, the one that will run the node and be permanently connected to the Internet:
+   Account
+   ┌───────────────┬──────────────────────────────────────────────────────────────────────┐
+   │ Property      │ Value                                                                │
+   ├───────────────┼──────────────────────────────────────────────────────────────────────┤
+   │ Address       │ NCCE5O-BMZHWM-IYZKR6-4WZKFD-4P7DTS-IRXJZ2-3LI                        │
+   ├───────────────┼──────────────────────────────────────────────────────────────────────┤
+   │ Public Key    │ 51C2CB98B61D666A993FA9B25EEBCB48DE5F0B1B7D8B79ECB7AFCB1E5E601108     │
+   ├───────────────┼──────────────────────────────────────────────────────────────────────┤
+   │ Private Key   │ ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●     │
+   ├───────────────┼──────────────────────────────────────────────────────────────────────┤
+   │ Password      │ ●●●●●●●●●                                                            │
+   └───────────────┴──────────────────────────────────────────────────────────────────────┘
 
-6. **Install** Symbol Bootstrap as instructed in the :doc:`using-symbol-bootstrap` guide.
+   SUCCESS Stored offline-main profile
 
-7. **Go to the directory** containing the ``target`` directory copied from the Configuration machine and **register the keys** required for the node:
+``symbol-cli`` is now ready to be used later on. All transactions will be signed by your main account so make sure it has some funds to pay for the :doc:`../../concepts/fees`.
 
-   .. code-block:: bash
+**Take note of the main account's private key and keep it in a safe place**.
 
-      symbol-bootstrap link --useKnownRestGateways
+Preset
+------
 
-   You will be asked for the configuration file password:
+**Create a** :ref:`custom preset file <symbol-bootstrap-presets>` for Symbol Bootstrap and name it ``custom.yml``. It must include, at least, these lines:
 
-   .. code-block:: symbol-bootstrap
+.. code-block:: yaml
 
-      ? Enter password to use to encrypt and decrypt custom presets, addresses.yml,
-        and preset.yml files. When providing a password, private keys will be
-        encrypted. Keep this password in a secure place! ******
-      info     Password has been provided
-      info     Linking nodes
-      info     Connecting to node http://api-01.ap-northeast-1.testnet.symboldev.network:3000
-      info     Node's minFeeMultiplier is 100
-      info     Creating transactions for node: api-node, ca/main account: TBW7TVQVQUIHRYBOARCNQW7FOVYSVGUPDBI62EA
-      info     Creating Link AccountKeyLinkTransaction from Node api-node to Remote public key 25821A95C1390A404D8DF61692B89158DD4EDA37E418C653282A6C7CC1EB7736.
-      info     Creating Link VrfKeyLinkTransaction from Node api-node to VRF public key 048E4B01F0F0729B639AF74495E0C45954D591472DD426242820BBD50C5D92D2.
-      info     Creating Link VotingKeyLinkTransaction from Node api-node to Voting public key C4022B7B66A185EEA5444EAA328399398B9BA2596209BB7345D38057A46FCD32.
-      ? Do you want to announce 3 transactions for node api-node? Yes
-      info     Announcing Aggregate Complete Transaction hash 0365344498D57689A59AE23462098D5FA4D0CC63951583D78C8D04E1C61EB18B
-      info     Aggregate Complete Transaction has been confirmed!
+   privateKeySecurityMode: PROMPT_MAIN
+   nodes:
+   -
+     mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 
-   You might also be asked for the **main account's private key** if you used the ``privateKeySecurityMode`` property explained above.
+ You can read more about these properties in the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
 
-   This command not only **announces all required link transactions**, it also checks if the links already exist, finds a good node to use for the announcement, calculates the appropriate fee and aggregates all links in a single transaction for added efficiency.
+If you have customizations to make, like enabling :ref:`voting <finalization>` or enrolling in a :doc:`Reward Program <../../concepts/reward-programs>`, you can provide them too:
 
-   .. note::
-   
-      This step (and the next one) can be performed from **any online machine**. It does not need to be the same machine that will be running the node. By doing so, the node will **never have the main private key**, not even encrypted.
+.. code-block:: yaml
 
-      To do so, copy the ``target`` folder to an **Announcer** machine and run the ``link`` command there.
+   privateKeySecurityMode: PROMPT_MAIN
+   nodes:
+   -
+     mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+     voting: true
+     rewardProgram: SuperNode
+     host: my-symbol-node.com # Could also be an IP address
 
-      The key will still have been briefly present in the Announcer machine's memory, though. To avoid this completely, read the `Offline signatures <secure-node-offline-signatures>`_ section below.
+Configure
+---------
 
-8. If you want to **enroll** to any :doc:`Reward Program <../../concepts/reward-programs>` (you will need to provide a custom preset file in Step 4 above), do so now :
+**Run Symbol Bootstrap again**, this time with all required parameters:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      symbol-bootstrap enrolRewardProgram --useKnownRestGateways
+   symbol-bootstrap config -p mainnet -a <assembly> -c custom.yml
 
-   You will be asked for the configuration file password:
+You will be asked for the **password** to use to encrypt the **configuration files**.
 
-   .. code-block:: symbol-bootstrap
+.. code-block:: symbol-bootstrap
 
-      ? Enter password to use to encrypt and decrypt custom presets, addresses.yml,
-        and preset.yml files. When providing a password, private keys will be
-        encrypted. Keep this password in a secure place! ******
-      info     Password has been provided
-      ...
-      info     Creating enrolment transfer with message 'enrol ... https://my-symbol-node.com:7880'
-      ? Do you want to announce 1 transactions for node api-node?
+   ? Enter password to use to encrypt and decrypt custom presets, addresses.yml,
+     and preset.yml files. When providing a password, private keys will be
+     encrypted. Keep this password in a secure place! ******
+   info     Password has been provided
+   info     Generating config from preset testnet
+   info     Assembly preset dual
+   info     Generating Main account...
+   info     Generating Transport account...
+   info     Generating Remote account...
+   info     Generating VRF account...
+   info     User for docker resolved: 1000:1000
+   info     Running image using Exec: symbolplatform/symbol-server:tools-gcc-0.10.1.8 bash createNodeCertificates.sh
+   info     Certificate for node api-node created
+   info     Generating api-node server configuration
+   info     Generating api-broker broker configuration
+   info     Non-voting node api-node.
+   info     Configuration generated.
 
-   You might also be asked for the main account's private key if you used the ``privateKeySecurityMode`` property explained above.
+This generates a ``target`` directory containing an ``addresses.yml`` file and multiple configuration files.
 
-9. Finally, **start the node**:
-
-   .. code-block:: bash
-
-      symbol-bootstrap start
-
-   No other parameters are required, the configuration is already present in the ``target`` directory and Symbol Bootstrap will use it:
-
-   .. code-block:: symbol-bootstrap
-
-      info     Password has been provided
-      info     The generated preset target/preset.yml already exist, ignoring configuration. (run -r to reset or --upgrade to upgrade)
-      ...
-
-   The node should start and a lot of debug output should appear on the screen.
-
-Your node should now be **up and running** and its main private key has never been on a file. It has been temporarily held in memory while signing some transactions, though, so if this is not acceptable, you can read the next section.
+**The main account's private key is not present in any of these files**.
 
 It is worth noting that Symbol Bootstrap enables :ref:`remote-harvesting` by default, meaning that the **main private key is never available in a plain text file** in the server. Only the remote key is, which acts as a proxy between the node and its main account.
 
-.. _secure-node-offline-signatures:
+Copy configuration
+------------------
 
-******************
-Offline signatures
-******************
+- Open ``custom.yml`` and **remove the line** containing ``mainPrivateKey``.
 
-Once the ``config`` step is done, the only reason why Symbol Bootstrap requires the main private key is to perform the ``link`` and ``enrolRewardProgram`` commands.
+  Now that Symbol Bootstrap has already used it in the ``config`` stage, there is no need for such a sensitive key to be lying around in a plain text file.
 
-These commands perform a series of security checks but their main goal is to announce a series of transactions, which must be signed off by the main account. If these transactions are announced manually instead, then Symbol Bootstrap does not require the main private key. In this case the main private key is not required outside the Configuration machine.
+- **Copy** the whole ``target`` directory to a pen drive (or other non-networked support) to be used later.
 
-This sections explains how to do this, by replacing some of the steps in the previous section.
+Prepare transactions
+====================
 
-1. **Steps 1 through 4** are the same as in the :ref:`secure-node-bootstrap-only` section, with two additions:
+Still in the offline Configuration machine, you are now going to **prepare a series of link transactions manually**. These transactions will be created by ``symbol-cli``, signed by your main account, and will be moved to an online machine to be announced later on.
 
-   - On **Step 1**, after installing Symbol Bootstrap in the **Configuration machine**, install :doc:`symbol-cli <../../cli>` too. Just run:
+The following commands all use ``--max-fee 1000000`` which means that **1 XYM** will be paid for each transaction. Feel free to use a different number after reading the :doc:`fees documentation <../../concepts/fees>`.
 
-     .. code-block:: bash
+.. topic:: Concerning deadlines
 
-        npm install --global symbol-cli
+   All transactions have a deadline, meaning that they must be announced (and confirmed) **before the deadline expires**.
 
-   - On **Step 4** make sure you use a **custom preset** with at least these lines:
+   There is currently a limitation in ``symbol-cli`` which sets this deadline to **2 hours** after transaction creation, for all non-multisig transactions.
 
-     .. code-block:: yaml
+   This is a known limitation which is `being tracked <https://github.com/nemtech/symbol-cli/issues/373>`__.
 
-        privateKeySecurityMode: PROMPT_MAIN
-        nodes:
-           - mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+Remote key link
+---------------
 
-     The ``privateKeySecurityMode`` line makes sure the main private key is **not** stored, as instructed in the note at the end of Step 4.
+Obtain the :ref:`Account Key Link transaction <account-key-link-transaction>` payload.
 
-     The ``mainPrivateKey`` is required during configuration to **generate node certificates**.
+This links your main account to the **remote account** used for :ref:`remote-harvesting`. Symbol Bootstrap generated this account for you, and you can find its public key in the ``target/addresses.yml`` file:
 
-     The custom preset file can be removed after this step.
+.. code-block:: yaml
 
-Still in the **Configuration machine**, once Symbol Bootstrap has generated the configuration, you need to **prepare the link transactions manually**.
+   remote:
+       publicKey: 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F
 
-2. **Create a symbol-cli profile** for your main account. The machine is offline, so you need to provide some network-related data.
+In the ``--linked-public-key`` parameter below, use the **remote account public key**:
 
-   For MAINNET:
+.. code-block:: bash
 
-   .. code-block:: bash
+   symbol-cli transaction accountkeylink --max-fee 1000000 --mode normal \
+      --linked-public-key 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F \
+      --action Link
 
-      symbol-cli profile import --profile offline-main --default \
-         --url http://localhost:3000 --network MAIN_NET \
-         --generation-hash 57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6 \
-         --namespace-id symbol.xym --divisibility 6 \
-         --epoch-adjustment 1615853185
+Enter the password you used when you created the ``symbol-cli`` profile and do **not** announce the transaction (the machine is offline).
 
-   For TESTNET:
+.. code-block:: symbol-cli
 
-   .. code-block:: bash
+   ✔ Enter your wallet password: … *********
+   ┌──────────────────────────────────────────────────────────────────────────────────┐
+   │                                 ACCOUNT_KEY_LINK                                 │
+   ├───────────────┬──────────────────────────────────────────────────────────────────┤
+   │ Max fee:      │ 1,000,000                                                        │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Network type: │ TEST_NET                                                         │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Deadline:     │ 2021-03-27 10:41:41.286                                          │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Action:       │ Link                                                             │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+   ├───────────────┴──────────────────────────────────────────────────────────────────┤
+   │                                Signature details                                 │
+   ├───────────────┬──────────────────────────────────────────────────────────────────┤
+   │ Payload:      │ A10000000000000042E0E0A0B8D7E1F27805F3537F80BFEAB6FEAC318908C486 │
+   │               │ 4D03260B83ED1D0332D6EA6E086A4B68C578DB690D78D50BDA5C706B1DC66472 │
+   │               │ 9326511547E42E0FCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
+   │               │ B902600CB7DA10330000000001984C4140420F000000000026F54C1B0A000000 │
+   │               │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+   │               │ 01                                                               │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Hash:         │ 08C63D3AFAC3767F43053AFF1ACA61381FE81929B2384B91C450010A547AFA4A │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Signer:       │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
+   └───────────────┴──────────────────────────────────────────────────────────────────┘
+   ✔ Do you want to announce this transaction? … no
 
-      symbol-cli profile import --profile offline-test --default \
-         --url http://localhost:3000 --network TEST_NET \
-         --generation-hash 45FBCF2F0EA36EFA7923C9BC923D6503169651F7FA4EFC46A8EAF5AE09057EBD \
-         --namespace-id symbol.xym --divisibility 6 \
-         --epoch-adjustment 1573430400
+Select all the text in the ``Payload`` box and paste it into a new text file named ``payloads.txt``. **Remove all spaces and other decorations** to obtain a single line **containing only** numbers and uppercase letters:
 
-   When prompted, enter a password to secure your profile, select the ``PrivateKey`` import type and provide your **Main account private key**:
+.. code-block:: text
+
+   A100000000000000703C88DEDC4ABC2917F00ADB12C45F2C333B1113405C3CFAB289E78D9C54DDFCB1FE7C3048B6DA735568A935C6C08AF7E70AEC614A2EE9590967A7A044E52B0DCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA10330000000001984C4140420F000000000038F32C1B0A0000001544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F01
+
+VRF key link
+------------
+
+Obtain the :ref:`VRF Key Link transaction <vrf-key-link-transaction>` payload.
+
+This key is required for harvesting.
+
+Again, Symbol Bootstrap has already generated this key for you and you can find it in the ``target/addresses.yml`` file:
+
+.. code-block:: yaml
+
+   vrf:
+       publicKey: 856B6CCA574508158D66046CACEA2D81CB626DEEFDD3B6C466514CE31F32A52B
+
+Use the **VRF account public key** in the ``--linked-public-key`` parameter below and do **not** announce the transaction (the machine is offline):
+
+.. code-block:: symbol-cli
+
+   symbol-cli transaction vrfkeylink --max-fee 1000000 --mode normal \
+      --linked-public-key 856B6CCA574508158D66046CACEA2D81CB626DEEFDD3B6C466514CE31F32A52B \
+      --action Link
+
+Again, copy the content of the ``Payload`` box, trim it, and add it to ``payloads.txt``, in a new line.
+
+Voting key link
+---------------
+
+Obtain the :ref:`Voting Key Link transaction <voting-key-link-transaction>` payload.
+
+This key is only required for voting nodes.
+
+If you added ``voting: true`` to ``custom.yml`` when creating the configuration, then Symbol Bootstrap has created this key too in ``target/addresses.yml``:
+
+.. code-block:: yaml
+
+   voting:
+       publicKey: 05693B4300ABFD28CD6BA434DD26F9FAF2342927FE32840898DCB895B8A17E84
+
+Use the **Voting account public key** in the ``--linked-public-key`` parameter below and do **not** announce the transaction (the machine is offline):
+
+.. code-block:: symbol-cli
+
+   symbol-cli transaction votingkeylink --max-fee 1000000 --mode normal \
+      --linked-public-key 05693B4300ABFD28CD6BA434DD26F9FAF2342927FE32840898DCB895B8A17E84 \
+      --action Link --start-point 1 --end-point 360
+
+Again, copy the content of the ``Payload`` box, trim it, and add it to ``payloads.txt``, in a new line.
+
+Copy payloads
+-------------
+
+Copy ``payloads.txt`` to the pen drive where you previously copied the ``target`` folder.
+
+**************
+Online machine
+**************
+
+Move now to the online machine, the one that is permanently connected to the Internet and will host the node. Plug in the pen drive with the node configuration.
+
+Setup
+=====
+
+- **Install Symbol Bootstrap** as instructed in the :doc:`using-symbol-bootstrap` guide.
+
+- **Install Symbol CLI** as instructed in the :doc:`symbol-cli <../../cli>` guide. You just need to run:
+
+  .. code-block:: bash
+
+     npm install --global symbol-cli
+
+- **Create an announcer profile** for ``symbol-cli``. This is only a temporary account used to announce the payloads; it does not require funds:
+
+  .. tabs::
+
+     .. tab:: MAINNET
+
+        .. code-block:: bash
+
+           symbol-cli profile create --profile announcer --default \
+              --network MAIN_NET \
+              --url http://ngl-api-001.symbolblockchain.io:3000 
+
+     .. tab:: TESTNET
+
+        .. code-block:: bash
+
+           symbol-cli profile create --profile announcer --default \
+              --network TEST_NET \
+              --url http://api-01.eu-central-1.testnet.symboldev.network:3000
+
+  When prompted, enter a password to secure your profile, and select the ``PrivateKey`` import type:
+
+  .. code-block:: symbol-cli
+
+     ✔ Enter your wallet password: ... *********
+     ✔ Select an import type: » PrivateKey
+     ...
+     SUCCESS Stored announcer profile
+
+Announce links
+==============
+
+You will now use ``symbol-cli`` to announce to the network the transactions you prepared in ``payloads.txt``.
+
+Remote key link
+---------------
+
+Announce the Remote key link:
+
+.. code-block:: symbol-cli
+
+   symbol-cli transaction payload --sync --announce
+   ✔ Enter the transaction payload:
+
+Paste the first long text line from ``payloads.txt`` and press Enter:
+
+.. code-block:: symbol-cli
+
+   SUCCESS Transaction loaded:
+   ┌──────────────────────────────────────────────────────────────────────────────────┐
+   │                                 ACCOUNT_KEY_LINK                                 │
+   ├───────────────┬──────────────────────────────────────────────────────────────────┤
+   │ Max fee:      │ 1,000,000                                                        │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Network type: │ TEST_NET                                                         │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Deadline:     │ 2021-03-27 10:41:41.286                                          │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Signer:       │ TBGPYD-CO35V2-AMOYEJ-LEM44H-372M3I-6RWVFY-QCY                    │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Action:       │ Link                                                             │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+   └───────────────┴──────────────────────────────────────────────────────────────────┘
+   ┌──────────────────────────────────────────────────────────────────────────────────┐
+   │                                 ACCOUNT_KEY_LINK                                 │
+   ├───────────────┬──────────────────────────────────────────────────────────────────┤
+   │ Max fee:      │ 1,000,000                                                        │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Network type: │ TEST_NET                                                         │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Deadline:     │ 2021-03-27 10:41:41.286                                          │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Signer:       │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Action:       │ Link                                                             │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+   ├───────────────┴──────────────────────────────────────────────────────────────────┤
+   │                                Signature details                                 │
+   ├───────────────┬──────────────────────────────────────────────────────────────────┤
+   │ Payload:      │ A10000000000000042E0E0A0B8D7E1F27805F3537F80BFEAB6FEAC318908C486 │
+   │               │ 4D03260B83ED1D0332D6EA6E086A4B68C578DB690D78D50BDA5C706B1DC66472 │
+   │               │ 9326511547E42E0FCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
+   │               │ B902600CB7DA10330000000001984C4140420F000000000026F54C1B0A000000 │
+   │               │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+   │               │ 01                                                               │
+   ├───────────────┼──────────────────────────────────────────────────────────────────┤
+   │ Hash:         │ 08C63D3AFAC3767F43053AFF1ACA61381FE81929B2384B91C450010A547AFA4A │
+   └───────────────┴──────────────────────────────────────────────────────────────────┘
+   ...
+   SUCCESS Transaction announced
+   SUCCESS Transaction confirmed
+
+.. note::
+   If the transaction is **announced** but it never gets **confirmed** (``symbol-cli`` is stuck in ``Processing`` for more than a minute) it can be due to a number of things. Without interrupting ``symbol-cli``, copy the **transaction hash**, open a new terminal and run:
 
    .. code-block:: symbol-cli
 
-      ✔ Enter your wallet password: … *********
-      ✔ Select an import type: › PrivateKey
-      ✔ Enter your account private key: … ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-      ...
-      SUCCESS Stored offline-main profile
+      symbol-cli transaction status --hash <transaction hash>
 
-   ``symbol-cli`` is now ready to use. All transactions will be signed by your main account so make sure it has some funds to pay for the :doc:`../../concepts/fees`
+   If there has been any issue with the transaction, this should give you the cause and you can then interrupt ``symbol-cli``.
 
-   The following commands all use ``--max-fee 1000000`` which means that **1 XYM** will be paid for each transaction. Feel free to use a different number.
+   If you need to try again, **never re-announce the same payload**. Create a new one (from the Configuration machine) and announce it again.
 
-Now you are going to **create the transaction payloads**. In the next steps you will use ``symbol-cli`` to create some transactions but stop right before announcing them. Instead, you will copy the **transaction payload** from the console output into a text file to be used on an online machine.
+   The most common problems are:
 
-These payloads contain transactions **already signed by your main account** but no sensitive information, so it is safe to move them to an online machine.
+   - **Not enough funds** (``Failure_Core_Insufficient_Balance``): The main account (which signed the transaction) does not have enough funds to pay the fee. Transfer some funds and try with a new payload.
+   - **Deadline expired** (``Failure_Core_Past_Deadline``): Create a new payload and announce it again before the deadline expires (See the **Concerning deadlines** box above).
+   - **Insufficient fee**: No error will be reported but if the fee is too low most nodes will ignore it. Try again with a higher fee or be ready to wait for a long time.
+   - **Payload re-announced**: ``symbol-cli`` will be stuck in ``Processing`` and you will get no relevant information from the ``transaction status``. Just don't announce the same payload more than once.
 
-3. Obtain the :ref:`Account Key Link transaction <account-key-link-transaction>` payload.
+VRF key link
+------------
 
-   - This links your main account to the remote account used for harvesting.
-   - Use your **Remote account public key** in the ``--linked-public-key`` parameter. Find this key in the ``target/addresses.yml`` file:
+Announce the VRF key link:
 
-     .. code-block:: yaml
+.. code-block:: symbol-cli
 
-        remote:
-            publicKey: 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F
+   symbol-cli transaction payload --sync --announce
+   ✔ Enter the transaction payload:
 
-   - Do **not** announce the transaction (the machine is offline).
+Paste the second long text line from ``payloads.txt`` and wait for the transaction to be accepted.
 
-   .. code-block:: symbol-cli
+Voting key link
+---------------
 
-      symbol-cli transaction accountkeylink --max-fee 1000000 --mode normal \
-         --linked-public-key 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F \
-         --action Link
+Announce the Voting key link (if yours is a voting node):
 
-      ✔ Enter your wallet password: … *********
-      ┌──────────────────────────────────────────────────────────────────────────────────┐
-      │                                 ACCOUNT_KEY_LINK                                 │
-      ├───────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Max fee:      │ 1,000,000                                                        │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Network type: │ TEST_NET                                                         │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Deadline:     │ 2021-03-27 10:41:41.286                                          │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Action:       │ Link                                                             │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
-      ├───────────────┴──────────────────────────────────────────────────────────────────┤
-      │                                Signature details                                 │
-      ├───────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Payload:      │ A10000000000000042E0E0A0B8D7E1F27805F3537F80BFEAB6FEAC318908C486 │
-      │               │ 4D03260B83ED1D0332D6EA6E086A4B68C578DB690D78D50BDA5C706B1DC66472 │
-      │               │ 9326511547E42E0FCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
-      │               │ B902600CB7DA10330000000001984C4140420F000000000026F54C1B0A000000 │
-      │               │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
-      │               │ 01                                                               │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Hash:         │ 08C63D3AFAC3767F43053AFF1ACA61381FE81929B2384B91C450010A547AFA4A │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Signer:       │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
-      └───────────────┴──────────────────────────────────────────────────────────────────┘
-      ✔ Do you want to announce this transaction? … no
+.. code-block:: symbol-cli
 
-   Select all the text in the ``Payload`` box and paste it into a new text file named ``payloads.txt``. **Remove all spaces and other decorations** to obtain a single, long line of numbers and uppercase letters:
+   symbol-cli transaction payload --sync --announce
+   ✔ Enter the transaction payload:
 
-   .. code-block:: text
+Paste the third long text line from ``payloads.txt`` and wait for the transaction to be accepted.
 
-      A100000000000000703C88DEDC4ABC2917F00ADB12C45F2C333B1113405C3CFAB289E78D9C54DDFCB1FE7C3048B6DA735568A935C6C08AF7E70AEC614A2EE9590967A7A044E52B0DCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA10330000000001984C4140420F000000000038F32C1B0A0000001544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F01
+Start the node
+==============
 
-4. Obtain the :ref:`VRF Key Link transaction <vrf-key-link-transaction>` payload.
-     
-   - This key is required for harvesting.
-   - Use your **VRF account public key** in the ``--linked-public-key`` parameter. Find this key in the ``target/addresses.yml`` file:
+If all key link transactions were confirmed the node is now configured and you can finally launch it.
 
-     .. code-block:: yaml
+**Go to the directory** containing the ``target`` directory copied from the Configuration machine and **start the node**:
 
-        vrf:
-            publicKey: 856B6CCA574508158D66046CACEA2D81CB626DEEFDD3B6C466514CE31F32A52B
+.. code-block:: bash
 
-   - Do **not** announce the transaction (the machine is offline).
+   symbol-bootstrap start
 
-   .. code-block:: symbol-cli
+No other parameters are required, the configuration is already present in the ``target`` directory and Symbol Bootstrap will use it.
 
-      symbol-cli transaction vrfkeylink --max-fee 1000000 --mode normal \
-        --linked-public-key 856B6CCA574508158D66046CACEA2D81CB626DEEFDD3B6C466514CE31F32A52B \
-        --action Link
+The node should start and a lot of debug output should appear on the screen.
 
-   Again, copy the content of the ``Payload`` box, trim it, and add it to ``payloads.txt``, in a new line.
+.. code-block:: symbol-bootstrap
 
-5. Obtain the :ref:`Voting Key Link transaction <voting-key-link-transaction>` payload.
-     
-   - This key is only required for voting nodes.
-   - Use your **Voting account public key** in the ``--linked-public-key`` parameter. Find this key in the ``target/addresses.yml`` file:
-
-     .. code-block:: yaml
-
-        voting:
-            publicKey: 05693B4300ABFD28CD6BA434DD26F9FAF2342927FE32840898DCB895B8A17E84
-
-   - Do **not** announce the transaction (the machine is offline).
-
-   .. code-block:: symbol-cli
-
-      symbol-cli transaction votingkeylink --max-fee 1000000 --mode normal \
-        --linked-public-key 05693B4300ABFD28CD6BA434DD26F9FAF2342927FE32840898DCB895B8A17E84 \
-        --action Link --start-point 1 --end-point 360
-
-   Again, copy the content of the ``Payload`` box, trim it, and add it to ``payloads.txt``, in a new line.
-
-6. **Copy** the whole ``target`` directory to the **Node machine**. For example, using a pen drive, since you do not want to connect the **Configuration machine** to the Internet. Copy also ``payloads.txt``.
-
-Then, on the **Node machine**, the one that will run the node and be permanently connected to the Internet:
-
-7. **Install** Symbol Bootstrap as instructed in the :doc:`using-symbol-bootstrap` guide, and :doc:`symbol-cli <../../cli>` as you did in **Step 1**:
-
-   .. code-block:: bash
-
-      npm install --global symbol-cli
-
-8. **Create an announcer profile** for symbol-cli. This is only a temporary account used to announce the payloads; it does not require funds:
-
-   For MAINNET:
-
-   .. code-block:: bash
-
-      symbol-cli profile create --default --network MAIN_NET \
-        --url http://ngl-api-001.symbolblockchain.io:3000 
-
-   For TESTNET:
-
-   .. code-block:: bash
-
-      symbol-cli profile create --default --network TEST_NET \
-      --url http://api-01.eu-central-1.testnet.symboldev.network:3000
-
-   When prompted, enter a password to secure your profile, and select the ``PrivateKey`` import type:
-
-   .. code-block:: symbol-cli
-
-      ✔ Enter a profile name: ... announcer
-      ✔ Enter your wallet password: ... *********
-      ✔ Select an import type: » PrivateKey
-      ...
-      SUCCESS Stored announcer profile
-
-8. **Announce the Remote key link**.
-
-   .. code-block:: symbol-cli
-
-      symbol-cli transaction payload --sync --announce
-      ✔ Enter the transaction payload:
-
-   - Paste the first long text line from ``payloads.txt`` and press Enter:
-
-   .. code-block:: symbol-cli
-
-      SUCCESS Transaction loaded:
-      ┌──────────────────────────────────────────────────────────────────────────────────┐
-      │                                 ACCOUNT_KEY_LINK                                 │
-      ├───────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Max fee:      │ 1,000,000                                                        │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Network type: │ TEST_NET                                                         │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Deadline:     │ 2021-03-27 10:41:41.286                                          │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Signer:       │ TBGPYD-CO35V2-AMOYEJ-LEM44H-372M3I-6RWVFY-QCY                    │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Action:       │ Link                                                             │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
-      └───────────────┴──────────────────────────────────────────────────────────────────┘
-      ┌──────────────────────────────────────────────────────────────────────────────────┐
-      │                                 ACCOUNT_KEY_LINK                                 │
-      ├───────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Max fee:      │ 1,000,000                                                        │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Network type: │ TEST_NET                                                         │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Deadline:     │ 2021-03-27 10:41:41.286                                          │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Signer:       │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Action:       │ Link                                                             │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
-      ├───────────────┴──────────────────────────────────────────────────────────────────┤
-      │                                Signature details                                 │
-      ├───────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Payload:      │ A10000000000000042E0E0A0B8D7E1F27805F3537F80BFEAB6FEAC318908C486 │
-      │               │ 4D03260B83ED1D0332D6EA6E086A4B68C578DB690D78D50BDA5C706B1DC66472 │
-      │               │ 9326511547E42E0FCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
-      │               │ B902600CB7DA10330000000001984C4140420F000000000026F54C1B0A000000 │
-      │               │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
-      │               │ 01                                                               │
-      ├───────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Hash:         │ 08C63D3AFAC3767F43053AFF1ACA61381FE81929B2384B91C450010A547AFA4A │
-      └───────────────┴──────────────────────────────────────────────────────────────────┘
-      ...
-      SUCCESS Transaction announced
-      SUCCESS Transaction confirmed
-
-9. **Announce the VRF key link**.
-
-   .. code-block:: symbol-cli
-
-      symbol-cli transaction payload --sync --announce
-      ✔ Enter the transaction payload:
-
-   - Paste the second long text line from ``payloads.txt`` and wait for the transaction to be accepted.
-
-10. **Announce the Voting key link** if yours is a voting node.
-
-    .. code-block:: symbol-cli
-
-       symbol-cli transaction payload --sync --announce
-       ✔ Enter the transaction payload:
-
-    - Paste the third long text line from ``payloads.txt`` and wait for the transaction to be accepted.
-
-If all key link transactions were confirmed the node is now configured and you can finally launch it:
-
-11. **Go to the directory** containing the ``target`` directory copied from the Configuration machine and **start the node**:
-
-    .. code-block:: bash
-
-       symbol-bootstrap start
-
-    No other parameters are required, the configuration is already present in the ``target`` directory and Symbol Bootstrap will use it.
-
-    The node should start and a lot of debug output should appear on the screen.
+   info     Password has been provided
+   info     The generated preset target/preset.yml already exist, ignoring configuration. (run -r to reset or --upgrade to upgrade)
+   ...
 
 Your node should now be **up and running** and its main private key has never left the configuration (offline) machine.
 
-The next section deals with the scenario when you don't have access to the node's main account key.
-
-.. _secure-node-non-custodial-setup:
-
-*******************
-Non-custodial setup
-*******************
-
-It is possible to completely setup a node and then **relinquish its main account to an external account**.
-
-This is useful, for example, for node providers that work in a **non-custodial** manner. This is, **customers** hire the **node provider** to setup nodes for them and have any node rewards sent to their main accounts, without ever sending their account keys to the node provider.
-
-There are **many mechanisms** to achieve this in |codename|. This section explains the **simplest one**, assuming that the customer is not tech-savvy and therefore prefers not to use command-line tools like ``symbol-cli``.
-
-In summary, the node must be completely setup as explained before (using either the :ref:`secure-node-bootstrap-only` or :ref:`secure-node-offline-signatures`) and then full control of the node's **main account** is given to the customer account (called **extern account**) by turning main into a :doc:`../../concepts/multisig-account`.
-
-1. **Have a running node**, set up using either one of the two methods described in the previous sections.
-
-2. **Install** :doc:`symbol-cli <../../cli>`:
-
-   .. code-block:: bash
-
-      npm install --global symbol-cli
-
-3. **Prepare a multisig modification transaction**.
-
-   - This will add the **external** account (the customer's) as the only cosignatory for the **main** account.
-   - This will use ``symbol-cli`` so make sure you have a profile for the main account as explained in **Step 2** of the :ref:`secure-node-offline-signatures` section.
-
-   Run:
-
-   .. code-block:: bash
-
-      symbol-cli transaction multisigmodification --max-fee 1000000 \
-        --mode normal --min-removal-delta 1 --min-approval-delta 1 \
-        --action Add --aggregate-type AGGREGATE_COMPLETE \
-        --cosignatory-addresses ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-
-   - Use the **external account address** as cosignatory.
-   - Do **not** announce the transaction.
-
-   .. code-block:: symbol-cli
-
-      ✔ Enter your wallet password: … *********
-      ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-      │                                               AGGREGATE_COMPLETE                                                │
-      ├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Max fee:                                     │ 1,000,000                                                        │
-      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Network type:                                │ TEST_NET                                                         │
-      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Deadline:                                    │ 2021-03-27 14:51:01.099                                          │
-      ├──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┤
-      │                            Inner transaction 1 of 1 - MULTISIG_ACCOUNT_MODIFICATION                             │
-      ├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
-      │ [Inner tx. 1 of 1] Min approval delta:       │ 1                                                                │
-      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-      │ [Inner tx. 1 of 1] Min removal delta:        │ 1                                                                │
-      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-      │ [Inner tx. 1 of 1] Address addition (1 / 1): │ TAJ3DW-DCRWBU-V6CXBQ-TNAAKH-UPRPQ6-I2QW7V-7JA                    │
-      ├──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┤
-      │                                                Signature details                                                │
-      ├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
-      │ Payload:                                     │ F800000000000000FAE63B1603A8FA30BF5F8A7E5C7906349AAA89591BD20651 │
-      │                                              │ 013704F4E03894206D6543339716A8E4391E53873F8F43BEC10D9706F74764C7 │
-      │                                              │ 940C07A756F4950ACC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
-      │                                              │ B902600CB7DA1033000000000198414140420F0000000000EB39311C0A000000 │
-      │                                              │ 5B8F6FEBA2C4D0C7E1C084DA1E828B68C46EE7EE247811BE3DBDCE913E40E027 │
-      │                                              │ 50000000000000005000000000000000CC6D13D64FB9BF69B72846C3FE99127D │
-      │                                              │ 48C3293F473D528FB902600CB7DA103300000000019855410101010000000000 │
-      │                                              │ 9813B1D8628D834AF8570C26D00147A3E2F8791A85BF5FA4                 │
-      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Hash:                                        │ 13241107ACC87B4F7B047C335856326D86AC0F4FF2C0F52CCA1D7FC4E6491CB8 │
-      ├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-      │ Signer:                                      │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
-      └──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┘
-      ✔ Do you want to announce this transaction? … no
-
-   Select all the text in the ``Payload`` box and paste it into a new text file named ``payloads.txt``. **Remove all spaces and other decorations** to obtain a single, long line of numbers and uppercase letters:
-
-   .. code-block:: text
-
-      F800000000000000FAE63B1603A8FA30BF5F8A7E5C7906349AAA89591BD20651013704F4E03894206D6543339716A8E4391E53873F8F43BEC10D9706F74764C7940C07A756F4950ACC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033000000000198414140420F0000000000EB39311C0A0000005B8F6FEBA2C4D0C7E1C084DA1E828B68C46EE7EE247811BE3DBDCE913E40E02750000000000000005000000000000000CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033000000000198554101010100000000009813B1D8628D834AF8570C26D00147A3E2F8791A85BF5FA4
-
-   This payload **cannot be announced** without a **signature from the external account**, since it has been added as a cosignatory.
-
-4. **Send the payload to the customer**.
-
-5. The customer uses their :ref:`Symbol Desktop Wallet <wallet-desktop>` to create a signature for this payload:
-
-   - Open the Desktop Wallet and click on ``Go to offline transactions`` on the top right corner.
-   - Select the ``Cosign transaction`` tab.
-   - Paste the full payload into the big box labeled ``Paste the transaction payload``.
-   - Click on ``Import payload``.
-   - Select the ``Profile name`` and the **external** account (in the ``From:`` box).
-   - Enter the wallet's ``Password`` and click on ``Confirm``.
-   - A QR code and a long line of text will be obtained, looking similar to this one:
-
-     .. code-block:: json
-
-        {"parentHash":"13241107ACC87B4F7B047C335856326D86AC0F4FF2C0F52CCA1D7FC4E6491CB8","signature":"1D8FD3A815C45B9FFCCD48FF9DE24FAD172D373E889D25F3005FDAA0F87DB70AB9ABD2ECB79E467577FCE49B760729706247B24479CB32A88A4A1C1974D4220A","signerPublicKey":"7F71566C57A8E5B03EADBA28E4CA057428DDB37C766604B2827BC2D79BB195B8","version":{"lower":0,"higher":0}}
-
-   - Copy the whole line of text (for example by triple-clicking on it) and send it back to the node provider.
-
-6. **Announce the multisig modification**.
-
-   From any online machine that has installed ``symbol-cli`` and has an **announcer profile** (as explained in **Step 8** of the :ref:`secure-node-offline-signatures` section):
-
-   .. code-block:: symbol-cli
-
-      symbol-cli transaction payload --sync --announce --profile C --payload 
-      ? Enter the transaction payload: F8000000000...
-      SUCCESS Transaction loaded:
-      ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-      │                                      AGGREGATE_COMPLETE                                      │
-      ├──────────────────────────────────────────────┬───────────────────────────────────────────────┤
-      │ Max fee:                                     │ 1,000,000                                     │
-      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
-      │ Network type:                                │ TEST_NET                                      │
-      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
-      │ Deadline:                                    │ 2021-03-27 14:51:01.099                       │
-      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
-      │ Signer:                                      │ TBGPYD-CO35V2-AMOYEJ-LEM44H-372M3I-6RWVFY-QCY │
-      ├──────────────────────────────────────────────┴───────────────────────────────────────────────┤
-      │                   Inner transaction 1 of 1 - MULTISIG_ACCOUNT_MODIFICATION                   │
-      ├──────────────────────────────────────────────┬───────────────────────────────────────────────┤
-      │ [Inner tx. 1 of 1] Min approval delta:       │ 1                                             │
-      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
-      │ [Inner tx. 1 of 1] Min removal delta:        │ 1                                             │
-      ├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
-      │ [Inner tx. 1 of 1] Address addition (1 / 1): │ TAJ3DW-DCRWBU-V6CXBQ-TNAAKH-UPRPQ6-I2QW7V-7JA │
-      └──────────────────────────────────────────────┴───────────────────────────────────────────────┘
-      ? Cosignature JSON array in square brackets (Enter to skip): [{"parentHash"...
-      ✔ Do you want to announce this transaction? … yes
-
-   - When prompted for the transaction payload, paste it (the long single line of hexadecimal characters).
-   - When prompted for the cosignature, paste it (the long single line of JSON text) **BUT ENCLOSE IT IN SQUARE BRACKETS**.
-
-     This is, the cosignature should start with ``[`` and end with ``]``.
-
-   After a few seconds you should get:
-
-   .. code-block:: symbol-cli
-
-      ...
-      SUCCESS Transaction announced
-      SUCCESS Transaction confirmed
-
-From this point onwards, no operation can be performed on the node's **main** account without authorization from the **external** account, which is controlled by the customer.
-
-The customer can perform operations on the **main** account using the :ref:`Symbol Desktop Wallet <wallet-desktop>` and its **multisig** facilities.
+If you are building this node on behalf of a third party and you must relinquish control of it to an external account, you can read the :doc:`non-custodial-node-setup` guide now.
