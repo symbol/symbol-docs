@@ -441,10 +441,10 @@ div.figure .caption {
     padding: 0;
 }
 .sphinx-tabs .sphinx-menu a.item {
-    color: #00c8ff !important;
+    color: #5200c6 !important;
 }
 .sphinx-tabs .sphinx-menu a.active.item, .sphinx-tab {
-    border-color: #00c8ff !important;
+    border-color: #5200c6 !important;
 }
 .highlight > pre {
     color: #fff;
