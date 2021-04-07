@@ -1,0 +1,584 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-07 19:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:45
+msgid "Running a Secure Symbol node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:47
+msgid ""
+"The :doc:`running-a-symbol-node` guide explains how to easily **create a "
+"node using Symbol Bootstrap**. In that guide, the setup process is "
+"conducted on the same machine that will host the node, meaning that "
+"private keys are generated on a machine connected to the Internet. If you"
+" need a **hardened level of security** you can follow this guide instead,"
+" at the cost of a more involved setup process."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:49
+msgid ""
+"The **summary** of it is that the ``symbol-bootstrap start`` command is "
+"split into a ``config`` phase run offline, which generates a "
+"configuration folder, and the rest of the ``start`` command is then run "
+"on the destination online machine that will host the node. **The main "
+"account's private key never leaves the offline machine**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:55
+msgid "Machine"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:56
+msgid "Function"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:57
+msgid "**Configuration**"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:59
+msgid "Online to install software, then offline."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:60
+msgid "Creates configuration files."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:61
+msgid "Prepares setup transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:62
+msgid "**Node**"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:64
+msgid "Permanently online."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:65
+msgid "Runs the node."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:66
+msgid "Announces the setup transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:68
+msgid ""
+"A node can also be setup in such a way that all harvesting rewards go to "
+"an **external account** without requiring this account's private key. "
+"This is known as a **non-custodial setup** and must be configured **once "
+"the node is up and running**, so a pointer to the appropriate guide is "
+"given at the end of this page."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:72
+msgid "Configuration machine"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:75
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:366
+msgid "Setup"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:77
+msgid "On the **Configuration machine**, while still online:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:79
+msgid ""
+"**Install Symbol Bootstrap** as instructed in the :doc:`using-symbol-"
+"bootstrap` guide. Make sure you read also the **Configuration** section "
+"of that guide to get acquainted with presets and assemblies."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:81
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:370
+msgid ""
+"**Install Symbol CLI** as instructed in the :doc:`symbol-cli <../../cli>`"
+" guide. You just need to run:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:87
+msgid ""
+"**Run Symbol Bootstrap a first time**, so that it can download the "
+"required Docker images:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:94
+msgid ""
+"The output of this first run is irrelevant, that's why ``--noPassword`` "
+"is used and the ``target`` folder is removed."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:96
+msgid ""
+"**Disconnect the Configuration machine from the Internet** since private "
+"keys will be generated on this machine from this point."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:99
+msgid "Create configuration"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:102
+msgid "Profile"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:104
+msgid ""
+"**Create the main account profile**. This is the account that will "
+"receive all harvesting fees and whose :ref:`importance score <importance-"
+"calculation>` will be used when harvesting."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:106
+msgid ""
+"**The purpose of this guide is making sure that this account's private "
+"key is never used on an online machine**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:108
+msgid ""
+"This step will create a ``symbol-cli`` profile to hold the main account "
+"and sign transactions using its private key. The machine is offline now, "
+"so you need to provide some network-related data."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:110
+msgid ""
+"The commands below assume you want to create a **new** main account and "
+"use the ``profile create`` command. If you **already have an account** "
+"that you would like to use as main use the ``profile import`` command "
+"instead."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:114
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:380
+msgid "MAINNET"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:124
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:388
+msgid "TESTNET"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:134
+msgid ""
+"When prompted, enter a password to secure your profile and select the "
+"``PrivateKey`` import type:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:156
+msgid ""
+"``symbol-cli`` is now ready to be used later on. All transactions will be"
+" signed by your main account so make sure it has some funds to pay for "
+"the :doc:`../../concepts/fees`."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:158
+msgid ""
+"**Take note of the main account's private key and keep it in a safe "
+"place**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:161
+msgid "Preset"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:163
+msgid ""
+"**Create a** :ref:`custom preset file <symbol-bootstrap-presets>` for "
+"Symbol Bootstrap and name it ``custom.yml``. It must include, at least, "
+"these lines:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:174
+msgid ""
+"If you have customizations to make, like enabling :ref:`voting "
+"<finalization>` or enrolling in a :doc:`Reward Program <../../concepts"
+"/reward-programs>`, you can provide them too:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:187
+msgid "Configure"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:189
+msgid "**Run Symbol Bootstrap again**, this time with all required parameters:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:195
+msgid ""
+"You will be asked for the **password** to use to encrypt the "
+"**configuration files**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:217
+msgid ""
+"This generates a ``target`` directory containing an ``addresses.yml`` "
+"file and multiple configuration files."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:219
+msgid "**The main account's private key is not present in any of these files**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:221
+msgid ""
+"It is worth noting that Symbol Bootstrap enables :ref:`remote-harvesting`"
+" by default, meaning that the **main private key is never available in a "
+"plain text file** in the server. Only the remote key is, which acts as a "
+"proxy between the node and its main account."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:224
+msgid "Copy configuration"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:226
+msgid "Open ``custom.yml`` and **remove the line** containing ``mainPrivateKey``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:228
+msgid ""
+"Now that Symbol Bootstrap has already used it in the ``config`` stage, "
+"there is no need for such a sensitive key to be lying around in a plain "
+"text file."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:230
+msgid ""
+"**Copy** the whole ``target`` directory to a pen drive (or other non-"
+"networked support) to be used later."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:233
+msgid "Prepare transactions"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:235
+msgid ""
+"Still in the offline Configuration machine, you are now going to "
+"**prepare a series of link transactions manually**. These transactions "
+"will be created by ``symbol-cli``, signed by your main account, and will "
+"be moved to an online machine to be announced later on."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:237
+msgid ""
+"The following commands all use ``--max-fee 1000000`` which means that **1"
+" XYM** will be paid for each transaction. Feel free to use a different "
+"number after reading the :doc:`fees documentation <../../concepts/fees>`."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:241
+msgid ""
+"All transactions have a deadline, meaning that they must be announced "
+"(and confirmed) **before the deadline expires**."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:243
+msgid ""
+"There is currently a limitation in ``symbol-cli`` which sets this "
+"deadline to **2 hours** after transaction creation, for all non-multisig "
+"transactions."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:245
+msgid ""
+"This is a known limitation which is `being tracked "
+"<https://github.com/nemtech/symbol-cli/issues/373>`__."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:248
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:411
+msgid "Remote key link"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:250
+msgid ""
+"Obtain the :ref:`Account Key Link transaction <account-key-link-"
+"transaction>` payload."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:252
+msgid ""
+"This links your main account to the **remote account** used for :ref"
+":`remote-harvesting`. Symbol Bootstrap generated this account for you, "
+"and you can find its public key in the ``target/addresses.yml`` file:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:259
+msgid ""
+"In the ``--linked-public-key`` parameter below, use the **remote account "
+"public key**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:267
+msgid ""
+"Enter the password you used when you created the ``symbol-cli`` profile "
+"and do **not** announce the transaction (the machine is offline)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:300
+msgid ""
+"Select all the text in the ``Payload`` box and paste it into a new text "
+"file named ``payloads.txt``. **Remove all spaces and other decorations** "
+"to obtain a single line **containing only** numbers and uppercase "
+"letters:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:307
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:489
+msgid "VRF key link"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:309
+msgid ""
+"Obtain the :ref:`VRF Key Link transaction <vrf-key-link-transaction>` "
+"payload."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:311
+msgid "This key is required for harvesting."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:313
+msgid ""
+"Again, Symbol Bootstrap has already generated this key for you and you "
+"can find it in the ``target/addresses.yml`` file:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:320
+msgid ""
+"Use the **VRF account public key** in the ``--linked-public-key`` "
+"parameter below and do **not** announce the transaction (the machine is "
+"offline):"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:328
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:352
+msgid ""
+"Again, copy the content of the ``Payload`` box, trim it, and add it to "
+"``payloads.txt``, in a new line."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:331
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:501
+msgid "Voting key link"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:333
+msgid ""
+"Obtain the :ref:`Voting Key Link transaction <voting-key-link-"
+"transaction>` payload."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:335
+msgid "This key is only required for voting nodes."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:337
+msgid ""
+"If you added ``voting: true`` to ``custom.yml`` when creating the "
+"configuration, then Symbol Bootstrap has created this key too in "
+"``target/addresses.yml``:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:344
+msgid ""
+"Use the **Voting account public key** in the ``--linked-public-key`` "
+"parameter below and do **not** announce the transaction (the machine is "
+"offline):"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:355
+msgid "Copy payloads"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:357
+msgid ""
+"Copy ``payloads.txt`` to the pen drive where you previously copied the "
+"``target`` folder."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:361
+msgid "Online machine"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:363
+msgid ""
+"Move now to the online machine, the one that is permanently connected to "
+"the Internet and will host the node. Plug in the pen drive with the node "
+"configuration."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:368
+msgid ""
+"**Install Symbol Bootstrap** as instructed in the :doc:`using-symbol-"
+"bootstrap` guide."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:376
+msgid ""
+"**Create an announcer profile** for ``symbol-cli``. This is only a "
+"temporary account used to announce the payloads; it does not require "
+"funds:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:396
+msgid ""
+"When prompted, enter a password to secure your profile, and select the "
+"``PrivateKey`` import type:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:406
+msgid "Announce links"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:408
+msgid ""
+"You will now use ``symbol-cli`` to announce to the network the "
+"transactions you prepared in ``payloads.txt``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:413
+msgid "Announce the Remote key link:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:420
+msgid "Paste the first long text line from ``payloads.txt`` and press Enter:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:471
+msgid ""
+"If the transaction is **announced** but it never gets **confirmed** "
+"(``symbol-cli`` is stuck in ``Processing`` for more than a minute) it can"
+" be due to a number of things. Without interrupting ``symbol-cli``, copy "
+"the **transaction hash**, open a new terminal and run:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:477
+msgid ""
+"If there has been any issue with the transaction, this should give you "
+"the cause and you can then interrupt ``symbol-cli``."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:479
+msgid ""
+"If you need to try again, **never re-announce the same payload**. Create "
+"a new one (from the Configuration machine) and announce it again."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:481
+msgid "The most common problems are:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:483
+msgid ""
+"**Not enough funds** (``Failure_Core_Insufficient_Balance``): The main "
+"account (which signed the transaction) does not have enough funds to pay "
+"the fee. Transfer some funds and try with a new payload."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:484
+msgid ""
+"**Deadline expired** (``Failure_Core_Past_Deadline``): Create a new "
+"payload and announce it again before the deadline expires (See the "
+"**Concerning deadlines** box above)."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:485
+msgid ""
+"**Insufficient fee**: No error will be reported but if the fee is too low"
+" most nodes will ignore it. Try again with a higher fee or be ready to "
+"wait for a long time."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:486
+msgid ""
+"**Payload re-announced**: ``symbol-cli`` will be stuck in ``Processing`` "
+"and you will get no relevant information from the ``transaction status``."
+" Just don't announce the same payload more than once."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:491
+msgid "Announce the VRF key link:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:498
+msgid ""
+"Paste the second long text line from ``payloads.txt`` and wait for the "
+"transaction to be accepted."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:503
+msgid "Announce the Voting key link (if yours is a voting node):"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:510
+msgid ""
+"Paste the third long text line from ``payloads.txt`` and wait for the "
+"transaction to be accepted."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:513
+msgid "Start the node"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:515
+msgid ""
+"If all key link transactions were confirmed the node is now configured "
+"and you can finally launch it."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:517
+msgid ""
+"**Go to the directory** containing the ``target`` directory copied from "
+"the Configuration machine and **start the node**:"
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:523
+msgid ""
+"No other parameters are required, the configuration is already present in"
+" the ``target`` directory and Symbol Bootstrap will use it."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:525
+msgid ""
+"The node should start and a lot of debug output should appear on the "
+"screen."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:533
+msgid ""
+"Your node should now be **up and running** and its main private key has "
+"never left the configuration (offline) machine."
+msgstr ""
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:535
+msgid ""
+"If you are building this node on behalf of a third party and you must "
+"relinquish control of it to an external account, you can read the :doc"
+":`non-custodial-node-setup` guide now."
+msgstr ""
+

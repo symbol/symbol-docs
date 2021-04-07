@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-07 19:50+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:45
+msgid "Non-custodial node setup"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:47
+msgid ""
+"How to **relinquish control of a node's main account to an external "
+"account**, so that the external account's private key is never required "
+"in the node setup process."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:49
+msgid ""
+"This is useful, for example, for node providers that work in a **non-"
+"custodial** manner. This is, **customers** hire the **node provider** to "
+"setup nodes for them and have any node rewards sent to their main "
+"accounts, without ever sending their account keys to the node provider."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:51
+msgid ""
+"There are **many mechanisms** to achieve this in |codename|. This section"
+" explains the **simplest one**, assuming that the customer is not tech-"
+"savvy and therefore prefers not to use command-line tools like ``symbol-"
+"cli``."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:53
+msgid ""
+"**In summary**, once the node is completely setup, full control of the "
+"node's **main account** will be transferred to the customer account "
+"(called **external account**) by turning main into a :doc:`../../concepts"
+"/multisig-account`:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:55
+msgid ""
+"The node provider will prepare a transaction for offline signing and send"
+" it to the customer."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:56
+msgid ""
+"The customer signs the transaction using their Wallet from an offline "
+"machine, and returns the signature."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:57
+msgid "The node provider announces the transaction."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:61
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:63
+msgid "On the **Node** machine:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:65
+msgid ""
+"**Have a running Symbol node**, set up using the :doc:`running-a-secure-"
+"symbol-node` guide."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:67
+msgid "On the **Configuration** machine:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:69
+msgid ""
+"**Have symbol-cli installed**. This has already been installed in the "
+":doc:`running-a-secure-symbol-node` guide."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:70
+msgid ""
+"**Have a symbol-cli profile for the node's main account**. This too has "
+"already been done in the guide."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:72
+msgid ""
+"Make sure the correct profile is the default one (use ``symbol-cli "
+"profile setdefault`` or add the ``--profile`` parameter to all commands "
+"below)."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:74
+msgid "On the **Customer**'s machine:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:76
+msgid ""
+"**Have the** :ref:`Symbol Desktop Wallet <wallet-desktop>` **installed** "
+"and configured with the customer's account (**external account**)."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:80
+msgid "Prepare the transaction"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:82
+msgid ""
+"So far, the node's main account is a regular account. A :ref:`Multisig "
+"Account Modification Transaction <multisig-account-modification-"
+"transaction>` will be announced that will turn it into a "
+":doc:`../../concepts/multisig-account` with a single cosignatory: the "
+"**external account**."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:84
+msgid ""
+"This means that **any operation** on the main account will **require the "
+"signature** of the external account."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:86
+msgid ""
+"This transaction will be prepared by the node provider using ``symbol-"
+"cli`` and sent to the customer for signing."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:88
+msgid "Notes on this transaction:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:90
+msgid ""
+"The ``--max-fee 1000000`` parameter means that **1 XYM** will be paid for"
+" the transaction. Feel free to use a different number after reading the "
+":doc:`fees documentation <../../concepts/fees>`."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:91
+msgid ""
+"The default transaction deadline in ``symbol-cli`` is **2 hours**. Use "
+"the ``--deadline`` parameter if you need more time to get the customer's "
+"signature."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:93
+msgid "Run:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:102
+msgid ""
+"Use the **external account address** as cosignatory and do **not** "
+"announce the transaction:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:141
+msgid ""
+"Select all the text in the ``Payload`` box and paste it into a new text "
+"file named ``payload.txt``. **Remove all spaces and other decorations** "
+"to obtain a single line **containing only** numbers and uppercase "
+"letters:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:147
+msgid ""
+"This payload **cannot be announced** without a **signature from the "
+"external account**, since it has been added as a cosignatory."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:151
+msgid "Send payload to customer"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:153
+msgid "Send ``payload.txt`` to the customer, as a plain text file."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:157
+msgid "Sign the transaction"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:159
+msgid ""
+"The customer uses their :ref:`Symbol Desktop Wallet <wallet-desktop>` to "
+"create a signature for the received payload:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:161
+msgid ""
+"Open the Desktop Wallet and click on ``Go to offline transactions`` on "
+"the top right corner."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:162
+msgid "Select the ``Cosign transaction`` tab."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:163
+msgid ""
+"Paste the full payload into the big box labeled ``Paste the transaction "
+"payload``."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:164
+msgid "Click on ``Import payload``."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:165
+msgid ""
+"Select the ``Profile name`` and the **external** account (in the "
+"``From:`` box)."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:166
+msgid "Enter the wallet's ``Password`` and click on ``Confirm``."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:167
+msgid ""
+"A QR code and a long line of text will be obtained, looking similar to "
+"this one:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:173
+msgid ""
+"Copy the whole line of text (for example by triple-clicking on it) and "
+"paste it into a new text file named ``signature.txt``."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:177
+msgid "Send signature to provider"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:179
+msgid "Send ``signature.txt`` back to the node provider, as a plain text file."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:183
+msgid "Announce transaction"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:185
+msgid ""
+"Announce the multisig modification transaction from **any online "
+"machine** that has installed ``symbol-cli`` and has an **announcer "
+"profile** (as explained in :doc:`running-a-secure-symbol-node`):"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:213
+msgid ""
+"When prompted for the transaction payload, paste the contents of "
+"``payload.txt`` (the long line of hexadecimal characters)."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:214
+msgid ""
+"When prompted for the cosignature, paste the contents of "
+"``signature.txt`` (the long line of JSON text that the customer sent "
+"back), **BUT ENCLOSE IT IN SQUARE BRACKETS**."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:216
+msgid "This is, the cosignature should start with ``[`` and end with ``]``."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:218
+msgid "After a few seconds you should get:"
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:226
+msgid ""
+"From this point onwards, no operation can be performed on the node's "
+"**main** account without authorization from the **external** account, "
+"which is controlled by the customer."
+msgstr ""
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:228
+msgid ""
+"The customer can perform operations on the **main** account using the "
+":ref:`Symbol Desktop Wallet <wallet-desktop>` and its **multisig** "
+"facilities."
+msgstr ""
+
