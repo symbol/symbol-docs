@@ -636,3 +636,14 @@ img.with-rounded-shadow {
     background-color: pink;
     text-align:center;
 }
+/* Topics, similar to Notes but with custom titles.
+ * Copied from .alert */
+div.topic {
+    margin: 20px 0;
+    padding: 5px 1.5rem !important;
+    background: #F5F5F5;
+    color: #333;
+    border: 0px;
+    border-left: 6px solid #00c8ff;
+    border-radius: 0px 4px 4px 0px;
+}
