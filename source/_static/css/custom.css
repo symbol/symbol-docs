@@ -623,7 +623,11 @@ img.with-rounded-shadow {
     border: 1px lightgray;
     border-radius: 15px;
     box-shadow: 1px 1px 5px lightgray;
-}.right-align {
+}
+img.align-right {
+    margin-bottom: 16px;
+}
+.right-align {
     text-align: right;
 }
 /* Override Pygment's default for json string values which I don't like
