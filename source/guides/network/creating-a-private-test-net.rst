@@ -83,7 +83,7 @@ As an example:
             name: peer-node-0
             friendlyName: peer-node-0
 
-.. note:: Keep you Secret Keys secret at all times!
+.. note:: Keep your Secret Keys secret at all times!
 
 You can now import any of these accounts using the |symbol-cli| command-line tool for ease of access (Read :doc:`the symbol-cli guide <../../cli>` for more details):
 

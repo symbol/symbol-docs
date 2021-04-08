@@ -138,7 +138,7 @@ As an example:
                 publicKey: B304E6F9650CFFA52C6DC51CED29397F6C50F1E2F9AC34993549E0E3E4461027
                 address: TABWAGQNSI4AWPE3IVGS53CQWAN5BYRM5BHMNFA
 
-.. note:: Keep you Secret Keys secret at all times!
+.. note:: Keep your Secret Keys secret at all times!
 
 Use the information in the ``main`` section to access the node's account. When activating :ref:`delegated harvesting <delegated-harvesting>`, use the information in the ``transport`` section as the node's **public TLS key**.
 
