@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-04-08 13:32+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -45,29 +45,30 @@ msgstr "投票リンクキー"
 #: ../../source/serialization/coresystem.rst:53
 msgid ""
 "This transaction is required for node operators wanting to vote for "
-"finalized blocks."
-msgstr "このトランザクションは、ファイナライズ済みブロックに投票するノードオペレーターに必要です。"
+":ref:`finalized <finalization>` blocks."
+msgstr "このトランザクションは :ref:`ファイナライズ済み <finalization>` ブロックに投票するノードオペレーターに必要です。"
 
 #: ../../source/serialization/coresystem.rst:55
 msgid ""
-"Announce a VotingKeyLinkTransaction to associate a |BLS| public key with an "
-"account during a fixed period. An account can have active up to ``3`` "
+"Announce a VotingKeyLinkTransaction to associate a voting key with an "
+"account during a fixed period. An account can be linked to up to ``3`` "
 "different voting keys at the same time."
 msgstr ""
-"|BLS| 公開鍵を関連付けるために、一定期間のアカウントを持つ公開鍵で、 VotingKeyLinkTransaction "
-"をアナウンスします。アカウントは同時に最大で ``3`` つの異なる投票キーを有効化することができます。"
+"投票キーを関連付けるために、一定期間のアカウントを持つ公開鍵で、 VotingKeyLinkTransaction "
+"をアナウンスします。アカウントは同時に最大 ``3`` つの異なる投票キーにリンクできます。"
 
 #: ../../source/serialization/coresystem.rst:57
 msgid ""
-"The recommended production setting is always to have registered at least  "
-"``2`` keys with different ``endPoint`` values to ensure a key is registered "
-"after the first key expires."
+"The recommended production setting is to always have at least ``2`` linked "
+"keys with different ``endPoint`` values to ensure a key is registered after "
+"the first one expires. See more details here :ref:`in this guide <manual-"
+"enable-voting>`."
 msgstr ""
-"本番環境の推奨設定では、最初のキーの有効期限が切れた後にキーが確実に登録されるように、常に異なる ``endPoint`` 値を持つ、最低 ``2`` "
-"キーを登録します。"
+"本番環境の推奨設定では、最初のキーの有効期限が切れた後にキーが確実に登録されるように、常に異なる ``endPoint`` 値を持つ、最低でも "
+"``2`` つのキーをリンクします。詳細は :ref:`このガイド <manual-enable-voting>` を参照してください。"
 
 #: ../../source/serialization/coresystem.rst:65
-#: ../../source/serialization/coresystem.rst:96
+#: ../../source/serialization/coresystem.rst:97
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -77,40 +78,45 @@ msgstr ""
 
 #: ../../source/serialization/coresystem.rst:1
 #: ../../source/serialization/coresystem.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/serialization/coresystem.rst:1
+#: ../../source/serialization/coresystem.rst:1
 msgid "Linked public key."
 msgstr "リンクした公開鍵"
 
 #: ../../source/serialization/coresystem.rst:1
-msgid ""
-"Start finalization point. The value must be higher than the current "
-"finalization round."
-msgstr "ファイナライズポイントを開始します。値は現在のファイナライズラウンドよりも大きくします。"
+msgid "Start finalization point."
+msgstr "ファイナライゼーション開始ポイント"
 
 #: ../../source/serialization/coresystem.rst:1
 msgid ""
-"End finalization point. The value must be in the range between "
-"``startPoint`` and ``startPoint`` + ``maxVotingKeyLifetime`` - "
-"``minVotingKeyLifetime``.The lifetime properties are :ref:`configurable per "
+"End finalization point. The value must be higher than ``startPoint + "
+"minVotingKeyLifetime`` and lower than ``startPoint + "
+"maxVotingKeyLifetime``.The lifetime properties are :ref:`configurable per "
 "network <config-network-properties>`."
 msgstr ""
-"ファイナライズポイントを終了します。値は ``startPoint`` から``startPoint`` + "
-"``maxVotingKeyLifetime`` - ``minVotingKeyLifetime`` の範囲内です。ライフタイムプロパティは "
-":ref:`ネットワークごとに構成可能 <config-network-properties>` です。"
+"ファイナライズ終了ポイント。値は ``startPoint + minVotingKeyLifetime`` より大きく、 ``startPoint +"
+" maxVotingKeyLifetime`` より小さくする必要があります。ライフタイムプロパティは :ref:`ネットワークごとに構成可能 "
+"<config-network-properties>` です。"
 
 #: ../../source/serialization/coresystem.rst:1
 #: ../../source/serialization/coresystem.rst:1
 msgid "Account link action."
 msgstr "アカウントリンクアクション"
 
-#: ../../source/serialization/coresystem.rst:78
+#: ../../source/serialization/coresystem.rst:79
 msgid "Vrf Key Link"
 msgstr "Vrf キーリンク"
 
-#: ../../source/serialization/coresystem.rst:85
-msgid "This transaction is required for all harvesting eligible accounts."
-msgstr "このトランザクションはすべてのハーベスティング適格アカウントに必要です。"
+#: ../../source/serialization/coresystem.rst:86
+msgid ""
+"This transaction is required for all :ref:`harvesting eligible accounts "
+"<account_eligibility>`."
+msgstr "このトランザクションはすべての :ref:`ハーベスティング適格アカウント <account_eligibility>` に必要です。"
 
-#: ../../source/serialization/coresystem.rst:87
+#: ../../source/serialization/coresystem.rst:88
 msgid ""
 "Announce a VrfKeyLinkTransaction to link an account with a VRF public key. "
 "The linked key is used to randomize block production and leader/participant "

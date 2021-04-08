@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-04-08 15:27+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -61,6 +61,11 @@ msgid ""
 msgstr ""
 ":ref:`Transaction <transaction>` または :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
+
+#: ../../source/serialization/restriction_mosaic.rst:1
+#: ../../source/serialization/restriction_mosaic.rst:1
+msgid "Property"
+msgstr "プロパティ"
 
 #: ../../source/serialization/restriction_mosaic.rst:1
 msgid ""
