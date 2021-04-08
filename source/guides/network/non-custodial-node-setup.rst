@@ -11,7 +11,12 @@ How to **relinquish control of a node's main account to an external account**, s
 
 This is useful, for example, for node providers that work in a **non-custodial** manner. This is, **customers** hire the **node provider** to setup nodes for them and have any node rewards sent to their main accounts, without ever sending their account keys to the node provider.
 
-There are **many mechanisms** to achieve this in |codename|. This section explains the **simplest one**, assuming that the customer is not tech-savvy and therefore prefers not to use command-line tools like ``symbol-cli``.
+There are **many mechanisms** to achieve this in |codename|. This page explains the **simplest one**, assuming that the customer is not tech-savvy (and therefore prefers not to use command-line tools like ``symbol-cli``), and that **the customer's key are not allowed on an online machine**.
+
+.. note::
+   The process is even simpler if the customer's key are allowed to be online.
+
+   A guide will soon be added to this page describing this scenario.
 
 **In summary**, once the node is completely setup, full control of the node's **main account** will be transferred to the customer account (called **external account**) by turning main into a :doc:`../../concepts/multisig-account`:
 
