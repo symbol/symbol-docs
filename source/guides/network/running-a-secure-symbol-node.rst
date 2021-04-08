@@ -132,7 +132,7 @@ Preset
    -
      mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 
- You can read more about these properties in the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
+You can read more about these properties in the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
 
 If you have customizations to make, like enabling :ref:`voting <finalization>` or enrolling in a :doc:`Reward Program <../../concepts/reward-programs>`, you can provide them too:
 
@@ -495,4 +495,4 @@ The node should start and a lot of debug output should appear on the screen.
 
 Your node should now be **up and running** and its main private key has never left the configuration (offline) machine.
 
-If you are building this node on behalf of a third party and you must relinquish control of it to an external account, you can read the :doc:`non-custodial-node-setup` guide now.
+For added security, you can now turn the node's main account into a :doc:`../../concepts/multisig-account`. This is useful, for example, for node providers that work in a **non-custodial** manner. Read about this process in the :doc:`non-custodial-node-setup` guide.
