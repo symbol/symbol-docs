@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-04-06 14:13+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,13 +39,13 @@ msgstr "ユースケース"
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:53
 msgid ""
 "Alice and Bob want to exchange **10 alice.tokens for 10 bob.tokens**. The "
-"problem is that they are not in the same blockchain: alice.token is defined "
-"in |codename|'s public chain, whereas bob.token is only present in a private"
-" chain using |codename| technology."
+"problem is that they are not in the same network: alice.token is defined in "
+"a private chain using |codename| tech, whereas bob.token is only present in "
+"|codename|'s public chain."
 msgstr ""
-"Alice と Bob は **10 alice:tokens を 10 bob:tokens** "
-"に交換したいと思っています。課題は彼らが同じブロックチェーン上に存在していないことです: alice:token は |codename|  "
-"のパブリックチェーン上に、一方で bob:token は |codename| テクノロジーによるプライベートネットワーク上に定義されています。"
+"Alice と Bob は **10 alice.tokens を 10 bob.tokens** "
+"に交換しようとしています。課題は彼らが同じネットワークに存在していないことです: alice:token は |codename|  "
+"のプライベートチェーン上に、一方で bob:token は |codename| のパブリックチェーン上に存在しています。"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:56
 msgid "One non-atomic solution could be:"
@@ -98,11 +98,11 @@ msgid ""
 msgstr "スワップに関与するすべての参加者は、各ブロックチェーンで少なくとも 1 つのアカウントを所有している必要があります。"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:87
-msgid "Alice account in the public chain must own at least 10 alice.tokens."
-msgstr "Alice のアカウントはパブリックチェーン上で最低でも 10 alice.tokens を保有している必要があります。"
+msgid "Alice account in the private chain must own at least 10 alice.tokens."
+msgstr "Alice のアカウントはプライベートチェーン上で最低でも 10 alice.tokens を保有している必要があります。"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:88
-msgid "Bob account in the private chain must own at least 10 bob.tokens."
+msgid "Bob account in the public chain must own at least 10 bob.tokens."
 msgstr "Bob のアカウントはパブリックチェーン上で最低でも 10 bob.tokens を保有している必要があります。"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:89
@@ -168,8 +168,8 @@ msgstr "Bob はチェーンからシークレットを取得する必要があ�
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:157
 msgid ""
-"Bob defines announces the following **SecretLockTransaction TX2** to the "
-"**public network**"
+"Bob announces the following **SecretLockTransaction TX2** to the **public "
+"network**"
 msgstr "Bob は以下の **SecretLockTransaction TX2** を **パブリックネットワーク** へアナウンスします"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:1
@@ -244,9 +244,9 @@ msgstr "このプロセスはアトミックですか？"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:262
 msgid ""
-"The process is atomic, but should be completed with lots of time before the "
+"The process is atomic but should be completed with lots of time before the "
 "deadlines:"
-msgstr "このプロセスはアトミックですが、デッドラインを迎える前に、完了するまで多くの時間がかかることになります:"
+msgstr "このプロセスはアトミックですが、デッドラインを迎える前に完了するまで、多くの時間がかかることになります:"
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:264
 msgid ""
@@ -264,7 +264,7 @@ msgstr ""
 
 #: ../../source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst:268
 msgid ""
-"⚠️Alice signs and announces TX3: Alice receives Bob funds. Bob will have "
+"⚠️Alice signs and announces TX3: Alice receives Bob's funds. Bob will have "
 "enough time to sign TX4 because TX1's duration is longer than TX2's."
 msgstr ""
 "⚠️ Alice は TX3 に署名しアナウンスします: Alice は Bob の資産を受取ります: Bob は TX1 の正当性が TX2 "

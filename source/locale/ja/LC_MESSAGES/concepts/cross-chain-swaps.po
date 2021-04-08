@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-04-06 14:13+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +59,7 @@ msgstr ""
 "を使用します。トークンの交換に関わる各参加者はそれを完了させるために proof (hashlock) "
 "を示さなければなりません。それが失敗する場合、ロックされたアセットはタイムロックが解消された後、元の所有者へ返却されます。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:57
+#: ../../source/concepts/cross-chain-swaps.rst:58
 msgid ""
 "A thorough explanation of the protocol can be found on the `Bitcoin Wiki "
 "<https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_."
@@ -67,59 +67,51 @@ msgstr ""
 "プロトコルの詳細な説明は `Bitcoin Wiki "
 "<https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts>`_ を参照してください。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:61
+#: ../../source/concepts/cross-chain-swaps.rst:62
 msgid "Protocol"
 msgstr "プロトコル"
 
-#: ../../source/concepts/cross-chain-swaps.rst:63
+#: ../../source/concepts/cross-chain-swaps.rst:64
 msgid "Alice and Bob want to exchange **10 alice.tokens for 10 bob.tokens**."
 msgstr "Alice と Bob は **10 alice:tokens を 10 bob:tokens** に交換したいと思っています。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:65
+#: ../../source/concepts/cross-chain-swaps.rst:66
 msgid ""
 "The problem is that they are not in the same network: alice.token is defined"
-" in |codename|'s public chain whereas bob.token is only present in a private"
-" chain using |codename| tech."
+" in a private chain using |codename| tech, whereas bob.token is only present"
+" in |codename|'s public chain."
 msgstr ""
-"課題は彼らが同じネットワークに存在していないことです: alice:token は |codename|  のパブリックチェーン上に、一方で "
-"bob:token は |codename| テクノロジーによるプライベートネットワーク上に定義されています。"
+"課題は彼らが同じネットワークに存在していないことです: alice:token は |codename|  のプライベートチェーン上に、一方で "
+"bob:token は |codename| のパブリックチェーン上に存在しています。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:67
+#: ../../source/concepts/cross-chain-swaps.rst:68
 msgid ""
-"Trading tokens directly from one blockchain to the other is not possible, "
-"due to the technological differences between them."
-msgstr "あるブロックチェーンから他のブロックチェーンへトークンを直接交換することは不可能で、それらのテクノロジー的な違いによるものです。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:69
-msgid ""
-"In the case of |codename| public and private chain, the same mosaic name "
-"could have a different definition, distribution, or even not exist. Between "
-"Bitcoin and |codename|, the difference is even more evident, as each "
-"blockchain uses an entirely different technology."
+"Trading tokens directly from one blockchain to the other is impossible due "
+"to the technological differences between them. In the case of |codename| "
+"public and private chain, the same mosaic name could have a different "
+"definition, distribution, or even not exist. Between Bitcoin and |codename|,"
+" the difference is even more evident, as each blockchain uses an entirely "
+"different technology."
 msgstr ""
-"|codename| "
+"トークン間の技術的な違いにより、あるブロックチェーンから別のブロックチェーンへトークンを直接取引することは不可能です。 |codename| "
 "パブリックおよびプライベートチェーンの場合、同じモザイク名でも異なる定義と配布されていることも、存在しないこともあります。Bitcoin と "
 "|codename| の違いは、各ブロックチェーンがまったく異なるテクノロジーを使用しているためです。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:72
 msgid ""
 "Instead of transferring tokens between different chains literally, the trade"
-" will be performed inside each chain."
-msgstr "異なるチェーン間でトークンを転送する代わりに、各チェーン内で取引が行われます。"
+" will be performed inside each chain. The cross-chain swap protocol ensures "
+"that the token swap occurs atomically."
+msgstr ""
+"文字通り、異なるチェーン間でトークンを転送する代わりに、各チェーン内で取引が行われます。クロスチェーンスワッププロトコルは、トークンスワップがアトミックに発生することを保証します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:74
+#: ../../source/concepts/cross-chain-swaps.rst:78
 msgid ""
-"The cross chan swap protocol will ensure that the token swap occurs "
-"atomically."
-msgstr "クロスチェーンスワッププロトコルは、トークンスワップがアトミックに行われるようにします。"
+"Before starting with the swap, all participants involved in the swap must "
+"own at least an account in each blockchain."
+msgstr "スワップを開始する前に、すべての関与する参加者は、各ブロックチェーンで少なくとも 1 つのアカウントを所有している必要があります。"
 
 #: ../../source/concepts/cross-chain-swaps.rst:80
-msgid ""
-"Before starting with the swap, all participants involved int the swap must "
-"own at least one account in each blockchain."
-msgstr "スワップを開始する前に、関与するすべての参加者は、各ブロックチェーンで少なくとも 1 つのアカウントを所有している必要があります。"
-
-#: ../../source/concepts/cross-chain-swaps.rst:82
 msgid ""
 "Alice generates a random set of bytes called ``proof``. The proof should "
 "have a size between ``10`` and ``1000`` bytes."
@@ -127,7 +119,7 @@ msgstr ""
 "Alice は ``proof`` と呼ばれるランダムなバイトを生成します。proof は ``10`` から ``1000`` "
 "バイトの間でなければなりません。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:84
+#: ../../source/concepts/cross-chain-swaps.rst:82
 msgid ""
 "Alice hashes the obtained proof with one of the :ref:`available algorithms "
 "<lock-hash-algorithm>` to generate the ``secret``."
@@ -135,7 +127,7 @@ msgstr ""
 "Alice は得られた proof を :ref:`利用可能なアルゴリズム <lock-hash-algorithm>` の1つでハッシュ化して "
 "``secret`` を生成します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:86
+#: ../../source/concepts/cross-chain-swaps.rst:84
 msgid ""
 "Alice defines the :ref:`SecretLockTransaction <secret-lock-transaction>` "
 "**TX1**:"
@@ -156,7 +148,7 @@ msgstr "タイプ"
 msgid "Bob's address (Private Chain)"
 msgstr "Bob のアドレス (プライベートチェーン)"
 
-#: ../../source/concepts/cross-chain-swaps.rst:101
+#: ../../source/concepts/cross-chain-swaps.rst:99
 msgid ""
 "Once announced, this transaction will remain locked until someone discovers "
 "the proof that matches the secret. If no one unlocks it before the duration "
@@ -165,13 +157,13 @@ msgstr ""
 "度アナウンスされると、誰かがシークレットにマッチする証明を発見するまで、このトランザクションはロックされたままです。もしセットされた期限よりも前に、誰もアンロックしない場合は、ロックされた資産は"
 " Alice へ返還されます。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:103
+#: ../../source/concepts/cross-chain-swaps.rst:101
 msgid ""
 "Alice **announces TX1 to the private network** and **shares with Bob the "
 "secret**."
 msgstr "Alice は **TX1 をプライベートネットワークへアナウンス** し **Bob とシークレットを共有** します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:105
+#: ../../source/concepts/cross-chain-swaps.rst:103
 msgid ""
 "Bob should retrieve the secret from the chain and announces the following "
 "**SecretLockTransaction TX2** to the **public network**:"
@@ -184,7 +176,7 @@ msgstr ""
 msgid "Alice's address (Public Chain)"
 msgstr "Alice のアドレス (パブリックチェーン)"
 
-#: ../../source/concepts/cross-chain-swaps.rst:120
+#: ../../source/concepts/cross-chain-swaps.rst:118
 msgid ""
 "Alice announces the :ref:`SecretProofTransaction <secret-proof-transaction>`"
 " **TX3** to the **public network**. This transaction defines the encrypting "
@@ -193,7 +185,7 @@ msgstr ""
 "Alice は :ref:`SecretProofTransaction <secret-proof-transaction>` **TX3** を "
 "**パブリックネットワーク** へアナウンスします。このトランザクションは使用している暗号化アルゴリズム、オリジナルの証明とシークレットを定義します。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:134
+#: ../../source/concepts/cross-chain-swaps.rst:132
 msgid ""
 "Once TX3 is confirmed, the **proof** is revealed. **TX2 transaction is "
 "unlocked**, and Alice receives the locked funds."
@@ -201,7 +193,7 @@ msgstr ""
 "TX3 が承認されると **proof** が明かされます。**TX2 トランザクションはアンロック** されて Alice "
 "はロックされた資産を受け取ります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:136
+#: ../../source/concepts/cross-chain-swaps.rst:134
 msgid ""
 "Bob picks the proof and announces the **SecretProofTransaction TX4** to the "
 "**private network**, receiving the locked funds from **TX1**."
@@ -209,13 +201,13 @@ msgstr ""
 "Bob は proof を手に入れて **SecretProofTransaction TX4** を **プライベートネットワーク** "
 "へアナウンスし、ロックされた資産を **TX1** から受け取ります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:150
+#: ../../source/concepts/cross-chain-swaps.rst:148
 msgid ""
-"The process is atomic, but should be completed with lots of time before the "
+"The process is atomic but should be completed with lots of time before the "
 "deadlines:"
-msgstr "このプロセスはアトミックですが、デッドラインを迎える前に、完了するまで多くの時間がかかることになります:"
+msgstr "このプロセスはアトミックですが、デッドラインを迎える前に完了するまで、多くの時間がかかることになります:"
 
-#: ../../source/concepts/cross-chain-swaps.rst:152
+#: ../../source/concepts/cross-chain-swaps.rst:150
 msgid ""
 "TX1's duration should be significantly bigger than TX2's to guarantee that "
 "the second participant will have time to unlock TX1 after the first one "
@@ -224,7 +216,7 @@ msgstr ""
 "TX1 の期間は TX2 の期間より大幅に長くして、最初の参加者が proof を公開した後に、2番目の参加者が TX1 "
 "のロックを解除する時間を確保する必要があります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:153
+#: ../../source/concepts/cross-chain-swaps.rst:151
 msgid ""
 "Each participant must wait for at least ``maxRollBackBlocks`` between "
 "announcements to prevent experiencing :ref:`transaction rollbacks "
@@ -233,7 +225,7 @@ msgstr ""
 ":ref:`transaction rollbacks <rollbacks>` を回避するには、各参加者のアナウンス間に少なくとも "
 "``maxRollBackBlocks`` を待機する必要があります。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:157
+#: ../../source/concepts/cross-chain-swaps.rst:155
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -249,10 +241,10 @@ msgstr "異なるチェーン間でのトークンスワップを開始するト
 msgid "transaction to conclude a token swap between different chains."
 msgstr "異なるチェーン間でのトークンスワップを完結するトランザクション。"
 
-#: ../../source/concepts/cross-chain-swaps.rst:169
+#: ../../source/concepts/cross-chain-swaps.rst:167
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/cross-chain-swaps.rst:179
+#: ../../source/concepts/cross-chain-swaps.rst:177
 msgid "Continue: :doc:`Cryptography <cryptography>`."
 msgstr "次へ: :doc:`暗号手法 <cryptography>`"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-04-08 13:32+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -74,40 +74,40 @@ msgid ""
 "around**."
 msgstr "公開鍵は秘密鍵から取得できますが **その逆はできません** 。"
 
-#: ../../source/concepts/cryptography.rst:59
+#: ../../source/concepts/cryptography.rst:61
 msgid "|codename| keys"
 msgstr "|codename| キー"
 
-#: ../../source/concepts/cryptography.rst:61
+#: ../../source/concepts/cryptography.rst:63
 msgid ""
 "Key pairs are used in |codename| in different places, for **different "
 "purposes**. This is a summary of the keys used:"
 msgstr "キーペアは |codename| のさまざまな場所で **さまざまな目的** に使用されます。これはキーの使用目的の要約です:"
 
-#: ../../source/concepts/cryptography.rst:63
+#: ../../source/concepts/cryptography.rst:65
 msgid ""
 "**Main**: This key pair manages a **regular** :doc:`account`, containing "
 "assets like mosaics or namespaces."
 msgstr "**Main**: このキーペアは資産やモザイク、ネームスペースを保有する **通常** :doc:`account` を管理します。"
 
-#: ../../source/concepts/cryptography.rst:64
+#: ../../source/concepts/cryptography.rst:66
 msgid ""
 "**Remote**: This key pair manages the **remote account** used in :ref"
 ":`remote-harvesting`."
 msgstr ""
 "**Remote**: このキーペアは :ref:`remote-harvesting` において **リモートアカウント** を管理します。"
 
-#: ../../source/concepts/cryptography.rst:65
+#: ../../source/concepts/cryptography.rst:67
 msgid "**VRF**: Required :ref:`for harvesting <account_eligibility>`."
 msgstr "**VRF**: :ref:`ハーベスティング <account_eligibility>` で要求されます。"
 
-#: ../../source/concepts/cryptography.rst:66
+#: ../../source/concepts/cryptography.rst:68
 msgid ""
 "**Voting**: Required for nodes participating in the :ref:`finalization` "
 "process."
 msgstr "**Voting**: :ref:`finalization` プロセスに参加するノードに必要です。"
 
-#: ../../source/concepts/cryptography.rst:67
+#: ../../source/concepts/cryptography.rst:69
 msgid ""
 "**Transport**: This key pair is used by nodes for secure transport over `TLS"
 " <https://en.wikipedia.org/wiki/Transport_Layer_Security>`__."
@@ -116,7 +116,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Transport_Layer_Security>`__ "
 "を介した、安全な転送のためにノードが使用します。"
 
-#: ../../source/concepts/cryptography.rst:71
+#: ../../source/concepts/cryptography.rst:73
 msgid ""
 "As a rule of thumb, the **private key** in any key pair should be kept "
 "secret at all times. However, **how bad is it to have a private key "
@@ -170,17 +170,17 @@ msgid ""
 "harmless otherwise."
 msgstr "攻撃者はハーベスティングの委任をノードから盗むことができますが、それ以外に害はありません。"
 
-#: ../../source/concepts/cryptography.rst:86
+#: ../../source/concepts/cryptography.rst:88
 msgid "Signature"
 msgstr "署名"
 
-#: ../../source/concepts/cryptography.rst:88
+#: ../../source/concepts/cryptography.rst:90
 msgid ""
 "**All transactions are signed** using a private key, producing 512-bit (64 "
 "byte) **signatures**."
 msgstr "**すべてのトランザクションは秘密鍵を使用して署名され** 512 bit (64 byte) の **署名** を生成します。"
 
-#: ../../source/concepts/cryptography.rst:90
+#: ../../source/concepts/cryptography.rst:92
 msgid ""
 "As part of the regular workflow of the protocol, signatures are "
 "**validated** using the matching public key. This ensures the authenticity "
@@ -188,34 +188,34 @@ msgid ""
 msgstr ""
 "プロトコルは通常のワークフローの一部として、一致する公開鍵を使用して署名を **検証** します。これによりエンティティの署名者の信頼性が保証されます。"
 
-#: ../../source/concepts/cryptography.rst:96
+#: ../../source/concepts/cryptography.rst:98
 msgid "Address"
 msgstr "アドレス"
 
-#: ../../source/concepts/cryptography.rst:98
+#: ../../source/concepts/cryptography.rst:100
 msgid ""
 "|codename| public keys can be shared in a **shorter form** as 39-character "
 "addresses."
 msgstr "|codename| 公開鍵は 39 文字のより **短い形式** である、アドレスとして共有できます。"
 
-#: ../../source/concepts/cryptography.rst:100
+#: ../../source/concepts/cryptography.rst:102
 msgid "First, a 24-byte triplet is built, consisting of:"
 msgstr "前 24-byte トリプレットが構成されています:"
 
-#: ../../source/concepts/cryptography.rst:102
+#: ../../source/concepts/cryptography.rst:104
 msgid "A network-id byte."
 msgstr "network-id バイト"
 
-#: ../../source/concepts/cryptography.rst:103
+#: ../../source/concepts/cryptography.rst:105
 msgid "A 160-bit (20 byte) hash of the account's public key."
 msgstr "アカウントの公開鍵の 160-bit (20 byte) ハッシュ"
 
-#: ../../source/concepts/cryptography.rst:104
+#: ../../source/concepts/cryptography.rst:106
 msgid ""
 "A 3-byte checksum, to allow the quick recognition of mistyped addresses."
 msgstr "アドレスのミスタイプを素早く確認するための 3-byte のチェックサム"
 
-#: ../../source/concepts/cryptography.rst:106
+#: ../../source/concepts/cryptography.rst:108
 msgid ""
 "Then, the whole string is `Base32-encoded "
 "<https://en.wikipedia.org/wiki/Base32>`__ to produce the 39-character "
@@ -224,7 +224,7 @@ msgstr ""
 "次に、39文字のアドレスを生成するために、文字列全体が `Base32 でエンコード "
 "<https://en.wikipedia.org/wiki/Base32>`__ されます。"
 
-#: ../../source/concepts/cryptography.rst:108
+#: ../../source/concepts/cryptography.rst:110
 msgid ""
 "It is possible to create an address without interacting with the blockchain."
 " In fact, the blockchain only tracks addresses and public keys when they "
@@ -232,11 +232,11 @@ msgid ""
 msgstr ""
 "ブロックチェーンと疎通せずにアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。"
 
-#: ../../source/concepts/cryptography.rst:114
+#: ../../source/concepts/cryptography.rst:116
 msgid "HD-Wallets and Mnemonics"
 msgstr "HD-Wallets とニーモニック"
 
-#: ../../source/concepts/cryptography.rst:116
+#: ../../source/concepts/cryptography.rst:118
 msgid ""
 "**Hierarchical Deterministic Wallets** (HD-Wallets for short) can **derive a"
 " series of accounts** from a single seed account. This allows handling a "
@@ -247,16 +247,16 @@ msgstr ""
 "できます。これにより単一の :ref:`キーペア <keypair>` "
 "を使用してアカウントのグループを処理できるようになり、管理が大幅に簡素化されます。"
 
-#: ../../source/concepts/cryptography.rst:118
+#: ../../source/concepts/cryptography.rst:120
 msgid "Only one key to protect."
 msgstr "一つの鍵だけを守る"
 
-#: ../../source/concepts/cryptography.rst:119
+#: ../../source/concepts/cryptography.rst:121
 msgid ""
 "Multiple accounts can be stored in a single QR code or **mnemonic phrase**."
 msgstr "複数のアカウントを 1 つの QR コードまたは **ニーモニック語群** に保存できます。"
 
-#: ../../source/concepts/cryptography.rst:121
+#: ../../source/concepts/cryptography.rst:123
 msgid ""
 "A **Mnemonic Phrase** is human-friendly representation for a private key, "
 "composed of **24 random English words**. Mnemonic phrases are sometimes used"
@@ -266,7 +266,7 @@ msgstr ""
 "**ニーモニック語群** は秘密鍵をヒューマンフレンドリーな **24 のランダムな英単語** 表現です。ニーモニックフレーズは "
 "**人間にとって覚えやすく、書き留めやすい** ため、秘密鍵の代わりに使用されることがあります。"
 
-#: ../../source/concepts/cryptography.rst:123
+#: ../../source/concepts/cryptography.rst:125
 msgid ""
 "However, they are **equivalent to private keys** so it is critical that they"
 " are kept secret at all times. Even more so in the |codename| :ref:`wallet-"
@@ -275,7 +275,7 @@ msgstr ""
 "ただし、これらは **秘密鍵** と同等なので、常に秘密にしておかなければなりません。 |codename| では、さらにそうですが :ref"
 ":`wallet-desktop` **ニーモニックフレーズはシードアカウントのキーをエンコードします** 。"
 
-#: ../../source/concepts/cryptography.rst:125
+#: ../../source/concepts/cryptography.rst:127
 msgid ""
 "See the `NIP-6 <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_"
 " document for technical details on |codename|'s mechanism to create HD "
@@ -284,6 +284,6 @@ msgstr ""
 "HD ウォレットを作成する |codename| のメカニズムに関する技術的な詳細は `NIP-6 "
 "<https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ドキュメントを参照してください。"
 
-#: ../../source/concepts/cryptography.rst:127
+#: ../../source/concepts/cryptography.rst:129
 msgid "Continue: :doc:`Block <block>`."
 msgstr "次項: :doc:`ブロック <block>`"

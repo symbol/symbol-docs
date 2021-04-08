@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-04-09 09:50+0000\n"
 "PO-Revision-Date: 2021-03-02 08:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -20,3 +20,216 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/network/supernode-enrollment.rst:40
+msgid "Enrolling to the Supernode program"
+msgstr "スーパーノードプログラムに登録する"
+
+#: ../../source/guides/network/supernode-enrollment.rst:42
+msgid ""
+"This guide shows how to create a node and register it as a **Supernode**. "
+"Make sure you know about the :ref:`supernode-program` before continuing with"
+" this guide."
+msgstr ""
+"このガイドでは、ノードを作成して **スーパーノード** として登録する方法を示します。このガイドを続行する前に :ref:`supernode-"
+"program` について理解してください。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:44
+msgid ""
+"The :doc:`running-a-symbol-node` guide contains more details on how to "
+"create a |codename| node and its content **partially overlaps** this guide. "
+"You can either follow that guide to build a **regular node** or this one to "
+"build a **supernode**, but **not both**."
+msgstr ""
+":doc:`running-a-symbol-node` ガイドには |codename| "
+"ノードの作成方法の詳細が含まれており、そのコンテンツはこのガイドと **部分的に重複しています** 。そのガイドに従って **通常ノード** "
+"を構築するか、このガイドに従って **スーパーノード** を構築できますが **両方** を構築することはできません。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:46
+msgid ""
+"You can create your supernode using :ref:`Symbol Bootstrap <enroll-"
+"supernode-with-bootstrap>`, which is the easiest method, or :ref:`manually "
+"<enroll-supernode-manually>`."
+msgstr ""
+":ref:`Symbol Bootstrap <enroll-supernode-with-bootstrap>` "
+"を用いるのが最速でスーパーノードの作る方法ですが、 :ref:`手動 <enroll-supernode-manually>` "
+"で作成することもできます。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:52
+msgid "Using Symbol Bootstrap"
+msgstr "Symbol Bootstrap の使用"
+
+#: ../../source/guides/network/supernode-enrollment.rst:54
+msgid ""
+"Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. "
+":doc:`Learn about this tool <using-symbol-bootstrap>` if you are not "
+"familiar with it."
+msgstr ""
+"Symbol Bootstrap は |codename| ノードを作成し起動するのに **簡単な方法** です。親しみがなければ "
+":doc:`このツールを学習 <using-symbol-bootstrap>` してください。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:56
+msgid ""
+"Create a :ref:`custom preset file <symbol-bootstrap-presets>` named, for "
+"example, ``supernode.yml``:"
+msgstr ""
+"例として ``supernode.yml`` と命名した  :ref:`カスタムプリセットファイル <symbol-bootstrap-"
+"presets>` を作成します:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:64
+msgid ""
+"If you want the node to be also a :ref:`Voting node <finalization>` (and "
+"benefit from the :ref:`Voting Node rewards program <voting-node-program>`) "
+"add also ``voting: true``."
+msgstr ""
+"ノードを :ref:`投票ノード <finalization>` にもしたい場合 (そして :ref:`投票ノード報酬プログラム <voting-"
+"node-program>` の恩恵を受ける場合) は ``voting: true`` も追加します。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:66
+msgid ""
+"If you already have some of the required node accounts (main, transport, "
+"remote, VRF or voting) `you can provide them in the preset file too "
+"<https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md"
+"#user-content-specify-the-nodes-private-keys>`__."
+msgstr ""
+"必要なノードアカウント (main, transport, remote, VRF または voting) のいくつかをすでに持っている場合は "
+"`プリセットファイルにそれらを記述することもできます <https://github.com/nemtech/symbol-"
+"bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-"
+"private-keys>`__ 。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:70
+msgid "**Create and run the node** using the new preset file:"
+msgstr "新しいプリセットファイルを使用して **ノードを作成して実行します** :"
+
+#: ../../source/guides/network/supernode-enrollment.rst:72
+msgid ""
+"Along with the standard node services, this will also download and install "
+"the **monitoring agent**."
+msgstr "標準のノードサービスに加えて **監視エージェント** もダウンロードしてインストールします。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:78
+msgid ""
+"The ``start`` command will create the node configuration and then launch it."
+msgstr "``start`` コマンドはノード設定を作成し、起動を行います。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:80
+msgid ""
+"For test purposes you can use |codename|'s TESTNET using ``-p testnet``."
+msgstr "テスト目的に ``-p testnet`` を使うことで |codename| のテストネットを使うことができます。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:84
+msgid ""
+"You can find the node's main account address in the ``target/addresses.yml``"
+" file."
+msgstr "ノードのメインアカウントアドレスは ``target/addresses.yml`` ファイルにあります。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:98
+msgid "**Enroll in the Supernode program**."
+msgstr "**スーパーノードプログラムに登録する**"
+
+#: ../../source/guides/network/supernode-enrollment.rst:106
+msgid "See the note regarding fees in the previous step."
+msgstr "前のステップの手数料に関する注記を参照してください。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:114
+msgid "Manually"
+msgstr "手動"
+
+#: ../../source/guides/network/supernode-enrollment.rst:122
+msgid "**Download the node monitoring agent**:"
+msgstr "**ノードモニタリングエージェントのダウンロード**:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:124
+msgid ""
+"`Download the Linux binary <https://symbol-node-reward.s3-eu-"
+"west-1.amazonaws.com/packages/1.0.0/agent_binary/agent-linux.bin>`__ and "
+"make it executable:"
+msgstr ""
+"`Linux バイナリをダウンロード <https://symbol-node-reward.s3-eu-"
+"west-1.amazonaws.com/packages/1.0.0/agent_binary/agent-linux.bin>`__ "
+"して、実行権限を付与してください:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:131
+msgid "**Create certificates** for the monitoring agent:"
+msgstr "モニタリングエージェントのための **証明書を作成** します:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:135
+msgid ""
+"Make sure you have `OpenSSL <https://www.openssl.org/>`__ installed (for "
+"example running ``sudo apt install openssl``) and then run:"
+msgstr ""
+"`OpenSSL <https://www.openssl.org/>`__ がインストール済み (``sudo apt install "
+"openssl`` でインストール) であることを確認し、実行します:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:150
+msgid "**Configure the monitoring agent**:"
+msgstr "**モニタリングエージェントの設定**:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:173
+msgid "**Run the agent**:"
+msgstr "**エージェントの起動**:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:181
+msgid "**Send the enrolling message**"
+msgstr "**登録メッセージの送信**"
+
+#: ../../source/guides/network/supernode-enrollment.rst:193
+msgid "Finally, the recipient address for this transaction is:"
+msgstr "最後に、このトランザクションの受信アドレスは:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:196
+msgid "``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` for TESTNET."
+msgstr "``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` テストネット"
+
+#: ../../source/guides/network/supernode-enrollment.rst:198
+msgid "The transaction can be announced using :doc:`symbol-cli <../../cli>`:"
+msgstr ":doc:`symbol-cli <../../cli>` を使用してトランザクションをアナウンスできます:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:207
+msgid ""
+"**This transaction must be signed by your node's main account**, so make "
+"sure it is the default profile in ``symbol-cli``."
+msgstr ""
+"**このトランザクションはノードのメインアカウントによって署名されている必要があります** 。したがって、これが ``symbol-cli`` "
+"のデフォルトプロファイルであることを確認してください。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:209
+msgid ""
+"This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure "
+"your main account has **extra funds** beyond the requirements of the "
+"Supernode program."
+msgstr ""
+"このトランザクションでは少額の :doc:`手数料 <../../concepts/fees>` "
+"を支払うため、メインアカウントにスーパーノードプログラムの要件を超える **余剰の資産** があることを確認してください。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:213
+msgid "Validate the setup"
+msgstr "セットアップの検証"
+
+#: ../../source/guides/network/supernode-enrollment.rst:215
+msgid ""
+"You can **validate your node** by checking that all services are running "
+"properly. Check that the following URLs return valid data:"
+msgstr ""
+"すべてのサービスが正しく動作していることを確認して **ノードを検証** できます。次の URL で有効なデータを返却することを確認できます:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:217
+msgid ""
+"`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
+"Node's connection to the network."
+msgstr ""
+"`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
+"ノードの接続"
+
+#: ../../source/guides/network/supernode-enrollment.rst:218
+msgid ""
+"`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
+"Node's health."
+msgstr ""
+"`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
+"ノードの状態"
+
+#: ../../source/guides/network/supernode-enrollment.rst:221
+msgid ""
+"And then check again that they are accessible through your public host name."
+msgstr "次に、パブリックホスト名からアクセスできることをもう一度確認します。"

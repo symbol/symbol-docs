@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-04-08 13:32+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,8 +40,13 @@ msgid "|cli| is distributed using the node package manager ``npm``."
 msgstr "|cli| は node パッケージマネージャの ``npm`` によって公開されています。"
 
 #: ../../source/cli.rst:56
-msgid "Symbol CLI require Node.js 12 LTS to execute."
-msgstr "Symbol CLI は Node.js 12 LTS を実行に必要とします。"
+msgid ""
+"Symbol CLI requires `node.js <http://nodejs.org>`__  12 LTS to run. It is "
+"recommended that you install node.js using `nvm <https://github.com/nvm-"
+"sh/nvm>`__."
+msgstr ""
+"Symbol CLI を実行するには `node.js <http://nodejs.org>`__  12 LTS が必要です。node.js "
+"のインストールには `nvm <https://github.com/nvm-sh/nvm>`__ を使用することを推奨します。"
 
 #: ../../source/cli.rst:58
 msgid "Execute the following command in a new terminal:"
