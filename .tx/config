@@ -469,6 +469,12 @@ source_file = build/gettext/guides/migration/migrating-from-nem-to-symbol.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--migration--post-optin-xym-retrieval]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/post-optin-xym-retrieval.po
+source_file = build/gettext/guides/migration/post-optin-xym-retrieval.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--monitor--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/index.po
 source_file = build/gettext/guides/monitor/index.pot
