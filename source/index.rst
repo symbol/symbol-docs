@@ -18,10 +18,10 @@ All content is accessible through the **navigation menu**, which is divided into
 - :doc:`References <references/index>`: Usage guides for |codename|'s tools and SDKs.
 - :doc:`Contribute <contribute/index>`: How to contribute to this project.
 
-**Don't know where to start?** Try these links:
+.. topic:: Featured pages
 
-- :doc:`getting-started/what-is-symbol`
-- :doc:`Install the Symbol Desktop Wallet <wallets>`
+   - :doc:`Install the Symbol Desktop Wallet <wallets>`
+   - :doc:`Retrieving your XYMs after Opt-In <guides/migration/post-optin-xym-retrieval>`
 
 .. toctree::
     :hidden:
