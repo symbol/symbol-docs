@@ -152,7 +152,7 @@ This is a short list of items to check should you encounter any problem when rec
 
   If your account is not on the list, check the other tabs to find the reason.
 
-- If you opted-in using the **NEM Mobile Wallet**, check that your account is not one of the 35 accounts affected by this `known NEM Mobile Wallet issue <https://forum.nem.io/t/symbol-launch-opt-in-issue-affecting-35-accounts/29401>`__.
+- If you opted-in using the **Symbol Mobile Wallet**, check that your account is not one of the 35 accounts affected by this `known Symbol Mobile Wallet issue <https://forum.nem.io/t/symbol-launch-opt-in-issue-affecting-35-accounts/29401>`__.
 
 - The **NEM Helpdesk** can help you if everything else fails:
 
