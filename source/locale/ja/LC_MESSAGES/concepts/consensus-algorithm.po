@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-18 06:54+0000\n"
+"POT-Creation-Date: 2021-04-19 08:44+0000\n"
 "PO-Revision-Date: 2019-07-02 14:32+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -182,12 +182,11 @@ msgstr "インポータンススコア"
 
 #: ../../source/concepts/consensus-algorithm.rst:89
 msgid ""
-"The importance score :math:`I` is finally calculated as the average of the "
-":math:`S` and :math:`A` scores, weighted by an activity factor "
-":math:`\\gamma`:"
+"The importance score :math:`I` is calculated as the average of the :math:`S`"
+" and :math:`A` scores, weighted by an activity factor :math:`\\gamma`:"
 msgstr ""
 "インポータンススコア :math:`I` はアクティビティ係数 :math:`\\gamma` で重み付けされた :math:`S` スコアと "
-":math:`A` スコアの平均が最終的に計算されます。"
+":math:`A` スコアの平均が計算されます。"
 
 #: ../../source/concepts/consensus-algorithm.rst:95
 msgid "In the |codename| network :math:`\\gamma` is 0.05 (**5%**)"
@@ -197,16 +196,27 @@ msgstr "|codename| ネットワークにおいて :math:`\\gamma` は 0.05 (**5%
 msgid ""
 "Finally, among all accounts :ref:`eligible for harvesting "
 "<account_eligibility>`, the probability that a particular one is chosen is "
-"proportional to its importance score :math:`I`."
+"proportional to its **effective importance score**, which is defined as "
+"**the smaller of the previous two importance scores** :math:`I`."
 msgstr ""
-"最後に :ref:`ハーベスティングに適格な <account_eligibility>` "
-"すべてのアカウントの中から特定のアカウントが選択される確率は、そのインポータンススコア :math:`I` に比例します。"
+"最後に、すべての :ref:`ハーベスティング適格 <account_eligibility>` アカウントのうち、特定のアカウントが選択される確率は "
+"**直近 2 つのうち小さい方と定義されるインポータンススコア** :math:`I` の **有効なインポータンススコア** に比例します。"
 
 #: ../../source/concepts/consensus-algorithm.rst:101
+msgid ""
+"Since scores are calculated every 720 blocks (roughly 6 hours) and the "
+"smaller of the previous **two scores** is used when calculating harvesting "
+"probabilities, when you first fund an account it will require **12 hours** "
+"to have a probability greater than zero."
+msgstr ""
+"スコアは 720 ブロック毎 (およそ 6 時間) で計算され、ハーベスティング可能性を計算する際、直近の **2 つのスコア** "
+"で小さい方が使用され、アカウントへ最初に資産を提供する際、ゼロより大きい確率を得るには **12 時間** が必要です。"
+
+#: ../../source/concepts/consensus-algorithm.rst:105
 msgid "Customization"
 msgstr "カスタマイズ"
 
-#: ../../source/concepts/consensus-algorithm.rst:103
+#: ../../source/concepts/consensus-algorithm.rst:107
 msgid ""
 "Private networks can **customize the consensus algorithm** by changing the "
 "following configuration properties. See :ref:`config-network-properties`."
@@ -219,8 +229,16 @@ msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
+msgid "Default"
+msgstr "デフォルト"
+
+#: ../../source/concepts/consensus-algorithm.rst:1
 msgid "Description"
 msgstr "説明"
+
+#: ../../source/concepts/consensus-algorithm.rst:1
+msgid "720 blocks"
+msgstr "720 ブロック"
 
 #: ../../source/concepts/consensus-algorithm.rst:1
 msgid "How often importance is calculated."
@@ -237,6 +255,6 @@ msgid ""
 msgstr ""
 "アクティビティスコアの寄与 (:math:`\\gamma`) が 0 の場合、 PoS+ コンセンサスは、従来の PoS と同じように動作します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:114
+#: ../../source/concepts/consensus-algorithm.rst:118
 msgid "Continue: :doc:`Harvesting <harvesting>`."
 msgstr "次項: :doc:`ハーベスティング <harvesting>`"

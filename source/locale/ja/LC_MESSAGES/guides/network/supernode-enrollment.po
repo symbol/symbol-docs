@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-09 09:50+0000\n"
+"POT-Creation-Date: 2021-04-14 10:01+0000\n"
 "PO-Revision-Date: 2021-03-02 08:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -123,6 +123,10 @@ msgid ""
 " file."
 msgstr "ノードのメインアカウントアドレスは ``target/addresses.yml`` ファイルにあります。"
 
+#: ../../source/guides/network/supernode-enrollment.rst:88
+msgid "**Register the node** by linking its remote, VRF and voting keys:"
+msgstr "**ノードの登録** にはリモート, VRF, および投票キーをリンクします:"
+
 #: ../../source/guides/network/supernode-enrollment.rst:98
 msgid "**Enroll in the Supernode program**."
 msgstr "**スーパーノードプログラムに登録する**"
@@ -130,6 +134,14 @@ msgstr "**スーパーノードプログラムに登録する**"
 #: ../../source/guides/network/supernode-enrollment.rst:106
 msgid "See the note regarding fees in the previous step."
 msgstr "前のステップの手数料に関する注記を参照してください。"
+
+#: ../../source/guides/network/supernode-enrollment.rst:108
+msgid ""
+"From this point, the :ref:`reward programs controller <reward-programs-"
+"controller>` on the network will monitor the node."
+msgstr ""
+"この時点から、ネットワーク上の :ref:`報酬プログラムコントローラ <reward-programs-controller>` "
+"がノードの監視を始めます。"
 
 #: ../../source/guides/network/supernode-enrollment.rst:114
 msgid "Manually"
@@ -176,6 +188,10 @@ msgstr "**登録メッセージの送信**"
 #: ../../source/guides/network/supernode-enrollment.rst:193
 msgid "Finally, the recipient address for this transaction is:"
 msgstr "最後に、このトランザクションの受信アドレスは:"
+
+#: ../../source/guides/network/supernode-enrollment.rst:195
+msgid "``NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA`` for MAINNET."
+msgstr "``NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA`` メインネット用"
 
 #: ../../source/guides/network/supernode-enrollment.rst:196
 msgid "``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` for TESTNET."
@@ -228,6 +244,14 @@ msgid ""
 msgstr ""
 "`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
 "ノードの状態"
+
+#: ../../source/guides/network/supernode-enrollment.rst:219
+msgid ""
+"`https://localhost:7880/metadata <https://localhost:7880/metadata>`__: "
+"Agent's report."
+msgstr ""
+"`https://localhost:7880/metadata "
+"<https://localhost:7880/metadata>`__:エージェントレポート"
 
 #: ../../source/guides/network/supernode-enrollment.rst:221
 msgid ""
