@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-09 09:50+0000\n"
+"POT-Creation-Date: 2021-04-14 10:01+0000\n"
 "PO-Revision-Date: 2021-04-08 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -30,6 +30,22 @@ msgid ""
 "The process is even simpler if the customer's key are allowed to be online."
 msgstr "顧客のキーをオンラインにできる場合は、さらに簡単なプロセスになります。"
 
+#: ../../source/guides/network/non-custodial-node-setup.rst:56
+msgid "A guide will soon be added to this page describing this scenario."
+msgstr "このシナリオを説明するガイドが、まもなくこのページに追加されます。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:60
+msgid ""
+"The node provider will prepare a transaction for offline signing and send it"
+" to the customer."
+msgstr "ノードプロバイダーはオフライン署名用のトランザクションを準備し、それを顧客に送信します。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:61
+msgid ""
+"The customer signs the transaction using their Wallet from an offline "
+"machine, and returns the signature."
+msgstr "顧客はオフラインマシンからウォレットを使用してトランザクションに署名し、署名を返却します。"
+
 #: ../../source/guides/network/non-custodial-node-setup.rst:62
 msgid "The node provider announces the transaction."
 msgstr "ノードプロバイダはこのトランザクションをアナウンスします。"
@@ -38,9 +54,45 @@ msgstr "ノードプロバイダはこのトランザクションをアナウン
 msgid "Prerequisites"
 msgstr "前提条件"
 
+#: ../../source/guides/network/non-custodial-node-setup.rst:68
+msgid "On the **Node** machine:"
+msgstr "**ノード** マシン上:"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:70
+msgid ""
+"**Have a running Symbol node**, set up using the :doc:`running-a-secure-"
+"symbol-node` guide."
+msgstr ""
+"the :doc:`running-a-secure-symbol-node` ガイドに従った **起動している Symbol ノード** があること。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:72
+msgid "On the **Configuration** machine:"
+msgstr "**設定** マシン上:"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:74
+msgid ""
+"**Have symbol-cli installed**. This has already been installed in the "
+":doc:`running-a-secure-symbol-node` guide."
+msgstr ""
+"**symbol-cli がインストール済み** :doc:`running-a-secure-symbol-node` ガイドでインストール済みです。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:75
+msgid ""
+"**Have a symbol-cli profile for the node's main account**. This too has "
+"already been done in the guide."
+msgstr "**ノードのメインアカウントとして symbol-cli プロファイルがあること** これもガイドで完了済みです。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:79
+msgid "On the **Customer**'s machine:"
+msgstr "**顧客** マシン上:"
+
 #: ../../source/guides/network/non-custodial-node-setup.rst:85
 msgid "Prepare the transaction"
 msgstr "トランザクションの準備"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:93
+msgid "Notes on this transaction:"
+msgstr "このトランザクションについて:"
 
 #: ../../source/guides/network/non-custodial-node-setup.rst:98
 msgid "Run:"
@@ -50,13 +102,31 @@ msgstr "実行:"
 msgid "Send payload to customer"
 msgstr "ペイロードを顧客に送信"
 
+#: ../../source/guides/network/non-custodial-node-setup.rst:158
+msgid "Send ``payload.txt`` to the customer, as a plain text file."
+msgstr "平文テキストファイル ``payload.txt`` を顧客へ送信します。"
+
 #: ../../source/guides/network/non-custodial-node-setup.rst:162
 msgid "Sign the transaction"
 msgstr "トランザクションに署名"
 
+#: ../../source/guides/network/non-custodial-node-setup.rst:167
+msgid "Select the ``Cosign transaction`` tab."
+msgstr "``トランザクションに連署`` タブを選択。"
+
 #: ../../source/guides/network/non-custodial-node-setup.rst:169
 msgid "Click on ``Import payload``."
 msgstr "``Import payload`` をクリックします。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:171
+msgid "Enter the wallet's ``Password`` and click on ``Confirm``."
+msgstr "ウォレットの ``パスワード`` を入力して ``確認`` をクリックします。"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:172
+msgid ""
+"A QR code and a long line of text will be obtained, looking similar to this "
+"one:"
+msgstr "QR コードと長いテキスト行が取得され、次のようになります:"
 
 #: ../../source/guides/network/non-custodial-node-setup.rst:188
 msgid "Announce transaction"

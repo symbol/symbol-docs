@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-09 09:50+0000\n"
+"POT-Creation-Date: 2021-04-19 08:44+0000\n"
 "PO-Revision-Date: 2021-04-08 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -81,7 +81,7 @@ msgstr "**ノード**"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:64
 msgid "Permanently online."
-msgstr "恒久的にオフラインです。"
+msgstr "恒久的にオンラインです。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:65
 msgid "Runs the node."
@@ -99,8 +99,8 @@ msgid ""
 " up and running**, so a pointer to the appropriate guide is given at the end"
 " of this page."
 msgstr ""
-"ノードはすべてのハーベスト報酬が、このアカウントの秘密鍵を必要とせずに **外部アカウント** "
-"に送られるように設定することもできます。これは**非カストディアルセットアップ** と呼ばれ、 **ノードが稼働してから** "
+"ノードはすべてのハーベスト報酬が、このアカウントの秘密鍵を必要とせずに **外部アカウント** に送られるように設定することもできます。これは "
+"**非カストディアルセットアップ** と呼ばれ、 **ノードが稼働してから** "
 "設定する必要があるため、このページの最後に適切なガイドへの案内があります。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:72
@@ -140,6 +140,18 @@ msgid ""
 "Docker images:"
 msgstr "**初回の Symbol Bootstrap の実行** ではイメージのダウンロードが必要です:"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:94
+msgid ""
+"The output of this first run is irrelevant, that's why ``--noPassword`` is "
+"used and the ``target`` folder is removed."
+msgstr "この最初の実行の出力は使用しないため ``--noPassword`` を使用し、 ``target`` フォルダは削除します。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:96
+msgid ""
+"**Disconnect the Configuration machine from the Internet** since private "
+"keys will be generated on this machine from this point."
+msgstr "このマシンで秘密鍵を生成するため **設定マシンをインターネットから切断** します。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:99
 msgid "Create configuration"
 msgstr "設定の作成"
@@ -147,6 +159,55 @@ msgstr "設定の作成"
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:102
 msgid "Profile"
 msgstr "プロファイル"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:104
+msgid ""
+"**Create the main account profile**. This is the account that will receive "
+"all harvesting fees and whose :ref:`importance score <importance-"
+"calculation>` will be used when harvesting."
+msgstr ""
+"**メインアカウントのプロファイルを作成** これはすべてのハーベスティング手数料を受け取り、ハーベスト時に :ref:`インポータンススコア "
+"<importance-calculation>` が使用されるアカウントです。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:106
+msgid ""
+"**The purpose of this guide is making sure that this account's private key "
+"is never used on an online machine**."
+msgstr "**このガイドの目的は、アカウントの秘密鍵がオンラインマシン上で使用されないようにすることです**"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:108
+msgid ""
+"This step will create a ``symbol-cli`` profile to hold the main account and "
+"sign transactions using its private key. The machine is offline now, so you "
+"need to provide some network-related data."
+msgstr ""
+"このステップでは、メインアカウントを保持し、その秘密鍵を使用してトランザクションに署名する ``symbol-cli`` "
+"プロファイルを作成します。マシンは現在オフラインなので、ネットワーク関連のデータを提供する必要があります。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:110
+msgid ""
+"The commands below assume you want to create a **new** main account and use "
+"the ``profile create`` command. If you **already have an account** that you "
+"would like to use as main use the ``profile import`` command instead."
+msgstr ""
+"以下のコマンドは、 **新しい** メインアカウントを作成することを前提に、 ``profile create`` "
+"コマンドを使用します。メインとして使用したい **アカウント** が既にある場合は、代わりに ``profile import`` "
+"コマンドを使用してください。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:134
+msgid ""
+"When prompted, enter a password to secure your profile and select the "
+"``PrivateKey`` import type:"
+msgstr "プロンプトが表示されたら、プロファイルを保護するためのパスワードを入力して ``PrivateKey`` インポートタイプを選択します。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:156
+msgid ""
+"``symbol-cli`` is now ready to be used later on. All transactions will be "
+"signed by your main account so make sure it has some funds to pay for the "
+":doc:`../../concepts/fees`."
+msgstr ""
+"``symbol-cli`` が後に使用できるようになりました。すべてのトランザクションはメインアカウントが署名するため、 "
+":doc:`../../concepts/fees` の支払いにいくらかの資産があることを確認してください。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:158
 msgid ""
@@ -156,6 +217,35 @@ msgstr "**メインアカウントの秘密鍵をメモして、安全な場所�
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:161
 msgid "Preset"
 msgstr "プリセット"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:163
+msgid ""
+"**Create a** :ref:`custom preset file <symbol-bootstrap-presets>` for Symbol"
+" Bootstrap and name it ``custom.yml``. It must include, at least, these "
+"lines:"
+msgstr ""
+"Symbol Bootstrap 用に ``custom.yml`` と命名して :ref:`カスタムプリセットファイル <symbol-"
+"bootstrap-presets>` を **作成** します。これには最低でも次の行を含める必要があります:"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:172
+msgid ""
+"You can read more about these properties in the `security mode section "
+"<https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md"
+"#user-content-private-key-security-mode>`__ in Symbol Bootstrap's "
+"documentation."
+msgstr ""
+"これらのプロパティの詳細については、Symbol Bootstrap のドキュメントの `セキュリティーモードのセクション "
+"<https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md"
+"#user-content-private-key-security-mode>`__ を参照してください。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:174
+msgid ""
+"If you have customizations to make, like enabling :ref:`voting "
+"<finalization>` or enrolling in a :doc:`Reward Program <../../concepts"
+"/reward-programs>`, you can provide them too:"
+msgstr ""
+":ref:`投票 <finalization>` の有効化や :doc:報酬プログラム <../../concepts/reward-"
+"programs>` への登録などのカスタマイズを行う場合は、それらを提供することもできます。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:187
 msgid "Configure"
@@ -172,18 +262,54 @@ msgid ""
 " files**."
 msgstr "**設定ファイル** の暗号化に使用する **パスワード** の入力を求められます。"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:217
+msgid ""
+"This generates a ``target`` directory containing an ``addresses.yml`` file "
+"and multiple configuration files."
+msgstr "これにより、 ``addresses.yml`` ファイルと複数の構成ファイルを含む ``target`` ディレクトリが生成されます。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:219
 msgid ""
 "**The main account's private key is not present in any of these files**."
 msgstr "**メインアカウントの秘密鍵は、これらのファイルのいずれにも存在しません**"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:221
+msgid ""
+"It is worth noting that Symbol Bootstrap enables :ref:`remote-harvesting` by"
+" default, meaning that the **main private key is never available in a plain "
+"text file** in the server. Only the remote key is, which acts as a proxy "
+"between the node and its main account."
+msgstr ""
+"Symbol Bootstrap はデフォルトで :ref:`remote-harvesting` を有効にします。つまり、サーバ上の "
+"**平文テキストファイル内のメインの秘密鍵を使用することはありません** 。ノードとそのメインアカウント間のプロキシとして機能するリモートキーのみです。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:224
 msgid "Copy configuration"
 msgstr "設定をコピー"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:226
+msgid ""
+"Open ``custom.yml`` and **remove the line** containing ``mainPrivateKey``."
+msgstr "``custom.yml`` を開いて ``mainPrivateKey`` が含まれる **行を削除して** ください。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:228
+msgid ""
+"Now that Symbol Bootstrap has already used it in the ``config`` stage, there"
+" is no need for such a sensitive key to be lying around in a plain text "
+"file."
+msgstr ""
+"すでに Symbol Bootstrap は ``config`` "
+"ステージで使用したので、そのような機密キーをプレーンテキストファイルに置く必要はありません。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:233
 msgid "Prepare transactions"
 msgstr "トランザクションの準備"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:245
+msgid ""
+"This is a known limitation which is `being tracked "
+"<https://github.com/nemtech/symbol-cli/issues/373>`__."
+msgstr "`追跡中 <https://github.com/nemtech/symbol-cli/issues/373>`__ の既知の制限"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:248
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:411
@@ -254,6 +380,10 @@ msgstr "リンクをアナウンス"
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:413
 msgid "Announce the Remote key link:"
 msgstr "リモートキーリンクのアナウンス:"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:420
+msgid "Paste the first long text line from ``payloads.txt`` and press Enter:"
+msgstr "``payloads.txt`` から最初の長いテキスト行を貼り付けて、 Enter キーを押下します:"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:481
 msgid "The most common problems are:"
