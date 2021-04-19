@@ -16,6 +16,12 @@ Using Symbol Bootstrap
       sudo apt update
       sudo apt install nodejs npm \
           docker docker-compose
+      node --version
+
+    If the obtained node version is high enough (see :ref:`symbol-bootstrap-requirements`), then you can install Symbol Bootstrap:
+
+    .. code-block:: bash
+
       npm install -g symbol-bootstrap
 
 This guide explains the concepts behind |symbol-bootstrap|, a package which contains the necessary setup scripts to help developers quickly configure and run their own network or node in any of the **supported operating systems** (Windows, Linux and Mac).
@@ -23,6 +29,8 @@ This guide explains the concepts behind |symbol-bootstrap|, a package which cont
 After reading this you will be able to better understand the :doc:`creating-a-private-test-net` and :doc:`running-a-symbol-node` guides.
 
 **This package replaces the previous tools** |catapult-service-bootstrap| and |symbol-testnet-bootstrap|.
+
+.. _symbol-bootstrap-requirements:
 
 ************
 Requirements
@@ -34,7 +42,7 @@ Environment
 
 The setup scripts are automated using **docker**. To run a test net or node, you will need to have installed the following tools:
 
-* `node.js`_ version 10 or higher (It is recommended that you install node.js using `nvm <https://github.com/nvm-sh/nvm>`__)
+* `node.js`_ version 12 or higher (It is recommended that you install node.js using `nvm <https://github.com/nvm-sh/nvm>`__)
 * `docker`_
 * `docker-compose`_
 
