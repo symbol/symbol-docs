@@ -49,7 +49,7 @@ The importance score is then calculated based on the above partial scores.
 Importance score
 ****************
 
-The importance score :math:`I` is finally calculated as the average of the :math:`S` and :math:`A` scores, weighted by an activity factor :math:`\gamma`:
+The importance score :math:`I` is calculated as the average of the :math:`S` and :math:`A` scores, weighted by an activity factor :math:`\gamma`:
 
 .. math::
 
@@ -57,7 +57,11 @@ The importance score :math:`I` is finally calculated as the average of the :math
 
 In the |codename| network :math:`\gamma` is 0.05 (**5%**)
 
-Finally, among all accounts :ref:`eligible for harvesting <account_eligibility>`, the probability that a particular one is chosen is proportional to its importance score :math:`I`.
+Finally, among all accounts :ref:`eligible for harvesting <account_eligibility>`, the probability that a particular one is chosen is proportional to its **effective importance score**, which is defined as **the smaller of the previous two importance scores** :math:`I`.
+
+.. note::
+
+   Since scores are calculated every 720 blocks (roughly 6 hours) and the smaller of the previous **two scores** is used when calculating harvesting probabilities, when you first fund an account it will require **12 hours** to have a probability greater than zero.
 
 *************
 Customization
