@@ -100,11 +100,9 @@ Retrieving the node account
 
 The node you just created has an associated |codename| account which you can use to interact with the node. For instance, you need this account to provide funds to the node so it can emit transactions.
 
-The account's keys and address can be retrieved from a YAML file in the ``target`` folder:
+The account's keys and addresses can be retrieved from a text file in the ``target`` folder named ``target/addresses.yml``. 
 
-``target/addresses.yml``
-
-As an example:
+This file has `YAML <https://en.wikipedia.org/wiki/YAML>`__ format and looks like this:
 
 .. code-block:: yaml
 
@@ -138,9 +136,24 @@ As an example:
                 publicKey: B304E6F9650CFFA52C6DC51CED29397F6C50F1E2F9AC34993549E0E3E4461027
                 address: TABWAGQNSI4AWPE3IVGS53CQWAN5BYRM5BHMNFA
 
-.. note:: Keep your Secret Keys secret at all times!
-
 Use the information in the ``main`` section to access the node's account. When activating :ref:`delegated harvesting <delegated-harvesting>`, use the information in the ``transport`` section as the node's **public TLS key**.
+
+.. topic:: Encrypted private keys
+
+   By default (see the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ for more details), Symbol Bootstrap encrypts all private keys in ``addresses.yml`` so they are not visible.
+   
+   To access the private keys (to **withdraw** funds from the main account, for example) you will need to use the ``symbol-bootstrap decrypt`` command:
+
+   .. code-block:: bash
+
+      symbol-bootstrap decrypt \
+         --source target/addresses.yml \
+         --destination target/addresses_plain.yml
+
+   This will produce a ``target/addresses_plain.yml`` file with the decrypted files.
+
+   - **Delete this file after reading the keys!**
+   - **Keep your Secret Keys secret at all times!**
 
 ***************************
 Providing funds to the node
