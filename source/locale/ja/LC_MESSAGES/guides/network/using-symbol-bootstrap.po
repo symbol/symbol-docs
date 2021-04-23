@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-19 08:44+0000\n"
+"POT-Creation-Date: 2021-05-04 18:49+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -110,11 +110,11 @@ msgstr "``3000`` 番ポートは REST ゲートウェイがエンドポイント
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:94
 msgid ""
-"Port ``7880`` is used by the :ref:`monitoring agent <reward-programs-"
+"Port ``7881`` is used by the :ref:`monitoring agent <reward-programs-"
 "controller>`. Only required when enrolled to some of the "
 ":doc:`../../concepts/reward-programs`, and can be customized."
 msgstr ""
-"ポート ``7880`` は :ref:`監視エージェント <reward-programs-controller>` が使用します。 "
+"ポート ``7881`` は :ref:`監視エージェント <reward-programs-controller>` が使用します。 "
 ":doc:`../../concepts/reward-programs` の一部に登録する場合に必要で、カスタマイズ可能です。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:98

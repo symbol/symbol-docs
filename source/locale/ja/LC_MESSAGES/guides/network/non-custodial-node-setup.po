@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-14 10:01+0000\n"
+"POT-Creation-Date: 2021-05-04 18:49+0000\n"
 "PO-Revision-Date: 2021-04-08 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -98,13 +98,19 @@ msgstr "このトランザクションについて:"
 msgid "Run:"
 msgstr "実行:"
 
+#: ../../source/guides/network/non-custodial-node-setup.rst:107
+msgid ""
+"Use the **external account address** as cosignatory and do **not** announce "
+"the transaction:"
+msgstr "**外部アカウントアドレス** を連署者として使用し、トランザクションは **アナウンスしない** でください。"
+
 #: ../../source/guides/network/non-custodial-node-setup.rst:156
 msgid "Send payload to customer"
 msgstr "ペイロードを顧客に送信"
 
 #: ../../source/guides/network/non-custodial-node-setup.rst:158
 msgid "Send ``payload.txt`` to the customer, as a plain text file."
-msgstr "平文テキストファイル ``payload.txt`` を顧客へ送信します。"
+msgstr "平文テキストファイルとして ``payload.txt`` を顧客へ送信します。"
 
 #: ../../source/guides/network/non-custodial-node-setup.rst:162
 msgid "Sign the transaction"
@@ -128,9 +134,18 @@ msgid ""
 "one:"
 msgstr "QR コードと長いテキスト行が取得され、次のようになります:"
 
+#: ../../source/guides/network/non-custodial-node-setup.rst:184
+msgid ""
+"Send ``signature.txt`` back to the node provider, as a plain text file."
+msgstr "平文テキストファイルとして ``signature.txt`` をノード提供者へ送り返します。"
+
 #: ../../source/guides/network/non-custodial-node-setup.rst:188
 msgid "Announce transaction"
 msgstr "トランザクションのアナウンス"
+
+#: ../../source/guides/network/non-custodial-node-setup.rst:221
+msgid "This is, the cosignature should start with ``[`` and end with ``]``."
+msgstr "つまり、連署者は ``[`` で始まり ``]`` で終わる必要があります。"
 
 #: ../../source/guides/network/non-custodial-node-setup.rst:223
 msgid "After a few seconds you should get:"

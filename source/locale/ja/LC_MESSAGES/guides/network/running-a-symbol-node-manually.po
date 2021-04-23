@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-14 10:01+0000\n"
+"POT-Creation-Date: 2021-05-04 18:49+0000\n"
 "PO-Revision-Date: 2021-04-06 14:16+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -97,7 +97,6 @@ msgstr ""
 "**ランダムに生成** されるので、次の手順では、使用するものをいくつか作成していきます。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:69
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:152
 msgid ""
 "**This step can be performed on an offline machine for added security.**"
 msgstr "**この手順はセキュリティを強化するためにオフラインマシンで実行します。**"
@@ -116,6 +115,20 @@ msgstr "前セクションで作成した ``_build`` ディレクトリ内から
 msgid "This will output 3 :ref:`key pairs <keypair>` similar to this one:"
 msgstr "これにより、次のような 3つの :ref:`キーペア <keypair>` が出力されます:"
 
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:89
+msgid ""
+"Each block is a key pair (there is one block shown above) composed of a "
+"``private key``, a ``public key`` and an ``address``."
+msgstr "各ブロック (上記で示したブロック) は ``秘密鍵`` 、``公開鍵`` で構成されるキーペアと ``アドレス`` です。 "
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:91
+msgid ""
+"**Copy all of them to a temporary text file** for later use and label the "
+"key pairs **Main**, **Remote** and **VRF**."
+msgstr ""
+"後で使用するために **一時テキストファイルへそれら全てをコピーして** キーペア **Main**, **Remote** ,**VRF** "
+"にラベルを付けます。"
+
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:100
 msgid "Voting"
 msgstr "投票"
@@ -128,15 +141,15 @@ msgstr "**投票キーの作成**"
 msgid "Configuration"
 msgstr "設定"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:154
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:152
 msgid "**Prerequisites**."
 msgstr "\"\"前提条件\"\""
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:156
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:154
 msgid "Install `Python 3 <https://www.python.org/downloads/>`__."
 msgstr "`Python 3 <https://www.python.org/downloads/>`__   のインストール"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:157
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:155
 msgid ""
 "Install `OpenSSL <https://wiki.openssl.org/index.php/Binaries>`__ (for "
 "example running ``sudo apt install openssl`` on Linux)."
@@ -144,11 +157,11 @@ msgstr ""
 "`OpenSSL <https://wiki.openssl.org/index.php/Binaries>`__ (Linux での例 ``sudo "
 "apt install openssl``) のインストール"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:159
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:157
 msgid "**Install symbol-node-configurator**."
 msgstr "**symbol-node-configurator のインストール**"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:161
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:159
 msgid ""
 "Download and extract `symbol-node-configurator.zip "
 "<https://github.com/nemtech/symbol-node-"
@@ -161,23 +174,35 @@ msgstr ""
 "リポジトリ <https://github.com/nemtech/symbol-node-configurator>`__ "
 "をクローンすることもできます。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:169
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:167
 msgid "**Create certificates**."
 msgstr "**証明書の作成**"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:173
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:169
+msgid "Create a folder named ``certificates`` and move into it."
+msgstr "``certificates`` フォルダを作成して、そこへ移動します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:171
 msgid ""
 "Download and run this `certificate generation script </_static/bash/cert-"
 "generate.sh>`__."
 msgstr "`証明書生成スクリプト </_static/bash/cert-generate.sh>`__ をダウンロードして実行します。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:174
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:172
 msgid "Delete ``private.main.txt``."
 msgstr "``private.main.txt`` の削除"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:175
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:173
 msgid "Get back to the parent folder."
 msgstr "親フォルダへ戻る"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:177
+msgid "**Create harvester and VRF key files**."
+msgstr "**ハーベスタ と VRF キーファイルの作成**"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:182
+msgid "**Run the configurator tool**."
+msgstr "**設定ツールの実行**"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:1
 msgid "Parameter"
@@ -198,28 +223,28 @@ msgstr "(必須) ノードタイプ。 ``api``, ``peer``,  ``dual`` のみ許可
 msgid "(Optional) Folder where resulting configuration will be stored."
 msgstr "(オプション) 設定を保存するフォルダ。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:198
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:248
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:196
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:246
 msgid "For example:"
 msgstr "例:"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:213
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:211
 msgid "Copy ``settings/resources`` to ``_build/resources``."
 msgstr "``settings/resources`` を ``_build/resources`` へコピーします。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:214
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:212
 msgid "Copy ``settings/certificates`` to ``_build/certificates``."
 msgstr "``settings/certificates`` を ``_build/certificates`` へコピーします。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:217
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:215
 msgid "**Edit config-user.properties**."
 msgstr "**config-user.properties** を編集"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:219
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:217
 msgid "Go back to the ``_build`` directory."
 msgstr "``_build`` ディレクトリへ戻ります。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:232
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:230
 msgid "**Edit config-node.properties**."
 msgstr "**config-node.properties** を編集"
 
@@ -236,43 +261,173 @@ msgstr "IP アドレスまたはノードのドメインネーム"
 msgid "Name of your node for display purposes."
 msgstr "表示用のノード名"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:259
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"Version of catapult-server used by your node. Leave empty to use the current"
+" one."
+msgstr "ノードで使用されている catapult-server のバージョン。現在のものを使用するには、空のままにします。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:1
+msgid ""
+"A comma-separated list of the following values: ``Peer``, ``Api``, "
+"``Voting``, ``IPv4``, ``IPv6``."
+msgstr "次の値のコンマ区切りのリスト: ``Peer``, ``Api``, ``Voting``, ``IPv4``, ``IPv6``"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:257
 msgid "Run the server"
 msgstr "サーバを起動"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:285
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:265
+msgid "And finally fire up the server!"
+msgstr "最後に、サーバに火入れします！"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:283
 msgid "Link the keys"
 msgstr "キーのリンク"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:309
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:307
 msgid "Run:"
 msgstr "実行:"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:445
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:317
+msgid "Enter a name for your profile (for example, ``Main``)."
+msgstr "プロファイル名を入力します (例 ``メイン`` )"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:318
+msgid "Enter a password to protect the profile."
+msgstr "プロファイルを保護するためにパスワードを入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:319
+msgid "Select ``PrivateKey`` as the import type."
+msgstr "インポートタイプとして ``秘密鍵`` を選択します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:320
+msgid "Enter your **Main** private key."
+msgstr "**メイン** 秘密鍵を入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:327
+msgid "Remote key"
+msgstr "リモートキー"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:338
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:378
+msgid "Enter your profile password."
+msgstr "プロファイルのパスワードを入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:339
+msgid "Enter your **Remote public** key."
+msgstr "**リモート公開** 鍵を入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:349
+msgid "VRF key"
+msgstr "VRF キー"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:360
+msgid "Enter your **VRF public** key."
+msgstr "**VRF 公開** 鍵を入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:365
+msgid "Voting key"
+msgstr "投票キー"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:379
+msgid "Enter the **voting public key** you obtained previously."
+msgstr "直前で取得した **投票公開キー** を入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:380
+msgid "Enter the Start and End epochs you used when creating the voting key."
+msgstr "投票キーの作成時に使用した開始エポックと終了エポックを入力します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:399
+msgid "Build an API node"
+msgstr "API ノードのビルド"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:401
+msgid ""
+"Once you have the Catapult Server running, you can add **extra services** to"
+" turn it into an API node:"
+msgstr "Catapult サーバーを実行したら **追加サービス** を追加して API ノードに変えることができます:"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:408
+msgid "A **Database** holding the REST data."
+msgstr "**データベース** は REST データを保持します。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:412
+msgid ""
+"The following sections explain how to install each service. You will need "
+"all of them."
+msgstr "次のセクションでは、各サービスのインストール方法について説明します。それらのすべてが必要になります。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:417
+msgid "Run the database"
+msgstr "データベースの実行"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:419
+msgid "**Install** `MongoDB <http://mongodb.com>`__ (at least version 4.4)."
+msgstr "**インストール** `MongoDB <http://mongodb.com>`__ (バージョン 4.4 以上)"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:423
+msgid "Create a directory to store the data files and **run the database**:"
+msgstr "データファイルを保存するディレクトリを作成して **データベースを実行**します:"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:430
+msgid "Keep ``mongod`` running for as long as your node runs."
+msgstr "ノードが実行されている限り、 ``mongod`` を実行し続けます。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:432
+msgid "**Build indices** to optimize database accesses."
+msgstr "データベースアクセスの最適化のために **インデックス構築** をします。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:440
+msgid "Without this step database performance will be unacceptably slow."
+msgstr "この手順を実施しないと、データベースのパフォーマンスが許容できないほど遅くなります。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:443
 msgid "Run the broker"
 msgstr "ブローカーの起動"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:456
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:445
+msgid ""
+"**Edit** ``resources/config-database.properties`` and point ``databaseUri`` "
+"to ``127.0.0.1:27017``:"
+msgstr ""
+"``resources/config-database.properties`` を **編集** して ``databaseUri`` で "
+"``127.0.0.1:27017`` に向けます:"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:454
 msgid "**Run the broker**:"
 msgstr "**ブローカーの起動**:"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:467
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:456
+msgid "Move into the ``bin`` directory and run:"
+msgstr "``bin`` ディレクトリへ移動して実行します:"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:462
+msgid "Keep the broker running for as long as your node runs."
+msgstr "ノードが実行されている限り、ブローカーを実行し続けます。"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:465
 msgid "Build and run the REST gateway"
 msgstr "REST ゲートウェイのビルドと実行"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:481
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:467
+msgid ""
+"**Clone** the ``catapult-rest`` repository and **install its dependencies**:"
+msgstr "``catapult-rest`` リポジトリを **クローン**  して **依存関係をインストール** します:"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:479
 msgid "**Build** the REST gateway:"
 msgstr "REST ゲートウェイの **ビルド** :"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:488
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:486
 msgid "**Configure** the REST gateway:"
 msgstr "REST ゲートウェイの **設定** :"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:490
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:488
 msgid "All configuration is stored in the ``resources/rest.json`` file."
 msgstr "すべての設定は ``resources/rest.json`` ファイルに記述されます。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:492
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:490
 msgid ""
 "**Edit this file** to make sure that the following properties point to the "
 "right files:"
@@ -286,23 +441,23 @@ msgstr "ファイル"
 msgid "Default location"
 msgstr "デフォルトの場所"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:505
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:503
 msgid "**Use absolute paths**. For example:"
 msgstr "**絶対パスの使用** 例:"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:525
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:523
 msgid "**Run the REST gateway**:"
 msgstr "**REST ゲートウェイの実行**:"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:531
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:529
 msgid "Keep the REST gateway running for as long as your node runs."
 msgstr "ノードが実行されている限り、REST ゲートウェイを実行し続けます。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:534
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:532
 msgid "Verification"
 msgstr "確認"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:536
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:534
 msgid ""
 "If the REST gateway is working correctly, you can now make queries at port "
 "3000. If the Catapult Server, Broker and MongoDB are working correctly, the "
@@ -312,13 +467,13 @@ msgstr ""
 "REST ゲートウェイが正しく機能している場合はポート 3000 でクエリを実行できます。 Catapult サーバー、ブローカー、MongoDB "
 "が正しく機能している場合、 REST が返却する値は他のブロックチェーンと正しく同期されたものになります。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:538
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:536
 msgid ""
 "Point a browser to the following URLs and check that the returned values are"
 " similar to the expected ones:"
 msgstr "ブラウザで次の URL を指定し、戻り値が期待される値と一致していることを確認します。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:540
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:538
 msgid ""
 "`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
 "Services status."
@@ -326,7 +481,7 @@ msgstr ""
 "`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
 "サービスの状態"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:551
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:549
 msgid ""
 "`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
 "Node's connection to the network."
@@ -334,14 +489,14 @@ msgstr ""
 "`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
 "ネットワークへのノード接続"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:567
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:565
 msgid ""
 "The ``height`` field should match the actual height of the blockchain, but, "
 "upon first starting the node, it might take a while to synchronize."
 msgstr ""
 "``height`` フィールドは実際のブロックチェーン高と一致しなければなりませんが、ノードの初回起動時には、同期に時間がかかる場合があります。"
 
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:569
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:567
 msgid ""
 "Finally, go to the `Symbol Explorer page "
 "<http://explorer.symbolblockchain.io/nodes>`__ and check that your node "

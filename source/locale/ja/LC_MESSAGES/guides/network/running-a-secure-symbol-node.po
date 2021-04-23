@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-19 08:44+0000\n"
+"POT-Creation-Date: 2021-05-04 18:49+0000\n"
 "PO-Revision-Date: 2021-04-08 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -190,7 +190,7 @@ msgid ""
 "the ``profile create`` command. If you **already have an account** that you "
 "would like to use as main use the ``profile import`` command instead."
 msgstr ""
-"以下のコマンドは、 **新しい** メインアカウントを作成することを前提に、 ``profile create`` "
+"以下のコマンドは、 **新しい** メインアカウントを作成することを前提に ``profile create`` "
 "コマンドを使用します。メインとして使用したい **アカウント** が既にある場合は、代わりに ``profile import`` "
 "コマンドを使用してください。"
 
@@ -244,8 +244,8 @@ msgid ""
 "<finalization>` or enrolling in a :doc:`Reward Program <../../concepts"
 "/reward-programs>`, you can provide them too:"
 msgstr ""
-":ref:`投票 <finalization>` の有効化や :doc:報酬プログラム <../../concepts/reward-"
-"programs>` への登録などのカスタマイズを行う場合は、それらを提供することもできます。"
+":ref:`投票 <finalization>` の有効化や :doc:`報酬プログラム <../../concepts/reward-"
+"programs>` への加入などのカスタマイズを行う場合は、それらを提供することもできます。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:187
 msgid "Configure"
@@ -300,6 +300,13 @@ msgid ""
 msgstr ""
 "すでに Symbol Bootstrap は ``config`` "
 "ステージで使用したので、そのような機密キーをプレーンテキストファイルに置く必要はありません。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:230
+msgid ""
+"**Copy** the whole ``target`` directory to a pen drive (or other non-"
+"networked support) to be used later."
+msgstr ""
+"後で使用するので ``target`` ディレクトリ全体をペンドライブ (またはネットワークに繋がっていない媒体) に **コピー** します。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:233
 msgid "Prepare transactions"
@@ -393,15 +400,33 @@ msgstr "よく発生する問題:"
 msgid "Announce the VRF key link:"
 msgstr "VRF キーリンクのアナウンス:"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:498
+msgid ""
+"Paste the second long text line from ``payloads.txt`` and wait for the "
+"transaction to be accepted."
+msgstr "``payloads.txt`` から 2 つ目の長いテキスト行を貼り付けて、トランザクションが承認されるのを待ちます。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:503
 msgid "Announce the Voting key link (if yours is a voting node):"
 msgstr "投票キーリンクをアナウンスします (投票ノードの場合):"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:510
+msgid ""
+"Paste the third long text line from ``payloads.txt`` and wait for the "
+"transaction to be accepted."
+msgstr "``payloads.txt`` から 3 つ目の長いテキスト行を貼り付けて、トランザクションが承認されるのを待ちます。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:515
 msgid ""
 "If all key link transactions were confirmed the node is now configured and "
 "you can finally launch it."
 msgstr "すべてのキーリンクトランザクションが承認されたら、ノードが設定され、最終的には起動することができます。"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:523
+msgid ""
+"No other parameters are required, the configuration is already present in "
+"the ``target`` directory and Symbol Bootstrap will use it."
+msgstr "他のパラメータは必要なく、すでに設定は ``target`` ディレクトリにあり、 Symbol Bootstrap がそれを使用します。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:525
 msgid ""

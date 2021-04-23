@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-09 09:50+0000\n"
+"POT-Creation-Date: 2021-04-23 07:51+0000\n"
 "PO-Revision-Date: 2021-04-06 14:16+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -262,19 +262,19 @@ msgstr ""
 
 #: ../../source/guides/network/running-a-symbol-node.rst:140
 msgid ""
-"The account's keys and address can be retrieved from a YAML file in the "
-"``target`` folder:"
-msgstr "アカウントの鍵とアドレスは ``target`` フォルダ内の YAML ファイルから取得できます:"
+"The account's keys and addresses can be retrieved from a text file in the "
+"``target`` folder named ``target/addresses.yml``."
+msgstr ""
+"アカウントの鍵とアドレスは ``target`` フォルダ内の ``target/addresses.yml`` "
+"と命名されたテキストファイルから取得できます:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:144
-msgid "As an example:"
-msgstr "例:"
+#: ../../source/guides/network/running-a-symbol-node.rst:142
+msgid ""
+"This file has `YAML <https://en.wikipedia.org/wiki/YAML>`__ format and looks"
+" like this:"
+msgstr "このファイルは `YAML <https://en.wikipedia.org/wiki/YAML>`__ 形式でこのようになっています:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:178
-msgid "Keep your Secret Keys secret at all times!"
-msgstr "シークレットキーは常に秘匿してください！"
-
-#: ../../source/guides/network/running-a-symbol-node.rst:180
+#: ../../source/guides/network/running-a-symbol-node.rst:176
 msgid ""
 "Use the information in the ``main`` section to access the node's account. "
 "When activating :ref:`delegated harvesting <delegated-harvesting>`, use the "
@@ -284,11 +284,45 @@ msgstr ""
 "harvesting>` をアクティブ化するときは ``transport`` セクションの情報をノードの **公開 TLS キー** "
 "として使用します。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:184
+#: ../../source/guides/network/running-a-symbol-node.rst:180
+msgid ""
+"By default (see the `security mode section <https://github.com/nemtech"
+"/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-"
+"security-mode>`__ for more details), Symbol Bootstrap encrypts all private "
+"keys in ``addresses.yml`` so they are not visible."
+msgstr ""
+"デフォルトでは (`詳細はセキュリティモードセクション <https://github.com/nemtech/symbol-"
+"bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-"
+"mode>`__ を参照) Symbol Bootstrap は``addresses.yml`` "
+"内のすべての秘密鍵を暗号化するので、表示することはできません。"
+
+#: ../../source/guides/network/running-a-symbol-node.rst:182
+msgid ""
+"To access the private keys (to **withdraw** funds from the main account, for"
+" example) you will need to use the ``symbol-bootstrap decrypt`` command:"
+msgstr ""
+"(メインアカウントから資産を **引き出す** 場合などに) 秘密鍵へアクセスするには、 ``symbol-bootstrap decrypt`` "
+"コマンドを使用します。"
+
+#: ../../source/guides/network/running-a-symbol-node.rst:190
+msgid ""
+"This will produce a ``target/addresses_plain.yml`` file with the decrypted "
+"files."
+msgstr "これは復号されたファイルを含む ``target/addresses_plain.yml`` ファイルを生成します。"
+
+#: ../../source/guides/network/running-a-symbol-node.rst:192
+msgid "**Delete this file after reading the keys!**"
+msgstr "**キーを読みだしたら、このファイルは削除してください！**"
+
+#: ../../source/guides/network/running-a-symbol-node.rst:193
+msgid "**Keep your Secret Keys secret at all times!**"
+msgstr "**シークレットキーは常に秘匿してください！**"
+
+#: ../../source/guides/network/running-a-symbol-node.rst:197
 msgid "Providing funds to the node"
 msgstr "資産をノードへ提供する"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:186
+#: ../../source/guides/network/running-a-symbol-node.rst:199
 msgid ""
 "Before the node can begin harvesting or voting (see below) it needs a "
 "**minimum amount of funds**. In the ``testnet`` test environment you can use"
@@ -297,7 +331,7 @@ msgstr ""
 "ノードがハーベスティングまたは投票 (以下を参照) を開始する前に **最小資産** が必要です。 ``testnet`` テスト環境では "
 "|codename| の **Faucet** を使用して資産を調達できます。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:188
+#: ../../source/guides/network/running-a-symbol-node.rst:201
 msgid ""
 "Go to |faucet|, insert the ``address`` of your node's account and the amount"
 " of |networkcurrency| you need and click on CLAIM."
@@ -305,7 +339,7 @@ msgstr ""
 "|faucet| に移動して、ノードのアカウントの ``アドレス`` と必要な量 |networkcurrency| を入力し、CLAIM "
 "をクリックします。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:190
+#: ../../source/guides/network/running-a-symbol-node.rst:203
 msgid ""
 "You will see that your request is first ``unconfirmed`` (pending) and after "
 "a few seconds it becomes ``confirmed``. Your node is now funded and ready to"
@@ -314,21 +348,21 @@ msgstr ""
 "リクエストは最初に ``未確認`` (保留中) になり、数秒後に ``承認済み`` "
 "になるでしょう。これでノードに資産が提供され、操作する準備が整いました。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:194
+#: ../../source/guides/network/running-a-symbol-node.rst:207
 msgid "Submitting link keys"
 msgstr "リンクキーを提出する"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:196
+#: ../../source/guides/network/running-a-symbol-node.rst:209
 msgid ""
 "**Harvesting** and **Voting** nodes require an extra configuration step "
 "before they can be used:"
 msgstr "**Harvesting** と **Voting** ノードを使用するには追加の構成手順が必要です:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:199
+#: ../../source/guides/network/running-a-symbol-node.rst:212
 msgid "Enabling harvesting"
 msgstr "ハーベスティングの有効化"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:201
+#: ../../source/guides/network/running-a-symbol-node.rst:214
 msgid ""
 "|symbol-bootstrap| creates peer nodes with :ref:`remote harvesting <remote-"
 "harvesting>` enabled by default, but they still need to be registered by "
@@ -340,7 +374,7 @@ msgstr ""
 ":ref:`VrfKeyLink <vrf-key-link-transaction>` "
 "トランザクションをネットワークにアナウンスして登録する必要もあります。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:203
+#: ../../source/guides/network/running-a-symbol-node.rst:216
 msgid ""
 "This can be done by |symbol-bootstrap| too, but it needs to be a step "
 "separated from ``symbol-bootstrap start`` because funds are required to "
@@ -349,7 +383,7 @@ msgstr ""
 "これは |symbol-bootstrap| によって実行できます。しかしトランザクションのアナウンスには資産が必要なので ``symbol-"
 "bootstrap start`` とは別のステップで行います。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:205
+#: ../../source/guides/network/running-a-symbol-node.rst:218
 msgid ""
 "Once the node is running with ``symbol-bootstrap start`` and you have funded"
 " its account, from a different terminal (but from the same folder), simply "
@@ -358,7 +392,7 @@ msgstr ""
 "``symbol-bootstrap start`` を実行して、ノードが起動したら、アカウントに資産を提供し、別のターミナルから "
 "(ただし同じフォルダで) 入力してください:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:211
+#: ../../source/guides/network/running-a-symbol-node.rst:224
 msgid ""
 "This creates the required :ref:`AccountKeyLink <account-key-link-"
 "transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` transactions "
@@ -370,7 +404,7 @@ msgstr ""
 "<vrf-key-link-transaction>` トランザクションを作成し、ネットワークへアナウンスします。成功したら "
 "(トランザクションの承認まで、数秒かかる場合があります) 新しいノードはハーベストする準備が整います。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:213
+#: ../../source/guides/network/running-a-symbol-node.rst:226
 msgid ""
 "Without extra parameters, ``symbol-bootstrap link`` tries to send the "
 "registration transaction to the local node (running on the other terminal) "
@@ -386,11 +420,11 @@ msgstr ""
 "`テストノードのリスト <https://forum.nem.io/t/nem-"
 "symbol-0-10-0-7-release-15-feb-2021/27565>`_ はこちらから確認できます。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:218
+#: ../../source/guides/network/running-a-symbol-node.rst:231
 msgid "Enabling voting"
 msgstr "投票の有効化"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:220
+#: ../../source/guides/network/running-a-symbol-node.rst:233
 msgid ""
 "The :ref:`block finalization <finalization>` process requires that network "
 "nodes vote about the correctness of blocks before they are definitely added "
@@ -403,7 +437,7 @@ msgstr ""
 ":ref:`VotingKeyLink トランザクション <voting-key-link-transaction>` "
 "をネットワークにアナウンスして、投票者として登録する必要があります。これも |symbol-bootstrap| で処理します。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:222
+#: ../../source/guides/network/running-a-symbol-node.rst:235
 msgid ""
 "We are going to create a new voting node. If you already created a non-"
 "voting node which you no longer need, you can remove the ``target`` folder "
@@ -413,7 +447,7 @@ msgstr ""
 "新しく投票ノードを作成します。非投票ノードをすでに作成している場合は ``target`` フォルダを削除するか、 ``symbol-"
 "bootstrap`` を実行する時に ``-r`` スイッチを使用してください。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:224
+#: ../../source/guides/network/running-a-symbol-node.rst:237
 msgid ""
 "First, you need to configure the node as a voter, so, besides selecting the "
 "desired preset and assembly you have to provide a custom preset file with "
@@ -421,19 +455,19 @@ msgid ""
 msgstr ""
 "最初に、投票ノードとして構成する必要ために、希望するプリセットと目的のアセンブリを選択する以外に、次の内容を含むカスタムプリセットファイルを提供します。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:231
+#: ../../source/guides/network/running-a-symbol-node.rst:244
 msgid ""
 "So if you call the above file ``enable-voting-preset.yml`` the whole command"
 " would be:"
 msgstr "したがって、上記のファイル ``enable-voting-preset.yml`` を呼び出すと、コマンド全体は次のようになります:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:237
+#: ../../source/guides/network/running-a-symbol-node.rst:250
 msgid ""
 "Once the node is running, from a different terminal (but from the same "
 "folder), simply type:"
 msgstr "ノードが起動したら、別のターミナルから (同じフォルダで) 入力します:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:243
+#: ../../source/guides/network/running-a-symbol-node.rst:256
 msgid ""
 "Just like in the harvesting case, this creates the required "
 ":ref:`VotingKeyLink transaction <voting-key-link-transaction>` and submits "
@@ -443,11 +477,11 @@ msgstr ""
 "ハーベスティングの場合と同様に、これにより必要な :ref:`VotingKeyLink トランザクション <voting-key-link-"
 "transaction>` が作成され、ネットワークに送信されます。正常に完了すると、新しいノードは投票する準備が整います。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:247
+#: ../../source/guides/network/running-a-symbol-node.rst:260
 msgid "Running a secure node"
 msgstr "セキュアなノードを立ち上げる"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:249
+#: ../../source/guides/network/running-a-symbol-node.rst:262
 msgid ""
 "It is possible to setup a node in such a way that **the private keys are "
 "never stored in plain text on a computer connected to the Internet**. Read "
@@ -456,33 +490,33 @@ msgstr ""
 "**インターネットに接続されたコンピュータに、秘密鍵がプレーンテキストで保存されないように** ノードを設定することができます。それについては "
 ":doc:`running-a-secure-symbol-node` を参照してください。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:253
+#: ../../source/guides/network/running-a-symbol-node.rst:266
 msgid "Configuring node properties"
 msgstr "ノードのプロパティ設定"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:255
+#: ../../source/guides/network/running-a-symbol-node.rst:268
 msgid ""
 "Follow the :ref:`Configuring node properties <node-properties>` guide to "
 "change parameters such as the public name of the node."
 msgstr ""
 ":ref:`ノードプロパティの設定 <node-properties>` ガイドに従って、ノードのパブリック名などのパラメータを変更します。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:259
+#: ../../source/guides/network/running-a-symbol-node.rst:272
 msgid "Interacting with the network"
 msgstr "ネットワークと疎通する"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:261
+#: ../../source/guides/network/running-a-symbol-node.rst:274
 msgid ""
 "You can use the following tools to test the functionality of your new node:"
 msgstr "次のツールを使用して、ノードの機能をテストします:"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:263
+#: ../../source/guides/network/running-a-symbol-node.rst:276
 msgid ""
 "|blockchain-explorer|: Search for transactions, accounts, assets, and blocks"
 " in the test network."
 msgstr "|blockchain-explorer|: テストネットワーク内のトランザクション、アカウント、資産、ブロックの検索。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:264
+#: ../../source/guides/network/running-a-symbol-node.rst:277
 msgid ""
 ":ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for "
 "|codename|. Available for Mac, Linux, and Windows."
@@ -490,26 +524,26 @@ msgstr ""
 ":ref:`デスクトップウォレット <wallet-desktop>`: Mac, Linux, Windows 向け |codename| 用 "
 "クロスプラットフォームクライアント。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:265
+#: ../../source/guides/network/running-a-symbol-node.rst:278
 msgid ""
 ":ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used "
 "actions from your terminal."
 msgstr ":ref:`コマンドラインインターフェイス <wallet-cli>`: よく使用されるアクションをターミナルで実行すます。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:266
+#: ../../source/guides/network/running-a-symbol-node.rst:279
 msgid ""
 "The |codename| |faucet|: Receive |networkcurrency| units to test "
 "|codename|'s services."
 msgstr ""
 "|codename| |faucet| : |codename| サービスをテストするための |networkcurrency| を受け取れます。"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:267
+#: ../../source/guides/network/running-a-symbol-node.rst:280
 msgid ""
 ":doc:`Software Development Kits <../../sdk>`: Add |codename| to your "
 "project."
 msgstr ":doc:`ソフトウェア開発キット <../../sdk>`: |codename| をあなたのプロジェクトへ追加"
 
-#: ../../source/guides/network/running-a-symbol-node.rst:269
+#: ../../source/guides/network/running-a-symbol-node.rst:282
 msgid ""
 "And don't forget to check :ref:`the rest of the guides <blog-categories>` to"
 " continue learning about |codename|!"
