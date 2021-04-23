@@ -18,7 +18,7 @@ Private key
 ===========
 
 A private key is a secret number that allows an account to announce transactions.
-Anyone with access to the private key ultimately has control over the account and its assets.
+Anyone with access to the private key ultimately has control over the account and its assets. See :ref:`keypair` for more information.
 
 .. note:: The private key must be kept secret. Make sure your private key is backed up safely somewhere offline.
 
@@ -27,13 +27,17 @@ Public key
 
 The public key is used to verify the account's signatures.
 It is stored on the blockchain with the first-issued transaction.
-An account which has not issued any transaction has its public key field empty.
+An account which has not issued any transaction has its public key field empty. See :ref:`keypair` for more information.
 
 Address
 =======
 
 Each account has a unique :ref:`address <address>` derived from the public key.
 Normally, the address is shared instead of the public key because it is shorter and gathers information about the network.
+
+Addresses can be represented either in **Hexadecimal** format (48 characters) or, more commonly, in **Base32** format (39 characters).
+
+You can use :ref:`symbol-cli <wallet-cli>`'s ``converter`` command to switch between both representations.
 
 Balance
 =======
