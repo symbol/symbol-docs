@@ -16,7 +16,15 @@ Using Symbol Bootstrap
 
 Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are not familiar with it.
 
-1. Create a :ref:`custom preset file <symbol-bootstrap-presets>` named, for example, ``supernode.yml``:
+1. Make sure you are using the **latest Symbol Bootstrap** by running:
+
+   .. code-block:: bash
+
+      npm install -g symbol-bootstrap
+
+   It should be at least **version 1.0.5**.
+
+2. Create a :ref:`custom preset file <symbol-bootstrap-presets>` named, for example, ``supernode.yml``:
 
    .. code-block:: yaml
 
@@ -24,13 +32,13 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
         - rewardProgram: SuperNode
           host: my-symbol-node.com # Could also be an IP address
 
-   If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true``.
+   If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true`` below the ``host`` line, with the same indentation as it.
 
    If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-private-keys>`__.
 
    .. note:: When managing your node through a :doc:`multisig account <../../concepts/multisig-account>`, the **main** account in the above preset file must be **the multisig account** (and **not** any of its cosignatories).
 
-2. **Create and run the node** using the new preset file:
+3. **Create and run the node** using the new preset file:
 
    Along with the standard node services, this will also download and install the **monitoring agent**.
 
@@ -42,13 +50,15 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    .. note:: For test purposes you can use |codename|'s TESTNET using ``-p testnet``.
 
-3. Make sure your node is **sufficiently funded**. Your main account must hold at least **1M** |networkcurrency| :ref:`to be eligible as a supernode <supernode-program>`.
+4. Make sure your node is **sufficiently funded**. Your main account must hold at least **1M** |networkcurrency| :ref:`to be eligible as a supernode <supernode-program>`.
 
-   You can find the node's main account address in the ``target/addresses.yml`` file. 
+   You can find the node's main account address in the ``target/addresses.yml`` file.
 
    On the TESTNET, you can **send tokens** to your node's main account using the `Symbol Faucet <http://faucet.testnet.symboldev.network>`__. If you need more tokens than the faucet can serve, connect to `NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__ and contact `cryptobeliever <https://t.me/cryptobeliever>`__.
 
-4. **Register the node** by linking its remote, VRF and voting keys:
+5. **Register the node** by linking its remote, VRF and voting keys.
+
+   Without interrupting Symbol Bootstrap, open another terminal and go to the same folder you were before. Then run:
 
    .. code-block:: bash
 
@@ -56,19 +66,19 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    This sends a transaction linking the supplemental keys to the main account. This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure your main account has **extra funds** beyond the requirements of the Supernode program.
 
-   .. note:: During the test period, heavy testing might artificially increase transaction fees. If ``symbol-bootstrap`` appears to be frozen with the message ``Announcing Simple Transaction hash...`` try increasing the transaction fee with adding a ``--maxFee 10000000`` parameter, for example.
+   .. note:: During the test period, heavy testing might artificially increase transaction fees. If ``symbol-bootstrap`` appears to be frozen with the message ``Announcing Simple Transaction hash...`` try increasing the transaction fee by adding a ``--maxFee 10000000`` parameter, for example (these absolute units corespond to 10 |networkcurrency|).
 
-5. **Enroll in the Supernode program**.
+6. **Enroll in the Supernode program**.
 
    .. code-block:: bash
 
-      symbol-bootstrap enrolRewardProgram --useKnownRestGateways
+      symbol-bootstrap enrollRewardProgram --useKnownRestGateways
 
-   This sends a transaction to the Controller address, which includes the node's public key and its monitoring agent's public URL.
-
-   See the note regarding fees in the previous step.
+   This sends a transaction to the Controller address requesting enrollment (see the note regarding fees in the previous step).
 
    From this point, the :ref:`reward programs controller <reward-programs-controller>` on the network will monitor the node.
+
+Enrollment is now complete. You can use the `Symbol Explorer <http://explorer.symbolblockchain.io/nodes>`__ and check that your node appears in the list with the appropriate Reward Program box (The information refreshes every 30 seconds).
 
 .. _enroll-supernode-manually:
 
