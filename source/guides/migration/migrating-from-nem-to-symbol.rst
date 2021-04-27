@@ -8,11 +8,11 @@ Migrating from NIS1 to Symbol
 #############################
 
 With |codename|, most of the previously available NIS1 features have evolved.
-This document will help you **upgrade your application** previous NIS1 features, to the newly available |codename| technology.
+This document will help you **upgrade your application**'s previous NIS1 features to the newly available |codename| technology.
 
-.. note:: To learn how to move your NIS1 assets to a Symbol account read `the Symbol opt-in guide <https://nemplatform.com/symbol-migration/#acc-tb_mrzh282-5>`__.
+.. note:: You can move your NIS1 assets to a Symbol account by **Opting-in**. Learn about it in the :doc:`` guide.
 
-.. csv-table:: Comparison between NIS1 and Symbol
+.. csv-table:: Feature comparison between NIS1 and Symbol
    :header: "NEM NIS1", "Symbol"
    :delim: ;
     

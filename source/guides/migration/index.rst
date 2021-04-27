@@ -8,4 +8,5 @@ Guides related to migrating from NIS1 to |codename|.
     :maxdepth: 1
 
     post-optin-xym-retrieval
+    post-launch-optin-xym-retrieval
     migrating-from-nem-to-symbol

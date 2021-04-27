@@ -3,11 +3,13 @@
     :excerpt: 1
     :nocomments:
 
-####################
-Retrieving your XYMs
-####################
+#############################################
+Retrieving your XYMs from a pre-launch Opt-in
+#############################################
 
-This guide explains how to access the **XYMs** (|codename|'s native currency) you were awarded if you enrolled in the opt-in process.
+This guide explains how to access the **XYMs** (|codename|'s native currency) you were awarded if you enrolled in the opt-in process **BEFORE** |codename| launched (March 12, 2021).
+
+If you missed that, you can still opt-in by following the :doc:`post-launch-optin-xym-retrieval` guide.
 
 ************
 Introduction
@@ -17,10 +19,10 @@ Introduction
 
 **Symbol is the next-generation blockchain** from NEM, rewritten from scratch, and launched in March, 2021.
 
-To quickstart |codename|'s adoption, an **opt-in** process was established which awarded **one XYM** in the new |codename| blockchain **for every XEM** (NIS1's native currency) held in the NIS1 blockchain.
+To quickstart |codename|'s adoption, an **Opt-in** process was established which awarded **one XYM** in the new |codename| blockchain **for every XEM** (NIS1's native currency) held in the NIS1 blockchain.
 
-The Opt-In Process
-==================
+The pre-launch Opt-In Process
+=============================
 
 .. image:: /resources/images/screenshots/retrieving-optin-xym-0.png
     :align: right
@@ -28,7 +30,7 @@ The Opt-In Process
     :class: with-shadow
     :target: /_images/retrieving-optin-xym-0.png
 
-- First off, XEM holders wishing to participate in the opt-in process had to **enroll** using any of the NEM Wallets. For example, using the Desktop **NEM Nano Wallet**.
+- First off, XEM holders wishing to participate in the Opt-in process had to **enroll** using any of the NEM Wallets. For example, using the Desktop **NEM Nano Wallet**.
 
 .. image:: /resources/images/screenshots/retrieving-optin-xym-1.png
     :align: right
@@ -42,13 +44,13 @@ The Opt-In Process
 
 - Then, on **March 12th, 2021** the **NIS1 Snapshot** took place: When the NIS1 blockchain reached block height 3'105'500 a picture was taken of all accounts and their assets.
 
-- Finally, on **March 16th, 2021** the **Symbol blockchain was launched** and the opt-in accounts were automatically created:
+- Finally, on **March 16th, 2021** the **Symbol blockchain was launched** and all opted-in accounts were automatically created:
 
   **For every opted-in NIS1 account that held at least 100 XEMs at the snapshot, a Symbol account was created holding that same amount of XYMs.**
 
 This guide explains how to access this new Symbol account and its assets.
 
-.. note:: If you did not opt-in before the new Symbol blockchain launched, you can still opt-in **post-launch**. The details will be disclosed shortly. `Follow the discussion here <https://forum.nem.io/t/symbol-launch-discussion-topic-1-3-post-launch-opt-in/26194>`__.
+.. note:: If you did not opt-in before the new Symbol blockchain launched, you can still opt-in **post-launch** by following the :doc:`post-launch-optin-xym-retrieval` guide.
 
 *****
 Guide
