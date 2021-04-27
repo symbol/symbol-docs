@@ -38,6 +38,10 @@ This guide explains how to participate in the Opt-in.
 Guide
 *****
 
+.. sidebar:: Multisignature accounts
+
+   If the account you want to opt-in is a multisig account make sure you read the :ref:`Notes on multisig accounts <post-launch-optin-multisig>`.
+
 The Opt-in process is conducted entirely from within the **NEM Nano Wallet**, but first, you need to retrieve the **public key** of the |codename| account where you want to receive the XYMs:
 
 1. **Download and install** the :doc:`Symbol Desktop Wallet <../../wallets>` for your platform, if you don't already have it.
@@ -142,6 +146,26 @@ If the Opt-in is successfull you will be taken to the initial Summary screen whe
 
 Since it can take up to a week for the XYMs to be transferred, you can come back to this screen to check on the Opt-in status.
 
+.. _post-launch-optin-multisig:
+
+.. topic:: Notes on multisig accounts
+
+   When opting-in :doc:`multi-signature accounts (multisig) <../../concepts/multisig-account>` a few points need to be taken into account:
+
+   - The multisig account **cannot opt-in for itself**, it needs to be opted-in by ALL of its cosigners.
+
+     This is, the Opt-in process **must be initiated by each of the cosigners**, selecting the multisig account as the account to opt-in each time.
+
+     For clarity, the wallet shows which cosigners have already opted-in the multisig account and which ones are missing:
+
+     .. image:: /resources/images/screenshots/post-launch-optin-10.png
+         :align: center
+         :width: 50%
+         :class: with-shadow
+         :target: /_images/post-launch-optin-10.png
+
+   - The Symbol account that will receive the opted-in XYM **must be a multisig account** too, with the **same amount of cosigners**.
+
 ***************
 Troubleshooting
 ***************
@@ -155,8 +179,6 @@ This is a short list of items to check should you encounter any problem when opt
 - Check that the NIS1 account has not already opted-in **post-launch**.
 
 - Check that the destination Symbol account is **not** a :ref:`remote-harvesting` account.
-
-- If you opted-in using the **Symbol Mobile Wallet**, check that your account is not one of the 35 accounts affected by this `known Symbol Mobile Wallet issue <https://forum.nem.io/t/symbol-launch-opt-in-issue-affecting-35-accounts/29401>`__.
 
 - The **NEM Helpdesk** can help you if everything else fails:
 
