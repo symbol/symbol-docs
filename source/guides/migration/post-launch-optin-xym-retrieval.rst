@@ -152,9 +152,10 @@ Since it can take up to a week for the XYMs to be transferred, you can come back
 
    When opting-in :doc:`multi-signature accounts (multisig) <../../concepts/multisig-account>` a few points need to be taken into account:
 
-   - The multisig account **cannot opt-in for itself**, it needs to be opted-in by ALL of its cosigners.
+   - The multisig account **cannot opt-in for itself**, it needs to be opted-in by ALL of its cosigners:
 
-     This is, the Opt-in process **must be initiated by each of the cosigners**, selecting the multisig account as the account to opt-in each time.
+     - The Opt-in process **must be initiated by one of the cosigners**, selecting the multisig account as the account to opt-in, and entering the Symbol account's public key.
+     - The rest of the cosigners **must opt-in the multisig account too**, but they won't be required to enter the Symbol account.
 
      For clarity, the wallet shows which cosigners have already opted-in the multisig account and which ones are missing:
 
