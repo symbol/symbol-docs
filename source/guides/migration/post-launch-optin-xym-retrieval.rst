@@ -82,7 +82,35 @@ Now that you know where do you want your XYMs transferred, you can start the Opt
        :class: with-shadow
        :target: /_images/post-launch-optin-3.png
 
-6. **Click on the Symbol Opt-In module** in the ``Services`` tab:
+.. topic:: Importing from another wallet
+
+   If your NIS1 account is held in a wallet other than the NEM Wallet, you will need to **import** it into the NEM Wallet.
+
+   First, you need to **retrieve the account's private key** from the wallet. The procedure depends on the wallet but here are instructions for a few popular ones:
+   `Atomic Wallet <https://support.atomicwallet.io/article/19-how-to-view-your-private-keys-backup-phrase>`__,
+   `Exodus <https://support.exodus.com/article/86-how-can-i-view-my-private-keys>`__,
+   `Coinomi <https://coinomi.freshdesk.com/support/solutions/articles/29000009717-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys->`__,
+   `Magnum <https://davecube-com.medium.com/how-to-extract-the-private-key-from-your-magnum-wallet-95453dccacd4>`__.
+
+   Then, you need to **import the private key into the NEM Wallet**:
+
+   - Click on ``SIGN UP`` in top right corner.
+   - Click on the ``Private key wallet`` button and then on ``Ready``.
+   - Choose the ``Mainnet`` network and click on ``Next``.
+   - Give your new wallet a **name** and a **password** to protect it.
+   - Enter the account's **private key** that you retrieved from your other wallet. Your NEM address will be presented.
+   - Read carefully the **security notices** and finish the import process.
+   - Back to the LOGIN screen, select the new wallet, enter its password and click on ``Sign In``.
+
+.. topic:: Importing from a wallet (.wlt) file
+
+   If you keep your NIS1 account in a .wlt file you will need to **import** it into the NEM Wallet too:
+
+   - In the LOGIN screen, click on the ``Import Wallet`` yellow button.
+   - **Select the wallet file** (the one with .wlt extension) and finish the import process.
+   - Back to the LOGIN screen, select the new wallet, enter its password and click on ``Sign In``.
+
+6. Once you are logged in to your NIS1 account, **click on the Symbol Opt-In module** in the ``Services`` tab:
 
    .. image:: /resources/images/screenshots/post-launch-optin-4.png
        :align: center
