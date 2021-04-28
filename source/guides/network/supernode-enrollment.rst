@@ -115,22 +115,13 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
         [ca]
         default_ca = CA_default
-
         [CA_default]
-        new_certs_dir = ./new_certs
-        database = index.txt
-        serial = serial.dat
-        private_key = agent-ca.key.pem
-        certificate = agent-ca.crt.pem
         policy = policy_catapult
-
         [policy_catapult]
         commonName = supplied
-
         [req]
         prompt = no
         distinguished_name = dn
-
         [dn]
         CN = Agent CA
    
@@ -148,6 +139,16 @@ After following that guide, you need to **install a monitoring agent** and **ann
         base64 agent-ca.csr.pem --wrap 0 ; echo
 
      The last command outputs a string of characters. Copy them to be used later.
+
+   - Finally, download the Symbol network CA certificate to allow the agent to authenticate connections to the node it is monitoring (Download only one):
+
+     .. code-block:: bash
+
+        # For MAINNET
+        wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/mainnet/certs/controller-ca-crt.pem
+
+        # For TESTNET
+        wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/testnet/certs/controller-ca-crt.pem
 
    - Move out of the ``certs`` folder.
 
@@ -168,7 +169,7 @@ After following that guide, you need to **install a monitoring agent** and **ann
       CERTS_CONTROLLER_CA_CERT_FILE=./certs/controller-ca.crt.pem
       CERTS_AGENT_CA_KEY_FILE=./certs/agent-ca.key.pem
       CONTROLLER_API_URL=http://node-monitoring.symbolblockchain.io:7890; MAINNET
-      ; CONTROLLER_API_URL=http://TO_BE_DECIDED:7890; TESTNET
+      ; CONTROLLER_API_URL=http://node-monitoring.testnet.symboldev.network:7890; TESTNET
 
    .. note:: By default the agent uses port number ``7881`` to communicate. If this port is unavailable you can add an ``HTTP_PORT=`` line with a different port number.
 
