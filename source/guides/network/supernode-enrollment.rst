@@ -78,7 +78,7 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    From this point, the :ref:`reward programs controller <reward-programs-controller>` on the network will monitor the node.
 
-Enrollment is now complete. You can use the `Symbol Explorer <http://explorer.symbolblockchain.io/nodes>`__ and check that your node appears in the list with the appropriate Reward Program box (The information refreshes every 30 seconds).
+You can now jump to the **Validation** section at the end of this guide.
 
 .. _enroll-supernode-manually:
 
@@ -94,31 +94,62 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
 1. **Download the node monitoring agent**:
 
-   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/1.0.0/agent_binary/agent-linux.bin>`__ and make it executable:
+   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/2.0.0/agent_binary/agent-linux.bin>`__ and make it executable:
 
    .. code-block:: bash
 
-      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/1.0.0/agent_binary/agent-linux.bin
+      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/2.0.0/agent_binary/agent-linux.bin
       chmod +x agent-linux.bin
 
 2. **Create certificates** for the monitoring agent:
 
    The agent **authenticates** every connection to the :ref:`reward programs controller <reward-programs-controller>`, so you will need to create SSL certificates.
 
-   Make sure you have `OpenSSL <https://www.openssl.org/>`__ installed (for example running ``sudo apt install openssl``) and then run:
+   Make sure you have `OpenSSL <https://www.openssl.org/>`__ at least **version 1.1.1**. You can install for example running ``sudo apt install openssl``.
 
-   .. code-block:: bash
+   - Create a folder named ``certs`` and move inside it.
 
-      openssl genrsa -out agent-key.pem 4096
-      openssl req -new -key agent-key.pem -out agent-csr.pem \
-              -subj "/C=US/ST=Oregon/L=Portland/O=Company Name/OU=Org/CN=www.example.com"
-      openssl x509 -req -days 999 -in agent-csr.pem -out agent-crt.pem -signkey agent-key.pem
+   - Create a new file named ``agent-ca.cnf`` with the following content:
 
-   You also need to download the **Symbol network CA certificate**. This allows the agent to authenticate connections to the node it is monitoring.
+     .. code-block:: ini
 
-   .. code-block:: bash
+        [ca]
+        default_ca = CA_default
 
-      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/mainnet/certs/ca-crt.pem
+        [CA_default]
+        new_certs_dir = ./new_certs
+        database = index.txt
+        serial = serial.dat
+        private_key = agent-ca.key.pem
+        certificate = agent-ca.crt.pem
+        policy = policy_catapult
+
+        [policy_catapult]
+        commonName = supplied
+
+        [req]
+        prompt = no
+        distinguished_name = dn
+
+        [dn]
+        CN = Agent CA
+   
+   - Then generate the certificate by running:
+
+     .. code-block:: bash
+
+        # Generate agent CA key pair
+        openssl genpkey -out agent-ca.key.pem -outform PEM -algorithm ed25519
+
+        # Create agent CA CSR
+        openssl req -config agent-ca.cnf -key agent-ca.key.pem -new -out agent-ca.csr.pem
+
+        # Base64 encode agent CA CSR file for later use
+        base64 agent-ca.csr.pem --wrap 0 ; echo
+
+     The last command outputs a string of characters. Copy them to be used later.
+
+   - Move out of the ``certs`` folder.
 
 3. **Configure the monitoring agent**:
 
@@ -126,22 +157,22 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
    .. code-block:: properties
 
-      NETWORK_TYPE=104 ; 104 for MAINNET, 152 for TESTNET
-      ; Node's transport private key
-      NODE_PRIVATE_KEY=●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+      ; Use 104 for MAINNET or 152 for TESTNET
+      NETWORK_TYPE=104 
       LOGGER_FILE=agent.log
       ; Replace with the public host where your node is running (hostname or IP address)
       REST_GATEWAY_URL=http://my-symbol-node.com:3000
       REWARD_PROGRAM=SuperNode
-      CONTROLLER_PUBLIC_KEY=645FE86EAED04747DE066D838FE6E77BA2B146DC8BBC505617323D5DF01106A5 ; MAINNET
-      ; CONTROLLER_PUBLIC_KEY=68B6A1D2F292E75F9BB8E9EDDA086A7C293A198C9968FF7528374075AAF4D983 ; TESTNET
-      CERTS_CA_FILE=ca-crt.pem
-      CERTS_KEY_FILE=agent-key.pem
-      CERTS_CERT_FILE=agent-crt.pem
+      ; Replace with the main account's public key
+      MAIN_PUBLIC_KEY=●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+      CERTS_CONTROLLER_CA_CERT_FILE=./certs/controller-ca.crt.pem
+      CERTS_AGENT_CA_KEY_FILE=./certs/agent-ca.key.pem
+      CONTROLLER_API_URL=http://node-monitoring.symbolblockchain.io:7890; MAINNET
+      ; CONTROLLER_API_URL=http://TO_BE_DECIDED:7890; TESTNET
 
-   .. note:: By default the agent uses port number ``7880`` to communicate. If this port is already in use (by a NIS1 supernode agent, for example) add an ``HTTP_PORT=`` line with a different port number.
+   .. note:: By default the agent uses port number ``7881`` to communicate. If this port is unavailable you can add an ``HTTP_PORT=`` line with a different port number.
 
-   You need to specify ``REST_GATEWAY_URL`` because the agent and the node's REST gateway might be running on different machines. This URL is how the agent will contact the node's REST interface. If they are on the same machine you can simply use ``REST_GATEWAY_URL=http://localhost:3000``.
+   You need to specify ``REST_GATEWAY_URL`` because this URL tells the controller how to contact the node's REST interface during the enrollment process and later monitoring.
 
 4. **Run the agent**:
 
@@ -151,30 +182,32 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
       ./agent-linux.bin --config agent.properties
 
-5. **Send the enrolling message**
+   .. note:: Once the agent starts running, it will poll the Controller every 2 minutes until the enrollment is completed and new communication certificates are generated. At that point the agent just listens for commands from the Controller.
+
+5. **Send the enrollment message**
 
    The last bit is to **notify the Controller** that your node wants to enroll in the Supernode program. This is done through a conventional :ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a special message:
 
    .. code-block:: text
 
-      enrol NODE_PUBLIC_KEY AGENT_URL
+      enroll AGENT_URL BASE64_ENCODED_AGENT_CA_CSR
 
-   - Replace ``NODE_PUBLIC_KEY`` with your node's **transport** public key. You can get it from the ``nodePublicKey`` field in http://localhost:3000/node/info, for example, when your node is running.
+   - Replace ``AGENT_URL`` with ``https://`` + the host where you are running the agent + ``:7881``. This URL must be **publicly accessible**. For example: `https://my-symbol-node.com:7881 <https://my-symbol-node.com:7881>`__. IP addresses are also valid. Use the port number you specified in step 3 above if you didn’t use the standard one.
 
-   - Replace ``AGENT_URL`` with ``https://`` + the host where you are running the agent + ``:7880``. This URL must be **publicly accessible**. For example: ``https://my-symbol-node.com:7880``. IP addresses are also valid. Use the port number you specified in step 3 above if you didn't use the standard one.
+   - Replace ``BASE64_ENCODED_AGENT_CA_CSR`` with the output of step 2.
 
    Finally, the recipient address for this transaction is:
 
    - ``NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA`` for MAINNET.
    - ``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` for TESTNET.
 
-   The transaction can be announced using :doc:`symbol-cli <../../cli>`:
+   The transaction can then be announced using :doc:`symbol-cli <../../cli>`:
 
    .. code-block:: symbol-cli
 
       symbol-cli transaction transfer --mode normal --sync \
                  --recipient-address NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA \
-                 --message "enrol NODE_PUBLIC_KEY AGENT_URL" \
+                 --message "enrol AGENT_URL BASE64_ENCODED_AGENT_CA_CSR" \
                  --mosaics @symbol.xym::0
 
    **This transaction must be signed by your node's main account**, so make sure it is the default profile in ``symbol-cli``.
@@ -189,6 +222,8 @@ You can **validate your node** by checking that all services are running properl
 
 * `http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: Node's connection to the network.
 * `http://localhost:3000/node/info <http://localhost:3000/node/info>`__: Node's health.
-* `https://localhost:7880/metadata <https://localhost:7880/metadata>`__: Agent's report.
+* `https://localhost:7881/metadata <https://localhost:7881/metadata>`__: Agent's report.
 
 And then check again that they are accessible through your public host name.
+
+Once enrollment is complete, you can use the `Symbol Explorer <http://explorer.symbolblockchain.io/nodes>`__ to check that your node appears in the list with the appropriate Reward Program box (The information refreshes every 30 seconds).
