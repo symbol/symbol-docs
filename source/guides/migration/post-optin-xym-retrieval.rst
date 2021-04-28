@@ -30,7 +30,7 @@ The pre-launch Opt-In Process
     :class: with-shadow
     :target: /_images/retrieving-optin-xym-0.png
 
-- First off, XEM holders wishing to participate in the Opt-in process had to **enroll** using any of the NEM Wallets. For example, using the Desktop **NEM Nano Wallet**.
+- First off, XEM holders wishing to participate in the Opt-in process had to **enroll** using any of the NEM Wallets. For example, using the Desktop `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__.
 
 .. image:: /resources/images/screenshots/retrieving-optin-xym-1.png
     :align: right
@@ -40,7 +40,7 @@ The pre-launch Opt-In Process
 
 - In return, the user received a **Symbol Mnemonic**, a 24-word phrase which encoded a Symbol account for the future Symbol blockchain.
 
-  Here is an example produced by the **NEM Nano Wallet** containing the Symbol Mnemonic.
+  Here is an example produced by the **NEM Wallet** containing the Symbol Mnemonic.
 
 - Then, on **March 12th, 2021** the **NIS1 Snapshot** took place: When the NIS1 blockchain reached block height 3'105'500 a picture was taken of all accounts and their assets.
 
@@ -58,7 +58,7 @@ Guide
 
 1. **Download and install** the :doc:`Symbol Desktop Wallet <../../wallets>` for your platform.
 
-   Please note that this is different from the old NEM Nano Wallet.
+   Please note that this is different from the NEM Wallet used to interact with the NIS1 blockchain.
 
 2. Open the Wallet and click on ``Create a new profile?``:
 
@@ -136,7 +136,7 @@ Take a look at the rest of the :doc:`guides <../index>` to learn what you can do
 
    It is **recommended** that you **move** your funds from the opted-in account to the other one you imported in step 6 above (called a **Seed** account, because it was obtained from a seed Symbol mnemonic).
 
-   Accounts opted-in from the **NEM Nano Wallet** are special and **cannot be derived from the mnemonic**. Therefore, in the future, if you used a Wallet **other than the Symbol Desktop Wallet** to recover your account from the mnemonic, it **might not recover your opted-in account**.
+   Accounts opted-in from the **NEM Wallet** are special and **cannot be derived from the mnemonic**. Therefore, in the future, if you used a Wallet **other than the Symbol Desktop Wallet** to recover your account from the mnemonic, it **might not recover your opted-in account**.
    
    It will recover all other seed accounts, though, and hence the recommendation to move your funds and use only seed accounts.
 
