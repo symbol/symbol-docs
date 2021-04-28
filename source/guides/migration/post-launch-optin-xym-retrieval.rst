@@ -42,11 +42,11 @@ Guide
 
    If the account you want to opt-in is a multisig account make sure you read the :ref:`Notes on multisig accounts <post-launch-optin-multisig>`.
 
-The Opt-in process is conducted entirely from within the **NEM Nano Wallet**, but first, you need to retrieve the **public key** of the |codename| account where you want to receive the XYMs:
+The Opt-in process is conducted entirely from within the `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__, but first, you need to retrieve the **public key** of the |codename| account where you want to receive the XYMs:
 
 1. **Download and install** the :doc:`Symbol Desktop Wallet <../../wallets>` for your platform, if you don't already have it.
 
-   Please note that this is different from the NEM Nano Wallet used to interact with the NIS1 blockchain.
+   Please note that this is different from the NEM Wallet used to interact with the NIS1 blockchain.
 
 2. **Create the Symbol account** where you would like to receive the assets, if you don't already have one.
 
@@ -64,7 +64,7 @@ The Opt-in process is conducted entirely from within the **NEM Nano Wallet**, bu
 
 Now that you know where do you want your XYMs transferred, you can start the Opt-in process:
 
-4. **Download and install** the `NEM Nano Wallet <https://nemplatform.com/wallets/#desktop>`__ for your platform, if you don't already have it.
+4. **Download and install** the `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__ for your platform, if you don't already have it.
 
    Make sure you have installed **at least version 3.0.0**, so the post-launch Opt-in module is present.
 
@@ -133,7 +133,7 @@ Now that you know where do you want your XYMs transferred, you can start the Opt
    - Do one last check of the destination |codename| account and balance.
    - Accept the ``terms and conditions`` and the ``privacy policy``.
    - The Opt-in process involves registering a transaction on the NIS1 blockchain. This has a fee, shown on this summary screen.
-   - Enter your Nano Wallet password to confirm the process.
+   - Enter your NEM Wallet password to confirm the process.
    - Click on **SEND**.
 
 If the Opt-in is successfull you will be taken to the initial Summary screen where you can see the status of the process:
