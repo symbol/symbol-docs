@@ -240,4 +240,4 @@ And then check again that they are accessible through your public host name.
 
       wget --no-check-certificate https://localhost:7881/metadata
 
-Once enrollment is complete, you can use the `Symbol Explorer <http://explorer.symbolblockchain.io/nodes>`__ to check that your node appears in the list with the appropriate Reward Program box (The information refreshes every 30 seconds).
+Once enrollment is complete, you can use the `Symbol Explorer (MAINNET) <http://explorer.symbolblockchain.io/nodes>`__ (or `TESTNET <http://explorer.testnet.symboldev.network/>`__) to check that your node appears in the list with the appropriate Reward Program box (The information refreshes every 30 seconds).
