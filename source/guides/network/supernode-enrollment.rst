@@ -215,6 +215,11 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
    This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure your main account has **extra funds** beyond the requirements of the Supernode program.
 
+   .. note::
+      If the default fee used by ``symbol-cli`` is too small for the current network conditions, you might see the program get stuck processing the **Transaction announced** step.
+
+      If the command does not finish within 5 minutes, press ``Ctrl+C`` and try again adding the ``--max-fee 1000000`` parameter, which uses a **1 XYM** fee. Feel free to use a different number after reading the :doc:`fees documentation <../../concepts/fees>`.
+
 ******************
 Validate the setup
 ******************
@@ -223,7 +228,7 @@ You can **validate your node** by checking that all services are running properl
 
 * `http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: Node's connection to the network.
 * `http://localhost:3000/node/info <http://localhost:3000/node/info>`__: Node's health.
-* `https://localhost:7881/metadata <https://localhost:7881/metadata>`__: Agent's report.
+* `https://localhost:7881/metadata <https://localhost:7881/metadata>`__: Agent's report (see note below).
 
 And then check again that they are accessible through your public host name.
 
