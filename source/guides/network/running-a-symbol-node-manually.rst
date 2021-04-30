@@ -110,9 +110,7 @@ Configuration
 
 You can edit these files manually (Take a look at `these templates <https://github.com/nemtech/catapult-server/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/nemtech/symbol-node-configurator>`__ as shown next.
 
-.. information::
-
-**This step can be performed on an offline machine for added security.**
+**The Configuration step can be performed on an offline machine for added security.**
 
 0. **Prerequisites**.
 
