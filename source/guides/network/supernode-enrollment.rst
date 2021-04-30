@@ -166,7 +166,7 @@ After following that guide, you need to **install a monitoring agent** and **ann
       REWARD_PROGRAM=SuperNode
       ; Replace with the main account's public key
       MAIN_PUBLIC_KEY=●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-      CERTS_CONTROLLER_CA_CERT_FILE=./certs/controller-ca.crt.pem
+      CERTS_CONTROLLER_CA_CERT_FILE=./certs/controller-ca-crt.pem
       CERTS_AGENT_CA_KEY_FILE=./certs/agent-ca.key.pem
       CONTROLLER_API_URL=http://node-monitoring.symbolblockchain.io:7890; MAINNET
       ; CONTROLLER_API_URL=http://node-monitoring.testnet.symboldev.network:7890; TESTNET
