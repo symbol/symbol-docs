@@ -96,11 +96,11 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
 1. **Download the node monitoring agent**:
 
-   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/2.0.0/agent_binary/agent-linux.bin>`__ and make it executable:
+   `Download the Linux binary <https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/1.0.2-alpha.0/agent_binary/agent-linux.bin>`__ and make it executable:
 
    .. code-block:: bash
 
-      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/2.0.0/agent_binary/agent-linux.bin
+      wget https://symbol-node-reward.s3-eu-west-1.amazonaws.com/packages/1.0.2-alpha.0/agent_binary/agent-linux.bin
       chmod +x agent-linux.bin
 
 2. **Create certificates** for the monitoring agent:
