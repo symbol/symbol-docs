@@ -66,7 +66,7 @@ Now that you know where do you want your XYMs transferred, you can start the Opt
 
 4. **Download and install** the `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__ for your platform, if you don't already have it.
 
-   Make sure you have installed **at least version 3.0.0**, so the post-launch Opt-in module is present.
+   Make sure you have installed **at least version 2.6.0**, so the post-launch Opt-in module is present.
 
    .. image:: /resources/images/screenshots/post-launch-optin-2.png
        :align: center
