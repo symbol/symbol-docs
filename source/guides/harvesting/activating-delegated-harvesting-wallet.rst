@@ -30,7 +30,11 @@ Before you can activate delegated harvesting using the Desktop Wallet, you need 
 
 - An up-to-date **Desktop Wallet**. Download the latest version from `the releases page <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`__.
 
-- An **account** with at least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees. This is the account that will receive the harvesting fees. Keep its secret key secret at all times!
+- An **account** that will receive the harvesting fees. It must have:
+
+  - At least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees.
+
+  - An :ref:`importance score <importance-calculation>` greater than zero. Keep in mind that this score is calculated every 12h.
 
 *****
 Guide
@@ -154,6 +158,6 @@ Final words
 
 - **Accounts with higher importance are selected more often to perform harvesting**. Even if you successfully register as a delegated harvester with a node, you will not harvest any block (nor receive any fees) unless your :ref:`importance score <importance-calculation>` is high enough.
 
-- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 720 blocks (about every 6 hours). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
+- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 1440 blocks (about every 12 hours). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
 
 - Finally, as explained in the note above, **announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester**. Nodes are free to comply with the request or even to lie about its status.
