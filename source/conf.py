@@ -344,6 +344,7 @@ blog_authors = {}
 linkcheck_ignore = [
     r'http://localhost',
     r'https://localhost',
+    r'https://my-symbol-node.com',
     r'https://docs.symbolplatform.com/symbol-openapi/[^/]*/#', # Dynamic mpage
     r'.*\.ts', r'.*\.js', r'.*\.java', r'.*\.cats', # Too many of them, GitHub complains
     r'https://nemplatform.com/.*#', r'https://forum.nem.io' # DDoS protection delays serving the real page
