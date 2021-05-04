@@ -16,7 +16,7 @@ The next two sections explain how to create your supernode :ref:`using Symbol Bo
 Using Symbol Bootstrap
 **********************
 
-Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are not familiar with it.
+Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are not familiar with it. Note that, as stated in that guide, ports 3000, 7881 and 7900 need to be open for the node to work.
 
 1. Make sure you are using the **latest Symbol Bootstrap** by running:
 
