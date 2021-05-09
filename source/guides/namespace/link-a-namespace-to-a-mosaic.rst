@@ -78,7 +78,7 @@ Method #02: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note:: If you want to unlink the alias, change alias action type to ``AliasActionType.Unlink``.
+.. note:: If you want to unlink the alias, change alias action type to ``AliasAction.Unlink``.
 
 .. _sending-a-transfer-transaction-with-an-aliased-mosaic:
 
