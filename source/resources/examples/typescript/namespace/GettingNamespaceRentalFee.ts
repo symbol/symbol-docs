@@ -19,6 +19,7 @@
 import { RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
+// Replace with node endpoint
 const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
 const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 

@@ -16,14 +16,11 @@
  *
  */
 
-import { map, mergeMap } from 'rxjs/operators';
 import {
   Account,
   Address,
   Deadline,
-  Mosaic,
-  NamespaceId,
-  PlainMessage,
+  EmptyMessage,
   RepositoryFactoryHttp,
   TransactionService,
   TransferTransaction,
@@ -42,28 +39,25 @@ const example = async (): Promise<void> => {
     const networkGenerationHash = await repositoryFactory
       .getGenerationHash()
       .toPromise();
+    // Returns the network main currency, symbol.xym
+    const { currency } = await repositoryFactory.getCurrencies().toPromise();
 
     /* start block 01 */
-    const aliasedMosaic = new Mosaic(
-      new NamespaceId('symbol.xym'),
-      UInt64.fromUint(1000000),
-    );
-    /* end block 01 */
+    // Replace with recipient's address
+    const rawRecipientAddress = 'TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ';
+    const recipientAddress = Address.createFromRawAddress(rawRecipientAddress);
 
-    /* start block 02 */
     const maxFee = UInt64.fromUint(2000000);
     const transferTransaction = TransferTransaction.create(
       Deadline.create(epochAdjustment),
-      Address.createFromRawAddress(
-        'TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I',
-      ),
-      [aliasedMosaic],
-      PlainMessage.create('Test aliased mosaic'),
+      recipientAddress,
+      [currency.createRelative(10)],
+      EmptyMessage,
       networkType,
       maxFee,
     );
 
-    // Replace with sender private key
+    // Replace with sender's private key
     const privateKey =
       '1111111111111111111111111111111111111111111111111111111111111111';
     const account = Account.createFromPrivateKey(privateKey, networkType);
@@ -71,10 +65,16 @@ const example = async (): Promise<void> => {
       transferTransaction,
       networkGenerationHash,
     );
-    console.log('Transaction hash: ' + signedTransaction.hash);
-    /* end block 02 */
+    /* end block 01 */
 
-    /* start block 03 */
+    console.log('Sender address: ' + account.address.pretty());
+    console.log('Recipient address: ' + recipientAddress.pretty());
+    console.log(
+      'Amount (absolute): ' +
+        transferTransaction.mosaics[0].amount.compact().toLocaleString(),
+    );
+
+    /* start block 02 */
     const receiptHttp = repositoryFactory.createReceiptRepository();
     const transactionHttp = repositoryFactory.createTransactionRepository();
     const listener = repositoryFactory.createListener();
@@ -83,32 +83,23 @@ const example = async (): Promise<void> => {
       receiptHttp,
     );
 
+    console.log('Waiting for confirmation...');
     listener.open().then(() => {
-      transactionService
-        .announce(signedTransaction, listener)
-        .pipe(
-          mergeMap((transaction) =>
-            transactionService.resolveAliases([
-              transaction.transactionInfo!.hash!,
-            ]),
-          ),
-          map((transactions) => transactions[0] as TransferTransaction),
-        )
-        .subscribe(
-          (transaction) => {
-            console.log(
-              'Resolved MosaicId: ',
-              transaction.mosaics[0].id.toHex(),
-            );
-            listener.close();
-          },
-          (err) => {
-            console.log(err);
-            listener.close();
-          },
-        );
+      listener
+        .unconfirmedAdded(account.address, signedTransaction.hash)
+        .subscribe(() => console.log('Unconfirmed...'));
+      transactionService.announce(signedTransaction, listener).subscribe(
+        () => {
+          console.log('Confirmed!');
+          listener.close();
+        },
+        (error) => {
+          console.log(error);
+          listener.close();
+        },
+      );
     });
-    /* end block 03 */
+    /* end block 02 */
   } catch (e) {
     console.log(e);
   }
