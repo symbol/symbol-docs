@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-##############################################
-Retrieving your XYMs from a post-launch Opt-in
-##############################################
+#############################################
+Retrieving your XYM from a post-launch Opt-in
+#############################################
 
 This guide explains how to enroll in the Opt-in process once |codename| has launched (this is, after March 12, 2021).
 
@@ -28,7 +28,7 @@ On **March 12th, 2021** the **NIS1 Snapshot** took place: When the NIS1 blockcha
 
 Then, on **March 16th, 2021** the **Symbol blockchain was launched**.
 
-After the launch, **all accounts that held at least 2 XEMs at the snapshot can still reclaim an equal amount of XYMs**, to be transferred to a |codename| account.
+After the launch, **all accounts that held at least 2 XEMs at the snapshot can still reclaim an equal amount of XYM**, to be transferred to a |codename| account.
 
 This process is called the **Opt-in**, and will be **open for 6 years after the launch**.
 
@@ -42,7 +42,7 @@ Guide
 
    If the account you want to opt-in is a multisig account make sure you read the :ref:`Notes on multisig accounts <post-launch-optin-multisig>`.
 
-The Opt-in process is conducted entirely from within the `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__, but first, you need to retrieve the **public key** of the |codename| account where you want to receive the XYMs:
+The Opt-in process is conducted entirely from within the `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__, but first, you need to retrieve the **public key** of the |codename| account where you want to receive the XYM:
 
 1. **Download and install** the :doc:`Symbol Desktop Wallet <../../wallets>` for your platform, if you don't already have it.
 
@@ -62,7 +62,7 @@ The Opt-in process is conducted entirely from within the `NEM Wallet <https://ne
 
    Use the **copy** button to the right of the key (do not try to select and copy the key's text directly as it is too long and it is truncated).
 
-Now that you know where do you want your XYMs transferred, you can start the Opt-in process:
+Now that you know where do you want your XYM transferred, you can start the Opt-in process:
 
 4. **Download and install** the `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__ for your platform, if you don't already have it.
 
@@ -172,7 +172,7 @@ If the Opt-in is successfull you will be taken to the initial Summary screen whe
     :class: with-shadow
     :target: /_images/post-launch-optin-9.png
 
-Since it can take more than a week for the XYMs to be transferred, you can come back to this screen to check on the Opt-in status.
+Since it can take more than a week for the XYM to be transferred, you can come back to this screen to check on the Opt-in status.
 
 .. _post-launch-optin-multisig:
 

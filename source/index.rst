@@ -21,7 +21,7 @@ All content is accessible through the **navigation menu**, which is divided into
 .. topic:: Featured pages
 
    - :doc:`Install the Symbol Desktop Wallet <wallets>`
-   - :doc:`Retrieving your XYMs after Opt-In <guides/migration/post-optin-xym-retrieval>`
+   - :doc:`Retrieving your XYM after Opt-In <guides/migration/post-optin-xym-retrieval>`
 
 .. toctree::
     :hidden:
