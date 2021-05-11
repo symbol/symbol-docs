@@ -28,7 +28,7 @@ On **March 12th, 2021** the **NIS1 Snapshot** took place: When the NIS1 blockcha
 
 Then, on **March 16th, 2021** the **Symbol blockchain was launched**.
 
-After the launch, **all accounts that held at least 2 XEMs at the snapshot can still reclaim an equal amount of XYM**, to be transferred to a |codename| account.
+After the launch, **all accounts that held at least 2 XEM at the snapshot can still reclaim an equal amount of XYM**, to be transferred to a |codename| account.
 
 This process is called the **Opt-in**, and will be **open for 6 years after the launch**.
 
@@ -74,7 +74,7 @@ Now that you know where do you want your XYM transferred, you can start the Opt-
        :class: with-shadow
        :target: /_images/post-launch-optin-2.png
 
-5. **Log in to the account** containing XEMs at the snapshot.
+5. **Log in to the account** containing XEM at the snapshot.
 
    .. image:: /resources/images/screenshots/post-launch-optin-3.png
        :align: center

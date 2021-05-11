@@ -46,7 +46,7 @@ The pre-launch Opt-In Process
 
 - Finally, on **March 16th, 2021** the **Symbol blockchain was launched** and all opted-in accounts were automatically created:
 
-  **For every opted-in NIS1 account that held at least 100 XEMs at the snapshot, a Symbol account was created holding that same amount of XYM.**
+  **For every opted-in NIS1 account that held at least 100 XEM at the snapshot, a Symbol account was created holding that same amount of XYM.**
 
 This guide explains how to access this new Symbol account and its assets.
 
