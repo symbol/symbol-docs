@@ -640,6 +640,10 @@ img.align-right {
     background-color: pink;
     text-align:center;
 }
+.caution {
+    border-left: 6px solid orange;
+    background-color: #fffae6;
+}
 /* Topics, similar to Notes but with custom titles.
  * Copied from .alert */
 div.topic {
