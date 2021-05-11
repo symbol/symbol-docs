@@ -3,11 +3,11 @@
     :excerpt: 1
     :nocomments:
 
-#############################################
-Retrieving your XYMs from a pre-launch Opt-in
-#############################################
+############################################
+Retrieving your XYM from a pre-launch Opt-in
+############################################
 
-This guide explains how to access the **XYMs** (|codename|'s native currency) you were awarded if you enrolled in the opt-in process **BEFORE** |codename| launched (March 12, 2021).
+This guide explains how to access the **XYM** (|codename|'s native currency) you were awarded if you enrolled in the opt-in process **BEFORE** |codename| launched (March 12, 2021).
 
 If you missed that, you can still opt-in by following the :doc:`post-launch-optin-xym-retrieval` guide.
 
@@ -46,7 +46,7 @@ The pre-launch Opt-In Process
 
 - Finally, on **March 16th, 2021** the **Symbol blockchain was launched** and all opted-in accounts were automatically created:
 
-  **For every opted-in NIS1 account that held at least 100 XEMs at the snapshot, a Symbol account was created holding that same amount of XYMs.**
+  **For every opted-in NIS1 account that held at least 100 XEMs at the snapshot, a Symbol account was created holding that same amount of XYM.**
 
 This guide explains how to access this new Symbol account and its assets.
 
