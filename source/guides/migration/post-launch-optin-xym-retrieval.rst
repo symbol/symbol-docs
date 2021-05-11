@@ -172,7 +172,7 @@ If the Opt-in is successfull you will be taken to the initial Summary screen whe
     :class: with-shadow
     :target: /_images/post-launch-optin-9.png
 
-Since it can take up to a week for the XYMs to be transferred, you can come back to this screen to check on the Opt-in status.
+Since it can take more than a week for the XYMs to be transferred, you can come back to this screen to check on the Opt-in status.
 
 .. _post-launch-optin-multisig:
 
