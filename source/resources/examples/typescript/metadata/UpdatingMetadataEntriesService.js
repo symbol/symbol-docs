@@ -40,7 +40,7 @@ const alicePublicAccount = symbol_sdk_1.PublicAccount.createFromPublicKey(
   networkType,
 );
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const metadataHttp = new symbol_sdk_1.MetadataHttp(nodeUrl);
 const metadataService = new symbol_sdk_1.MetadataTransactionService(
   metadataHttp,

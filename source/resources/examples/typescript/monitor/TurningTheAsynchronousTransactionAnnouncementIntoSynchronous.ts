@@ -74,7 +74,7 @@ const signedTransaction = account.sign(
 /* end block 01 */
 
 /* start block 02 */
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const receiptHttp = repositoryFactory.createReceiptRepository();
 const transactionHttp = repositoryFactory.createTransactionRepository();

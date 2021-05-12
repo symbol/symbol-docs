@@ -65,7 +65,7 @@ Guide
       
       .. code-block:: none
       
-         http://api-01.eu-west-1.testnet.symboldev.network:3000
+         http://ngl-dual-101.testnet.symboldev.network:3000
 
 3. **Select a node from the list and click on the "Link all keys" button** (You will probably need to scroll down past the "Keys Info" section).
 

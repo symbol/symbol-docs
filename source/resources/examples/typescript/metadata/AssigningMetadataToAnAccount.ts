@@ -113,7 +113,7 @@ const signedHashLockTransaction = bobAccount.sign(
 
 /* start block 05 */
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();
