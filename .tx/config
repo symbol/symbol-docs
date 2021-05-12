@@ -673,13 +673,11 @@ source_file = build/gettext/guides/restriction/getting-account-restrictions-atta
 source_lang = en
 type = PO
 
-
 [symboldocs.guides--restriction--delegating-mosaic-restrictions-to-a-third-party]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.po
 source_file = build/gettext/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.pot
 source_lang = en
 type = PO
-
 
 [symboldocs.guides--restriction--restricting-mosaics-transfers]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/restricting-mosaics-transfers.po
@@ -776,7 +774,6 @@ file_filter = source/locale/<lang>/LC_MESSAGES/serialization/lock_hash.po
 source_file = build/gettext/serialization/lock_hash.pot
 source_lang = en
 type = PO
-
 
 [symboldocs.serialization--lock_secret]
 file_filter = source/locale/<lang>/LC_MESSAGES/serialization/lock_secret.po
