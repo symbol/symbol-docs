@@ -144,6 +144,7 @@ body > .container {
 }
 .content ol {
     padding: 0 15px 0 15px;
+    margin-bottom: 10.5px;
 }
 .content .headerlink {
     visibility: hidden !important;
