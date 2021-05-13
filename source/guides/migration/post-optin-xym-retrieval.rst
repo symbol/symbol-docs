@@ -4,7 +4,7 @@
     :nocomments:
 
 ############################################
-Retrieving your XYM from a pre-launch Opt-in
+Retrieving your XYM from a pre-launch opt-in
 ############################################
 
 This guide explains how to access the **XYM** (|codename|'s native currency) you were awarded if you enrolled in the opt-in process **BEFORE** |codename| launched (March 12, 2021).
@@ -19,9 +19,9 @@ Introduction
 
 **Symbol is the next-generation blockchain** from NEM, rewritten from scratch, and launched in March, 2021.
 
-To quickstart |codename|'s adoption, an **Opt-in** process was established which awarded **one XYM** in the new |codename| blockchain **for every XEM** (NIS1's native currency) held in the NIS1 blockchain.
+To quickstart |codename|'s adoption, an **opt-in** process was established which awarded **one XYM** in the new |codename| blockchain **for every XEM** (NIS1's native currency) held in the NIS1 blockchain.
 
-The pre-launch Opt-In Process
+The pre-launch opt-in Process
 =============================
 
 .. image:: /resources/images/screenshots/retrieving-optin-xym-0.png
@@ -30,7 +30,7 @@ The pre-launch Opt-In Process
     :class: with-shadow
     :target: /_images/retrieving-optin-xym-0.png
 
-- First off, XEM holders wishing to participate in the Opt-in process had to **enroll** using any of the NEM Wallets. For example, using the Desktop `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__.
+- First off, XEM holders wishing to participate in the opt-in process had to **enroll** using any of the NEM Wallets. For example, using the Desktop `NEM Wallet <https://nemplatform.com/wallets/#desktop>`__.
 
 .. image:: /resources/images/screenshots/retrieving-optin-xym-1.png
     :align: right
@@ -150,7 +150,7 @@ This is a short list of items to check should you encounter any problem when rec
 
 - Check that you are using the **correct Symbol mnemonic**. Did you do several attempts at opting-in and obtained different mnemonics?
 
-- Check that your NIS1 account was successfully opted-in by looking up its address in the `Opt-In Report <http://report.experimental.symboldev.network/ok1.html>`__.
+- Check that your NIS1 account was successfully opted-in by looking up its address in the `opt-in Report <http://report.experimental.symboldev.network/ok1.html>`__.
 
   If your account is not on the list, check the other tabs to find the reason.
 
