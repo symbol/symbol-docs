@@ -20,37 +20,90 @@ Prerequisites
 Method #01: Using the Desktop Wallet
 ************************************
 
-1. Open up the :ref:`Desktop Wallet <wallet-desktop>` application and click on the "**Create Mnemonic**" button.
+1. Open up the :ref:`Symbol Desktop Wallet <wallet-desktop>` application and click on ``Create a new profile?``.
 
-.. figure:: ../../resources/images/screenshots/desktop-create-account-1.gif
-    :align: center
-    :width: 800px
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-0.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-0.png
 
-2. Enter your profile information, including your profile name, network type and password.
-Select the correct network type for your desired purpose.
-Once you have filled out the page with the appropriate information, click "**Next**".
+2. Click on ``Create Mnemonic``.
 
-.. figure:: ../../resources/images/screenshots/desktop-create-account-2.gif
-    :align: center
-    :width: 800px
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-1.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-1.png
 
-3. On the next page, the Desktop Wallet uses the movement of your mouse cursor to generate a random mnemonic phrase for your wallet.
-Shift your mouse around the screen until the progress bar reaches 100% and the application automatically moves you to the next page.
+3. Fill in some profile data. A profile can contain several Symbol accounts and it helps keeping them organized.
 
-.. figure:: ../../resources/images/screenshots/desktop-create-account-3.gif
-    :align: center
-    :width: 800px
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-2.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-2.png
 
-4. Click "**Display mnemonic words**" to view your private mnemonic phrase. Backup this information securely offline and do not share it with anyone, as it stores the key to recover your assets. Click "**Next**".
+   - Give your profile a **name**, for your personal use.
+   - Select the ``Mainnet`` **Network type**.
+   - Enter a **password** to protect your profile and confirm it.
+   - Enter a **hint** to help you remember your password, should you forget it.
+   - Click on ``Next``.
 
-5. Verify that you have backed up your mnemonic phrase. Click each word in the phrase in the correct order. Click "**Next**".
+4. On the next page, the Desktop Wallet uses the movement of your mouse to generate a random mnemonic phrase for your wallet.
 
-.. figure:: ../../resources/images/screenshots/desktop-create-account-4.gif
-    :align: center
-    :width: 800px
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-3.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-3.png
 
-6. Read the safety tips on the next page and click "**Next**". Congratulations, your account is ready for use!
+   Move your mouse around the screen until the progress bar reaches 100% and the application automatically moves you to the next page.
 
+5. Click ``Display mnemonic words`` to view your private mnemonic phrase.
+
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-4.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-4.png
+
+6. Click on the copy button.
+
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-5.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-5.png
+
+   Backup this information securely offline and do not share it with anyone, as it stores the key to recover your assets. Click ``Next``.
+
+7. Verify that you have backed up your mnemonic phrase correctly. Click each word in the phrase in the correct order. Click ``Next`` when done.
+
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-6.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-6.png
+
+8. Read the safety tips on the next page.
+
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-7.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-7.png
+
+   Accept the **Terms and Conditions** and click on ``Finish``:
+
+8. The Wallet's main screen will appear. Congratulations! Your account is ready to use.
+
+   .. figure:: ../../resources/images/screenshots/desktop-create-account-8.png
+      :align: center
+      :width: 100%
+      :class: with-shadow
+      :target: /_images/desktop-create-account-8.png
+   
 *************************
 Method #02: Using the SDK
 *************************
