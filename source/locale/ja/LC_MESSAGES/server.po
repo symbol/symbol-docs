@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-05-14 11:20+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -72,39 +72,28 @@ msgstr ""
 "catapult-server を実行する方法について説明します。"
 
 #: ../../source/server.rst:62
-msgid "Test network node"
-msgstr "テストネットワークノード"
+msgid "Running a network node"
+msgstr "ネットワークノードの立ち上げ"
 
 #: ../../source/server.rst:64
 msgid ""
-"Developers can deploy test net nodes to experiment with the offered "
-"transaction set in a live network without the loss of valuable assets."
-msgstr "開発者はテストネットノードを実験的に使用することで、貴重な資産を失うことなく、様々なトランザクションを試すことができます。"
+"To run a |codename| node follow :doc:`this guide <guides/network/running-a"
+"-symbol-node>`."
+msgstr ""
+"|codename| のノードを起動するには :doc:`このガイド <guides/network/running-a-symbol-node>` "
+"に従ってください。"
 
 #: ../../source/server.rst:66
 msgid ""
-"To run a test net node, follow :doc:`this guide <guides/network/running-a"
-"-symbol-node>`."
-msgstr ""
-"テストネットのノードを起動するには、:doc:`このガイド <guides/network/running-a-symbol-node>` "
-"に従ってください。"
+"Developers can also deploy testnet nodes to experiment with the offered "
+"transaction set in a live network without the loss of valuable assets."
+msgstr "開発者はテストネットノードを実験的に使用することで、貴重な資産を失うことなく、様々なトランザクションを試すこともできます。"
 
 #: ../../source/server.rst:69
-msgid "Main network node"
-msgstr "メインネットワークノード"
-
-#: ../../source/server.rst:71
-msgid ""
-"At the time of writing, the main public network has not been launched. "
-"Follow the latest updates about the public launch on the |forum|."
-msgstr ""
-"執筆時点でメインのパブリックネットワークは開始されていません。 |forum| にてパブリックのローンチに関する最新情報を捕捉してください。"
-
-#: ../../source/server.rst:75
 msgid "Private test network"
 msgstr "プライベートテストネットワーク"
 
-#: ../../source/server.rst:77
+#: ../../source/server.rst:71
 msgid ""
 "With |codename|, businesses can launch and extend private networks by "
 "developing :doc:`custom plugins <concepts/plugin>` and extensions at the "
@@ -116,7 +105,7 @@ msgstr ""
 "と拡張機能を開発することにより、プライベートネットワークを起動および拡張できます。|symbol-bootstrap| "
 "パッケージは開発と学習目的の構築を、一つのコマンドで行うスクリプトが含まれています。"
 
-#: ../../source/server.rst:80
+#: ../../source/server.rst:74
 msgid ""
 "To run a private test net, follow :doc:`this guide "
 "<guides/network/creating-a-private-test-net>`."
@@ -124,11 +113,11 @@ msgstr ""
 "プライベートのテストネットを起動するには、:doc:`このガイド <guides/network/creating-a-private-test-"
 "net>` に従ってください。"
 
-#: ../../source/server.rst:83
+#: ../../source/server.rst:77
 msgid "Private network"
 msgstr "プライベートネットワーク"
 
-#: ../../source/server.rst:85
+#: ../../source/server.rst:79
 msgid ""
 "Instructions on how to launch a secure and production-ready private chain "
 "will be released here."

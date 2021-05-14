@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-09 09:50+0000\n"
+"POT-Creation-Date: 2021-05-14 11:20+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -72,6 +72,6 @@ msgstr ":doc:`Symbol デスクトップウォレットをインストール <wal
 
 #: ../../source/index.rst:61
 msgid ""
-":doc:`Retrieving your XYMs after Opt-In <guides/migration/post-optin-xym-"
+":doc:`Retrieving your XYM after Opt-In <guides/migration/post-optin-xym-"
 "retrieval>`"
 msgstr ":doc:`オプトイン後に XYM を取得する <guides/migration/post-optin-xym-retrieval>`"
