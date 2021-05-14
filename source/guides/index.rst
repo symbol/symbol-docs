@@ -129,6 +129,14 @@ To see the guides grouped by **tags** instead, see the `complete guides catalog 
     :start-line: 4
     :end-line: 5
 
+.. rst-class:: h3
+
+:doc:`exchanges/index`
+
+.. include:: exchanges/index.rst
+    :start-line: 4
+    :end-line: 5
+
 .. toctree::
     :hidden:
 
@@ -146,3 +154,4 @@ To see the guides grouped by **tags** instead, see the `complete guides catalog 
     restriction/index
     secretlock/index
     transfer/index
+    exchanges/index
