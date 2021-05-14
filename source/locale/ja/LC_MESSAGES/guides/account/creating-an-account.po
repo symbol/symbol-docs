@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-05-14 11:20+0000\n"
 "PO-Revision-Date: 2019-11-25 18:21+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -46,60 +46,96 @@ msgstr "方法 #01: デスクトップウォレットを使用する"
 
 #: ../../source/guides/account/creating-an-account.rst:60
 msgid ""
-"Open up the :ref:`Desktop Wallet <wallet-desktop>` application and click on "
-"the \"**Create Mnemonic**\" button."
+"Open up the :ref:`Symbol Desktop Wallet <wallet-desktop>` application and "
+"click on ``Create a new profile?``."
 msgstr ""
-":ref:`デスクトップウォレット <wallet-desktop>` アプリケーションを開き、 \"**ニーモニックの作成**\" "
+":ref:`Symbol デスクトップウォレット <wallet-desktop>` アプリケーションを開き ``新しいプロファイルを作成?`` "
 "ボタンを押下します。"
 
-#: ../../source/guides/account/creating-an-account.rst:66
-msgid ""
-"2. Enter your profile information, including your profile name, network type"
-" and password. Select the correct network type for your desired purpose. "
-"Once you have filled out the page with the appropriate information, click "
-"\"**Next**\"."
-msgstr ""
-"2. "
-"プロファイル名、ネットワークタイプ、パスワードなどのプロファイル情報を入力します。目的に合った正しいネットワークタイプを選択してください。ページで適切な情報を入力したら"
-" \"**次へ**\" をクリックします。"
+#: ../../source/guides/account/creating-an-account.rst:68
+msgid "Click on ``Create Mnemonic``."
+msgstr "``ニーモニックの作成`` をクリックします"
 
-#: ../../source/guides/account/creating-an-account.rst:74
+#: ../../source/guides/account/creating-an-account.rst:76
 msgid ""
-"3. On the next page, the Desktop Wallet uses the movement of your mouse "
-"cursor to generate a random mnemonic phrase for your wallet. Shift your "
-"mouse around the screen until the progress bar reaches 100% and the "
-"application automatically moves you to the next page."
+"Fill in some profile data. A profile can contain several Symbol accounts and"
+" it helps keeping them organized."
 msgstr ""
-"3. 次のページでは、デスクトップウォレットがマウスカーソルの動きを使用して、ウォレットのランダムなニーモニックフレーズを生成します。進行状況バーが "
-"100％ に達し、アプリケーションが自動的に次のページに移動するまで、画面上でマウスを動かします。"
+"いくつかのプロファイルデータを入力します。プロファイルには複数の Symbol アカウントを含めることができ、それらを整理するのに役立ちます。"
 
-#: ../../source/guides/account/creating-an-account.rst:81
+#: ../../source/guides/account/creating-an-account.rst:84
+msgid "Give your profile a **name**, for your personal use."
+msgstr "個人的な使用目的でプロファイルに **名前** を付けます。"
+
+#: ../../source/guides/account/creating-an-account.rst:85
+msgid "Select the ``Mainnet`` **Network type**."
+msgstr "``メインネット`` **ネットワークタイプ** を選択します。"
+
+#: ../../source/guides/account/creating-an-account.rst:86
+msgid "Enter a **password** to protect your profile and confirm it."
+msgstr "プロファイルを保護するために **パスワード** を入力して確認します。"
+
+#: ../../source/guides/account/creating-an-account.rst:87
 msgid ""
-"Click \"**Display mnemonic words**\" to view your private mnemonic phrase. "
+"Enter a **hint** to help you remember your password, should you forget it."
+msgstr "パスワードを忘れた場合に備えて **ヒント** を入力して忘れないようにしてください。"
+
+#: ../../source/guides/account/creating-an-account.rst:88
+msgid "Click on ``Next``."
+msgstr "``次へ`` をクリックします。"
+
+#: ../../source/guides/account/creating-an-account.rst:90
+msgid ""
+"On the next page, the Desktop Wallet uses the movement of your mouse to "
+"generate a random mnemonic phrase for your wallet."
+msgstr "次のページでは、デスクトップウォレットがマウスの動きを使用して、ウォレットのランダムなニーモニック語群を生成します。"
+
+#: ../../source/guides/account/creating-an-account.rst:98
+msgid ""
+"Move your mouse around the screen until the progress bar reaches 100% and "
+"the application automatically moves you to the next page."
+msgstr "進行状況バーが 100％ に達し、アプリケーションが自動的に次のページに移動するまで、画面上でマウスを動かします。"
+
+#: ../../source/guides/account/creating-an-account.rst:100
+msgid "Click ``Display mnemonic words`` to view your private mnemonic phrase."
+msgstr "プライベートニーモニック語群を表示するには ``ニーモニック語を表示`` をクリックします。"
+
+#: ../../source/guides/account/creating-an-account.rst:108
+msgid "Click on the copy button."
+msgstr "コピーボタンをクリック"
+
+#: ../../source/guides/account/creating-an-account.rst:116
+msgid ""
 "Backup this information securely offline and do not share it with anyone, as"
-" it stores the key to recover your assets. Click \"**Next**\"."
+" it stores the key to recover your assets. Click ``Next``."
+msgstr "この情報をオフラインで安全にバックアップして、誰とも共有せず、資産の復元のために鍵を保管してください。 ``次へ`` をクリックします。"
+
+#: ../../source/guides/account/creating-an-account.rst:118
+msgid ""
+"Verify that you have backed up your mnemonic phrase correctly. Click each "
+"word in the phrase in the correct order. Click ``Next`` when done."
 msgstr ""
-"\"**ニーモニック語群の表示**\" "
-"をクリックして、プライベートニーモニックフレーズを表示します。この情報をオフラインで安全にバックアップして、誰とも共有せず、アセットの復元のために鍵を保管してください。"
-" \"**次へ**\" をクリックします。"
+"ニーモニックフレーズを正しくバックアップしたことを確認します。フレーズ内の各単語を正しい順序でクリックします。終了したら ``次へ`` クリックします。"
 
-#: ../../source/guides/account/creating-an-account.rst:83
+#: ../../source/guides/account/creating-an-account.rst:126
+msgid "Read the safety tips on the next page."
+msgstr "次ページの安全に関するヒントを読んでください。"
+
+#: ../../source/guides/account/creating-an-account.rst:134
+msgid "Accept the **Terms and Conditions** and click on ``Finish``:"
+msgstr "**利用規約** に同意して ``完了`` をクリックします:"
+
+#: ../../source/guides/account/creating-an-account.rst:136
 msgid ""
-"Verify that you have backed up your mnemonic phrase. Click each word in the "
-"phrase in the correct order. Click \"**Next**\"."
-msgstr "ニーモニックフレーズをバックアップしたことを確認します。正しい順序で各単語のフレーズをクリックします。 \"**次へ**\" クリックします。"
+"The Wallet's main screen will appear. Congratulations! Your account is ready"
+" to use."
+msgstr "ウォレットのメイン画面が表示されます。おめでとう！アカウントの準備が整いました。"
 
-#: ../../source/guides/account/creating-an-account.rst:89
-msgid ""
-"Read the safety tips on the next page and click \"**Next**\". "
-"Congratulations, your account is ready for use!"
-msgstr "次のページの安全に関するヒントを読んだら \"**次へ**\" をクリックします。おめでとうございます、アカウントが使用できるようになりました！"
-
-#: ../../source/guides/account/creating-an-account.rst:93
+#: ../../source/guides/account/creating-an-account.rst:146
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/account/creating-an-account.rst:95
+#: ../../source/guides/account/creating-an-account.rst:148
 msgid ""
 "Open a new file and run the following code snippet. Edit "
 "``NetworkType.TEST_NET`` to select the correct network type for your desired"
@@ -108,16 +144,16 @@ msgstr ""
 "新しいファイルを開き、次のコードスニペットを実行します。 ``NetworkType.TEST_NET`` "
 "を目的に合った正しいネットワークタイプに編集してください。"
 
-#: ../../source/guides/account/creating-an-account.rst:115
+#: ../../source/guides/account/creating-an-account.rst:168
 msgid ""
 "If you already have a private key, you can use it to define a new "
 "``Account`` object."
 msgstr "既に秘密鍵を持っている場合は、それを使用して ``Account`` オブジェクトを定義することができます。"
 
-#: ../../source/guides/account/creating-an-account.rst:136
+#: ../../source/guides/account/creating-an-account.rst:189
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
-#: ../../source/guides/account/creating-an-account.rst:138
+#: ../../source/guides/account/creating-an-account.rst:191
 msgid "Open a terminal window and run the following command."
 msgstr "ターミナルを開き、次のコマンドを実行します。"
