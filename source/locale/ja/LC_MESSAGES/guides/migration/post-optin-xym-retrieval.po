@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-19 08:44+0000\n"
+"POT-Creation-Date: 2021-05-04 18:49+0000\n"
 "PO-Revision-Date: 2021-04-09 09:52+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -25,13 +25,46 @@ msgstr ""
 msgid "Retrieving your XYMs"
 msgstr "あなたの XYM を取得"
 
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:47
+msgid ""
+"This guide explains how to access the **XYMs** (|codename|'s native "
+"currency) you were awarded if you enrolled in the opt-in process."
+msgstr ""
+"このガイドでは、オプトインプロセスに登録した場合に、あなたにへ授与された **XYM** (|codename| の基軸通貨) "
+"へのアクセス方法を説明します。"
+
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:51
 msgid "Introduction"
 msgstr "紹介"
 
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:53
+msgid ""
+"**NEM NIS1 is the original blockchain** offering from NEM, created by the "
+"community, and has been running since 2015."
+msgstr ""
+"**NEM NIS1 はコミュニティによって作成された NEM のオリジナルブロックチェーン** オファリングであり、2015 "
+"年から稼働を続けています。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:55
+msgid ""
+"**Symbol is the next-generation blockchain** from NEM, rewritten from "
+"scratch, and launched in March, 2021."
+msgstr "**Symbol は NEM の次世代ブロックチェーン** であり、ゼロから書き直され、2021 年 3 月にローンチされました。"
+
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:60
 msgid "The Opt-In Process"
 msgstr "オプトインプロセス"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:78
+msgid ""
+"Here is an example produced by the **NEM Nano Wallet** containing the Symbol"
+" Mnemonic."
+msgstr "これは Symbol ニーモニックを含む **NEM Nano Wallet** が作成した例です。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:86
+msgid ""
+"This guide explains how to access this new Symbol account and its assets."
+msgstr "このガイドでは、この新しい Symbol アカウントとそのアセットにアクセスする方法について説明します。"
 
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:92
 msgid "Guide"
@@ -40,6 +73,30 @@ msgstr "ガイド"
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:106
 msgid "Click on ``Import mnemonic``:"
 msgstr "``Import mnemonic`` をクリックします:"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:114
+msgid ""
+"Fill in some profile data. A profile can contain several Symbol accounts and"
+" it helps keeping them organized."
+msgstr ""
+"いくつかのプロファイルデータを入力します。プロファイルには複数の Symbol アカウントを含めることができ、それらを整理するのに役立ちます。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:122
+msgid "Give your profile a **name**, for your personal use."
+msgstr "個人的な使用目的でプロファイルに **名前** を付けます。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:123
+msgid "Select the ``Mainnet`` **Network type**."
+msgstr "``Mainnet`` **ネットワークタイプ** を選択します。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:124
+msgid "Enter a **password** to protect your profile and confirm it."
+msgstr "プロファイルを保護するために **パスワード** を入力して確認します。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:125
+msgid ""
+"Enter a **hint** to help you remember your password, should you forget it."
+msgstr "パスワードを忘れた場合に備えて **ヒント** を入力して忘れないようにしてください。"
 
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:126
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:136
@@ -59,9 +116,27 @@ msgstr "少なくとも一つ、別の (オプトインされていない) ア�
 msgid "Accept the **Terms and Conditions** and click on ``Finish``:"
 msgstr "**利用規約** に同意して ``完了`` をクリックします:"
 
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:158
+msgid ""
+"The Wallet's main screen will appear and your opted-in balance will be "
+"shown:"
+msgstr "ウォレットのメイン画面が表示され、オプトインした残高が表示されます:"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:176
+msgid ""
+"It will recover all other seed accounts, though, and hence the "
+"recommendation to move your funds and use only seed accounts."
+msgstr "ただし、他のすべてのシードアカウントが復元されるため、資産を移動してシードアカウントのみを使用することを推奨します。"
+
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:180
 msgid "Troubleshooting"
 msgstr "トラブルシューティング"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:182
+msgid ""
+"This is a short list of items to check should you encounter any problem when"
+" recovering your opted-in accounts."
+msgstr "オプトインしたアカウントを復元する際に問題が発生した場合、確認する項目リストです。"
 
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:184
 msgid ""

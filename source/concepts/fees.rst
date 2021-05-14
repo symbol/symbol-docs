@@ -50,7 +50,7 @@ To ensure that the transaction will get included without setting a ``max_fee`` u
 
     .. code-block:: bash
 
-        http://api-01.us-east-1.testnet.symboldev.network:3000/network/fees/transaction
+        http://ngl-dual-101.testnet.symboldev.network:3000/network/fees/transaction
 
 
 For example, the sender could set the transaction max_fee as follows:

@@ -16,7 +16,7 @@ The next two sections explain how to create your supernode :ref:`using Symbol Bo
 Using Symbol Bootstrap
 **********************
 
-Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are not familiar with it.
+Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc:`Learn about this tool <using-symbol-bootstrap>` if you are not familiar with it. Note that, as stated in that guide, ports 3000, 7881 and 7900 need to be open for the node to work.
 
 1. Make sure you are using the **latest Symbol Bootstrap** by running:
 
@@ -34,11 +34,17 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
         - rewardProgram: SuperNode
           host: my-symbol-node.com # Could also be an IP address
 
-   If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true`` below the ``host`` line, with the same indentation as it.
+   You can further customize this preset file:
 
-   If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-private-keys>`__.
+   - If you want the node to be also a :ref:`Voting node <finalization>` (and benefit from the :ref:`Voting Node rewards program <voting-node-program>`) add also ``voting: true`` below the ``host`` line, with the same indentation as it.
 
-   .. note:: When managing your node through a :doc:`multisig account <../../concepts/multisig-account>`, the **main** account in the above preset file must be **the multisig account** (and **not** any of its cosignatories).
+   - If you need to change the default port that the monitoring agent uses (7881) you can add ``rewardProgramAgentPort: 7882`` (for example) **at the top of the file**.
+
+   - If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-private-keys>`__.
+
+     .. note:: When managing your node through a :doc:`multisig account <../../concepts/multisig-account>`, the **main** account in the above preset file must be **the multisig account** (and **not** any of its cosignatories).
+
+   See the full list of possible customizations in the `Symbol Bootstrap documentation <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md>`__.
 
 3. **Create and run the node** using the new preset file:
 

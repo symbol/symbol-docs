@@ -21,18 +21,12 @@ Running catapult-server
 catapult-server executable can be used either to run different types of nodes or to launch new networks.
 This section contains the instructions on how to run the catapult-server for various purposes.
 
-Test network node
-=================
+Running a network node
+======================
 
-Developers can deploy test net nodes to experiment with the offered transaction set in a live network without the loss of valuable assets.
+To run a |codename| node follow :doc:`this guide <guides/network/running-a-symbol-node>`.
 
-To run a test net node, follow :doc:`this guide <guides/network/running-a-symbol-node>`.
-
-Main network node
-=================
-
-At the time of writing, the main public network has not been launched.
-Follow the latest updates about the public launch on the |forum|.
+Developers can also deploy testnet nodes to experiment with the offered transaction set in a live network without the loss of valuable assets.
 
 Private test network
 ====================

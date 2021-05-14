@@ -64,6 +64,7 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
   symbol_sdk_1.Deadline.create(epochAdjustment),
   [transferTransaction.toAggregate(multisigAccount)],
   networkType,
+  symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')
 const networkGenerationHash =
@@ -93,7 +94,7 @@ const signedHashLockTransaction = cosignatoryAccount.sign(
   networkGenerationHash,
 );
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 const receiptHttp = repositoryFactory.createReceiptRepository();

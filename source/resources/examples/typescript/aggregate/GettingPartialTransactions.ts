@@ -22,7 +22,7 @@ import { Address, RepositoryFactoryHttp, TransactionGroup } from 'symbol-sdk';
 // replace with account address
 const rawAddress = 'TAXQUT-QQNS6J-EJG7PL-C6FRVJ-2USS44-GLMVUL-PGQ';
 const address = Address.createFromRawAddress(rawAddress);
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 

@@ -44,7 +44,7 @@ Prerequisites
 
 Before you can activate delegated harvesting, you need the following items:
 
-- A **Main account (M)** with at least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees. This is the account that will receive the harvesting fees. Keep its private key secret at all times.
+- A **Main account (M)** with at least **10,000** |networkcurrency| to be :ref:`eligible <account_eligibility>` and then some more to pay for transaction fees. The account also has to have an :ref:`importance score <importance-calculation>` greater than zero (this score is calculated every 12h). This is the account that will receive the harvesting fees. Keep its private key secret at all times.
 
 - A **Remote account (R)** that will act as a proxy between **M** and the node. This account **must have never sent or received any transaction**, and it cannot be involved in any transaction while it is a delegated account.
 
@@ -164,6 +164,6 @@ Final words
 
 - **Accounts with higher importance are selected more often to perform harvesting**. Even if you successfully register as a delegated harvester with a node, you will not harvest any block (nor receive any fees) unless your :ref:`importance score <importance-calculation>` is high enough.
 
-- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 720 blocks (about every 6 hours). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
+- **Importance score calculation does not happen continuously**. By default, account importance scores are recalculated every 1440 blocks (about every 12 hours). See the ``importanceGrouping`` property in the :ref:`Configuring network properties <config-network-properties>` guide.
 
 - Finally, as explained in :ref:`delegated-harvesting-verifying-activation` above, **announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester**. Nodes are free to comply with the request or even to lie about its status.

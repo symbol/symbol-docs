@@ -23,7 +23,7 @@ import { QueryParams, RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 const example = async (): Promise<boolean> => {
   // replace with node url
-  const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+  const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
   const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
   const blockHttp = repositoryHttp.createBlockRepository();
   // replace with block height

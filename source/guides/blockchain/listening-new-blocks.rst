@@ -27,7 +27,7 @@ To do so, open a new :ref:`WebSocket connection <websockets>` connection.
 
     import * as WebSocket from 'ws';
 
-    const host = 'api-01.us-east-1.testnet.symboldev.network:3000/';
+    const host = 'http://ngl-dual-101.testnet.symboldev.network:3000';
     const ws = new WebSocket('ws://' + host + '/ws');
 
     ws.on('open', () => {
@@ -94,7 +94,7 @@ If you want to execute Listeners from the client-side (e.g., Angular, React, Vue
 
 .. code-block:: typescript
 
-  const listener = new Listener('ws://api-01.us-east-1.testnet.symboldev.network:3000', WebSocket);
+  const listener = new Listener('ws://ngl-dual-101.testnet.symboldev.network:3000', WebSocket);
   listener.open().then(() => ...
 
 *************************

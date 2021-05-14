@@ -23,7 +23,7 @@ import { NamespaceId, RepositoryFactoryHttp } from 'symbol-sdk';
 const namespaceId = new NamespaceId('symbol.xym');
 
 // replace with node endpoint
-const nodeUrl = 'http://api-01.us-east-1.testnet.symboldev.network:3000';
+const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const namespaceHttp = repositoryFactory.createNamespaceRepository();
 

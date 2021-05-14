@@ -354,7 +354,7 @@ Setup
 
            symbol-cli profile create --profile announcer --default \
               --network TEST_NET \
-              --url http://api-01.eu-central-1.testnet.symboldev.network:3000
+              --url http://ngl-dual-101.testnet.symboldev.network:3000
 
   When prompted, enter a password to secure your profile, and select the ``PrivateKey`` import type:
 
