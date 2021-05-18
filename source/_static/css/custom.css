@@ -631,9 +631,9 @@ img.align-right {
 .right-align {
     text-align: right;
 }
-/* Override Pygment's default for json string values which I don't like
- * until I know how to do it properly. */
-.highlight .s, .highlight .s2 {
+/* Override Pygment's default background color for string values which I don't like
+ * until I know how to do it properly (works for JSON and TypeScript). */
+.highlight .s, .highlight .s1, .highlight .s2 {
     background-color: transparent;
 }
 .warning {
