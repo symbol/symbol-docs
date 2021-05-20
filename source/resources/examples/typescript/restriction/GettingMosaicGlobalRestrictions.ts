@@ -17,6 +17,7 @@
  */
 
 import {
+  MosaicGlobalRestriction,
   MosaicGlobalRestrictionItem,
   MosaicId,
   MosaicRestrictionType,
@@ -32,25 +33,31 @@ const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 
-restrictionHttp.getMosaicGlobalRestriction(mosaicId).subscribe(
+const criteria = { mosaicId };
+restrictionHttp.search(criteria).subscribe(
   (mosaicGlobalRestrictions) => {
-    if (mosaicGlobalRestrictions.restrictions.size > 0) {
+    if (mosaicGlobalRestrictions.data.length > 0) {
       console.log(
         'Key\t',
         'Reference MosaicId\t',
         'Restriction Type\t',
         'Restriction Value',
       );
-      mosaicGlobalRestrictions.restrictions.forEach(
-        (value: MosaicGlobalRestrictionItem, key: string) => {
-          console.log(
-            '\n' + key + '\t',
-            value.referenceMosaicId.toHex() + '\t',
-            MosaicRestrictionType[value.restrictionType] + '\t',
-            value.restrictionValue,
+      mosaicGlobalRestrictions.data.forEach((mosaicRestriction) => {
+        if (mosaicRestriction instanceof MosaicGlobalRestriction) {
+          mosaicRestriction.restrictions.forEach(
+            (value: MosaicGlobalRestrictionItem) => {
+              console.log(
+                '\n',
+                value.key,
+                value.referenceMosaicId.toHex(),
+                MosaicRestrictionType[value.restrictionType],
+                value.restrictionValue,
+              );
+            },
           );
-        },
-      );
+        }
+      });
     } else {
       console.log(
         '\n The mosaic does not have mosaic global restrictions assigned.',

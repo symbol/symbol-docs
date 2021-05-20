@@ -29,11 +29,14 @@ const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
-restrictionHttp.getMosaicAddressRestriction(mosaicId, address).subscribe(
+const criteria = { mosaicId, targetAddress: address };
+restrictionHttp.search(criteria).subscribe(
   (mosaicAddressRestrictions) => {
-    if (mosaicAddressRestrictions.restrictions.size > 0) {
-      mosaicAddressRestrictions.restrictions.forEach((value, key) => {
-        console.log('\n', key, value);
+    if (mosaicAddressRestrictions.data.length > 0) {
+      mosaicAddressRestrictions.data.forEach((mosaicRestriction) => {
+        mosaicRestriction.restrictions.forEach((value) => {
+          console.log('\n', value.key, value.restrictionValue);
+        });
       });
     } else {
       console.log(

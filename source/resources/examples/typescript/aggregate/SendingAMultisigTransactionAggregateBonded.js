@@ -64,6 +64,7 @@ const aggregateTransaction = symbol_sdk_1.AggregateTransaction.createBonded(
   symbol_sdk_1.Deadline.create(epochAdjustment),
   [transferTransaction.toAggregate(multisigAccount)],
   networkType,
+  [],
   symbol_sdk_1.UInt64.fromUint(2000000),
 );
 // replace with meta.networkGenerationHash (nodeUrl + '/node/info')

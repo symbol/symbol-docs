@@ -78,6 +78,7 @@ const aggregateTransaction = AggregateTransaction.createBonded(
   Deadline.create(epochAdjustment),
   [transferTransaction.toAggregate(multisigAccount)],
   networkType,
+  [],
   UInt64.fromUint(2000000),
 );
 
