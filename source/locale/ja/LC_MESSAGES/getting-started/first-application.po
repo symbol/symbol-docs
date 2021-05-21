@@ -182,7 +182,7 @@ msgstr ""
 
 #: ../../source/getting-started/first-application.rst:142
 msgid "Create a second account with the CLI to identify the **customer**."
-msgstr "**販売者** を識別するための2つ目のアカウントを CLI で作成します。"
+msgstr "**購入者** を識別するための2つ目のアカウントを CLI で作成します。"
 
 #: ../../source/getting-started/first-application.rst:162
 msgid "Monitoring the blockchain"
