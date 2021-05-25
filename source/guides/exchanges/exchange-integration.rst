@@ -1,6 +1,6 @@
-####################
-Building an Exchange
-####################
+############################
+Integrating with an Exchange
+############################
 
 This document is intended to **guide developers** through the integration of the ``XYM`` token into an **Exchange platform**. It contains recommendations on
 how to set up accounts, listen for deposits, and create withdrawals as well as code examples ready to be adopted.
@@ -13,7 +13,7 @@ Integration overview
 
 There are many ways to design an exchange. This guide is based on how to support ``XYM`` deposits and withdrawals in an exchange that follows a **central wallet approach**.
 
-Please note that this design is not particularly recommend over others. However, its **simplified architecture** is a good showcase for Symbol's set of features involved in building an Exchange. A different approach, for example, would be to use a different wallet for each user.
+Please note that this design is not particularly recommend over others. However, its **simplified architecture** is a good showcase for Symbol's set of features involved in integrating with an Exchange. A different approach, for example, would be to use a different wallet for each user.
 
 .. figure:: /resources/images/diagrams/exchange-integration-overview.png
    :align: center
