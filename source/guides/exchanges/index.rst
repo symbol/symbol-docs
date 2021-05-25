@@ -2,9 +2,9 @@
 Exchanges
 #########
 
-Guides related to building an Exchange.
+Guides related to integrating |codename| with an Exchange.
 
 .. toctree::
     :maxdepth: 1
 
-    building-an-exchange
+    exchange-integration
