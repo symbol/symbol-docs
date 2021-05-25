@@ -188,9 +188,13 @@ Transactions which are about to expire are delicate because, even if they get co
 The example code
 ================
 
-This guide shows snippets of code to exemplify the different processes. All snippets are based on the same program that `can be found here <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples/typescript/exchanges>`__.
+This guide shows snippets of code to exemplify the different processes. All snippets are based on the same program that `can be found here <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples/typescript/exchanges>`__. A few notes on this example program:
 
-This program uses a fake ``DBService`` object that simulates the Exchange database. Calls to this object should obviously be replaced by the actual Exchange infrastructure in production code.
+- It uses a fake ``DBService`` object that simulates the Exchange database. Calls to this object should obviously be replaced by the actual Exchange infrastructure in production code.
+
+- No error handling is performed at all. Use mechanisms like ``try {} catch`` where appropriate in production code.
+
+- Finally, besides the snippets shown in the guide, the complete program also contains auxiliary code (like polling loops) in order to make it runnable and self-sufficient. This auxiliary code is not meant to be used as an inspiration at all, it is just there for convenience.
 
 .. _exchange-deposits:
 
@@ -313,7 +317,7 @@ Then:
 
 .. topic:: Multi-signature accounts
 
-   When the Exchange Central Wallet is a :doc:`multi-signature account <../../concepts/multisig-account>` announcing the transaction is slightly more involved, as it involves the central wallet and its cosignatories. See the following resources:
+   When the Exchange Central Wallet is a :doc:`multi-signature account <../../concepts/multisig-account>` announcing the transaction is slightly more complex, as it involves the central wallet and its cosignatories. See the following resources:
 
    - :doc:`../aggregate/sending-a-multisig-transaction`.
    - :doc:`../aggregate/signing-announced-aggregate-bonded-transactions`.
