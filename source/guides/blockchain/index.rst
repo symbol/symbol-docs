@@ -10,3 +10,4 @@ Guides related to the handling the blockchain itself.
     getting-block-by-height
     getting-the-mosaic-identifier-behind-a-namespace-with-receipts
     listening-new-blocks
+    global-mosaic-supply
