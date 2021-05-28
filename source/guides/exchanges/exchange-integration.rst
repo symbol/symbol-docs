@@ -30,21 +30,17 @@ Components
 Central wallet
 --------------
 
-The exchange owns a Symbol account where all the user's deposits and withdrawals occur. This account only has the necessary amount of XYM for daily use (withdrawals and deposits), since it is the account most exposed to attacks.
-
-To increase the account security, we highly recommend to set up the wallet using Symbol's :doc:`multisig feature <../../concepts/multisig-account>`. Withdrawals can be automated using bots to ensure wallet security with **two-factor authentication**.
+The exchange owns a Symbol account where all the user's deposits and withdrawals occur. The keys to this account need to be on an online machine, so this is also commonly called the **Hot** wallet. This account only has the necessary amount of XYM for daily use (withdrawals and deposits), since it is the account most exposed to attacks.
 
 Cold wallet
 -----------
 
-Cold wallet(s) hold a certain threshold for the pool of XYM. These accounts should be created and remain in a setup with no internet connection. Transactions issued from cold wallets must be signed offline and announced to the network using another device. It is advisable as well that cold wallets are set up with :doc:`multisig accounts <../../concepts/multisig-account>`, this time controlled by people.
+Cold wallet(s) hold a certain threshold for the pool of XYM. These accounts should be created and remain in a setup with no internet connection. Transactions issued from cold wallets must be signed offline and announced to the network using another device. It is advisable as well that cold wallets are set up with :doc:`multisig accounts <../../concepts/multisig-account>`.
 
 Unique User ID
 --------------
 
-Each user is identified by a unique identifier (UUID) on the exchange's database. A user will deposit to the central wallet with their UUID attached as
-the :doc:`message <../../concepts/transfer-transaction>` of the transaction (called sometimes the **memo**). The UUID is only shown
-in the user's dashboard during the deposit confirmation.
+In the proposed architecture, each user is identified by a Unique User IDentifier (UUID) on the exchange's database. A user will deposit to the central wallet with their UUID attached as the :doc:`message <../../concepts/transfer-transaction>` of the transaction (called sometimes the **memo**). The UUID is only shown in the user's dashboard during the deposit confirmation.
 
 One of the drawbacks of this design is that many users are not used to having a message attached to their transactions. If they forget to attach the UUID or attach a wrong UUID, it will lead to receiving lots of support tickets concerning "lost funds".
 
@@ -157,7 +153,7 @@ To have faster response times, one must ignore finalization and **accept the ris
 
 The procedure, which is common in blockchains which do not support finalization, is to **wait for a few blocks** to be validated (added to the blockchain) before accepting a transaction.
 
-The amount of blocks to wait for depends on the risk one wants to accept. The recommendation for Symbol is **20 blocks** (about 10 minutes, regardless of network conditions).
+The amount of blocks to wait for depends on the risk one wants to accept. The recommendation for Symbol is **20 blocks** (about 10 minutes, regardless of network conditions, because Finalization will almost always happen during this time).
 
 .. topic:: In summary
 
@@ -171,7 +167,7 @@ An added problem caused by rollbacks is that **transactions might expire** in th
 
 A bit of context is required here. Transactions are not allowed to remain unconfirmed in the network forever, as this would pose a significant strain on the network's resources. Instead, **all transactions have a deadline**, and are automatically disposed of when the deadline arrives.
 
-Users are free to use any deadline they want for their transactions, between now and 24h into the future.
+Users are free to use any deadline they want for their transactions, between now and 6h into the future (48h for :ref:`aggregate-bonded` transactions).
 
 Transactions which are about to expire are delicate because, even if they get confirmed and are added to the blockchain, **a rollback could send them back to the unconfirmed state** and their deadline could expire before they are confirmed again.
 
@@ -190,7 +186,7 @@ The example code
 
 This guide shows snippets of code to exemplify the different processes. All snippets are based on the same program that `can be found here <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples/typescript/exchanges>`__. A few notes on this example program:
 
-- It uses a fake ``DBService`` object that simulates the Exchange database. Calls to this object should obviously be replaced by the actual Exchange infrastructure in production code.
+- It uses a fake ``DBService`` object that simulates the Exchange database. Calls to this object should obviously be replaced by the actual Exchange infrastructure in production code. For simplicity these calls are synchronous but they could be made asynchronously too.
 
 - No error handling is performed at all. Use mechanisms like ``try {} catch`` where appropriate in production code.
 
