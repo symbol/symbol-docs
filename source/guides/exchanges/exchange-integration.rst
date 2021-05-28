@@ -347,3 +347,10 @@ This snippet can be run in the same loop as the deposits monitor :ref:`described
    - :doc:`Transaction life-cycle <../../concepts/transaction>`.
    - :doc:`Fees reference <../../concepts/fees>`.
    - :doc:`How to announce a transfer transaction programmatically <../transfer/sending-a-transfer-transaction>`.
+
+Further information
+*******************
+
+Read the following pages for more information:
+
+- :doc:`../blockchain/global-mosaic-supply`.
