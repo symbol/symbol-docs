@@ -110,7 +110,7 @@ The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of ho
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
 
-By default, creating a mosaic in |codename|'s public network has an :ref:`initial cost <config-network-properties>` of ``0.0005`` |networkcurrency|.
+By default, creating a mosaic in |codename|'s public network has an initial cost of ``0.5`` |networkcurrency| (:ref:`configurable per network <config-network-properties>` by the ``mosaicRentalFee`` property).
 However, **the network dynamically adjusts the mosaic rental fee** over time.
 
 To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
