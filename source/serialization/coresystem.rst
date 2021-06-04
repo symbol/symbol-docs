@@ -17,7 +17,7 @@ This transaction is required for node operators wanting to vote for :ref:`finali
 
 Announce a VotingKeyLinkTransaction to associate a voting key with an account during a fixed period. An account can be linked to up to ``3`` different voting keys at the same time.
 
-The recommended production setting is to always have at least ``2`` linked keys with different ``endPoint`` values to ensure a key is registered after the first one expires. See more details here :ref:`in this guide <manual-enable-voting>`.
+The recommended production setting is to always have at least ``2`` linked keys with different ``endPoint`` values to ensure a key is registered after the first one expires. See more details :ref:`in this guide <manual-voting-key-renewal>`.
 
 **Version**: 0x01
 

@@ -76,7 +76,7 @@ The generation of the voting key, though, is a bit more complex than the previou
 
    You can find out the current epoch by dividing the `current blockchain height <http://explorer.testnet.symboldev.network/>`__ by 1440 and discarding the decimals.
 
-2. **Create the voting key**:
+2. **Create the voting key** (or keys):
 
    Voting keys are different from the other keys in that they have a **period of validity**, for example. They are only valid from a **Start Epoch** to an **End Epoch** (see side box).
 
@@ -102,6 +102,18 @@ The generation of the voting key, though, is a bit more complex than the previou
       loaded voting public key: ****************
 
    Copy the voting key public key into the temporary text file where you keep the rest of the keys, label it **Voting** and save it for later.
+
+.. _manual-voting-key-renewal:
+
+.. topic:: Voting key renewal
+
+   If all your registered voting keys expire your node will not be eligible as a voter and its account will not receive any :ref:`voting rewards <voting-node-program>`.
+
+   **Make sure you always have one voting key registered for the current epoch.**
+
+   You can check your currently registered voting keys using the ``/accounts`` endpoint of the :doc:`REST API <../../api>` (Get Account Information), in the ``supplementalPublicKeys`` section. `Here is an example <http://ngl-dual-601.symbolblockchain.io:3000/accounts/90009F2C2D396A6B788D6DBAB8F075CB20549A50BBA5259D382618FD86F1419A>`__.
+
+   If you need to renew your keys, create new ones as explained above and then register them as explained in the :ref:`Link the keys <manual-enable-voting>` section below.
 
 Configuration
 =============
@@ -355,7 +367,7 @@ When the next epoch starts, if it is inside the Start and End epochs of one of y
 
    Every epoch, at least **70%** of all eligible voting nodes need to cast their votes or **finalization stalls**.
 
-   Therefore, **if you are planning to take your node offline** (for example, for maintenance) it is important that you **unlink your voting keys** for that period so that finalization is not impaired.
+   Therefore, **if you are planning to take your node offline** for a long time it is important that you **unlink your voting keys** for that period so that finalization is not affected.
 
 *****************
 Build an API node
