@@ -49,7 +49,7 @@ The ``testnet`` and ``mainnet`` presets
 
 |symbol-bootstrap| has presets called ``testnet`` and ``mainnet`` which instantiate a node that connects to the appropriate public network. The particular capabilities of this node are selected through the ``assembly`` option.
 
-This guide uses ``testnet`` as an example, feel free to change it to ``mainnet`` once the main network has officially launched.
+This guide uses ``testnet`` as an example but feel free to change it to ``mainnet``.
 
 To create a peer node:
 ======================
@@ -140,8 +140,8 @@ Use the information in the ``main`` section to access the node's account. When a
 
 .. topic:: Encrypted private keys
 
-   By default (see the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ for more details), Symbol Bootstrap encrypts all private keys in ``addresses.yml`` so they are not visible.
-   
+   By default Symbol Bootstrap encrypts all private keys in ``addresses.yml`` so they are not visible (see the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ for more details).
+
    To access the private keys (to **withdraw** funds from the main account, for example) you will need to use the ``symbol-bootstrap decrypt`` command:
 
    .. code-block:: bash
@@ -150,10 +150,11 @@ Use the information in the ``main`` section to access the node's account. When a
          --source target/addresses.yml \
          --destination target/addresses_plain.yml
 
-   This will produce a ``target/addresses_plain.yml`` file with the decrypted files.
+   This will produce a ``target/addresses_plain.yml`` file with the decrypted keys.
 
-   - **Delete this file after reading the keys!**
-   - **Keep your Secret Keys secret at all times!**
+   ⚠️ **Delete this file after reading the keys!**
+
+   ⚠️ **Keep your Secret Keys secret at all times!**
 
 ***************************
 Providing funds to the node
@@ -186,16 +187,16 @@ Once the node is running with ``symbol-bootstrap start`` and you have funded its
 
 This creates the required :ref:`AccountKeyLink <account-key-link-transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` transactions and announces them to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
 
-.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the local node (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of another node using ``--url``. Find a `list of testnet nodes here <https://forum.nem.io/t/nem-symbol-0-10-0-7-release-15-feb-2021/27565>`_.
+.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the **local node** (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of another node using ``--url`` (use the Symbol Explorer to find the list of current nodes in `testnet <http://explorer.testnet.symboldev.network/nodes>`__ or `mainnet <http://explorer.symbolblockchain.io/nodes>`__).
 
 .. _bootstrap-enable-voting:
 
 Enabling voting
 ===============
 
-The :ref:`block finalization <finalization>` process requires that network nodes vote about the correctness of blocks before they are definitely added to the blockchain. For your new node to participate it has to register as a voter by announcing a :ref:`VotingKeyLink transaction <voting-key-link-transaction>` to the network. |symbol-bootstrap| can take care of this too.
+The :ref:`block finalization <finalization>` process requires that some network nodes vote about the correctness of blocks before they are definitely added to the blockchain. For your new node to participate (and collect :ref:`voting rewards <voting-node-program>`) it has to register as a voter by announcing a :ref:`VotingKeyLink transaction <voting-key-link-transaction>` to the network. |symbol-bootstrap| can take care of this too.
 
-.. note:: We are going to create a new voting node. If you already created a non-voting node which you no longer need, you can remove the ``target`` folder or, more conveniently, use the ``-r`` switch next time you invoke ``symbol-bootstrap``.
+.. note:: We are going to create a new voting node. If you already created a non-voting node which you no longer need, you can remove the ``target`` folder or, more conveniently, use the ``--reset`` switch next time you invoke ``symbol-bootstrap``.
 
 First, you need to configure the node as a voter, so, besides selecting the desired preset and assembly you have to provide a custom preset file with the following content:
 
@@ -217,6 +218,23 @@ Once the node is running, from a different terminal (but from the same folder), 
     symbol-bootstrap link
 
 Just like in the harvesting case, this creates the required :ref:`VotingKeyLink transaction <voting-key-link-transaction>` and submits it to the network. Upon successful completion, your new node is ready to vote.
+
+.. _bootstrap-voting-key-renewal:
+
+.. topic:: Voting key renewal
+
+   For security reasons voting keys have a maximum validity of 6 months. This means that **every 6 months you need to renew your voting keys**.
+
+   Again, Symbol bootstrap takes care of this. You just need to **periodically** run these commands from the same folder where you initially ran ``symbol-bootstrap start`` (there is no need to stop the server):
+
+   .. code-block:: symbol-bootstrap
+
+      symbol-bootstrap upgradeVotingKeys
+      symbol-bootstrap link
+
+   The current keys will be examined and if any is close to expiration it will be renewed. If no action is needed the ``link`` command will do nothing, so no transaction fees will be paid.
+
+   ⚠️ **If you fail to renew on time your node will stop voting.** Your account will not receive any voting reward until you run the above commands.
 
 *********************
 Running a secure node
