@@ -232,7 +232,7 @@ Just like in the harvesting case, this creates the required :ref:`VotingKeyLink 
       symbol-bootstrap upgradeVotingKeys
       symbol-bootstrap link
 
-   The current keys will be examined and if any is close to expiration it will be renewed. If no action is needed the ``link`` command will do nothing, so no transaction fees will be paid.
+   The current keys will be examined and if any is close to expiration it will be renewed. If no action is needed the ``link`` command will do nothing, so no transaction fees will be paid (see `Symbol Bootstrap's manual <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/upgradeVotingKeys.md>`__ for more information).
 
    ⚠️ **If you fail to renew on time your node will stop voting.** Your account will not receive any voting reward until you run the above commands.
 
