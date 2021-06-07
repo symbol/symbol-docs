@@ -260,9 +260,15 @@ You can use the following tools to test the functionality of your new node:
 * :ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
 * :ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used actions from your terminal.
 * The |codename| |faucet|: Receive |networkcurrency| units to test |codename|'s services.
-* :doc:`Software Development Kits <../../sdk>`: Add |codename| to your project.
 
-And don't forget to check :ref:`the rest of the guides <blog-categories>` to continue learning about |codename|!
+**********
+Next steps
+**********
+
+Now that your node is up and running, you can take a look at the following guides:
+
+* :doc:`maintaining-a-symbol-node`
+* :ref:`Categorized list of Symbol guides <blog-categories>`
 
 .. _docker: https://docs.docker.com/install/
 

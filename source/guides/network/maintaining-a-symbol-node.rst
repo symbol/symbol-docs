@@ -1,0 +1,125 @@
+.. post:: 06 Jun, 2021
+    :category: Network
+    :excerpt: 1
+    :nocomments:
+
+#########################
+Maintaining a Symbol Node
+#########################
+
+Once you have created a |codename| node, be it :doc:`manually <running-a-symbol-node-manually>` or :doc:`using Symbol bootstrap <running-a-symbol-node>`, the node is **mostly autonomous**. But there is still a little bit of maintenance required, explained in this guide.
+
+- Regular nodes only need to take care of the :ref:`maintain-server-version` section.
+
+- :ref:`Voting nodes <voting-node-program>` also need to read the :ref:`maintain-voting-keys` section.
+
+.. _maintain-server-version:
+
+Server updates
+**************
+
+New |codename| server versions will be released **periodically**. If you want to benefit from the added features and bugfixes you will need to **update your node** to use the latest server version.
+
+Additionally, if you have enrolled in any of the :doc:`../../concepts/reward-programs` keeping up with server versions is a **mandatory requirement**.
+
+The main version to keep track of is the **Catapult Server version**, since this component is used by all :ref:`peer nodes <peer-node>`. Additionally, :ref:`API nodes <api-node>` need to keep track of the **REST component version** too.
+
+- **Finding out what are the latest versions**:
+
+  Whenever there is a new server version released it will be announced through the NEM |forum| and the |slack| channel. You can also keep an eye on the different |github| repositories and :doc:`the compatibility matrix page <../../compatibility>` to know the latest Server and REST versions.
+
+- **Finding out your node versions**:
+
+  You can find the versions used by your node in the `Symbol Explorer nodes list <http://explorer.symbolblockchain.io/nodes>`__.
+
+  Additionally, if your node is an :ref:`API node <api-node>`, you can also query it directly:
+
+  - **Server version**: ``/node/info`` endpoint, ``version`` property. `See an example <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__.
+
+    .. note::
+    
+       The ``version`` is encoded as a single 4-byte integer, where the Most-Significant Byte encodes the Major version, and the rest of bytes are the Minor, the Micro and the Patch version.
+
+       For example, version **16777472** (decimal) is **01000100h** (hex), which corresponds to version **1.0.1.0**.
+
+  - **REST version**: ``/node/server`` endpoint, ``restVersion`` property. `See an example <http://ngl-dual-104.symbolblockchain.io:3000/node/server>`__.
+
+    ``restVersion`` is a version string like **"2.3.6"**, for example.
+
+The exact procedure to update your node depends on how you created it. Read the appropriate section below.
+
+Update nodes created with Bootstrap
+===================================
+
+If you used Symbol Bootstrap to create your node (following the :doc:`running-a-symbol-node` guide), keeping it up to date is very simple.
+
+1. **Update Symbol Bootstrap** first (see the :doc:`using-symbol-bootstrap` guide for more details):
+
+   .. code-block:: bash
+
+      npm install -g symbol-bootstrap
+
+2. Then **move to the folder** where the node's data folder is (typically ``target``) and **make a backup copy** of it:
+
+   .. code-block:: bash
+
+      cp -r target target.BAK
+
+3. Finally, **stop and restart the node** with the ``--upgrade`` flag to update all necessary component versions.
+
+   The exact commands depend on whether your node was running in detached mode or not:
+
+   - **If you started in detached mode** with ``symbol-bootstrap start -d``:
+
+     From the folder containing the ``target`` folder type:
+
+     .. code-block:: symbol-bootstrap
+
+        symbol-bootstrap stop
+        symbol-bootstrap start --upgrade -d
+
+   - **If you did not start in detached mode**:
+
+     You must have a terminal running somewhere with all the output from the server. Stop it by pressing ``Ctrl+C`` and then type:
+
+     .. code-block:: symbol-bootstrap
+
+        symbol-bootstrap start --upgrade
+
+4. Once the node is up and running again, and you **verify that the component versions have been updated**, you can **remove the backup copy**.
+
+Update nodes created manually
+=============================
+
+If you followed the :doc:`running-a-symbol-node-manually` guide, you need to rebuild the Catapult Server and keep the previous data folder so the same accounts and cached data is reused.
+
+In summary, you need to:
+
+- Stop the running Catapult Server with ``Ctrl+C``.
+- Update the Catapult Server source repository with the latest version and build it again following the `Catapult Server <https://github.com/nemtech/catapult-server/tree/main/docs>`__ instructions.
+- Restart the server from the same folder it was initially launched. Data and configuration files will be reused.
+
+.. note::
+
+   The above procedure works but brings the server offline while the new version is being built, which could be a lengthy process.
+
+   If you **install** the server (with ``make install``) instead of running it from the same folder where it is built, though, you have the option to build the new version while the previous one is still running. In this way the service interruption should be minimal.
+
+   The steps then would be:
+
+   - Update the Catapult Server source repository and build it again.
+   - Stop the running Catapult Server.
+   - Install the new version of the server.
+   - Restart the server.
+
+.. _maintain-voting-keys:
+
+Voting key renewal
+******************
+
+If your node is a :ref:`Voting node <voting-node-program>` it requires a valid voting key to operate. For security these keys expire after 6 months, so you need to renew them as part of the regular node maintenance.
+
+Read the appropriate section about renewing the voting keys depending on whether you used Symbol Bootstrap or not to build your node:
+
+- :ref:`Voting key renewal using Bootstrap <bootstrap-voting-key-renewal>`
+- :ref:`Manual voting key renewal <manual-voting-key-renewal>`
