@@ -70,7 +70,11 @@ All the user's funds are merged together in the Exchange's wallets. This databas
 Running a node
 ==============
 
-Although not absolutely necessary, it is **recommended** that Exchanges deploy **their own Symbol node** to communicate with the rest of the network. This is more robust than accessing the network always through the same public node, which might become unavailable.
+Although not absolutely necessary, it is **recommended** that Exchanges deploy **their own Symbol node** to communicate with the rest of the network. Since each node automatically connects to **several other nodes** on the network, this approach is more robust than accessing the network always through the same public node, which **might become unavailable**.
+
+If you are unable to run your own node, you can connect to the ones managed by **NEM Group** so you know they are backed by a company and offer technical support. These nodes are identified by the word ``ngl`` in their URL, for instance:
+
+- `ngl-dual-104.symbolblockchain.io <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__.
 
 See the :doc:`different guides about deploying Symbol nodes <../network/index>` and make sure you create an :ref:`API node <api-node>`.
 
