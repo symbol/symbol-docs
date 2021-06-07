@@ -91,7 +91,8 @@
             {% block body %}{% endblock %}
             {% if edit_on_github_url %}
             <p class="feedback">
-                <b>{% trans %}Did you find what you were looking for?{% endtrans %}</b>
+                <hr/>
+                {% trans %}Did you find what you were looking for?{% endtrans %}
                 <a href="{{feedback_on_github_url}}" target="_blank">{% trans %}Give us your feedback.{% endtrans %}</a>
             </p>
             {% endif %}
