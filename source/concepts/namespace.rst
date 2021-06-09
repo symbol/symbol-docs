@@ -132,8 +132,7 @@ The default namespace rental fees are :ref:`configurable per network <config-net
     Extending a namespace duration; ``0.000001`` |networkcurrency| per block
     Creating a subnamespace; ``0.0001`` |networkcurrency|
 
-To calculate the effective rental fee, the network multiplies the default value set in the configuration by the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
-In case there are zero multipliers, these are replaced by the :ref:`defaultDynamicFeeMultiplier <config-network-properties>` before the median calculation.
+To calculate the effective rental fee, the network multiplies the default value set in the configuration by the network's :ref:`dynamic fee multiplier <fees_dynamic_multiplier>`.
 
 ********************
 Related transactions

@@ -24,7 +24,7 @@ Private chains :ref:`can edit the network configuration <config-network-properti
 Transaction fee
 ***************
 
-The fee associated with a transaction primarily depends on the size of the transaction.
+The fee associated with a transaction primarily depends on the size (in bytes) of the transaction.
 The effective fee deducted from the account sending the transaction is calculated as the product of the size of the transaction and a fee multiplier set by the node that harvests the block.
 
 .. math::
@@ -43,15 +43,12 @@ The harvesting nodes :ref:`can set their transaction inclusion strategy <node-pr
 * **Minimize-fees**: Philanthropic nodes. Include first the transactions that other nodes do not want to include.
 * **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-To ensure that the transaction will get included without setting a ``max_fee`` unnecessarily high, the sender of the transaction can ask the :doc:`REST Gateway <../api>` for the median, average, highest, or lowest multiplier of the network over the last N blocks. 
+To ensure that the transaction will get included without setting a ``max_fee`` unnecessarily high, the sender of the transaction can ask the :doc:`REST Gateway <../api>` for the median, average, highest, or lowest multiplier of the network over the last 60 blocks (:ref:`maxDifficultyBlocks <config-network-properties>`).
 
 .. note::
     A quick way of retrieving this information is pointing your browser to:
 
-    .. code-block:: bash
-
-        http://ngl-dual-101.testnet.symboldev.network:3000/network/fees/transaction
-
+    `<NODE_URL>:3000/network/fees/transaction <http://ngl-dual-101.testnet.symboldev.network:3000/network/fees/transaction>`__
 
 For example, the sender could set the transaction max_fee as follows:
 
@@ -87,13 +84,21 @@ To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` size
         :start-after: /* start block 02 */
         :end-before: /* end block 02 */
 
-**********
-Rental fee
-**********
+.. _fees_dynamic_multiplier:
 
-Accounts willing to register a :doc:`namespace <namespace>` or a :doc:`mosaic <mosaic>` have to pay a rental fee in addition to the transaction fee.
-The effective rental fee is adjusted dynamically based on the :doc:`median network multiplier <harvesting>` over last :ref:`maxDifficultyBlocks <config-network-properties>`.
+**********************
+Dynamic fee multiplier
+**********************
 
-For more information, see how the network calculates the effective rental fee for :ref:`mosaics <mosaic-rental-fee>` and :ref:`namespaces <namespace-rental-fee>`.
+Each block added to the blockchain has a different fee multiplier, set by the node that harvested it. The network also defines the **dynamic fee multiplier** as the **median** of the last :ref:`maxDifficultyBlocks <config-network-properties>` harvested blocks (60 by default).
+
+This value approximates the most common fee multiplier that nodes and transaction creators have agreed upon in the most recent blocks, and is used in the calculation of :ref:`namespace <namespace-rental-fee>` and :ref:`mosaic <mosaic-rental-fee>` rental fees.
+
+If a block did not include any transaction, a value of :ref:`defaultDynamicFeeMultiplier <config-network-properties>` (100 by default) is used to avoid 0 multipliers.
+
+.. note::
+    The current value of the dynamic fee multiplier can be found in the ``medianFeeMultiplier`` property returned by the :doc:`REST Gateway <../api>`:
+
+    `<NODE_URL>:3000/network/fees/transaction <http://ngl-dual-101.testnet.symboldev.network:3000/network/fees/transaction>`__
 
 Continue: :doc:`Receipt <receipt>`.
