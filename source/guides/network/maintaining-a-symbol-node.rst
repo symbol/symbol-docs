@@ -76,7 +76,7 @@ If you used Symbol Bootstrap to create your node (following the :doc:`running-a-
      .. code-block:: symbol-bootstrap
 
         symbol-bootstrap stop
-        symbol-bootstrap start --upgrade -d
+        symbol-bootstrap start --upgrade -d -c custom-presets.yml
 
    - **If you did not start in detached mode**:
 
@@ -84,7 +84,7 @@ If you used Symbol Bootstrap to create your node (following the :doc:`running-a-
 
      .. code-block:: symbol-bootstrap
 
-        symbol-bootstrap start --upgrade
+        symbol-bootstrap start --upgrade -c custom-presets.yml
 
 4. Once the node is up and running again, and you **verify that the component versions have been updated**, you can **remove the backup copy**.
 
