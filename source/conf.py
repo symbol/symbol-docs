@@ -296,6 +296,9 @@ rst_prolog = """
 
    <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
 
+.. |forum| raw:: html
+
+   <a href="https://forum.nem.io/c/announcement" target="_blank">Forum</a>
 """
 
 # -- Options for Epub output ----------------------------------------------

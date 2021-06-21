@@ -52,8 +52,3 @@ Instructions on how to launch a secure and production-ready private chain will b
 .. |whitepaper| raw:: html
 
    <a href="https://docs.symbolplatform.com/catapult-whitepaper/main.pdf" target="_blank">Whitepaper</a>
-
-.. |forum| raw:: html
-
-   <a href="https://forum.nem.io/c/announcement" target="_blank">Forum</a>
-
