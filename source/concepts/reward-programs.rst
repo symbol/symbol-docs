@@ -13,6 +13,8 @@ Each of these programs rewards **a different aspect of the network**:
 
 In most cases, node owners wishing to benefit from these programs must explicitly **enroll** to them. The descriptions below contain **guides** explaining how to enroll to each program.
 
+.. warning:: None of the reward programs has launched yet. The information shown below is subject to change until the programs officially start.
+
 .. _supernode-program:
 
 *****************
