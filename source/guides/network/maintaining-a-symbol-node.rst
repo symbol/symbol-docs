@@ -20,7 +20,7 @@ Server updates
 
 New |codename| server versions will be released **periodically**. If you want to benefit from the added features and bugfixes you will need to **update your node** to use the latest server version.
 
-Additionally, if you have enrolled in any of the :doc:`../../concepts/reward-programs` keeping up with server versions is a **mandatory requirement**.
+Additionally, if your node's server version falls too far behind, other nodes might refuse to connect to it.
 
 The main version to keep track of is the **Catapult Server version**, since this component is used by all :ref:`peer nodes <peer-node>`. Additionally, :ref:`API nodes <api-node>` need to keep track of the **REST component version** too.
 
