@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 18:49+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2021-03-02 08:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/supernode-enrollment.rst:40
+#: ../../source/guides/network/supernode-enrollment.rst:43
 msgid "Enrolling to the Supernode program"
 msgstr "スーパーノードプログラムに登録する"
 
-#: ../../source/guides/network/supernode-enrollment.rst:42
+#: ../../source/guides/network/supernode-enrollment.rst:45
 msgid ""
 "This guide shows how to create a node and register it as a **Supernode**. "
 "Make sure you know about the :ref:`supernode-program` before continuing with"
@@ -35,7 +35,7 @@ msgstr ""
 "このガイドでは、ノードを作成して **スーパーノード** として登録する方法を示します。このガイドを続行する前に :ref:`supernode-"
 "program` について理解してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:44
+#: ../../source/guides/network/supernode-enrollment.rst:47
 msgid ""
 "The :doc:`running-a-symbol-node` guide contains more details on how to "
 "create a |codename| node and its content **partially overlaps** this guide. "
@@ -46,7 +46,7 @@ msgstr ""
 "ノードの作成方法の詳細が含まれており、そのコンテンツはこのガイドと **部分的に重複しています** 。そのガイドに従って **通常ノード** "
 "を構築するか、このガイドに従って **スーパーノード** を構築できますが **両方** を構築することはできません。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:46
+#: ../../source/guides/network/supernode-enrollment.rst:49
 msgid ""
 "The next two sections explain how to create your supernode :ref:`using "
 "Symbol Bootstrap <enroll-supernode-with-bootstrap>`, which is the easiest "
@@ -56,17 +56,17 @@ msgstr ""
 "bootstrap>` してスーパーノードを作成する方法と、 :ref:`手動 <enroll-supernode-manually>` "
 "で作成する方法を説明します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:48
+#: ../../source/guides/network/supernode-enrollment.rst:51
 msgid ""
 "The Supernode program is only open for testing on TESTNET right now. The "
 "program will be open on MAINNET shortly."
 msgstr "スーパーノードプログラムは、現在テストネットでのみテストが行われています。まもなくメインネットでもプログラムが開始される予定です。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:54
+#: ../../source/guides/network/supernode-enrollment.rst:57
 msgid "Using Symbol Bootstrap"
 msgstr "Symbol Bootstrap の使用"
 
-#: ../../source/guides/network/supernode-enrollment.rst:56
+#: ../../source/guides/network/supernode-enrollment.rst:59
 msgid ""
 "Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. "
 ":doc:`Learn about this tool <using-symbol-bootstrap>` if you are not "
@@ -78,15 +78,15 @@ msgstr ""
 "してください。そのガイドに記載があるように、ノードが機能するためには、ポート 3000 、 7881 、および 7900 "
 "が開いていなければならないことに注意してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:58
+#: ../../source/guides/network/supernode-enrollment.rst:61
 msgid "Make sure you are using the **latest Symbol Bootstrap** by running:"
 msgstr "以下を実行して、最新の Symbol Bootstrap を使用していることを確認してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:64
+#: ../../source/guides/network/supernode-enrollment.rst:67
 msgid "It should be at least **version 1.0.5**."
 msgstr "**バージョン 1.0.5** 以上である必要があります。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:66
+#: ../../source/guides/network/supernode-enrollment.rst:69
 msgid ""
 "Create a :ref:`custom preset file <symbol-bootstrap-presets>` named, for "
 "example, ``supernode.yml``:"
@@ -94,11 +94,11 @@ msgstr ""
 "例として ``supernode.yml`` と命名した  :ref:`カスタムプリセットファイル <symbol-bootstrap-"
 "presets>` を作成します:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:74
+#: ../../source/guides/network/supernode-enrollment.rst:77
 msgid "You can further customize this preset file:"
 msgstr "このプリセットファイルはさらにカスタマイズできます:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:76
+#: ../../source/guides/network/supernode-enrollment.rst:79
 msgid ""
 "If you want the node to be also a :ref:`Voting node <finalization>` (and "
 "benefit from the :ref:`Voting Node rewards program <voting-node-program>`) "
@@ -108,7 +108,7 @@ msgstr ""
 "ノードを :ref:`投票ノード <finalization>` (かつ :ref:`投票ノード報酬プログラム <voting-node-"
 "program>` を受けたい) にもする場合は、 ``host`` 行の下に ``voting: true`` を同じインデントで追加してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:78
+#: ../../source/guides/network/supernode-enrollment.rst:81
 msgid ""
 "If you need to change the default port that the monitoring agent uses (7881)"
 " you can add ``rewardProgramAgentPort: 7882`` (for example) **at the top of "
@@ -117,7 +117,7 @@ msgstr ""
 "監視エージェントが使用するデフォルトのポート (7881) を変更する場合は、 (例として) **ファイルの先頭に** "
 "``rewardProgramAgentPort: 7882`` を追加できます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:80
+#: ../../source/guides/network/supernode-enrollment.rst:83
 msgid ""
 "If you already have some of the required node accounts (main, transport, "
 "remote, VRF or voting) `you can provide them in the preset file too "
@@ -129,7 +129,7 @@ msgstr ""
 "bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-"
 "private-keys>`__ 。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:82
+#: ../../source/guides/network/supernode-enrollment.rst:85
 msgid ""
 "When managing your node through a :doc:`multisig account <../../concepts"
 "/multisig-account>`, the **main** account in the above preset file must be "
@@ -138,7 +138,7 @@ msgstr ""
 ":doc:`マルチシグアカウント <../../concepts/multisig-account>` でノードを管理する場合、上記プリセットファイルの"
 " **メイン** アカウントは (連署者では **なく**)  **マルチシグアカウント** でなければなりません。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:84
+#: ../../source/guides/network/supernode-enrollment.rst:87
 msgid ""
 "See the full list of possible customizations in the `Symbol Bootstrap "
 "documentation <https://github.com/nemtech/symbol-"
@@ -147,27 +147,27 @@ msgstr ""
 "`Symbol Bootstrap ドキュメント <https://github.com/nemtech/symbol-"
 "bootstrap/blob/main/docs/presetGuides.md>`__ でカスタマイズ可能なリストを参照してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:86
+#: ../../source/guides/network/supernode-enrollment.rst:89
 msgid "**Create and run the node** using the new preset file:"
 msgstr "新しいプリセットファイルを使用して **ノードを作成して実行します** :"
 
-#: ../../source/guides/network/supernode-enrollment.rst:88
+#: ../../source/guides/network/supernode-enrollment.rst:91
 msgid ""
 "Along with the standard node services, this will also download and install "
 "the **monitoring agent**."
 msgstr "標準のノードサービスに加えて **監視エージェント** もダウンロードしてインストールします。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:94
+#: ../../source/guides/network/supernode-enrollment.rst:97
 msgid ""
 "The ``start`` command will create the node configuration and then launch it."
 msgstr "``start`` コマンドはノード設定を作成し、起動を行います。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:96
+#: ../../source/guides/network/supernode-enrollment.rst:99
 msgid ""
 "For test purposes you can use |codename|'s TESTNET using ``-p testnet``."
 msgstr "テスト目的に ``-p testnet`` を使うことで |codename| のテストネットを使うことができます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:98
+#: ../../source/guides/network/supernode-enrollment.rst:101
 msgid ""
 "Make sure your node is **sufficiently funded**. Your main account must hold "
 "at least **1M** |networkcurrency| :ref:`to be eligible as a supernode "
@@ -176,13 +176,13 @@ msgstr ""
 "あなたのノードが **十分な資産** を保有していることを確認してください。 :ref:`スーパーノードとして適格になる <supernode-"
 "program>` には、メインアカウントに **100 万** 以上の |networkcurrency| を保有する必要があります。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:100
+#: ../../source/guides/network/supernode-enrollment.rst:103
 msgid ""
 "You can find the node's main account address in the ``target/addresses.yml``"
 " file."
 msgstr "ノードのメインアカウントアドレスは ``target/addresses.yml`` ファイルにあります。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:102
+#: ../../source/guides/network/supernode-enrollment.rst:105
 msgid ""
 "On the TESTNET, you can **send tokens** to your node's main account using "
 "the `Symbol Faucet <http://faucet.testnet.symboldev.network>`__. If you need"
@@ -195,17 +195,17 @@ msgstr ""
 "`NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__ で `cryptobeliever "
 "<https://t.me/cryptobeliever>`__ に連絡をください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:104
+#: ../../source/guides/network/supernode-enrollment.rst:107
 msgid "**Register the node** by linking its remote, VRF and voting keys."
 msgstr "リモート、VRF、投票キーをリンクして **ノードを登録します** 。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:106
+#: ../../source/guides/network/supernode-enrollment.rst:109
 msgid ""
 "Without interrupting Symbol Bootstrap, open another terminal and go to the "
 "same folder you were before. Then run:"
 msgstr "Symbol Bootstrap を中断せずに、別のターミナルを開き、先ほどと同じフォルダに移動します。そして下記を実行します:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:112
+#: ../../source/guides/network/supernode-enrollment.rst:115
 msgid ""
 "This sends a transaction linking the supplemental keys to the main account. "
 "This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure "
@@ -216,7 +216,7 @@ msgstr ""
 "<../../concepts/fees>` がかかるので、メインアカウントにスーパーノードプログラムの要件を超える **余剰資金** "
 "があることを確認してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:114
+#: ../../source/guides/network/supernode-enrollment.rst:117
 msgid ""
 "During the test period, heavy testing might artificially increase "
 "transaction fees. If ``symbol-bootstrap`` appears to be frozen with the "
@@ -229,17 +229,17 @@ msgstr ""
 "10000000`` パラメータ (この絶対単位は 10 |networkcurrency| に対応) "
 "を追加して、トランザクション手数料を増やしてみてください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:116
+#: ../../source/guides/network/supernode-enrollment.rst:119
 msgid "**Enroll in the Supernode program**."
 msgstr "**スーパーノードプログラムに登録する**"
 
-#: ../../source/guides/network/supernode-enrollment.rst:122
+#: ../../source/guides/network/supernode-enrollment.rst:125
 msgid ""
 "This sends a transaction to the Controller address requesting enrollment "
 "(see the note regarding fees in the previous step)."
 msgstr "これにより、加入を要求するトランザクションがコントローラアドレスに送信 (前のステップの手数料に関する注釈を参照) されます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:124
+#: ../../source/guides/network/supernode-enrollment.rst:127
 msgid ""
 "From this point, the :ref:`reward programs controller <reward-programs-"
 "controller>` on the network will monitor the node."
@@ -247,16 +247,16 @@ msgstr ""
 "この時点から、ネットワーク上の :ref:`報酬プログラムコントローラ <reward-programs-controller>` "
 "がノードの監視を始めます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:126
+#: ../../source/guides/network/supernode-enrollment.rst:129
 msgid ""
 "You can now jump to the **Validation** section at the end of this guide."
 msgstr "このガイドの最終セクション **検証** にジャンプできます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:132
+#: ../../source/guides/network/supernode-enrollment.rst:135
 msgid "Manually"
 msgstr "手動"
 
-#: ../../source/guides/network/supernode-enrollment.rst:134
+#: ../../source/guides/network/supernode-enrollment.rst:137
 msgid ""
 "If you don't want (or cannot) use Symbol Bootstrap you can still enroll your"
 " node in the Supernode program manually. These instructions are only "
@@ -265,7 +265,7 @@ msgstr ""
 "もし Symbol Bootstrap を使用しない (あるいは使用できない) "
 "場合でも、手動でスーパーノードプログラムに加入することができます。これらの手順は **Linux 向け** のみ利用可能です。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:136
+#: ../../source/guides/network/supernode-enrollment.rst:139
 msgid ""
 "First off, make sure your node is up and running (or ready to run). The "
 ":doc:`running-a-symbol-node-manually` guide explains how to setup the node."
@@ -273,7 +273,7 @@ msgstr ""
 "はじめに、ノードが起動している (または実行できる状態にある) ことを確認します。 :doc:`running-a-symbol-node-"
 "manually` ではノードのセットアップ方法を説明しています。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:138
+#: ../../source/guides/network/supernode-enrollment.rst:141
 msgid ""
 "After following that guide, you need to **install a monitoring agent** and "
 "**announce a special transaction**. You are going to create a few files, so "
@@ -284,11 +284,11 @@ msgstr ""
 "する必要があります。いくつかのファイルを作成するので、ファイルシステムを整理するためのフォルダ (例えば Catapult Server の "
 "``_build`` フォルダ内に ``agent`` フォルダを作成します) を作成します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:140
+#: ../../source/guides/network/supernode-enrollment.rst:143
 msgid "**Download the node monitoring agent**:"
 msgstr "**ノードモニタリングエージェントのダウンロード**:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:142
+#: ../../source/guides/network/supernode-enrollment.rst:145
 msgid ""
 "`Download the Linux binary <https://symbol-node-reward.s3-eu-"
 "west-1.amazonaws.com/packages/1.0.2-alpha.0/agent_binary/agent-linux.bin>`__"
@@ -298,11 +298,11 @@ msgstr ""
 "west-1.amazonaws.com/packages/1.0.2-alpha.0/agent_binary/agent-linux.bin>`__"
 " して、実行可能にします:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:149
+#: ../../source/guides/network/supernode-enrollment.rst:152
 msgid "**Create certificates** for the monitoring agent:"
 msgstr "モニタリングエージェントのための **証明書を作成** します:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:151
+#: ../../source/guides/network/supernode-enrollment.rst:154
 msgid ""
 "The agent **authenticates** every connection to the :ref:`reward programs "
 "controller <reward-programs-controller>`, so you will need to create SSL "
@@ -311,7 +311,7 @@ msgstr ""
 "エージェントは :ref:`報酬プログラムコントローラ <reward-programs-controller>` へのすべての接続を **認証** "
 "するため、SSL 証明書を作成する必要があります。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:153
+#: ../../source/guides/network/supernode-enrollment.rst:156
 msgid ""
 "Make sure you have `OpenSSL <https://www.openssl.org/>`__ at least **version"
 " 1.1.1**. You can install for example running ``sudo apt install openssl``."
@@ -319,24 +319,24 @@ msgstr ""
 "`OpenSSL <https://www.openssl.org/>`__ が最低でも **バージョン1.1.1** であることを確認します。例えば "
 "``sudo apt install openssl`` を実行してインストールできます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:155
+#: ../../source/guides/network/supernode-enrollment.rst:158
 msgid "Create a folder named ``certs`` and move inside it."
 msgstr "``certs`` フォルダを作成して移動します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:157
+#: ../../source/guides/network/supernode-enrollment.rst:160
 msgid "Create a new file named ``agent-ca.cnf`` with the following content:"
 msgstr "次の内容で ``agent-ca.cnf`` ファイルを新規作成します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:173
+#: ../../source/guides/network/supernode-enrollment.rst:176
 msgid "Then generate the certificate by running:"
 msgstr "次を実行して証明書を生成します:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:186
+#: ../../source/guides/network/supernode-enrollment.rst:189
 msgid ""
 "The last command outputs a string of characters. Copy them to be used later."
 msgstr "最後のコマンドは文字列を出力します。後で使用するのでコピーします。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:188
+#: ../../source/guides/network/supernode-enrollment.rst:191
 msgid ""
 "Finally, download the Symbol network CA certificate to allow the agent to "
 "authenticate connections to the node it is monitoring (Download only one):"
@@ -344,15 +344,15 @@ msgstr ""
 "最後に、エージェントが監視しているノードへの接続を認証するために、Symbol ネットワーク CA 証明書をダウンロード (1 つだけダウンロード) "
 "します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:198
+#: ../../source/guides/network/supernode-enrollment.rst:201
 msgid "Move out of the ``certs`` folder."
 msgstr "``certs`` フォルダから移動します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:200
+#: ../../source/guides/network/supernode-enrollment.rst:203
 msgid "**Configure the monitoring agent**:"
 msgstr "**モニタリングエージェントの設定**:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:202
+#: ../../source/guides/network/supernode-enrollment.rst:205
 msgid ""
 "Create a text file named ``agent.properties`` and add the content below, "
 "replacing ``NODE_PRIVATE_KEY`` and ``REST_GATEWAY_URL`` with the appropriate"
@@ -361,7 +361,7 @@ msgstr ""
 "``agent.properties`` という名前のテキストファイルを作成し、以下の内容を追加し、 ``NODE_PRIVATE_KEY`` と "
 "``REST_GATEWAY_URL`` を適切な値に置き換えます:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:219
+#: ../../source/guides/network/supernode-enrollment.rst:222
 msgid ""
 "By default the agent uses port number ``7881`` to communicate. If this port "
 "is unavailable you can add an ``HTTP_PORT=`` line with a different port "
@@ -370,7 +370,7 @@ msgstr ""
 "デフォルトでは、エージェントはポート番号 ``7881`` を使って通信を行います。このポートが利用できない場合は ``HTTP_PORT=`` "
 "の行を追加して、別のポート番号を指定することができます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:221
+#: ../../source/guides/network/supernode-enrollment.rst:224
 msgid ""
 "You need to specify ``REST_GATEWAY_URL`` because this URL tells the "
 "controller how to contact the node's REST interface during the enrollment "
@@ -379,11 +379,11 @@ msgstr ""
 "加入プロセスや後のモニタリングの際、コントローラによるノードの REST インターフェースへの接続方法を指定するために "
 "``REST_GATEWAY_URL`` を指定する必要があります。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:223
+#: ../../source/guides/network/supernode-enrollment.rst:226
 msgid "**Run the agent**:"
 msgstr "**エージェントの起動**:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:225
+#: ../../source/guides/network/supernode-enrollment.rst:228
 msgid ""
 "Run this command and **keep it running** for as long as your node runs. "
 "Remember that the Controller will periodically query the agent and your node"
@@ -394,7 +394,7 @@ msgstr ""
 "ください。コントローラは定期的にエージェントに問い合わせを行い、エージェントが十分な回数の応答をできなかった場合、あなたのノードは "
 "**スーパーノード報酬プログラムから除外される** 可能性があることを覚えておいてください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:231
+#: ../../source/guides/network/supernode-enrollment.rst:234
 msgid ""
 "Once the agent starts running, it will poll the Controller every 2 minutes "
 "until the enrollment is completed and new communication certificates are "
@@ -404,11 +404,11 @@ msgstr ""
 "エージェントが起動すると、登録が完了して、新しい通信証明書が生成されるまで、2 "
 "分毎にコントローラをポーリングします。この時点では、エージェントはコントローラからのコマンドを待機しているだけです。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:233
+#: ../../source/guides/network/supernode-enrollment.rst:236
 msgid "**Send the enrollment message**"
 msgstr "**加入メッセージの送信**"
 
-#: ../../source/guides/network/supernode-enrollment.rst:235
+#: ../../source/guides/network/supernode-enrollment.rst:238
 msgid ""
 "The last bit is to **notify the Controller** that your node wants to enroll "
 "in the Supernode program. This is done through a conventional :ref:`Transfer"
@@ -417,7 +417,7 @@ msgstr ""
 "最後に、自分のノードをスーパーノードプログラムに加入させることを **コントローラに通知します** 。これはモザイクなしの特別なメッセージを含む従来の "
 ":ref:`転送トランザクション <transfer-transaction>`  で行います。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:241
+#: ../../source/guides/network/supernode-enrollment.rst:244
 msgid ""
 "Replace ``AGENT_URL`` with ``https://`` + the host where you are running the"
 " agent + ``:7881``. This URL must be **publicly accessible**. For example: "
@@ -430,28 +430,28 @@ msgstr ""
 "<https://my-symbol-node.com:7881>`__ のようになります。IP "
 "アドレスも有効です。デフォルトのポート番号を使用していない場合は、上記ステップ 3 で指定したポート番号を使用してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:243
+#: ../../source/guides/network/supernode-enrollment.rst:246
 msgid "Replace ``BASE64_ENCODED_AGENT_CA_CSR`` with the output of step 2."
 msgstr "``BASE64_ENCODED_AGENT_CA_CSR`` をステップ 2 の出力で置き換えます。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:245
+#: ../../source/guides/network/supernode-enrollment.rst:248
 msgid "Finally, the recipient address for this transaction is:"
 msgstr "最後に、このトランザクションの受信アドレスは:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:247
+#: ../../source/guides/network/supernode-enrollment.rst:250
 msgid "``NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA`` for MAINNET."
 msgstr "``NDG2F6IHON7EDOXZCHSTSJ2YMUHDFXAQ2EUZHFA`` メインネット用"
 
-#: ../../source/guides/network/supernode-enrollment.rst:248
+#: ../../source/guides/network/supernode-enrollment.rst:251
 msgid "``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` for TESTNET."
 msgstr "``TDL73SDUMPDK7EOF7H3O4F5WB5WHG2SX7XUSFZQ`` テストネット"
 
-#: ../../source/guides/network/supernode-enrollment.rst:250
+#: ../../source/guides/network/supernode-enrollment.rst:253
 msgid ""
 "The transaction can then be announced using :doc:`symbol-cli <../../cli>`:"
 msgstr ":doc:`symbol-cli <../../cli>` でトランザクションをアナウンスします:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:259
+#: ../../source/guides/network/supernode-enrollment.rst:262
 msgid ""
 "**This transaction must be signed by your node's main account**, so make "
 "sure it is the default profile in ``symbol-cli``."
@@ -459,7 +459,7 @@ msgstr ""
 "**このトランザクションはノードのメインアカウントによって署名されている必要があります** 。したがって、これが ``symbol-cli`` "
 "のデフォルトプロファイルであることを確認してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:261
+#: ../../source/guides/network/supernode-enrollment.rst:264
 msgid ""
 "This transaction pays a small :doc:`fee <../../concepts/fees>` so make sure "
 "your main account has **extra funds** beyond the requirements of the "
@@ -468,7 +468,7 @@ msgstr ""
 "このトランザクションでは少額の :doc:`手数料 <../../concepts/fees>` "
 "を支払うため、メインアカウントにスーパーノードプログラムの要件を超える **余剰の資産** があることを確認してください。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:264
+#: ../../source/guides/network/supernode-enrollment.rst:267
 msgid ""
 "If the default fee used by ``symbol-cli`` is too small for the current "
 "network conditions, you might see the program get stuck processing the "
@@ -477,7 +477,7 @@ msgstr ""
 "もし ``symbol-cli`` が使用するデフォルト手数料が、現在のネットワーク状況に対して小さすぎる場合、プログラムが "
 "**トランザクション送信** ステップの処理中にスタックする場合があります。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:266
+#: ../../source/guides/network/supernode-enrollment.rst:269
 msgid ""
 "If the command does not finish within 5 minutes, press ``Ctrl+C`` and try "
 "again adding the ``--max-fee 1000000`` parameter, which uses a **1 XYM** "
@@ -488,18 +488,18 @@ msgstr ""
 "1000000`` パラメータを追加して、再試行します。 :doc:`手数料 <../../concepts/fees>` "
 "を読んでいるなら、自由に任意の数値を設定してもよいです。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:270
+#: ../../source/guides/network/supernode-enrollment.rst:273
 msgid "Validate the setup"
 msgstr "セットアップの検証"
 
-#: ../../source/guides/network/supernode-enrollment.rst:272
+#: ../../source/guides/network/supernode-enrollment.rst:275
 msgid ""
 "You can **validate your node** by checking that all services are running "
 "properly. Check that the following URLs return valid data:"
 msgstr ""
 "すべてのサービスが正しく動作していることを確認して **ノードを検証** できます。次の URL で有効なデータを返却することを確認できます:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:274
+#: ../../source/guides/network/supernode-enrollment.rst:277
 msgid ""
 "`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
 "Node's connection to the network."
@@ -507,7 +507,7 @@ msgstr ""
 "`http://localhost:3000/chain/info <http://localhost:3000/chain/info>`__: "
 "ノードの接続"
 
-#: ../../source/guides/network/supernode-enrollment.rst:275
+#: ../../source/guides/network/supernode-enrollment.rst:278
 msgid ""
 "`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
 "Node's health."
@@ -515,7 +515,7 @@ msgstr ""
 "`http://localhost:3000/node/info <http://localhost:3000/node/info>`__: "
 "ノードの状態"
 
-#: ../../source/guides/network/supernode-enrollment.rst:276
+#: ../../source/guides/network/supernode-enrollment.rst:279
 msgid ""
 "`https://localhost:7881/metadata <https://localhost:7881/metadata>`__: "
 "Agent's report (see note below)."
@@ -523,22 +523,22 @@ msgstr ""
 "`https://localhost:7881/metadata "
 "<https://localhost:7881/metadata>`__:エージェントレポート (下記参照)"
 
-#: ../../source/guides/network/supernode-enrollment.rst:278
+#: ../../source/guides/network/supernode-enrollment.rst:281
 msgid ""
 "And then check again that they are accessible through your public host name."
 msgstr "次に、パブリックホスト名からアクセスできることをもう一度確認します。"
 
-#: ../../source/guides/network/supernode-enrollment.rst:281
+#: ../../source/guides/network/supernode-enrollment.rst:284
 msgid ""
 "To access the last endpoint you will need to use a commandline tool that "
 "allows disabling TLS checks, for example:"
 msgstr "最後のエンドポイントにアクセスするには、TLS チェックを無効にできるコマンドラインツールを使用します。例:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:287
+#: ../../source/guides/network/supernode-enrollment.rst:290
 msgid "or:"
 msgstr "もしくは:"
 
-#: ../../source/guides/network/supernode-enrollment.rst:293
+#: ../../source/guides/network/supernode-enrollment.rst:296
 msgid ""
 "Once enrollment is complete, you can use the `Symbol Explorer (MAINNET) "
 "<http://explorer.symbolblockchain.io/nodes>`__ (or `TESTNET "

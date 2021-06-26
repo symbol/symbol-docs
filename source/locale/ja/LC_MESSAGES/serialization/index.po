@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2020-12-18 17:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/index.rst:40
+#: ../../source/serialization/index.rst:43
 msgid "Transaction serialization"
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/serialization/index.rst:42
+#: ../../source/serialization/index.rst:45
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -38,6 +38,6 @@ msgstr ""
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/index.rst:44
+#: ../../source/serialization/index.rst:47
 msgid "These are the reference pages for each schema:"
 msgstr "各スキーマのリファレンスページ:"

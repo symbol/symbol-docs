@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 15:27+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/lock_hash.rst:40
+#: ../../source/serialization/lock_hash.rst:43
 msgid "Lock Hash Schemas"
 msgstr "ロックハッシュスキーマ"
 
-#: ../../source/serialization/lock_hash.rst:42
+#: ../../source/serialization/lock_hash.rst:45
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -38,11 +38,11 @@ msgstr ""
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/lock_hash.rst:46
+#: ../../source/serialization/lock_hash.rst:49
 msgid "Hash Lock"
 msgstr "ハッシュロック"
 
-#: ../../source/serialization/lock_hash.rst:55
+#: ../../source/serialization/lock_hash.rst:58
 msgid ""
 "Lock funds for a certain amount of blocks with a HashLockTransaction before "
 "sending an :ref:`AggregateBondedTransaction <aggregate-transaction>`. This "
@@ -55,7 +55,7 @@ msgstr ""
 "で一定のブロック量で資産をロックします。このトランザクションは決して完了しないトランザクションで部分キャッシュをスパムすることを防止します。ロック期間は"
 " ``2日`` までで、この値は :ref:`ネットワーク <config-network-properties>` ごとに設定可能です。"
 
-#: ../../source/serialization/lock_hash.rst:59
+#: ../../source/serialization/lock_hash.rst:62
 msgid ""
 "After enough funds are locked (``10`` |networkcurrency| by default), the "
 "AggregateTransaction can be announced and added into the partial "
@@ -64,7 +64,7 @@ msgstr ""
 "十分な資金 (デフォルトでは ``10`` |networkcurrency|) がロックされた後、AggregateTransaction "
 "をアナウンスして部分トランザクションキャッシュに追加することができます。"
 
-#: ../../source/serialization/lock_hash.rst:61
+#: ../../source/serialization/lock_hash.rst:64
 msgid ""
 "It's not necessary to sign the aggregate and its HashLockTransaction with "
 "the same account. For example, if Bob wants to announce an aggregate and "
@@ -76,7 +76,7 @@ msgstr ""
 " HashLockTransaction をアナウンスするのに十分な資産がない場合、彼はアリスに署名された AggregateTransaction "
 "ハッシュを共有するハッシュロックファンドトランザクションを送信するように依頼できます。"
 
-#: ../../source/serialization/lock_hash.rst:63
+#: ../../source/serialization/lock_hash.rst:66
 msgid ""
 "Upon completion of the aggregate, the locked funds become available in the "
 "account that signed the initial HashLockTransaction. If the "
@@ -88,11 +88,11 @@ msgstr ""
 "に署名したアカウントへ返還されます。すべての連署者によって署名されずに AggregateBondedTransaction "
 "が期限に到達した場合、ロックされた資産はブロックのハーベスタによってロックの有効期限が切れるブロック高でハーベストされて報酬となります。"
 
-#: ../../source/serialization/lock_hash.rst:70
+#: ../../source/serialization/lock_hash.rst:73
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/serialization/lock_hash.rst:72
+#: ../../source/serialization/lock_hash.rst:75
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"

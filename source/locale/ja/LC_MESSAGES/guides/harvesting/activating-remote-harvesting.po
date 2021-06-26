@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-03 15:55+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2021-03-02 10:55+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:46
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:49
 msgid "Activating remote harvesting"
 msgstr "リモートハーベスティングの有効化"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:48
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:51
 msgid "Harvest new blocks through a proxy account for added security."
 msgstr "セキュリティ強化のために、プロキシアカウントを介して新しいブロックのハーベスティングします。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:52
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:55
 msgid "Introduction"
 msgstr "紹介"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:54
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:57
 msgid ""
 ":ref:`Remote harvesting <remote-harvesting>` enables **node owners** to "
 "receive rewards from creating new blocks **without exposing their main "
@@ -42,7 +42,7 @@ msgstr ""
 ":ref:`リモートハーベスティング <remote-harvesting>` は **ノード所有者** "
 "に、ノード設定ファイルにメインアカウントの秘密鍵を **公開せずに** 新しいブロックの生成報酬を受け取ることができます。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:56
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:59
 msgid ""
 "Blocks can only be harvested by nodes. If you do not own a node but still "
 "want to receive harvesting fees you will have to **request a node to harvest"
@@ -51,18 +51,18 @@ msgstr ""
 "ブロックはノードだけがハーベストできます。ノードは所有していないが、ハーベスティング手数料を受け取りたい場合は :ref:`デリゲートハーベスティング "
 "<delegated-harvesting>` で **ノードにハーベスティングをリクエスト** します。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:58
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:61
 msgid ""
 "This guide has **two sections**, depending on how you created your node: "
 "Using |symbol-bootstrap| or manually."
 msgstr ""
 "このガイドでは **２つのセクション** があり、 |symbol-bootstrap| を使用して、または手動でノードを構築したかによります。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:62
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:65
 msgid "Activation through Symbol Bootstrap"
 msgstr "Symbol Bootstrap を使用して有効化"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:64
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:67
 msgid ""
 "If you have followed the :doc:`../network/running-a-symbol-node` guide then "
 "you have used |symbol-bootstrap| to create your node. **The out-of-the-box "
@@ -73,7 +73,7 @@ msgstr ""
 "bootstrap| を使用したはずです。 **すぐに使用できるプリセットにより、デフォルトでリモートハーベスティングが可能になる** "
 "ので、そのガイドに従い、ハーベスティングを有効にした場合は、何もする必要はありません。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:66
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:69
 msgid ""
 "To clarify, |symbol-bootstrap| automatically creates a remote account "
 "(labelled ``remote`` in the ``addresses.yml`` file) and sets it as the "
@@ -90,7 +90,7 @@ msgstr ""
 "transaction>` および :ref:`VrfKeyLink <vrf-key-link-transaction>` "
 "トランザクションをアナウンスします。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:69
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:72
 msgid ""
 "It is worth noting that, although **this is NOT recommended**, you can omit "
 "the remote account and sign the new block **directly with your main "
@@ -100,17 +100,17 @@ msgstr ""
 "注目すべき点として **非推奨です** が :ref:`カスタムプリセットファイル <symbol-bootstrap-presets>` "
 "のこの行を使用して、リモートアカウントを省略し **メインアカウントで直接** 新しいブロックに署名できます:"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:75
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:78
 msgid ""
 "Needless to say your main account's private key will then be present in the "
 "node configuration files and will be accessible if the node is compromised."
 msgstr "メインアカウントの秘密鍵はノード設定ファイルに存在し、ノードに侵入されたはアクセスされる恐れがあることは言うまでもありません。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:79
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:82
 msgid "Manual activation"
 msgstr "手動で有効化"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:81
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:84
 msgid ""
 "If you have deployed a node yourself, for example by following `the "
 "catapult-server instructions <https://github.com/nemtech/catapult-"
@@ -121,7 +121,7 @@ msgstr ""
 "server/blob/main/docs/RUNPEERLIN.md>`__ に従ってノードを自分でデプロイした場合は "
 "**手動でハーベスティングを有効** にする必要があります。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:83
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:86
 msgid ""
 "The `catapult-server documentation <https://github.com/nemtech/catapult-"
 "server/blob/main/docs/RUNPEERLIN.md#user-content-enable-harvesting>`__ "
@@ -136,17 +136,17 @@ msgstr ""
 "を有効化する方法について説明があります。このセクションでは **より安全な** プロキシアカウントを使用した :ref:`リモートハーベスティング "
 "<remote-harvesting>` を有効化する方法を説明します。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:85
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:88
 msgid ""
 "This will be done using the :doc:`symbol-cli </cli>` tool. The required "
 "steps are:"
 msgstr "これは :doc:`symbol-cli </cli>` ツールを使用して実行されます。必要な手順は次のとおりです:"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:87
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:90
 msgid "Set the **remote account** as the harvester in the node configuration."
 msgstr "ノード設定にハーベスタとして **リモートアカウント** を設定します。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:89
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:92
 msgid ""
 "Announce an :ref:`AccountKeyLink transaction <account-key-link-transaction>`"
 " linking your main and your remote accounts."
@@ -154,15 +154,15 @@ msgstr ""
 "メインとリモートアカウントのリンクに :ref:`AccountKeyLink transaction <account-key-link-"
 "transaction>` をアナウンスします。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:91
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:94
 msgid "(Optional) Configure the **VRF account** if it is not already set."
 msgstr "(任意) **VRFアカウント** が未設定の場合は構成を行います。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:94
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:97
 msgid "Step 1: Setup the remote account"
 msgstr "ステップ 1: リモートアカウントのセットアップ"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:96
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:99
 msgid ""
 "Create a brand new account to act as the **remote account**. This account "
 "**must have never sent nor received any transaction**, and it cannot be "
@@ -172,15 +172,15 @@ msgstr ""
 "**リモートアカウント** として機能する新しいアカウントを作成します。このアカウントは **トランザクションを送受信したことがない** "
 "必要があり、リモートアカウントとして機能している間はトランザクションに関与できないため、最初から作成するのが最も安全です。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:98
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:101
 msgid "Run this from a terminal:"
 msgstr "これをターミナルで実行します:"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:112
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:115
 msgid "Note the **public** and **private** keys for this new account."
 msgstr "新規アカウントの **公開鍵** と **秘密鍵** を書き留めてください。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:114
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:117
 msgid ""
 "Now edit the ``config-harvesting.properties`` file (it should be in a "
 "``resources`` directory if you followed `the catapult-server instructions "
@@ -194,11 +194,11 @@ msgstr ""
 " に従っている場合は ``resources`` ディレクトリ内にあります) ``harvesterSigningPrivateKey`` "
 "フィールドを探し出し、リモートアカウントの秘密鍵を書き込みます。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:117
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:120
 msgid "Step 2: Link the remote and main accounts"
 msgstr "ステップ 2: リモートとメインアカウントをリンクする"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:119
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:122
 msgid ""
 "Make sure you have configured :doc:`symbol-cli </cli>` so that your main "
 "account is your default profile (if this is not the case, use the "
@@ -207,11 +207,11 @@ msgstr ""
 "メインアカウントをデフォルトプロファイルとして :doc:`symbol-cli </cli>` を設定してください。 (そうでない場合は "
 "``--profile`` パラメータを使用します)"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:121
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:124
 msgid "Then run this command from a terminal:"
 msgstr "このコマンドをターミナルで実行します:"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:127
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:130
 msgid ""
 "Use the ``<PUBLIC-REMOTE-KEY>`` obtained in Step 1. The ``--sync`` parameter"
 " will wait until the transaction is confirmed. Check out the :doc:`fees "
@@ -222,11 +222,11 @@ msgstr ""
 "パラメータは、トランザクションが承認されるまで待機します。このトランザクションをアナウンスするために支払う手数料は :doc:`手数料ドキュメント "
 "</concepts/fees>` を確認してください。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:130
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:133
 msgid "Step 3: Configure the VRF account"
 msgstr "ステップ 3: VRF アカウントの設定"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:132
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:135
 msgid ""
 "All :ref:`eligible accounts <account_eligibility>` must have registered a "
 "VRF key. Check out the ``harvesterVrfPrivateKey`` field in the ``config-"
@@ -237,13 +237,13 @@ msgstr ""
 "harvesting.properties`` ファイルの ``harvesterVrfPrivateKey`` "
 "フィールドを確認してください。すでに入力されている場合はこの手順をスキップできます。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:134
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:137
 msgid ""
 "Otherwise, create another account just like you did in Step 1, to act as the"
 " VRF account:"
 msgstr "それ以外の場合は、手順 1 と同じように別のアカウントを作成して、VRF アカウントとします。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:148
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:151
 msgid ""
 "Write the **private key** in the ``harvesterVrfPrivateKey`` field of the "
 "configuration file, and announce a :ref:`VrfKeyLink transaction <vrf-key-"
@@ -253,17 +253,17 @@ msgstr ""
 "とメインアカウントをリンクするために :ref:`VrfKeyLink トランザクション <vrf-key-link-transaction>` "
 "をアナウンスします:"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:156
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:159
 msgid "Final words"
 msgstr "最後に"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:158
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:161
 msgid ""
 "The node should now be configured with remote harvesting. Keep these "
 "important points in mind, though:"
 msgstr "これでノードはリモートハーベスティング構成になりました。ただし、次の重要な点に注意してください。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:160
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:163
 msgid ""
 "**Accounts with higher importance are selected more often to perform "
 "harvesting**. Even if you successfully enable remote harvesting, you will "
@@ -274,7 +274,7 @@ msgstr ""
 " :ref:`インポータンススコア <importance-calculation>` が十分に高くない限りは、ブロックをハーベストする "
 "(手数料報酬を受け取る) ことはありません。"
 
-#: ../../source/guides/harvesting/activating-remote-harvesting.rst:162
+#: ../../source/guides/harvesting/activating-remote-harvesting.rst:165
 msgid ""
 "**Importance score calculation does not happen continuously**. By default, "
 "account importance scores are recalculated every 1440 blocks (about every 12"

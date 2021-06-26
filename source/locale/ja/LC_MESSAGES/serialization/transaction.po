@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 15:27+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2020-06-19 17:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/transaction.rst:40
+#: ../../source/serialization/transaction.rst:43
 msgid "Transaction Schemas"
 msgstr "トランザクションスキーマ"
 
-#: ../../source/serialization/transaction.rst:42
+#: ../../source/serialization/transaction.rst:45
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -38,13 +38,13 @@ msgstr ""
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/transaction.rst:53
+#: ../../source/serialization/transaction.rst:56
 msgid "Serialization of a transaction."
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/serialization/transaction.rst:55
-#: ../../source/serialization/transaction.rst:75
-#: ../../source/serialization/transaction.rst:92
+#: ../../source/serialization/transaction.rst:58
+#: ../../source/serialization/transaction.rst:78
+#: ../../source/serialization/transaction.rst:95
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
@@ -67,7 +67,7 @@ msgstr ""
 "ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/serialization/transaction.rst:73
+#: ../../source/serialization/transaction.rst:76
 msgid "Binary layout for an embedded transaction header."
 msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
 
@@ -77,7 +77,7 @@ msgid ""
 "boundary."
 msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃える予約パディング"
 
-#: ../../source/serialization/transaction.rst:90
+#: ../../source/serialization/transaction.rst:93
 msgid ""
 "Serialization of an :doc:`aggregate <../concepts/aggregate-transaction>` "
 "inner transaction."

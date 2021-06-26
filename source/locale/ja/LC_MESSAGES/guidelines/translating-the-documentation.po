@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guidelines/translating-the-documentation.rst:40
+#: ../../source/guidelines/translating-the-documentation.rst:43
 msgid "Translating the documentation"
 msgstr "ドキュメントの翻訳"
 
-#: ../../source/guidelines/translating-the-documentation.rst:42
+#: ../../source/guidelines/translating-the-documentation.rst:45
 msgid ""
 "Symbol's awesome community actively localizes the contents of this site, and"
 " we're endlessly thankful for that."
 msgstr "すばらしい Symbol のコミュニティは、このサイトのコンテンツを積極的にローカライズしており、私たちはそれを限りなく感謝しています。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:44
+#: ../../source/guidelines/translating-the-documentation.rst:47
 msgid ""
 "|sitename| uses **Transifex**, a collaborative localization platform, to "
 "manage translations and make the process participative. Follow this "
@@ -40,11 +40,11 @@ msgstr ""
 "|sitename| は共同ローカリゼーションプラットフォームである **Transifex** "
 "を使用して、翻訳を管理し、プロセスを参加型にしています。この指示に従って、投稿の送信を始めてください。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:49
+#: ../../source/guidelines/translating-the-documentation.rst:52
 msgid "Getting started for translators"
 msgstr "翻訳の始め方"
 
-#: ../../source/guidelines/translating-the-documentation.rst:51
+#: ../../source/guidelines/translating-the-documentation.rst:54
 msgid ""
 "Create a new Transifex account `here "
 "<https://www.transifex.com/signup/?join_project=symboldocs>`_."
@@ -52,7 +52,7 @@ msgstr ""
 "Transifex アカウントを `ここ "
 "<https://www.transifex.com/signup/?join_project=symboldocs>`_ で作成します。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:53
+#: ../../source/guidelines/translating-the-documentation.rst:56
 msgid ""
 "Join `symbol-docs team <https://www.transifex.com/nemtech/symboldocs/>`_. "
 "Click on **Help Translate \"symbol-docs\"** button on the right side of the "
@@ -62,7 +62,7 @@ msgstr ""
 "に参加します。ヘッダーの右サイドにある **Help Translate \"symbol-docs\"** "
 "ボタンをクリックし、貢献したい言語を選択します。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:55
+#: ../../source/guidelines/translating-the-documentation.rst:58
 msgid ""
 "Wait until the translation coordinator will approve your request. Once "
 "accepted, you will receive an email. At this moment, you will be able to "
@@ -70,26 +70,26 @@ msgid ""
 msgstr ""
 "翻訳コーディネーターがあなたのリクエストを承認するまで待機します。承認されるとメールを受け取ります。この時点であなたはドキュメント翻訳を始めることができます。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:57
+#: ../../source/guidelines/translating-the-documentation.rst:60
 msgid ""
 "Once you have joined the team, you can contribute either translating new "
 "contents or reviewing translations recommended by other users."
 msgstr "チームに参加すると、新しいコンテンツの翻訳、または他のユーザーが推奨する翻訳のレビューに貢献できます。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:59
+#: ../../source/guidelines/translating-the-documentation.rst:62
 msgid ""
 "Is the first time you use Transifex? We recommend you to read the following "
 "guides from Transifex's documentation:"
 msgstr "Transifexを使用するのは初めてですか？次のTransifexドキュメントを閲覧することを推奨します:"
 
-#: ../../source/guidelines/translating-the-documentation.rst:61
+#: ../../source/guidelines/translating-the-documentation.rst:64
 msgid ""
 "`Getting started as a translator <https://docs.transifex.com/getting-"
 "started-1/translators>`_"
 msgstr ""
 "`翻訳者として取り組む <https://docs.transifex.com/getting-started-1/translators>`_"
 
-#: ../../source/guidelines/translating-the-documentation.rst:62
+#: ../../source/guidelines/translating-the-documentation.rst:65
 msgid ""
 "`Translating with the web editor <https://docs.transifex.com/translation"
 "/translating-with-the-web-editor>`_"
@@ -97,31 +97,31 @@ msgstr ""
 "`ウェブエディタで翻訳する <https://docs.transifex.com/translation/translating-with-the-"
 "web-editor>`_"
 
-#: ../../source/guidelines/translating-the-documentation.rst:66
+#: ../../source/guidelines/translating-the-documentation.rst:69
 msgid "Notes for developers"
 msgstr "開発ノート"
 
-#: ../../source/guidelines/translating-the-documentation.rst:68
+#: ../../source/guidelines/translating-the-documentation.rst:71
 msgid ""
 "This guide explains how to interact with Transifex service using the "
 "``transifex-client`` tool."
 msgstr "このガイドは ``transifex-client`` ツールを使用して Transifex サービスと疎通する方法を解説しています。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:71
+#: ../../source/guidelines/translating-the-documentation.rst:74
 msgid "Pull latest files"
 msgstr "最新ファイルの取得"
 
-#: ../../source/guidelines/translating-the-documentation.rst:73
+#: ../../source/guidelines/translating-the-documentation.rst:76
 msgid ""
 "Follow these instructions to download the latest translations from "
 "Transifex."
 msgstr "以下の手順に従って最新の翻訳を Transifex からダウンロードします。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:75
+#: ../../source/guidelines/translating-the-documentation.rst:78
 msgid "Install ``transifex-client``."
 msgstr "``transifex-client`` のインストール"
 
-#: ../../source/guidelines/translating-the-documentation.rst:81
+#: ../../source/guidelines/translating-the-documentation.rst:84
 msgid ""
 "Download the latest translated files. Replace ``<lang>`` with your `language"
 " code <https://en.wikipedia.org/wiki/ISO_639-1>`_."
@@ -129,36 +129,36 @@ msgstr ""
 "最新の翻訳ファイルをダウンロードします。 ``<lang>`` をあなたの `言語コード "
 "<https://en.wikipedia.org/wiki/ISO_639-1>`_ へ置き換えてください。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:87
+#: ../../source/guidelines/translating-the-documentation.rst:90
 msgid "Compile the docs for the target language."
 msgstr "ターゲットとしている言語へドキュメントをコンパイルします。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:103
+#: ../../source/guidelines/translating-the-documentation.rst:106
 msgid "Push new literals"
 msgstr "新しい文言をプッシュ"
 
-#: ../../source/guidelines/translating-the-documentation.rst:105
+#: ../../source/guidelines/translating-the-documentation.rst:108
 msgid ""
 "Follow these instructions to publish updated source literals to Transifex."
 msgstr "以下の手順に従って更新された文言ソースを Transifex へパブリッシュします。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:107
+#: ../../source/guidelines/translating-the-documentation.rst:110
 msgid ""
 "You will need explicit permissions from the Transifex project coordinator to"
 " push source files."
 msgstr "ソースファイルをプッシュするには Transifex プロジェクトコーディネーターからの明示的な許可が必要です。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:109
+#: ../../source/guidelines/translating-the-documentation.rst:112
 msgid ""
 "Generate the literals. For each documentation file, a .po file will be "
 "created under ``build/gettext``."
 msgstr "文言を生成します。各ドキュメントファイルの .po ファイルは ``build/gettext`` に生成されます。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:123
+#: ../../source/guidelines/translating-the-documentation.rst:126
 msgid "Push the source literals to Transifex."
 msgstr "Transifex へ文言ソースをプッシュ。"
 
-#: ../../source/guidelines/translating-the-documentation.rst:129
+#: ../../source/guidelines/translating-the-documentation.rst:132
 msgid ""
 ":doc:`Submit your changes <suggesting-changes>` into the symbol-docs "
 "repository."

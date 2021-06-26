@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-14 11:20+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2021-04-09 09:52+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:45
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:48
 msgid "Retrieving your XYM from a pre-launch opt-in"
 msgstr "ロンチ前のオプトインから XYM を取得する"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:47
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:50
 msgid ""
 "This guide explains how to access the **XYM** (|codename|'s native currency)"
 " you were awarded if you enrolled in the opt-in process **BEFORE** "
@@ -34,18 +34,18 @@ msgstr ""
 "このガイドでは、 |codename| **ロンチ前** (2021年3月12日) のオプトインプロセスに登録した場合に、あなたにへ授与された "
 "**XYM** (|codename| の基軸通貨) へのアクセス方法を説明します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:49
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:52
 msgid ""
 "If you missed that, you can still opt-in by following the :doc:`post-launch-"
 "optin-xym-retrieval` guide."
 msgstr ""
 "それを見過ごしていた場合は :doc:`post-launch-optin-xym-retrieval` ガイドに従って、オプトインすることもできます。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:53
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:56
 msgid "Introduction"
 msgstr "紹介"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:55
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:58
 msgid ""
 "**NEM NIS1 is the original blockchain** offering from NEM, created by the "
 "community, and has been running since 2015."
@@ -53,32 +53,32 @@ msgstr ""
 "**NEM NIS1 はコミュニティによって作成された NEM のオリジナルブロックチェーン** オファリングであり、2015 "
 "年から稼働を続けています。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:57
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:60
 msgid ""
 "**Symbol is the next-generation blockchain** from NEM, rewritten from "
 "scratch, and launched in March, 2021."
 msgstr "**Symbol は NEM の次世代ブロックチェーン** であり、ゼロから書き直され、2021 年 3 月にローンチされました。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:62
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:65
 msgid "The pre-launch opt-in Process"
 msgstr "ロンチ前オプトインプロセス"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:80
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:83
 msgid ""
 "Here is an example produced by the **NEM Wallet** containing the Symbol "
 "Mnemonic."
 msgstr "これは Symbol ニーモニックを含む **NEM Wallet** が作成した例です。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:88
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:91
 msgid ""
 "This guide explains how to access this new Symbol account and its assets."
 msgstr "このガイドでは、この新しい Symbol アカウントとそのアセットにアクセスする方法について説明します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:94
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:97
 msgid "Guide"
 msgstr "ガイド"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:96
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:99
 msgid ""
 "**Download and install** the :doc:`Symbol Desktop Wallet <../../wallets>` "
 "for your platform."
@@ -86,104 +86,124 @@ msgstr ""
 "あなたのプラットフォーム向けの :doc:`Symbol Desktop Wallet <../../wallets>` を "
 "**ダウンロードしてインストール** します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:98
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:101
 msgid ""
 "Please note that this is different from the NEM Wallet used to interact with"
 " the NIS1 blockchain."
 msgstr "これは NIS1 ブロックチェーンとの疎通に使用される NEM ウォレットとは異なることに注意してください。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:100
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:103
 msgid "Open the Wallet and click on ``Create a new profile?``:"
 msgstr "ウォレットを開いて ``新しいプロファイルを作成?`` をクリックします:"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:108
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:111
 msgid "Click on ``Import mnemonic``:"
 msgstr "``Import mnemonic`` をクリックします:"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:116
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:119
 msgid ""
 "Fill in some profile data. A profile can contain several Symbol accounts and"
 " it helps keeping them organized."
 msgstr ""
 "いくつかのプロファイルデータを入力します。プロファイルには複数の Symbol アカウントを含めることができ、それらを整理するのに役立ちます。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:124
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:127
 msgid "Give your profile a **name**, for your personal use."
 msgstr "個人的な使用目的でプロファイルに **名前** を付けます。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:125
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:128
 msgid "Select the ``Mainnet`` **Network type**."
 msgstr "``Mainnet`` **ネットワークタイプ** を選択します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:126
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:129
 msgid "Enter a **password** to protect your profile and confirm it."
 msgstr "プロファイルを保護するために **パスワード** を入力して確認します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:127
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:130
 msgid ""
 "Enter a **hint** to help you remember your password, should you forget it."
 msgstr "パスワードを忘れた場合に備えて **ヒント** を入力して忘れないようにしてください。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:128
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:138
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:150
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:131
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:141
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:153
 msgid "Click on ``Next``."
 msgstr "``次へ`` をクリックします。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:148
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:151
 msgid "Select your opted-in account."
 msgstr "オプトイン済みのアカウントを選択します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:149
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:152
 msgid "Select at least another (non-opted-in) account."
 msgstr "少なくとも一つ、別の (オプトインされていない) アカウントを選択します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:152
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:155
 msgid "Accept the **Terms and Conditions** and click on ``Finish``:"
 msgstr "**利用規約** に同意して ``完了`` をクリックします:"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:160
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:163
 msgid ""
 "The Wallet's main screen will appear and your opted-in balance will be "
 "shown:"
 msgstr "ウォレットのメイン画面が表示され、オプトインした残高が表示されます:"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:178
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:181
 msgid ""
 "It will recover all other seed accounts, though, and hence the "
 "recommendation to move your funds and use only seed accounts."
 msgstr "ただし、他のすべてのシードアカウントが復元されるため、資産を移動してシードアカウントのみを使用することを推奨します。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:182
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:185
 msgid "Troubleshooting"
 msgstr "トラブルシューティング"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:184
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:187
 msgid ""
 "This is a short list of items to check should you encounter any problem when"
 " recovering your opted-in accounts."
 msgstr "オプトインしたアカウントを復元する際に問題が発生した場合、確認する項目リストです。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:186
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:189
 msgid ""
 "Check that the **balance on your NIS1 account** was at least **100 XEM** at "
 "the time of the snapshot."
 msgstr "スナップショット時点で **NIS1 アカウントの残高** が少なくとも **100 XEM** であったことを確認してください。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:192
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:193
+msgid ""
+"Check that your NIS1 account was successfully opted-in by looking up its "
+"address in the `opt-in Report "
+"<http://report.experimental.symboldev.network/ok1.html>`__."
+msgstr ""
+"`オプトインレポート <http://report.experimental.symboldev.network/ok1.html>`__ "
+"でアドレスを検索して、NIS1 アカウントが正常にオプトインされたことを確認します。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:195
 msgid ""
 "If your account is not on the list, check the other tabs to find the reason."
 msgstr "アカウントがリストにない場合は、他のタブをチェックして原因を発見してください。"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:196
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:197
+msgid ""
+"If you opted-in using the **Symbol Mobile Wallet**, check that your account "
+"is not one of the 35 accounts affected by this `known Symbol Mobile Wallet "
+"issue <https://forum.nem.io/t/symbol-launch-opt-in-issue-"
+"affecting-35-accounts/29401>`__."
+msgstr ""
+"**Symbol Mobile Wallet** を使用してオプトインしていた場合、アカウントが `既知の Symbol モバイルウォレットの問題 "
+"<https://forum.nem.io/t/symbol-launch-opt-in-issue-"
+"affecting-35-accounts/29401>`__ の影響を受ける 35 のアカウントのうちの 1 つではないことを確認してください。"
+
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:199
 msgid "The **NEM Helpdesk** can help you if everything else fails:"
 msgstr "**NEM ヘルプデスク** は他のすべてが失敗した場合に役立ちます:"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:198
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:201
 msgid "`NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__"
 msgstr "`NEM Telegram ヘルプデスク <https://t.me/nemhelpdesk>`__"
 
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:199
+#: ../../source/guides/migration/post-optin-xym-retrieval.rst:202
 msgid ""
 "`Open a support ticket <https://support.nemgroup.io/hc/en-"
 "us/requests/new>`__"

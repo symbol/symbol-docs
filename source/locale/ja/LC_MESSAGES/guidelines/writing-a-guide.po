@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guidelines/writing-a-guide.rst:40
+#: ../../source/guidelines/writing-a-guide.rst:43
 msgid "Writing a guide"
 msgstr "ガイドを記述する"
 
-#: ../../source/guidelines/writing-a-guide.rst:42
+#: ../../source/guidelines/writing-a-guide.rst:45
 msgid ""
 "|sitename| guides help other developers to get started on Symbol's "
 "technology, giving step-by-step instructions on how to use the tools, "
@@ -35,11 +35,11 @@ msgstr ""
 "|sitename| このガイドは、他の開発者が Symbol "
 "のテクノロジーを使い始めるのに役立ち、ツールの使用方法、他のテクノロジーとの統合方法、および組み込み機能をアーキテクトソリューションに組み合わせる方法について段階的に説明しています。"
 
-#: ../../source/guidelines/writing-a-guide.rst:46
+#: ../../source/guidelines/writing-a-guide.rst:49
 msgid "Before starting"
 msgstr "始める前に"
 
-#: ../../source/guidelines/writing-a-guide.rst:48
+#: ../../source/guidelines/writing-a-guide.rst:51
 msgid ""
 "If you are looking for inspiration to write the guide, you can browse the "
 "`symbol-docs repository open issues <https://github.com/nemtech/symbol-"
@@ -51,7 +51,7 @@ msgstr ""
 "を参照して、執筆中のアイデアを見つけることができます。または、私達の |slack| ＃sig-docs "
 "チャンネルに参加して、自己紹介をすると良いでしょう。"
 
-#: ../../source/guidelines/writing-a-guide.rst:51
+#: ../../source/guidelines/writing-a-guide.rst:54
 msgid ""
 "To collaborate with one of the existing issues, express it in a comment to "
 "avoid duplicated efforts. If there is no issue yet, create a new one "
@@ -60,11 +60,11 @@ msgstr ""
 "既存の問題の 1 "
 "つと協力するには、重複した作業を避けるためにコメントで表現してください。まだ問題の登録が無い場合は、公開するコンテンツを紹介する新しい問題を作成します。"
 
-#: ../../source/guidelines/writing-a-guide.rst:56
+#: ../../source/guidelines/writing-a-guide.rst:59
 msgid "Writing the guide"
 msgstr "ガイドを記述する"
 
-#: ../../source/guidelines/writing-a-guide.rst:58
+#: ../../source/guidelines/writing-a-guide.rst:61
 msgid ""
 "`Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the "
 "`symbol-docs <https://github.com/nemtech/symbol-docs>`_ repository."
@@ -72,7 +72,7 @@ msgstr ""
 "`<https://help.github.com/articles/fork-a-repo/>`_ をフォークして`symbol-docs "
 "<https://github.com/nemtech/symbol-docs>`_ リポジトリをクローンしてください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:64
+#: ../../source/guidelines/writing-a-guide.rst:67
 msgid ""
 "Make sure you have Python 3.4+ and `pip "
 "<https://pip.pypa.io/en/stable/installing/>`_ installed."
@@ -80,15 +80,15 @@ msgstr ""
 "Python 3.4+ と `pip <https://pip.pypa.io/en/stable/installing/>`_ "
 "がインストールされていることを確認してください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:70
+#: ../../source/guidelines/writing-a-guide.rst:73
 msgid "Install requirements using pip:"
 msgstr "pipを使用した要求環境のインストール"
 
-#: ../../source/guidelines/writing-a-guide.rst:76
+#: ../../source/guidelines/writing-a-guide.rst:79
 msgid "Create a new ``rst`` file inside one of the guides folder."
 msgstr "ガイドのフォルダ内に新しく ``rst`` を作成します。"
 
-#: ../../source/guidelines/writing-a-guide.rst:82
+#: ../../source/guidelines/writing-a-guide.rst:85
 msgid ""
 "Write and code your guide in **restructuredText**. If you need help to "
 "format your text, you can check this `cheatsheet <https://github.com/ralsina"
@@ -98,11 +98,11 @@ msgstr ""
 " <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-"
 "cheatsheet.rst>`_ を参照してください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:84
+#: ../../source/guidelines/writing-a-guide.rst:87
 msgid "You can use the following template to organize your content:"
 msgstr "あなたのコンテンツの整理にこのテンプレートを使用できます:"
 
-#: ../../source/guidelines/writing-a-guide.rst:126
+#: ../../source/guidelines/writing-a-guide.rst:129
 msgid ""
 "Add the `code examples <https://github.com/nemtech/symbol-"
 "docs/tree/main/source/resources/examples>`_ under "
@@ -115,11 +115,11 @@ msgstr ""
 "``source/resources/examples/<language_or_tool>`` の下に追加してください。``example-"
 "code`` ディレクティブで ``.rst`` ファイルの中からコード断片をレンダリングすることもできます。"
 
-#: ../../source/guidelines/writing-a-guide.rst:138
+#: ../../source/guidelines/writing-a-guide.rst:141
 msgid "Test and preview your changes."
 msgstr "あなたの変更点をテストしプレビューしてください。"
 
-#: ../../source/guidelines/writing-a-guide.rst:144
+#: ../../source/guidelines/writing-a-guide.rst:147
 msgid ""
 "8. Push your changes and create a `pull-request "
 "<https://help.github.com/articles/creating-a-pull-request/>`_. The "

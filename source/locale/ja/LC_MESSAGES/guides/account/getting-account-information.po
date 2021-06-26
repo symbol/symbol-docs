@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,33 +21,33 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/account/getting-account-information.rst:46
+#: ../../source/guides/account/getting-account-information.rst:49
 msgid "Getting the account information"
 msgstr "アカウントの情報を取得する"
 
-#: ../../source/guides/account/getting-account-information.rst:48
+#: ../../source/guides/account/getting-account-information.rst:51
 msgid "Get the public key and balance of an account."
 msgstr "公開鍵とアカウントの残高を取得します。"
 
-#: ../../source/guides/account/getting-account-information.rst:52
+#: ../../source/guides/account/getting-account-information.rst:55
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/account/getting-account-information.rst:54
+#: ../../source/guides/account/getting-account-information.rst:57
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/account/getting-account-information.rst:55
+#: ../../source/guides/account/getting-account-information.rst:58
 msgid "Create :ref:`an account <setup-creating-a-test-account>`."
 msgstr ":ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
-#: ../../source/guides/account/getting-account-information.rst:59
+#: ../../source/guides/account/getting-account-information.rst:62
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/account/getting-account-information.rst:61
+#: ../../source/guides/account/getting-account-information.rst:64
 msgid ""
 "Open a new file and call the ``getAccountInfo`` function from the "
 "``AccountHttp`` repository. Pass your account's address as a parameter."
@@ -55,15 +55,15 @@ msgstr ""
 "新しいファイルを開いて、アカウントのアドレスを引数として ``AccountHttp`` リポジトリから ``getAccountInfo`` "
 "関数を呼びます。"
 
-#: ../../source/guides/account/getting-account-information.rst:83
+#: ../../source/guides/account/getting-account-information.rst:86
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/account/getting-account-information.rst:85
+#: ../../source/guides/account/getting-account-information.rst:88
 msgid "Open a terminal window and run the following command."
 msgstr "ターミナルを開き、次のコマンドを実行します。"
 
-#: ../../source/guides/account/getting-account-information.rst:87
+#: ../../source/guides/account/getting-account-information.rst:90
 msgid ""
 "Replace ``TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I`` with the address "
 "you want to query."
