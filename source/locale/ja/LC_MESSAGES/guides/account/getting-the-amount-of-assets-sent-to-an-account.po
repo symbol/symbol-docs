@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-03-18 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,29 +21,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:46
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:49
 msgid "Getting the amount of assets sent to an account"
 msgstr "アカウントへ送信したアセットの総量の取得"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:48
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:51
 msgid "Check the number of asset units you have sent to an account."
 msgstr "あなたがアカウントへ送信したアセットの量を確認しましょう。"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:52
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:55
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:54
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:57
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:55
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:58
 msgid "Create :ref:`a new account <setup-creating-a-test-account>`."
 msgstr ":ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:56
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:59
 msgid ""
 "Send :doc:`mosaics <../transfer/sending-a-transfer-transaction>` from the "
 "account created to another account."
@@ -51,11 +51,11 @@ msgstr ""
 "作成したアカウントから他のアカウントへ :doc:`モザイク <../transfer/sending-a-transfer-transaction>`"
 " を送信する"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:60
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:63
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:79
+#: ../../source/guides/account/getting-the-amount-of-assets-sent-to-an-account.rst:82
 msgid ""
 "If you want to check another :doc:`mosaic <../../concepts/mosaic>` different"
 " than the native currency, change ``mosaicId`` and ``divisibility`` for the "

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/contributing.rst:40
+#: ../../source/contribute/contributing.rst:43
 msgid "Guidelines"
 msgstr "ガイドライン"
 
-#: ../../source/contribute/contributing.rst:42
+#: ../../source/contribute/contributing.rst:45
 msgid ""
 "First off, thank you for considering contributing to |codename|! Follow "
 "these guidelines for contributing to |codename| projects, achieving the best"
@@ -34,7 +34,7 @@ msgstr ""
 "まずはじめに、|codename| への貢献に感謝します。これらのガイドラインに従って、|codename| "
 "プロジェクトに貢献し、より少ない労力で最高の品質を達成してください。"
 
-#: ../../source/contribute/contributing.rst:45
+#: ../../source/contribute/contributing.rst:48
 msgid ""
 "If you want to contribute to an existent project, read as well the "
 "``CONTRIBUTING.md`` file that you will find at the root-level folder of the "
@@ -42,11 +42,11 @@ msgid ""
 msgstr ""
 "既存のプロジェクトに貢献する場合は、プロジェクトのルートレベルのフォルダーにある ``CONTRIBUTING.md`` ファイルを読んでください。"
 
-#: ../../source/contribute/contributing.rst:61
+#: ../../source/contribute/contributing.rst:64
 msgid "Server"
 msgstr "サーバ"
 
-#: ../../source/contribute/contributing.rst:63
+#: ../../source/contribute/contributing.rst:66
 msgid ""
 "`Notes for developers <https://github.com/nemtech/catapult-"
 "server/blob/main/docs/README.md>`_"
@@ -54,49 +54,49 @@ msgstr ""
 "`開発者向けメモ <https://github.com/nemtech/catapult-"
 "server/blob/main/docs/README.md>`_"
 
-#: ../../source/contribute/contributing.rst:64
+#: ../../source/contribute/contributing.rst:67
 msgid ":doc:`Writing a transaction schema <../guidelines/writing-a-schema>`"
 msgstr ":doc:`トランザクションスキーマの記述 <../guidelines/writing-a-schema>`"
 
-#: ../../source/contribute/contributing.rst:68
+#: ../../source/contribute/contributing.rst:71
 msgid "SDK"
 msgstr "SDK"
 
-#: ../../source/contribute/contributing.rst:70
+#: ../../source/contribute/contributing.rst:73
 msgid ":doc:`Summary <../sdk>`"
 msgstr ":doc:`概要 <../sdk>`"
 
-#: ../../source/contribute/contributing.rst:71
+#: ../../source/contribute/contributing.rst:74
 msgid ":doc:`Developing an SDK <../guidelines/sdk-development>`"
 msgstr ":doc:`SDK の開発 <../guidelines/sdk-development>`"
 
-#: ../../source/contribute/contributing.rst:72
+#: ../../source/contribute/contributing.rst:75
 msgid ":doc:`Documenting an SDK <../guidelines/sdk-documentation>`"
 msgstr ":doc:`SDK のドキュメント <../guidelines/sdk-documentation>`"
 
-#: ../../source/contribute/contributing.rst:73
+#: ../../source/contribute/contributing.rst:76
 msgid ""
 ":doc:`Generating transaction builders <../guidelines/generating-transaction-"
 "builders>`"
 msgstr ":doc:`トランザクションビルダの生成 <../guidelines/generating-transaction-builders>`"
 
-#: ../../source/contribute/contributing.rst:77
+#: ../../source/contribute/contributing.rst:80
 msgid "Documentation"
 msgstr "ドキュメント"
 
-#: ../../source/contribute/contributing.rst:79
+#: ../../source/contribute/contributing.rst:82
 msgid ":doc:`Style guide <../guidelines/style-guide>`"
 msgstr ":doc:`スタイルガイド <../guidelines/style-guide>`"
 
-#: ../../source/contribute/contributing.rst:80
+#: ../../source/contribute/contributing.rst:83
 msgid ":doc:`Suggesting changes <../guidelines/suggesting-changes>`"
 msgstr ":doc:`変更の提案 <../guidelines/suggesting-changes>`"
 
-#: ../../source/contribute/contributing.rst:81
+#: ../../source/contribute/contributing.rst:84
 msgid ":doc:`Writing a guide <../guidelines/writing-a-guide>`"
 msgstr ":doc:`ガイドの記述 <../guidelines/writing-a-guide>`"
 
-#: ../../source/contribute/contributing.rst:82
+#: ../../source/contribute/contributing.rst:85
 msgid ""
 ":doc:`Translating the documentation <../guidelines/translating-the-"
 "documentation>`"

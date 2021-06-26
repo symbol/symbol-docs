@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/receipt.rst:40 ../../source/concepts/receipt.rst:1
+#: ../../source/concepts/receipt.rst:43 ../../source/concepts/receipt.rst:1
 msgid "Receipt"
 msgstr "レシート"
 
-#: ../../source/concepts/receipt.rst:42
+#: ../../source/concepts/receipt.rst:45
 msgid ""
 "Conditional state changes in the background enable complex transactions. For"
 " example, a :ref:`hash lock <hash-lock-transaction>` concludes as soon as "
@@ -39,7 +39,7 @@ msgstr ""
 "が承認され次第、終了します。ロックされた資金が自動的に口座に返却されるとき、追加で :doc:`トランザクション <transaction>` "
 "は記録されません。これは :doc:`アカウント <account>` の残高が増える *隠された変更* として現れるかもしれません。"
 
-#: ../../source/concepts/receipt.rst:47
+#: ../../source/concepts/receipt.rst:50
 msgid ""
 "Receipts provide proof for every hidden change. The collection of receipts "
 "are hashed into a :doc:`merkle tree <data-validation>` and linked to a "
@@ -50,11 +50,11 @@ msgstr ""
 ":doc:`ブロック <block>` にリンクされます。ブロックヘッダはルートハッシュを格納し、ブロックがレシートを持ったときに 0 "
 "ではなくなります。"
 
-#: ../../source/concepts/receipt.rst:53
+#: ../../source/concepts/receipt.rst:56
 msgid "Transaction statement"
 msgstr "トランザクションステートメント"
 
-#: ../../source/concepts/receipt.rst:55
+#: ../../source/concepts/receipt.rst:58
 msgid ""
 "A :ref:`transaction statement <transaction-statement>` is a collection of "
 "receipts linked to a transaction in a particular block. Statements can "
@@ -63,36 +63,36 @@ msgstr ""
 ":ref:`トランザクションステートメント <transaction-statement>` "
 "は特定のブロック内のトランザクションにリンクしたレシート集合です。ステートメントは以下の基礎タイプをもつレシートを含みます:"
 
-#: ../../source/concepts/receipt.rst:58
+#: ../../source/concepts/receipt.rst:61
 msgid ""
 "**Balance Transfer**: The invisible state change triggered a mosaic "
 "transfer."
 msgstr "**Balance Transfer**: モザイク転送によりトリガされた不可視の状態変化。"
 
-#: ../../source/concepts/receipt.rst:59
+#: ../../source/concepts/receipt.rst:62
 msgid ""
 "**Balance Change**: The invisible state change altered an account balance."
 msgstr "**Balance Change**: アカウントの残高変化によりトリガされた不可視の状態変化。"
 
-#: ../../source/concepts/receipt.rst:60
+#: ../../source/concepts/receipt.rst:63
 msgid "**Mosaic Expiry**: A mosaic expired."
 msgstr "**Mosaic Expiry**: モザイクの期限切れ"
 
-#: ../../source/concepts/receipt.rst:61
+#: ../../source/concepts/receipt.rst:64
 msgid "**Namespace Expiry**: A namespace expired."
 msgstr "**Namespace Expiry**: ネームスペースの期限切れ"
 
-#: ../../source/concepts/receipt.rst:62
+#: ../../source/concepts/receipt.rst:65
 msgid ""
 "**Inflation**: Network currency mosaics were created due to :doc:`inflation "
 "<inflation>`."
 msgstr "**インフレーション**: :doc:`インフレーション <inflation>` のために作り出されたネットワーク通貨モザイク。"
 
-#: ../../source/concepts/receipt.rst:66
+#: ../../source/concepts/receipt.rst:69
 msgid "Resolution statement"
 msgstr "解決ステートメント"
 
-#: ../../source/concepts/receipt.rst:68
+#: ../../source/concepts/receipt.rst:71
 msgid ""
 "When a transaction includes an :doc:`alias <namespace>`, a so called "
 ":ref:`resolution statement <resolution-statement>` reflects the resolved "
@@ -101,21 +101,21 @@ msgstr ""
 "トランザクションが :doc:`エイリアス <namespace>` を含むとき、 :ref:`解決ステートメント <resolution-"
 "statement>` と呼ばれ、そのブロックの解決済みの値を反映します:"
 
-#: ../../source/concepts/receipt.rst:70
+#: ../../source/concepts/receipt.rst:73
 msgid "**Address Resolution**: An account alias was used in the block."
 msgstr "**Address Resolution**: このブロックで使用されたアカウントエイリアス。"
 
-#: ../../source/concepts/receipt.rst:71
+#: ../../source/concepts/receipt.rst:74
 msgid "**Mosaic Resolution**: A mosaic alias was used in the block."
 msgstr "**Mosaic Resolution**: このブロックで使用されたモザイクエイリアス。"
 
-#: ../../source/concepts/receipt.rst:73
+#: ../../source/concepts/receipt.rst:76
 msgid ""
 "The alias receipts record the first occurrence of an (unresolved, resolved) "
 "alias pair used in a block."
 msgstr "エイリアスレシートはブロック内で使用された(未解決、解決済み)エイリアスペアの最初の出現を記録します。"
 
-#: ../../source/concepts/receipt.rst:75
+#: ../../source/concepts/receipt.rst:78
 msgid ""
 "It is technically possible to get more than one resolution for the same "
 "namespace id and block. This situation is common when a namespace creator "
@@ -125,7 +125,7 @@ msgstr ""
 "同じ namespace id "
 "とブロックに対して1つ以上の解決を取得することは技術的に可能です。この状況はネームスペース作成者が別のアセットへリンクを変更し、同じブロック内で2つの異なる解決になる場合によく見られます。"
 
-#: ../../source/concepts/receipt.rst:78
+#: ../../source/concepts/receipt.rst:81
 msgid ""
 "The receipt source ``primaryId`` references the transaction where the alias "
 "first appears within the block. The ``secondaryId`` is not 0 when the "
@@ -137,11 +137,11 @@ msgstr ""
 ":doc:`AggregateTransaction <../../concepts/aggregate-transaction>` の一部である場合は"
 " ``secondaryId`` が 0 以外になり、アグリゲート内のインデックス位置を示します。"
 
-#: ../../source/concepts/receipt.rst:83
+#: ../../source/concepts/receipt.rst:86
 msgid "Recorded receipts"
 msgstr "記録済みレシート"
 
-#: ../../source/concepts/receipt.rst:85
+#: ../../source/concepts/receipt.rst:88
 msgid "|codename| records invisible state changes for the following entities."
 msgstr "|codename| は以下のエントリに不可視な状態変化を記録します。"
 
@@ -266,10 +266,10 @@ msgid ""
 " recorded when a secretlock expires."
 msgstr "アカウントが受信するロックされたモザイク、mosaic id とその量。シークレットロックの期限が切れたときに記録されます。"
 
-#: ../../source/concepts/receipt.rst:116
+#: ../../source/concepts/receipt.rst:119
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/receipt.rst:126
+#: ../../source/concepts/receipt.rst:129
 msgid "Continue: :doc:`Data validation <data-validation>`."
 msgstr "次項: :doc:`データバリデーション <inflation>`"

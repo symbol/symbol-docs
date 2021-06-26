@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 15:27+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/restriction_account.rst:40
+#: ../../source/serialization/restriction_account.rst:43
 msgid "Restriction Account Schemas"
 msgstr "アカウント制限スキーマ"
 
-#: ../../source/serialization/restriction_account.rst:42
+#: ../../source/serialization/restriction_account.rst:45
 msgid ""
 "The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
@@ -38,25 +38,25 @@ msgstr ""
 "<https://github.com/nemtech/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/restriction_account.rst:46
+#: ../../source/serialization/restriction_account.rst:49
 msgid "Account Address Restriction"
 msgstr "アカウントアドレス制限"
 
-#: ../../source/serialization/restriction_account.rst:53
+#: ../../source/serialization/restriction_account.rst:56
 msgid ""
 "Configure restrictions to prevent receiving or sending transactions from/to "
 "undesired addresses."
 msgstr "望まないアドレスから/へのトランザクションの送信/受信を防ぐ制限の設定。"
 
-#: ../../source/serialization/restriction_account.rst:59
-#: ../../source/serialization/restriction_account.rst:89
-#: ../../source/serialization/restriction_account.rst:119
+#: ../../source/serialization/restriction_account.rst:62
+#: ../../source/serialization/restriction_account.rst:92
+#: ../../source/serialization/restriction_account.rst:122
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/serialization/restriction_account.rst:61
-#: ../../source/serialization/restriction_account.rst:91
-#: ../../source/serialization/restriction_account.rst:121
+#: ../../source/serialization/restriction_account.rst:64
+#: ../../source/serialization/restriction_account.rst:94
+#: ../../source/serialization/restriction_account.rst:124
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -106,27 +106,27 @@ msgstr "アカウント制限の追加"
 msgid "Account restriction deletions."
 msgstr "アカウント制限の削除"
 
-#: ../../source/serialization/restriction_account.rst:76
+#: ../../source/serialization/restriction_account.rst:79
 msgid "Account Mosaic Restriction"
 msgstr "アカウントモザイク制限"
 
-#: ../../source/serialization/restriction_account.rst:83
+#: ../../source/serialization/restriction_account.rst:86
 msgid ""
 "Configure restrictions to prevent receiving transactions containing a "
 "specific mosaic."
 msgstr "特定のモザイクを含むトランザクションの受け取りを防ぐ制限の設定。"
 
-#: ../../source/serialization/restriction_account.rst:106
+#: ../../source/serialization/restriction_account.rst:109
 msgid "Account Operation Restriction"
 msgstr "アカウント操作制限"
 
-#: ../../source/serialization/restriction_account.rst:113
+#: ../../source/serialization/restriction_account.rst:116
 msgid ""
 "Configure restrictions to prevent announcing transactions by :ref:`type "
 "<transaction-types>`."
 msgstr ":ref:`タイプ <transaction-types>` によるトランザクションのアナウンスを防止する制限の設定。"
 
-#: ../../source/serialization/restriction_account.rst:136
+#: ../../source/serialization/restriction_account.rst:139
 msgid "Restriction Account Types"
 msgstr "アカウント制限タイプ"
 

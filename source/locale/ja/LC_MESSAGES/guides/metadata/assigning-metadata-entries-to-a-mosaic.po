@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-10-28 13:02+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:46
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:49
 msgid "Assigning metadata to a mosaic"
 msgstr "モザイクにメタデータを割り当てる"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:48
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:51
 msgid "Add custom data to a mosaic."
 msgstr "モザイクにカスタムデータを追加"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:52
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:55
 msgid "Use case"
 msgstr "ユースケース"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:54
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:57
 msgid ""
 "Metadata is a |codename| feature that can be used to attach information "
 "about :doc:`mosaics <../../concepts/mosaic>`. For example, small pieces of "
@@ -45,7 +45,7 @@ msgstr ""
 "に関する情報をアタッチするために使用できます。たとえば、正式名称、ティッカー、ISINなどの小さな情報はオンチェーン上の :doc:`メタデータ "
 "<../../concepts/metadata>` に割り当て、一方で目論見書や投資家との契約のような大きな情報はオフチェーンで保管されます。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:57
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:60
 msgid ""
 "In this tutorial, you are going to implement a program to add relevant data "
 "to a mosaic. Imagine that the company ComfyClothingCompany has applied for "
@@ -59,31 +59,31 @@ msgstr ""
 "``cc.shares`` という名前のモザイクを作成して、会社の株式を表現するのだと想像してください。投資家間で株式を分配する前に "
 "ComfyClothingCompany は ISIN コードと正式名称を株式定義に添付したいと考えています。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:68
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:71
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:70
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:73
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:71
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:74
 msgid "Create a new :ref:`account <setup-creating-a-test-account>`."
 msgstr "新しい :ref:`アカウント <setup-creating-a-test-account>` を作成します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:72
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:75
 msgid ""
 "Load the account with enough |networkcurrency| to pay for transaction fees, "
 "create mosaics and register namespaces."
 msgstr "アカウントに手数料の支払いとモザイクの作成とネームスペースの登録に十分な |networkcurrency| を入金してください。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:76
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:79
 msgid "Creating the shares"
 msgstr "株式の作成"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:78
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:81
 msgid ""
 "1. Create a mosaic to represent the shares. The mosaic we are creating will "
 "have the properties ``supplyMutable``, ``transferable``, ``restrictable``, "
@@ -93,24 +93,24 @@ msgstr ""
 "1. 株式を表現するモザイクを作成します。作成するモザイクはプロパティ ``supplyMutable`` , ``transferable`` "
 "``restrictable`` ``non-expiring`` を持ち、小数点以下 2 桁まで分割できます。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:95
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:98
 msgid ""
 "To make the mosaic easily identifiable in the network, create the namespace "
 "``cc`` and the subnamespace ``cc.shares``."
 msgstr ""
 "ネットワークでモザイクを簡単に識別できるようにするには、ネームスペース ``cc`` とサブネームスペース ``cc.shares`` を作成します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:117
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:120
 msgid ""
 "Link the subnamespace ``cc.shares`` with the ``mosaicId`` you have created "
 "in the first step."
 msgstr "サブネームスペース ``cc.shares`` を最初のステップで作成した ``mosaicId`` にリンクします。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:131
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:134
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:133
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:136
 msgid ""
 "Now that you have created ``cc.shares``, define two "
 "``MosaicMetatadaTransaction`` to add the **ISIN** and **legal name** to the "
@@ -119,7 +119,7 @@ msgstr ""
 "``cc.shares`` を作成したので 2 つの ``MosaicMetatadaTransaction`` を定義して **ISIN** と "
 "**正式名称** をモザイクに追加します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:163
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:166
 msgid ""
 "2. All metadata is attached only with the consent of the mosaic creator "
 "through Aggregate Transactions. Wrap the **metadata transactions** inside an"
@@ -130,7 +130,7 @@ msgstr ""
 ":ref:`AggregateCompleteTransaction <aggregate-complete>` "
 "でラップして会社のアカウントでアグリゲートに署名します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:178
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:181
 msgid ""
 "In this example, the account signing the transaction is the creator of the "
 "mosaic. For that reason, the aggregate can be defined as complete. If a "
@@ -144,11 +144,11 @@ msgstr ""
 "<../aggregate/signing-announced-aggregate-bonded-transactions>` "
 "することでメタデータの要求にオプトインします。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:180
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:183
 msgid "Sign and announce the **AggregateTransaction** to the network."
 msgstr "**AggregateTransaction** に署名してアナウンスします。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:194
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:197
 msgid ""
 "When the transaction gets confirmed, :doc:`fetch the mosaic metadata entries"
 " <getting-metadata-entries-attached-to-a-mosaic>`."
@@ -156,15 +156,15 @@ msgstr ""
 "トランザクションが承認されたら、 :doc:`モザイクのメタデータエントリー一覧の取得 <getting-metadata-entries-"
 "attached-to-a-mosaic>` してください。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:206
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:209
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:208
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:211
 msgid "Open a terminal window and run the following command."
 msgstr "ターミナルウィンドウを開き、次のコマンドを実行します。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:210
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:213
 msgid ""
 "Replace ``TCM6YD-BC3BW2-ZYXOXC-HHIRDV-MEZUIP-BRISYI-TPQ`` with the mosaic "
 "owner address, ``2C08D5EDB652AA79`` with the target mosaic id. Then, change "
@@ -175,7 +175,7 @@ msgstr ""
 "``2C08D5EDB652AA79`` を目的のモザイク ID に置き換えてください。次に、メタデータとして添付したい "
 "``BC2FC3ACFF58FF89`` をキーに、 ``US00000000`` を値に変更してください。"
 
-#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:213
+#: ../../source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst:216
 msgid ""
 "You can use the command ``symbol-cli converter stringtokey`` to transform an"
 " string (e.g. ``ISIN``) into a valid UInt64 key (``2C08D5EDB652AA79``)."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-09-30 13:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -22,21 +22,21 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:46
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:49
 msgid "Cosigning aggregate bonded transactions automatically"
 msgstr "自動的なアグリゲートボンデッドトランザクションの署名"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:48
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:51
 msgid ""
 "Create a bot to cosign automatically transactions that require your "
 "account's signature."
 msgstr "アカウントの署名が必要なトランザクションへ自動的に署名をするボットを作成します。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:52
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:55
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:54
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:57
 msgid ""
 "Complete :doc:`creating an escrow contract<creating-an-escrow-contract-with-"
 "aggregate-bonded-transaction>` guide."
@@ -44,15 +44,15 @@ msgstr ""
 ":doc:`エスクローの作成 <creating-an-escrow-contract-with-aggregate-bonded-"
 "transaction>` ガイドを完了している"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:58
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:61
 msgid "Developing the bot"
 msgstr "ボットの開発"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:60
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:63
 msgid "Create a function to cosign any **AggregateBondedTransaction**."
 msgstr "**AggregateBondedTransaction** を共同署名する関数を作成します。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:79
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:82
 msgid ""
 "Create a new **Listener** to get notified every time a new "
 "**AggregateBondedTransaction** requires the signature of your account."
@@ -60,19 +60,19 @@ msgstr ""
 "あなたのアカウントの署名が必要な、新しい **AggregateBondedTransaction** を通知する **Listener** "
 "を作ります。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:81
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:84
 msgid ""
 "Open the connection. You only need to open the connection once and then "
 "connect to all desired channels."
 msgstr "コネクションを開きます。一度コネクションが張られれば、望むすべてのチャンネルへつながるでしょう。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:83
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:86
 msgid ""
 "Start listening for new transactions, subscribing to the "
 "``aggregateBondedAdded`` channel using your account's address."
 msgstr "あなたのアカウントで ``aggregateBondedAdded`` チャンネルを購読して、新しいトランザクションの監視を始めます。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:85
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:88
 msgid ""
 "To automatically sign aggregate bonded transactions that must be signed by "
 "multisig cosignatories, refer to the multisig address instead.See :ref:`how "
@@ -82,7 +82,7 @@ msgstr ""
 "マルチシグの連署者による署名が必要なアグリゲートボンドトランザクションへ自動的に署名するには、代わりにマルチシグアドレスを参照してください。:ref:`アカウントが連署者になっているマルチシグアカウントの取得の仕方"
 "<guide-get-multisig-account-info>` を参照してください。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:87
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:90
 msgid ""
 "5. For each received transaction, check if you have signed it. At this "
 "point, you might want to do some extra checks, like verifying the contents "
@@ -93,7 +93,7 @@ msgstr ""
 "トランザクションを受信するごとに、署名済みであるかを確認します。この時点でトランザクションの内容を確認するなど、いくつかの追加の確認を行うことができます。以前に作成した機能で、ペンディング中の"
 " **AggregateBondedTransaction** に署名します。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:91
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:94
 msgid ""
 "Announce ``CosignatureSignedTransaction`` to the network using the "
 "``TransactionHttp`` repository."
@@ -101,11 +101,11 @@ msgstr ""
 "``TransactionHttp`` リポジトリを使って ``CosignatureSignedTransaction`` "
 "をネットワークへアナウンスします。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:112
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:115
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:114
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:117
 msgid ""
 "Extend the previous function to cosign transactions if they follow some "
 "constraints. For example, adapt your bot to only cosign aggregate "
@@ -113,25 +113,25 @@ msgid ""
 msgstr ""
 "トランザクションがいくつかの制約に従う場合において、前の関数を拡張してトランザクションを署名します。たとえば、次の条件に一致するアグリゲートトランザクションのみに署名するようにボットを適合させます:"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:116
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:119
 msgid "The aggregate has **two inner transactions**."
 msgstr "このアグリゲートは **2つのインナートランザクション** を持っています。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:117
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:120
 msgid "The inner transactions must be **transfer transactions.**"
 msgstr "このインナートランザクションは **転送トランザクション** でなければなりません。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:118
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:121
 msgid "The transaction sending funds must have **yourself as the signer**."
 msgstr "この資産を送信するトランザクションは **あなたが署名者** である必要があります。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:119
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:122
 msgid ""
 "The transaction sending funds should have **only one mosaic**, being this "
 "**less than** 100 |networkcurrency|."
 msgstr ""
 "資産を送信するトランザクションは 100 |networkcurrency| 未満の **1つのモザイクだけ** を持つようにしてください。"
 
-#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:121
+#: ../../source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst:124
 msgid "Here you have a possible implementation:"
 msgstr "こちらに可能な実装をご用意しました:"

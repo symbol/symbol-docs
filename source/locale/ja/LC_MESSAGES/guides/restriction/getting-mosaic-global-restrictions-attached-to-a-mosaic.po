@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-11-03 08:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,28 +21,28 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:46
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:49
 msgid "Getting mosaic global restrictions attached to a mosaic"
 msgstr "モザイクにアタッチされたグローバルモザイク制限を取得する"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:48
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:51
 msgid "Get the list of mosaic global restrictions."
 msgstr "モザイクのグローバル制限リストの取得"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:52
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:55
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:54
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:57
 msgid ""
 "Complete :doc:`restricting mosaics transfers <restricting-mosaics-"
 "transfers>` guide."
 msgstr ":doc:`モザイク転送の制限 <restricting-mosaics-transfers>` ガイドを完了している"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:59
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:62
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:80
+#: ../../source/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.rst:83
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

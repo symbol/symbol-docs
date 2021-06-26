@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,10 +21,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/monitor/index.rst:40
+#: ../../source/guides/monitor/index.rst:43
 msgid "Monitoring"
 msgstr "モニタリング"
 
-#: ../../source/guides/monitor/index.rst:42
+#: ../../source/guides/monitor/index.rst:45
 msgid "Guides related to monitoring transactions."
 msgstr "トランザクションの監視に関するガイド"

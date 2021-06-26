@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 15:27+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:45
+#: ../../source/guides/network/creating-a-private-test-net.rst:48
 msgid "Creating private test networks"
 msgstr "プライベートテストネットワークの作成"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:47
+#: ../../source/guides/network/creating-a-private-test-net.rst:50
 msgid ""
 "This guide will walk you through the process of setting up your own private "
 "network using |codename|."
 msgstr "このガイドでは、 |codename| を使用して、独自のプライベートネットワークをセットアップする手順を説明します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:49
+#: ../../source/guides/network/creating-a-private-test-net.rst:52
 msgid ""
 "To run the network, we are going to use the package |symbol-bootstrap|. To "
 "better understand how this package works it is recommended to read the "
@@ -40,11 +40,11 @@ msgstr ""
 "ネットワークを実行するため、 |symbol-bootstrap| パッケージを使用します。このパッケージの動作をより理解するために "
 ":doc:`Symbol Bootstrap の使用<using-symbol-bootstrap>` ガイドを読むことを推奨します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:53
+#: ../../source/guides/network/creating-a-private-test-net.rst:56
 msgid "The ``bootstrap`` preset"
 msgstr "``bootstrap`` プリセット"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:55
+#: ../../source/guides/network/creating-a-private-test-net.rst:58
 msgid ""
 "|symbol-bootstrap| has a preset called ``bootstrap`` which instantiates a "
 "network with multiple nodes with the following architecture:"
@@ -52,11 +52,11 @@ msgstr ""
 "|symbol-bootstrap| には、複数のノードを持つ、次のアーキテクチャのネットワークをインスタンス化する ``bootstrap`` "
 "のプリセットがあります:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:61
+#: ../../source/guides/network/creating-a-private-test-net.rst:64
 msgid "Bootstrap network architecture"
 msgstr "ブートストラップネットワークアーキテクチャ"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:63
+#: ../../source/guides/network/creating-a-private-test-net.rst:66
 msgid ""
 "The nodes labelled \"Internal\" are the ones created by |symbol-bootstrap|, "
 "and are accessible through the REST API:"
@@ -64,7 +64,7 @@ msgstr ""
 "\"Internal\" とラベル付けされたノードは |symbol-bootstrap| によって作成されており、REST API "
 "からアクセス可能です:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:65
+#: ../../source/guides/network/creating-a-private-test-net.rst:68
 msgid ""
 "**peer-node (1 and 2)**: Peer nodes verify transactions once the API pushes "
 "them into the P2P network. They run the consensus algorithm, create new "
@@ -73,7 +73,7 @@ msgstr ""
 "**peer-node (1 と 2)**: Peer ノードは API がトランザクションを P2P "
 "ネットワークにプッシュすると、それを検証します。ノードはコンセンサスアルゴリズムを実行して、新しいブロックを作成して、ネットワークを通して変更を伝播します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:66
+#: ../../source/guides/network/creating-a-private-test-net.rst:69
 msgid ""
 "**api-node**: The API node stores data in the MongoDB database once "
 "transactions are validated. They also identify and store partial aggregate "
@@ -82,18 +82,18 @@ msgstr ""
 "**api-node**: API ノードはトランザクションが検証された後に MongoDB "
 "データベースにデータを保存します。これらはパーシャルなアグリゲートボンドトランザクションを識別して保存もします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:67
+#: ../../source/guides/network/creating-a-private-test-net.rst:70
 msgid ""
 "**rest-gateway**: Combines HTTP and WebSockets to perform read and write "
 "actions on the blockchain."
 msgstr ""
 "**rest-gateway** は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように構成します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:71
+#: ../../source/guides/network/creating-a-private-test-net.rst:74
 msgid "Instantiate the network"
 msgstr "ネットワークのインスタンス化"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:73
+#: ../../source/guides/network/creating-a-private-test-net.rst:76
 msgid ""
 "Use the ``start`` command (explained in the :ref:`Using Symbol Bootstrap "
 "<symbol-bootstrap-all-in-one>` guide) using the ``bootstrap`` preset:"
@@ -101,21 +101,21 @@ msgstr ""
 "``bootstrap`` プリセットで ``start`` コマンド (:ref:`Symbol Bootstrap の使い方 <symbol-"
 "bootstrap-all-in-one>` ガイドで説明) を使用します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:79
+#: ../../source/guides/network/creating-a-private-test-net.rst:82
 msgid ""
 "With a single command the network is created and booted. Now check that it "
 "is up and running by opening a new browser tab and going to:"
 msgstr "1 つのコマンドで、ネットワークを作成して、起動します。新しいブラウザタブを開き、次の場所に移動して、稼働していることを確認します:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:83
+#: ../../source/guides/network/creating-a-private-test-net.rst:86
 msgid "You should get a response from the API node."
 msgstr "API ノードからレスポンスを取得します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:87
+#: ../../source/guides/network/creating-a-private-test-net.rst:90
 msgid "Retrieving the node accounts"
 msgstr "ノードアカウントの取得"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:89
+#: ../../source/guides/network/creating-a-private-test-net.rst:92
 msgid ""
 "|symbol-bootstrap| has created multiple nodes with corresponding accounts. "
 "To interact with any of these accounts (to transfer mosaics **to** it, for "
@@ -126,21 +126,21 @@ msgstr ""
 "(たとえば、モザイクをそのアカウント **へ** 転送) するには、そのアドレスまたは公開鍵が必要です。アカウントの完全な制御 "
 "(たとえば、モザイクをアカウント **から** 転送) には、その秘密鍵が必要です。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:91
+#: ../../source/guides/network/creating-a-private-test-net.rst:94
 msgid ""
 "All this information can be retrieved from a YAML file in the ``target`` "
 "folder:"
 msgstr "すべての情報は ``target`` フォルダ内の YAML ファイルから取得できます:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:95
+#: ../../source/guides/network/creating-a-private-test-net.rst:98
 msgid "As an example:"
 msgstr "例:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:123
+#: ../../source/guides/network/creating-a-private-test-net.rst:126
 msgid "Keep your Secret Keys secret at all times!"
 msgstr "シークレットキーは常に秘匿してください！"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:125
+#: ../../source/guides/network/creating-a-private-test-net.rst:128
 msgid ""
 "You can now import any of these accounts using the |symbol-cli| command-line"
 " tool for ease of access (Read :doc:`the symbol-cli guide <../../cli>` for "
@@ -149,13 +149,13 @@ msgstr ""
 "|symbol-cli| を使用して、これらアカウントのいずれかをインポートできます。アクセスを容易にするコマンドラインツール (詳細については "
 ":doc:`symbol-cli ガイド <../../cli>` を参照してください):"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:131
+#: ../../source/guides/network/creating-a-private-test-net.rst:134
 msgid ""
 "After giving this new profile a name you will be ready to use it, for "
 "example, to retrieve the account's balance:"
 msgstr "この新しいプロファイルに名前を付けることで、たとえば、アカウントの残高を取得するために使用できます:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:137
+#: ../../source/guides/network/creating-a-private-test-net.rst:140
 msgid ""
 "You should see that the nodes that |symbol-bootstrap| has created for you "
 "already contain some currency (in different :doc:`mosaics "
@@ -164,11 +164,11 @@ msgstr ""
 "|symbol-bootstrap| によって作成されたノードが表示され、実験の開始するために、いくつかの通貨 (異なる :doc:`モザイク "
 "<../../concepts/mosaic>`) がすでに含まれています:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:152
+#: ../../source/guides/network/creating-a-private-test-net.rst:155
 msgid "Retrieving the test accounts"
 msgstr "テストアカウントの取得"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:154
+#: ../../source/guides/network/creating-a-private-test-net.rst:157
 msgid ""
 "|symbol-bootstrap| has also created several test accounts preloaded with "
 ":doc:`mosaics <../../concepts/mosaic>`. These accounts exist solely for "
@@ -177,24 +177,24 @@ msgstr ""
 "|symbol-bootstrap| は :doc:`モザイク <../../concepts/mosaic>` "
 "を事前に保有する、いくつかのテストアカウントを生成します。これらのアカウントは開発または学習目的のために存在します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:156
+#: ../../source/guides/network/creating-a-private-test-net.rst:159
 msgid ""
 "The keys to these accounts can be found in the ``target/addresses.yml`` file"
 " as described above, in the ``mosaics`` section:"
 msgstr ""
 "これらのアカウントの鍵は、上記の ``target /addresses.yml`` ファイルに、 ``mosaics`` セクションにあります:"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:190
+#: ../../source/guides/network/creating-a-private-test-net.rst:193
 msgid ""
 "Use the Private Keys to access these accounts, for example, using the "
 "|symbol-cli| command-line tool as described above."
 msgstr "例えば、上記のコマンドラインツールの |symbol-cli| を使用することで、これらのアカウントに秘密鍵でアクセスします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:194
+#: ../../source/guides/network/creating-a-private-test-net.rst:197
 msgid "Voting nodes"
 msgstr "投票ノード"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:196
+#: ../../source/guides/network/creating-a-private-test-net.rst:199
 msgid ""
 "The :ref:`block finalization <finalization>` process requires that network "
 "nodes vote about the correctness of blocks before they are added to the "
@@ -203,7 +203,7 @@ msgstr ""
 ":ref:`ブロックファイナライゼーション <finalization>` "
 "プロセスは、ブロックチェーンに追加する前に、ネットワークノードがブロックの正確性について投票を要求されます。各ノードは投票者として登録するかどうかを選択します。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:198
+#: ../../source/guides/network/creating-a-private-test-net.rst:201
 msgid ""
 "All nodes created by the ``bootstrap`` preset are voters by default. If you "
 "don't want this, provide a custom preset with these lines to disable voting "
@@ -212,7 +212,7 @@ msgstr ""
 "``bootstrap`` "
 "プリセットによって作成される、すべてのノードはデフォルトで投票者です。これが不要な場合は、カスタムプリセットで次の行を提供し、各ノードの投票を無効にします。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:207
+#: ../../source/guides/network/creating-a-private-test-net.rst:210
 msgid ""
 "Without ANY voting node no finalization can occur. By taking a look at "
 "``localhost:3000/chain/info`` you will see you chain height grow but the "
@@ -221,11 +221,11 @@ msgstr ""
 "投票ノードが無い場合、ファイナライズは発生しません。 ``localhost:3000/chain/info`` "
 "を参照すると、チェーン高が増加していることがわかりますが、 ``latestFinalizedBlock`` 高はゼロのままです。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:211
+#: ../../source/guides/network/creating-a-private-test-net.rst:214
 msgid "Configuring network properties"
 msgstr "ネットワークプロパティの設定"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:213
+#: ../../source/guides/network/creating-a-private-test-net.rst:216
 msgid ""
 "Read the :doc:`Configuring network properties <configuring-network-"
 "properties>` guide for a list of network-related settings that can be "
@@ -234,11 +234,11 @@ msgstr ""
 "カスタマイズ可能なネットワーク関連の設定については :doc:`ネットワークプロパティの設定 <configuring-network-"
 "properties>` ガイドを参照してください。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:217
+#: ../../source/guides/network/creating-a-private-test-net.rst:220
 msgid "Next steps"
 msgstr "次の手順"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:219
+#: ../../source/guides/network/creating-a-private-test-net.rst:222
 msgid ""
 "You now have a test network running and access to each node's account. You "
 "can also interact with it through the API node serving at "
@@ -246,7 +246,7 @@ msgid ""
 msgstr ""
 "各ノードは投票者として登録するかどうかを選択します。 ``localhost:3000`` で提供される API ノードを介して疎通することもできます。"
 
-#: ../../source/guides/network/creating-a-private-test-net.rst:221
+#: ../../source/guides/network/creating-a-private-test-net.rst:224
 msgid ""
 "We recommend you continue reading the rest of :ref:`the guides <blog-"
 "categories>` to keep learning more |codename|'s features!"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 07:16+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,10 +21,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/secretlock/index.rst:40
+#: ../../source/guides/secretlock/index.rst:43
 msgid "SecretLock"
 msgstr "シークレットロック"
 
-#: ../../source/guides/secretlock/index.rst:42
+#: ../../source/guides/secretlock/index.rst:45
 msgid "Guides related to secret lock handling."
 msgstr "シークレットロックの扱いに関するガイド"

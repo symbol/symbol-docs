@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-15 10:52+0000\n"
+"POT-Creation-Date: 2021-06-25 08:35+0000\n"
 "PO-Revision-Date: 2021-03-02 08:42+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,44 +21,44 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/harvesting/index.rst:40
+#: ../../source/guides/harvesting/index.rst:43
 msgid "Harvesting"
 msgstr "ハーベスティング"
 
-#: ../../source/guides/harvesting/index.rst:42
+#: ../../source/guides/harvesting/index.rst:45
 msgid ""
 "|codename| supports **different harvesting methods** depending on whether "
 "you own a node or not, and the tools you want to use to enable it."
 msgstr ""
 "|codename| はノードを所有しているかどうか、有効のために使用するツールに応じて **異なるハーベスティング方法** がサポートされています。"
 
-#: ../../source/guides/harvesting/index.rst:44
+#: ../../source/guides/harvesting/index.rst:47
 msgid ""
 "Make sure you understand the :ref:`different harvesting types <harvesting-"
 "types>` first and then choose the appropriate guide from the list below."
 msgstr ""
 "まずは :ref:`異なるハーベスティングタイプ <harvesting-types>` を理解して、以下のリストから適切なガイドを選んでください。"
 
-#: ../../source/guides/harvesting/index.rst:46
+#: ../../source/guides/harvesting/index.rst:49
 msgid "**If you do not own a node:**"
 msgstr "**ノードを保有していない:**"
 
-#: ../../source/guides/harvesting/index.rst:50
+#: ../../source/guides/harvesting/index.rst:53
 msgid ""
 "For **users** wishing to enable harvesting using their wallet application."
 msgstr "ウォレットアプリケーションを使用してハーベスティングを有効にしたい **ユーザ** 向け"
 
-#: ../../source/guides/harvesting/index.rst:54
+#: ../../source/guides/harvesting/index.rst:57
 msgid ""
 "For **developers** wanting to understand how to manually enable harvesting "
 "on their applications."
 msgstr "アプリケーションでハーベスティングを手動で有効にする方法を理解したい **開発者** 向け"
 
-#: ../../source/guides/harvesting/index.rst:56
+#: ../../source/guides/harvesting/index.rst:59
 msgid "**If you own a node:**"
 msgstr "**ノードを保有している:**"
 
-#: ../../source/guides/harvesting/index.rst:60
+#: ../../source/guides/harvesting/index.rst:63
 msgid ""
 "For **node owners** wishing to enable harvesting, whether through |symbol-"
 "bootstrap| or not."
