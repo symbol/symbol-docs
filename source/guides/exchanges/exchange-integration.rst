@@ -2,11 +2,9 @@
 Integrating with an Exchange
 ############################
 
-This document is intended to **guide developers** through the integration of the ``XYM`` token into an **Exchange platform**. It contains recommendations on
-how to set up accounts, listen for deposits, and create withdrawals as well as code examples ready to be adopted.
+This document is intended to **guide developers** through the integration of the ``XYM`` token into an **Exchange platform**. It contains recommendations on how to set up accounts, listen for deposits, and create withdrawals as well as code examples ready to be adopted.
 
-The code examples shared use the `Symbol SDK for TypeScript <https://github.com/nemtech/symbol-sdk-typescript-javascript>`__, but can be ported to other :doc:`available SDKs <../../sdk>` since all of them share the same design principles. If there is no SDK supported for a required
-programming language, you may still be able to integrate by connecting directly via Symbol's :doc:`REST API <../../api>`.
+The code examples shared use the `Symbol SDK for TypeScript <https://github.com/nemtech/symbol-sdk-typescript-javascript>`__, but can be ported to other :doc:`available SDKs <../../sdk>` since all of them share the same design principles. If there is no SDK supported for a required programming language, you may still be able to integrate by connecting directly via Symbol's :doc:`REST API <../../api>`.
 
 Integration overview
 ********************
