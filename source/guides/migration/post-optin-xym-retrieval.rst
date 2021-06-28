@@ -159,4 +159,4 @@ This is a short list of items to check should you encounter any problem when rec
 - The **NEM Helpdesk** can help you if everything else fails:
 
   - `NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__
-  - `Open a support ticket <https://support.nemgroup.io/hc/en-us/requests/new>`__
+  - Send an email to support@nem.group
