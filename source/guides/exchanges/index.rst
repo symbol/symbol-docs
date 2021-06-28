@@ -8,3 +8,4 @@ Guides related to integrating |codename| with an Exchange.
     :maxdepth: 1
 
     exchange-integration
+    exchange-REST-troubleshooting
