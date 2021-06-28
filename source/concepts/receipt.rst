@@ -24,6 +24,8 @@ Statements can include receipts with the following basic types:
 * **Namespace Expiry**: A namespace expired.
 * **Inflation**: Network currency mosaics were created due to :doc:`inflation <inflation>`.
 
+.. _receipt-resolution-statement:
+
 ********************
 Resolution statement
 ********************

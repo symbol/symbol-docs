@@ -53,6 +53,8 @@ Nodes stores blocks in a serialized form as follows:
 
    <a href="https://en.wikipedia.org/wiki/Radix_tree" target="_blank">patricia tree</a>
 
+.. _block-creation:
+
 ********
 Creation
 ********
