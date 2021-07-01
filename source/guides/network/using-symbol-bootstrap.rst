@@ -42,7 +42,7 @@ Environment
 
 The setup scripts are automated using **docker**. To run a test net or node, you will need to have installed the following tools:
 
-* `node.js`_ version 12 or higher (It is recommended that you install node.js using `nvm <https://github.com/nvm-sh/nvm>`__)
+* `node.js`_ version 12 or higher (**It is recommended that you install node.js using** `nvm <https://github.com/nvm-sh/nvm>`__)
 * `docker`_
 * `docker-compose`_
 
