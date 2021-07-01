@@ -655,6 +655,12 @@ source_file = build/gettext/guides/network/supernode-enrollment.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--network--maintaining-a-symbol-node]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/maintaining-a-symbol-node.po
+source_file = build/gettext/guides/network/maintaining-a-symbol-node.pot
+source_lang = en
+type = PO
+
 [symboldocs.guides--restriction--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/index.po
 source_file = build/gettext/guides/restriction/index.pot
