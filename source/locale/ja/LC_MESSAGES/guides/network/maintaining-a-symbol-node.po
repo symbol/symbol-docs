@@ -1,0 +1,324 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-01 13:28+0000\n"
+"PO-Revision-Date: 2021-07-01 13:31+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:48
+msgid "Maintaining a Symbol Node"
+msgstr "Symbnol ノードの維持管理"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:50
+msgid ""
+"Once you have created a |codename| node, be it :doc:`manually <running-a"
+"-symbol-node-manually>` or :doc:`using Symbol bootstrap <running-a-symbol-"
+"node>`, the node is **mostly autonomous**. But there is still a little bit "
+"of maintenance required, explained in this guide."
+msgstr ""
+"|codename| ノードを作成すれば、それが :doc:`手動 <running-a-symbol-node-manually>` であろうと "
+":doc:`Symbol Bootstrap <running-a-symbol-node>` を使用していようと、ノードは **ほぼ自律的** "
+"です。ただし、このガイドで説明するように、多少のメンテナンスが必要です。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:52
+msgid ""
+"Regular nodes only need to take care of the :ref:`maintain-server-version` "
+"section."
+msgstr "通常のノードは :ref:`maintain-server-version` セクションだけを対応します。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:54
+msgid ""
+":ref:`Voting nodes <voting-node-program>` also need to read the :ref"
+":`maintain-voting-keys` section."
+msgstr ""
+":ref:`投票ノード <voting-node-program>` も :ref:`maintain-voting-keys` "
+"セクションを参照する必要があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:59
+msgid "Server updates"
+msgstr "サーバのアップデート"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:61
+msgid ""
+"New |codename| server versions will be released **periodically**. If you "
+"want to benefit from the added features and bugfixes you will need to "
+"**update your node** to use the latest server version."
+msgstr ""
+"新しいバージョンの |codename| サーバは **定期的に** "
+"リリースされます。追加された機能とバグ修正を適用したい場合は、最新バージョンのサーバを使用するように **ノードを更新** する必要があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:63
+msgid ""
+"Additionally, if your node's server version falls too far behind, other "
+"nodes might refuse to connect to it."
+msgstr "さらに、ノードのサーバのバージョンが大幅に遅れている場合、他のノードがノードへの接続を拒否する場合があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:65
+msgid ""
+"The main version to keep track of is the **Catapult Server version**, since "
+"this component is used by all :ref:`peer nodes <peer-node>`. Additionally, "
+":ref:`API nodes <api-node>` need to keep track of the **REST component "
+"version** too."
+msgstr ""
+"すべての :ref:`ピアノード <peer-node>` で使用されるので、 **Catapult Server バージョン** "
+"が更新するべき主たるバージョンです。加えて :ref:`API ノード <api-node>` は **REST コンポーネントのバージョン** "
+"も更新する必要があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:67
+msgid "**Finding out what are the latest versions**:"
+msgstr "**最新バージョンを確認する**:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:69
+msgid ""
+"Whenever there is a new server version released it will be announced through"
+" the NEM |forum| and the |slack| channel. You can also keep an eye on the "
+"different |github| repositories and :doc:`the compatibility matrix page "
+"<../../compatibility>` to know the latest Server and REST versions."
+msgstr ""
+"新しいバージョンのサーバがリリースされるたびに、NEM |forum| と |slack| チャネル にて発表されます。 |github| "
+"を監視することやリポジトリと :doc:`互換性表ページ <../../compatibility>` でも最新のサーバと REST "
+"のバージョンを確認できます。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:71
+msgid "**Finding out your node versions**:"
+msgstr "**ノードのバージョンを確認する**:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:73
+msgid ""
+"You can find the versions used by your node in the `Symbol Explorer nodes "
+"list <http://explorer.symbolblockchain.io/nodes>`__."
+msgstr ""
+"ノードが使用しているバージョンは `Symbol エクスプローラーノードリスト "
+"<http://explorer.symbolblockchain.io/nodes>`__ から確認できます。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:75
+msgid ""
+"Additionally, if your node is an :ref:`API node <api-node>`, you can also "
+"query it directly:"
+msgstr "もしくは、 :ref:`API ノード <api-node>` である場合、直接問い合わせることができます:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:77
+msgid ""
+"**Server version**: ``/node/info`` endpoint, ``version`` property. `See an "
+"example <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__."
+msgstr ""
+"**サーババージョン**: ``/node/info`` エンドポイント ``version`` プロパティ。 `例を参照 <http://ngl-"
+"dual-104.symbolblockchain.io:3000/node/info>`__"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:81
+msgid ""
+"The ``version`` is encoded as a single 4-byte integer, where the Most-"
+"Significant Byte encodes the Major version, and the rest of bytes are the "
+"Minor, the Micro and the Patch version."
+msgstr ""
+"``バージョン`` は単一の 4 "
+"バイト整数としてエンコードされ、最上位バイトはメジャーバージョンを、残りのバイトはマイナー、マイクロ、およびパッチバージョンを示します。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:83
+msgid ""
+"For example, version **16777472** (decimal) is **01000100h** (hex), which "
+"corresponds to version **1.0.1.0**."
+msgstr ""
+"例, バージョン **16777472** (10進法) は **01000100h** (16進法) バージョン **1.0.1.0** "
+"に対応します。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:85
+msgid ""
+"**REST version**: ``/node/server`` endpoint, ``restVersion`` property. `See "
+"an example <http://ngl-dual-104.symbolblockchain.io:3000/node/server>`__."
+msgstr ""
+"**REST バージョン**: ``/node/server`` エンドポイント ``restVersion`` プロパティ。 `例を参照 <http"
+"://ngl-dual-104.symbolblockchain.io:3000/node/server>`__"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:87
+msgid "``restVersion`` is a version string like **\"2.3.6\"**, for example."
+msgstr "例では ``restVersion`` は **\"2.3.6\"** のようなバージョン文字列です。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:89
+msgid ""
+"The exact procedure to update your node depends on how you created it. Read "
+"the appropriate section below."
+msgstr "ノードを更新する手順は、ノードの作成方法にごとに異なります。以下の該当するセクションを参照してください。。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:92
+msgid "Update nodes created with Bootstrap"
+msgstr "Bootstrap で作成したノードをアップデートする"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:94
+msgid ""
+"If you used Symbol Bootstrap to create your node (following the "
+":doc:`running-a-symbol-node` guide), keeping it up to date is very simple."
+msgstr ""
+"Symbol Bootstrap を使用して (:doc:`running-a-symbol-node` ガイドに従って) "
+"ノードを作成した場合、最新の状態に保つのは非常に簡単です。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:96
+msgid ""
+"**Update Symbol Bootstrap** first (see the :doc:`using-symbol-bootstrap` "
+"guide for more details):"
+msgstr ""
+"まず **Symbol Bootstrap のアップデート** をします (詳細は :doc:`using-symbol-bootstrap` "
+"ガイドを参照):"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:102
+msgid ""
+"Then **move to the folder** where the node's data folder is (typically "
+"``target``) and **make a backup copy** of it:"
+msgstr ""
+"次に、ノードのデータフォルダ (通常は ``target`` ) がある **フォルダに移動** して **そのバックアップコピーを作成** します。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:108
+msgid ""
+"Finally, **stop and restart the node** with the ``--upgrade`` flag to update"
+" all necessary component versions."
+msgstr ""
+"最後に、全ての必要なコンポーネントのバージョンをアップデートするために ``--upgrade`` フラグを付けて **ノードを停止して再起動** "
+"します。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:110
+msgid ""
+"The exact commands depend on whether your node was running in detached mode "
+"or not:"
+msgstr "正確なコマンドはノードがデタッチモードで実行されていたかどうかによって異なります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:112
+msgid ""
+"**If you started in detached mode** with ``symbol-bootstrap start -d``:"
+msgstr "``symbol-bootstrap start -d` を使用して **デタッチモードで開始** した場合:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:114
+msgid "From the folder containing the ``target`` folder type:"
+msgstr "``target`` フォルダタイプを含むフォルダから:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:121
+msgid "**If you did not start in detached mode**:"
+msgstr "**デタッチモードで起動しなかった場合**:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:123
+msgid ""
+"You must have a terminal running somewhere with all the output from the "
+"server. Stop it by pressing ``Ctrl+C`` and then type:"
+msgstr "サーバからのすべての出力を受けるターミナルを実行する必要があります。 ``Ctrl+C`` を押下して停止し、次のように入力します:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:129
+msgid ""
+"Once the node is up and running again, and you **verify that the component "
+"versions have been updated**, you can **remove the backup copy**."
+msgstr "ノードを再起動して **コンポーネントのバージョンが更新されたことを確認** できたら **バックアップコピーを削除** してもよいです。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:132
+msgid "Update nodes created manually"
+msgstr "手動で作成したノードをアップデートする"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:134
+msgid ""
+"If you followed the :doc:`running-a-symbol-node-manually` guide, you need to"
+" rebuild the Catapult Server and keep the previous data folder so the same "
+"accounts and cached data is reused."
+msgstr ""
+":doc:`running-a-symbol-node-manually` ガイドに従った場合は、Catapult "
+"サーバーを再ビルドし、以前のデータフォルダを保持して、同じアカウントとキャッシュされたデータが再利用されるようにする必要があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:136
+msgid "In summary, you need to:"
+msgstr "必要な操作の概要:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:138
+msgid "Stop the running Catapult Server with ``Ctrl+C``."
+msgstr "実行中の Catapult サーバーを ``Ctrl+C`` で停止します。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:139
+msgid ""
+"Update the Catapult Server source repository with the latest version and "
+"build it again following the `Catapult Server <https://github.com/nemtech"
+"/catapult-server/tree/main/docs>`__ instructions."
+msgstr ""
+"Catapult サーバのソースリポジトリを最新バージョンで更新し、 `Catapult サーバ <https://github.com/nemtech"
+"/catapult-server/tree/main/docs>`__ 手順に従って再ビルドします。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:140
+msgid ""
+"Restart the server from the same folder it was initially launched. Data and "
+"configuration files will be reused."
+msgstr "最初に起動した際と同じフォルダでサーバを再起動します。データと構成ファイルは再利用されます。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:144
+msgid ""
+"The above procedure works but brings the server offline while the new "
+"version is being built, which could be a lengthy process."
+msgstr "上記の手順は機能しますが、新しいバージョンのビルド中にサーバがオフラインになり、時間のかかる処理になる可能性があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:146
+msgid ""
+"If you **install** the server (with ``make install``) instead of running it "
+"from the same folder where it is built, though, you have the option to build"
+" the new version while the previous one is still running. In this way the "
+"service interruption should be minimal."
+msgstr ""
+"ただし、サーバをビルドしたのと同じフォルダから実行するのではなく、サーバを (``make install`` を使用して) **インストール** "
+"する場合は、前のバージョンの実行中に新しいバージョンをビルドするオプションがあります。このようにして、サービスの中断を最小限に抑える必要があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:148
+msgid "The steps then would be:"
+msgstr "実施するステップ:"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:150
+msgid "Update the Catapult Server source repository and build it again."
+msgstr "Catapult サーバのソースリポジトリを更新して、再ビルドします。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:151
+msgid "Stop the running Catapult Server."
+msgstr "起動中の Catapult サーバの停止"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:152
+msgid "Install the new version of the server."
+msgstr "新しいバージョンのサーバをインストール"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:153
+msgid "Restart the server."
+msgstr "サーバを再起動"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:158
+msgid "Voting key renewal"
+msgstr "投票キーの更新"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:160
+msgid ""
+"If your node is a :ref:`Voting node <voting-node-program>` it requires a "
+"valid voting key to operate. For security these keys expire after 6 months, "
+"so you need to renew them as part of the regular node maintenance."
+msgstr ""
+"ノードが :ref:`投票ノード <voting-node-program>` "
+"の場合、動作するには有効な投票キーが必要です。セキュリティ上の理由から、これらのキーは 6 "
+"か月後に期限切れになるため、定期的なノードメンテナンスの一環としてキーを更新する必要があります。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:162
+msgid ""
+"Read the appropriate section about renewing the voting keys depending on "
+"whether you used Symbol Bootstrap or not to build your node:"
+msgstr "Symbol Bootstrap を使用してノードを構築したかどうかに応じて、投票キーの更新に関する適切なセクションを参照してください。"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:164
+msgid ""
+":ref:`Voting key renewal using Bootstrap <bootstrap-voting-key-renewal>`"
+msgstr ":ref:`Bootstrap を使用した投票キーの更新 <bootstrap-voting-key-renewal>`"
+
+#: ../../source/guides/network/maintaining-a-symbol-node.rst:165
+msgid ":ref:`Manual voting key renewal <manual-voting-key-renewal>`"
+msgstr ":ref:`投票キーの手動更新 <manual-voting-key-renewal>`"

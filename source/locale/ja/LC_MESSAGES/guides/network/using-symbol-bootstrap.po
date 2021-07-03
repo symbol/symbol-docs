@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-01 13:28+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -79,14 +79,6 @@ msgid ""
 msgstr ""
 "セットアップスクリプトは **docker** "
 "を使用して自動化されます。テストネットノードを立ち上げるには、次のツールをインストールする必要があります。"
-
-#: ../../source/guides/network/using-symbol-bootstrap.rst:85
-msgid ""
-"`node.js`_ version 12 or higher (It is recommended that you install node.js "
-"using `nvm <https://github.com/nvm-sh/nvm>`__)"
-msgstr ""
-"`node.js`_ バージョン 12 以上 (node.js は `nvm <https://github.com/nvm-sh/nvm>`__ "
-"を使用してインストールすることを推奨します)"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:91
 msgid "Ports"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-01 13:28+0000\n"
 "PO-Revision-Date: 2021-04-09 09:52+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -202,9 +202,3 @@ msgstr "**NEM ヘルプデスク** は他のすべてが失敗した場合に役
 #: ../../source/guides/migration/post-optin-xym-retrieval.rst:201
 msgid "`NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__"
 msgstr "`NEM Telegram ヘルプデスク <https://t.me/nemhelpdesk>`__"
-
-#: ../../source/guides/migration/post-optin-xym-retrieval.rst:202
-msgid ""
-"`Open a support ticket <https://support.nemgroup.io/hc/en-"
-"us/requests/new>`__"
-msgstr "`サポートチケットを開く <https://support.nemgroup.io/hc/en-us/requests/new>`__"
