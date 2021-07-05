@@ -41,7 +41,7 @@ Each guide comes with at least one snippet, which is an executable piece of code
 Writing snippets helps you to compare how the SDK code looks like in contrast with others.
 Furthermore, you will be testing manually if the SDK behaves correctly.
 
-1. `Fork <https://help.github.com/articles/fork-a-repo/#fork-an-example-repository>`_ and clone `symbl-docs repository <https://github.com/nemtech/symbol-docs>`__.
+1. `Fork <https://help.github.com/articles/fork-a-repo>`_ and clone `symbl-docs repository <https://github.com/nemtech/symbol-docs>`__.
 
 .. code-block:: bash
 
