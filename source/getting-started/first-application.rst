@@ -189,7 +189,7 @@ Now that we have defined the mosaic, we will send one ticket unit to a customer 
     :delim: ;
     :widths: 20 30 50
 
-    Deadline; Default (2 hours) ; The maximum amount of time to include the transaction on the blockchain. A transaction will be dropped if it stays unconfirmed after the stipulated time. The parameter is defined in hours and must in a range of 1 to 23 hours.
+    Deadline; Default (2 hours) ; The maximum amount of time to wait for the transaction to be included on the blockchain. A transaction will be dropped if it stays unconfirmed after this amount of time. The parameter is defined in hours and must be in the 1 to 6 range (1 to 48 for :ref:`aggregate-bonded` transactions).
     Recipient; TCHBDE...32I; The recipient account address. In this case, the customer's address.
     Mosaics; [1 ``7cdf3b117a3c40cc``]; The array of mosaics to send.
     Message; enjoy your ticket; The attached message.
