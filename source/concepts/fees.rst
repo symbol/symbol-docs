@@ -2,8 +2,7 @@
 Fees
 ####
 
-Announcing :doc:`transactions <transaction>` have an associated cost.
-This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network and run the infrastructure.
+Announcing :doc:`transactions <transaction>` has an associated cost. This cost is necessary to provide an incentive for the :doc:`harvesters <harvesting>` who secure the network and run the infrastructure.
 
 ****************
 Network currency
