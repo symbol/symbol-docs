@@ -136,7 +136,7 @@ This is very easy to do because all blocks which include a namespace also includ
         ]
      }
 
-  However, the mosaic ID ``0xE374D0B5E061EE92`` does not exist (`/mosaics/E374D0B5E061EE92 <http://ngl-dual-101.testnet.symboldev.network:3000/mosaics/E374D0B5E061EE92>`__ returns a ``ResourceNotFound`` error). Besides, the highest bit being set indicates this is actually a namespace.
+  However, the mosaic ID ``0xE374D0B5E061EE92`` does not exist (``/mosaics/E374D0B5E061EE92`` would return a ``ResourceNotFound`` error). Besides, the highest bit being set indicates this is actually a namespace.
 
 - You could check the **current** alias of this namespace by querying `/namespaces/E374D0B5E061EE92 <http://ngl-dual-101.testnet.symboldev.network:3000/namespaces/E374D0B5E061EE92>`__, but you actually want to know the aliased mosaic ID **at the time the transaction was confirmed**.
 
