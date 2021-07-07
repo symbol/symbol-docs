@@ -56,7 +56,7 @@ The next section explains how to parse the resulting list.
 Parsing of embedded transactions
 ================================
 
-As shown in the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint documentation, a successfull query returns **a data array** including transactions and metadata. Each one of the returned transactions can match a different schema depending on the transaction's type, so the ``type`` field of each transaction must be checked.
+As shown in the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint documentation, a successfull query returns **a data array** including transactions and metadata (this array is **paginated** so pay attention to the ``pageSize`` and ``pageNumber`` parameters and return values). Each one of the returned transactions can match a different schema depending on the transaction's type, so the ``type`` field of each transaction must be checked.
 
 Moreover, the metadata content is also different when the transaction is embedded inside an :ref:`Aggregate transaction <aggregate-transaction>`.
 
@@ -206,7 +206,7 @@ To help choose the right amount, the `/network/fees/transaction <https://docs.sy
    :delim: ;
 
    Highest; Biggest fee multiplier used in the last 60 blocks.
-   Median; The `median value <https://en.wikipedia.org/wiki/Median>`__ of the fee multipliers used in the last 60 blocks.
+   Median; The `median value <https://en.wikipedia.org/wiki/Median>`__ of the fee multipliers used in the last 60 blocks. See the :ref:`fees_dynamic_multiplier` section for more details.
    Mean; The `average value <https://en.wikipedia.org/wiki/Arithmetic_mean>`__ of the fee multipliers used in the last 60 blocks.
    Lowest; Smallest fee multiplier used in the last 60 blocks.
    Min; The minimum fee multiplier accepted by the node being queried.
