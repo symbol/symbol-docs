@@ -56,6 +56,10 @@ The next section explains how to parse the resulting list.
 Parsing of embedded transactions
 ================================
 
+|codename| supports :ref:`Aggregate transactions <aggregate-transaction>`, i.e., **transactions inside other transactions**. For the most part it does not matter if a transaction is **standalone** or **embedded** inside another one, but there are a few differences which might be confusing when parsing incoming transactions. This section explains them.
+
+.. note:: You can always **receive** embedded transactions, even if you never **create** any yourself. Make sure you understand how to parse them!
+
 As shown in the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint documentation, a successfull query returns **a data array** including transactions and metadata (this array is **paginated** so pay attention to the ``pageSize`` and ``pageNumber`` parameters and return values). Each one of the returned transactions can match a different schema depending on the transaction's type, so the ``type`` field of each transaction must be checked.
 
 Moreover, the metadata content is also different when the transaction is embedded inside an :ref:`Aggregate transaction <aggregate-transaction>`.
