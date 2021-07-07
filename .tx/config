@@ -733,6 +733,24 @@ source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictio
 source_lang = en
 type = PO
 
+[symboldocs.guides--exchanges--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/exchanges/index.po
+source_file = build/gettext/guides/exchanges/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--exchanges--exchange-integration]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/exchanges/exchange-integration.po
+source_file = build/gettext/guides/exchanges/exchange-integration.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--exchanges--exchange-REST-troubleshooting]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/exchanges/exchange-REST-troubleshooting.po
+source_file = build/gettext/guides/exchanges/exchange-REST-troubleshooting.pot
+source_lang = en
+type = PO
+
 [symboldocs.references--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/references/index.po
 source_file = build/gettext/references/index.pot
