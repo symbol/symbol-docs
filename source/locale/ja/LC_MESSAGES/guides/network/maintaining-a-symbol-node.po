@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:48
 msgid "Maintaining a Symbol Node"
-msgstr "Symbnol ノードの維持管理"
+msgstr "Symbol ノードの維持管理"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:50
 msgid ""

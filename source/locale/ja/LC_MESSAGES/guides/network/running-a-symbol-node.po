@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../source/guides/network/running-a-symbol-node.rst:48
 msgid "Running a Symbol node"
-msgstr "Symbnol ノードの立ち上げ"
+msgstr "Symbol ノードの立ち上げ"
 
 #: ../../source/guides/network/running-a-symbol-node.rst:50
 msgid ""

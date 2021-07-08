@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:48
 msgid "Running a Symbol node manually"
-msgstr "手動による Symbnol ノードの立ち上げ"
+msgstr "手動による Symbol ノードの立ち上げ"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:50
 msgid ""
