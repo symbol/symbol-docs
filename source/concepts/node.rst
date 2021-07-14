@@ -132,11 +132,11 @@ Each REST gateway connects to one API instance to send new transactions requests
 
 .. |catapult-server| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server" target="_blank">Catapult Server</a>
+   <a href="https://github.com/symbol/catapult-server" target="_blank">Catapult Server</a>
 
 .. |catapult-rest| raw:: html
 
-    <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult REST</a>
+    <a href="https://github.com/symbol/catapult-rest" target="_blank">Catapult REST</a>
 
 .. |rocksdb| raw:: html
 

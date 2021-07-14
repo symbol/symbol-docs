@@ -277,12 +277,12 @@ msgstr ""
 
 #: ../../source/concepts/cryptography.rst:130
 msgid ""
-"See the `NIP-6 <https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_"
+"See the `NIP-6 <https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_"
 " document for technical details on |codename|'s mechanism to create HD "
 "Wallets."
 msgstr ""
 "HD ウォレットを作成する |codename| のメカニズムに関する技術的な詳細は `NIP-6 "
-"<https://github.com/nemtech/NIP/blob/main/NIPs/nip-0006.md>`_ドキュメントを参照してください。"
+"<https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ドキュメントを参照してください。"
 
 #: ../../source/concepts/cryptography.rst:132
 msgid "Continue: :doc:`Block <block>`."

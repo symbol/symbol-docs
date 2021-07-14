@@ -91,9 +91,9 @@ Node configuration is done through a **YAML configuration file** which specifies
     :delim: ;
     :widths: 20, 80
 
-    ``mainnet``; A **single node** that connects to the current public **main** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/network.yml>`__).
-    ``bootstrap``; **Autonomous network** with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/network.yml>`__). This is the default preset.
-    ``testnet``; A **single node** that connects to the current public **test** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
+    ``mainnet``; A **single node** that connects to the current public **main** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/network.yml>`__).
+    ``bootstrap``; **Autonomous network** with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/network.yml>`__). This is the default preset.
+    ``testnet``; A **single node** that connects to the current public **test** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
 
 Presets can be further customized by specifying an **assembly** (or flavor) which provides additional parameters:
 
@@ -102,14 +102,14 @@ Presets can be further customized by specifying an **assembly** (or flavor) whic
     :delim: ;
     :widths: 20, 20, 60
 
-    ``mainnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__).
-    ``mainnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__).
-    ``mainnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__).
-    ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).
-    ``bootstrap``; ``full``; It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 faucet. Great for demonstration purposes. Nemesis block is generated (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__).
-    ``testnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
-    ``testnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__).
-    ``testnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/nemtech/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__).
+    ``mainnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__).
+    ``mainnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__).
+    ``mainnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__).
+    ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).
+    ``bootstrap``; ``full``; It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 faucet. Great for demonstration purposes. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__).
+    ``testnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
+    ``testnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__).
+    ``testnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__).
 
 Finally, if additional configuration is required, a **custom YAML file** can be provided. Any value in this file overrides the default values set by the preset or the assembly so it can be combined on top of them. Take a look at the :doc:`Configuring network properties <configuring-network-properties>` guide to know which parameters are available.
 
@@ -117,7 +117,7 @@ Finally, if additional configuration is required, a **custom YAML file** can be 
 Creating the configuration file
 ===============================
 
-Before building the network the full configuration file has to be created by using the `symbol-bootstrap config <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/config.md>`_ command and providing the desired preset and assembly:
+Before building the network the full configuration file has to be created by using the `symbol-bootstrap config <https://github.com/symbol/symbol-bootstrap/blob/main/docs/config.md>`_ command and providing the desired preset and assembly:
 
 .. code-block:: bash
 
@@ -193,7 +193,7 @@ Proceed to the following guides to put what you have learned into practice!
 - :doc:`creating-a-private-test-net`: How to set up your own private network and access its nodes.
 - :doc:`running-a-symbol-node`: How to set up your own node and join |codename|'s network.
 
-Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
+Read the `complete list <https://github.com/symbol/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
 
 .. _node.js: https://nodejs.org/en/download/
 
@@ -203,8 +203,8 @@ Read the `complete list <https://github.com/nemtech/symbol-bootstrap/blob/main/R
 
 .. |catapult-service-bootstrap| raw:: html
 
-    <a href="https://github.com/nemtech/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
+    <a href="https://github.com/symbol/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
 
 .. |symbol-testnet-bootstrap| raw:: html
 
-    <a href="https://github.com/nemtech/symbol-testnet-bootstrap" target="_blank">Symbol Testnet Bootstrap</a>
+    <a href="https://github.com/symbol/symbol-testnet-bootstrap" target="_blank">Symbol Testnet Bootstrap</a>

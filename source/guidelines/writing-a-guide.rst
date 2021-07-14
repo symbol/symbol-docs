@@ -8,7 +8,7 @@ Writing a guide
 Before starting
 ***************
 
-If you are looking for inspiration to write the guide, you can browse the `symbol-docs repository open issues <https://github.com/nemtech/symbol-docs/issues>`_ to find some ideas pending to be written.
+If you are looking for inspiration to write the guide, you can browse the `symbol-docs repository open issues <https://github.com/symbol/symbol-docs/issues>`_ to find some ideas pending to be written.
 We also encourage you to join our |slack| #sig-docs channel and present yourself!
 
 To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
@@ -18,11 +18,11 @@ If there is no issue yet, create a new one introducing the content you want to p
 Writing the guide
 *****************
 
-1. `Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the `symbol-docs <https://github.com/nemtech/symbol-docs>`_ repository.
+1. `Fork <https://help.github.com/articles/fork-a-repo/>`_ and clone the `symbol-docs <https://github.com/symbol/symbol-docs>`_ repository.
 
    .. code-block:: bash
 
-      git clone https://github.com/nemtech/symbol-docs.git
+      git clone https://github.com/symbol/symbol-docs.git
 
 2. Make sure you have Python 3.4+ and `pip <https://pip.pypa.io/en/stable/installing/>`_ installed.
 
@@ -86,7 +86,7 @@ Writing the guide
 
       Is there any extra exercise that readers could try on their own?
 
-6. Add the `code examples <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
+6. Add the `code examples <https://github.com/symbol/symbol-docs/tree/main/source/resources/examples>`_ under ``source/resources/examples/<language_or_tool>``.
    You can render fragments of code from a file inside your ``.rst`` file with the directive ``example-code``.
 
    .. code-block:: text

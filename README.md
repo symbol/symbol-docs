@@ -1,6 +1,6 @@
 # Symbol Documentation
 
-[![Build Status](https://travis-ci.com/nemtech/symbol-docs.svg?branch=main)](https://travis-ci.com/nemtech/symbol-docs)
+[![Build Status](https://travis-ci.com/symbol/symbol-docs.svg?branch=main)](https://travis-ci.com/symbol/symbol-docs)
 
 Browse the documentation to start integrating blockchain technology into your project.
 
@@ -45,15 +45,15 @@ Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, 
 
 ## Contributing to Symbol
 
-Symbol is an [open-source](https://github.com/nemtech) project.
-Discover how our [community](https://github.com/nemtech/community/) is organized, and get started participating:
+Symbol is an [open-source](https://github.com/symbol) project.
+Discover how our [community](https://github.com/symbol/community/) is organized, and get started participating:
 
 *  Reach our community joining the official [Slack](https://join.slack.com/t/nem2/shared_invite/zt-km50fzxd-I8dPNrPEV6cqYVrhyLvrfA).
 *  Check the [contributing guidelines](https://docs.symbolplatform.com/guidelines/suggesting-changes.html) to propose changes.
 *  Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
-*  Explore our [GitHub](https://github.com/nemtech) repositories.
+*  Explore our [GitHub](https://github.com/symbol) repositories.
 
 ## License
 
 Copyright (c) 2018-present NEM 
-Licensed under the [Apache License 2.0](https://github.com/nemtech/symbol-docs/blob/main/LICENSE)
+Licensed under the [Apache License 2.0](https://github.com/symbol/symbol-docs/blob/main/LICENSE)

@@ -278,7 +278,7 @@ rst_prolog = """
 
 .. |community| raw:: html
 
-   <a href="https://github.com/nemtech/community/" target="_blank">community</a>
+   <a href="https://github.com/symbol/community/" target="_blank">community</a>
 
 .. |twitter| raw:: html
 
@@ -286,15 +286,15 @@ rst_prolog = """
 
 .. |github| raw:: html
 
-   <a href="https://github.com/nemtech" target="_blank">GitHub</a>
+   <a href="https://github.com/symbol" target="_blank">GitHub</a>
 
 .. |open-source| raw:: html
 
-   <a href="https://github.com/nemtech" target="_blank">open source</a>
+   <a href="https://github.com/symbol" target="_blank">open source</a>
 
 .. |symbol-bootstrap| raw:: html
 
-   <a href="https://github.com/nemtech/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
+   <a href="https://github.com/symbol/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
 
 .. |forum| raw:: html
 
@@ -329,7 +329,7 @@ html_favicon = 'favicon.ico'
 
 # -- Options for edit on github -------------------------------------------
 
-edit_on_github_project = 'nemtech/symbol-docs'
+edit_on_github_project = 'symbol/symbol-docs'
 edit_on_github_branch = 'main'
 
 # -- Options for edit scaled images ---------------------------------------
@@ -362,15 +362,15 @@ def viewsource_resolve_link(file_path, language=None):
         language = 'typescript'
     if language == 'java':
         language = 'java/src/test/java/symbol/guides/examples'
-    base_url = 'https://github.com/nemtech/symbol-docs/blob/main/source/resources/examples/%s/' % language
+    base_url = 'https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/%s/' % language
     path_split = file_path.split('/')
     path = "/".join(path_split[len(path_split)-2:])
     return base_url + path
 
 # -- Custom extlinks -----------------------------------------------------
 
-extlinks = {'schema': ('https://github.com/nemtech/catbuffer/blob/main/schemas/%s', 'file '),
-            'properties': ('https://github.com/nemtech/catapult-server/blob/main/resources/%s', 'file ')}
+extlinks = {'schema': ('https://github.com/symbol/catbuffer-schemas/blob/main/schemas/%s', 'file '),
+            'properties': ('https://github.com/symbol/catapult-server/blob/main/resources/%s', 'file ')}
 
 # -- Custom Pygments lexers ----------------------------------------------
 

@@ -48,10 +48,10 @@ msgstr "サーバ"
 
 #: ../../source/contribute/contributing.rst:66
 msgid ""
-"`Notes for developers <https://github.com/nemtech/catapult-"
+"`Notes for developers <https://github.com/symbol/catapult-"
 "server/blob/main/docs/README.md>`_"
 msgstr ""
-"`開発者向けメモ <https://github.com/nemtech/catapult-"
+"`開発者向けメモ <https://github.com/symbol/catapult-"
 "server/blob/main/docs/README.md>`_"
 
 #: ../../source/contribute/contributing.rst:67

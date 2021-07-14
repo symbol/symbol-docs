@@ -185,4 +185,4 @@ We recommend you continue reading the rest of :ref:`the guides <blog-categories>
 
 .. |symbol-cli| raw:: html
 
-   <a href="https://github.com/nemtech/symbol-cli" target="_blank">symbol-cli</a>
+   <a href="https://github.com/symbol/symbol-cli" target="_blank">symbol-cli</a>

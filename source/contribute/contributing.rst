@@ -23,7 +23,7 @@ Follow these guidelines for contributing to |codename| projects, achieving the b
 Server
 ******
 
-* `Notes for developers <https://github.com/nemtech/catapult-server/blob/main/docs/README.md>`_
+* `Notes for developers <https://github.com/symbol/catapult-server/blob/main/docs/README.md>`_
 * :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
 
 ***

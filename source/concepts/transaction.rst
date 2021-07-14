@@ -77,7 +77,7 @@ All transactions should define a deadline and a max_fee:
 
 * ``max_fee``: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. :doc:`The next documentation <fees>` shows you how to set the optimal max_fee value.
 
-.. note:: The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/nemtech/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.
+.. note:: The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.
 
 We recommend using the :doc:`SDK <../sdk>` to define new transactions.
 
@@ -100,14 +100,14 @@ Signing a transaction expresses the account's agreement to change the network st
 For example, a TransferTransaction describes who the recipient is and the number of mosaics to transfer.
 In this case, signing the transaction means to accept moving those mosaics from one account's balance to another.
 
-An account has to follow the next steps to `sign a transaction <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_:
+An account has to follow the next steps to `sign a transaction <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_:
 
 1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature, and signer.
 2. Get the nemesis block ``generation hash``. You can query ``nodeUrl + '/node/info'`` and copy ``meta.networkGenerationHash`` value.
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.
-6. Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127>`_ by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
+6. Calculate the `transaction hash <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127>`_ by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.
 
 .. example-code::
 

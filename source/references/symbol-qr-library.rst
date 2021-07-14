@@ -6,5 +6,5 @@ Symbol QR Library Reference
 Versions
 ********
 
-.. ghreference:: nemtech/symbol-qr-library
+.. ghreference:: symbol/symbol-qr-library
     :folder:

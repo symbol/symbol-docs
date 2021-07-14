@@ -141,7 +141,7 @@ To retrieve the network generration hash seed, open ``nodeUrl + '/node/info'`` i
 
 5. Open the terminal where you are monitoring the transaction's status.
 The transaction should appear as confirmed after 30 seconds at most and the amount defined gets transferred from the sender's account to the recipient's account.
-If the terminal raises an error, you can check the error code description `here <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml>`_.
+If the terminal raises an error, you can check the error code description `here <https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml>`_.
 
 *************************
 Method #03: Using the CLI

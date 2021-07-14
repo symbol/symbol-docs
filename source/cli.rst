@@ -62,5 +62,5 @@ These are the available commands for Symbol CLI separated by version.
 
 Find out which CLI version do you have installed by running ``symbol-cli`` from the command line.
 
-.. ghreference:: nemtech/symbol-cli
+.. ghreference:: symbol/symbol-cli
     :folder:

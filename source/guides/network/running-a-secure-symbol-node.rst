@@ -132,7 +132,7 @@ Preset
    -
      mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 
-You can read more about these properties in the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
+You can read more about these properties in the `security mode section <https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
 
 If you have customizations to make, like enabling :ref:`voting <finalization>` or enrolling in a :doc:`Reward Program <../../concepts/reward-programs>`, you can provide them too:
 
@@ -205,7 +205,7 @@ The following commands all use ``--max-fee 1000000`` which means that **1 XYM** 
 
    There is currently a limitation in ``symbol-cli`` which sets this deadline to **2 hours** after transaction creation, for all non-multisig transactions.
 
-   This is a known limitation which is `being tracked <https://github.com/nemtech/symbol-cli/issues/373>`__.
+   This is a known limitation which is `being tracked <https://github.com/symbol/symbol-cli/issues/373>`__.
 
 Remote key link
 ---------------

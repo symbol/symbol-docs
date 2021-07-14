@@ -84,12 +84,12 @@ msgstr ""
 
 #: ../../source/concepts/inflation.rst:75
 msgid ""
-"The `network configuration <https://github.com/nemtech/catapult-"
+"The `network configuration <https://github.com/symbol/catapult-"
 "server/blob/main/resources/config-network.properties>`_ also describes the "
 "initial and **maximum supply** of the native currency mosaic. The maximum "
 "supply takes into account the inflation generated per-block."
 msgstr ""
-"`ネットワーク設定 <https://github.com/nemtech/catapult-server/blob/main/resources"
+"`ネットワーク設定 <https://github.com/symbol/catapult-server/blob/main/resources"
 "/config-network.properties>`_ にはネイティブ通貨モザイクの初期および **最大供給量** "
 "も記述されています。最大供給量はブロック毎に生成されるインフレが考慮されています。"
 

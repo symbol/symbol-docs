@@ -140,7 +140,7 @@ Use the information in the ``main`` section to access the node's account. When a
 
 .. topic:: Encrypted private keys
 
-   By default Symbol Bootstrap encrypts all private keys in ``addresses.yml`` so they are not visible (see the `security mode section <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ for more details).
+   By default Symbol Bootstrap encrypts all private keys in ``addresses.yml`` so they are not visible (see the `security mode section <https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ for more details).
 
    To access the private keys (to **withdraw** funds from the main account, for example) you will need to use the ``symbol-bootstrap decrypt`` command:
 
@@ -232,7 +232,7 @@ Just like in the harvesting case, this creates the required :ref:`VotingKeyLink 
       symbol-bootstrap updateVotingKeys
       symbol-bootstrap link
 
-   The current keys will be examined and if any is close to expiration it will be renewed. If no action is needed the ``link`` command will do nothing, so no transaction fees will be paid (see `Symbol Bootstrap's manual <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/updateVotingKeys.md>`__ for more information).
+   The current keys will be examined and if any is close to expiration it will be renewed. If no action is needed the ``link`` command will do nothing, so no transaction fees will be paid (see `Symbol Bootstrap's manual <https://github.com/symbol/symbol-bootstrap/blob/main/docs/updateVotingKeys.md>`__ for more information).
 
    Therefore, running the above commands once a month guarantees that your voting keys will always be up to date.
 

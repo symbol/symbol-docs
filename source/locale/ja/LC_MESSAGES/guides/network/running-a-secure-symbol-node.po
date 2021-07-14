@@ -230,12 +230,12 @@ msgstr ""
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:175
 msgid ""
 "You can read more about these properties in the `security mode section "
-"<https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md"
+"<https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md"
 "#user-content-private-key-security-mode>`__ in Symbol Bootstrap's "
 "documentation."
 msgstr ""
 "これらのプロパティの詳細については、Symbol Bootstrap のドキュメントの `セキュリティーモードのセクション "
-"<https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md"
+"<https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md"
 "#user-content-private-key-security-mode>`__ を参照してください。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:177
@@ -315,8 +315,8 @@ msgstr "トランザクションの準備"
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:248
 msgid ""
 "This is a known limitation which is `being tracked "
-"<https://github.com/nemtech/symbol-cli/issues/373>`__."
-msgstr "`追跡中 <https://github.com/nemtech/symbol-cli/issues/373>`__ の既知の制限"
+"<https://github.com/symbol/symbol-cli/issues/373>`__."
+msgstr "`追跡中 <https://github.com/symbol/symbol-cli/issues/373>`__ の既知の制限"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:251
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:414

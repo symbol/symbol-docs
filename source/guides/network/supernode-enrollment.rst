@@ -40,11 +40,11 @@ Symbol Bootstrap is the **easiest way** to create and run |codename| nodes. :doc
 
    - If you need to change the default port that the monitoring agent uses (7881) you can add ``rewardProgramAgentPort: 7882`` (for example) **at the top of the file**.
 
-   - If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-private-keys>`__.
+   - If you already have some of the required node accounts (main, transport, remote, VRF or voting) `you can provide them in the preset file too <https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-specify-the-nodes-private-keys>`__.
 
      .. note:: When managing your node through a :doc:`multisig account <../../concepts/multisig-account>`, the **main** account in the above preset file must be **the multisig account** (and **not** any of its cosignatories).
 
-   See the full list of possible customizations in the `Symbol Bootstrap documentation <https://github.com/nemtech/symbol-bootstrap/blob/main/docs/presetGuides.md>`__.
+   See the full list of possible customizations in the `Symbol Bootstrap documentation <https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md>`__.
 
 3. **Create and run the node** using the new preset file:
 

@@ -4,7 +4,7 @@ Integrating with an Exchange
 
 This document is intended to **guide developers** through the integration of the ``XYM`` token into an **Exchange platform**. It contains recommendations on how to set up accounts, listen for deposits, and create withdrawals as well as code examples ready to be adopted.
 
-The code examples shared use the `Symbol SDK for TypeScript <https://github.com/nemtech/symbol-sdk-typescript-javascript>`__, but can be ported to other :doc:`available SDKs <../../sdk>` since all of them share the same design principles. If there is no SDK supported for a required programming language, you may still be able to integrate by connecting directly via Symbol's :doc:`REST API <../../api>`.
+The code examples shared use the `Symbol SDK for TypeScript <https://github.com/symbol/symbol-sdk-typescript-javascript>`__, but can be ported to other :doc:`available SDKs <../../sdk>` since all of them share the same design principles. If there is no SDK supported for a required programming language, you may still be able to integrate by connecting directly via Symbol's :doc:`REST API <../../api>`.
 
 Integration overview
 ********************
@@ -186,7 +186,7 @@ Transactions which are about to expire are delicate because, even if they get co
 The example code
 ================
 
-This guide shows snippets of code to exemplify the different processes. All snippets are based on the same program that `can be found here <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples/typescript/exchanges>`__. A few notes on this example program:
+This guide shows snippets of code to exemplify the different processes. All snippets are based on the same program that `can be found here <https://github.com/symbol/symbol-docs/tree/main/source/resources/examples/typescript/exchanges>`__. A few notes on this example program:
 
 - It uses a fake ``DBService`` object that simulates the Exchange database. Calls to this object should obviously be replaced by the actual Exchange infrastructure in production code. For simplicity these calls are synchronous but they could be made asynchronously too.
 

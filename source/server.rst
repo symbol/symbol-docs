@@ -43,11 +43,11 @@ Instructions on how to launch a secure and production-ready private chain will b
 
 .. |catapult-server| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
+   <a href="https://github.com/symbol/catapult-server" target="_blank">catapult-server</a>
 
 .. |instructions| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/blob/main/docs/README.md" target="_blank">instructions</a>
+   <a href="https://github.com/symbol/catapult-server/blob/main/docs/README.md" target="_blank">instructions</a>
 
 .. |whitepaper| raw:: html
 

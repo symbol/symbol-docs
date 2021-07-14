@@ -6,5 +6,5 @@ Symbol HD Wallets Reference
 Versions
 ********
 
-.. ghreference:: nemtech/symbol-hd-wallets
+.. ghreference:: symbol/symbol-hd-wallets
     :folder:

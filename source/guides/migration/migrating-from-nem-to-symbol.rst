@@ -188,7 +188,7 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 .. |ts-js-sdk| raw:: html
 
-   <a href="https://github.com/nemtech/symbol-sdk-typescript-javascript" target="_blank">TS/JS SDK</a>
+   <a href="https://github.com/symbol/symbol-sdk-typescript-javascript" target="_blank">TS/JS SDK</a>
 
 .. |ts-js-sdk-docs| raw:: html
 
@@ -200,7 +200,7 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 .. |catapult-schemas| raw:: html
 
-   <a href="https://github.com/nemtech/catbuffer/tree/main/schemas/" target="_blank">Serialization schemas</a>
+   <a href="https://github.com/symbol/catbuffer-schemas/tree/main/schemas/" target="_blank">Serialization schemas</a>
 
 .. |stack-overflow| raw:: html
 
@@ -208,4 +208,4 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 .. |under-development| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server/milestones/" target="_blank">under development</a>
+   <a href="https://github.com/symbol/catapult-server/milestones/" target="_blank">under development</a>

@@ -96,7 +96,7 @@ If you followed the :doc:`running-a-symbol-node-manually` guide, you need to reb
 In summary, you need to:
 
 - Stop the running Catapult Server with ``Ctrl+C``.
-- Update the Catapult Server source repository with the latest version and build it again following the `Catapult Server <https://github.com/nemtech/catapult-server/tree/main/docs>`__ instructions.
+- Update the Catapult Server source repository with the latest version and build it again following the `Catapult Server <https://github.com/symbol/catapult-server/tree/main/docs>`__ instructions.
 - Restart the server from the same folder it was initially launched. Data and configuration files will be reused.
 
 .. note::

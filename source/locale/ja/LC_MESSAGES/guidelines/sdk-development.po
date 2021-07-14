@@ -304,10 +304,10 @@ msgstr "トランザクションのシリアル化"
 
 #: ../../source/guidelines/sdk-development.rst:210
 msgid ""
-"The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
+"The `catbuffer library <https://github.com/symbol/catbuffer>`_ defines the "
 "protocol to serialize and deserialize |codename| entities."
 msgstr ""
-"`catbuffer ライブラリ <https://github.com/nemtech/catbuffer>`_ は |codename| "
+"`catbuffer ライブラリ <https://github.com/symbol/catbuffer>`_ は |codename| "
 "のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。"
 
 #: ../../source/guidelines/sdk-development.rst:225

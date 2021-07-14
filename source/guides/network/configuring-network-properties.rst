@@ -33,4 +33,4 @@ Inflation configuration
 
 .. |catapult-server| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-server" target="_blank">catapult-server</a>
+   <a href="https://github.com/symbol/catapult-server" target="_blank">catapult-server</a>

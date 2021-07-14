@@ -22,7 +22,7 @@ Build a Peer node
 Build the server
 ================
 
-Follow the `Catapult server <https://github.com/nemtech/catapult-server>`__ instructions to **build** its binaries, either `manually <https://github.com/nemtech/catapult-server/blob/main/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/nemtech/catapult-server/blob/main/docs/BUILD-conan.md>`__.
+Follow the `Catapult server <https://github.com/symbol/catapult-server>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/catapult-server/blob/main/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/catapult-server/blob/main/docs/BUILD-conan.md>`__.
 
 Generate keys
 =============
@@ -120,7 +120,7 @@ Configuration
 
 |codename| is **highly customizable** and this means there are a lot of parameters that can be adjusted to suit your node's needs. Some of these parameters are **network-related** and must match the rest of nodes in the network (for example ``currencyMosaicId``) whereas some others are **node-related** and you can set freely (for example ``friendlyName``).
 
-You can edit these files manually (Take a look at `these templates <https://github.com/nemtech/catapult-server/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/nemtech/symbol-node-configurator>`__ as shown next.
+You can edit these files manually (Take a look at `these templates <https://github.com/symbol/catapult-server/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/symbol/symbol-node-configurator>`__ as shown next.
 
 **The Configuration step can be performed on an offline machine for added security.**
 
@@ -131,7 +131,7 @@ You can edit these files manually (Take a look at `these templates <https://gith
 
 1. **Install symbol-node-configurator**.
 
-   - Download and extract `symbol-node-configurator.zip <https://github.com/nemtech/symbol-node-configurator/archive/refs/heads/main.zip>`__. Alternatively, clone the `GitHub repository <https://github.com/nemtech/symbol-node-configurator>`__ if you know how to use Git.
+   - Download and extract `symbol-node-configurator.zip <https://github.com/symbol/symbol-node-configurator/archive/refs/heads/main.zip>`__. Alternatively, clone the `GitHub repository <https://github.com/symbol/symbol-node-configurator>`__ if you know how to use Git.
 
    - Move into the ``symbol-node-configurator`` directory and install the tool's requirements by running:
 
@@ -406,7 +406,7 @@ Run the database
 
 3. **Build indices** to optimize database accesses.
 
-   The ``catapult-server`` repository you cloned to build the server in the first step contains `a folder with mongo scripts <https://github.com/nemtech/catapult-server/blob/main/scripts/mongo>`__. Run this one:
+   The ``catapult-server`` repository you cloned to build the server in the first step contains `a folder with mongo scripts <https://github.com/symbol/catapult-server/blob/main/scripts/mongo>`__. Run this one:
 
    .. code-block:: bash
 
@@ -446,7 +446,7 @@ Build and run the REST gateway
    .. code-block:: bash
 
       cd ..
-      git clone https://github.com/nemtech/catapult-rest.git
+      git clone https://github.com/symbol/catapult-rest.git
       cd catapult-rest
       npm install -g yarn
       ./yarn_setup.sh

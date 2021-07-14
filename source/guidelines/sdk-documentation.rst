@@ -16,7 +16,7 @@ Make sure that the README has the following sections.
 * Contributing
 * License
 
-**Template**: `README <https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/main/README.md>`_
+**Template**: `README <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/README.md>`_
 
 ***************************
 Comments and reference docs
@@ -41,7 +41,7 @@ Each guide comes with at least one snippet, which is an executable piece of code
 Writing snippets helps you to compare how the SDK code looks like in contrast with others.
 Furthermore, you will be testing manually if the SDK behaves correctly.
 
-1. `Fork <https://help.github.com/articles/fork-a-repo>`_ and clone `symbl-docs repository <https://github.com/nemtech/symbol-docs>`__.
+1. `Fork <https://help.github.com/articles/fork-a-repo>`_ and clone `symbl-docs repository <https://github.com/symbol/symbol-docs>`__.
 
 .. code-block:: bash
 
@@ -49,6 +49,6 @@ Furthermore, you will be testing manually if the SDK behaves correctly.
 
 2. Create a new folder under ``source/resources/examples/`` named as the programming language of your SDK.
 
-3. Adapt every `TypeScript snippet <https://github.com/nemtech/symbol-docs/tree/main/source/resources/examples/typescript>`__ using the new SDK.
+3. Adapt every `TypeScript snippet <https://github.com/symbol/symbol-docs/tree/main/source/resources/examples/typescript>`__ using the new SDK.
 
 4. Push the changes and `create a pull request <https://services.github.com/on-demand/intro-to-github/es/crear-pull-request>`__.

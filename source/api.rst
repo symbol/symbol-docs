@@ -24,7 +24,7 @@ Endpoints
 
 Refer to the next documentation to get the list of available endpoints.
 
-.. ghreference:: nemtech/symbol-openapi
+.. ghreference:: symbol/symbol-openapi
     :folder:
 
 To check the compatibility between the API specification and the REST Gateway implementation, see :doc:`Product Compatibility Matrix <../compatibility>`.
@@ -140,7 +140,7 @@ Each returned message contains information about a harvested block.
 
 *Response data*
 
-* `BlockInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_
+* `BlockInfoDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/core/block/schemas/BlockInfoDTO.yml>`_
 
 **finalizedBlock**
 
@@ -158,7 +158,7 @@ Each returned message contains information about the **highest block** in the fi
 
 *Response data*
 
-* `FinalizedBlockDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/chain/schemas/FinalizedBlockDTO.yml>`_
+* `FinalizedBlockDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/core/chain/schemas/FinalizedBlockDTO.yml>`_
 
 **confirmedAdded/{address}**
 
@@ -176,7 +176,7 @@ Each returned message contains information about a confirmed transaction.
 
 *Response data*
 
-* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **unconfirmedAdded/{address}**
 
@@ -196,7 +196,7 @@ Possible scenarios when this message is received are: the transaction is announc
 
 *Response data*
 
-* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **unconfirmedRemoved/{address}**
 
@@ -234,7 +234,7 @@ Each returned message contains information about an added partial transaction.
 
 *Response data*
 
-* `TransactionInfoDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
+* `TransactionInfoDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionInfoDTO.yml>`_
 
 **partialRemoved/{address}**
 
@@ -272,7 +272,7 @@ Each returned message contains a cosignature-signed transaction.
 
 *Response data*
 
-* `CosignatureDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
+* `CosignatureDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/plugins/aggregate/schemas/CosignatureDTO.yml>`_
 
 **status/{address}**
 
@@ -290,7 +290,7 @@ Each returned message contains an error message and a transaction hash.
 
 *Response data*
 
-* `TransactionStatusDTO <https://github.com/nemtech/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
+* `TransactionStatusDTO <https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusDTO.yml>`_
 
 .. |yarn| raw:: html
 
@@ -298,4 +298,4 @@ Each returned message contains an error message and a transaction hash.
 
 .. |catapult-rest| raw:: html
 
-   <a href="https://github.com/nemtech/catapult-rest" target="_blank">Catapult REST</a>
+   <a href="https://github.com/symbol/catapult-rest" target="_blank">Catapult REST</a>

@@ -6,5 +6,5 @@ Java SDK Reference
 Versions
 ********
 
-.. ghreference:: nemtech/symbol-sdk-java
+.. ghreference:: symbol/symbol-sdk-java
     :folder: javadoc

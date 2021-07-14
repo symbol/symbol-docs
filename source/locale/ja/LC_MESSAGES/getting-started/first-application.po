@@ -297,11 +297,11 @@ msgstr "トランザクションをアナウンスしたら、ターミナルに
 msgid ""
 "The transaction should appear as confirmed after 30 seconds at most. If the "
 "terminal raises an error, you can check the error code description `here "
-"<https://github.com/nemtech/symbol-"
+"<https://github.com/symbol/symbol-"
 "openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml>`_."
 msgstr ""
 "トランザクションは最大30秒で承認済みとして現れてきます。ターミナルでエラーが起きた場合、エラーコードの意味は `こちら "
-"<https://github.com/nemtech/symbol-"
+"<https://github.com/symbol/symbol-"
 "openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml>`_"
 " を参照してください。"
 

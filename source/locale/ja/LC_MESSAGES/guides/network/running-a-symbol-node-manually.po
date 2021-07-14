@@ -71,16 +71,16 @@ msgstr "サーバのビルド"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:65
 msgid ""
-"Follow the `Catapult server <https://github.com/nemtech/catapult-server>`__ "
+"Follow the `Catapult server <https://github.com/symbol/catapult-server>`__ "
 "instructions to **build** its binaries, either `manually "
-"<https://github.com/nemtech/catapult-server/blob/main/docs/BUILD-"
-"manual.md>`__ or using `Conan <https://github.com/nemtech/catapult-"
+"<https://github.com/symbol/catapult-server/blob/main/docs/BUILD-"
+"manual.md>`__ or using `Conan <https://github.com/symbol/catapult-"
 "server/blob/main/docs/BUILD-conan.md>`__."
 msgstr ""
-"`Catapult server <https://github.com/nemtech/catapult-server>`__ のバイナリを "
-"**ビルド** するために、 `手動 <https://github.com/nemtech/catapult-"
+"`Catapult server <https://github.com/symbol/catapult-server>`__ のバイナリを "
+"**ビルド** するために、 `手動 <https://github.com/symbol/catapult-"
 "server/blob/main/docs/BUILD-manual.md>`__ または `Conan "
-"<https://github.com/nemtech/catapult-server/blob/main/docs/BUILD-"
+"<https://github.com/symbol/catapult-server/blob/main/docs/BUILD-"
 "conan.md>`__ を使用したインストラクションに従います。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:68
@@ -191,14 +191,14 @@ msgstr "**symbol-node-configurator のインストール**"
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:174
 msgid ""
 "Download and extract `symbol-node-configurator.zip "
-"<https://github.com/nemtech/symbol-node-"
+"<https://github.com/symbol/symbol-node-"
 "configurator/archive/refs/heads/main.zip>`__. Alternatively, clone the "
-"`GitHub repository <https://github.com/nemtech/symbol-node-configurator>`__ "
+"`GitHub repository <https://github.com/symbol/symbol-node-configurator>`__ "
 "if you know how to use Git."
 msgstr ""
-"`symbol-node-configurator.zip <https://github.com/nemtech/symbol-node-"
+"`symbol-node-configurator.zip <https://github.com/symbol/symbol-node-"
 "configurator/archive/refs/heads/main.zip>`__ をダウンロードして展開します。他にも `GitHub "
-"リポジトリ <https://github.com/nemtech/symbol-node-configurator>`__ "
+"リポジトリ <https://github.com/symbol/symbol-node-configurator>`__ "
 "をクローンすることもできます。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:182
@@ -447,11 +447,11 @@ msgstr "データベースアクセスの最適化のために **インデック
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:449
 msgid ""
 "The ``catapult-server`` repository you cloned to build the server in the "
-"first step contains `a folder with mongo scripts <https://github.com/nemtech"
+"first step contains `a folder with mongo scripts <https://github.com/symbol"
 "/catapult-server/blob/main/scripts/mongo>`__. Run this one:"
 msgstr ""
 "最初のステップで、ビルドのためにあなたがクローンした ``catapult-server`` リポジトリは `mongo スクリプトのフォルダ "
-"<https://github.com/nemtech/catapult-server/blob/main/scripts/mongo>`__ "
+"<https://github.com/symbol/catapult-server/blob/main/scripts/mongo>`__ "
 "が含まれています。これを実行します:"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:455

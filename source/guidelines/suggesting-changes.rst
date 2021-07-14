@@ -108,7 +108,7 @@ Whether or not you state this explicitly, by submitting any copyrighted material
 
 .. |issue| raw:: html
 
-   <a href="https://github.com/nemtech/symbol-docs/issues" target="_blank">issue</a>
+   <a href="https://github.com/symbol/symbol-docs/issues" target="_blank">issue</a>
 
 .. |github-help| raw:: html
 
@@ -120,4 +120,4 @@ Whether or not you state this explicitly, by submitting any copyrighted material
 
 .. |repository| raw:: html
 
-   <a href="https://github.com/nemtech/symbol-docs/" target="_blank">symbol-docs repository</a>
+   <a href="https://github.com/symbol/symbol-docs/" target="_blank">symbol-docs repository</a>

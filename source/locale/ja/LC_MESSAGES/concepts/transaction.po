@@ -264,15 +264,15 @@ msgstr ""
 
 #: ../../source/concepts/transaction.rst:120
 msgid ""
-"The `catbuffer schemas <https://github.com/nemtech/catbuffer>`_ repository "
+"The `catbuffer schemas <https://github.com/symbol/catbuffer>`_ repository "
 "defines how each transaction type should be serialized. In combination with "
-"the `catbuffer-generators <https://github.com/nemtech/catbuffer-"
+"the `catbuffer-generators <https://github.com/symbol/catbuffer-"
 "generators>`_ project, developers can generate builder classes for a given "
 "set of programming languages."
 msgstr ""
-"`catbuffer スキーマ <https://github.com/nemtech/catbuffer>`_ "
+"`catbuffer スキーマ <https://github.com/symbol/catbuffer>`_ "
 "リポジトリはどのように各トランザクションタイプがシリアライズされるべきかを定義しています。 `catbuffer-generators "
-"<https://github.com/nemtech/catbuffer-generators>`_ "
+"<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
 #: ../../source/concepts/transaction.rst:122
@@ -303,10 +303,10 @@ msgstr ""
 #: ../../source/concepts/transaction.rst:143
 msgid ""
 "An account has to follow the next steps to `sign a transaction "
-"<https://github.com/nemtech/symbol-sdk-typescript-"
+"<https://github.com/symbol/symbol-sdk-typescript-"
 "javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_:"
 msgstr ""
-"アカウントは `トランザクションへ署名 <https://github.com/nemtech/symbol-sdk-typescript-"
+"アカウントは `トランザクションへ署名 <https://github.com/symbol/symbol-sdk-typescript-"
 "javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_ "
 "をするために次のステップに従う必要があります:"
 
@@ -342,14 +342,14 @@ msgstr "署名者の署名と公開鍵をトランザクションに追加して
 
 #: ../../source/concepts/transaction.rst:150
 msgid ""
-"Calculate the `transaction hash <https://github.com/nemtech/symbol-sdk-"
+"Calculate the `transaction hash <https://github.com/symbol/symbol-sdk-"
 "typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127>`_"
 " by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, "
 "the signer public key, nemesis block generation hash, and the remaining "
 "transaction payload."
 msgstr ""
 "署名の最初の 32 バイト、署名者公開鍵、ネメシスブロックジェネレーションハッシュ、残りのトランザクションペイロードに SHA3-512 "
-"ハッシュアルゴリズムを適用して `トランザクションハッシュ <https://github.com/nemtech/symbol-sdk-"
+"ハッシュアルゴリズムを適用して `トランザクションハッシュ <https://github.com/symbol/symbol-sdk-"
 "typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127>`_"
 " を計算します。"
 

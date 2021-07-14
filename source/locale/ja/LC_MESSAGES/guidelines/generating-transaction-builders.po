@@ -36,12 +36,12 @@ msgstr "背景"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:51
 msgid ""
-"The `catbuffer library <https://github.com/nemtech/catbuffer>`_ defines the "
+"The `catbuffer library <https://github.com/symbol/catbuffer>`_ defines the "
 "protocol to serialize and deserialize |codename| entities. The library comes"
 " with code generators for different languages. SDKs and applications use the"
 " generated code to interact with REST transaction endpoint."
 msgstr ""
-"`catbuffer ライブラリ <https://github.com/nemtech/catbuffer>`_ は |codename| "
+"`catbuffer ライブラリ <https://github.com/symbol/catbuffer>`_ は |codename| "
 "のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。SDK とアプリケーションは REST "
 "トランザクションエンドポイントと疎通するために生成されたコードを利用します。"
 
@@ -98,11 +98,11 @@ msgstr ""
 
 #: ../../source/guidelines/generating-transaction-builders.rst:80
 msgid ""
-"The `schemas <https://github.com/nemtech/catbuffer/tree/main/schemas>`_ "
+"The `schemas <https://github.com/symbol/catbuffer/tree/main/schemas>`_ "
 "define the entities' data structure. The library generates the leanest code "
 "necessary to serialize and deserialize defined entities."
 msgstr ""
-"`スキーマ <https://github.com/nemtech/catbuffer/tree/main/schemas>`_ "
+"`スキーマ <https://github.com/symbol/catbuffer/tree/main/schemas>`_ "
 "はエンティティのデータ構造を定義します。このライブラリは定義済みエンティティを、シリアライズまたはデシリアライズするために必要な最低限のコードを生成します。"
 
 #: ../../source/guidelines/generating-transaction-builders.rst:85
