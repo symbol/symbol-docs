@@ -268,9 +268,9 @@ rst_prolog = """
 .. |sdk| replace:: Symbol SDK
 .. |cli| replace:: Symbol CLI
 .. |desktop-wallet| replace:: Symbol Desktop Wallet
-.. |slack| raw:: html
+.. |discord| raw:: html
 
-   <a href="https://join.slack.com/t/nem2/shared_invite/zt-km50fzxd-I8dPNrPEV6cqYVrhyLvrfA" target="_blank">Slack</a>
+   <a href="https://discord.com/invite/xymcity" target="_blank">Discord</a>
 
 .. |nem| raw:: html
 

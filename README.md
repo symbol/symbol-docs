@@ -48,12 +48,12 @@ Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, 
 Symbol is an [open-source](https://github.com/symbol) project.
 Discover how our [community](https://github.com/symbol/community/) is organized, and get started participating:
 
-*  Reach our community joining the official [Slack](https://join.slack.com/t/nem2/shared_invite/zt-km50fzxd-I8dPNrPEV6cqYVrhyLvrfA).
-*  Check the [contributing guidelines](https://docs.symbolplatform.com/guidelines/suggesting-changes.html) to propose changes.
-*  Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
-*  Explore our [GitHub](https://github.com/symbol) repositories.
+* Reach our community joining the official [Discord](https://discord.com/invite/xymcity).
+* Check the [contributing guidelines](https://docs.symbolplatform.com/guidelines/suggesting-changes.html) to propose changes.
+* Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
+* Explore our [GitHub](https://github.com/symbol) repositories.
 
 ## License
 
-Copyright (c) 2018-present NEM 
+Copyright (c) 2018-present NEM
 Licensed under the [Apache License 2.0](https://github.com/symbol/symbol-docs/blob/main/LICENSE)

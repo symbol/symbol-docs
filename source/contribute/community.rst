@@ -7,7 +7,7 @@ Most of the documentation and guides that the |sitename| has today have been add
 
 Discover how the open source |community| works, and get started participating:
 
-* Reach our community by joining the |slack|.
+* Reach our community by joining the |discord| server.
 
 * Check the :doc:`contributing guidelines <../guidelines/suggesting-changes>` to propose changes.
 

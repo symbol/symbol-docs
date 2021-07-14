@@ -9,7 +9,7 @@ Before starting
 ***************
 
 If you are looking for inspiration to write the guide, you can browse the `symbol-docs repository open issues <https://github.com/symbol/symbol-docs/issues>`_ to find some ideas pending to be written.
-We also encourage you to join our |slack| #sig-docs channel and present yourself!
+We also encourage you to join our |discord| server and introduced yourself!
 
 To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
 If there is no issue yet, create a new one introducing the content you want to publish.
