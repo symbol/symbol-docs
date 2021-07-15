@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"PO-Revision-Date: 2021-07-07 15:07+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:43
+msgid "REST API Troubleshooting Guide for Exchanges"
+msgstr "交換所に関する REST API トラブルシューティング"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:49
+msgid "Feel free to jump directly to the section of your interest."
+msgstr "読みたいセクションへ直接移動してください。"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:56
+msgid "Receiving transactions"
+msgstr "トランザクションの受信"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:59
+msgid "Filtering (by block height and more)"
+msgstr "フィルタリング (ブロック高やその他)"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Parameter"
+msgstr "パラメタ"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Type"
+msgstr "タイプ"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Effect"
+msgstr "影響"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:139
+msgid "Alias resolution"
+msgstr "エイリアスの解決"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:155
+msgid "**Example using TESTNET:**"
+msgstr "**TESTNET を用いた例:**"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:215
+msgid "Transaction deadline"
+msgstr "トランザクション期限"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:235
+msgid "Transaction fee"
+msgstr "トランザクション手数料"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:243
+msgid ""
+"As a consequence, choosing the right maximum fee for a transaction is very "
+"important: Too low a number and the transaction will not be confirmed by any"
+" node and will eventually expire. Too high maximum fees, though, will incur "
+"in unnecessary expenses."
+msgstr ""
+"結論として、トランザクションに適切な最大手数料を選択することは非常に重要です: "
+"手数料が少なすぎると、トランザクションはどのノードによっても承認されず、最終的には期限切れになります。しかし、最大手数料が高すぎると、不必要なコストが発生します。"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Meaning"
+msgstr "意味"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Highest"
+msgstr "最高"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Biggest fee multiplier used in the last 60 blocks."
+msgstr "直近 60 ブロックで使用された最大の手数料乗数。"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Median"
+msgstr "頻出"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Mean"
+msgstr "平均"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Lowest"
+msgstr "最低"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Smallest fee multiplier used in the last 60 blocks."
+msgstr "直近 60 ブロックで使用された最小の手数料乗数。"
+
+#: ../../source/guides/exchanges/exchange-REST-troubleshooting.rst:1
+msgid "Min"
+msgstr "最小"

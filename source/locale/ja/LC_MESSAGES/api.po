@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2019-02-22 08:56+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -180,10 +180,11 @@ msgstr "デフォルト"
 #: ../../source/api.rst:1
 msgid ""
 "Selects the number of entries to return. Example: "
-"``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per page"
+"``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per "
+"``page``"
 msgstr ""
-"返却するエントリの数を選択します。例: ``http://localhost:3000/blocks?pageSize=100``  ページにつき "
-"100 エントリを返却します"
+"返却するエントリの数を選択します。例: ``http://localhost:3000/blocks?pageSize=100`` ``ページ`` "
+"あたり 100 エントリを返却します"
 
 #: ../../source/api.rst:1
 msgid ""
@@ -267,6 +268,10 @@ msgid ""
 msgstr ""
 "ガイド: :doc:`WebSocket チャンネルの購読 <guides/blockchain/listening-new-blocks>`"
 
+#: ../../source/api.rst:150
+msgid "Response format"
+msgstr "レスポンス形式"
+
 #: ../../source/api.rst:152
 msgid "All channels share the same response format, which is:"
 msgstr "すべてのチャンネルは同じレスポンスフォーマットを共有しています:"
@@ -309,6 +314,12 @@ msgstr ""
 #: ../../source/api.rst:286 ../../source/api.rst:304 ../../source/api.rst:322
 msgid "*Request body*"
 msgstr "*リクエストボディ*"
+
+#: ../../source/api.rst:181 ../../source/api.rst:199 ../../source/api.rst:217
+#: ../../source/api.rst:237 ../../source/api.rst:257 ../../source/api.rst:275
+#: ../../source/api.rst:295 ../../source/api.rst:313 ../../source/api.rst:331
+msgid "*Response data*"
+msgstr "*レスポンスデータ*"
 
 #: ../../source/api.rst:185
 msgid "**finalizedBlock**"

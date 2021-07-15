@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,8 +129,8 @@ msgid ""
 msgstr "譲渡可能、更新可能、ブランド付け、共同所有のブロックチェーン公証"
 
 #: ../../source/sdk.rst:1
-msgid "Library to debug rand access |codename| node data."
-msgstr "|codename| ノードデータにランダムアクセスするデバッグライブラリ"
+msgid "Hierarchical-deterministic wallets library for |codename|."
+msgstr "|codename| 用 HD ウォレットを扱うためのライブラリ。"
 
 #: ../../source/sdk.rst:1
 msgid "QR library for |codename|."
@@ -144,26 +144,26 @@ msgstr "|codename| 用URI スキーマライブラリ"
 msgid "Implementing Shamir's secret sharing on |codename|."
 msgstr "|codename| でシャミア秘密共有を実装する。"
 
-#: ../../source/sdk.rst:103
+#: ../../source/sdk.rst:102
 msgid ""
 "To make a library official, the library should be proposed through the |NIP|"
 " process."
 msgstr "公式のライブラリとなるためには、 |NIP|  を通して提案する必要があります。"
 
-#: ../../source/sdk.rst:105
+#: ../../source/sdk.rst:104
 msgid "The reason behind the |NIP| is to ensure that:"
 msgstr "|NIP| の背景"
 
-#: ../../source/sdk.rst:107
+#: ../../source/sdk.rst:106
 msgid "The specification has been discussed and accepted."
 msgstr "議論され受理された仕様"
 
-#: ../../source/sdk.rst:108
+#: ../../source/sdk.rst:107
 msgid ""
 "The new library is reviewed, tested and shared among |codename| developers."
 msgstr "新しいライブラリは |codename| 開発者の間でレビュー、テスト、共有されます。"
 
-#: ../../source/sdk.rst:109
+#: ../../source/sdk.rst:108
 msgid ""
 "The library is compatible with third-party projects that uses the same "
 "specification."

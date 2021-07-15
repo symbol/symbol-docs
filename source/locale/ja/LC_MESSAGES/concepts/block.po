@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2019-02-22 09:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -118,7 +118,7 @@ msgstr "手数料乗数はブロックのトランザクションに適用され
 msgid "Reserved padding to align end of BlockHeader on 8-byte boundary."
 msgstr "BlockHeader の終わりを 8 バイト境界に揃えた予約パディング"
 
-#: ../../source/concepts/block.rst:100
+#: ../../source/concepts/block.rst:102
 msgid ""
 "|codename| calls the first block in the chain the **nemesis block**. The "
 "first block is defined before launching a new network and sets the "
@@ -127,13 +127,13 @@ msgstr ""
 "|codename| チェーンの原初ブロックを **nemesis ブロック** "
 "と呼びます。原初ブロックは新しいネットワークを起動する前に定義され、ネットワーク通貨モザイクの頒布を設定します。"
 
-#: ../../source/concepts/block.rst:103
+#: ../../source/concepts/block.rst:105
 msgid ""
 "The process of creating the subsequent new blocks is called :doc:`harvesting"
 " <harvesting>`."
 msgstr "後続する新しいブロックを生成するプロセスを :doc:`ハーベスティング <harvesting>` と呼びます。"
 
-#: ../../source/concepts/block.rst:105
+#: ../../source/concepts/block.rst:107
 msgid ""
 "Blocks are created by :doc:`accounts <account>`, which are chosen by the "
 ":doc:`consensus algorithm <consensus-algorithm>` based on their importance "
@@ -144,7 +144,7 @@ msgstr ""
 ":doc:`アカウント <account>` "
 "によって作成されます。コンセンサスアルゴリズムは各ブロックの作成後に後続ブロックをハーベストするための新しいアカウントを決定します。"
 
-#: ../../source/concepts/block.rst:108
+#: ../../source/concepts/block.rst:110
 msgid ""
 "The harvesting account receives the :doc:`fees <fees>` for the transactions "
 "added in the block and the mosaics created by :doc:`inflation <inflation>`. "
@@ -155,11 +155,11 @@ msgstr ""
 "<inflation>` "
 "によって作成されたモザイクを受け取ります。これはハーベスタはできるだけ多くのトランザクションをブロックに追加するためのインセンティブを与えます。"
 
-#: ../../source/concepts/block.rst:115
+#: ../../source/concepts/block.rst:117
 msgid "Rollbacks"
 msgstr "ロールバック"
 
-#: ../../source/concepts/block.rst:117
+#: ../../source/concepts/block.rst:119
 msgid ""
 "To ensure fast response times, the |codename| blockchain is designed in a "
 "way that, in the presence of a network failure or partition, requests are "
@@ -168,7 +168,7 @@ msgstr ""
 "速い応答時間を確保するために、|codename| "
 "ブロックチェーンは、ネットワーク障害またはパーティションが存在する場合でも、要求に応答し、トランザクションがブロックチェーンに追加されるように設計されています。"
 
-#: ../../source/concepts/block.rst:119
+#: ../../source/concepts/block.rst:121
 msgid ""
 "This naturally leads to **forks**, this is, different chains are created in "
 "the disconnected parts of the network. Once connectivity is restored **fork "
@@ -177,7 +177,7 @@ msgstr ""
 "このことは当然のことながら **フォーク** を発生させます。つまり、ネットワークで切断された部分に異なるチェーンが作成されます。接続が回復すると "
 "**フォーク解消** が行われ、分岐したチェーンがひとつにマージされます。"
 
-#: ../../source/concepts/block.rst:121
+#: ../../source/concepts/block.rst:123
 msgid ""
 "This process might require that some blocks are **rolled back**: they are "
 "removed from the blockchain so all their transactions move to the "
@@ -190,7 +190,7 @@ msgstr ""
 ":ref:`validated <transaction-validation>` "
 "になる必要があります。この時に、それらの期限は再確認されることなく、期限切れになる可能性があります。"
 
-#: ../../source/concepts/block.rst:123
+#: ../../source/concepts/block.rst:125
 msgid ""
 "For this reason, **confirmed** transactions (which have already been added "
 "to the blockchain) cannot be relied upon until their block is "
@@ -199,11 +199,11 @@ msgstr ""
 "このため以下に示すように、ブロックが :ref:`finalized <finalization>` になるまで **承認済み** のトランザクション "
 "(ブロックチェーンへ追加されている) でも信頼できません。"
 
-#: ../../source/concepts/block.rst:129
+#: ../../source/concepts/block.rst:131
 msgid "Finalization"
 msgstr "ファイナライゼーション"
 
-#: ../../source/concepts/block.rst:131
+#: ../../source/concepts/block.rst:133
 msgid ""
 "This is the process of making changes on a blockchain ledger permanent. "
 "Before blocks reach finality, they still might need to be rolled back in the"
@@ -212,7 +212,7 @@ msgid ""
 msgstr ""
 "これはブロックチェーン台帳の変更を永続的にするプロセスです。ブロックがファイナリティに到達する前に、ネットワーク障害またはパーティションが存在する場合、ブロックをロールバックする必要になる可能性があります。しかし、ブロックがファイナライズされると、それらは不変となります。"
 
-#: ../../source/concepts/block.rst:134
+#: ../../source/concepts/block.rst:136
 msgid ""
 "Finalization occurs in rounds. In each round, a **sorting algorithm** "
 "selects the accounts responsible for validating all blocks pending "
@@ -222,7 +222,7 @@ msgstr ""
 "ファイナライズはラウンドで行われます。各ラウンドで **ソートアルゴリズム** "
 "は、ファイナライズを保留しているすべてのブロックの検証を担当するアカウントを選択します。提案されたブロックがアカウントのノードのレコードと一致する場合、そのアカウントは肯定的な票を投じます。"
 
-#: ../../source/concepts/block.rst:136
+#: ../../source/concepts/block.rst:138
 msgid ""
 "Once **70% of the stakes** selected for voting have emitted positive votes, "
 "the block becomes finalized. At that point the transactions linked to the "
@@ -231,22 +231,22 @@ msgstr ""
 "投票用に選択された **ステークの70%** "
 "が、肯定的な票を投じるとブロックが確定します。その時点でブロックにリンクされたトランザクションはブロックチェーンに永続的に記録されます。"
 
-#: ../../source/concepts/block.rst:139
+#: ../../source/concepts/block.rst:141
 msgid "In order to be eligible as a voter, an account must:"
 msgstr "有権者としての資格を得るには、アカウントが次の条件を満たしている必要があります:"
 
-#: ../../source/concepts/block.rst:141
+#: ../../source/concepts/block.rst:143
 msgid "Be the owner of a node."
 msgstr "ノードの所有者になります。"
 
-#: ../../source/concepts/block.rst:142
+#: ../../source/concepts/block.rst:144
 msgid ""
 "Have at least :ref:`minVoterBalance <config-network-properties>` network "
 "currency units."
 msgstr ""
 "最低 :ref:`minVoterBalance <config-network-properties>` ネットワーク通貨単位が必要です。"
 
-#: ../../source/concepts/block.rst:143
+#: ../../source/concepts/block.rst:145
 msgid ""
 "Be registered as a voter by announcing a :ref:`VotingKeyLinkTransaction "
 "<voting-key-link-transaction>` to the network."
@@ -254,7 +254,7 @@ msgstr ""
 ":ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` "
 "をネットワークに通知することで有権者として登録されます。"
 
-#: ../../source/concepts/block.rst:145
+#: ../../source/concepts/block.rst:147
 msgid ""
 "When there is low connectivity, or many bad actors, finalization can take "
 "longer than usual and create large :ref:`rollbacks`. However, no finalized "
@@ -263,14 +263,14 @@ msgstr ""
 "接続性が低い場合、または多くの不正なアクターがいる場合、ファイナライズは通常より時間がかかり、大きな :ref:`rollbacks` "
 "が作成される可能性があります。ただし、ファイナライズされたブロックはロールバックされません。"
 
-#: ../../source/concepts/block.rst:147
+#: ../../source/concepts/block.rst:149
 msgid ""
 "Thus, clients that rely on the immutability of the blockchain history should"
 " only trust **transactions from finalized blocks**."
 msgstr ""
 "したがって、ブロックチェーン履歴の不変性に依存するクライアントは **ファイナライズされたブロックのトランザクション** のみを信頼するべきです。"
 
-#: ../../source/concepts/block.rst:151
+#: ../../source/concepts/block.rst:153
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -280,10 +280,10 @@ msgid ""
 "to vote finalized blocks."
 msgstr "アカウントを BLS 公開鍵にリンクします。ファイナライズ済みブロックに投票する意思のあるノードオペレータに必要です。"
 
-#: ../../source/concepts/block.rst:162
+#: ../../source/concepts/block.rst:164
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/block.rst:172
+#: ../../source/concepts/block.rst:174
 msgid "Continue: :doc:`Transaction <transaction>`."
 msgstr "次項: :doc:`トランザクション <transaction>`"
