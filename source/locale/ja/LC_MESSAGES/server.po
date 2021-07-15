@@ -34,7 +34,7 @@ msgstr ""
 
 #: ../../source/server.rst:47
 msgid ""
-"These nodes are deployed using |catapult-server| software, a C++ rewrite of "
+"These nodes are deployed using |catapult-client| software, a C++ rewrite of "
 "the previous Java-written NEM distributed ledger that has been running since"
 " 2015."
 msgstr ""
@@ -54,22 +54,22 @@ msgstr "イメージのビルド"
 
 #: ../../source/server.rst:55
 msgid ""
-"To compile catapult-server source code, follow the building |instructions|."
-msgstr "catapult-server をソースコードからコンパイルするには |instructions| に従ってください。"
+"To compile catapult-client source code, follow the building |instructions|."
+msgstr "catapult-client をソースコードからコンパイルするには |instructions| に従ってください。"
 
 #: ../../source/server.rst:59
-msgid "Running catapult-server"
-msgstr "catapult-server の起動"
+msgid "Running catapult-client"
+msgstr "catapult-client の起動"
 
 #: ../../source/server.rst:61
 msgid ""
-"catapult-server executable can be used either to run different types of "
+"catapult-client executable can be used either to run different types of "
 "nodes or to launch new networks. This section contains the instructions on "
-"how to run the catapult-server for various purposes."
+"how to run the catapult-client for various purposes."
 msgstr ""
-"catapult-server "
+"catapult-client "
 "実行可能ファイルは、様々なタイプのノードを立ち上げたり、新しいネットワークを起動したりするために使用できます。このセクションでは色々な目的で "
-"catapult-server を実行する方法について説明します。"
+"catapult-client を実行する方法について説明します。"
 
 #: ../../source/server.rst:65
 msgid "Running a network node"

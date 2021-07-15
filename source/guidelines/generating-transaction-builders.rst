@@ -30,7 +30,7 @@ Furthermore, reading entities from memory buffers—or just a part of them—is 
 
 REST `transaction endpoints <https://docs.symbolplatform.com/symbol-openapi/v0.11.3/#operation/announceTransaction>`_ handle the calls to update the blockchain state.
 The serialized payload of a transaction is appended to the body of the POST call.
-These endpoints allow the addition of new functionality to the server-side without modifying the API contract.
+These endpoints allow the addition of new functionality to the client-side without modifying the API contract.
 
 **Reusability**
 

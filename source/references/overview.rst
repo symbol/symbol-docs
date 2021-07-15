@@ -60,12 +60,12 @@ The open-source command-line interface to interact with the Symbol blockchain.
 System Administration
 *********************
 
-Catapult Server
+Catapult Client
 ===============
 
 Symbol-based networks rely on nodes to provide a trustless, high-performance, and secure blockchain platform.
 
-These nodes are deployed using ``catapult-server`` software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
+These nodes are deployed using ``catapult-client`` software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
 
 :doc:`Read more ...<../server>`.
 

@@ -44,11 +44,11 @@ msgstr ""
 
 #: ../../source/guides/network/configuring-network-properties.rst:54
 msgid ""
-"These settings can also be directly provided to |catapult-server| through "
+"These settings can also be directly provided to |catapult-client| through "
 "``.properties`` files. The header of each of the tables below indicates "
 "which file contains that table's properties."
 msgstr ""
-"これらの設定は ``.properties`` ファイルを介して |catapult-server| "
+"これらの設定は ``.properties`` ファイルを介して |catapult-client| "
 "に直接提供することもできます。以下の各テーブルのヘッダーは、そのテーブルのプロパティが含まれているファイルを示しています。"
 
 #: ../../source/guides/network/configuring-network-properties.rst:56

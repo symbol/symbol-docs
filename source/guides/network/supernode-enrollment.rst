@@ -98,7 +98,7 @@ If you don't want (or cannot) use Symbol Bootstrap you can still enroll your nod
 
 First off, make sure your node is up and running (or ready to run). The :doc:`running-a-symbol-node-manually` guide explains how to setup the node.
 
-After following that guide, you need to **install a monitoring agent** and **announce a special transaction**. You are going to create a few files, so please create a folder to keep your filesystem tidy (for example called ``agent`` inside Catapult Server's ``_build`` folder).
+After following that guide, you need to **install a monitoring agent** and **announce a special transaction**. You are going to create a few files, so please create a folder to keep your filesystem tidy (for example called ``agent`` inside Catapult client's ``_build`` folder).
 
 1. **Download the node monitoring agent**:
 

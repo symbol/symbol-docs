@@ -59,11 +59,11 @@ msgstr "アーキテクチャ"
 msgid ""
 "The simplest form of a |codename| plugin is a file written in C++ that "
 "registers a ``PluginManager`` and exposes a single entry point. The file has"
-" to match the following format so that :doc:`catapult-server <../server>` "
+" to match the following format so that :doc:`catapult-client <../server>` "
 "can dynamically link the plugin."
 msgstr ""
 "|codename| の最も単純な形式のプラグインは C++ で記述されたファイルで ``PluginManager`` "
-"を登録し、単一のエントリポイントを公開します。 :doc:`catapult-server <../server>` "
+"を登録し、単一のエントリポイントを公開します。 :doc:`catapult-client <../server>` "
 "がプラグインを動的にリンクできるように、ファイルは次の形式に一致する必要があります。"
 
 #: ../../source/concepts/plugin.rst:74

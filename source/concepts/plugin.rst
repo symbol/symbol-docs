@@ -15,7 +15,7 @@ Architecture
 ************
 
 The simplest form of a |codename| plugin is a file written in C++ that registers a ``PluginManager`` and exposes a single entry point.
-The file has to match the following format so that :doc:`catapult-server <../server>` can dynamically link the plugin.
+The file has to match the following format so that :doc:`catapult-client <../server>` can dynamically link the plugin.
 
 .. code-block:: c++
 

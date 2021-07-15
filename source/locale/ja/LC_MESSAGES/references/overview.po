@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../../source/references/overview.rst:108
 msgid ""
-"These nodes are deployed using ``catapult-server`` software, a C++ rewrite "
+"These nodes are deployed using ``catapult-client`` software, a C++ rewrite "
 "of the previous Java-written NEM distributed ledger that has been running "
 "since 2015."
 msgstr ""

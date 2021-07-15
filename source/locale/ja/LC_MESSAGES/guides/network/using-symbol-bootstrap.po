@@ -91,8 +91,8 @@ msgid ""
 msgstr "サーバーのホストがインターネットからアクセス可能であり、 **次のポートが開いていて、使用可能であること** を確認してください。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:95
-msgid "Port ``7900`` is used by catapult-server to communicate between nodes."
-msgstr "``7900`` 番ポートはノード間の通信するに catapult-server が使用します。"
+msgid "Port ``7900`` is used by catapult-client to communicate between nodes."
+msgstr "``7900`` 番ポートはノード間の通信するに catapult-client が使用します。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:96
 msgid ""

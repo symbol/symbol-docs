@@ -19,7 +19,7 @@ The **four-layered architecture** allows developers to update any of these tiers
 Peer node
 *********
 
-**Repository:** |catapult-server|
+**Repository:** |catapult-client|
 
 .. figure:: ../resources/images/diagrams/peer-detail.png
     :width: 300px
@@ -74,7 +74,7 @@ Every four rounds of node selections, the criteria changes to prevent |sybil|.
 API node
 ********
 
-**Repository:** |catapult-server|
+**Repository:** |catapult-client|
 
 .. figure:: ../resources/images/diagrams/api-detail.png
     :width: 500px
@@ -83,7 +83,7 @@ API node
     Peer + API (Dual) node communication
 
 The primary responsibility of an API node is to store the data in a readable form in MongoDB.
-The catapult-server software allows configuring standalone API nodes or with Peer capabilities (Dual).
+The catapult-client software allows configuring standalone API nodes or with Peer capabilities (Dual).
 
 Instead of writing the data directly into MongoDB, the nodes write it into a file-based queue called ``spool``.
 A broker service consumes the data from the spool and updates MongoDB accordingly.
@@ -130,9 +130,9 @@ This component is also responsible for returning events to the client using :ref
 
 Each REST gateway connects to one API instance to send new transactions requests triggered from the client-side and receive updates in real-time using sockets.
 
-.. |catapult-server| raw:: html
+.. |catapult-client| raw:: html
 
-   <a href="https://github.com/symbol/catapult-server" target="_blank">Catapult Server</a>
+   <a href="https://github.com/symbol/catapult-client" target="_blank">Catapult Client</a>
 
 .. |catapult-rest| raw:: html
 

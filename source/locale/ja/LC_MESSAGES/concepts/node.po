@@ -50,8 +50,8 @@ msgid "Peer node"
 msgstr "Peer ノード"
 
 #: ../../source/concepts/node.rst:62 ../../source/concepts/node.rst:117
-msgid "**Repository:** |catapult-server|"
-msgstr "**リポジトリ:** |catapult-server|"
+msgid "**Repository:** |catapult-client|"
+msgstr "**リポジトリ:** |catapult-client|"
 
 #: ../../source/concepts/node.rst:68
 msgid "Peer node communication"
@@ -165,10 +165,10 @@ msgstr "Peer + API (Dual) ノードコミュニケーション"
 #: ../../source/concepts/node.rst:125
 msgid ""
 "The primary responsibility of an API node is to store the data in a readable"
-" form in MongoDB. The catapult-server software allows configuring standalone"
+" form in MongoDB. The catapult-client software allows configuring standalone"
 " API nodes or with Peer capabilities (Dual)."
 msgstr ""
-"API ノードの主な役割は、データを MongoDB に読み取り可能な形式で保存することです。 catapult-server "
+"API ノードの主な役割は、データを MongoDB に読み取り可能な形式で保存することです。 catapult-client "
 "ソフトウェアを使用すると、スタンドアロン API ノードまたは Peer 機能 (Dual) を構成できます。"
 
 #: ../../source/concepts/node.rst:128

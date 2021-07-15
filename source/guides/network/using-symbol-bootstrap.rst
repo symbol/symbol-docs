@@ -50,9 +50,9 @@ The setup scripts are automated using **docker**. To run a test net or node, you
 Ports
 =====
 
-Make sure that the server's host is accessible from the internet and that **the following ports are open and available**:
+Make sure that the client's host is accessible from the internet and that **the following ports are open and available**:
 
-* Port ``7900`` is used by catapult-server to communicate between nodes.
+* Port ``7900`` is used by catapult-client to communicate between nodes.
 * Port ``3000`` is used by the REST Gateway to expose the endpoints to interact with the node.
 * Port ``7881`` is used by the :ref:`monitoring agent <reward-programs-controller>`. Only required when enrolled to some of the :doc:`../../concepts/reward-programs`, and can be customized.
 

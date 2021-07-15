@@ -225,7 +225,7 @@ Just like in the harvesting case, this creates the required :ref:`VotingKeyLink 
 
    For security reasons voting keys have a maximum validity of 6 months. This means that **every 6 months you need to renew your voting keys**.
 
-   Again, Symbol bootstrap takes care of this. You just need to run these commands **one month before the keys expire** from the same folder where you initially ran ``symbol-bootstrap start`` (there is no need to stop the server):
+   Again, Symbol bootstrap takes care of this. You just need to run these commands **one month before the keys expire** from the same folder where you initially ran ``symbol-bootstrap start`` (there is no need to stop the client):
 
    .. code-block:: symbol-bootstrap
 

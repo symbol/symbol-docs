@@ -41,9 +41,9 @@ To clarify, |symbol-bootstrap| automatically creates a remote account (labelled 
 Manual activation
 *****************
 
-If you have deployed a node yourself, for example by following `the catapult-server instructions <https://github.com/symbol/catapult-server/blob/main/docs/RUNPEERLIN.md>`__, then you have to **enable harvesting manually**.
+If you have deployed a node yourself, for example by following `the catapult-client instructions <https://github.com/symbol/catapult-client/blob/main/docs/RUNPEERLIN.md>`__, then you have to **enable harvesting manually**.
 
-The `catapult-server documentation <https://github.com/symbol/catapult-server/blob/main/docs/RUNPEERLIN.md#user-content-enable-harvesting>`__ explains how to enable :ref:`local harvesting <local-harvesting>`, which stores your main account's private key on the server. This section explains how to enable :ref:`remote harvesting <remote-harvesting>` instead, which uses a proxy account and is therefore **much more secure**.
+The `catapult-client documentation <https://github.com/symbol/catapult-client/blob/main/docs/RUNPEERLIN.md#user-content-enable-harvesting>`__ explains how to enable :ref:`local harvesting <local-harvesting>`, which stores your main account's private key on the client. This section explains how to enable :ref:`remote harvesting <remote-harvesting>` instead, which uses a proxy account and is therefore **much more secure**.
 
 This will be done using the :doc:`symbol-cli </cli>` tool. The required steps are:
 
@@ -62,7 +62,7 @@ Run this from a terminal:
 
 .. example-code::
 
-    .. code-block:: catapult-server
+    .. code-block:: catapult-client
 
       catapult.tools.addressgen --network public
       # Change the network type to suit your needs
@@ -74,7 +74,7 @@ Run this from a terminal:
 
 Note the **public** and **private** keys for this new account.
 
-Now edit the ``config-harvesting.properties`` file (it should be in a ``resources`` directory if you followed `the catapult-server instructions <https://github.com/symbol/catapult-server/blob/main/docs/RUNPEERLIN.md>`__). Look for the ``harvesterSigningPrivateKey`` field and write the remote account's private key.
+Now edit the ``config-harvesting.properties`` file (it should be in a ``resources`` directory if you followed `the catapult-client instructions <https://github.com/symbol/catapult-client/blob/main/docs/RUNPEERLIN.md>`__). Look for the ``harvesterSigningPrivateKey`` field and write the remote account's private key.
 
 Step 2: Link the remote and main accounts
 =========================================
@@ -98,7 +98,7 @@ Otherwise, create another account just like you did in Step 1, to act as the VRF
 
 .. example-code::
 
-    .. code-block:: catapult-server
+    .. code-block:: catapult-client
 
       catapult.tools.addressgen --network public
       # Change the network type to suit your needs

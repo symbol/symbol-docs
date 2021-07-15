@@ -247,10 +247,10 @@ msgstr "実行中の Catapult サーバーを ``Ctrl+C`` で停止します。"
 msgid ""
 "Update the Catapult Server source repository with the latest version and "
 "build it again following the `Catapult Server <https://github.com/symbol"
-"/catapult-server/tree/main/docs>`__ instructions."
+"/catapult-client/tree/main/docs>`__ instructions."
 msgstr ""
 "Catapult サーバのソースリポジトリを最新バージョンで更新し、 `Catapult サーバ <https://github.com/symbol"
-"/catapult-server/tree/main/docs>`__ 手順に従って再ビルドします。"
+"/catapult-client/tree/main/docs>`__ 手順に従って再ビルドします。"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:140
 msgid ""

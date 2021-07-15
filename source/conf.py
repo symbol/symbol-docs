@@ -370,7 +370,7 @@ def viewsource_resolve_link(file_path, language=None):
 # -- Custom extlinks -----------------------------------------------------
 
 extlinks = {'schema': ('https://github.com/symbol/catbuffer-schemas/blob/main/schemas/%s', 'file '),
-            'properties': ('https://github.com/symbol/catapult-server/blob/main/resources/%s', 'file ')}
+            'properties': ('https://github.com/symbol/catapult-client/blob/main/resources/%s', 'file ')}
 
 # -- Custom Pygments lexers ----------------------------------------------
 
@@ -384,9 +384,9 @@ from sphinx.highlighting import lexers
 # https://stackoverflow.com/questions/16469869/custom-syntax-highlighting-with-sphinx
 
 class CatapultLexer(BashLexer):
-    name = 'catapult-server'
+    name = 'catapult-client'
 
-lexers['catapult-server'] = CatapultLexer()
+lexers['catapult-client'] = CatapultLexer()
 
 class CliLexer(BashLexer):
     name = 'symbol-cli'

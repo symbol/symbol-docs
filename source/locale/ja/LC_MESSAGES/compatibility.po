@@ -30,7 +30,7 @@ msgid ""
 "This document lists the versions compatibility matrix between catapult-"
 "server milestones and related packages and applications."
 msgstr ""
-"このドキュメントでは catapult-server マイルストーンとその関連するパッケージおよびアプリケーション間でのバージョン互換性表を示します。"
+"このドキュメントでは catapult-client マイルストーンとその関連するパッケージおよびアプリケーション間でのバージョン互換性表を示します。"
 
 #: ../../source/compatibility.rst:1 ../../source/compatibility.rst:1
 msgid "Milestone"

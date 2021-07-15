@@ -9,24 +9,24 @@ Maintaining a Symbol Node
 
 Once you have created a |codename| node, be it :doc:`manually <running-a-symbol-node-manually>` or :doc:`using Symbol bootstrap <running-a-symbol-node>`, the node is **mostly autonomous**. But there is still a little bit of maintenance required, explained in this guide.
 
-- Regular nodes only need to take care of the :ref:`maintain-server-version` section.
+- Regular nodes only need to take care of the :ref:`maintain-client-version` section.
 
 - :ref:`Voting nodes <voting-node-program>` also need to read the :ref:`maintain-voting-keys` section.
 
-.. _maintain-server-version:
+.. _maintain-client-version:
 
-Server updates
+Client updates
 **************
 
-New |codename| server versions will be released **periodically**. If you want to benefit from the added features and bugfixes you will need to **update your node** to use the latest server version.
+New |codename| client versions will be released **periodically**. If you want to benefit from the added features and bugfixes you will need to **update your node** to use the latest client version.
 
-Additionally, if your node's server version falls too far behind, other nodes might refuse to connect to it.
+Additionally, if your node's client version falls too far behind, other nodes might refuse to connect to it.
 
-The main version to keep track of is the **Catapult Server version**, since this component is used by all :ref:`peer nodes <peer-node>`. Additionally, :ref:`API nodes <api-node>` need to keep track of the **REST component version** too.
+The main version to keep track of is the **Catapult client version**, since this component is used by all :ref:`peer nodes <peer-node>`. Additionally, :ref:`API nodes <api-node>` need to keep track of the **REST component version** too.
 
 - **Finding out what are the latest versions**:
 
-  Whenever there is a new server version released it will be announced through the NEM |forum|, |twitter| and the |discord| channel. You can also keep an eye on the different |github| repositories and :doc:`the compatibility matrix page <../../compatibility>` to know the latest Server and REST versions.
+  Whenever there is a new client version released it will be announced through the NEM |forum|, |twitter| and the |discord| channel. You can also keep an eye on the different |github| repositories and :doc:`the compatibility matrix page <../../compatibility>` to know the latest client and REST versions.
 
 - **Finding out your node versions**:
 
@@ -34,7 +34,7 @@ The main version to keep track of is the **Catapult Server version**, since this
 
   Additionally, if your node is an :ref:`API node <api-node>`, you can also query it directly:
 
-  - **Server version**: ``/node/info`` endpoint, ``version`` property. `See an example <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__.
+  - **Client version**: ``/node/info`` endpoint, ``version`` property. `See an example <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__.
 
     .. note::
     
@@ -80,7 +80,7 @@ If you used Symbol Bootstrap to create your node (following the :doc:`running-a-
 
    - **If you did not start in detached mode**:
 
-     You must have a terminal running somewhere with all the output from the server. Stop it by pressing ``Ctrl+C`` and then type:
+     You must have a terminal running somewhere with all the output from the client. Stop it by pressing ``Ctrl+C`` and then type:
 
      .. code-block:: symbol-bootstrap
 
@@ -91,26 +91,26 @@ If you used Symbol Bootstrap to create your node (following the :doc:`running-a-
 Update nodes created manually
 =============================
 
-If you followed the :doc:`running-a-symbol-node-manually` guide, you need to rebuild the Catapult Server and keep the previous data folder so the same accounts and cached data is reused.
+If you followed the :doc:`running-a-symbol-node-manually` guide, you need to rebuild the Catapult client and keep the previous data folder so the same accounts and cached data is reused.
 
 In summary, you need to:
 
-- Stop the running Catapult Server with ``Ctrl+C``.
-- Update the Catapult Server source repository with the latest version and build it again following the `Catapult Server <https://github.com/symbol/catapult-server/tree/main/docs>`__ instructions.
-- Restart the server from the same folder it was initially launched. Data and configuration files will be reused.
+- Stop the running Catapult client with ``Ctrl+C``.
+- Update the Catapult client source repository with the latest version and build it again following the `Catapult client <https://github.com/symbol/catapult-client/tree/main/docs>`__ instructions.
+- Restart the client from the same folder it was initially launched. Data and configuration files will be reused.
 
 .. note::
 
-   The above procedure works but brings the server offline while the new version is being built, which could be a lengthy process.
+   The above procedure works but brings the client offline while the new version is being built, which could be a lengthy process.
 
-   If you **install** the server (with ``make install``) instead of running it from the same folder where it is built, though, you have the option to build the new version while the previous one is still running. In this way the service interruption should be minimal.
+   If you **install** the client (with ``make install``) instead of running it from the same folder where it is built, though, you have the option to build the new version while the previous one is still running. In this way the service interruption should be minimal.
 
    The steps then would be:
 
-   - Update the Catapult Server source repository and build it again.
-   - Stop the running Catapult Server.
-   - Install the new version of the server.
-   - Restart the server.
+   - Update the Catapult client source repository and build it again.
+   - Stop the running Catapult client.
+   - Install the new version of the client.
+   - Restart the client.
 
 .. _maintain-voting-keys:
 

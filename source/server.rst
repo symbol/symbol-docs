@@ -1,10 +1,10 @@
 ﻿######
-Server
+Client
 ######
 
 |codename|-based networks rely on nodes to provide a trustless, high-performance, and secure blockchain platform.
 
-These nodes are deployed using |catapult-server| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
+These nodes are deployed using |catapult-client| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
 
 Learn more about the protocol by reading the |whitepaper| and this :doc:`documentation <concepts/node>`.
 
@@ -12,14 +12,14 @@ Learn more about the protocol by reading the |whitepaper| and this :doc:`documen
 Building the image
 ******************
 
-To compile catapult-server source code, follow the building |instructions|.
+To compile catapult-client source code, follow the building |instructions|.
 
 ***********************
-Running catapult-server
+Running catapult-client
 ***********************
 
-catapult-server executable can be used either to run different types of nodes or to launch new networks.
-This section contains the instructions on how to run the catapult-server for various purposes.
+catapult-client executable can be used either to run different types of nodes or to launch new networks.
+This section contains the instructions on how to run the catapult-client for various purposes.
 
 Running a network node
 ======================
@@ -41,13 +41,13 @@ Private network
 
 Instructions on how to launch a secure and production-ready private chain will be released here.
 
-.. |catapult-server| raw:: html
+.. |catapult-client| raw:: html
 
-   <a href="https://github.com/symbol/catapult-server" target="_blank">catapult-server</a>
+   <a href="https://github.com/symbol/catapult-client" target="_blank">catapult-client</a>
 
 .. |instructions| raw:: html
 
-   <a href="https://github.com/symbol/catapult-server/blob/main/docs/README.md" target="_blank">instructions</a>
+   <a href="https://github.com/symbol/catapult-client/blob/main/docs/README.md" target="_blank">instructions</a>
 
 .. |whitepaper| raw:: html
 

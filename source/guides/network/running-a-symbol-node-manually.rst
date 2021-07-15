@@ -19,10 +19,10 @@ The following section explains how to build a :ref:`peer-node` and the next one 
 Build a Peer node
 *****************
 
-Build the server
+Build the client
 ================
 
-Follow the `Catapult server <https://github.com/symbol/catapult-server>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/catapult-server/blob/main/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/catapult-server/blob/main/docs/BUILD-conan.md>`__.
+Follow the `Catapult client <https://github.com/symbol/catapult-client>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/catapult-client/blob/main/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/catapult-client/blob/main/docs/BUILD-conan.md>`__.
 
 Generate keys
 =============
@@ -120,7 +120,7 @@ Configuration
 
 |codename| is **highly customizable** and this means there are a lot of parameters that can be adjusted to suit your node's needs. Some of these parameters are **network-related** and must match the rest of nodes in the network (for example ``currencyMosaicId``) whereas some others are **node-related** and you can set freely (for example ``friendlyName``).
 
-You can edit these files manually (Take a look at `these templates <https://github.com/symbol/catapult-server/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/symbol/symbol-node-configurator>`__ as shown next.
+You can edit these files manually (Take a look at `these templates <https://github.com/symbol/catapult-client/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/symbol/symbol-node-configurator>`__ as shown next.
 
 **The Configuration step can be performed on an offline machine for added security.**
 
@@ -215,7 +215,7 @@ You can edit these files manually (Take a look at `these templates <https://gith
 
       ``host``; IP address or domain name of your node.
       ``friendlyName``; Name of your node for display purposes.
-      ``version``; Version of catapult-server used by your node. Leave empty to use the current one.
+      ``version``; Version of catapult-client used by your node. Leave empty to use the current one.
       ``roles``; A comma-separated list of the following values: ``Peer``, ``Api``, ``Voting``, ``IPv4``, ``IPv6``.
 
    For example:
@@ -228,7 +228,7 @@ You can edit these files manually (Take a look at `these templates <https://gith
       version = 1.0.0.0
       roles = IPv4,Peer
 
-Run the server
+Run the client
 ==============
 
 Create one last folder:
@@ -237,7 +237,7 @@ Create one last folder:
 
    mkdir data
 
-And finally fire up the server!
+And finally fire up the client!
 
 .. code-block:: bash
 
@@ -252,12 +252,12 @@ You should see a lot of debug output while the node starts synchronizing with th
 
 The node can be stopped by pressing :kbd:`Ctrl-C` and restarted simply by running ``catapult.server`` again.
 
-If you see no error messages, your server is up and running and you can continue with this guide.
+If you see no error messages, your client is up and running and you can continue with this guide.
 
 Link the keys
 =============
 
-The server is now running but it will not be able **harvest** because a number of :ref:`keys <symbol-keys>` need to be **linked** to it. These links are created through **transactions announced to the network**.
+The client is now running but it will not be able **harvest** because a number of :ref:`keys <symbol-keys>` need to be **linked** to it. These links are created through **transactions announced to the network**.
 
 **These transactions can be announced from ANY machine**. In particular, this can be done from a machine other than the one running your node so your main account's private key is never stored on the node.
 
@@ -373,20 +373,20 @@ When the next epoch starts, if it is inside the Start and End epochs of one of y
 Build an API node
 *****************
 
-Once you have the Catapult Server running, you can add **extra services** to turn it into an API node:
+Once you have the Catapult client running, you can add **extra services** to turn it into an API node:
 
 .. figure:: ../../resources/images/diagrams/rest-detail.png
     :align: center
 
-As shown in the diagram above, besides the **Catapult Server** you will also need:
+As shown in the diagram above, besides the **Catapult client** you will also need:
 
 - A **Database** holding the REST data.
 - A **Catapult Broker** serializing accesses to the database.
-- A **REST gateway** accepting client requests and turning them into server commands or database queries.
+- A **REST gateway** accepting requests and turning them into Catapult client commands or database queries.
 
 The following sections explain how to install each service. You will need all of them.
 
-Move to the ``_build`` folder created while building the server and create any additional folders requested in the next steps inside ``_build``.
+Move to the ``_build`` folder created while building the client and create any additional folders requested in the next steps inside ``_build``.
 
 Run the database
 =====================
@@ -406,7 +406,7 @@ Run the database
 
 3. **Build indices** to optimize database accesses.
 
-   The ``catapult-server`` repository you cloned to build the server in the first step contains `a folder with mongo scripts <https://github.com/symbol/catapult-server/blob/main/scripts/mongo>`__. Run this one:
+   The ``catapult-client`` repository you cloned to build the client in the first step contains `a folder with mongo scripts <https://github.com/symbol/catapult-client/blob/main/scripts/mongo>`__. Run this one:
 
    .. code-block:: bash
 
@@ -484,15 +484,15 @@ Build and run the REST gateway
          "port": 7900,
          "timeout": 1000,
          "tlsClientCertificatePath":
-               "/home/symbol/catapult-server/_build/certificate/node.crt.pem",
+               "/home/symbol/catapult-client/_build/certificate/node.crt.pem",
          "tlsClientKeyPath":
-               "/home/symbol/catapult-server/_build/certificate/node.key.pem",
+               "/home/symbol/catapult-client/_build/certificate/node.key.pem",
          "tlsCaCertificatePath":
-               "/home/symbol/catapult-server/_build/certificate/ca.crt.pem",
+               "/home/symbol/catapult-client/_build/certificate/ca.crt.pem",
          "networkPropertyFilePath":
-               "/home/symbol/catapult-server/_build/resources/config-network.properties",
+               "/home/symbol/catapult-client/_build/resources/config-network.properties",
          "nodePropertyFilePath":
-               "/home/symbol/catapult-server/_build/resources/config-node.properties"
+               "/home/symbol/catapult-client/_build/resources/config-node.properties"
       }
 
 9. **Run the REST gateway**:
@@ -506,7 +506,7 @@ Build and run the REST gateway
 Verification
 ============
 
-If the REST gateway is working correctly, you can now make queries at port 3000. If the Catapult Server, Broker and MongoDB are working correctly, the values returned by REST will be correctly synchronized with the rest of the blockchain.
+If the REST gateway is working correctly, you can now make queries at port 3000. If the Catapult client, Broker and MongoDB are working correctly, the values returned by REST will be correctly synchronized with the rest of the blockchain.
 
 Point a browser to the following URLs and check that the returned values are similar to the expected ones:
 

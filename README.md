@@ -37,7 +37,7 @@ Learn how to use the software development kits and tools with the following step
 
 Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, and Wallets.
 
-* [Server](https://docs.symbolplatform.com/server.html)
+* [Client](https://docs.symbolplatform.com/server.html)
 * [REST API](https://docs.symbolplatform.com/api.html)
 * [Software Development Kits](https://docs.symbolplatform.com/sdk.html)
 * [Command-line Interface](https://docs.symbolplatform.com/wallets.html)

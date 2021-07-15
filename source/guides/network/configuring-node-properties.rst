@@ -16,7 +16,7 @@ The easiest way to change them is by using |symbol-bootstrap|'s custom presets (
     friendlyName: my-uber-node
     dataDirectory: ./data
 
-These settings can also be directly provided to |catapult-server| through ``.properties`` files. The header of each of the tables below indicates which file contains that table's properties.
+These settings can also be directly provided to |catapult-client| through ``.properties`` files. The header of each of the tables below indicates which file contains that table's properties.
 
 .. note:: For **network**-related properties, read the :doc:`Configuring network properties <configuring-network-properties>` guide.
 
@@ -45,6 +45,6 @@ Harvesting Configuration
 .. raw:: html
     :file: ../../_static/config-harvesting.properties.html
 
-.. |catapult-server| raw:: html
+.. |catapult-client| raw:: html
 
-   <a href="https://github.com/symbol/catapult-server" target="_blank">catapult-server</a>
+   <a href="https://github.com/symbol/catapult-client" target="_blank">catapult-client</a>

@@ -181,7 +181,7 @@ This generates a ``target`` directory containing an ``addresses.yml`` file and m
 
 **The main account's private key is not present in any of these files**.
 
-It is worth noting that Symbol Bootstrap enables :ref:`remote-harvesting` by default, meaning that the **main private key is never available in a plain text file** in the server. Only the remote key is, which acts as a proxy between the node and its main account.
+It is worth noting that Symbol Bootstrap enables :ref:`remote-harvesting` by default, meaning that the **main private key is never available in a plain text file** in the client. Only the remote key is, which acts as a proxy between the node and its main account.
 
 Copy configuration
 ------------------

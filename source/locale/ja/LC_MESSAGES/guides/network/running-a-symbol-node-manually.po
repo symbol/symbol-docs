@@ -71,16 +71,16 @@ msgstr "サーバのビルド"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:65
 msgid ""
-"Follow the `Catapult server <https://github.com/symbol/catapult-server>`__ "
+"Follow the `Catapult server <https://github.com/symbol/catapult-client>`__ "
 "instructions to **build** its binaries, either `manually "
-"<https://github.com/symbol/catapult-server/blob/main/docs/BUILD-"
+"<https://github.com/symbol/catapult-client/blob/main/docs/BUILD-"
 "manual.md>`__ or using `Conan <https://github.com/symbol/catapult-"
 "server/blob/main/docs/BUILD-conan.md>`__."
 msgstr ""
-"`Catapult server <https://github.com/symbol/catapult-server>`__ のバイナリを "
+"`Catapult server <https://github.com/symbol/catapult-client>`__ のバイナリを "
 "**ビルド** するために、 `手動 <https://github.com/symbol/catapult-"
 "server/blob/main/docs/BUILD-manual.md>`__ または `Conan "
-"<https://github.com/symbol/catapult-server/blob/main/docs/BUILD-"
+"<https://github.com/symbol/catapult-client/blob/main/docs/BUILD-"
 "conan.md>`__ を使用したインストラクションに従います。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:68
@@ -325,9 +325,9 @@ msgstr "表示用のノード名"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:1
 msgid ""
-"Version of catapult-server used by your node. Leave empty to use the current"
+"Version of catapult-client used by your node. Leave empty to use the current"
 " one."
-msgstr "ノードで使用されている catapult-server のバージョン。現在のものを使用するには、空のままにします。"
+msgstr "ノードで使用されている catapult-client のバージョン。現在のものを使用するには、空のままにします。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:1
 msgid ""
@@ -446,12 +446,12 @@ msgstr "データベースアクセスの最適化のために **インデック
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:449
 msgid ""
-"The ``catapult-server`` repository you cloned to build the server in the "
+"The ``catapult-client`` repository you cloned to build the server in the "
 "first step contains `a folder with mongo scripts <https://github.com/symbol"
-"/catapult-server/blob/main/scripts/mongo>`__. Run this one:"
+"/catapult-client/blob/main/scripts/mongo>`__. Run this one:"
 msgstr ""
-"最初のステップで、ビルドのためにあなたがクローンした ``catapult-server`` リポジトリは `mongo スクリプトのフォルダ "
-"<https://github.com/symbol/catapult-server/blob/main/scripts/mongo>`__ "
+"最初のステップで、ビルドのためにあなたがクローンした ``catapult-client`` リポジトリは `mongo スクリプトのフォルダ "
+"<https://github.com/symbol/catapult-client/blob/main/scripts/mongo>`__ "
 "が含まれています。これを実行します:"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:455
