@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,16 +43,16 @@ msgstr ""
 "既存のプロジェクトに貢献する場合は、プロジェクトのルートレベルのフォルダーにある ``CONTRIBUTING.md`` ファイルを読んでください。"
 
 #: ../../source/contribute/contributing.rst:64
-msgid "Server"
-msgstr "サーバ"
+msgid "Client"
+msgstr "クライアント"
 
 #: ../../source/contribute/contributing.rst:66
 msgid ""
 "`Notes for developers <https://github.com/symbol/catapult-"
-"server/blob/main/docs/README.md>`_"
+"client/blob/main/docs/README.md>`_"
 msgstr ""
 "`開発者向けメモ <https://github.com/symbol/catapult-"
-"server/blob/main/docs/README.md>`_"
+"client/blob/main/docs/README.md>`_"
 
 #: ../../source/contribute/contributing.rst:67
 msgid ":doc:`Writing a transaction schema <../guidelines/writing-a-schema>`"

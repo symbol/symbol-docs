@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"PO-Revision-Date: 2021-07-07 15:07+0000\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:43
+msgid "Integrating with an Exchange"
+msgstr "交換所の統合"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:45
+msgid ""
+"This document is intended to **guide developers** through the integration of"
+" the ``XYM`` token into an **Exchange platform**. It contains "
+"recommendations on how to set up accounts, listen for deposits, and create "
+"withdrawals as well as code examples ready to be adopted."
+msgstr ""
+"これは ``XYM`` トークンを **交換所プラットフォーム** への統合を通じて **開発者をガイドする** "
+"ことを目的とした資料です。アカウントの設定、預け入れ資産の監視、引き出しの作成方法に関する推奨事項と、すぐに利用できるコード例を含みます。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:47
+msgid ""
+"The code examples shared use the `Symbol SDK for TypeScript "
+"<https://github.com/symbol/symbol-sdk-typescript-javascript>`__, but can be "
+"ported to other :doc:`available SDKs <../../sdk>` since all of them share "
+"the same design principles. If there is no SDK supported for a required "
+"programming language, you may still be able to integrate by connecting "
+"directly via Symbol's :doc:`REST API <../../api>`."
+msgstr ""
+"共有しているコード例は `Symbol SDK TypeScript版 <https://github.com/symbol/symbol-sdk-"
+"typescript-javascript>`__ ですが、他の :doc:`有効な SDK <../../sdk>` "
+"にも、それらが同じ設計原則を共有しているため、移植することができます。必要なプログラミング言語で SDK がサポートされていない場合は "
+":doc:`REST API <../../api>` を介して、直接接続して統合できる可能性があります。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:50
+msgid "Integration overview"
+msgstr "統合の概要"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:52
+msgid ""
+"There are many ways to design an exchange. This guide is based on how to "
+"support ``XYM`` deposits and withdrawals in an exchange that follows a "
+"**central wallet approach**."
+msgstr ""
+"交換所を設計する方法はたくさんあります。このガイドは **中央ウォレットアプローチ** に基づいた、交換所での ``XYM`` "
+"の入出金をサポートする方法に基づいています。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:54
+msgid ""
+"Please note that this design is not particularly recommend over others. "
+"However, its **simplified architecture** is a good showcase for Symbol's set"
+" of features involved in integrating with an Exchange. A different approach,"
+" for example, would be to use a different wallet for each user."
+msgstr ""
+"このデザインは他のデザインと比べると、特に推奨はできません。ただし、その **簡素なアーキテクチャ** は、交換所との統合に関する Symbol "
+"の一連の機能の優れたショーケースといえます。別のアプローチでは、例えば、ユーザーごとに異なるウォレットを使用するなどです。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:61
+msgid "**Fig. 1**: General design diagram of the central wallet approach."
+msgstr "**図. 1**: 中央ウォレットアプローチの一般的な設計。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:63
+msgid "The main components of this architecture are described next."
+msgstr "次に、このアーキテクチャの主なコンポーネントについて説明します。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:66
+msgid "Components"
+msgstr "コンポーネント"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:69
+msgid "Central wallet"
+msgstr "中央ウォレット"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:71
+msgid ""
+"The exchange owns a Symbol account where all the user's deposits and "
+"withdrawals occur. The keys to this account need to be on an online machine,"
+" so this is also commonly called the **Hot** wallet. This account only has "
+"the necessary amount of XYM for daily use (withdrawals and deposits), since "
+"it is the account most exposed to attacks."
+msgstr ""
+"交換所はすべてのユーザーの入出金を扱う Symbol "
+"アカウントを所有します。このアカウントのキーはオンラインマシン上に存在する必要があるため、これは一般に **ホット** "
+"ウォレットとも呼ばれます。このアカウントは攻撃に最も晒されるアカウントであるため、日常の使用 (引き出しと預け入れ) に必要な量の XYM "
+"しかもちません。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:74
+msgid "Cold wallet"
+msgstr "コールドウォレット"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:79
+msgid "Unique User ID"
+msgstr "一意なユーザ ID"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:87
+msgid ""
+"Symbol's :doc:`Transfer transactions <../../concepts/transfer-transaction>` "
+"can hold an arbitrary message up to 1023 bytes long but **the first byte is "
+"treated specially by the** :doc:`Symbol SDK <../../sdk>`."
+msgstr ""
+"Symbol の :doc:`転送トランザクション <../../concepts/transfer-transaction>` は 1023 "
+"バイトまでのメッセージを添付することができますが、 :doc:`Symbol SDK <../../sdk>` は "
+"**先頭バイトを特別な処理のために** 使用します。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:99
+msgid "Exchange Server"
+msgstr "交換所サーバ"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:104
+msgid "Exchange Database"
+msgstr "交換所データベース"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:109
+msgid "Running a node"
+msgstr "ノードの立ち上げ"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:120
+msgid "Accounts setup"
+msgstr "アカウントのセットアップ"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:136
+msgid ":doc:`Download the Symbol client <../../wallets>`."
+msgstr ":doc:`Symbol クライアントのダウンロード <../../wallets>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:137
+msgid ":doc:`How to create a new account <../account/creating-an-account>`."
+msgstr ":doc:`新しいアカウントの作る方法 <../account/creating-an-account>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:138
+msgid ""
+":doc:`How to turn an account into a multisig account <../multisig/creating-a"
+"-multisig-account>`."
+msgstr ""
+":doc:`アカウントをマルチシグアカウントに変換する方法 <../multisig/creating-a-multisig-account>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:142
+msgid "The XYM token"
+msgstr "XYM トークン"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:148
+msgid "These are the properties of ``XYM``:"
+msgstr "これらは ``XYM`` のプロパティです:"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Value"
+msgstr "値"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Token unique identifier"
+msgstr "トークン識別子"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Alias"
+msgstr "エイリアス"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Friendly name for the token"
+msgstr "トークンの親しみやすい名前"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Initial supply"
+msgstr "初期供給量"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Initial amount of token units in circulation"
+msgstr "流通しているトークンユニットの初期供給量"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Max supply"
+msgstr "最大供給量"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Token does not expire"
+msgstr "トークンは失効しません"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Token supply cannot be altered"
+msgstr "トークンの供給量は変更できません。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:1
+msgid "Token can be transferred between arbitrary accounts"
+msgstr "トークンは任意のアカウント間で転送できます。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:176
+msgid "Avoiding rollbacks"
+msgstr "ロールバックの回避"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:180
+msgid "There are two ways of dealing with this in Symbol:"
+msgstr "Symbol でこれを処理する方法は2つあります。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:183
+msgid "Using Finalization"
+msgstr "ファイナライゼーションの使用"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:192
+msgid "Using a fixed wait"
+msgstr "固定待機の使用"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:206
+msgid "Deadlines"
+msgstr "期限"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:227
+msgid "The example code"
+msgstr "例示コード"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:240
+msgid "Deposits"
+msgstr "預け入れ"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:247
+msgid "**Fig. 2**: Deposit process."
+msgstr "**図. 2**: 預け入れプロセス"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:255
+msgid ""
+"The code proposed next addresses all these issues by monitoring the "
+"blockchain."
+msgstr "次に提案されるコードは、ブロックチェーンの監視により、これらすべての問題に対処します。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:258
+msgid "Monitoring"
+msgstr "モニタリング"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:266
+msgid "Filter out transactions that:"
+msgstr "次のトランザクションをフィルタリング:"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:268
+msgid ""
+"Have no message or the message does not correspond to an existing UUID."
+msgstr "メッセージがない、またはメッセージが存在する UUID に対応していない。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:270
+msgid "Do not contain tokens, or the token is not ``symbol.xym``."
+msgstr "トークンを含んでいない、または ``symbol.xym`` ではないトークン。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:276
+msgid "The tokens are added to the user's account in the database."
+msgstr "データベース上のユーザアカウントにトークンは追加されました。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:278
+msgid ""
+"The transaction is marked as processed by adding its hash to the database"
+msgstr "トランザクションは、そのハッシュをデータベースに追加することにより、処理済みとしてマークされます。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:280
+msgid ""
+"Store the last height that has been processed and wait for the next polling "
+"period."
+msgstr "処理済みの最終ブロック高を保存し、次のポーリング期間まで待ちます。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:282
+msgid ""
+"The code snippet, using `Symbol's TypeScript SDK "
+"<https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/1.0.0/>`__"
+" is this:"
+msgstr ""
+"`Symbol's TypeScript SDK <https://docs.symbolplatform.com/symbol-sdk-"
+"typescript-javascript/1.0.0/>`__ を使用したコードスニペット:"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:306
+msgid ""
+":doc:`Transfer Transaction reference <../../concepts/transfer-transaction>`."
+msgstr ":doc:`転送トランザクションリファレンス <../../concepts/transfer-transaction>`."
+
+#: ../../source/guides/exchanges/exchange-integration.rst:307
+msgid ":doc:`Mosaic (token) reference <../../concepts/mosaic>`."
+msgstr ":doc:`モザイク (トークン) リファレンス <../../concepts/mosaic>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:308
+msgid ":doc:`Symbol API reference <../../api>`."
+msgstr ":doc:`Symbol API リファレンス <../../api>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:309
+msgid ":ref:`WebSockets reference <websockets>`."
+msgstr ":ref:`WebSockets リファレンス <websockets>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:314
+msgid "Withdrawals"
+msgstr "引き出し"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:321
+msgid "**Fig. 3**: Withdrawal process."
+msgstr "**Fig. 3**: 引き出しプロセス"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:330
+msgid "Announcing"
+msgstr "アナウンス"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:334
+msgid "Configuration is stored in the ``ExchangeSymbolConfig`` object."
+msgstr "設定は ``ExchangeSymbolConfig`` オブジェクトに保存されます。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:335
+msgid ""
+"A number of repositories are instantiated via the ``RepositoryFactoryHttp`` "
+"class."
+msgstr "多くのリポジトリは ``RepositoryFactoryHttp`` クラスを介してインスタンス化されます。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:340
+msgid ""
+"The actual transaction is created using ``TransferTransaction.create``."
+msgstr "実際のトランザクションは ``TransferTransaction.create`` を使用して作成します。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:341
+msgid "The transaction is signed."
+msgstr "トランザクションは署名済みです。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:367
+msgid "Finalization"
+msgstr "ファイナライゼーション"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:373
+msgid ""
+"This snippet can be run in the same loop as the deposits monitor "
+":ref:`described above <exchange-deposits>`."
+msgstr "このスニペットは :ref:`上記で述べた <exchange-deposits>` 同じループで実行します。"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:389
+msgid ":doc:`Transaction life-cycle <../../concepts/transaction>`."
+msgstr ":doc:`トランザクションのライフサイクル <../../concepts/transaction>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:390
+msgid ":doc:`Fees reference <../../concepts/fees>`."
+msgstr ":doc:`手数料リファレンス <../../concepts/fees>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:391
+msgid ""
+":doc:`How to announce a transfer transaction programmatically "
+"<../transfer/sending-a-transfer-transaction>`."
+msgstr ""
+":doc:`プログラム的に転送トランザクションをアナウンスする方法 <../transfer/sending-a-transfer-"
+"transaction>`"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:394
+msgid "Further information"
+msgstr "さらに詳しい情報"
+
+#: ../../source/guides/exchanges/exchange-integration.rst:396
+msgid "Read the following pages for more information:"
+msgstr "より詳しい情報は次のページを参照してください:"

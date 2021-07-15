@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2021-04-06 14:16+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -66,22 +66,21 @@ msgid "Build a Peer node"
 msgstr "Peer ノードのビルド"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:63
-msgid "Build the server"
-msgstr "サーバのビルド"
+msgid "Build the client"
+msgstr "クライアントのビルド"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:65
 msgid ""
-"Follow the `Catapult server <https://github.com/symbol/catapult-client>`__ "
+"Follow the `Catapult client <https://github.com/symbol/catapult-client>`__ "
 "instructions to **build** its binaries, either `manually "
 "<https://github.com/symbol/catapult-client/blob/main/docs/BUILD-"
 "manual.md>`__ or using `Conan <https://github.com/symbol/catapult-"
-"server/blob/main/docs/BUILD-conan.md>`__."
+"client/blob/main/docs/BUILD-conan.md>`__."
 msgstr ""
-"`Catapult server <https://github.com/symbol/catapult-client>`__ のバイナリを "
-"**ビルド** するために、 `手動 <https://github.com/symbol/catapult-"
-"server/blob/main/docs/BUILD-manual.md>`__ または `Conan "
-"<https://github.com/symbol/catapult-client/blob/main/docs/BUILD-"
-"conan.md>`__ を使用したインストラクションに従います。"
+"`Catapult client <https://github.com/symbol/catapult-client>`__ のバイナリを "
+"**ビルド** するために、 `手動 <https://github.com/symbol/catapult-client/blob/main/docs"
+"/BUILD-manual.md>`__ または `Conan <https://github.com/symbol/catapult-"
+"client/blob/main/docs/BUILD-conan.md>`__ を使用したインストラクションに従います。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:68
 msgid "Generate keys"
@@ -302,6 +301,12 @@ msgstr "**config-user.properties** を編集"
 msgid "Go back to the ``_build`` directory."
 msgstr "``_build`` ディレクトリへ戻ります。"
 
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:233
+msgid ""
+"Edit ``resources/config-user.properties`` so that it points to the right "
+"places:"
+msgstr "適切な場所を指すよう ``resources/config-user.properties`` 編集にします:"
+
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:245
 msgid "**Edit config-node.properties**."
 msgstr "**config-node.properties** を編集"
@@ -336,16 +341,12 @@ msgid ""
 msgstr "次の値のコンマ区切りのリスト: ``Peer``, ``Api``, ``Voting``, ``IPv4``, ``IPv6``"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:272
-msgid "Run the server"
-msgstr "サーバを起動"
+msgid "Run the client"
+msgstr "クライアントの起動"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:274
 msgid "Create one last folder:"
 msgstr "最後の一つのフォルダを作成:"
-
-#: ../../source/guides/network/running-a-symbol-node-manually.rst:280
-msgid "And finally fire up the server!"
-msgstr "最後に、サーバに火入れします！"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:298
 msgid "Link the keys"
@@ -410,9 +411,9 @@ msgstr "API ノードのビルド"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:416
 msgid ""
-"Once you have the Catapult Server running, you can add **extra services** to"
+"Once you have the Catapult client running, you can add **extra services** to"
 " turn it into an API node:"
-msgstr "Catapult サーバーを実行したら **追加サービス** を追加して API ノードに変えることができます:"
+msgstr "Catapult クライアントを実行したら **追加サービス** を追加して API ノードに変えることができます:"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:423
 msgid "A **Database** holding the REST data."
@@ -446,7 +447,7 @@ msgstr "データベースアクセスの最適化のために **インデック
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:449
 msgid ""
-"The ``catapult-client`` repository you cloned to build the server in the "
+"The ``catapult-client`` repository you cloned to build the client in the "
 "first step contains `a folder with mongo scripts <https://github.com/symbol"
 "/catapult-client/blob/main/scripts/mongo>`__. Run this one:"
 msgstr ""
@@ -540,11 +541,11 @@ msgstr "確認"
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:549
 msgid ""
 "If the REST gateway is working correctly, you can now make queries at port "
-"3000. If the Catapult Server, Broker and MongoDB are working correctly, the "
+"3000. If the Catapult client, Broker and MongoDB are working correctly, the "
 "values returned by REST will be correctly synchronized with the rest of the "
 "blockchain."
 msgstr ""
-"REST ゲートウェイが正しく機能している場合はポート 3000 でクエリを実行できます。 Catapult サーバー、ブローカー、MongoDB "
+"REST ゲートウェイが正しく機能している場合はポート 3000 でクエリを実行できます。 Catapult クライアント、ブローカー、MongoDB "
 "が正しく機能している場合、 REST が返却する値は他のブロックチェーンと正しく同期されたものになります。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:551

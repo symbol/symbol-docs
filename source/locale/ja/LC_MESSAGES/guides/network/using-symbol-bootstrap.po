@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 13:28+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -80,15 +80,23 @@ msgstr ""
 "セットアップスクリプトは **docker** "
 "を使用して自動化されます。テストネットノードを立ち上げるには、次のツールをインストールする必要があります。"
 
+#: ../../source/guides/network/using-symbol-bootstrap.rst:85
+msgid ""
+"`node.js`_ version 12 or higher (**It is recommended that you install "
+"node.js using** `nvm <https://github.com/nvm-sh/nvm>`__)"
+msgstr ""
+"`node.js`_ バージョン 12 以上 (node.js は `nvm <https://github.com/nvm-sh/nvm>`__ を "
+"**使用してインストールすることを推奨** します)"
+
 #: ../../source/guides/network/using-symbol-bootstrap.rst:91
 msgid "Ports"
 msgstr "ポート"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:93
 msgid ""
-"Make sure that the server's host is accessible from the internet and that "
+"Make sure that the client's host is accessible from the internet and that "
 "**the following ports are open and available**:"
-msgstr "サーバーのホストがインターネットからアクセス可能であり、 **次のポートが開いていて、使用可能であること** を確認してください。"
+msgstr "クライアントのホストがインターネットからアクセス可能であり、 **次のポートが開いていて、使用可能であること** を確認してください。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:95
 msgid "Port ``7900`` is used by catapult-client to communicate between nodes."

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2020-06-26 09:14+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,7 +113,7 @@ msgid ""
 "since 2015."
 msgstr ""
 "これらのノードは2015年から稼働し続けてきた、従来 JAVA で書かれていた NEM 分散台帳を C++ でリライトした ``catapult-"
-"server`` ソフトウェアを使用してデプロイされます。"
+"client`` ソフトウェアを使用してデプロイされます。"
 
 #: ../../source/references/overview.rst:110
 msgid ":doc:`Read more ...<../server>`."

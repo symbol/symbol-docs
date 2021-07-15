@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2019-02-22 09:11+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -220,6 +220,10 @@ msgid ""
 msgstr ""
 "現在の :doc:`SDK のコード例 <../concepts/account>` と :ref:`CLI <wallet-cli>` に詳しくなる。"
 
+#: ../../source/guidelines/sdk-development.rst:109
+msgid "Join our |discord| to ask |codename| related questions."
+msgstr "|codename| に関する質問をするために |discord| に参加してください。"
+
 #: ../../source/guidelines/sdk-development.rst:110
 msgid ""
 "Be sure no one is already working on the SDK you want to create. Check the "
@@ -242,6 +246,20 @@ msgstr ""
 msgid "Creating the project"
 msgstr "プロジェクトの作成"
 
+#: ../../source/guidelines/sdk-development.rst:117
+msgid ""
+"You can base your work on the `TypeScript SDK <https://github.com/symbol"
+"/symbol-sdk-typescript-javascript>`_. The TypeScript version is the first "
+"SDK getting the latest updates. Check regularly the `Changelog "
+"<https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/CHANGELOG.md>`_ to be sure you didn't miss any code "
+"change update."
+msgstr ""
+"`TypeScript SDK <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript>`_ に基づいた開発を行うことができます。SDK は TypeScript の最新バージョンに追従します。コードの更新については "
+"`Changelog <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/CHANGELOG.md>`_ を確認してください。"
+
 #: ../../source/guidelines/sdk-development.rst:121
 msgid "Create a new repository, preferably on GitHub, with:"
 msgstr "可能であれば GitHub で新しいリポジトリを作成します:"
@@ -258,6 +276,15 @@ msgstr ""
 "`Code of Conduct <https://help.github.com/articles/adding-a-code-of-conduct-"
 "to-your-project/>`_"
 
+#: ../../source/guidelines/sdk-development.rst:125
+msgid ""
+"The `Contributors guidelines <https://help.github.com/articles/setting-"
+"guidelines-for-repository-contributors/>`_ to help others know how they can "
+"help you."
+msgstr ""
+"`貢献ガイドライン <https://help.github.com/articles/setting-guidelines-for-"
+"repository-contributors/>`_ はどのように他の人を手助けできるかについて記述しています。"
+
 #: ../../source/guidelines/sdk-development.rst:129
 msgid "Testing"
 msgstr "テスト"
@@ -268,9 +295,67 @@ msgid ""
 " the developers!"
 msgstr "良好なテストカバレッジのプロジェクトは開発者にとって、より信頼のおけるものとなるでしょう。"
 
+#: ../../source/guidelines/sdk-development.rst:133
+msgid ""
+"We **strongly** suggest to do `Test-Driven Development "
+"<https://en.wikipedia.org/wiki/Test-driven_development>`_ or Unit-Testing "
+"(test last). If you need inspiration, feel free to adapt directly the same "
+"tests we did."
+msgstr ""
+"`テスト駆動開発 <https://en.wikipedia.org/wiki/Test-driven_development>`_ "
+"またはユニットテスト (継続テスト) を **強く** "
+"推奨します。インスピレーションが必要な場合は、私たちが行っているテストと同じように、直接適応させてください。"
+
+#: ../../source/guidelines/sdk-development.rst:136
+msgid ""
+"Example of ``travis.yml`` `configuration file <https://github.com/symbol"
+"/symbol-sdk-typescript-javascript/blob/main/.travis.yml>`_"
+msgstr ""
+"``travis.yml`` `設定ファイル <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/.travis.yml>`_ の例"
+
+#: ../../source/guidelines/sdk-development.rst:137
+msgid ""
+"Example of `unit tests  <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/tree/main/test>`_."
+msgstr ""
+"`ユニットテスト <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/tree/main/test>`_ の例"
+
+#: ../../source/guidelines/sdk-development.rst:138
+msgid ""
+"Example of `end to end tests  <https://github.com/symbol/symbol-sdk-"
+"typescript-javascript/tree/main/e2e>`_."
+msgstr ""
+"`エンドツーエンドテスト <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/tree/main/e2e>`_ の例"
+
+#: ../../source/guidelines/sdk-development.rst:143
+msgid ""
+"Also, we strive to keep our codebases with a unit test coverage of 80% or "
+"higher. We use `coveralls <https://coveralls.io/>`_ to monitor test "
+"coverage."
+msgstr ""
+"また、私たちはコードのユニットテストカバレッジを 80% 以上にするように努力しています。 `coveralls "
+"<https://coveralls.io/>`_ を使用してカバレッジを確認しています。"
+
 #: ../../source/guidelines/sdk-development.rst:148
 msgid "Infrastucture"
 msgstr "インフラストラクチャ"
+
+#: ../../source/guidelines/sdk-development.rst:153
+msgid ""
+"These are the steps we followed to generate the Typescript DTOs (data "
+"transfer objects):"
+msgstr "Typescript DTO (データ転送オブジェクト) を生成するために実行した手順は次のとおりです:"
+
+#: ../../source/guidelines/sdk-development.rst:155
+msgid ""
+"Download the `latest Symbol OpenAPI spec <https://github.com/symbol/symbol-"
+"openapi/releases>`_ from GitHub releases."
+msgstr ""
+"`最新の Symbol OpenAPI 仕様 <https://github.com/symbol/symbol-openapi/releases>`_"
+" を Github リリースからダウンロード"
 
 #: ../../source/guidelines/sdk-development.rst:157
 msgid "Install the OpenApi generator CLI."
@@ -284,13 +369,36 @@ msgstr "選択したプログラミング言語向けの DTO を生成する。"
 msgid "Example of repositories and implementations:"
 msgstr "リポジトリ実装の例:"
 
+#: ../../source/guidelines/sdk-development.rst:181
+msgid ""
+"See the complete list of `repositories and implementations "
+"<https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/src/infrastructure>`_."
+msgstr ""
+"`リポジトリと実装 <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/src/infrastructure>`_ のリストを参照"
+
 #: ../../source/guidelines/sdk-development.rst:187
 msgid "Models"
 msgstr "モデル"
 
+#: ../../source/guidelines/sdk-development.rst:189
+msgid ""
+"By default, models are immutable and aim to hide the complexity, like type "
+"conversion or relationship between objects."
+msgstr "デフォルトでは、型変換やオブジェクト間の関係などの複雑さを隠蔽することを目的として、モデルは不変となっています。"
+
 #: ../../source/guidelines/sdk-development.rst:191
 msgid "Example of models implementation:"
 msgstr "モデル実装の例:"
+
+#: ../../source/guidelines/sdk-development.rst:197
+msgid ""
+"See the complete list of `models <https://github.com/symbol/symbol-sdk-"
+"typescript-javascript/tree/main/src/model>`_."
+msgstr ""
+"`モデル <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/tree/main/src/model>`_ のリストを参照"
 
 #: ../../source/guidelines/sdk-development.rst:204
 msgid ""
@@ -298,21 +406,60 @@ msgid ""
 "might need to convert those types for the user."
 msgstr "API 変換: API によって返されるデータは圧縮される場合があります。ユーザーのこれらのタイプを変換する必要がある場合があります。"
 
+#: ../../source/guidelines/sdk-development.rst:205
+msgid ""
+"`Namespace <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/src/model/namespace/NamespaceId.ts>`_ id: At creation "
+"time you add the string name, but when you receive the Namespace from the "
+"network, it comes in formatted as ``uint64`` id. A specific endpoint returns"
+" the Namespace ``string`` name."
+msgstr ""
+"`ネームスペース <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/blob/main/src/model/namespace/NamespaceId.ts>`_ ID:  "
+"作成時には文字列名を追加しますが、ネットワークからネームスペースを取得すると ``uint64`` "
+"IDとしてフォーマットされます。特定のエンドポイントは ``文字列`` のネームスペース名を返します。"
+
 #: ../../source/guidelines/sdk-development.rst:208
 msgid "Transaction Serialization"
 msgstr "トランザクションのシリアル化"
 
 #: ../../source/guidelines/sdk-development.rst:210
 msgid ""
-"The `catbuffer library <https://github.com/symbol/catbuffer>`_ defines the "
-"protocol to serialize and deserialize |codename| entities."
+"The `catbuffer-schemas library <https://github.com/symbol/catbuffer-"
+"schemas>`_ defines the protocol to serialize and deserialize |codename| "
+"entities."
 msgstr ""
-"`catbuffer ライブラリ <https://github.com/symbol/catbuffer>`_ は |codename| "
-"のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。"
+"`catbuffer-schemas ライブラリ <https://github.com/symbol/catbuffer-schemas>`_ は "
+"|codename| のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。"
+
+#: ../../source/guidelines/sdk-development.rst:219
+msgid "Clone the catbuffer-generators repository recursively."
+msgstr "catbuffer-generators リポジトリをクローンしてください。"
 
 #: ../../source/guidelines/sdk-development.rst:225
 msgid "Install the package requirements."
 msgstr "必須パッケージをインストール"
+
+#: ../../source/guidelines/sdk-development.rst:231
+msgid ""
+"Clone the catbuffer-schemas repository inside the ``catbuffer-generators`` "
+"folder."
+msgstr "catbuffer-schemas リポジトリを ``catbuffer-generators`` の中にクローンしてください。"
+
+#: ../../source/guidelines/sdk-development.rst:239
+msgid ""
+"The previous command creates a new file for every schema under the "
+"``catbuffer/_generated/cpp_builder`` folder."
+msgstr ""
+"直前のコマンドは ``catbuffer/_generated/cpp_builder`` フォルダの下に各スキーマの新しいファイルを作成します。"
+
+#: ../../source/guidelines/sdk-development.rst:249
+msgid ""
+"See the complete list of `transactions <https://github.com/symbol/symbol-"
+"sdk-typescript-javascript/tree/main/src/model/transaction>`_."
+msgstr ""
+"`トランザクション <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/tree/main/src/model/transaction>`_ のリストを参照"
 
 #: ../../source/guidelines/sdk-development.rst:252
 msgid "KeyPair and Cryptographic functions"
@@ -334,9 +481,27 @@ msgstr "サービス"
 msgid "Examples of services:"
 msgstr "サービスの例:"
 
+#: ../../source/guidelines/sdk-development.rst:287
+msgid ""
+"See the complete list of `services <https://github.com/symbol/symbol-sdk-"
+"typescript-javascript/tree/main/src/service>`_."
+msgstr ""
+"`サービス <https://github.com/symbol/symbol-sdk-typescript-"
+"javascript/tree/main/src/service>`_ のリストを参照"
+
 #: ../../source/guidelines/sdk-development.rst:291
 msgid "Documenting the SDK"
 msgstr "SDK のドキュメント"
+
+#: ../../source/guidelines/sdk-development.rst:293
+msgid ""
+"The SDKs need to be adopted by other developers. As the main developer, no "
+"one knows better than you how the SDK works. Consider helping others and "
+"spread the usage of the SDK by providing :doc:`the following documentation "
+"<sdk-documentation>`."
+msgstr ""
+"SDK は他の開発者に採用される必要があります。メイン開発者であるならば、 SDK がどのように機能するかをあなたより知っている人は誰もいません。 "
+":doc:`次のドキュメント <sdk-documentation>` を提供して、他の人を助け、SDK の使用を広めることを検討してください。"
 
 #: ../../source/guidelines/sdk-development.rst:299
 msgid "Publishing the SDK as official"

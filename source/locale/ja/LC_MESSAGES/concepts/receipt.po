@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-07-15 09:06+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -88,11 +88,11 @@ msgid ""
 "<inflation>`."
 msgstr "**インフレーション**: :doc:`インフレーション <inflation>` のために作り出されたネットワーク通貨モザイク。"
 
-#: ../../source/concepts/receipt.rst:69
+#: ../../source/concepts/receipt.rst:71
 msgid "Resolution statement"
 msgstr "解決ステートメント"
 
-#: ../../source/concepts/receipt.rst:71
+#: ../../source/concepts/receipt.rst:73
 msgid ""
 "When a transaction includes an :doc:`alias <namespace>`, a so called "
 ":ref:`resolution statement <resolution-statement>` reflects the resolved "
@@ -101,21 +101,21 @@ msgstr ""
 "トランザクションが :doc:`エイリアス <namespace>` を含むとき、 :ref:`解決ステートメント <resolution-"
 "statement>` と呼ばれ、そのブロックの解決済みの値を反映します:"
 
-#: ../../source/concepts/receipt.rst:73
+#: ../../source/concepts/receipt.rst:75
 msgid "**Address Resolution**: An account alias was used in the block."
 msgstr "**Address Resolution**: このブロックで使用されたアカウントエイリアス。"
 
-#: ../../source/concepts/receipt.rst:74
+#: ../../source/concepts/receipt.rst:76
 msgid "**Mosaic Resolution**: A mosaic alias was used in the block."
 msgstr "**Mosaic Resolution**: このブロックで使用されたモザイクエイリアス。"
 
-#: ../../source/concepts/receipt.rst:76
+#: ../../source/concepts/receipt.rst:78
 msgid ""
 "The alias receipts record the first occurrence of an (unresolved, resolved) "
 "alias pair used in a block."
 msgstr "エイリアスレシートはブロック内で使用された(未解決、解決済み)エイリアスペアの最初の出現を記録します。"
 
-#: ../../source/concepts/receipt.rst:78
+#: ../../source/concepts/receipt.rst:80
 msgid ""
 "It is technically possible to get more than one resolution for the same "
 "namespace id and block. This situation is common when a namespace creator "
@@ -125,7 +125,7 @@ msgstr ""
 "同じ namespace id "
 "とブロックに対して1つ以上の解決を取得することは技術的に可能です。この状況はネームスペース作成者が別のアセットへリンクを変更し、同じブロック内で2つの異なる解決になる場合によく見られます。"
 
-#: ../../source/concepts/receipt.rst:81
+#: ../../source/concepts/receipt.rst:83
 msgid ""
 "The receipt source ``primaryId`` references the transaction where the alias "
 "first appears within the block. The ``secondaryId`` is not 0 when the "
@@ -137,11 +137,11 @@ msgstr ""
 ":doc:`AggregateTransaction <../../concepts/aggregate-transaction>` の一部である場合は"
 " ``secondaryId`` が 0 以外になり、アグリゲート内のインデックス位置を示します。"
 
-#: ../../source/concepts/receipt.rst:86
+#: ../../source/concepts/receipt.rst:88
 msgid "Recorded receipts"
 msgstr "記録済みレシート"
 
-#: ../../source/concepts/receipt.rst:88
+#: ../../source/concepts/receipt.rst:90
 msgid "|codename| records invisible state changes for the following entities."
 msgstr "|codename| は以下のエントリに不可視な状態変化を記録します。"
 
@@ -266,10 +266,10 @@ msgid ""
 " recorded when a secretlock expires."
 msgstr "アカウントが受信するロックされたモザイク、mosaic id とその量。シークレットロックの期限が切れたときに記録されます。"
 
-#: ../../source/concepts/receipt.rst:119
+#: ../../source/concepts/receipt.rst:121
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/receipt.rst:129
+#: ../../source/concepts/receipt.rst:131
 msgid "Continue: :doc:`Data validation <data-validation>`."
 msgstr "次項: :doc:`データバリデーション <inflation>`"
