@@ -20,6 +20,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('_ext'))
 import sphinx_bootstrap_theme
+import m2r2
 
 
 # -- General configuration ------------------------------------------------
@@ -51,6 +52,7 @@ extensions = [
     'fulltoc',
     'ghreference',
     'redirects',
+    'm2r2', # To support direct rendering of MarkDown files
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -62,7 +64,7 @@ templates_path.append(ablog.get_html_templates_path())
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The main toctree document.
 master_doc = 'index'
@@ -356,6 +358,9 @@ linkcheck_anchors_ignore = [r'L\d+']
 
 # -- Options for viewsource ------------------------------------------------
 viewsource_title = 'View Code'
+
+# -- Options for m2r2 ------------------------------------------------------
+m2r_anonymous_references = True # Otherwise we get duplicated link names
 
 def viewsource_resolve_link(file_path, language=None):
     if language == 'javascript':
