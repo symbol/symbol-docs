@@ -1,5 +1,7 @@
 # Directory
 
+[![hackmd-github-sync-badge](https://hackmd.io/afJzrT-RTAamp4uQTTLhHw/badge)](https://hackmd.io/afJzrT-RTAamp4uQTTLhHw): This file is maintained directly on [HackMD](https://hackmd.io/afJzrT-RTAamp4uQTTLhHw), please do NOT edit on GitHub.
+
 ## Team Members
 
 [//]: # (PLEASE KEEP ALPHABETICAL ORDER AND CONSISTENCY, INCLUDING HYPERLINKS)
