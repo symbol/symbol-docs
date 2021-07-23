@@ -297,6 +297,10 @@ rst_prolog = """
 .. |forum| raw:: html
 
    <a href="https://forum.nem.io/c/announcement" target="_blank">Forum</a>
+
+.. |techref| raw:: html
+
+   <a href="https://docs.symbolplatform.com/symbol-technicalref/main.pdf" target="_blank">Technical Reference</a>
 """
 
 # -- Options for Epub output ----------------------------------------------

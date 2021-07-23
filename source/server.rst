@@ -6,7 +6,7 @@ Client
 
 These nodes are deployed using |catapult-client| software, a C++ rewrite of the previous Java-written NEM distributed ledger that has been running since 2015.
 
-Learn more about the protocol by reading the |whitepaper| and this :doc:`documentation <concepts/node>`.
+Learn more about the protocol by reading the |techref| and this :doc:`documentation <concepts/node>`.
 
 ******************
 Building the image
@@ -49,6 +49,3 @@ Instructions on how to launch a secure and production-ready private chain will b
 
    <a href="https://github.com/symbol/catapult-client/blob/main/docs/README.md" target="_blank">instructions</a>
 
-.. |whitepaper| raw:: html
-
-   <a href="https://docs.symbolplatform.com/symbol-technicalref/main.pdf" target="_blank">Whitepaper</a>
