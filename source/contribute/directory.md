@@ -34,59 +34,59 @@
 
 [//]: # (PLEASE KEEP ALPHABETICAL ORDER AND CONSISTENCY, INCLUDING HYPERLINKS)
 
-| Name               | Discord                     | Telegram                                             | Twitter                                 |
-| :----------------- | :-------------------------- | :--------------------------------------------------- | :-------------------------------------- |
-| Abderrahmane       | Abderrahmanebouterfaya#7076 | [@Bouterfaya](https://t.me/Bouterfaya)               | .                                       |
-| Alessio            | alediemmee#4796             | [@alediemmee](https://t.me/alediemmee)               | .                                       |
-| Alexis             | psputnik#2769               | [@psputnik](https://t.me/psputnik)                   | .                                       |
-| Ana                | AnaPikachu912#6226          | [@ana912](https://t.me/ana912)                       | .                                       |
-| Angel              | angelnem#3452               | [@angelnem](https://t.me/angelnem)                   | .                                       |
-| Bader              | bader#3444                  | [@crackTheC0de](https://t.me/crackTheC0de)           | .                                       |
-| Beatrice           | beatrice#7803               | .                                                    | .                                       |
-| BloodyRookie       | BloodyRookie#9563           | [@BloodyRookie](https://t.me/BloodyRookie)           | .                                       |
-| Boonoonoonoos      | Vybz#6422                   | [@Boonoonoonoos](https://t.me/Boonoonoonoos)         | .                                       |
-| Carlos             | OldSkull1982#1973           | [@Oldskull1982](https://t.me/Oldskull1982)           | .                                       |
-| CB                 | C2daB#1651                  | [@C2daB](https://t.me/C2daB)                         | .                                       |
-| Chipmunk           | Chipmunk#5563               | [@ChipmunkJP](https://t.me/ChipmunkJP)               | .                                       |
-| Dave H             | Dave Hodgson#1822           | [@davehodgson](https://t.me/davehodgson)             | .                                       |
-| David Ham          | D..H..#5923                 | [@Davham](https://t.me/Davham)                       | .                                       |
-| David Mansell      | .                           | [@DJManse](https://t.me/DJManse)                     | .                                       |
-| Demi               | Demi#9601                   | .                                                    | .                                       |
-| DTBYChris          | Dtbychris#4883              | [@dtbychris](https://t.me/dtbychris)                 | .                                       |
-| Essan              | .                           | [@gehari3sei](https://t.me/gehari3sei)               | .                                       |
-| Etsuko             | Etsuko#5751                 | [@etsukokanetaka](https://t.me/etsukokanetaka)       | .                                       |
+| Name               | Discord                     | Telegram                                             | Twitter                                         |
+| :----------------- | :-------------------------- | :--------------------------------------------------- | :---------------------------------------------- |
+| Abderrahmane       | Abderrahmanebouterfaya#7076 | [@Bouterfaya](https://t.me/Bouterfaya)               | .                                               |
+| Alessio            | alediemmee#4796             | [@alediemmee](https://t.me/alediemmee)               | .                                               |
+| Alexis             | psputnik#2769               | [@psputnik](https://t.me/psputnik)                   | .                                               |
+| Ana                | AnaPikachu912#6226          | [@ana912](https://t.me/ana912)                       | .                                               |
+| Angel              | angelnem#3452               | [@angelnem](https://t.me/angelnem)                   | .                                               |
+| Bader              | bader#3444                  | [@crackTheC0de](https://t.me/crackTheC0de)           | .                                               |
+| Beatrice           | beatrice#7803               | .                                                    | .                                               |
+| BloodyRookie       | BloodyRookie#9563           | [@BloodyRookie](https://t.me/BloodyRookie)           | .                                               |
+| Boonoonoonoos      | Vybz#6422                   | [@Boonoonoonoos](https://t.me/Boonoonoonoos)         | .                                               |
+| Carlos             | OldSkull1982#1973           | [@Oldskull1982](https://t.me/Oldskull1982)           | .                                               |
+| CB                 | C2daB#1651                  | [@C2daB](https://t.me/C2daB)                         | .                                               |
+| Chipmunk           | Chipmunk#5563               | [@ChipmunkJP](https://t.me/ChipmunkJP)               | .                                               |
+| Dave H             | Dave Hodgson#1822           | [@davehodgson](https://t.me/davehodgson)             | .                                               |
+| David Ham          | D..H..#5923                 | [@Davham](https://t.me/Davham)                       | .                                               |
+| David Mansell      | .                           | [@DJManse](https://t.me/DJManse)                     | .                                               |
+| Demi               | Demi#9601                   | .                                                    | .                                               |
+| DTBYChris          | Dtbychris#4883              | [@dtbychris](https://t.me/dtbychris)                 | .                                               |
+| Essan              | .                           | [@gehari3sei](https://t.me/gehari3sei)               | .                                               |
+| Etsuko             | Etsuko#5751                 | [@etsukokanetaka](https://t.me/etsukokanetaka)       | .                                               |
 | Faizul Reza        | Faizul#2779                 | [@Faizul_r](https://t.me/Faizul_r)                   | [@FaizulReza1](https://twitter.com/FaizulReza1) |
-| Ferran             | .                           | [@ferranprat12](https://t.me/ferranprat12)           | .                                       |
-| Gandora            | Gandora#6540                | [@kyle97119](https://t.me/kyle97119)                 | .                                       |
-| Guille             | that_guy_from_BCN#4435      | [@Guillecarandini](https://t.me/Guillecarandini)     | .                                       |
-| Hattrick           | Reuben (Firo)#0001          | .                                                    | .                                       |
-| Hexagon            | hexagontr#1470              | [@HexagonTR](https://t.me/HexagonTR)                 | .                                       |
-| Iain               | chopper71#5113              | [@chopper71](https://t.me/chopper71)                 | .                                       |
-| Imane              | .                           | [@Imanemour](https://t.me/Imanemour)                 | .                                       |
-| Jeff               | jabo38#5966                 | [@jabo38](https://t.me/jabo38)                       | .                                       |
-| Joel Aquino        | Joelcryptolife#7271         | [@JoelNemlife](https://t.me/JoelNemlife)             | .                                       |
-| Johnny             | Johnny77#6191               | [@JohnnyTongki](https://t.me/JohnnyTongki)           | .                                       |
-| Kailin             | kailin#7219                 | [@kodtycoon](https://t.me/kodtycoon)                 | .                                       |
-| Klim               | klimgeran#4414              | [@klimgeran](https://t.me/klimgeran)                 | .                                       |
-| Leo                | leoschwab#0173              | [@leoschwab](https://t.me/leoschwab)                 | .                                       |
-| Leon Redinger      | leonRED#1325                | [@leonRED](https://t.me/leonRED)                     | [@leonRED](https://twitter.com/leonRED) |
-| Marco              | rigel#5123                  | [@Michelinux](https://t.me/Michelinux)               | .                                       |
-| Mickie             | mickieann#7934              | [@mickieann](https://t.me/mickieann)                 | .                                       |
-| Mikun              | mikunNEM#6130               | [@mikunNEM](https://t.me/mikunNEM)                   | .                                       |
-| Mixmaster          | mixmaster#5204              | [@mixmaster](https://t.me/mixmaster)                 | .                                       |
-| Navid              | navid#5790                  | [@ypmaster](https://t.me/ypmaster)                   | .                                       |
-| Navid              | navid#5790                  | [@ypmaster](https://t.me/ypmaster)                   | .                                       |
-| Nia                | Niashaa#4165                | [@niaShaa](https://t.me/niaShaa)                     | .                                       |
-| Oliver             | OliverCrypto#9982           | [@OliverMuldoon](https://t.me/OliverMuldoon)         | .                                       |
-| Quasarblue         | .                           | [@quasarblue](https://t.me/quasarblue)               | .                                       |
-| Radio              | Radio#1051                  | [@Radio_RadioNEMber](https://t.me/Radio_RadioNEMber) | .                                       |
-| Rene               | Rene#9386                   | [@rene_b](https://t.me/rene_b)                       | .                                       |
-| Rodney             | ravm16:4403                 | [@ravm16](https://t.me/ravm16)                       | .                                       |
-| Samiur             | Samiur#2511                 | [@himel234](https://t.me/himel234)                   | .                                       |
-| SJM211             | XHarvesting#4362            | [@xharvesting](https://t.me/xharvesting)             | .                                       |
-| Spizzerb (Patrick) | spizzerb#1575               | [@spizzerb](https://t.me/spizzerb)                   | .                                       |
-| Tolga              | Tolga28#2725                | [@Tlgacelkkk](https://t.me/Tlgacelkkk)               | .                                       |
-| Vika               | .                           | [@conphv](https://t.me/conphv)                       | .                                       |
-| Yuta               | .                           | [@yutankmr](https://t.me/yutankmr)                   | .                                       |
+| Ferran             | .                           | [@ferranprat12](https://t.me/ferranprat12)           | .                                               |
+| Gandora            | Gandora#6540                | [@kyle97119](https://t.me/kyle97119)                 | .                                               |
+| Guille             | that_guy_from_BCN#4435      | [@Guillecarandini](https://t.me/Guillecarandini)     | .                                               |
+| Hattrick           | Reuben (Firo)#0001          | .                                                    | .                                               |
+| Hexagon            | hexagontr#1470              | [@HexagonTR](https://t.me/HexagonTR)                 | .                                               |
+| Iain               | chopper71#5113              | [@chopper71](https://t.me/chopper71)                 | .                                               |
+| Imane              | .                           | [@Imanemour](https://t.me/Imanemour)                 | .                                               |
+| Jeff               | jabo38#5966                 | [@jabo38](https://t.me/jabo38)                       | .                                               |
+| Joel Aquino        | Joelcryptolife#7271         | [@JoelNemlife](https://t.me/JoelNemlife)             | .                                               |
+| Johnny             | Johnny77#6191               | [@JohnnyTongki](https://t.me/JohnnyTongki)           | .                                               |
+| Kailin             | kailin#7219                 | [@kodtycoon](https://t.me/kodtycoon)                 | .                                               |
+| Klim               | klimgeran#4414              | [@klimgeran](https://t.me/klimgeran)                 | .                                               |
+| Leo                | leoschwab#0173              | [@leoschwab](https://t.me/leoschwab)                 | .                                               |
+| Leon Redinger      | leonRED#1325                | [@leonRED](https://t.me/leonRED)                     | [@leonRED](https://twitter.com/leonRED)         |
+| Marco              | rigel#5123                  | [@Michelinux](https://t.me/Michelinux)               | .                                               |
+| Mickie             | mickieann#7934              | [@mickieann](https://t.me/mickieann)                 | .                                               |
+| Mikun              | mikunNEM#6130               | [@mikunNEM](https://t.me/mikunNEM)                   | .                                               |
+| Mixmaster          | mixmaster#5204              | [@mixmaster](https://t.me/mixmaster)                 | .                                               |
+| Navid              | navid#5790                  | [@ypmaster](https://t.me/ypmaster)                   | .                                               |
+| Navid              | navid#5790                  | [@ypmaster](https://t.me/ypmaster)                   | .                                               |
+| Nia                | Niashaa#4165                | [@niaShaa](https://t.me/niaShaa)                     | .                                               |
+| Oliver             | OliverCrypto#9982           | [@OliverMuldoon](https://t.me/OliverMuldoon)         | .                                               |
+| Quasarblue         | .                           | [@quasarblue](https://t.me/quasarblue)               | .                                               |
+| Radio              | Radio#1051                  | [@Radio_RadioNEMber](https://t.me/Radio_RadioNEMber) | .                                               |
+| Rene               | Rene#9386                   | [@rene_b](https://t.me/rene_b)                       | .                                               |
+| Rodney             | ravm16:4403                 | [@ravm16](https://t.me/ravm16)                       | .                                               |
+| Samiur             | Samiur#2511                 | [@himel234](https://t.me/himel234)                   | .                                               |
+| SJM211             | XHarvesting#4362            | [@xharvesting](https://t.me/xharvesting)             | .                                               |
+| Spizzerb (Patrick) | spizzerb#1575               | [@spizzerb](https://t.me/spizzerb)                   | .                                               |
+| Tolga              | Tolga28#2725                | [@Tlgacelkkk](https://t.me/Tlgacelkkk)               | .                                               |
+| Vika               | .                           | [@conphv](https://t.me/conphv)                       | .                                               |
+| Yuta               | .                           | [@yutankmr](https://t.me/yutankmr)                   | .                                               |
 
 Please follow and subscribe to their social media channels. Doing this will make social media collaboration more efficient.
