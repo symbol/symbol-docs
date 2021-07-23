@@ -278,10 +278,6 @@ rst_prolog = """
 
     <a href="https://nem.io/" target="_blank">NEM</a>
 
-.. |community| raw:: html
-
-   <a href="https://github.com/symbol/community/" target="_blank">community</a>
-
 .. |twitter| raw:: html
 
    <a href="https://twitter.com/NEMofficial" target="_blank">Twitter</a>

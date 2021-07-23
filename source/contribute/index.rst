@@ -2,8 +2,7 @@
 Contributing
 ############
 
-|codename| is an |open-source| project.
-Discover how our |community| is organized, and get started participating:
+|codename| is an |open-source| project:
 
 * Reach our community joining the official |discord| server.
 * Check the :doc:`contributing guidelines <contributing>` to propose changes.
@@ -14,7 +13,6 @@ Discover how our |community| is organized, and get started participating:
 .. toctree::
     :hidden:
 
-    community
     contributing
     glossary
     directory
