@@ -52,10 +52,10 @@
 | David Ham          | D..H..#5923                 | [@Davham](https://t.me/Davham)                       | .                                       |
 | David Mansell      | .                           | [@DJManse](https://t.me/DJManse)                     | .                                       |
 | Demi               | Demi#9601                   | .                                                    | .                                       |
-| Dtbychris          | Dtbychris#4883              | [@Dtbychris](https://t.me/Dtbychris)                 | .                                       |
 | DTBYChris          | Dtbychris#4883              | [@dtbychris](https://t.me/dtbychris)                 | .                                       |
 | Essan              | .                           | [@gehari3sei](https://t.me/gehari3sei)               | .                                       |
 | Etsuko             | Etsuko#5751                 | [@etsukokanetaka](https://t.me/etsukokanetaka)       | .                                       |
+| Faizul Reza        | Faizul#2779                 | [@Faizul_r](https://t.me/Faizul_r)                   | [@FaizulReza1](https://twitter.com/FaizulReza1) |
 | Ferran             | .                           | [@ferranprat12](https://t.me/ferranprat12)           | .                                       |
 | Gandora            | Gandora#6540                | [@kyle97119](https://t.me/kyle97119)                 | .                                       |
 | Guille             | that_guy_from_BCN#4435      | [@Guillecarandini](https://t.me/Guillecarandini)     | .                                       |
