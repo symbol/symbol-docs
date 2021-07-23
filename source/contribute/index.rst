@@ -9,6 +9,7 @@ Discover how our |community| is organized, and get started participating:
 * Check the :doc:`contributing guidelines <contributing>` to propose changes.
 * Follow the development updates on |twitter|.
 * Explore our |github| repositories.
+* Take a look at the member :doc:`directory`.
 
 .. toctree::
     :hidden:
@@ -16,3 +17,4 @@ Discover how our |community| is organized, and get started participating:
     community
     contributing
     glossary
+    directory
