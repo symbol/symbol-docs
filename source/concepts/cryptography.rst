@@ -60,15 +60,27 @@ As part of the regular workflow of the protocol, signatures are **validated** us
 Address
 *******
 
-|codename| public keys can be shared in a **shorter form** as 39-character addresses.
+|codename| public keys can be shared in a **shorter form** as **addresses**.
 
-First, a 24-byte triplet is built, consisting of:
+First, a **24-byte** **raw address** is built, consisting of:
 
 * A network-id byte.
 * A 160-bit (20 byte) hash of the account's public key.
 * A 3-byte checksum, to allow the quick recognition of mistyped addresses.
 
-Then, the whole string is `Base32-encoded <https://en.wikipedia.org/wiki/Base32>`__ to produce the 39-character address.
+However, the raw address is inconvenient to use because it is a binary array, so it is typically `Base32-encoded <https://en.wikipedia.org/wiki/Base32>`__ into a **39-character** text string called an **encoded address**, or simply an **adress**.
+
+Finally, for easier reading, hyphens can be added every 6 characters to create a **pretty address**.
+
+Examples:
+
+.. csv-table::
+   :widths: 20 65 15
+   :delim: ;
+
+   Raw address; ``0x78,0xD0,0x44,0xED,0xC3,0xDC,0x8B,0x86...``; 24 bytes
+   Address; ``PDIEJ3OD3SFYNZCQUSEWKY4NRRZUI5LMJPSVLPQ``; 39 chars
+   Pretty address; ``PDIEJ3-OD3SFY-NZCQUS-EWKY4N-RRZUI5-LMJPSV-LPQ``; 45 chars
 
 It is possible to create an address without interacting with the blockchain. In fact, the blockchain only tracks addresses and public keys when they first appear in a transaction.
 
