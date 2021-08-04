@@ -52,10 +52,6 @@ Before you can activate delegated harvesting, you need the following items:
 
 - The **node's public TLS key**. This is the key the node uses to authenticate data for transport over `TLS <https://en.wikipedia.org/wiki/Transport_Layer_Security>`__ and is typically provided by the node owner.
 
-Optionally:
-
-- An **Announcer account (A)** with enough |networkcurrency| to pay for transaction fees. By announcing the final harvesting delegation request through this account instead of **M**, even the fact that **M** is involved in delegated harvesting is hidden from the network. Use this account for added privacy.
-
 Refer to the :doc:`Creating an account <../account/creating-an-account>` guide to know how to create new accounts if you need to.
 
 .. note:: The following bash code snippets make use of :doc:`symbol-cli <../../cli>` and assume that the **main account (M)** is set as the **default** profile. Use the ``‑‑profile`` parameter if this is not the case.
@@ -117,7 +113,7 @@ Guide
 
    The harvesting fees will be sent to **M** as it has established a link with the node through the :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
 
-   Sign the :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` with **M** (or **A** for added privacy, as stated in the Prerequisites) and announce it to the network.
+   Sign the :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` with **M** and announce it to the network.
 
    .. example-code::
 
