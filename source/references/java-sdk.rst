@@ -6,5 +6,5 @@ Java SDK Reference
 Versions
 ********
 
-.. ghreference:: symbol/symbol-sdk-java
+.. ghreference:: symbol/sdk-java
     :folder: javadoc
