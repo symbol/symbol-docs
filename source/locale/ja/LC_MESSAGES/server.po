@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-08-04 18:11+0000\n"
 "PO-Revision-Date: 2019-06-13 10:27+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -43,10 +43,10 @@ msgstr ""
 
 #: ../../source/server.rst:49
 msgid ""
-"Learn more about the protocol by reading the |whitepaper| and this "
+"Learn more about the protocol by reading the |techref| and this "
 ":doc:`documentation <concepts/node>`."
 msgstr ""
-"プロトコルについてより詳しい情報は |whitepaper| と :doc:`ドキュメント <concepts/node>` を参照してください。"
+"プロトコルについてより詳しい情報は |techref| と :doc:`ドキュメント <concepts/node>` を参照してください。"
 
 #: ../../source/server.rst:53
 msgid "Building the image"
