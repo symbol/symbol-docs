@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-08-04 18:11+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -189,18 +189,18 @@ msgstr ""
 "プロトコルは通常のワークフローの一部として、一致する公開鍵を使用して署名を **検証** します。これによりエンティティの署名者の信頼性が保証されます。"
 
 #: ../../source/concepts/cryptography.rst:101
+#: ../../source/concepts/cryptography.rst:1
 msgid "Address"
 msgstr "アドレス"
 
 #: ../../source/concepts/cryptography.rst:103
 msgid ""
-"|codename| public keys can be shared in a **shorter form** as 39-character "
-"addresses."
-msgstr "|codename| 公開鍵は 39 文字のより **短い形式** である、アドレスとして共有できます。"
+"|codename| public keys can be shared in a **shorter form** as **addresses**."
+msgstr "|codename| 公開鍵は **より短い形式** である **アドレス** として共有できます。"
 
 #: ../../source/concepts/cryptography.rst:105
-msgid "First, a 24-byte triplet is built, consisting of:"
-msgstr "前 24-byte トリプレットが構成されています:"
+msgid "First, a **24-byte** **raw address** is built, consisting of:"
+msgstr "前 **24-byte** **Raw アドレス** が構成されています:"
 
 #: ../../source/concepts/cryptography.rst:107
 msgid "A network-id byte."
@@ -217,14 +217,46 @@ msgstr "アドレスのミスタイプを素早く確認するための 3-byte �
 
 #: ../../source/concepts/cryptography.rst:111
 msgid ""
-"Then, the whole string is `Base32-encoded "
-"<https://en.wikipedia.org/wiki/Base32>`__ to produce the 39-character "
-"address."
+"However, the raw address is inconvenient to use because it is a binary "
+"array, so it is typically `Base32-encoded "
+"<https://en.wikipedia.org/wiki/Base32>`__ into a **39-character** text "
+"string called an **encoded address**, or simply an **adress**."
 msgstr ""
-"次に、39文字のアドレスを生成するために、文字列全体が `Base32 でエンコード "
-"<https://en.wikipedia.org/wiki/Base32>`__ されます。"
+"しかし、Raw アドレスはバイナリ配列のため、普段使いには不便なので、通常は `Base32 エンコード済み "
+"<https://en.wikipedia.org/wiki/Base32>` __ を **エンコード済みアドレス** または単に **アドレス** "
+"と呼ばれる **39 文字** のテキストへ変換します。"
 
 #: ../../source/concepts/cryptography.rst:113
+msgid ""
+"Finally, for easier reading, hyphens can be added every 6 characters to "
+"create a **pretty address**."
+msgstr "最後に、読みやすくするために、6 文字ごとにハイフンを追加して **きれいなアドレス** へ整形します。"
+
+#: ../../source/concepts/cryptography.rst:115
+msgid "Examples:"
+msgstr "例:"
+
+#: ../../source/concepts/cryptography.rst:1
+msgid "Raw address"
+msgstr "Raw アドレス"
+
+#: ../../source/concepts/cryptography.rst:1
+msgid "24 bytes"
+msgstr "24 バイト"
+
+#: ../../source/concepts/cryptography.rst:1
+msgid "39 chars"
+msgstr "39 文字"
+
+#: ../../source/concepts/cryptography.rst:1
+msgid "Pretty address"
+msgstr "整形アドレス"
+
+#: ../../source/concepts/cryptography.rst:1
+msgid "45 chars"
+msgstr "45 文字"
+
+#: ../../source/concepts/cryptography.rst:125
 msgid ""
 "It is possible to create an address without interacting with the blockchain."
 " In fact, the blockchain only tracks addresses and public keys when they "
@@ -232,11 +264,11 @@ msgid ""
 msgstr ""
 "ブロックチェーンと疎通せずにアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。"
 
-#: ../../source/concepts/cryptography.rst:119
+#: ../../source/concepts/cryptography.rst:131
 msgid "HD-Wallets and Mnemonics"
 msgstr "HD-Wallets とニーモニック"
 
-#: ../../source/concepts/cryptography.rst:121
+#: ../../source/concepts/cryptography.rst:133
 msgid ""
 "**Hierarchical Deterministic Wallets** (HD-Wallets for short) can **derive a"
 " series of accounts** from a single seed account. This allows handling a "
@@ -247,16 +279,16 @@ msgstr ""
 "できます。これにより単一の :ref:`キーペア <keypair>` "
 "を使用してアカウントのグループを処理できるようになり、管理が大幅に簡素化されます。"
 
-#: ../../source/concepts/cryptography.rst:123
+#: ../../source/concepts/cryptography.rst:135
 msgid "Only one key to protect."
 msgstr "一つの鍵だけを守る"
 
-#: ../../source/concepts/cryptography.rst:124
+#: ../../source/concepts/cryptography.rst:136
 msgid ""
 "Multiple accounts can be stored in a single QR code or **mnemonic phrase**."
 msgstr "複数のアカウントを 1 つの QR コードまたは **ニーモニック語群** に保存できます。"
 
-#: ../../source/concepts/cryptography.rst:126
+#: ../../source/concepts/cryptography.rst:138
 msgid ""
 "A **Mnemonic Phrase** is human-friendly representation for a private key, "
 "composed of **24 random English words**. Mnemonic phrases are sometimes used"
@@ -266,7 +298,7 @@ msgstr ""
 "**ニーモニック語群** は秘密鍵をヒューマンフレンドリーな **24 のランダムな英単語** 表現です。ニーモニックフレーズは "
 "**人間にとって覚えやすく、書き留めやすい** ため、秘密鍵の代わりに使用されることがあります。"
 
-#: ../../source/concepts/cryptography.rst:128
+#: ../../source/concepts/cryptography.rst:140
 msgid ""
 "However, they are **equivalent to private keys** so it is critical that they"
 " are kept secret at all times. Even more so in the |codename| :ref:`wallet-"
@@ -275,7 +307,7 @@ msgstr ""
 "ただし、これらは **秘密鍵** と同等なので、常に秘密にしておかなければなりません。 |codename| では、さらにそうですが :ref"
 ":`wallet-desktop` **ニーモニックフレーズはシードアカウントのキーをエンコードします** 。"
 
-#: ../../source/concepts/cryptography.rst:130
+#: ../../source/concepts/cryptography.rst:142
 msgid ""
 "See the `NIP-6 <https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ "
 "document for technical details on |codename|'s mechanism to create HD "
@@ -284,6 +316,6 @@ msgstr ""
 "HD ウォレットを作成する |codename| のメカニズムに関する技術的な詳細は `NIP-6 "
 "<https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ドキュメントを参照してください。"
 
-#: ../../source/concepts/cryptography.rst:132
+#: ../../source/concepts/cryptography.rst:144
 msgid "Continue: :doc:`Block <block>`."
 msgstr "次項: :doc:`ブロック <block>`"

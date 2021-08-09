@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-07-23 10:31+0000\n"
 "PO-Revision-Date: 2021-04-06 14:16+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -348,9 +348,21 @@ msgstr "クライアントの起動"
 msgid "Create one last folder:"
 msgstr "最後の一つのフォルダを作成:"
 
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:280
+msgid "And finally fire up the client!"
+msgstr "最後に、クライアントに火入れします！"
+
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:298
 msgid "Link the keys"
 msgstr "キーのリンク"
+
+#: ../../source/guides/network/running-a-symbol-node-manually.rst:316
+msgid ""
+"The profile is stored in ``~/symbol-cli.config.json``. You can remove this "
+"file once you are done using symbol-cli."
+msgstr ""
+"プロファイルは  ``~/symbol-cli.config.json`` に保存されます。symbol-cli "
+"を使い終わったら、このファイルは削除してもよいです。"
 
 #: ../../source/guides/network/running-a-symbol-node-manually.rst:322
 msgid "Run:"

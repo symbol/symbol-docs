@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-08-04 18:11+0000\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -26,25 +26,28 @@ msgid "Contributing"
 msgstr "貢献"
 
 #: ../../source/contribute/index.rst:45
-msgid ""
-"|codename| is an |open-source| project. Discover how our |community| is "
-"organized, and get started participating:"
-msgstr ""
-"|codename| は |open-source| プロジェクトです。私たちは |community| を編成しています。ぜひ参加してください:"
+msgid "|codename| is an |open-source| project:"
+msgstr "|codename| は |open-source| プロジェクトです:"
 
-#: ../../source/contribute/index.rst:48
+#: ../../source/contribute/index.rst:47
 msgid "Reach our community joining the official |discord| server."
 msgstr "私達のコミュニティは公式 |discord| サーバから参加できます。"
 
-#: ../../source/contribute/index.rst:49
+#: ../../source/contribute/index.rst:48
 msgid ""
 "Check the :doc:`contributing guidelines <contributing>` to propose changes."
 msgstr "変更を提案するためには :doc:`貢献ガイドライン <contributing>` を確認してください。"
 
-#: ../../source/contribute/index.rst:50
+#: ../../source/contribute/index.rst:49
 msgid "Follow the development updates on |twitter|."
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
-#: ../../source/contribute/index.rst:51
+#: ../../source/contribute/index.rst:50
 msgid "Explore our |github| repositories."
 msgstr "|github| リポジトリを探索しましょう。"
+
+#: ../../source/contribute/index.rst:51
+msgid ""
+"Take a look at the `member directory "
+"<https://hackmd.io/@syndicate/SkZ__7PCu>`__."
+msgstr "`メンバーディレクトリ <https://hackmd.io/@syndicate/SkZ__7PCu>`__ を参照してください。"
