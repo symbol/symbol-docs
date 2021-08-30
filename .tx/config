@@ -193,12 +193,6 @@ source_file = build/gettext/contribute/index.pot
 source_lang = en
 type = PO
 
-[symboldocs.contribute--community]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/community.po
-source_file = build/gettext/contribute/community.pot
-source_lang = en
-type = PO
-
 [symboldocs.contribute--contributing]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
 source_file = build/gettext/contribute/contributing.pot
