@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-08-30 15:25+0000\n"
 "PO-Revision-Date: 2021-03-02 08:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -42,8 +42,9 @@ msgid ""
 " Reward Programs** aimed at further encouraging users to create and maintain"
 " nodes."
 msgstr ""
-"ノードがブロックを生成すると取得する **ブロック報酬** (:doc:`手数料` と :doc:`インフレーション`) による直接な報酬の他に、 "
-"|codename| ユーザによるノードの作成および維持を奨励することを目的とした **一連の特別な報酬プログラムを提供** します。"
+"ノードがブロックを生成すると取得する **ブロック報酬** ( :doc:`fees` と :doc:`inflation` ) "
+"による直接な報酬の他に、 |codename| ユーザによるノードの作成および維持を奨励することを目的とした **一連の特別な報酬プログラムを提供** "
+"します。"
 
 #: ../../source/concepts/reward-programs.rst:49
 msgid "Each of these programs rewards **a different aspect of the network**:"
@@ -70,6 +71,12 @@ msgid ""
 msgstr ""
 "ほとんどの場合、これらのプログラムの恩恵を受けたいノード所有者は、明示的に **登録** する必要があります。各プログラムへの登録方法は、以下の説明に "
 "**ガイド** が含まれています。"
+
+#: ../../source/concepts/reward-programs.rst:56
+msgid ""
+"None of the reward programs has launched yet. The information shown below is"
+" subject to change until the programs officially start."
+msgstr "報酬プログラムはまだ開始されていません。以下の情報はプログラムが正式に開始されるまで変更される場合があります。"
 
 #: ../../source/concepts/reward-programs.rst:62
 msgid "Supernode Program"

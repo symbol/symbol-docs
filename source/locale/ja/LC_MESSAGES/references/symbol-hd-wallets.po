@@ -21,14 +21,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/index.rst:43
-msgid "Getting Started"
-msgstr "入門"
+#: ../../source/references/symbol-hd-wallets.rst:43
+msgid "Symbol HD Wallets Reference"
+msgstr "Symbol HD ウォレットリファレンス"
 
-#: ../../source/getting-started/index.rst:45
-msgid ""
-"This is probably the first section you'll be interested in reading in your "
-"journey to learn how to use |codename|. Select a page from the Navigation "
-"menu."
-msgstr ""
-"|codename| の使い方を学習するための、最初に読むべきセクションとして推奨します。ナビゲーションメニューからページを選択してください。"
+#: ../../source/references/symbol-hd-wallets.rst:47
+msgid "Versions"
+msgstr "バージョン"
