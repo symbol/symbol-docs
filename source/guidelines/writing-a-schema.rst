@@ -4,7 +4,7 @@ Writing a Schema
 
 Are you writing a new catapult plugin that includes a new transaction type?
 
-In this guide, we examine how the `transfer.cats <https://github.com/symbol/catbuffer-schemas/blob/main/schemas/transfer/transfer.cats>`_ was constructed.
+In this guide, we examine how the `transfer.cats <https://github.com/symbol/catbuffer-schemas/blob/main/symbol/transfer/transfer.cats>`_ was constructed.
 You can adapt the same steps to define a new schema.
 
 ************
@@ -25,7 +25,7 @@ In our case, we have named the file ``transfer.cats``.
 Think of a struct as a set of properties that we want to store in the same block of memory.
 
 The transaction body contains the extra properties which differ from a basic transaction.
-Each attribute can have one of the types defined in `types.cats <https://github.com/symbol/catbuffer-schemas/blob/main/schemas/types.cats>`_.
+Each attribute can have one of the types defined in `types.cats <https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats>`_.
 
 .. code-block:: python
 
@@ -73,6 +73,6 @@ For example, run the following command to generate C++ code:
 
 .. code-block:: bash
 
-    python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+    python main.py --schema symbol/transfer/transfer.cats --generator cpp_builder
 
 The generator creates the transaction builders file under the ``_generated/cpp_builder`` folder.

@@ -375,7 +375,7 @@ def viewsource_resolve_link(file_path, language=None):
 
 # -- Custom extlinks -----------------------------------------------------
 
-extlinks = {'schema': ('https://github.com/symbol/catbuffer-schemas/blob/main/schemas/%s', 'file '),
+extlinks = {'schema': ('https://github.com/symbol/catbuffer-schemas/blob/main/symbol/%s', 'file '),
             'properties': ('https://github.com/symbol/catapult-client/blob/main/resources/%s', 'file ')}
 
 # -- Custom Pygments lexers ----------------------------------------------

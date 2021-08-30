@@ -37,7 +37,7 @@ These endpoints allow the addition of new functionality to the client-side witho
 Applications can embed the generated code without managing dependencies, which is particularly desirable in highly-secure environments.
 Besides, sharing a common codebase enables the addition of new features with less effort.
 
-The `schemas <https://github.com/symbol/catbuffer-schemas/tree/main/schemas>`_ define the entities' data structure.
+The `schemas <https://github.com/symbol/catbuffer-schemas/tree/main/symbol>`_ define the entities' data structure.
 The library generates the leanest code necessary to serialize and deserialize defined entities.
 
 ************
@@ -73,7 +73,7 @@ For example, run the following command to generate C++ transaction builders for 
 
 .. code-block:: bash
 
-    python main.py --schema schemas/transfer/transfer.cats --generator cpp_builder
+    python main.py --schema symbol/transfer/transfer.cats --generator cpp_builder
 
 You can also generate code for all the schemas running the following command under the ``catbuffer-generators`` directory:
 
