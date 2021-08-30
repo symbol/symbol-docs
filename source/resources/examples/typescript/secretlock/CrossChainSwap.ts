@@ -77,7 +77,7 @@ console.log('Secret:', secret);
 const tx1 = SecretLockTransaction.create(
   Deadline.create(epochAdjustment),
   new Mosaic(new MosaicId('00D3378709746FC4'), UInt64.fromUint(10)),
-  UInt64.fromUint((96 * 3600) / 15), // assuming one block every 15 seconds
+  UInt64.fromUint((96 * 3600) / 30), // assuming one block every 30 seconds
   LockHashAlgorithm.Op_Sha3_256,
   secret,
   bobPrivateChainAccount.address,
@@ -100,7 +100,7 @@ privateChainTransactionHttp.announce(tx1Signed).subscribe(
 const tx2 = SecretLockTransaction.create(
   Deadline.create(epochAdjustment),
   new Mosaic(new MosaicId('10293DE77C684F71'), UInt64.fromUint(10)),
-  UInt64.fromUint((84 * 3600) / 15), // assuming one block every 15 seconds
+  UInt64.fromUint((84 * 3600) / 30), // assuming one block every 30 seconds
   LockHashAlgorithm.Op_Sha3_256,
   secret,
   alicePublicChainAccount.address,

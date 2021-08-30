@@ -63,7 +63,7 @@ const tx1 = symbol_sdk_1.SecretLockTransaction.create(
     new symbol_sdk_1.MosaicId('00D3378709746FC4'),
     symbol_sdk_1.UInt64.fromUint(10),
   ),
-  symbol_sdk_1.UInt64.fromUint((96 * 3600) / 15), // assuming one block every 15 seconds
+  symbol_sdk_1.UInt64.fromUint((96 * 3600) / 30), // assuming one block every 30 seconds
   symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256,
   secret,
   bobPrivateChainAccount.address,
@@ -87,7 +87,7 @@ const tx2 = symbol_sdk_1.SecretLockTransaction.create(
     new symbol_sdk_1.MosaicId('10293DE77C684F71'),
     symbol_sdk_1.UInt64.fromUint(10),
   ),
-  symbol_sdk_1.UInt64.fromUint((84 * 3600) / 15), // assuming one block every 15 seconds
+  symbol_sdk_1.UInt64.fromUint((84 * 3600) / 30), // assuming one block every 30 seconds
   symbol_sdk_1.LockHashAlgorithm.Op_Sha3_256,
   secret,
   alicePublicChainAccount.address,
