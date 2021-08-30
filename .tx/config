@@ -859,12 +859,6 @@ source_file = build/gettext/serialization/transfer.pot
 source_lang = en
 type = PO
 
-[symboldocs.glossary_]
-file_filter = source/locale/<lang>/LC_MESSAGES/glossary.po
-source_file = build/gettext/glossary.pot
-source_lang = en
-type = PO
-
 [symboldocs.references--typescript-sdk]
 file_filter = source/locale/<lang>/LC_MESSAGES/references/typescript-sdk.po
 source_file = build/gettext/references/typescript-sdk.pot
@@ -906,10 +900,3 @@ file_filter = source/locale/<lang>/LC_MESSAGES/guides/index.po
 source_file = build/gettext/guides/index.pot
 source_lang = en
 type = PO
-
-[symboldocs.contribute--contributors]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributors.po
-source_file = build/gettext/contribute/contributors.pot
-source_lang = en
-type = PO
-
