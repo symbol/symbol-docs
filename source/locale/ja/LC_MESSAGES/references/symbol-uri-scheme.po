@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 15:25+0000\n"
-"PO-Revision-Date: 2021-08-30 14:48+0000\n"
+"PO-Revision-Date: 2021-08-30 14:47+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -21,14 +21,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/getting-started/index.rst:43
-msgid "Getting Started"
-msgstr "入門"
+#: ../../source/references/symbol-uri-scheme.rst:43
+msgid "Symbol URI Scheme Reference"
+msgstr "Symbol URI スキーマリファレンス"
 
-#: ../../source/getting-started/index.rst:45
-msgid ""
-"This is probably the first section you'll be interested in reading in your "
-"journey to learn how to use |codename|. Select a page from the Navigation "
-"menu."
-msgstr ""
-"|codename| の使い方を学習するための、最初に読むべきセクションとして推奨します。ナビゲーションメニューからページを選択してください。"
+#: ../../source/references/symbol-uri-scheme.rst:47
+msgid "Versions"
+msgstr "バージョン"
