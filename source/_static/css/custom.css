@@ -462,10 +462,11 @@ div.figure .caption {
 }
 .example-code pre {
     margin-top: 0;
+    border-radius: 0 5px 5px 5px;
 }
 .example-selector {
     background-color: #fff;
-    padding: 5px 0 !important;
+    padding: 5px 0 0 0 !important;
     height: 100% !important;
     margin-bottom: 0 !important;
 }
@@ -474,15 +475,17 @@ div.figure .caption {
 }
 .example-selector > li {
     color: #44004E !important;
-    background-color: transparent !important;
+    background-color: #ccc !important;
     float: none !important;
     display: inline-block !important;
     font-weight: normal !important;
-    margin: 0 5px 0 0;
+    margin: 0 2px 0 0 !important;
+    padding: 0 10px !important;
+    border-radius: 10px 10px 0 0 !important;
 }
 .example-selector > li.selected {
-    background-color: transparent !important;
-    color: #5200c6 !important;
+    background-color: #333 !important;
+    color: #00c8ff !important;
 }
 .example-code .code-block-caption {
     top: -28px;
@@ -491,10 +494,6 @@ div.figure .caption {
     text-align: right;
     height: 0;
     padding: 0 5px;
-}
-.code-block-caption a {
-    color: #00c8ff;
-    font-weight: bold;
 }
 .literal-block-wrapper {
     padding: 0 !important;
