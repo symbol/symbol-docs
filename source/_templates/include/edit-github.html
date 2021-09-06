@@ -1,3 +1,5 @@
 <div class="edit-github">
+    {%- if gitstamp -%}<p class="git-info">Last update {{ gitstamp }}</p>{%- endif %}
     <a href="{{ edit_on_github_url }}" rel="nofollow"> <i class="fab fa-github"></i> {{ _('Improve this page') }}</a>
+    <hr/>
 </div>
