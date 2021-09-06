@@ -11,6 +11,7 @@
 import os
 import datetime
 from sphinx import errors
+from github import Github
 
 # Gets the datestamp of the latest commit on the given file
 # Converts the datestamp into something more readable
@@ -18,6 +19,14 @@ from sphinx import errors
 # Expected git datestamp format: 2017-06-07 11:57:38 +1000
 # Output to June 7, 2017
 
+class GHCachedUser:
+    """
+    A user cached from GitHub
+    """
+    def __init__(self, name):
+        self.name = name
+        self.login = None
+        self.avatar_url = None
 
 def page_context_handler(app, pagename, templatename, context, doctree):
     import git
@@ -39,23 +48,42 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         return
 
     try:
-        line = g.log('--pretty=format:%ai %an', '-n 1', "%s.rst" % fullpagename)
-        updated = line[:10]
-        author = line [26:]
+        line = g.log('--pretty=format:%ai,%ae,%an', '-n 1', "%s.rst" % fullpagename).split(',')
 
-        if updated == "":
+        if line == "":
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
             # Ideally want to check their source - lib/imapoptions, etc, but
             # that involves getting the source/output pair into the extension.
             return
 
+        updated = line[0][:10]
+        email = line[1]
+        name = line[2]
         context['gitstamp'] = datetime.datetime.strptime(
                 updated,
                 "%Y-%m-%d"
             ).strftime(
                 app.config.gitstamp_fmt
             )
-        context['gitauthor'] = author
+
+        user = GHCachedUser(name)
+        if gh:
+            # Look in cache first to avoid spamming GitHub
+            if email in gh_user_cache:
+                user = gh_user_cache[email]
+            else:
+                # Search GitHub and retrieve first user with matching email (if any)
+                gh_users = gh.search_users(email)
+                if gh_users.totalCount:
+                    gh_user = next(iter(gh_users))
+                    user.name = gh_user.name
+                    user.login = gh_user.login
+                    user.avatar_url = gh_user.avatar_url
+                gh_user_cache[email] = user
+        context['gitauthor'] = user.name
+        context['gitlogin'] = user.login
+        context['gitavatar'] = user.avatar_url
+
     except git.exc.GitCommandError:
         # File doesn't exist or something else went wrong.
         raise errors.ExtensionError("Can't fetch git history for %s.rst." %
@@ -88,6 +116,17 @@ def what_build_am_i(app):
     else:
         app.connect('html-page-context', page_context_handler)
 
+    try:
+        global gh
+        global gh_user_cache
+        token = os.getenv('GITHUB_TOKEN')
+        if token:
+            gh = Github(token)
+            gh_user_cache = {}
+    except Exception:
+        app.info(sys.exc_info()[0])
+        app.warn("gitstamp extension enabled, but GitHub link failed. No GH links \
+            will be generated.")
 
 # We can't immediately add a page context handler: we need to wait until we
 # know what the build output format is.
