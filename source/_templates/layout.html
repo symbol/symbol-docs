@@ -88,6 +88,9 @@
         {{ bsidebar() }}
         {% endblock %}
         <div class="col-md-{{ bs_content_width }} content">
+            {%- if gitstamp %}
+                <p class="git-info">Last updated by {{ gitauthor }} on {{ gitstamp }}.</p>
+            {%- endif %}
             {% block body %}{% endblock %}
             {% if edit_on_github_url %}
             <p class="feedback">

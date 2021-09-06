@@ -655,3 +655,7 @@ div.topic {
     border-left: 6px solid #00c8ff;
     border-radius: 0px 4px 4px 0px;
 }
+.git-info {
+    color: #999;
+    font-size: small;
+}
