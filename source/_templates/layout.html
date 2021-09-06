@@ -88,13 +88,16 @@
         {{ bsidebar() }}
         {% endblock %}
         <div class="col-md-{{ bs_content_width }} content">
-            {%- if gitstamp %}
-                <p class="git-info">Last updated by {{ gitauthor }} on {{ gitstamp }}.</p>
-            {%- endif %}
             {% block body %}{% endblock %}
             {% if edit_on_github_url %}
             <p class="feedback">
                 <hr/>
+                {%- if gitauthor -%}<p class="git-info">
+                    {%- if gitlogin -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
+                    Last updated by
+                    {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
+                    on {{ gitstamp }}.</p>
+                {%- endif %}
                 {% trans %}Did you find what you were looking for?{% endtrans %}
                 <a href="{{feedback_on_github_url}}" target="_blank">{% trans %}Give us your feedback.{% endtrans %}</a>
             </p>

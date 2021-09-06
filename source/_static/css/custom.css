@@ -659,3 +659,12 @@ div.topic {
     color: #999;
     font-size: small;
 }
+.git-info a {
+    color: #999;
+    font-size: small;
+    font-weight: bold;
+}
+.git-info-image {
+    height: 32px;
+    margin-right: 10px;
+}
