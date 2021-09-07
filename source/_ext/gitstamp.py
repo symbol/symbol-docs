@@ -48,7 +48,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         return
 
     try:
-        line = g.log('--pretty=format:%ai,%ae,%an', '-n 1', "%s.rst" % fullpagename).split(',')
+        line = g.log('--pretty=format:%ai,%aE,%an', '-n 1', "%s.rst" % fullpagename).split(',')
 
         if line == "":
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
