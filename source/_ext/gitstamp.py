@@ -7,6 +7,8 @@
 #
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
+#
+# This code was originally taken from https://github.com/jdillard/sphinx-gitstamp
 
 import os
 import datetime
@@ -26,7 +28,7 @@ class GHCachedUser:
     def __init__(self, name):
         self.name = name
         self.login = None
-        self.avatar_url = None
+        self.avatar_url = "/_static/images/user-placeholder.png"
 
 def page_context_handler(app, pagename, templatename, context, doctree):
     import git
@@ -34,14 +36,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
     if g is None:
         # We have already errored about this
         pass
-    fullpagename = pagename
-    docsrc = ''
-    try:
-        docsrc = app.confdir + "/"
-        if docsrc != "/":
-            fullpagename = docsrc + pagename
-    except KeyError:
-        pass
+    fullpagename = pagename if not app.confdir else os.path.join(app.confdir, pagename)
 
     # Don't barf on "genindex", "search", etc
     if not os.path.isfile("%s.rst" % fullpagename):
@@ -50,7 +45,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
     try:
         line = g.log('--pretty=format:%ai,%aE,%an', '-n 1', "%s.rst" % fullpagename).split(',')
 
-        if line == "":
+        if not line:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
             # Ideally want to check their source - lib/imapoptions, etc, but
             # that involves getting the source/output pair into the extension.
@@ -59,12 +54,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         updated = line[0][:10]
         email = line[1]
         name = line[2]
-        context['gitstamp'] = datetime.datetime.strptime(
-                updated,
-                "%Y-%m-%d"
-            ).strftime(
-                app.config.gitstamp_fmt
-            )
+        context['gitstamp'] = datetime.datetime.strptime(updated, "%Y-%m-%d").strftime(app.config.gitstamp_fmt)
 
         user = GHCachedUser(name)
         if gh:
@@ -97,7 +87,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
 # Only add the page context handler if we're generating html
 def what_build_am_i(app):
     global g
-    if (app.builder.format != 'html'):
+    if app.builder.format != 'html':
         return
 
     try:
@@ -123,6 +113,8 @@ def what_build_am_i(app):
         if token:
             gh = Github(token)
             gh_user_cache = {}
+        else:
+            raise errors.ExtensionError("Missing GITHUB_TOKEN environment variable.")
     except Exception:
         app.info(sys.exc_info()[0])
         app.warn("gitstamp extension enabled, but GitHub link failed. No GH links \
