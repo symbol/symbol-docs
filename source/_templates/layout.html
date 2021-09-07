@@ -93,7 +93,7 @@
             <p class="feedback">
                 <hr/>
                 {%- if gitauthor -%}<p class="git-info">
-                    {%- if gitlogin -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
+                    {%- if gitavatar -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
                     Last updated by
                     {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
                     on {{ gitstamp }}.</p>
