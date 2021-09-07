@@ -43,33 +43,38 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         return
 
     try:
-        line = g.log('--pretty=format:%ai,%aE,%an', '-n 1', "%s.rst" % fullpagename).split(',')
-
-        if not line:
+        commits = g.iter_commits('--all', max_count=1, paths="%s.rst" % fullpagename)
+        if not commits:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
             # Ideally want to check their source - lib/imapoptions, etc, but
             # that involves getting the source/output pair into the extension.
             return
 
-        updated = line[0][:10]
-        email = line[1]
-        name = line[2]
-        context['gitstamp'] = datetime.datetime.strptime(updated, "%Y-%m-%d").strftime(app.config.gitstamp_fmt)
+        commit = next(iter(commits))
+        context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y-%m-%d")
 
-        user = GHCachedUser(name)
+        user = GHCachedUser(commit.author.name)
         if gh:
             # Look in cache first to avoid spamming GitHub
-            if email in gh_user_cache:
-                user = gh_user_cache[email]
+            if commit.author.email in gh_user_cache:
+                user = gh_user_cache[commit.author.email]
             else:
                 # Search GitHub and retrieve first user with matching email (if any)
-                gh_users = gh.search_users(email)
+                gh_users = gh.search_users(commit.author.email)
                 if gh_users.totalCount:
                     gh_user = next(iter(gh_users))
                     user.name = gh_user.name
                     user.login = gh_user.login
                     user.avatar_url = gh_user.avatar_url
-                gh_user_cache[email] = user
+                else:
+                    # Try searching the commit hash instead
+                    gh_commit = gh_repo.get_commit(commit.hexsha)
+                    if gh_commit:
+                        user.name = gh_commit.author.name
+                        user.login = gh_commit.author.login
+                        user.avatar_url = gh_commit.author.avatar_url
+
+                gh_user_cache[commit.author.email] = user
         context['gitauthor'] = user.name
         context['gitlogin'] = user.login
         context['gitavatar'] = user.avatar_url
@@ -78,10 +83,6 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         # File doesn't exist or something else went wrong.
         raise errors.ExtensionError("Can't fetch git history for %s.rst." %
                                     fullpagename)
-    except ValueError:
-        # Datestamp can't be parsed.
-        app.info("%s: Can't parse datestamp () %s ) for gitstamp, output \
-            won't have last updated time." % (pagename, updated))
 
 
 # Only add the page context handler if we're generating html
@@ -93,32 +94,30 @@ def what_build_am_i(app):
     try:
         import git
     except ImportError:
-        raise errors.ExtensionError("gitpython package not installed. \
-            Required to generate html. Please run: pip install gitpython")
+        raise errors.ExtensionError("gitpython package not installed. Required to generate html. Please run: pip install gitpython")
 
     try:
         global g
-        g = git.Git('.')
+        g = git.Repo('.')
     except Exception:
-        app.info(sys.exc_info()[0])
-        app.warn("gitstamp extension enabled, but no git repository found. No \
-            git datestamps will be generated.")
+        app.warn("gitstamp extension enabled, but no git repository found. No git datestamps will be generated.")
     else:
         app.connect('html-page-context', page_context_handler)
 
     try:
         global gh
+        global gh_repo
         global gh_user_cache
         token = os.getenv('GITHUB_TOKEN')
         if token:
             gh = Github(token)
+            gh_repo = gh.get_repo('symbol/symbol-docs')
             gh_user_cache = {}
         else:
             raise errors.ExtensionError("Missing GITHUB_TOKEN environment variable.")
-    except Exception:
-        app.info(sys.exc_info()[0])
-        app.warn("gitstamp extension enabled, but GitHub link failed. No GH links \
-            will be generated.")
+    except Exception as e:
+        app.warn(e)
+        app.warn("gitstamp extension enabled, but GitHub link failed. No GH links will be generated.")
 
 # We can't immediately add a page context handler: we need to wait until we
 # know what the build output format is.
