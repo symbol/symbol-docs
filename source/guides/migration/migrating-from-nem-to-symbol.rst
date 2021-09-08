@@ -10,7 +10,8 @@ Migrating from NIS1 to Symbol
 With |codename|, most of the previously available NIS1 features have evolved.
 This document will help you **upgrade your application**'s previous NIS1 features to the newly available |codename| technology.
 
-.. note:: You can move your NIS1 assets to a Symbol account by **Opting-in**. Learn about it in the :doc:`` guide.
+.. note:: You can move your NIS1 assets to a Symbol account by **Opting-in**. For more information, see :doc:`Retrieving your XYM from a post-launch opt-in
+ <post-launch-optin-xym-retrieval>`.
 
 .. csv-table:: Feature comparison between NIS1 and Symbol
    :header: "NEM NIS1", "Symbol"
