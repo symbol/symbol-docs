@@ -83,7 +83,7 @@ Glossary
       A protocol which creates a trustless environment for the decentralized exchange of assets. It guarantees that a swap will take place if all the participants agree. On the other hand, if some of them decide not to conclude the process, each participant will receive their locked funds back.
 
     Importance Score
-      A value calculated by the :doc:`PoS+ protocol <../concepts/consensus-algorithm>` based on three factors that determines the probability that an account has to harvest a :doc:`block <../concepts/block>`.
+      A value calculated by the :doc:`PoS+ algorithm <../concepts/consensus-algorithm>` based on three factors that determine the probability that an account has to harvest a :doc:`block <../concepts/block>`.
 
     Inflation
       Network configured increase in currency supply per block. The mosaics created due to inflation are included in the block reward. Read :doc:`more <../concepts/inflation>`.
@@ -152,7 +152,7 @@ Glossary
       Cryptographic key that gives ultimate control over an account and its assets, and must thus be kept secret. It is paired with the public key in the key pair system.
 
     Proof-of-Stake Plus (PoS+)
-      Symbol’s consensus protocol. It is a modified PoS protocol which considers users’ activity in the network in addition to their network stakes. The chance that accounts will have to harvest a block is calculated through their importance scores. Read :doc:`more <../concepts/consensus-algorithm>`.
+      Symbol’s consensus mechanism. It is a modified PoS algorithm which considers users’ activity in the network in addition to their network stakes. The chance that accounts will have to harvest a block is calculated through their importance scores. Read :doc:`more <../concepts/consensus-algorithm>`.
 
     Public Key
       The public identifier of the key pair, which can be disseminated widely. It is used to prove that a transaction was signed with the paired private key. The public key is cryptographically derived from the private key.

@@ -2,13 +2,13 @@
 Consensus
 #########
 
-The consensus protocol is the dynamic method through which nodes in a blockchain system **reach an agreement** and **make decisions**.
+The consensus algorithm is the dynamic method through which nodes in a blockchain system **reach an agreement** and **make decisions**.
 
-|codename| utilizes an innovative mechanism called the **Proof-of-Stake Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) protocol. 
+|codename| utilizes an innovative mechanism called the **Proof-of-Stake Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) consensus. 
 
 In a basic **PoS** consensus algorithm, the formation of a new block in the blockchain is stochastically assigned to a node based on a combination of factors **related exclusively to the node owner's wealth**.
 
-The **PoS+** protocol considers the account's stakes too, but it also promotes the ecosystem's health by rewarding participants **based on their activity**.
+The **PoS+** mechanism considers the account's stakes too, but it also promotes the ecosystem's health by rewarding participants **based on their activity**.
 
 .. _importance-calculation:
 
