@@ -80,4 +80,3 @@ An entity could be a block or a :doc:`transaction <transaction>`.
     entityBody_Reserved1; uint32; Reserved padding to align end of EntityBody on 8-byte boundary.
     version; uint8; Version of the structure.
     network; :ref:`Network <network-type>`; Entity network.
-    type; :ref:`EntityType <entity-type>`; Entity type.

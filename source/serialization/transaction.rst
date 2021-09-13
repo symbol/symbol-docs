@@ -25,6 +25,7 @@ Serialization of a transaction.
     :header: "Property", "Type", "Description"
     :delim: ;
 
+    type; :schema:`TransactionType <transaction_type.cats>`; Type of transaction.
     max_fee; :schema:`Amount <types.cats>`; Maximum fee allowed to spend for the transaction.
     deadline; :schema:`Timestamp <types.cats>`;  Number of milliseconds elapsed since the creation of the nemesis block. If a transaction does not get included in a block before the deadline is reached, it is deleted. Deadlines are only allowed to lie up to ``24`` hours ahead.
 
@@ -56,3 +57,9 @@ Serialization of an :doc:`aggregate <../concepts/aggregate-transaction>` inner t
 
 * :ref:`EmbeddedTransactionHeader <embedded-transaction-header>`
 * :ref:`EntityBody <entity-body>`
+
+.. csv-table::
+    :header: "Property", "Type", "Description"
+    :delim: ;
+
+    type; :schema:`TransactionType <transaction_type.cats>`; Type of transaction.
