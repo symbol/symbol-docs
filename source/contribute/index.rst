@@ -8,7 +8,7 @@ Contributing
 * Check the :doc:`contributing guidelines <contributing>` to propose changes.
 * Follow the development updates on |twitter|.
 * Explore our |github| repositories.
-* Take a look at the `member directory <https://hackmd.io/@syndicate/SkZ__7PCu>`__.
+* Take a look at the `member directory <https://docs.symbolplatform.com/handbook/en/directory.html>`__.
 
 .. toctree::
     :hidden:
