@@ -19,7 +19,7 @@ Cross-platform client for Symbol to manage accounts, mosaics, namespaces, and is
 Installation
 ============
 
-1. **Download** the |desktop-wallet| installer from the `releases section <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`_.
+1. **Download** the |desktop-wallet| installer from the `releases section <https://github.com/symbol/desktop-wallet/releases>`_.
    
    The executable file for your operating system is in the **Assets** section.
 

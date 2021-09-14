@@ -28,7 +28,7 @@ Prerequisites
 
 Before you can activate delegated harvesting using the Desktop Wallet, you need the following items:
 
-- An up-to-date **Desktop Wallet**. Download the latest version from `the releases page <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases>`__.
+- An up-to-date **Desktop Wallet**. Download the latest version from `the releases page <https://github.com/symbol/symbol-desktop-wallet/releases>`__.
 
 - An **account** that will receive the harvesting fees. It must have:
 

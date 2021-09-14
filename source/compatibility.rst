@@ -49,6 +49,6 @@ Tools
     `v0.9.5.1`_; v0.10.0; v0.20.2
     `v0.9.4.1`_; v0.9.11; v0.19.4
 
-- `Desktop Wallet CHANGELOG <https://github.com/nemgrouplimited/symbol-desktop-wallet/blob/main/CHANGELOG.md>`_
+- `Desktop Wallet CHANGELOG <https://github.com/symbol/symbol-desktop-wallet/blob/main/CHANGELOG.md>`_
 - `symbol-cli CHANGELOG <https://github.com/symbol/symbol-cli/blob/main/CHANGELOG.md>`_
 - `symbol-bootstrap CHANGELOG <https://github.com/symbol/symbol-bootstrap/blob/main/CHANGELOG.md>`_
