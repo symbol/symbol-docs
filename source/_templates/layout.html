@@ -56,9 +56,11 @@
         </ul>
         {% endif %}
     {% else %}
-    {% include "include/edit-github.html" %}
-    <span class="title">{% trans %}On this page{% endtrans %}</span>
-    {{localtoc}}
+        {% include "include/edit-github.html" %}
+        {% if localtoc is defined and localtoc.split('\n')|length > 4 %}
+            <span class="title">{% trans %}On this page{% endtrans %}</span>
+            {{localtoc}}
+        {% endif %}
     {% endif %}
     </div>
 </div>
