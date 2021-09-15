@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-09-15 05:56+0000\n"
 "PO-Revision-Date: 2019-07-02 14:32+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -27,17 +27,17 @@ msgstr "コンセンサス"
 
 #: ../../source/concepts/consensus-algorithm.rst:45
 msgid ""
-"The consensus protocol is the dynamic method through which nodes in a "
+"The consensus algorithm is the dynamic method through which nodes in a "
 "blockchain system **reach an agreement** and **make decisions**."
-msgstr "コンセンサスプロトコルとはブロックチェーンシステムのノードが **合意形成** と **意志決定** をするための動的メソッドです。"
+msgstr "コンセンサスアルゴリズムとはブロックチェーンシステムのノードが **合意形成** と **意志決定** をするための動的メソッドです。"
 
 #: ../../source/concepts/consensus-algorithm.rst:47
 msgid ""
 "|codename| utilizes an innovative mechanism called the **Proof-of-Stake "
 "Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) "
-"protocol."
+"consensus."
 msgstr ""
-"|codename| では、有名な **Proof-of-Stake** (|pos|) プロトコルの改善バージョンである **Proof-of-"
+"|codename| では、有名な **Proof-of-Stake** (|pos|) プコンセンサスの改善バージョンである **Proof-of-"
 "Stake Plus** (PoS+) と呼ばれる革新的なメカニズムを利用します。"
 
 #: ../../source/concepts/consensus-algorithm.rst:49
@@ -51,11 +51,11 @@ msgstr ""
 
 #: ../../source/concepts/consensus-algorithm.rst:51
 msgid ""
-"The **PoS+** protocol considers the account's stakes too, but it also "
+"The **PoS+** mechanism considers the account's stakes too, but it also "
 "promotes the ecosystem's health by rewarding participants **based on their "
 "activity**."
 msgstr ""
-"**PoS+** プロトコルはアカウントの利害関係も考慮しますが、 **参加者の活動に基づいた** "
+"**PoS+** メカニズムはアカウントの利害関係も考慮しますが、 **参加者の活動に基づいた** "
 "報酬を与えることにより、エコシステムの健全性も促進します。"
 
 #: ../../source/concepts/consensus-algorithm.rst:57
