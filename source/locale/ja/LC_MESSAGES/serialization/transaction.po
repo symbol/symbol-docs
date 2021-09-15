@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-09-15 05:56+0000\n"
 "PO-Revision-Date: 2020-06-19 17:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -43,11 +43,12 @@ msgid "Serialization of a transaction."
 msgstr "トランザクションのシリアル化"
 
 #: ../../source/serialization/transaction.rst:58
-#: ../../source/serialization/transaction.rst:78
-#: ../../source/serialization/transaction.rst:95
+#: ../../source/serialization/transaction.rst:79
+#: ../../source/serialization/transaction.rst:96
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
+#: ../../source/serialization/transaction.rst:1
 #: ../../source/serialization/transaction.rst:1
 #: ../../source/serialization/transaction.rst:1
 msgid "Property"
@@ -67,7 +68,7 @@ msgstr ""
 "ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/serialization/transaction.rst:76
+#: ../../source/serialization/transaction.rst:77
 msgid "Binary layout for an embedded transaction header."
 msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
 
@@ -77,7 +78,7 @@ msgid ""
 "boundary."
 msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃える予約パディング"
 
-#: ../../source/serialization/transaction.rst:93
+#: ../../source/serialization/transaction.rst:94
 msgid ""
 "Serialization of an :doc:`aggregate <../concepts/aggregate-transaction>` "
 "inner transaction."
