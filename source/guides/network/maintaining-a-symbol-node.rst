@@ -59,34 +59,37 @@ If you used Symbol Bootstrap to create your node (following the :doc:`running-a-
 
       npm install -g symbol-bootstrap
 
-2. Then **move to the folder** where the node's data folder is (typically ``target``) and **make a backup copy** of it:
+2. Then **move to the folder** where the node's data folder is (typically ``target``) and **stop the node**.
 
-   .. code-block:: bash
+   The exact stop command depends on whether your node was running in detached mode or not:
 
-      cp -r target target.BAK
-
-3. Finally, **stop and restart the node** with the ``--upgrade`` flag to update all necessary component versions.
-
-   The exact commands depend on whether your node was running in detached mode or not:
-
-   - **If you started in detached mode** with ``symbol-bootstrap start -d``:
+   - **If you started in detached mode** with ``symbol-bootstrap start --detached``:
 
      From the folder containing the ``target`` folder type:
 
      .. code-block:: symbol-bootstrap
 
         symbol-bootstrap stop
-        symbol-bootstrap start --upgrade -d -c custom-presets.yml
 
    - **If you did not start in detached mode**:
 
-     You must have a terminal running somewhere with all the output from the client. Stop it by pressing ``Ctrl+C`` and then type:
+     You must have a terminal running somewhere with all the output from the client. Stop it by pressing ``Ctrl+C``.
 
-     .. code-block:: symbol-bootstrap
+3. Next **make a backup copy** of the node's data folder:
 
-        symbol-bootstrap start --upgrade -c custom-presets.yml
+   .. code-block:: bash
 
-4. Once the node is up and running again, and you **verify that the component versions have been updated**, you can **remove the backup copy**.
+      cp -r target target.BAK
+
+4. Finally, **restart the node** with the ``--upgrade`` flag to update all necessary component versions.
+
+   Add also the ``--detached`` flag to start in detached mode if you need it.
+
+   .. code-block:: symbol-bootstrap
+
+      symbol-bootstrap start --upgrade -c custom-presets.yml
+
+5. Once the node is up and running again, and you **verify that the component versions have been updated**, you can **remove the backup copy**.
 
 Update nodes created manually
 =============================
