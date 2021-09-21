@@ -1,6 +1,6 @@
 <!-- File generated using catapult-docs-cli -->
 Network configuration settings.<br/>
-<small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v1.0.0.0
+<small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v1.0.2.0
 </small>
 
 <table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>MAINNET</th></tr></thead><tbody valign="top">
@@ -71,6 +71,9 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the harvest network fee sink account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxTransactionsPerBlock</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>200'000</td><td>6'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of transactions per block.</small></td></tr>
+<tr style="background-color:#E0E0E0"><td colspan=4><b>fork_heights</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">totalVotingBalanceCalculationFix</span></code></td><td><code class="docutils literal"><span class="pre">Height</span></code></td><td>528'000</td><td>528'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Height of fork to fix TotalVotingBalance calculation.</small></td></tr>
 <tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.accountlink</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">dummy</span></code></td><td></td><td>to trigger plugin load</td><td>to trigger plugin load</td></tr>
 <tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.aggregate</b></td><td></td><td></td><td></td></tr>
