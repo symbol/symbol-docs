@@ -1,11 +1,11 @@
 # catapult-docs-cli
 
 [![PyPI](https://img.shields.io/pypi/v/catapultdocscli)](https://pypi.org/project/catapultdocscli/)
-[![Build Status](https://travis-ci.com/nemtech/catapult-docs-cli.svg?branch=master)](https://travis-ci.com/nemtech/catapult-docs-cli)
+[![Build Status](https://travis-ci.com/symbol/catapult-docs-cli.svg?branch=master)](https://travis-ci.com/symbol/catapult-docs-cli)
 
-Exports documentation available in ``catapult-server`` and ``catapult-rest`` code into reStructuredText tables. 
+Exports documentation available in ``catapult-server`` and ``catapult-rest`` code into reStructuredText tables.
 
-The generated outputs are used in the [Symbol Developer Documentation](http://nemtech.github.io).
+The generated outputs are used in the [Symbol Developer Documentation](http://symbol.github.io).
 
 ## Requirements
 
@@ -16,27 +16,27 @@ The generated outputs are used in the [Symbol Developer Documentation](http://ne
 
 1. Clone the repository.
 
-```
-git clone https://github.com/nemtech/catapult-docs-cli.git
-cd catapult-docs-cli
-```
+   ``` bash
+   git clone https://github.com/symbol/catapult-docs-cli.git
+   cd catapult-docs-cli
+   ```
 
 2. Install the command-line tool.
 
-```
-pip install .
-```
+   ``` bash
+   pip install .
+   ```
 
 3. Clone ``catapult-server`` and ``catapult-rest``.
 
-```
-git clone https://github.com/nemtech/catapult-server.git
-git clone https://github.com/nemtech/catapult-rest.git
-```
+   ``` bash
+   git clone https://github.com/symbol/catapult-server.git
+   git clone https://github.com/symbol/catapult-rest.git
+   ```
 
-## Usage 
-   
-```  
+## Usage
+
+``` bash
 catapult-docs-cli COMMAND [OPTIONS]
 ```
 
@@ -47,42 +47,38 @@ catapult-docs-cli COMMAND [OPTIONS]
 | cli-usage             | Generates symbol-cli commands docs.                 |
 | --help                | Show this message and exit.                         |
 
-
 | Option                | Description                                         |
 |-----------------------|-----------------------------------------------------|
 | -c, --config TEXT     | The .catdocs file path.                             |
 | --help                | Show this message and exit.                         |
 
-## Usage
-    
 ### Generate catapult-server properties docs
 
-```
+``` bash
 catapult-docs-cli properties --config .catdocs
 ```
 
-
 ### Generate catapult-rest status-errors docs
 
-```
+``` bash
 catapult-docs-cli status-errors --config .catdocs
 ```
 
 ### Generate symbol-cli command docs
 
-```
+``` bash
 catapult-docs-cli cli-usage --config .clidocs
 ```
-    
+
 ### Export generated docs to a file
 
-```
+``` bash
 catapult-docs-cli properties > properties.rst
 ```
 
 ### Compare differences between two versions
 
-```
+``` bash
 diff properties_bison.rst properties_cow.rst
 ```
 
