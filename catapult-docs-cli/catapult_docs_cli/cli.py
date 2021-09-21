@@ -23,11 +23,11 @@ def load_config(config):
 
 @click.command()
 @click.option('--config', '-c', default='.catdocs', help='.catdocs file path')
-@click.option('--testnet-report', '-t', default='target/report/peer-node-config.csv', help='file containing the CSV report from a symbol-bootstrap TESTNET configuration')
+@click.option('--mainnet-report', '-t', default='target/report/peer-node-config.csv', help='file containing the CSV report from a symbol-bootstrap MAINNET configuration')
 @click.argument('command', required=True)
-def main(command, config, testnet_report):
+def main(command, config, mainnet_report):
     config = load_config(config)
-    config['testnet_report'] = testnet_report
+    config['mainnet_report'] = mainnet_report
     config['core_version'] = subprocess.run(['git', '--git-dir', config['serverPath'] + '.git', 'describe', '--tags', '--abbrev=0'], stdout=subprocess.PIPE).stdout.decode('utf-8')
     if command == 'properties':
         PropertiesCommand(config).execute()

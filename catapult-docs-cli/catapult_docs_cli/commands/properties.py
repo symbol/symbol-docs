@@ -12,9 +12,9 @@ class PropertiesCommand(Command):
     def execute(self):
         """Contains all the logic to execute a command."""
         tn_report = {}
-        with open(self.config['testnet_report']) as f:
+        with open(self.config['mainnet_report']) as f:
             section = ''
-            # Store testnet report values
+            # Store mainnet report values
             for row in csv.reader(f, delimiter=';'):
                 if len(row) == 1:
                     section = row[0]
@@ -41,7 +41,7 @@ class PropertiesTable(Table):
     """
 
     def __init__(self, rows):
-        super().__init__(['Property', 'Type', 'Default value<br/>PRIVATE', 'Default value<br/>TESTNET'], ['35', '35', '15', '15'], rows)
+        super().__init__(['Property', 'Type', 'Default value<br/>PRIVATE', 'Default value<br/>MAINNET'], ['35', '35', '15', '15'], rows)
 
     def _format_rows(self):
         """Formats the table rows as a str.
