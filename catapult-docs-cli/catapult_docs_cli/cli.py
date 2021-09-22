@@ -36,4 +36,7 @@ def main(command, config, mainnet_report):
     elif command == 'cli-usage':
         CLIUsageCommand(config).execute()
     else:
-        raise click.ClickException('The specified option is not implemented.')
+        raise click.ClickException('Unknown command.')
+
+if __name__ == '__main__':
+    main()
