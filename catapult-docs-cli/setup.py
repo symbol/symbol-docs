@@ -3,7 +3,7 @@ Exports some documentation from catapult code into reStructuredText tables.
 """
 from setuptools import find_packages, setup
 
-dependencies = ['click', 'wheel']
+dependencies = ['click', 'wheel', 'ruamel.yaml']
 
 setup(
     name='catapultdocscli',
