@@ -116,6 +116,28 @@ table {
 table a:not(.btn), .table a:not(.btn){
     text-decoration: none;
 }
+.big-table { /* Tables with lot of content */
+    font-size: small;
+    word-break: normal;
+}
+.big-table td {
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: top;
+    border-top: 1px solid lightgray;
+}
+.big-table th {
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+.big-table-section {
+    opacity: 40%;
+}
+.indentation-cell {
+    border-right: 3px solid lightgray;
+    border-top: 0 !important;
+}
 /* Layout*/
 body > .container {
     padding-top: 20px;
@@ -668,4 +690,20 @@ div.topic {
 .git-info-image {
     height: 32px;
     margin-right: 10px;
+}
+.side-info {
+    float: right;
+    background-color: #9bd2f2;
+    border-radius: 4px;
+    padding: 7px;
+    margin-left: 10px;
+    font-size: small;
+    white-space: nowrap;
+}
+.side-info-icon {
+    text-align: center;
+    font-size: large;
+    color: black;
+    line-height: normal;
+    padding-right: 7px;
 }
