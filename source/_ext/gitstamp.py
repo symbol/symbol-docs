@@ -83,6 +83,8 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         # File doesn't exist or something else went wrong.
         raise errors.ExtensionError("Can't fetch git history for %s.rst." %
                                     fullpagename)
+    except StopIteration:
+        app.warn("File not under source control yet.")
 
 
 # Only add the page context handler if we're generating html
