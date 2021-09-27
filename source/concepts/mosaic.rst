@@ -20,9 +20,11 @@ Find below the complete list of configurable properties.
 Divisibility
 ============
 
-Determines the decimal place to which the mosaic can be divided.
-A divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001.
-The divisibility must be in the range of 0 and 6.
+Determines the number of decimal places to which the mosaic can be divided. A divisibility of 3 means that the smallest fraction a mosaic can be divided into will be 0.001. Divisibility must be between 0 and 6.
+
+The above mosaic amounts are known as **relative amounts**. By multiplying a relative amount by 10\ :sup:`divisibility` you get an **absolute amount** (also called **atomic units** because they cannot be divided).
+
+For example, if a mosaic has a **divisibility** 2, 10.00 (relative) mosaics equal 1'000 (absolute) units.
 
 Initial supply
 ==============
@@ -30,16 +32,11 @@ Initial supply
 Indicates the amount of mosaic in circulation.
 The total supply must be in the range of 0 and ``9,000,000,000,000,000`` atomic units.
 
-Mosaic units in |codename| are defined as **absolute amounts**.
-To get an absolute amount, multiply the amount of assets you want to create or send by 10\ :sup:`divisibility`.
-
-For example, if the mosaic has **divisibility** 2, to create or send 10 units (relative) you should define 1,000 (absolute) instead.
-
 Duration
 ========
 
-Specifies the number of confirmed blocks the mosaic is rented for.
-It is allowed to lie in |codename|'s public network up to ``3650`` days (10 years), being this maximum parameter :ref:`editable per network <config-network-properties>`.
+Specifies the number of **confirmed blocks** the mosaic is rented for.
+By default, mosaics are allowed to lie in |codename|'s public network up to ``3650`` days (10 years), being this parameter :ref:`editable per network <config-network-properties>`.
 **Non-expiring mosaics** can be created by setting this property to ``0``.
 
 .. note:: Different from namespaces, a mosaic duration cannot be extended after its creation. Before creating one, consider if your use case requires the mosaic to expire or not.
@@ -50,12 +47,13 @@ The following formula is used to convert days to blocks approximately:
 
     duration ≈ numberOfDays * 86400 / blockGenerationTargetTimeInSeconds
 
+``blockGenerationTargetTimeInSeconds`` is 30 by default.
 
 Supply mutable
 ==============
 
-If set to true, the mosaic supply can change at a later point.
-In this case, the mosaic creator is allowed to redefine the total mosaic supply with a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`.
+If set to true, the mosaic supply can change at a later time.
+In this case, the mosaic creator is allowed to redefine the total mosaic supply with a :ref:`mosaic-supply-change-transaction`.
 The transaction increases or decreases the mosaic supply in ``delta`` units.
 
 To decrease the mosaic supply, the mosaic creator account must own at least ``delta`` units.
@@ -85,7 +83,7 @@ Restrictable
 
     Example of a mosaic restriction
 
-If set to true, the mosaic creator can configure custom :doc:`restrictions <mosaic-restriction>`.
+If set to true, the mosaic creator can configure custom mosaic :doc:`restrictions <mosaic-restriction>`.
 
 .. _mosaic-rental-fee:
 
@@ -94,7 +92,7 @@ Creation fee
 ************
 
 An account willing to create a mosaic has to pay a rental fee in addition to the :doc:`transaction fee <fees>`.
-Both fees will be deducted from the account's balance after the announcement of a valid **MosaicDefinitionTransaction**.
+Both fees will be deducted from the account's balance after the announcement of a valid :ref:`mosaic-definition-transaction`.
 
 The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of how much network currency will cost you to create a mosaic:
 

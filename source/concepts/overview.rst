@@ -29,3 +29,4 @@ These are the important concepts behind blockchain technology and the |codename|
     reward-programs
     transaction
     transfer-transaction
+    xym
