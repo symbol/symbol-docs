@@ -40,7 +40,8 @@ class SerializationCommand(Command):
         print(self.parse_comment(element['comments']))
         print()
         print('.. list-table:: Values')
-        print('   :widths: 12 30 58')
+        print('   :widths: 10 32 58')
+        print('   :class: big-table')
         print()
         print('   * - **Value**')
         print('     - **Name**')
@@ -57,7 +58,8 @@ class SerializationCommand(Command):
         print(self.parse_comment(element['comments']))
         print()
         print('.. list-table:: Fields')
-        print('   :widths: 30 30 40')
+        print('   :widths: 25 30 45')
+        print('   :class: big-table')
         print()
         print('   * - **Name**')
         print('     - **Type**')
@@ -65,9 +67,15 @@ class SerializationCommand(Command):
         for v in element['layout']:
             disposition = v.get('disposition') or ''
             name = '*(inline)*' if disposition == 'inline' else '``%s``' % v['name']
-            comment = ('**Const value** = ``%s``\n\n       ' % v['value']) if disposition == 'const' else \
-                ('**Reserved value** = ``%s``\n\n       ' % v['value']) if disposition == 'reserved' else \
-                ''
+            comment = ''
+            if disposition == 'const':
+                type = self.types.get(v['type'])
+                if type and type['type'] == 'enum':
+                    comment = '**const** ``%s`` (``%s``)\n\n       ' % (v['value'], hex(type['values_dict'][v['value']]['value']))
+                else:
+                    comment = '**const** ``%s``\n\n       ' % v['value']
+            elif disposition == 'reserved':
+                comment = '**reserved** ``%s``\n\n       ' % v['value']
             comment += self.parse_comment(v['comments'])
             print('   * - %s' % name)
             print('     - %s' % self.type_description(v))
@@ -77,14 +85,24 @@ class SerializationCommand(Command):
         """Contains all the logic to execute a command."""
         with open(self.config['schema']) as f:
             try:
-                schema = yaml.safe_load(f)
+                self.schema = yaml.safe_load(f)
             except yaml.YAMLError as exc:
                 print(exc)
                 return
         print('Transaction serialization')
         print('#########################')
         print()
-        for e in schema:
+        self.types = {}
+        # Build types dictionary for simpler access
+        for e in self.schema:
+            self.types[e['name']] = e
+            if e['type'] == 'enum':
+                # Build a dictionary for enum values too
+                e['values_dict'] = {}
+                for l in e['values']:
+                    e['values_dict'][l['name']] = l
+        # Process all elements
+        for e in self.schema:
             if e['type'] == 'byte':
                 self.print_type(e)
             elif e['type'] == 'enum':
