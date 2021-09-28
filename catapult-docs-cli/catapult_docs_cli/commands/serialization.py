@@ -29,30 +29,36 @@ class SerializationCommand(Command):
         return '<br/><b>Note:</b> '.join(comment.split('\\note'))
 
     def print_header(self, name):
-        print('<h3 id="%s">%s</h2>' % (self.make_anchor(name), name))
+        print('.. _%s:' % self.make_anchor(name))
+        print()
+        print(name)
+        print('=' * len(name))
         print()
 
     def print_type(self, element):
-        self.print_header(element['name'])
-        print('<b>Byte array</b>: %d byte%s (%s)' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
-        print()
-        print(self.parse_comment(element['comments']))
+        print('   <tr>')
+        print('   <td id="%s"><b>%s</b></td>' % (self.make_anchor(element['name']), element['name']))
+        print('   <td>%d&nbsp;%sbyte%s</td>' % (element['size'], 'u' if element['signedness'] == 'unsigned' else '', 's' if element['size'] > 1 else ''))
+        print('   <td>%s</td>' % self.parse_comment(element['comments']))
+        print('   </tr>')
 
     def print_enum(self, element):
         self.print_header(element['name'])
-        print('<b>Enumeration</b>: %d byte%s (%s)' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
+        print('.. raw:: html')
         print()
-        print(self.parse_comment(element['comments']))
+        print('   <b>Size</b>: %d byte%s (%s)<br/>' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
         print()
-        print('<table class="big-table"><tbody>')
-        print('<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>')
+        print('   ' + self.parse_comment(element['comments']))
+        print()
+        print('   <table class="big-table"><tbody>')
+        print('   <tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>')
         for v in element['values']:
-            print('<tr>')
-            print('<td>%s</td>' % hex(v['value']))
-            print('<td>%s</td>' % self.make_keyword(v['name']))
-            print('<td>%s</td>' % self.parse_comment(v['comments']))
-            print('</tr>')
-        print('</tbody></table>')
+            print('   <tr>')
+            print('   <td>%s</td>' % hex(v['value']))
+            print('   <td>%s</td>' % self.make_keyword(v['name']))
+            print('   <td>%s</td>' % self.parse_comment(v['comments']))
+            print('   </tr>')
+        print('   </tbody></table>')
         print()
 
     def print_struct_content(self, element, indent):
@@ -61,11 +67,11 @@ class SerializationCommand(Command):
             disposition = v.get('disposition') or ''
             if disposition == 'inline':
                 if indent < 1:
-                    print('<tr><td colspan="6" class="big-table-section">%s</td></tr>' % v['type'])
+                    print('   <tr><td colspan="6" class="big-table-section">%s</td></tr>' % v['type'])
                 elif indent < 2:
-                    print('<tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section">%s</td></tr>' % v['type'])
+                    print('   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section">%s</td></tr>' % v['type'])
                 else:
-                    print('<tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section">%s</td></tr>' %
+                    print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section">%s</td></tr>' %
                           v['type'])
                 self.print_struct_content(self.types[v['type']], indent + 1)
                 continue
@@ -78,25 +84,26 @@ class SerializationCommand(Command):
             elif disposition == 'reserved':
                 comment = '<b>reserved</b> %s<br/>' % self.make_keyword(v['value'])
             comment += self.parse_comment(v['comments'])
-            print('<tr>')
-            print('<td%s>&nbsp;</td>' % ('' if indent < 1 else ' class="indentation-cell"'))
-            print('<td%s>&nbsp;</td>' % ('' if indent < 2 else ' class="indentation-cell"'))
-            print('<td%s>&nbsp;</td>' % ('' if indent < 3 else ' class="indentation-cell"'))
-            print('<td>%s</td>' % self.make_keyword(self.make_breakable(v['name'])))
-            print('<td>%s</td>' % self.type_description(v))
-            print('<td>%s</td>' % comment)
-            print('</tr>')
+            print('   <tr>')
+            print('   <td%s>&nbsp;</td>' % ('' if indent < 1 else ' class="indentation-cell"'))
+            print('   <td%s>&nbsp;</td>' % ('' if indent < 2 else ' class="indentation-cell"'))
+            print('   <td%s>&nbsp;</td>' % ('' if indent < 3 else ' class="indentation-cell"'))
+            print('   <td>%s</td>' % self.make_keyword(self.make_breakable(v['name'])))
+            print('   <td>%s</td>' % self.type_description(v))
+            print('   <td>%s</td>' % comment)
+            print('   </tr>')
 
     def print_struct(self, element):
         self.print_header(element['name'])
-        print('<b>Struct</b>:')
+        print('.. raw:: html')
         print()
-        print(self.parse_comment(element['comments']))
+        print('   ' + self.parse_comment(element['comments']))
         print()
-        print('<table class="big-table"><tbody>')
-        print('<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>')
+        print('   <table class="big-table"><tbody>')
+        print('   <tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>')
         self.print_struct_content(element, 0)
-        print('</tbody></table>')
+        print('   </tbody></table>')
+        print()
 
     def execute(self):
         """Contains all the logic to execute a command."""
@@ -115,18 +122,35 @@ class SerializationCommand(Command):
                 e['values_dict'] = {}
                 for l in e['values']:
                     e['values_dict'][l['name']] = l
+
+        print('Transaction serialization')
+        print('#########################')
+        print()
+
         # Process all basic types
-        print('<h2 id="SerializationBasicTypes">Basic Types</h2>')
+        print('Basic Types')
+        print('***********')
+        print()
+        print('.. raw:: html')
+        print()
+        print('   <table class="big-table"><tbody>')
+        print('   <tr><th>Name</th><th>Size</th><th style="width: 100%">Description</th></tr>')
         for e in self.schema:
             if e['type'] == 'byte':
                 self.print_type(e)
+        print('   </tbody></table>')
+        print()
         # Process all enums
-        print('<h2 id="SerializationEnumerations">Enumerations</h2>')
+        print('Enumerations')
+        print('************')
+        print()
         for e in self.schema:
             if e['type'] == 'enum':
                 self.print_enum(e)
         # Process all structs
-        print('<h2 id="SerializationStructures">Structures</h2>')
+        print('Structures')
+        print('**********')
+        print()
         for e in self.schema:
             if e['type'] == 'struct':
                 self.print_struct(e)
