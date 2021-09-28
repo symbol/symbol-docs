@@ -6,6 +6,15 @@ class SerializationCommand(Command):
     """Command to parse the Symbol schema YAML file into RST documentation pages
     """
 
+    def make_anchor(self, type):
+        return 'Serialization' + type
+
+    def make_keyword(self, keyword):
+        return '<code class="docutils literal">%s</code>' % keyword
+
+    def make_breakable(self, keyword):
+        return '_&ZeroWidthSpace;'.join(keyword.split('_')) if len(keyword) > 30 else keyword
+
     def type_description(self, element):
         if element['type'] == 'byte':
             return 'byte[%s]' % element['size']
@@ -14,72 +23,71 @@ class SerializationCommand(Command):
         elif element['type'] == 'struct':
             return 'struct (%d fields)' % len(element['layout'])
         else:
-            return '%s_' % element['type']
+            return '<a href="#%s">%s</a>' % (self.make_anchor(element['type']), element['type'])
 
     def parse_comment(self, comment):
-        return '\n\n       **Note:** '.join(comment.split('\\note'))
+        return '<br/><b>Note:</b> '.join(comment.split('\\note'))
 
     def print_header(self, name):
-        print()
-        print('.. _Serialization' + name + ':')
-        print()
-        print(name)
-        print('*' * len(name))
+        print('<h2 id="%s">%s</h2>' % (self.make_anchor(name), name))
         print()
 
     def print_type(self, element):
         self.print_header(element['name'])
-        print('**Byte array**: %d byte%s (%s)' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
+        print('<b>Byte array</b>: %d byte%s (%s)' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
         print()
         print(self.parse_comment(element['comments']))
 
     def print_enum(self, element):
         self.print_header(element['name'])
-        print('**Enumeration**: %d byte%s (%s)' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
+        print('<b>Enumeration</b>: %d byte%s (%s)' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
         print()
         print(self.parse_comment(element['comments']))
         print()
-        print('.. list-table:: Values')
-        print('   :widths: 10 32 58')
-        print('   :class: big-table')
-        print()
-        print('   * - **Value**')
-        print('     - **Name**')
-        print('     - **Description**')
+        print('<table class="big-table"><tbody>')
+        print('<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>')
         for v in element['values']:
-            print('   * - %s' % hex(v['value']))
-            print('     - ``%s``' % v['name'])
-            print('     - %s' % self.parse_comment(v['comments']))
+            print('<tr>')
+            print('<td>%s</td>' % hex(v['value']))
+            print('<td>%s</td>' % self.make_keyword(v['name']))
+            print('<td>%s</td>' % self.parse_comment(v['comments']))
+            print('</tr>')
+        print('</tbody></table>')
+        print()
+
+    def print_struct_content(self, element):
+        for v in element['layout']:
+            comment = ''
+            disposition = v.get('disposition') or ''
+            if disposition == 'inline':
+                self.print_struct_content(self.types[v['type']])
+                continue
+            elif disposition == 'const':
+                type = self.types.get(v['type'])
+                if type and type['type'] == 'enum':
+                    comment = '<b>const</b> %s (%s)<br/>' % (self.make_keyword(v['value']), self.make_keyword(hex(type['values_dict'][v['value']]['value'])))
+                else:
+                    comment = '<b>const</b> %s<br/>' % self.make_keyword(v['value'])
+            elif disposition == 'reserved':
+                comment = '<b>reserved</b> %s<br/>' % self.make_keyword(v['value'])
+            comment += self.parse_comment(v['comments'])
+            print('<tr>')
+            print('<td>&nbsp;</td>')
+            print('<td>%s</td>' % self.make_keyword(self.make_breakable(v['name'])))
+            print('<td>%s</td>' % self.type_description(v))
+            print('<td>%s</td>' % comment)
+            print('</tr>')
 
     def print_struct(self, element):
         self.print_header(element['name'])
-        print('**Struct**:')
+        print('<b>Struct</b>:')
         print()
         print(self.parse_comment(element['comments']))
         print()
-        print('.. list-table:: Fields')
-        print('   :widths: 25 30 45')
-        print('   :class: big-table')
-        print()
-        print('   * - **Name**')
-        print('     - **Type**')
-        print('     - **Description**')
-        for v in element['layout']:
-            disposition = v.get('disposition') or ''
-            name = '*(inline)*' if disposition == 'inline' else '``%s``' % v['name']
-            comment = ''
-            if disposition == 'const':
-                type = self.types.get(v['type'])
-                if type and type['type'] == 'enum':
-                    comment = '**const** ``%s`` (``%s``)\n\n       ' % (v['value'], hex(type['values_dict'][v['value']]['value']))
-                else:
-                    comment = '**const** ``%s``\n\n       ' % v['value']
-            elif disposition == 'reserved':
-                comment = '**reserved** ``%s``\n\n       ' % v['value']
-            comment += self.parse_comment(v['comments'])
-            print('   * - %s' % name)
-            print('     - %s' % self.type_description(v))
-            print('     - %s' % comment)
+        print('<table class="big-table"><tbody>')
+        print('<tr><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>')
+        self.print_struct_content(element)
+        print('</tbody></table>')
 
     def execute(self):
         """Contains all the logic to execute a command."""
@@ -89,9 +97,6 @@ class SerializationCommand(Command):
             except yaml.YAMLError as exc:
                 print(exc)
                 return
-        print('Transaction serialization')
-        print('#########################')
-        print()
         self.types = {}
         # Build types dictionary for simpler access
         for e in self.schema:
