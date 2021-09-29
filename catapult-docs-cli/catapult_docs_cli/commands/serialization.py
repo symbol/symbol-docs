@@ -15,6 +15,12 @@ class SerializationCommand(Command):
     def make_breakable(self, keyword):
         return '_&ZeroWidthSpace;'.join(keyword.split('_')) if len(keyword) > 30 else keyword
 
+    def make_size_label(self, size, var):
+        if var == 0:
+            return '%d byte%s' % (size, 's' if size > 1 else '')
+        else:
+            return '%d+ byte%s (variable)' % (size, 's' if size > 1 else '')
+
     def calc_total_type_size(self, element):
         size = 0
         var = 0
@@ -61,10 +67,7 @@ class SerializationCommand(Command):
         print()
         print('.. rst-class:: side-info')
         print()
-        if var == 0:
-            print('   Size: %d byte%s' % (size, 's' if size > 1 else ''))
-        else:
-            print('   Size: %d+ byte%s (variable)' % (size, 's' if size > 1 else ''))
+        print('   Size: %s' % self.make_size_label(size, var))
         print()
 
     def print_type(self, element):
@@ -96,13 +99,16 @@ class SerializationCommand(Command):
             comment = ''
             disposition = v.get('disposition') or ''
             if disposition == 'inline':
+                (size, var) = self.calc_total_type_size(self.types[v['type']])
+                size_label = self.make_size_label(size, var)
                 if indent < 1:
-                    print('   <tr><td colspan="6" class="big-table-section">%s</td></tr>' % v['type'])
+                    print('   <tr><td colspan="6" class="big-table-section">%s<span style="float:right">%s</span></td></tr>' % (v['type'], size_label))
                 elif indent < 2:
-                    print('   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section">%s</td></tr>' % v['type'])
+                    print(
+                        '   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section">%s<span style="float:right">%s</span></td></tr>' % (v['type'], size_label))
                 else:
-                    print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section">%s</td></tr>' %
-                          v['type'])
+                    print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section">%s<span style="float:right">%s</span></td></tr>' %
+                          (v['type'], size_label))
                 self.print_struct_content(self.types[v['type']], indent + 1)
                 continue
             elif disposition == 'const':
