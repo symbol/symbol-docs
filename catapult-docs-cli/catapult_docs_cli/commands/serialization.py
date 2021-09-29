@@ -117,11 +117,18 @@ class SerializationCommand(Command):
         # Build types dictionary for simpler access
         for e in self.schema:
             self.types[e['name']] = e
+            self.types[e['name']]['inlined'] = 0
             if e['type'] == 'enum':
                 # Build a dictionary for enum values too
                 e['values_dict'] = {}
                 for l in e['values']:
                     e['values_dict'][l['name']] = l
+        # Mark inlined structs so they can be filtered out
+        for e in self.schema:
+            if e['type'] == 'struct':
+                for f in e['layout']:
+                    if f.get('disposition', '') == 'inline':
+                        self.types[f['type']]['inlined'] = 1
 
         print('Transaction serialization')
         print('#########################')
@@ -152,5 +159,5 @@ class SerializationCommand(Command):
         print('**********')
         print()
         for e in self.schema:
-            if e['type'] == 'struct':
+            if e['type'] == 'struct' and e['inlined'] == 0:
                 self.print_struct(e)
