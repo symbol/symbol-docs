@@ -7,13 +7,38 @@ class SerializationCommand(Command):
     """
 
     def make_anchor(self, type):
-        return 'Serialization' + type
+        return 'serialization' + type.lower()
 
     def make_keyword(self, keyword):
         return '<code class="docutils literal">%s</code>' % keyword
 
     def make_breakable(self, keyword):
         return '_&ZeroWidthSpace;'.join(keyword.split('_')) if len(keyword) > 30 else keyword
+
+    def calc_total_type_size(self, element):
+        size = 0
+        var = 0
+        if element['type'] == 'byte':
+            if isinstance(element['size'], int):
+                size = element['size']
+            else:
+                var = 1
+        elif element['type'] == 'enum':
+            size = element['size']
+        else:
+            # Structs
+            for f in element['layout']:
+                if f['type'] == 'byte':
+                    type_size = 1
+                    type_var = 0
+                else:
+                    (type_size, type_var) = self.calc_total_type_size(self.types[f['type']])
+                if isinstance(f.get('size', 1), int):
+                    size += type_size * f.get('size', 1)
+                    var += type_var
+                else:
+                    var = 1
+        return (size, var)
 
     def type_description(self, element):
         if element['type'] == 'byte':
@@ -23,16 +48,23 @@ class SerializationCommand(Command):
         elif element['type'] == 'struct':
             return 'struct (%d fields)' % len(element['layout'])
         else:
-            return '<a href="#%s">%s</a>' % (self.make_anchor(element['type']), element['type'])
+            return '<a href="#%s">%s</a>%s' % (self.make_anchor(element['type']), element['type'], '' if element.get('size', 0) == 0 else '&ZeroWidthSpace;[%s]' % element['size'])
 
     def parse_comment(self, comment):
         return '<br/><b>Note:</b> '.join(comment.split('\\note'))
 
-    def print_header(self, name):
+    def print_header(self, name, size, var):
         print('.. _%s:' % self.make_anchor(name))
         print()
         print(name)
         print('=' * len(name))
+        print()
+        print('.. rst-class:: side-info')
+        print()
+        if var == 0:
+            print('   Size: %d byte%s' % (size, 's' if size > 1 else ''))
+        else:
+            print('   Size: %d+ byte%s (variable)' % (size, 's' if size > 1 else ''))
         print()
 
     def print_type(self, element):
@@ -43,10 +75,8 @@ class SerializationCommand(Command):
         print('   </tr>')
 
     def print_enum(self, element):
-        self.print_header(element['name'])
+        self.print_header(element['name'], element['size'], 0)
         print('.. raw:: html')
-        print()
-        print('   <b>Size</b>: %d byte%s (%s)<br/>' % (element['size'], 's' if element['size'] > 1 else '', element['signedness']))
         print()
         print('   ' + self.parse_comment(element['comments']))
         print()
@@ -94,7 +124,8 @@ class SerializationCommand(Command):
             print('   </tr>')
 
     def print_struct(self, element):
-        self.print_header(element['name'])
+        (size, var) = self.calc_total_type_size(element)
+        self.print_header(element['name'], size, var)
         print('.. raw:: html')
         print()
         print('   ' + self.parse_comment(element['comments']))
