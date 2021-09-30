@@ -213,6 +213,8 @@ class SerializationCommand(Command):
         print('Transaction serialization')
         print('#########################')
         print()
+        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.')
+        print()
 
         # Process all basic types
         print('Basic Types')
