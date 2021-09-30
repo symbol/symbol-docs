@@ -1,3 +1,5 @@
+import re
+import os
 import ruamel.yaml as yaml
 from .base import Command
 
@@ -71,6 +73,9 @@ class SerializationCommand(Command):
         print('   <table style="width: 100%;"><tr><td>')
         print('       <div class="side-info"><table>')
         print('       <tr><td class="side-info-icon">&varr;</td><td>Size: %s</td></tr>' % self.make_size_label(size, var))
+        if name in self.type_locations:
+            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/%s#L%d">schema</a></td></tr>' %
+                  (self.type_locations[name][0], self.type_locations[name][1]))
         print('       </table></div>')
         print('   ' + self.parse_comment(description))
         print('   </td></tr></table>')
@@ -168,6 +173,20 @@ class SerializationCommand(Command):
                 for f in e['layout']:
                     if f.get('disposition', '') == 'inline':
                         self.types[f['type']]['inlined'] = 1
+
+        # Parse source schemas to extract exact locations of type definitions
+        self.type_locations = {}
+        fullpath = os.path.abspath(self.config['source_schema_path'])
+        for root, dirs, filenames in os.walk(fullpath):
+            dirs[:] = [d for d in dirs if d not in ['.git']]
+            for filename in filenames:
+                if filename.endswith(".cats"):
+                    absfilename = os.path.join(root, filename)
+                    f = open(absfilename, "r")
+                    for linenum, line in enumerate(f):
+                        m = re.search(r'^(struct|enum) ([a-zA-Z]+)\b', line)
+                        if m:
+                            self.type_locations[m.group(2)] = (os.path.relpath(absfilename, fullpath), linenum + 1)
 
         print('Transaction serialization')
         print('#########################')
