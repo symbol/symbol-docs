@@ -19,9 +19,9 @@ class SerializationCommand(Command):
 
     def make_size_label(self, size, var):
         if var == 0:
-            return '%d byte%s' % (size, 's' if size > 1 else '')
+            return '%d byte%s%s' % (size, 's' if size > 1 else '', '' if size < 10 else ' = %s' % hex(size))
         else:
-            return '%d+ byte%s (variable)' % (size, 's' if size > 1 else '')
+            return '%d+ byte%s%s <i>(variable)</i>' % (size, 's' if size > 1 else '', '' if size < 10 else ' = %s+' % hex(size))
 
     def calc_total_type_size(self, element):
         size = 0
