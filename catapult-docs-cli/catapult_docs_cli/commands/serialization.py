@@ -59,15 +59,21 @@ class SerializationCommand(Command):
     def parse_comment(self, comment):
         return '<br/><b>Note:</b> '.join(comment.split('\\note'))
 
-    def print_header(self, name, size, var):
+    def print_header(self, name, description,size, var):
         print('.. _%s:' % self.make_anchor(name))
         print()
         print(name)
         print('=' * len(name))
         print()
-        print('.. rst-class:: side-info')
+
+        print('.. raw:: html')
         print()
-        print('   Size: %s' % self.make_size_label(size, var))
+        print('   <table style="width: 100%;"><tr><td>')
+        print('       <div class="side-info"><table>')
+        print('       <tr><td class="side-info-icon">&varr;</td><td>Size: %s</td></tr>' % self.make_size_label(size, var))
+        print('       </table></div>')
+        print('   ' + self.parse_comment(description))
+        print('   </td></tr></table>')
         print()
 
     def print_type(self, element):
@@ -78,10 +84,8 @@ class SerializationCommand(Command):
         print('   </tr>')
 
     def print_enum(self, element):
-        self.print_header(element['name'], element['size'], 0)
+        self.print_header(element['name'], element['comments'], element['size'], 0)
         print('.. raw:: html')
-        print()
-        print('   ' + self.parse_comment(element['comments']))
         print()
         print('   <table class="big-table"><tbody>')
         print('   <tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>')
@@ -131,10 +135,8 @@ class SerializationCommand(Command):
 
     def print_struct(self, element):
         (size, var) = self.calc_total_type_size(element)
-        self.print_header(element['name'], size, var)
+        self.print_header(element['name'], element['comments'], size, var)
         print('.. raw:: html')
-        print()
-        print('   ' + self.parse_comment(element['comments']))
         print()
         print('   <table class="big-table"><tbody>')
         print('   <tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>')
