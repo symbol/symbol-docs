@@ -55,7 +55,7 @@ class SerializationCommand(Command):
         elif element['type'] == 'enum':
             return 'enum (%d bytes)' % element['size']
         elif element['type'] == 'struct':
-            return 'struct (%d fields)' % len(element['layout'])
+            return '<a href="#%s">%s</a>' % (self.make_anchor(element['name']), element['name'])
         else:
             return '<a href="#%s">%s</a>%s' % (self.make_anchor(element['type']), element['type'], '' if element.get('size', 0) == 0 else '&ZeroWidthSpace;[%s]' % element['size'])
 
@@ -150,6 +150,11 @@ class SerializationCommand(Command):
         print('   <table class="big-table"><tbody>')
         print('   <tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>')
         self.print_struct_content(element, 0)
+        if len(element['inlined-from']) > 0:
+            print('   <tr><td colspan="6"><br/>Included in: ')
+            print('   %s' % ', '.join(self.type_description(self.types[x]) for x in element['inlined-from']))
+            print('   </tr></td>')
+            print()
         print('   </tbody></table>')
         print()
 
@@ -165,7 +170,7 @@ class SerializationCommand(Command):
         # Build types dictionary for simpler access
         for e in self.schema:
             self.types[e['name']] = e
-            self.types[e['name']]['inlined'] = 0
+            self.types[e['name']]['inlined-from'] = []
             if e['type'] == 'enum':
                 # Build a dictionary for enum values too
                 e['values_dict'] = {}
@@ -176,7 +181,7 @@ class SerializationCommand(Command):
             if e['type'] == 'struct':
                 for f in e['layout']:
                     if f.get('disposition', '') == 'inline':
-                        self.types[f['type']]['inlined'] = 1
+                        self.types[f['type']]['inlined-from'].append(e['name'])
 
         # Parse source schemas to extract exact locations of type definitions
         self.type_schema_locations = {}
@@ -250,7 +255,7 @@ class SerializationCommand(Command):
         print('**********')
         print()
         for e in self.schema:
-            if e['type'] == 'struct' and e['inlined'] == 0:
+            if e['type'] == 'struct' and len(e['inlined-from']) == 0:
                 self.print_struct(e)
         # Process all "inner" structs
         print('Inner Structures')
@@ -260,5 +265,5 @@ class SerializationCommand(Command):
         print('Their description is already present in the containing structures above and is only repeated here for completeness.')
         print()
         for e in self.schema:
-            if e['type'] == 'struct' and e['inlined'] != 0:
+            if e['type'] == 'struct' and len(e['inlined-from']) > 0:
                 self.print_struct(e)
