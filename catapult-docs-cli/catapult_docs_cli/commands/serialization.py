@@ -210,11 +210,17 @@ class SerializationCommand(Command):
                         m = re.search(r'\b(struct|enum class) ([a-zA-Z]+)\b', line)
                         if m:
                             self.type_catapult_locations[m.group(2)] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                        else:
-                            m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)\)', line)
-                            if m:
-                                self.type_catapult_locations[m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                                self.type_catapult_locations['Embedded' + m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                            continue
+                        m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)\)', line)
+                        if m:
+                            self.type_catapult_locations[m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                            self.type_catapult_locations['Embedded' + m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                            continue
+                        m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)##[A-Z_]+##([a-zA-Z]+)\)', line)
+                        if m:
+                            self.type_catapult_locations[m.group(1)+'Address'+m.group(2)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                            self.type_catapult_locations[m.group(1)+'Mosaic'+m.group(2)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                            continue
 
         print('#############')
         print('Serialization')
