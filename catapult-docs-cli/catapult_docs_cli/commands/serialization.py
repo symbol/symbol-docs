@@ -9,7 +9,8 @@ class SerializationCommand(Command):
     """
 
     def make_anchor(self, type):
-        return 'serialization' + type.lower()
+        # CamelCase to words separated by hyphens, as Sphinx likes them
+        return re.sub(r'(?<!^)(?=[A-Z])', '-', type).lower()
 
     def make_keyword(self, keyword):
         return '<code class="docutils literal">%s</code>' % keyword
@@ -210,10 +211,18 @@ class SerializationCommand(Command):
                                 self.type_catapult_locations[m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
                                 self.type_catapult_locations['Embedded' + m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
 
+        print('#########################')
         print('Transaction serialization')
         print('#########################')
         print()
         print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.')
+        print()
+
+        # Hide level 4 headers from local TOC: there's too many of them and I could not find
+        # a Sphinx-friendly way of doing it.
+        print('.. raw:: html')
+        print()
+        print('   <style>.bs-sidenav ul ul ul > li {display: none;}</style>')
         print()
 
         # Process all basic types
@@ -236,10 +245,20 @@ class SerializationCommand(Command):
         for e in self.schema:
             if e['type'] == 'enum':
                 self.print_enum(e)
-        # Process all structs
+        # Process all "user" structs
         print('Structures')
         print('**********')
         print()
         for e in self.schema:
             if e['type'] == 'struct' and e['inlined'] == 0:
+                self.print_struct(e)
+        # Process all "inner" structs
+        print('Inner Structures')
+        print('****************')
+        print()
+        print('These are structures only meant to be included inside other structures.')
+        print('Their description is already present in the containing structures above and is only repeated here for completeness.')
+        print()
+        for e in self.schema:
+            if e['type'] == 'struct' and e['inlined'] != 0:
                 self.print_struct(e)
