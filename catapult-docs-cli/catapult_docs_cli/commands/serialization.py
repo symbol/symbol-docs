@@ -211,11 +211,11 @@ class SerializationCommand(Command):
                                 self.type_catapult_locations[m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
                                 self.type_catapult_locations['Embedded' + m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
 
-        print('#########################')
-        print('Transaction serialization')
-        print('#########################')
+        print('#############')
+        print('Serialization')
+        print('#############')
         print()
-        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.')
+        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.')
         print()
 
         # Hide level 4 headers from local TOC: there's too many of them and I could not find
