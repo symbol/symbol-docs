@@ -8,7 +8,7 @@ This feature has been specifically tailored for **Security Token Offerings (STO)
 In contrast to the unregulated tokens that were introduced through ICOs, security tokens are blockchain based representation of value that is subject to regulation under security laws, and thus need a way to bypass blockchain autonomy.
 
 Not all the mosaics of a given network will be subject to mosaic restrictions.
-The feature will only affect those to which the issuer adds the ``restrictable`` :ref:`property <mosaic-properties>` explicitly at the moment of its creation.
+The feature will only affect those to which the issuer adds the ``restrictable`` :ref:`property <configurable-mosaic-properties>` explicitly at the moment of its creation.
 This property appears disabled by default, as it is undesirable for autonomous tokens like the public network currency.
 
 .. note:: A mosaic only supports the mosaic restrictions feature if the ``restrictable`` property has been set to true at its creation.

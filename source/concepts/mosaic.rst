@@ -7,9 +7,9 @@ They are **fixed assets** that can represent a set of multiple identical things 
 
 A mosaic could be a **token**, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
-Each mosaic has a unique identifier represented as a 64-bit unsigned integer and a set of :ref:`configurable properties <mosaic-properties>` and flags that can be defined during the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`.
+Each mosaic has a unique identifier represented as a 64-bit unsigned integer and a set of :ref:`configurable properties <configurable-mosaic-properties>` and flags that can be defined during the :doc:`mosaic creation <../guides/mosaic/creating-a-mosaic>`.
 
-.. _mosaic-properties:
+.. _configurable-mosaic-properties:
 
 **********
 Properties

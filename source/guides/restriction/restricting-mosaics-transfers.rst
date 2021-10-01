@@ -30,7 +30,7 @@ Prerequisites
 Creating a restrictable mosaic
 ******************************
 
-Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <mosaic-properties>` set to true at the moment of their creation can accept mosaic restrictions.
+Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the ``restrictable`` :ref:`property <configurable-mosaic-properties>` set to true at the moment of their creation can accept mosaic restrictions.
 
 1. Start creating the new restrictable mosaic ``ccf.shares`` with |cli| using the :doc:`CharlieChocolateFactory account <../account/creating-an-account>`.
 
