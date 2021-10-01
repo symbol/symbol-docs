@@ -30,10 +30,10 @@ Statements can include receipts with the following basic types:
 Resolution statement
 ********************
 
-When a transaction includes an :doc:`alias <namespace>`, a so called :ref:`resolution statement <resolution-statement>` reflects the resolved value for that block:
+When a transaction includes an :doc:`alias <namespace>`, a so called Resolution Statement reflects the resolved value for that block:
 
-* **Address Resolution**: An account alias was used in the block.
-* **Mosaic Resolution**: A mosaic alias was used in the block.
+* :ref:`Address resolution statement <address-resolution-statement>`: An account alias was used in the block.
+* :ref:`Mosaic resolution statement <mosaic-resolution-statement>`: A mosaic alias was used in the block.
 
 The alias receipts record the first occurrence of an (unresolved, resolved) alias pair used in a block.
 
@@ -58,8 +58,8 @@ Recorded receipts
     0x2143; Harvest_Fee; :ref:`BalanceCredit <balance-change-receipt>`; The recipient, account and amount of fees received for harvesting a block. It is recorded when a block is :doc:`harvested <harvesting>`.
     0x5143; Inflation; :ref:`Inflation <inflation-receipt>`; The amount of native currency mosaics created. The receipt is recorded when the network has inflation configured, and a new block triggers the creation of currency mosaics.
     0xE143; Transaction_Group;  :ref:`Aggregate <transaction-statement>`; A collection of state changes for a given source. It is recorded when a state change receipt is issued.
-    0xF143; Address_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a transaction indicates a valid address alias instead of an address.
-    0xF243; Mosaic_Alias_Resolution; :ref:`Alias Resolution <resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaic id.
+    0xF143; Address_Alias_Resolution; :ref:`AddressResolution <address-resolution-statement>`; The unresolved and resolved :doc:`alias <namespace>`. It is recorded when a transaction indicates a valid address alias instead of an address.
+    0xF243; Mosaic_Alias_Resolution; :ref:`MosaicResolution <mosaic-resolution-statement>`; The unresolved and resolved alias. It is recorded when a transaction indicates a valid mosaic alias instead of a mosaic id.
     **Mosaic**;;;
     0x414D; Mosaic_Expired; :ref:`MosaicExpiry <mosaic-expiry-receipt>`; The identifier of the mosaic expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` lifetime elapses.
     0x124D; Mosaic_Rental_Fee; :ref:`BalanceTransfer <balance-transfer-receipt>`; The sender and recipient of the mosaic id and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
