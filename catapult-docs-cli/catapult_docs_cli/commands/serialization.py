@@ -28,6 +28,68 @@ def make_size_label(size, var):
     template = '{} byte{}{}' if var == 0 else '{}+ byte{}{}+ <i>(variable)</i>'
     return template.format(size, '' if size == 1 else 's', '' if size < 10 else ' = %s' % hex(size))
 
+def find_schema_locations(path):
+    """Find all schema files in the given path and quickly scan them to find struct and enum definition locations.
+    """
+    locations = {}
+    fullpath = os.path.abspath(path)
+    for root, dirs, filenames in os.walk(fullpath):
+        # Remove .git from the search. This functionality prevents me from using glob.glob() or pathlib.rglob().
+        dirs[:] = [d for d in dirs if d not in ['.git']]
+        for filename in filenames:
+            # Only interested in schema files
+            if filename.endswith(".cats"):
+                absfilename = os.path.join(root, filename)
+                f = open(absfilename, "r")
+                for linenum, line in enumerate(f):
+                    # If line contains "struct" or "enum" followed by a keyword...
+                    m = re.search(r'^(struct|enum) ([a-zA-Z]+)\b', line)
+                    if m:
+                        # Store the file path and line number, indexed by the keyword
+                        locations[m.group(2)] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+    return locations
+
+def find_catapult_model_locations(path):
+    """Find all catapult-client model files in the given path and quickly scan them to find struct and enum definition locations.
+    """
+    locations = {}
+    fullpath = os.path.abspath(path)
+    for root, dirs, filenames in os.walk(fullpath):
+        # Remove .git and _build from the search. This functionality prevents me from using glob.glob() or pathlib.rglob().
+        dirs[:] = [d for d in dirs if d not in ['.git', '_build']]
+        for filename in filenames:
+            # Only interested in header files
+            if filename.endswith(".h"):
+                absfilename = os.path.join(root, filename)
+                f = open(absfilename, "r")
+                for linenum, line in enumerate(f):
+                    # Detect all struct and enum definitions. There are several checks because macros make detection complex.
+                    m = re.search(r'\b(struct|enum class) ([a-zA-Z]+)\b', line)
+                    if m:
+                        locations[m.group(2)] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        continue
+                    m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)\)', line)
+                    if m:
+                        locations[m.group(1) + 'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        locations['Embedded' + m.group(1) + 'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        continue
+                    m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)##[A-Z_]+##([a-zA-Z]+)\)', line)
+                    if m:
+                        locations[m.group(1) + 'Address' + m.group(2) + 'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        locations[m.group(1) + 'Mosaic' + m.group(2) + 'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        locations['Embedded' + m.group(1) + 'Address' + m.group(2) + 'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        locations['Embedded' + m.group(1) + 'Mosaic' + m.group(2) + 'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        continue
+                    m = re.search(r'DEFINE_ACCOUNT_RESTRICTION_TRANSACTION\(([a-zA-Z]+)', line)
+                    if m:
+                        locations['Account' + m.group(1) + 'RestrictionTransaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        locations['EmbeddedAccount' + m.group(1) + 'RestrictionTransaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+                        continue
+    # Add special case for AggregateCompleteTransaction and AggregateBondedTransaction, which are actually just AggregateTransactions
+    locations['AggregateCompleteTransaction'] = locations['AggregateTransaction']
+    locations['AggregateBondedTransaction'] = locations['AggregateTransaction']
+    return locations
+
 class SerializationCommand(Command):
     """Command to parse the Symbol schema YAML file into a ReStructured Text documentation page.
 
@@ -244,50 +306,10 @@ class SerializationCommand(Command):
 
         # Parse source schemas to extract exact locations of type definitions.
         # This step could be avoided if the parsed YAML file already contained this information.
-        self.type_schema_locations = {}
-        fullpath = os.path.abspath(self.config['source_schema_path'])
-        for root, dirs, filenames in os.walk(fullpath):
-            # Remove .git from the search. This functionality prevents me from using glob.glob() or pathlib.rglob().
-            dirs[:] = [d for d in dirs if d not in ['.git']]
-            for filename in filenames:
-                # Only interested in schema files
-                if filename.endswith(".cats"):
-                    absfilename = os.path.join(root, filename)
-                    f = open(absfilename, "r")
-                    for linenum, line in enumerate(f):
-                        # If line contains "struct" or "enum" followed by a keyword...
-                        m = re.search(r'^(struct|enum) ([a-zA-Z]+)\b', line)
-                        if m:
-                            # Store the file path and line number, indexed by the keyword
-                            self.type_schema_locations[m.group(2)] = (os.path.relpath(absfilename, fullpath), linenum + 1)
+        self.type_schema_locations = find_schema_locations(self.config['source_schema_path'])
 
         # Parse source of catapult-client to extract exact locations of model definitions.
-        self.type_catapult_locations = {}
-        fullpath = os.path.abspath(self.config['source_catapult_path'])
-        for root, dirs, filenames in os.walk(fullpath):
-            # Remove .git and _build from the search. This functionality prevents me from using glob.glob() or pathlib.rglob().
-            dirs[:] = [d for d in dirs if d not in ['.git', '_build']]
-            for filename in filenames:
-                # Only interested in header files
-                if filename.endswith(".h"):
-                    absfilename = os.path.join(root, filename)
-                    f = open(absfilename, "r")
-                    for linenum, line in enumerate(f):
-                        # Detect all struct and enum definitions. There are several checks because macros make detection complex.
-                        m = re.search(r'\b(struct|enum class) ([a-zA-Z]+)\b', line)
-                        if m:
-                            self.type_catapult_locations[m.group(2)] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                            continue
-                        m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)\)', line)
-                        if m:
-                            self.type_catapult_locations[m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                            self.type_catapult_locations['Embedded' + m.group(1)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                            continue
-                        m = re.search(r'DEFINE_EMBEDDABLE_TRANSACTION\(([a-zA-Z]+)##[A-Z_]+##([a-zA-Z]+)\)', line)
-                        if m:
-                            self.type_catapult_locations[m.group(1)+'Address'+m.group(2)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                            self.type_catapult_locations[m.group(1)+'Mosaic'+m.group(2)+'Transaction'] = (os.path.relpath(absfilename, fullpath), linenum + 1)
-                            continue
+        self.type_catapult_locations = find_catapult_model_locations(self.config['source_catapult_path'])
 
         # Print document title and introduction
         print('#############')
