@@ -28,6 +28,11 @@ def make_size_label(size, var):
     template = '{} byte{} = {}' if var == 0 else '{}+ byte{} = {}+ <i>(variable)</i>'
     return template.format(size, '' if size == 1 else 's', hex(size))
 
+def escape_quotes(comment):
+    """Replace quotes with &quot; so comments can be used inside HTML attributes
+    """
+    return comment.replace('"', '&quot;')
+
 def find_schema_locations(path):
     """Find all schema files in the given path and quickly scan them to find struct and enum definition locations.
     """
@@ -139,24 +144,38 @@ class SerializationCommand(Command):
         elif element['type'] == 'enum':
             return 'enum ({} bytes)'.format(element['size'])
         elif element['type'] == 'struct':
-            return '<a href="#{}">{}</a>'.format(make_anchor(element['name']), element['name'])
+            return '<a href="#{}" title="{}">{}</a>'.format(make_anchor(element['name']), escape_quotes(element['comments']), element['name'])
         else:
             # Add the array indicator only if the type has a size
-            return '<a href="#{}">{}</a>{}'.format(make_anchor(element['type']), element['type'], \
+            return '<a href="#{}" title="{}">{}</a>{}'.format(make_anchor(element['type']), escape_quotes(self.types[element['type']]['comments']), element['type'], \
                 '' if element.get('size', 0) == 0 else '&ZeroWidthSpace;[{}]'.format(element['size']))
 
     def parse_comment(self, comment):
-        """Turn markdown present in the comments into HTML code.
+        """Turn markdown present in the comments into HTML code and type names into links.
         """
-        return '<br/><b>Note:</b> '.join(comment.split('\\note'))
+        output = ''
+        first = True
+        for word in comment.split(' '):
+            if first:
+                first = False
+            else:
+                output += ' '
+            if word in self.types:
+                output += self.type_description(self.types[word])
+            elif word == '\\note':
+                output += '<br/><b>Note:</b>'
+            else:
+                output += word
+        return output
 
-    def print_header(self, name, description,size, var):
+    def print_header(self, element, size, var):
         """Prints header common to Enums and Structs, including:
         - A RST label so this type can be referenced from other places
         - A RST header so Sphinx adds <h3> tags
         - An two-cells HTML table containing the type's description on the left and
           an info box on the right with type size and code links.
         """
+        name = element['name']
         print('.. _{}:'.format(make_anchor(name)))
         print()
         print(name)
@@ -177,7 +196,7 @@ class SerializationCommand(Command):
                 '<td><a href="https://github.com/symbol/catapult-client/blob/main/{}#L{}">catapult model</a></td></tr>'.format(
                 self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]))
         print('       </table></div>')
-        print('   ' + self.parse_comment(description))
+        print('   ' + self.parse_comment(element['comments']))
         print('   </td></tr></table>')
         print()
 
@@ -193,7 +212,7 @@ class SerializationCommand(Command):
     def print_enum(self, element):
         """Describes an Enum type using the common header and an HTML table with all the values.
         """
-        self.print_header(element['name'], element['comments'], element['size'], 0)
+        self.print_header(element, element['size'], 0)
         print('.. raw:: html')
         print()
         print('   <table class="big-table"><tbody>')
@@ -223,13 +242,15 @@ class SerializationCommand(Command):
                 # If we ever have more than these many levels this will need to be made more generic.
                 if indent < 1:
                     print('   <tr><td colspan="6" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
-                        format(v['type'], size_label))
+                        format(self.type_description(self.types[v['type']]), size_label))
                 elif indent < 2:
-                    print('   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
-                        format(v['type'], size_label))
+                    print('   <tr><td class="indentation-cell"></td>'
+                        '<td colspan="5" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
+                        format(self.type_description(self.types[v['type']]), size_label))
                 else:
-                    print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
-                        format(v['type'], size_label))
+                    print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td>'
+                        '<td colspan="4" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
+                        format(self.type_description(self.types[v['type']]), size_label))
                 self.print_struct_content(self.types[v['type']], indent + 1)
                 continue
             elif disposition == 'const':
@@ -258,7 +279,7 @@ class SerializationCommand(Command):
         in inline structs).
         """
         (size, var) = self.calc_total_type_size(element)
-        self.print_header(element['name'], element['comments'], size, var)
+        self.print_header(element, size, var)
         print('.. raw:: html')
         print()
         print('   <table class="big-table"><tbody>')
