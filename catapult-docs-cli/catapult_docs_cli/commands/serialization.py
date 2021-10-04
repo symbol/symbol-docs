@@ -25,8 +25,8 @@ def make_size_label(size, var):
     """Takes a `size` and a flag `var` indicating if the size is variable and
     returns an HTML string describing it. E.g. "16+ bytes = 0x10+ (variable)"
     """
-    template = '{} byte{}{}' if var == 0 else '{}+ byte{}{}+ <i>(variable)</i>'
-    return template.format(size, '' if size == 1 else 's', '' if size < 10 else ' = %s' % hex(size))
+    template = '{} byte{} = {}' if var == 0 else '{}+ byte{} = {}+ <i>(variable)</i>'
+    return template.format(size, '' if size == 1 else 's', hex(size))
 
 def find_schema_locations(path):
     """Find all schema files in the given path and quickly scan them to find struct and enum definition locations.
@@ -169,12 +169,12 @@ class SerializationCommand(Command):
         print('       <div class="side-info"><table>')
         print('       <tr><td class="side-info-icon">&varr;</td><td>Size: {}</td></tr>'.format(make_size_label(size, var)))
         if name in self.type_schema_locations:
-            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td> \
-                <td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/{}#L{}">schema</a></td></tr>'.format( \
+            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
+                '<td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/{}#L{}">schema</a></td></tr>'.format( \
                 self.type_schema_locations[name][0], self.type_schema_locations[name][1]))
         if name in self.type_catapult_locations:
-            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td> \
-                <td><a href="https://github.com/symbol/catapult-client/blob/main/{}#L{}">catapult model</a></td></tr>'.format(
+            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
+                '<td><a href="https://github.com/symbol/catapult-client/blob/main/{}#L{}">catapult model</a></td></tr>'.format(
                 self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]))
         print('       </table></div>')
         print('   ' + self.parse_comment(description))
