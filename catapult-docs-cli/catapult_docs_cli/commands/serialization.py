@@ -28,10 +28,10 @@ def make_size_label(size, var):
     template = '{} byte{} = {}' if var == 0 else '{}+ byte{} = {}+ <i>(variable)</i>'
     return template.format(size, '' if size == 1 else 's', hex(size))
 
-def escape_quotes(comment):
-    """Replace quotes with &quot; so comments can be used inside HTML attributes
+def make_title(comment):
+    """Replace quotes with &quot; and use only the first line, so comments can be used inside HTML attributes.
     """
-    return comment.replace('"', '&quot;')
+    return comment.partition('\n')[0].replace('"', '&quot;')
 
 def find_schema_locations(path):
     """Find all schema files in the given path and quickly scan them to find struct and enum definition locations.
@@ -144,28 +144,37 @@ class SerializationCommand(Command):
         elif element['type'] == 'enum':
             return 'enum ({} bytes)'.format(element['size'])
         elif element['type'] == 'struct':
-            return '<a href="#{}" title="{}">{}</a>'.format(make_anchor(element['name']), escape_quotes(element['comments']), element['name'])
+            return '<a href="#{}" title="{}">{}</a>'.format(make_anchor(element['name']), make_title(element['comments']), element['name'])
         else:
             # Add the array indicator only if the type has a size
-            return '<a href="#{}" title="{}">{}</a>{}'.format(make_anchor(element['type']), escape_quotes(self.types[element['type']]['comments']), element['type'], \
+            return '<a href="#{}" title="{}">{}</a>{}'.format(make_anchor(element['type']), make_title(self.types[element['type']]['comments']), element['type'],
                 '' if element.get('size', 0) == 0 else '&ZeroWidthSpace;[{}]'.format(element['size']))
 
     def parse_comment(self, comment):
-        """Turn markdown present in the comments into HTML code and type names into links.
+        """Build proper HTML comments:
+        - Turn markdown present in the comments into HTML code.
+        - Detect type names and turn them into links.
+        - Turn line breaks into <br/> (RST is very picky wrt indentation)
         """
         output = ''
-        first = True
-        for word in comment.split(' '):
-            if first:
-                first = False
+        first_line = True
+        for line in comment.split('\n'):
+            if first_line:
+                first_line = False
             else:
-                output += ' '
-            if word in self.types:
-                output += self.type_description(self.types[word])
-            elif word == '\\note':
-                output += '<br/><b>Note:</b>'
-            else:
-                output += word
+                output += '<br/>'
+            first_word = True
+            for word in line.split():
+                if first_word:
+                    first_word = False
+                else:
+                    output += ' '
+                if word in self.types:
+                    output += self.type_description(self.types[word])
+                elif word == '\\note':
+                    output += '<br/><b>Note:</b>'
+                else:
+                    output += word
         return output
 
     def print_header(self, element, size, var):
