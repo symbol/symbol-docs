@@ -1,8 +1,28 @@
 import re
 import os
 import ruamel.yaml as yaml
+from markdown import markdown, Markdown
 from .base import Command
+from io import StringIO
 
+def unmark_element(element, stream=None):
+    """Markdown renderer that ignores markup and outputs only plain text.
+    """
+    if stream is None:
+        stream = StringIO()
+    if element.text:
+        stream.write(element.text)
+    for sub in element:
+        unmark_element(sub, stream)
+    if element.tail:
+        stream.write(element.tail)
+    return stream.getvalue()
+
+# This adds an output_format to the Markdown parser to produce plain text.
+# Useful for stripping out markdown formatting. https://stackoverflow.com/a/54923798
+Markdown.output_formats["plain"] = unmark_element
+__md = Markdown(output_format="plain")
+__md.stripTopLevelTags = False
 
 def make_anchor(type):
     """Takes a type name in CamelCase and returns the label (anchor) equivalent which is
@@ -31,7 +51,7 @@ def make_size_label(size, var):
 def make_title(comment):
     """Replace quotes with &quot; and use only the first line, so comments can be used inside HTML attributes.
     """
-    return comment.partition('\n')[0].replace('"', '&quot;')
+    return __md.convert(comment.partition('\n')[0].replace('"', '&quot;'))
 
 def find_schema_locations(path):
     """Find all schema files in the given path and quickly scan them to find struct and enum definition locations.
@@ -163,19 +183,15 @@ class SerializationCommand(Command):
                 first_line = False
             else:
                 output += '<br/>'
-            first_word = True
             for word in line.split():
-                if first_word:
-                    first_word = False
-                else:
-                    output += ' '
                 if word in self.types:
                     output += self.type_description(self.types[word])
                 elif word == '\\note':
                     output += '<br/><b>Note:</b>'
                 else:
                     output += word
-        return output
+                output += ' '
+        return markdown(output)
 
     def print_header(self, element, size, var):
         """Prints header common to Enums and Structs, including:
