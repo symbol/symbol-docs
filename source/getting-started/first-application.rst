@@ -180,7 +180,7 @@ If the terminal raises an error, you can check the error code description `here 
 Sending the ticket
 ******************
 
-Now that we have defined the mosaic, we will send one ticket unit to a customer announcing a :ref:`TransferTransaction <transfer-transaction>`.
+Now that we have defined the mosaic, we will send one ticket unit to a customer announcing a :ref:`transfertransaction`.
 
 1. Open a new file, and define a **TransferTransaction** with the following values.
 

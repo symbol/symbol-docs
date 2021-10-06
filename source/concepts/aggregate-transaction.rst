@@ -1,8 +1,8 @@
+.. _aggregate-transaction:
+
 #####################
 Aggregate Transaction
 #####################
-
-.. _aggregate-transaction:
 
 Aggregate transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic.
 |codename| does this by generating a one-time disposable smart contract.
@@ -40,7 +40,7 @@ Aggregate bonded
 
 An AggregateTransaction is **bonded** when it requires signatures from other participants.
 
-.. note:: Before announcing an **AggregateBondedTransaction**, an account must announce and get confirmed a :ref:`HashLockTransaction<hash-lock-transaction>` locking ``10`` |networkcurrency|.
+.. note:: Before announcing an **AggregateBondedTransaction**, an account must announce and get confirmed a :ref:`hashlocktransaction` locking ``10`` |networkcurrency|.
 
 Once an aggregate bonded is announced, it reaches partial state—where it can live up to ``2 days``—and notifies its status through WebSockets or HTTP API calls.
 
@@ -107,10 +107,10 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4141; :ref:`AggregateCompleteTransaction <aggregate-transaction>`; Send transactions in batches to different accounts.
-    0x4241; :ref:`AggregateBondedTransaction <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
+    0x4141; :ref:`aggregatecompletetransaction`; Send transactions in batches to different accounts.
+    0x4241; :ref:`aggregatebondedtransaction`; Propose an arrangement of transactions between different accounts.
     --; :ref:`Cosignature <cosignature>`; Cosign an AggregateBondedTransaction.
-    0x4148; :ref:`HashLockTransaction <hash-lock-transaction>`;  Lock a deposit needed to announce aggregate bonded transactions.
+    0x4148; :ref:`hashlocktransaction`;  Lock a deposit needed to announce aggregate bonded transactions.
 
 ******
 Guides

@@ -50,7 +50,7 @@ Click "**Send**".
 Method #02: Using the SDK
 *************************
 
-1. Open a new file and define a :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`.
+1. Open a new file and define a :ref:`mosaicdefinitiontransaction`.
 This transaction defines the mosaic properties your mosaic will have.
 You can read :doc:`"Mosaic Properties" <../../concepts/mosaic>` to decide how do you want to configure your mosaic.
 
@@ -71,7 +71,7 @@ You can read :doc:`"Mosaic Properties" <../../concepts/mosaic>` to decide how do
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` to set the **initial supply**.
+2. Define a :ref:`mosaicsupplychangetransaction` to set the **initial supply**.
 For instance, we can set it to **1,000,000** mosaic units.
 
 .. example-code::
@@ -93,7 +93,7 @@ For instance, we can set it to **1,000,000** mosaic units.
 
 .. note:: |codename| works with **absolute amounts**. To get an absolute amount, multiply the number of assets you want to create by 10\ :sup:`divisibility`.  For example, if the mosaic has **divisibility** 2, to create 10 units (relative) you should define 1000 (absolute) instead.
 
-3. Announce both transactions together using an :ref:`AggregateTransaction <aggregate-transaction>`.
+3. Announce both transactions together using an :ref:`aggregate-transaction`.
 Include the network generation hash to make the transaction only valid for your network.
 Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 

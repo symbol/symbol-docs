@@ -14,7 +14,7 @@ Get the resolution for a given alias and transaction using receipts.
 Use case
 ********
 
-|codename| accounts can link registered namespaces to other accounts or mosaics by announcing an :ref:`AliasTransaction <mosaic-alias-transaction>`.
+|codename| accounts can link registered namespaces to other accounts or mosaics by announcing an :ref:`mosaicaliastransaction`.
 This feature allows you to replace long and complex identifiers with short and familiar names for your accounts and mosaics.
 
 Imagine a ticket vendor sending tickets to their customers on |codename|'s public chain.

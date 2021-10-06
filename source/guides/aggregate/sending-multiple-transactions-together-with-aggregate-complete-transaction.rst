@@ -16,7 +16,7 @@ Use case
 
 Dan wants to send mosaics to Alice and Bob.
 He could achieve this sending a couple of **TransferTransactions**.
-However, to make sure Alice and Bob receive the funds at the same time, he decides to use an :ref:`AggregateTransaction <aggregate-transaction>`.
+However, to make sure Alice and Bob receive the funds at the same time, he decides to use an :ref:`aggregate-transaction`.
 
 .. figure:: ../../resources/images/examples/aggregate-sending-payouts.png
     :align: center
@@ -36,7 +36,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-1. Open a new file, and define two :ref:`transfer transactions <transfer-transaction>` to send 10 |networkcurrency| to different recipients.
+1. Open a new file, and define two :ref:`transfertransaction` to send 10 |networkcurrency| to different recipients.
 
 .. example-code::
 
@@ -56,7 +56,7 @@ Method #01: Using the SDK
         :end-before: /* end block 01 */
 
 
-2. Wrap both transactions in an :ref:`AggregateTransaction <aggregate-transaction>`, adding Dan's public account as the required signer. As one private key—Dan's account—can sign all the transactions in the aggregate, we can define the transaction as *complete*.
+2. Wrap both transactions in an :ref:`aggregate-transaction`, adding Dan's public account as the required signer. As one private key—Dan's account—can sign all the transactions in the aggregate, we can define the transaction as *complete*.
 
 .. example-code::
 

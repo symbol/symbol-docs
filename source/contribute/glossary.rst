@@ -11,7 +11,7 @@ Glossary
       A container for assets, which can only be modified with its private key. An account always has two keys (private and public) and an address. Read :doc:`more <../concepts/account>`.
 
     Account Link Transaction
-      A type of transaction used to transfer an account importance score to a proxy account. This is required for all accounts that wish to activate :ref:`delegated harvesting <delegated-harvesting>`. Read :ref:`more <account-key-link-transaction>`.
+      A type of transaction used to transfer an account importance score to a proxy account. This is required for all accounts that wish to activate :ref:`delegated harvesting <delegated-harvesting>`. Read :ref:`more <accountkeylinktransaction>`.
 
     Account Restrictions
       A configurable set of smart rules to block announcing or receiving transactions for a specific account. Read :doc:`more <../concepts/account-restriction>`
@@ -77,7 +77,7 @@ Glossary
       An account determined by the node operator that shares a portion of the block rewards.
 
     Hash Lock Transaction
-      A type of transaction which locks funds for a certain amount of :doc:`blocks <../concepts/block>`. This transaction is required before announcing an :ref:`Aggregate Bonded Transaction <aggregate-bonded>`. When the associated :doc:`Aggregate Transaction <../concepts/aggregate-transaction>` is complete, the locked funds are returned to the original account. Read :ref:`more <hash-lock-transaction>`.
+      A type of transaction which locks funds for a certain amount of :doc:`blocks <../concepts/block>`. This transaction is required before announcing an :ref:`Aggregate Bonded Transaction <aggregate-bonded>`. When the associated :doc:`Aggregate Transaction <../concepts/aggregate-transaction>` is complete, the locked funds are returned to the original account. Read :ref:`more <hashlocktransaction>`.
 
     Hashed Time Lock Contract (HTLC)
       A protocol which creates a trustless environment for the decentralized exchange of assets. It guarantees that a swap will take place if all the participants agree. On the other hand, if some of them decide not to conclude the process, each participant will receive their locked funds back.
@@ -170,10 +170,10 @@ Glossary
       The act of undoing a :doc:`block(s) <../concepts/block>` that was previously confirmed.
 
     Secret Lock Transaction
-      A type of transaction between two accounts where the mosaics remain locked until the recipient presents a valid SecretProofTransaction. Otherwise, the funds are returned to the sender. Read :ref:`more <secret-lock-transaction>`.
+      A type of transaction between two accounts where the mosaics remain locked until the recipient presents a valid SecretProofTransaction. Otherwise, the funds are returned to the sender. Read :ref:`secretlocktransaction`.
 
     Secret Proof Transaction
-      A type of transaction through which the recipient of a SecretLockTransaction provides proof and unlocks the mosaics. Read :ref:`more <secret-lock-transaction>`.
+      A type of transaction through which the recipient of a SecretLockTransaction provides proof and unlocks the mosaics. Read :ref:`secretlocktransaction`.
 
     Spam Throttle
       A feature which provides Symbol network protection against being spammed with lots of unconfirmed transactions.

@@ -22,42 +22,42 @@ The following transaction types are included in |codename| based networks by def
     :delim: ;
 
     **Account Link**;;
-    0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
-    0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
+    0x414C; :ref:`accountkeylinktransaction`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
+    0x424C; :ref:`nodekeylinktransaction`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
     **Aggregate**;;
-    0x4141; :ref:`AggregateCompleteTransaction <aggregate-transaction>`; Send transactions in batches to different accounts.
-    0x4241; :ref:`AggregateBondedTransaction <aggregate-transaction>`; Propose an arrangement of transactions between different accounts.
+    0x4141; :ref:`aggregatecompletetransaction`; Send transactions in batches to different accounts.
+    0x4241; :ref:`aggregatebondedtransaction`; Propose an arrangement of transactions between different accounts.
     --; :ref:`Cosignature <cosignature>`; Cosign an AggregateBondedTransaction.
     **Core**;;
-    0x4143; :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
-    0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
+    0x4143; :ref:`votingkeylinktransaction`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
+    0x4243; :ref:`vrfkeylinktransaction`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
     **Mosaic**;;
-    0x414D; :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`; Create a new mosaic.
-    0x424D; :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`; Change the mosaic total supply.
+    0x414D; :ref:`mosaicdefinitiontransaction`; Create a new mosaic.
+    0x424D; :ref:`mosaicsupplychangetransaction`; Change the mosaic total supply.
     **Namespace**;;
-    0x414E; :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`; Register a namespace to organize your assets.
-    0x424E; :ref:`AddressAliasTransaction <address-alias-transaction>`; Attach a namespace name to an account.
-    0x434E; :ref:`MosaicAliasTransaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
+    0x414E; :ref:`namespaceregistrationtransaction`; Register a namespace to organize your assets.
+    0x424E; :ref:`addressaliastransaction`; Attach a namespace name to an account.
+    0x434E; :ref:`mosaicaliastransaction`; Attach a namespace name to a mosaic.
     **Metadata**;;
-    0x4144; :ref:`AccountMetadataTransaction <account-metadata-transaction>`; Associate a key-value state to an account.
-    0x4244; :ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
-    0x4344; :ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.
+    0x4144; :ref:`accountmetadatatransaction`; Associate a key-value state to an account.
+    0x4244; :ref:`mosaicmetadatatransaction`; Associate a key-value state to a mosaic.
+    0x4344; :ref:`namespacemetadatatransaction`; Associate a key-value state to a namespace.
     **Multisignature**;;
-    0x4155; :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>`; Create or modify a multisig contract.
+    0x4155; :ref:`multisigaccountmodificationtransaction`; Create or modify a multisig contract.
     **Hash Lock**;;
-    0x4148; :ref:`HashLockTransaction <hash-lock-transaction>`;  Lock a deposit needed to announce aggregate bonded transactions.
+    0x4148; :ref:`hashlocktransaction`;  Lock a deposit needed to announce aggregate bonded transactions.
     **Secret Lock**;;
-    0x4152; :ref:`SecretLockTransaction <secret-lock-transaction>`; Start a token swap between different chains.
-    0x4252; :ref:`SecretProofTransaction <secret-proof-transaction>`; Conclude a token swap between different chains.
+    0x4152; :ref:`secretlocktransaction`; Start a token swap between different chains.
+    0x4252; :ref:`secretprooftransaction`; Conclude a token swap between different chains.
     **Account restriction**;;
-    0x4150; :ref:`AccountAddressRestrictionTransaction <account-address-restriction-transaction>`; Allow or block incoming and outgoing transactions for a given a set of addresses.
-    0x4250; :ref:`AccountMosaicRestrictionTransaction <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4350; :ref:`AccountOperationRestrictionTransaction <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
+    0x4150; :ref:`accountaddressrestrictiontransaction`; Allow or block incoming and outgoing transactions for a given a set of addresses.
+    0x4250; :ref:`accountmosaicrestrictiontransaction`; Allow or block incoming transactions containing a given set of mosaics.
+    0x4350; :ref:`accountoperationrestrictiontransaction`; Allow or block outgoing transactions by transaction type.
     **Mosaic restriction**;;
-    0x4151; :ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-transaction>`; Set global rules to transfer a restrictable mosaic.
-    0x4251; :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>`; Set address specific rules to transfer a restrictable mosaic.
+    0x4151; :ref:`mosaicglobalrestrictiontransaction`; Set global rules to transfer a restrictable mosaic.
+    0x4251; :ref:`mosaicaddressrestrictiontransaction`; Set address specific rules to transfer a restrictable mosaic.
     **Transfer**;;
-    0x4154; :ref:`TransferTransaction <transfer-transaction>`; Send mosaics and messages between two accounts.
+    0x4154; :ref:`transfertransaction`; Send mosaics and messages between two accounts.
 
 Every base transaction type available in |codename| is defined as a separate :doc:`plugin <plugin>`.
 The plugin approach allows developers to introduce new transaction types without modifying the core engine or disrupting other features.

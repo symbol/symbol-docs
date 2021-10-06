@@ -210,7 +210,7 @@ The following commands all use ``--max-fee 1000000`` which means that **1 XYM** 
 Remote key link
 ---------------
 
-Obtain the :ref:`Account Key Link transaction <account-key-link-transaction>` payload.
+Obtain the :ref:`accountkeylinktransaction` payload.
 
 This links your main account to the **remote account** used for :ref:`remote-harvesting`. Symbol Bootstrap generated this account for you, and you can find its public key in the ``target/addresses.yml`` file:
 
@@ -269,7 +269,7 @@ Select all the text in the ``Payload`` box and paste it into a new text file nam
 VRF key link
 ------------
 
-Obtain the :ref:`VRF Key Link transaction <vrf-key-link-transaction>` payload.
+Obtain the :ref:`vrfkeylinktransaction` payload.
 
 This key is required for harvesting.
 
@@ -293,7 +293,7 @@ Again, copy the content of the ``Payload`` box, trim it, and add it to ``payload
 Voting key link
 ---------------
 
-Obtain the :ref:`Voting Key Link transaction <voting-key-link-transaction>` payload.
+Obtain the :ref:`votingkeylinktransaction` payload.
 
 This key is only required for voting nodes.
 

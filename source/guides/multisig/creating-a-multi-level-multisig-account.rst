@@ -87,7 +87,7 @@ Method #1: Using the SDK
         :start-after:  /* start block 03 */
         :end-before: /* end block 03 */
 
-4. Announce the transactions together using an :ref:`AggregateBondedTransaction <aggregate-transaction>`.
+4. Announce the transactions together using an :ref:`aggregatebondedtransaction`.
 The **account #1** must lock ``10`` |networkcurrency| to announce the transaction.
 
 .. example-code::

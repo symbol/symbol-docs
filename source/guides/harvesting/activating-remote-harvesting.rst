@@ -26,7 +26,7 @@ Activation through Symbol Bootstrap
 
 If you have followed the :doc:`../network/running-a-symbol-node` guide then you have used |symbol-bootstrap| to create your node. **The out-of-the-box presets enable remote harvesting by default** so there is nothing you need to do if you enabled harvesting when following that guide.
 
-To clarify, |symbol-bootstrap| automatically creates a remote account (labelled ``remote`` in the ``addresses.yml`` file) and sets it as the signer of the new blocks (using its private key in the ``harvesterSigningPrivateKey`` property). Then, the ``symbol-bootstrap link`` command announces the :ref:`AccountKeyLink <account-key-link-transaction>` and :ref:`VrfKeyLink <vrf-key-link-transaction>` transactions required to finish the activation.
+To clarify, |symbol-bootstrap| automatically creates a remote account (labelled ``remote`` in the ``addresses.yml`` file) and sets it as the signer of the new blocks (using its private key in the ``harvesterSigningPrivateKey`` property). Then, the ``symbol-bootstrap link`` command announces the :ref:`vrfkeylinktransaction` transactions required to finish the activation.
 
 .. note::
   It is worth noting that, although **this is NOT recommended**, you can omit the remote account and sign the new block **directly with your main account** by using a :ref:`custom preset file <symbol-bootstrap-presets>` with this line:
@@ -49,7 +49,7 @@ This will be done using the :doc:`symbol-cli </cli>` tool. The required steps ar
 
 1. Set the **remote account** as the harvester in the node configuration.
 
-2. Announce an :ref:`AccountKeyLink transaction <account-key-link-transaction>` linking your main and your remote accounts.
+2. Announce an :ref:`accountkeylinktransaction` linking your main and your remote accounts.
 
 3. (Optional) Configure the **VRF account** if it is not already set.
 
@@ -108,7 +108,7 @@ Otherwise, create another account just like you did in Step 1, to act as the VRF
       symbol-cli account generate
       # Do NOT save the account, and set the import type to PrivateKey
 
-Write the **private key** in the ``harvesterVrfPrivateKey`` field of the configuration file, and announce a :ref:`VrfKeyLink transaction <vrf-key-link-transaction>` to link the VRF and main accounts:
+Write the **private key** in the ``harvesterVrfPrivateKey`` field of the configuration file, and announce a :ref:`vrfkeylinktransaction` to link the VRF and main accounts:
 
 .. code-block:: symbol-cli
 

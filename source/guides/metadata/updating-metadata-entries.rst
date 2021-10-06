@@ -83,7 +83,7 @@ Thus, Alice will have to **opt-in** if she wants the metadata to be updated. Wra
         :end-before: /* end block 02 */
 
 3. Before sending an aggregate transaction to the network, Bob has to lock 10 |networkcurrency|.
-Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account, locking the amount of |networkcurrency| required to announce the aggregate transaction.
+Define a new :ref:`hashlocktransaction` and sign it with Bob's account, locking the amount of |networkcurrency| required to announce the aggregate transaction.
 
 .. example-code::
 

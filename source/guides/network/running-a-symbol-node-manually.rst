@@ -301,7 +301,7 @@ The profile information is stored (encrypted) in ``~/symbol-cli.config.json`` an
 Remote key
 ----------
 
-You configured the node to sign created blocks using the **Remote** key, but the harvesting fees should go to your **Main** account. This is accomplished by announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>`:
+You configured the node to sign created blocks using the **Remote** key, but the harvesting fees should go to your **Main** account. This is accomplished by announcing an :ref:`accountkeylinktransaction`:
 
 .. code-block:: symbol-cli
 
@@ -323,7 +323,7 @@ You configured the node to sign created blocks using the **Remote** key, but the
 VRF key
 -------
 
-In order to be :ref:`eligible for harvesting <account_eligibility>` an account must have linked a VRF key. This is accomplished by announcing a :ref:`VrfKeyLink transaction <vrf-key-link-transaction>`:
+In order to be :ref:`eligible for harvesting <account_eligibility>` an account must have linked a VRF key. This is accomplished by announcing a :ref:`vrfkeylinktransaction`:
 
 .. code-block:: symbol-cli
 
@@ -339,7 +339,7 @@ In order to be :ref:`eligible for harvesting <account_eligibility>` an account m
 Voting key
 ----------
 
-If your node is to be a :ref:`voting node <finalization>` it must link the voting key you generated above. The link is accomplished by announcing a :ref:`VotingKeyLink transaction <voting-key-link-transaction>`:
+If your node is to be a :ref:`voting node <finalization>` it must link the voting key you generated above. The link is accomplished by announcing a :ref:`votingkeylinktransaction`:
 
 .. code-block:: symbol-cli
 

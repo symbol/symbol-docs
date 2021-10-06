@@ -4,7 +4,7 @@ Account Restriction
 
 :doc:`Accounts <account>` may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.
 
-The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific :ref:`AccountRestrictionTransaction <account-address-restriction-transaction>`.
+The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific :ref:`accountaddressrestrictiontransaction`.
 
 |codename|'s public network enables accounts to define up to ``512`` restrictions per account and restriction type, being this parameter :ref:`configurable per network <config-network-properties>`.
 
@@ -92,9 +92,9 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4150; :ref:`AccountAddressRestrictionTransaction <account-address-restriction-transaction>`; Allow or block incoming and outgoing transactions for a given a set of addresses.
-    0x4250; :ref:`AccountMosaicRestrictionTransaction <account-mosaic-restriction-transaction>`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4350; :ref:`AccountOperationRestrictionTransaction <account-operation-restriction-transaction>`; Allow or block outgoing transactions by transaction type.
+    0x4150; :ref:`accountaddressrestrictiontransaction`; Allow or block incoming and outgoing transactions for a given a set of addresses.
+    0x4250; :ref:`accountmosaicrestrictiontransaction`; Allow or block incoming transactions containing a given set of mosaics.
+    0x4350; :ref:`accountoperationrestrictiontransaction`; Allow or block outgoing transactions by transaction type.
 
 ******
 Guides

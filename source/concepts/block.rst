@@ -22,9 +22,9 @@ Nodes stores blocks in a serialized form as follows:
 
 **Inlines:**
 
-* :ref:`SizePrefixedEntity <size-prefixed-entity>`
-* :ref:`VerifiableEntity <verifiable-entity>`
-* :ref:`EntityBody <entity-body>`
+* :ref:`SizePrefixedEntity <sizeprefixedentity>`
+* :ref:`VerifiableEntity <verifiableentity>`
+* :ref:`EntityBody <entitybody>`
 
 .. _block-header:
 
@@ -102,7 +102,7 @@ Once **70% of the stakes** selected for voting have emitted positive votes, the 
 
     * Be the owner of a node.
     * Have at least :ref:`minVoterBalance <config-network-properties>` network currency units.
-    * Be registered as a voter by announcing a :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>` to the network.
+    * Be registered as a voter by announcing a :ref:`votingkeylinktransaction` to the network.
 
 When there is low connectivity, or many bad actors, finalization can take longer than usual and create large :ref:`rollbacks`. However, no finalized block will ever be rolled back.
 
@@ -117,7 +117,7 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4143; :ref:`VotingKeyLinkTransaction <voting-key-link-transaction>`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
+    0x4143; :ref:`votingkeylinktransaction`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
 
 ******
 Guides

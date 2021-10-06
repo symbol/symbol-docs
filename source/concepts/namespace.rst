@@ -37,7 +37,7 @@ You can use the following formula to convert approximately days to blocks:
     Namespace life-cycle
 
 During the **renting period**, the namespace creator can create subnamespaces, alias accounts and mosaics.
-The creator can also **extend the rental** by sending a :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>` with the desired number of additional blocks.
+The creator can also **extend the rental** by sending a :ref:`namespaceregistrationtransaction` with the desired number of additional blocks.
 
 The network can define a **grace period** that enables the namespace creator to renew the namespace past the expiration date before it becomes publicly available for registration.
 |codename|'s public network has set the :ref:`grace period <config-network-properties>` to ``30`` days.
@@ -84,7 +84,7 @@ For example, you can create the subnamespaces ``foo.bar`` and ``foo2.bar``, but 
 Alias
 *****
 
-:ref:`Alias transactions <address-alias-transaction>` link namespaces to accounts and mosaics.
+:ref:`addressaliastransaction` link namespaces to accounts and mosaics.
 An alias or its linked asset can be used interchangeably when sending a transaction.
 Using the alias makes *long addresses rememberable* and *mosaics recognizable*.
 
@@ -143,9 +143,9 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
 
-    0x414E; :ref:`NamespaceRegistrationTransaction <namespace-registration-transaction>`; Register a namespace to organize your assets.
-    0x424E; :ref:`AddressAliasTransaction <address-alias-transaction>`; Attach a namespace name to an account.
-    0x434E; :ref:`MosaicAliasTransaction <mosaic-alias-transaction>`; Attach a namespace name to a mosaic.
+    0x414E; :ref:`namespaceregistrationtransaction`; Register a namespace to organize your assets.
+    0x424E; :ref:`addressaliastransaction`; Attach a namespace name to an account.
+    0x434E; :ref:`mosaicaliastransaction`; Attach a namespace name to a mosaic.
 
 ******
 Guides

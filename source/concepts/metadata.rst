@@ -80,9 +80,9 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4144; :ref:`AccountMetadataTransaction <account-metadata-transaction>`; Associate a key-value state to an account.
-    0x4244; :ref:`MosaicMetadataTransaction <mosaic-metadata-transaction>`; Associate a key-value state to a mosaic.
-    0x4344; :ref:`NamespaceMetadataTransaction <namespace-metadata-transaction>`; Associate a key-value state to a namespace.
+    0x4144; :ref:`accountmetadatatransaction`; Associate a key-value state to an account.
+    0x4244; :ref:`mosaicmetadatatransaction`; Associate a key-value state to a mosaic.
+    0x4344; :ref:`namespacemetadatatransaction`; Associate a key-value state to a namespace.
 
 ******
 Guides

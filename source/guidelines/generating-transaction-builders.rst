@@ -69,7 +69,7 @@ Usage
 
 Under the ``catbuffer-schemas`` folder of the catbuffer repository, you can find the entities' data structure. With the help of a code generator, you can produce the leanest code necessary to serialize and deserialize those entities.
 
-For example, run the following command to generate C++ transaction builders for a :ref:`TransferTransaction <transfer-transaction>`:
+For example, run the following command to generate C++ transaction builders for a :ref:`transfertransaction`:
 
 .. code-block:: bash
 

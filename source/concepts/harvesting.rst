@@ -19,7 +19,7 @@ The :ref:`importance score <importance-calculation>` determines the probability 
 |codename|'s public network defines that an account needs to hold at least **10,000** :ref:`harvesting mosaics <harvesting-mosaic>` to have an importance score greater than zero.
 Eligible accounts can use their importance score to create new blocks either by :ref:`running a node <local-harvesting>` or enabling :ref:`delegated harvesting <delegated-harvesting>`.
 
-Regardless of the method chosen, **any account willing to activate harvesting must first announce a valid** :ref:`VrfKey transaction <vrf-key-link-transaction>`. This key is required by |codename| to randomize harvester selection.
+Regardless of the method chosen, **any account willing to activate harvesting must first announce a valid** :ref:`vrfkeylinktransaction`. This key is required by |codename| to randomize harvester selection.
 
 .. _harvesting-mosaic:
 
@@ -84,7 +84,7 @@ Node owners can use a **remote account** to **act as proxy** and sign off the ne
 
 In this setup the main account is still called the **Harvester**, for simplicity, whereas the remote account is called a **Proxy**.
 
-Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`AccountKeyLink transaction <account-key-link-transaction>` that links the remote and main accounts.
+Remote harvesting is enabled just like :ref:`local harvesting <local-harvesting>` but using the remote account's private key in the ``harvesterSigningPrivateKey`` property and announcing an :ref:`accountkeylinktransaction` that links the remote and main accounts.
 
 This is the **recommended method** for node owners. See the :doc:`Harvesting guides <../guides/harvesting/index>` for step-by-step instructions on how to activate remote harvesting.
 
@@ -98,7 +98,7 @@ Delegated harvesting
 
 It is then said that the account **delegates harvesting** to the node, but the account is still considered the harvester.
 
-Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
+Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistentdelegationrequesttransaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
 
@@ -113,10 +113,10 @@ Related transactions
     :widths: 15 41 44
     :delim: ;
 
-    0x4243; :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
-    0x414C; :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`; Delegate the account importance to a proxy account. Required for all accounts willing to activate remote or delegated harvesting.
-    0x424C; :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
-    0x4154; :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`; Request a node to add an account as a harvester. This is actually a :ref:`TransferTransaction <transfer-transaction>` with a special message type.
+    0x4243; :ref:`vrfkeylinktransaction`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
+    0x414C; :ref:`accountkeylinktransaction`; Delegate the account importance to a proxy account. Required for all accounts willing to activate remote or delegated harvesting.
+    0x424C; :ref:`nodekeylinktransaction`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
+    0x4154; :ref:`PersistentDelegationRequestTransaction <persistentdelegationrequesttransaction>`; Request a node to add an account as a harvester. This is actually a :ref:`TransferTransaction <transfertransaction>` with a special message type.
 
 ******
 Guides

@@ -38,7 +38,7 @@ How to create an escrow contract with Symbol
 
 Normalizing the previous description into |codename| related concepts:
 
-* **contractual arrangement**: A new type of transaction called :ref:`AggregateTransaction <aggregate-transaction>`.
+* **contractual arrangement**: A new type of transaction called :ref:`aggregate-transaction`.
 
 * **third party receives and disburses money**: There is no third party, we are going to use blockchain technology.
 
@@ -104,7 +104,7 @@ B) A TransferTransaction from the ticket distributor to Alice sending 1 ``7cdf3b
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Wrap the defined transactions in an :ref:`AggregateTransaction <aggregate-transaction>` and sign it with Alice's account.
+2. Wrap the defined transactions in an :ref:`aggregate-transaction` and sign it with Alice's account.
 An AggregateTransaction is *complete* if before announcing it to the network, all required cosigners have signed it.
 If valid, it will be included in a block.
 In case that signatures are required from other participants—the ticket distributor—it is considered *bonded*.

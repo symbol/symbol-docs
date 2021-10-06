@@ -89,7 +89,7 @@ Guide
 
    You can see that the **Harvesting status** has changed to **🟡 KEYS LINKED** and the different keys appear in the form.
 
-   All that is left now is to send a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` which is the actual request to the node.
+   All that is left now is to send a :ref:`persistentdelegationrequesttransaction` which is the actual request to the node.
 
 5. **Click on the "Activate" button**.
 
@@ -129,7 +129,7 @@ Guide
 
 .. note::
 
-   When requesting delegation through a :ref:`PersistentDelegationRequest transaction <persistent-delegation-request-transaction>` instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state and provide a misleading **Harvesting status** indicator.
+   When requesting delegation through a :ref:`persistentdelegationrequesttransaction` instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state and provide a misleading **Harvesting status** indicator.
 
    Therefore, there is no **reliable** way to know if your account has become a harvester or not besides waiting to see if your account starts receiving harvesting fees.
 
