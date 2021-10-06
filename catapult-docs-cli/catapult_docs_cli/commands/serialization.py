@@ -228,8 +228,8 @@ class SerializationCommand(Command):
     def print_type(self, element):
         """Adds a row to the basic types HTML table.
         """
-        print('   <tr>')
-        print('   <td id="{}"><b>{}</b></td>'.format(make_anchor(element['name']), element['name']))
+        print('   <tr id="{}">'.format(make_anchor(element['name'])))
+        print('   <td><b>{}</b></td>'.format(element['name']))
         print('   <td>{}&nbsp;{}byte{}</td>'.format(element['size'], 'u' if element['signedness'] == 'unsigned' else '', 's' if element['size'] > 1 else ''))
         print('   <td>{}</td>'.format(self.parse_comment(element['comments'])))
         print('   </tr>')
