@@ -93,7 +93,7 @@ Method #02: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3.  Wrap the **MultisigAccountModificationTransaction** in an :ref:`AggregateBondedTransaction <aggregate-transaction>`.  Sign it with a cosingatory of the original multisig account.
+3.  Wrap the **MultisigAccountModificationTransaction** in an :ref:`aggregate-transaction`.  Sign it with a cosignatory of the original multisig account.
 
 .. example-code::
 

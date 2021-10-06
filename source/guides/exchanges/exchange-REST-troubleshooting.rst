@@ -25,7 +25,7 @@ Use the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi
    :delim: ;
    :widths: 25 15 60
 
-   ``type``; integer; Retrieve only transactions of this type. The code for :ref:`Transfer Transactions <transfer-transaction>` is 16724 (0x4154).
+   ``type``; integer; Retrieve only transactions of this type. The code for :ref:`transfertransaction` is 16724 (0x4154).
    ``recipientAddress``; string; "The address **receiving** the transaction. Compare with ``address`` which returns all transactions involving the given address (as sender, recipient or cosigner).
    
    This might either be a Base32 :ref:`address` or a :doc:`../../concepts/namespace`. If the bit 0 of byte 0 is not set (e.g. 0x90) then it is an address, otherwise (e.g. 0x91) it represents a namespace id which starts at byte 1."
@@ -56,13 +56,13 @@ The next section explains how to parse the resulting list.
 Parsing of embedded transactions
 ================================
 
-|codename| supports :ref:`Aggregate transactions <aggregate-transaction>`, i.e., **transactions inside other transactions**. For the most part it does not matter if a transaction is **standalone** or **embedded** inside another one, but there are a few differences which might be confusing when parsing incoming transactions. This section explains them.
+|codename| supports :ref:`aggregate-transaction`, i.e., **transactions inside other transactions**. For the most part it does not matter if a transaction is **standalone** or **embedded** inside another one, but there are a few differences which might be confusing when parsing incoming transactions. This section explains them.
 
 .. note:: You can always **receive** embedded transactions, even if you never **create** any yourself. Make sure you understand how to parse them!
 
 As shown in the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint documentation, a successfull query returns **a data array** including transactions and metadata (this array is **paginated** so pay attention to the ``pageSize`` and ``pageNumber`` parameters and return values). Each one of the returned transactions can match a different schema depending on the transaction's type, so the ``type`` field of each transaction must be checked.
 
-Moreover, the metadata content is also different when the transaction is embedded inside an :ref:`Aggregate transaction <aggregate-transaction>`.
+Moreover, the metadata content is also different when the transaction is embedded inside an :ref:`aggregate-transaction`.
 
 This is specially important when using the ``embedded=true`` parameter since some of the returned transactions might be **embedded** transactions whereas some other might be **regular** transactions, and the involved schemas are different.
 
@@ -110,7 +110,7 @@ The most common example is ``symbol.xym`` (Namespace ID ``0xE74B99BA41F4AFEE``) 
 
 Therefore, **to correctly resolve a namespace found in a transaction, the block height that included the transaction must be taken into account**.
 
-This is very easy to do because all blocks which include a namespace also include a :ref:`receipt-resolution-statement` containing the resolved namespace. Just use the `/statements/resolutions/mosaic <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchMosaicResolutionStatements>`__ and `/statements/resolutions/address <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchAddressResolutionStatements>`__ endpoints to retrieve all statements for a given block, and then locate the unresolved namespace ID you are interested in.
+This is very easy to do because all blocks which include a namespace also include either a :ref:`mosaicresolutionstatement` or an :ref:`addressresolutionstatement` containing the resolved namespace. Just use the `/statements/resolutions/mosaic <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchMosaicResolutionStatements>`__ and `/statements/resolutions/address <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchAddressResolutionStatements>`__ endpoints to retrieve all statements for a given block, and then locate the unresolved namespace ID you are interested in.
 
 **Example using TESTNET:**
 
@@ -140,7 +140,7 @@ This is very easy to do because all blocks which include a namespace also includ
 
 - You could check the **current** alias of this namespace by querying `/namespaces/E374D0B5E061EE92 <http://ngl-dual-101.testnet.symboldev.network:3000/namespaces/E374D0B5E061EE92>`__, but you actually want to know the aliased mosaic ID **at the time the transaction was confirmed**.
 
-- You do this by checking the block's :ref:`receipt-resolution-statement` at `statements/resolutions/mosaic?height=211972 <http://ngl-dual-101.testnet.symboldev.network:3000/statements/resolutions/mosaic?height=211972>`__:
+- You do this by checking the block's :ref:`mosaicresolutionstatement` at `statements/resolutions/mosaic?height=211972 <http://ngl-dual-101.testnet.symboldev.network:3000/statements/resolutions/mosaic?height=211972>`__:
 
   .. code-block:: json
 

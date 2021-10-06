@@ -54,7 +54,7 @@ In our example, the relative supply is increased by 1,000,000. Since the divisib
 Method #02: Using the SDK
 *************************
 
-1. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>` as in the next code snippet.
+1. Define a :ref:`mosaicsupplychangetransaction` as in the next code snippet.
 Then, replace the ``mosaicId`` and ``divisibility`` with the current mosaic properties.
 Edit ``delta`` with the relative amount of mosaics you want to increase.
 

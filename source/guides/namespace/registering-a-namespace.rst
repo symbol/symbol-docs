@@ -66,7 +66,7 @@ Method #02: Using the SDK
     :language: bash
     :start-after: #!/bin/sh
 
-3. Is the namespace available? Try to register it before someone else does it! Open a new file and announce a :ref:`NamespaceRegistrationTransaction<namespace-registration-transaction>` with the chosen name and renting duration expressed in blocks.
+3. Is the namespace available? Try to register it before someone else does it! Open a new file and announce a :ref:`namespaceregistrationtransaction` with the chosen name and renting duration expressed in blocks.
 
 .. example-code::
 

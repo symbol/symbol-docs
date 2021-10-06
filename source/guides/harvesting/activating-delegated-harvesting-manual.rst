@@ -26,13 +26,13 @@ Summary
 
 Required steps:
 
-1. Delegate the **main account (M)** importance to a **remote account (R)** using an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`.
+1. Delegate the **main account (M)** importance to a **remote account (R)** using an :ref:`accountkeylinktransaction`.
 
-2. Link the main account **M** to a **VRF account (V)** for randomized block production and account selection using a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>`.
+2. Link the main account **M** to a **VRF account (V)** for randomized block production and account selection using a :ref:`vrfkeylinktransaction`.
 
-3. Link the main account **M** to a node in order to harvest through that node using a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
+3. Link the main account **M** to a node in order to harvest through that node using a :ref:`nodekeylinktransaction`.
 
-4. Request the node to add the remote account **R** as a harvester using a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>`. Conversely, if the node configuration is accessible, the remote account's private key can be set in the node configuration.
+4. Request the node to add the remote account **R** as a harvester using a :ref:`persistentdelegationrequesttransaction`. Conversely, if the node configuration is accessible, the remote account's private key can be set in the node configuration.
 
 Please note that it is entirely up to the node to comply with the request. Some nodes can be asked for their current list of delegated harvesters but this information is not always available (see :ref:`delegated-harvesting-verifying-activation` below).
 
@@ -60,7 +60,7 @@ Refer to the :doc:`Creating an account <../account/creating-an-account>` guide t
 Guide
 *****
 
-1. Create an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>` to **delegate M's importance to R**. Sign the transaction with **M** and announce it to the network.
+1. Create an :ref:`accountkeylinktransaction` to **delegate M's importance to R**. Sign the transaction with **M** and announce it to the network.
 
    .. example-code::
 
@@ -73,7 +73,7 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-2. Create a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to **link M to a VRF key**. Sign the transaction with  **M** and announce it to the network.
+2. Create a :ref:`vrfkeylinktransaction` to **link M to a VRF key**. Sign the transaction with  **M** and announce it to the network.
 
    .. example-code::
 
@@ -86,7 +86,7 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-3. Create a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
+3. Create a :ref:`nodekeylinktransaction` to **link M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and announce it to the network.
 
    .. note::
    
@@ -109,11 +109,11 @@ Guide
 
    If you are the **node owner**, you simply need to set the remote account's private signing key in the ``harvesterSigningPrivateKey`` field in the :ref:`node-properties-harvesting-configuration`.
 
-   **Otherwise**, a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` must be used. As the private key will be shared in an **encrypted message**, only the node will be able to see it. Moreover, **R** does not own any mosaic.
+   **Otherwise**, a :ref:`persistentdelegationrequesttransaction` must be used. As the private key will be shared in an **encrypted message**, only the node will be able to see it. Moreover, **R** does not own any mosaic.
 
-   The harvesting fees will be sent to **M** as it has established a link with the node through the :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`.
+   The harvesting fees will be sent to **M** as it has established a link with the node through the :ref:`nodekeylinktransaction`.
 
-   Sign the :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` with **M** and announce it to the network.
+   Sign the :ref:`persistentdelegationrequesttransaction` with **M** and announce it to the network.
 
    .. example-code::
 
@@ -126,7 +126,7 @@ Guide
        :language: bash
        :start-after: #!/bin/sh
 
-.. note:: All the above transactions can be announced together in a single :ref:`Aggregate Transaction <aggregate-transaction>`.
+.. note:: All the above transactions can be announced together in a single :ref:`aggregate-transaction`.
 
 If everything is successful, the node will receive the encrypted message through :ref:`WebSockets <websockets>`. Once the node decrypts the private key of the potential delegated harvester, the node owner may **add R as a delegated harvester** if the following requirements are met:
 
@@ -144,7 +144,7 @@ Additionally, the use of an encrypted message creates a **backup** of the inform
 Verifying activation
 ********************
 
-When requesting delegation through a :ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-transaction>` instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state.
+When requesting delegation through a :ref:`persistentdelegationrequesttransaction` instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and **not on the network**. It is entirely up to the node to comply with the request or even to lie about its state.
 
 Therefore, there is no **reliable** way to know if your account has become a harvester or not (besides waiting to see if any blocks appear on the blockchain signed by your remote account and your main account starts collecting harvesting fees).
 

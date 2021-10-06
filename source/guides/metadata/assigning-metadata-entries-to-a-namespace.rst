@@ -52,7 +52,7 @@ Creating the namespace
 Method #01: Using the SDK
 *************************
 
-1. Define the following :ref:`namespace metadata transactions <namespace-metadata-transaction>`.
+1. Define the following :ref:`namespacemetadatatransaction`.
 
 .. csv-table::
     :header: "Key", "Value"

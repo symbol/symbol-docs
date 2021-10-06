@@ -195,7 +195,7 @@ After following that guide, you need to **install a monitoring agent** and **ann
 
 5. **Send the enrollment message**
 
-   The last bit is to **notify the Controller** that your node wants to enroll in the Supernode program. This is done through a conventional :ref:`Transfer Transaction <transfer-transaction>` with no mosaics and a special message:
+   The last bit is to **notify the Controller** that your node wants to enroll in the Supernode program. This is done through a conventional :ref:`transfertransaction` with no mosaics and a special message:
 
    .. code-block:: text
 

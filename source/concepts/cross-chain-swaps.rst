@@ -42,9 +42,9 @@ Before starting with the swap, all participants involved in the swap must own at
 
 1. Alice generates a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
 
-2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lock-hash-algorithm>` to generate the ``secret``.
+2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lockhashalgorithm>` to generate the ``secret``.
 
-3. Alice defines the :ref:`SecretLockTransaction <secret-lock-transaction>` **TX1**:
+3. Alice defines the :ref:`secretlocktransaction` **TX1**:
 
 .. csv-table::
     :header: "TX1 Property", "Value"
@@ -78,7 +78,7 @@ Once announced, this transaction will remain locked until someone discovers the 
     Secret; h(proof)
     Network; Public Chain
 
-6. Alice announces the :ref:`SecretProofTransaction <secret-proof-transaction>` **TX3** to the **public network**. This transaction defines the encrypting algorithm used, the original proof and the secret:
+6. Alice announces the :ref:`secretprooftransaction` **TX3** to the **public network**. This transaction defines the encrypting algorithm used, the original proof and the secret:
 
 .. csv-table::
     :header: "TX3 Property", "Value"
@@ -122,8 +122,8 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4152; :ref:`SecretLockTransaction <secret-lock-transaction>`; Transaction to start a token swap between different chains.
-    0x4252; :ref:`SecretProofTransaction <secret-proof-transaction>`; transaction to conclude a token swap between different chains.
+    0x4152; :ref:`secretlocktransaction`; Transaction to start a token swap between different chains.
+    0x4252; :ref:`secretprooftransaction`; transaction to conclude a token swap between different chains.
 
 ******
 Guides

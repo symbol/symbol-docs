@@ -97,7 +97,7 @@ Then, open the account that will be converted into multisig using its private ke
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Create a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` to convert the shared account into a multisig account.
+2. Create a :ref:`multisigaccountmodificationtransaction` to convert the shared account into a multisig account.
 Since we want to create a 1-of-2 multisig account, let's set the minimum required signatures to ``1``.
 
 .. example-code::
@@ -112,7 +112,7 @@ Since we want to create a 1-of-2 multisig account, let's set the minimum require
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Create an :ref:`AggregateBondedTransaction <aggregate-transaction>`, wrapping the **MultisigAccountModificationTransaction** defined in the previous step.
+3. Create an :ref:`aggregatebondedtransaction`, wrapping the **MultisigAccountModificationTransaction** defined in the previous step.
 This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.
 
 .. example-code::

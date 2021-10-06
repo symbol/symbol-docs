@@ -22,7 +22,7 @@ Global restriction
 The mosaic global restrictions are the **network-wide rules** that will determine whether an account will be able to send or receive a given mosaic.
 
 One mosaic can handle up to ``20`` global restrictions, being this parameter :ref:`configurable per network <config-network-properties>`.
-A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is composed of:
+A :ref:`mosaicglobalrestrictiontransaction` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -31,7 +31,7 @@ A :ref:`mosaic global restriction <mosaic-global-restriction-transaction>` is co
     Mosaic Id; MosaicId; Identifier of the affected mosaic. The mosaic creator must be the signer of this transaction.
     Restriction Key; uint64; Restriction key.
     Restriction Value; uint64; Restriction value.
-    Restriction Type; uint8; Type of constraint to apply. For example, the restriction value should be equal (EQ). See more :ref:`restriction types <mosaic-restriction-type>`.
+    Restriction Type; uint8; Type of constraint to apply. For example, the restriction value should be equal (EQ). See more :ref:`restriction types <mosaicrestrictiontype>`.
 
 Only accounts tagged with the key identifiers and values that meet the conditions will be able to execute transactions involving the mosaic.
 
@@ -45,7 +45,7 @@ Address restriction
 Enabling accounts to transact with the token is similar to the process of adding elevated permissions to a user in a company computer network.
 
 The mosaic creator can **modify the permissions of an account** by sending a mosaic restriction transaction targeting the account address.
-The :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>` is composed of:
+The :ref:`mosaicaddressrestrictiontransaction` is composed of:
 
 .. csv-table::
     :header: "Property", "Type", "Description"
@@ -126,8 +126,8 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4151; :ref:`MosaicGlobalRestrictionTransaction  <mosaic-global-restriction-transaction>`; Set global rules to transfer a restrictable mosaic.
-    0x4251; :ref:`MosaicAddressRestrictionTransaction <mosaic-address-restriction-transaction>`; Set address specific rules to transfer a restrictable mosaic.
+    0x4151; :ref:`mosaicglobalrestrictiontransaction`; Set global rules to transfer a restrictable mosaic.
+    0x4251; :ref:`mosaicaddressrestrictiontransaction`; Set address specific rules to transfer a restrictable mosaic.
 
 ******
 Guides

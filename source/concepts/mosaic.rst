@@ -55,7 +55,7 @@ Supply mutable
 ==============
 
 If set to true, the mosaic supply can change at a later point.
-In this case, the mosaic creator is allowed to redefine the total mosaic supply with a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`.
+In this case, the mosaic creator is allowed to redefine the total mosaic supply with a :ref:`mosaicsupplychangetransaction`.
 The transaction increases or decreases the mosaic supply in ``delta`` units.
 
 To decrease the mosaic supply, the mosaic creator account must own at least ``delta`` units.
@@ -124,8 +124,8 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x414D; :ref:`MosaicDefinitionTransaction <mosaic-definition-transaction>`; Create a new mosaic.
-    0x424D; :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-transaction>`; Change the mosaic total supply.
+    0x414D; :ref:`mosaicdefinitiontransaction`; Create a new mosaic.
+    0x424D; :ref:`mosaicsupplychangetransaction`; Change the mosaic total supply.
 
 ******
 Guides

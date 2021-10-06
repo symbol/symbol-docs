@@ -47,7 +47,7 @@ On the **Customer**'s machine:
 Prepare the transaction
 ***********************
 
-So far, the node's main account is a regular account. A :ref:`Multisig Account Modification Transaction <multisig-account-modification-transaction>` will be announced that will turn it into a :doc:`../../concepts/multisig-account` with a single cosignatory: the **external account**.
+So far, the node's main account is a regular account. A :ref:`multisigaccountmodificationtransaction` will be announced that will turn it into a :doc:`../../concepts/multisig-account` with a single cosignatory: the **external account**.
 
 This means that **any operation** on the main account will **require the signature** of the external account.
 

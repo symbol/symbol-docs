@@ -103,7 +103,7 @@ Voting nodes are regular nodes meeting the following additional requirements:
     :widths: 30 70
 
     **Bonded Deposit**; At least **3 million** |networkcurrency| must be stacked on the node.
-    **Voting keys**; The node must signal its interest in becoming a voting node by registering its :ref:`Voting Key <voting-key-link-transaction>`.
+    **Voting keys**; The node must signal its interest in becoming a voting node by registering its :ref:`votingkeylinktransaction`.
 
 Although not mandatory, it is **recommended** that voting nodes meet the same hardware requirements as :ref:`supernodes <supernode-program>`. In fact, it is expected that participants of the Voting Node Program will also enroll to the Supernode program.
 

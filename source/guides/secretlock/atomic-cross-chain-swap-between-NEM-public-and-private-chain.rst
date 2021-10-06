@@ -58,7 +58,7 @@ Method #01: Using the SDK
 1. Alice generates a random set of bytes called ``proof``. The proof should have a size between ``10`` and ``1000`` bytes.
 Then, applies a **SHA3-256** algorithm to it, obtaining the ``secret``.
 
-2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lock-hash-algorithm>` to generate the ``secret``.
+2. Alice hashes the obtained proof with one of the :ref:`available algorithms <lockhashalgorithm>` to generate the ``secret``.
 
 .. example-code::
 
@@ -72,7 +72,7 @@ Then, applies a **SHA3-256** algorithm to it, obtaining the ``secret``.
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Alice defines the :ref:`SecretLockTransaction <secret-lock-transaction>` **TX1**:
+3. Alice defines the :ref:`secretlocktransaction` **TX1**:
 
 .. csv-table::
     :header: "TX1 Property", "Value"
@@ -160,7 +160,7 @@ Once announced, this transaction will remain locked until someone discovers the 
         :start-after:  /* start block 06 */
         :end-before: /* end block 06 */
 
-6. Alice announces the :ref:`SecretProofTransaction <secret-proof-transaction>` **TX3** to the **public network**. This transaction defines the encrypting algorithm used, the original proof and the secret:
+6. Alice announces the :ref:`secretprooftransaction` **TX3** to the **public network**. This transaction defines the encrypting algorithm used, the original proof and the secret:
 
 .. csv-table::
     :header: "TX3 Property", "Value"

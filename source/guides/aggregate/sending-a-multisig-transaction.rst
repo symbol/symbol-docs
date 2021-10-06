@@ -79,7 +79,7 @@ Method #02: Using the SDK
         :start-after:  /* start block 01 */
         :end-before: /* end block 01 */
 
-2. Define the a :ref:`TransferTransaction <transfer-transaction>` as follows:
+2. Define the a :ref:`transfertransaction` as follows:
 
 .. csv-table::
     :header: "Property", "Value"
@@ -108,7 +108,7 @@ Method #02: Using the SDK
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-3. Wrap the TransferTransaction in an :ref:`AggregateTransaction <aggregate-transaction>`, attaching the multisig public key as the signer of the transaction.
+3. Wrap the TransferTransaction in an :ref:`aggregate-transaction`, attaching the multisig public key as the signer of the transaction.
 
 .. example-code::
 
@@ -172,7 +172,7 @@ If more than one cosignature is required to announce the transaction (e.g., the 
 
 2. When an AggregateTransaction is bonded, an account needs to lock at least ``10`` |networkcurrency| to prevent spamming the network.
 Once all cosigners sign the transaction, the amount of |networkcurrency| locked becomes available again in the account that has locked the funds.
-After :ref:`HashLockTransaction <hash-lock-transaction>` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>` with a cosignatory.
+After :ref:`hashlocktransaction` has been confirmed, :doc:`announce the AggregateBondedTransaction <../../concepts/aggregate-transaction>` with a cosignatory.
 In our case, we will sign the transaction with Bob's account.
 
 .. example-code::

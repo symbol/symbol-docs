@@ -72,7 +72,7 @@ Define this key as a new variable.
 
 2. Alice's degree brings the identifier ``123456`` for her certificate.
 Help Bob to assign this value to the key defined in the previous step.
-To achieve so, define an :ref:`AccountMetadataTransaction <account-metadata-transaction>` linking Alice account, the key (CERT), and the associated value (123456).
+To achieve so, define an :ref:`accountmetadatatransaction` linking Alice account, the key (CERT), and the associated value (123456).
 
 .. example-code::
 
@@ -103,7 +103,7 @@ Wrap the **AccountMetadataTransaction** inside an :ref:`AggregateBondedTransacti
         :end-before: /* end block 03 */
 
 4. Before sending an aggregate transaction to the network, Bob has to lock ``10`` |networkcurrency|.
-Define a new :ref:`HashLockTransaction <hash-lock-transaction>` and sign it with Bob's account.
+Define a new :ref:`hashlocktransaction` and sign it with Bob's account.
 
 .. example-code::
 

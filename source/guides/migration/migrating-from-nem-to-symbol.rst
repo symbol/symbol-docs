@@ -134,7 +134,7 @@ Lastly, levies are not available on |codename|.
 Namespaces
 **********
 
-Namespaces can still refer to mosaics using :ref:`AliasTransactions <mosaic-alias-transaction>`.
+Namespaces can still refer to mosaics using :ref:`mosaicaliastransaction`.
 A namespace owner can attach either of an account or a mosaic id to one of its namespaces.
 The namespace information endpoint will return the linked object in the alias field.
 
@@ -171,7 +171,7 @@ Different to NIS1, the account modification entries now hold fields for ``minimu
 * **Minimum approval**: Defines how many cosignatories are required for any other type of transaction.
 
 Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a **cosignature** (opt-in process).
-In order to facilitate this process, transactions with type :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` must be wrapped in an :ref:`AggregateTransaction <aggregate-transaction>`.
+In order to facilitate this process, transactions with type :ref:`multisigaccountmodificationtransaction` must be wrapped in an :ref:`aggregate-transaction`.
 
 2. Multi-Signature transactions work with :doc:`aggregate transactions <../../concepts/aggregate-transaction>`.
 

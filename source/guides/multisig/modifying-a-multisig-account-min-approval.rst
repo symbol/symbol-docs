@@ -71,7 +71,7 @@ Method #01: Using the Desktop Wallet
 Method #02: Using the SDK
 *************************
 
-One of the cosignatory accounts, for example Alice's, will announce a :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>` to increase ``minApprovalDelta``.
+One of the cosignatory accounts, for example Alice's, will announce a :ref:`multisigaccountmodificationtransaction` to increase ``minApprovalDelta``.
 
 1. Open a new file. Then, define Alice's account public key and the multisig account private key into new variables.
 

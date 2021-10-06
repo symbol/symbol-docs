@@ -49,7 +49,7 @@ The public network defines the following constraints for multisig accounts, bein
 
 * Multisig account can be a cosigner for another multisig account, up to ``3`` levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.
 
-* :ref:`Multisig modification transactions <multisig-account-modification-transaction>` must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
+* :ref:`Multisig modification transactions <multisigaccountmodificationtransaction>` must be wrapped in an :doc:`AggregateTransaction <aggregate-transaction>`. New cosignatories added to the multisig must opt-in by cosigning the aggregate.
 
 ********
 Examples
@@ -132,7 +132,7 @@ Related transactions
     :widths: 20 30 50
     :delim: ;
     
-    0x4155; :ref:`MultisigAccountModificationTransaction <multisig-account-modification-transaction>`; Create or modify a multisig contract.
+    0x4155; :ref:`multisigaccountmodificationtransaction`; Create or modify a multisig contract.
 
 ******
 Guides
