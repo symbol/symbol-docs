@@ -195,7 +195,7 @@ class SerializationCommand(Command):
                 else:
                     output += word
                 output += ' '
-        return markdown(output)
+        return markdown(output).replace('<code>', '<code class="docutils literal">')
 
     def print_header(self, element, size, var):
         """Prints header common to Enums and Structs, including:
