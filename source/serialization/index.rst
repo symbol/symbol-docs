@@ -18,97 +18,97 @@ Basic Types
    <tr id="amount">
    <td><b>Amount</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A quantity of mosaics in <a href="https://docs.symbolplatform.com/concepts/mosaic.html#divisibility">absolute units</a>. <br/>It can only be positive or zero. Negative quantities must be indicated by other means (See for example <a href="#mosaicsupplychangetransaction" title="binary layout for a non-embedded mosaic supply change transaction">MosaicSupplyChangeTransaction</a> and <a href="#mosaicsupplychangeaction" title="enumeration of mosaic supply change actions">MosaicSupplyChangeAction</a>). </p></td>
    </tr>
    <tr id="blockduration">
    <td><b>BlockDuration</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A time lapse, expressed in number of blocks. </p></td>
    </tr>
    <tr id="blockfeemultiplier">
    <td><b>BlockFeeMultiplier</b></td>
    <td>4&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Multiplier applied to the size of a transaction to obtain its fee, in <a href="https://docs.symbolplatform.com/concepts/mosaic.html#divisibility">absolute units</a>. <br/>See the <a href="https://docs.symbolplatform.com/concepts/fees.html">fees documentation</a>. </p></td>
    </tr>
    <tr id="difficulty">
    <td><b>Difficulty</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>How hard it was to harvest this block. <br/>The initial value is 1e14 and it will remain like this as long as blocks are generated every <code class="docutils literal">blockGenerationTargetTime</code> seconds (<a href="https://docs.symbolplatform.com/guides/network/configuring-network-properties.html">network property</a>). <br/>If blocks start taking more or less time than the configured value, the difficulty will be adjusted (in the range of 1e13 to 1e15) to try to hit the target time. <br/>See the <a href="https://docs.symbolplatform.com/symbol-technicalref/main.pdf">Technical Reference</a> section 8.1. </p></td>
    </tr>
    <tr id="finalizationepoch">
    <td><b>FinalizationEpoch</b></td>
    <td>4&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Index of a <a href="https://docs.symbolplatform.com/concepts/block.html#finalization">finalization</a> epoch. <br/>The first epoch is number 1 and contains only the first block (the <a href="https://docs.symbolplatform.com/concepts/block.html#block-creation">Nemesis</a> block). Epoch duration (in blocks) is defined by the <code class="docutils literal">votingSetGrouping</code> network property. </p></td>
    </tr>
    <tr id="finalizationpoint">
    <td><b>FinalizationPoint</b></td>
    <td>4&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A particular point int time inside a <a href="https://docs.symbolplatform.com/concepts/block.html#finalization">finalization</a> epoch. <br/>See the <a href="https://docs.symbolplatform.com/symbol-technicalref/main.pdf">Technical Reference</a> section 15.2. </p></td>
    </tr>
    <tr id="height">
    <td><b>Height</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Index of a block in the blockchain. <br/>The first block (the <a href="https://docs.symbolplatform.com/concepts/block.html#block-creation">Nemesis</a> block) has height 1 and each subsequent block increases height by one. </p></td>
    </tr>
    <tr id="importance">
    <td><b>Importance</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p><a href="https://docs.symbolplatform.com/concepts/consensus-algorithm.html#importance-score">Importance score</a> for an account. <br/>See also <a href="#importanceheight" title="Block height at which an Importance was calculated.">ImportanceHeight</a> and <a href="#importancesnapshot" title="temporal importance information">ImportanceSnapshot</a>. </p></td>
    </tr>
    <tr id="importanceheight">
    <td><b>ImportanceHeight</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Block height at which an <a href="#importance" title="Importance score for an account.">Importance</a> was calculated. </p></td>
    </tr>
    <tr id="unresolvedmosaicid">
    <td><b>UnresolvedMosaicId</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Either a <a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a> or a <a href="#namespaceid" title="">NamespaceId</a>. <br/>The <strong>most</strong>-significant bit of the first byte is 0 for <a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a>'s and 1 for <a href="#namespaceid" title="">NamespaceId</a>'s. </p></td>
    </tr>
    <tr id="mosaicid">
    <td><b>MosaicId</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A <a href="https://docs.symbolplatform.com/concepts/mosaic.html">Mosaic</a> identifier. </p></td>
    </tr>
    <tr id="timestamp">
    <td><b>Timestamp</b></td>
    <td>8&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Number of milliseconds elapsed since the creation of the <a href="https://docs.symbolplatform.com/concepts/block.html#block-creation">Nemesis</a> block. <br/>The Nemesis block creation time can be found in the <code class="docutils literal">epochAdjustment</code> field returned by the <a href="https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getNetworkProperties">/network/properties</a> REST endpoint. This is the number of seconds elapsed since the <a href="https://en.wikipedia.org/wiki/Unix_time">UNIX epoch</a> and it is always 1615853185 for Symbol's MAINNET. </p></td>
    </tr>
    <tr id="unresolvedaddress">
    <td><b>UnresolvedAddress</b></td>
    <td>24&nbsp;ubytes</td>
-   <td></td>
+   <td><p>Either an <a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a> or a <a href="#namespaceid" title="">NamespaceId</a>. <br/>The <strong>least</strong>-significant bit of the first byte is 0 for Addresses and 1 for <a href="#namespaceid" title="">NamespaceId</a>'s. </p></td>
    </tr>
    <tr id="address">
    <td><b>Address</b></td>
    <td>24&nbsp;ubytes</td>
-   <td></td>
+   <td><p>An <a href="https://docs.symbolplatform.com/concepts/cryptography.html#address">address</a> identifies an account and is derived from its <a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a>. </p></td>
    </tr>
    <tr id="hash256">
    <td><b>Hash256</b></td>
    <td>32&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A 32-byte (256 bits) hash. <br/>The exact algorithm is unspecified as it can change depending on where it is used. </p></td>
    </tr>
    <tr id="hash512">
    <td><b>Hash512</b></td>
    <td>64&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A 64-byte (512 bits) hash. <br/>The exact algorithm is unspecified as it can change depending on where it is used. </p></td>
    </tr>
    <tr id="publickey">
    <td><b>PublicKey</b></td>
    <td>32&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A 32-byte (256 bits) integer derived from a private key. <br/>It serves as the public identifier of the <a href="https://docs.symbolplatform.com/concepts/cryptography.html#key-pair">key pair</a> and can be disseminated widely. It is used to prove that an entity was signed with the paired private key. </p></td>
    </tr>
    <tr id="votingpublickey">
    <td><b>VotingPublicKey</b></td>
    <td>32&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A <a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a> used for voting during the <a href="https://docs.symbolplatform.com/concepts/block.html#finalization">finalization process</a>. </p></td>
    </tr>
    <tr id="signature">
    <td><b>Signature</b></td>
    <td>64&nbsp;ubytes</td>
-   <td></td>
+   <td><p>A 64-byte (512 bits) array certifying that the signed data has not been modified. <br/>Symbol currently uses <a href="https://ed25519.cr.yp.to/">Ed25519</a> signatures. </p></td>
    </tr>
    <tr id="proofgamma">
    <td><b>ProofGamma</b></td>
@@ -160,10 +160,10 @@ LinkAction
    <table style="width: 100%;"><tr><td>
        <div class="side-info"><table>
        <tr><td class="side-info-icon">&varr;</td><td>Size: 1 byte = 0x1</td></tr>
-       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats#L39">schema</a></td></tr>
+       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats#L122">schema</a></td></tr>
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/model/LinkAction.h#L28">catapult model</a></td></tr>
        </table></div>
-   <p>enumeration of link actions </p>
+   <p>Link actions. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -173,12 +173,12 @@ LinkAction
    <tr>
    <td>0x0</td>
    <td><code class="docutils literal">UNLINK</code></td>
-   <td><p>unlink account </p></td>
+   <td><p>Unlink an account. </p></td>
    </tr>
    <tr>
    <td>0x1</td>
    <td><code class="docutils literal">LINK</code></td>
-   <td><p>link account </p></td>
+   <td><p>Link an account. </p></td>
    </tr>
    </tbody></table>
 
@@ -1039,9 +1039,9 @@ Mosaic
    <table style="width: 100%;"><tr><td>
        <div class="side-info"><table>
        <tr><td class="side-info-icon">&varr;</td><td>Size: 16 bytes = 0x10</td></tr>
-       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats#L23">schema</a></td></tr>
+       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats#L106">schema</a></td></tr>
        </table></div>
-   <p>binary layout for a mosaic </p>
+   <p>A quantity of a certain mosaic. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -1053,16 +1053,16 @@ Mosaic
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
-   <td><p>mosaic identifier </p></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
+   <td><p><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> identifier. </p></td>
    </tr>
    <tr>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">amount</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
-   <td><p>mosaic amount </p></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
+   <td><p><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> amount. </p></td>
    </tr>
    </tbody></table>
 
@@ -1076,9 +1076,9 @@ UnresolvedMosaic
    <table style="width: 100%;"><tr><td>
        <div class="side-info"><table>
        <tr><td class="side-info-icon">&varr;</td><td>Size: 16 bytes = 0x10</td></tr>
-       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats#L31">schema</a></td></tr>
+       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/types.cats#L114">schema</a></td></tr>
        </table></div>
-   <p>binary layout for an unresolved mosaic </p>
+   <p>A quantity of a certain mosaic, specified through an id or an alias. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -1090,16 +1090,16 @@ UnresolvedMosaic
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
-   <td><p>mosaic identifier </p></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
+   <td><p>Unresolved mosaic identifier. </p></td>
    </tr>
    <tr>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">amount</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
-   <td><p>mosaic amount </p></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
+   <td><p><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> amount. </p></td>
    </tr>
    </tbody></table>
 
@@ -1201,14 +1201,14 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -1217,7 +1217,7 @@ NemesisBlockHeader
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -1257,7 +1257,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>block height </p></td>
    </tr>
    <tr>
@@ -1265,7 +1265,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">timestamp</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>number of milliseconds elapsed since creation of nemesis block </p></td>
    </tr>
    <tr>
@@ -1273,7 +1273,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">difficulty</code></td>
-   <td><a href="#difficulty" title="">Difficulty</a></td>
+   <td><a href="#difficulty" title="How hard it was to harvest this block.">Difficulty</a></td>
    <td><p>block difficulty </p></td>
    </tr>
    <tr>
@@ -1289,7 +1289,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous block hash </p></td>
    </tr>
    <tr>
@@ -1297,7 +1297,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the transactions in this block </p></td>
    </tr>
    <tr>
@@ -1305,7 +1305,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">receipts_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the receipts generated by this block </p></td>
    </tr>
    <tr>
@@ -1313,7 +1313,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">state_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the global chain state at this block </p></td>
    </tr>
    <tr>
@@ -1321,7 +1321,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">beneficiary_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>beneficiary address designated by harvester </p></td>
    </tr>
    <tr>
@@ -1329,7 +1329,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee_multiplier</code></td>
-   <td><a href="#blockfeemultiplier" title="">BlockFeeMultiplier</a></td>
+   <td><a href="#blockfeemultiplier" title="Multiplier applied to the size of a transaction to obtain its fee, in absolute units.">BlockFeeMultiplier</a></td>
    <td><p>fee multiplier applied to block transactions </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#importanceblockfooter" title="binary layout for an importance block footer">ImportanceBlockFooter</a><span style="float:right">52 bytes = 0x34</span></td></tr>
@@ -1354,7 +1354,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">total_voting_balance</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>total balance eligible for voting </p></td>
    </tr>
    <tr>
@@ -1362,7 +1362,7 @@ NemesisBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_importance_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous importance block hash </p></td>
    </tr>
    </tbody></table>
@@ -1419,14 +1419,14 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -1435,7 +1435,7 @@ NormalBlockHeader
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -1475,7 +1475,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>block height </p></td>
    </tr>
    <tr>
@@ -1483,7 +1483,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">timestamp</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>number of milliseconds elapsed since creation of nemesis block </p></td>
    </tr>
    <tr>
@@ -1491,7 +1491,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">difficulty</code></td>
-   <td><a href="#difficulty" title="">Difficulty</a></td>
+   <td><a href="#difficulty" title="How hard it was to harvest this block.">Difficulty</a></td>
    <td><p>block difficulty </p></td>
    </tr>
    <tr>
@@ -1507,7 +1507,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous block hash </p></td>
    </tr>
    <tr>
@@ -1515,7 +1515,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the transactions in this block </p></td>
    </tr>
    <tr>
@@ -1523,7 +1523,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">receipts_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the receipts generated by this block </p></td>
    </tr>
    <tr>
@@ -1531,7 +1531,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">state_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the global chain state at this block </p></td>
    </tr>
    <tr>
@@ -1539,7 +1539,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">beneficiary_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>beneficiary address designated by harvester </p></td>
    </tr>
    <tr>
@@ -1547,7 +1547,7 @@ NormalBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee_multiplier</code></td>
-   <td><a href="#blockfeemultiplier" title="">BlockFeeMultiplier</a></td>
+   <td><a href="#blockfeemultiplier" title="Multiplier applied to the size of a transaction to obtain its fee, in absolute units.">BlockFeeMultiplier</a></td>
    <td><p>fee multiplier applied to block transactions </p></td>
    </tr>
    <tr>
@@ -1612,14 +1612,14 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -1628,7 +1628,7 @@ ImportanceBlockHeader
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -1668,7 +1668,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>block height </p></td>
    </tr>
    <tr>
@@ -1676,7 +1676,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">timestamp</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>number of milliseconds elapsed since creation of nemesis block </p></td>
    </tr>
    <tr>
@@ -1684,7 +1684,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">difficulty</code></td>
-   <td><a href="#difficulty" title="">Difficulty</a></td>
+   <td><a href="#difficulty" title="How hard it was to harvest this block.">Difficulty</a></td>
    <td><p>block difficulty </p></td>
    </tr>
    <tr>
@@ -1700,7 +1700,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous block hash </p></td>
    </tr>
    <tr>
@@ -1708,7 +1708,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the transactions in this block </p></td>
    </tr>
    <tr>
@@ -1716,7 +1716,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">receipts_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the receipts generated by this block </p></td>
    </tr>
    <tr>
@@ -1724,7 +1724,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">state_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the global chain state at this block </p></td>
    </tr>
    <tr>
@@ -1732,7 +1732,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">beneficiary_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>beneficiary address designated by harvester </p></td>
    </tr>
    <tr>
@@ -1740,7 +1740,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee_multiplier</code></td>
-   <td><a href="#blockfeemultiplier" title="">BlockFeeMultiplier</a></td>
+   <td><a href="#blockfeemultiplier" title="Multiplier applied to the size of a transaction to obtain its fee, in absolute units.">BlockFeeMultiplier</a></td>
    <td><p>fee multiplier applied to block transactions </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#importanceblockfooter" title="binary layout for an importance block footer">ImportanceBlockFooter</a><span style="float:right">52 bytes = 0x34</span></td></tr>
@@ -1765,7 +1765,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">total_voting_balance</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>total balance eligible for voting </p></td>
    </tr>
    <tr>
@@ -1773,7 +1773,7 @@ ImportanceBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_importance_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous importance block hash </p></td>
    </tr>
    </tbody></table>
@@ -1803,7 +1803,7 @@ FinalizationRound
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>finalization epoch </p></td>
    </tr>
    <tr>
@@ -1811,7 +1811,7 @@ FinalizationRound
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">point</code></td>
-   <td><a href="#finalizationpoint" title="">FinalizationPoint</a></td>
+   <td><a href="#finalizationpoint" title="A particular point int time inside a finalization epoch.">FinalizationPoint</a></td>
    <td><p>finalization point </p></td>
    </tr>
    </tbody></table>
@@ -1848,7 +1848,7 @@ FinalizedBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>finalization height </p></td>
    </tr>
    <tr>
@@ -1856,7 +1856,7 @@ FinalizedBlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>finalization hash </p></td>
    </tr>
    </tbody></table>
@@ -1912,7 +1912,7 @@ BalanceTransferReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#mosaic" title="binary layout for a mosaic">Mosaic</a></td>
+   <td><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a></td>
    <td><p>mosaic </p></td>
    </tr>
    <tr>
@@ -1920,7 +1920,7 @@ BalanceTransferReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">sender_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>mosaic sender address </p></td>
    </tr>
    <tr>
@@ -1928,7 +1928,7 @@ BalanceTransferReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>mosaic recipient address </p></td>
    </tr>
    </tbody></table>
@@ -1984,7 +1984,7 @@ BalanceChangeReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#mosaic" title="binary layout for a mosaic">Mosaic</a></td>
+   <td><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a></td>
    <td><p>mosaic </p></td>
    </tr>
    <tr>
@@ -1992,7 +1992,7 @@ BalanceChangeReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>account address </p></td>
    </tr>
    </tbody></table>
@@ -2048,7 +2048,7 @@ InflationReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#mosaic" title="binary layout for a mosaic">Mosaic</a></td>
+   <td><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a></td>
    <td><p>mosaic </p></td>
    </tr>
    </tbody></table>
@@ -2103,7 +2103,7 @@ MosaicExpiryReceipt
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">artifact_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>expiring mosaic id </p></td>
    </tr>
    </tbody></table>
@@ -2233,7 +2233,7 @@ AddressResolutionEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">resolved</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>resolved value </p></td>
    </tr>
    </tbody></table>
@@ -2270,7 +2270,7 @@ MosaicResolutionEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">resolved</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>resolved value </p></td>
    </tr>
    </tbody></table>
@@ -2325,7 +2325,7 @@ MosaicResolutionStatement
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">unresolved</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>unresolved mosaic </p></td>
    </tr>
    <tr>
@@ -2388,7 +2388,7 @@ AddressResolutionStatement
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">unresolved</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>unresolved address </p></td>
    </tr>
    <tr>
@@ -2426,7 +2426,7 @@ PinnedVotingKey
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">voting_key</code></td>
-   <td><a href="#votingpublickey" title="">VotingPublicKey</a></td>
+   <td><a href="#votingpublickey" title="A PublicKey used for voting during the finalization process.">VotingPublicKey</a></td>
    <td><p>voting key </p></td>
    </tr>
    <tr>
@@ -2434,7 +2434,7 @@ PinnedVotingKey
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">start_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>start finalization epoch </p></td>
    </tr>
    <tr>
@@ -2442,7 +2442,7 @@ PinnedVotingKey
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">end_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>end finalization epoch </p></td>
    </tr>
    </tbody></table>
@@ -2472,7 +2472,7 @@ ImportanceSnapshot
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">importance</code></td>
-   <td><a href="#importance" title="">Importance</a></td>
+   <td><a href="#importance" title="Importance score for an account.">Importance</a></td>
    <td><p>account importance </p></td>
    </tr>
    <tr>
@@ -2480,7 +2480,7 @@ ImportanceSnapshot
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">height</code></td>
-   <td><a href="#importanceheight" title="">ImportanceHeight</a></td>
+   <td><a href="#importanceheight" title="Block height at which an Importance was calculated.">ImportanceHeight</a></td>
    <td><p>importance height </p></td>
    </tr>
    </tbody></table>
@@ -2509,7 +2509,7 @@ HeightActivityBucket
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">start_height</code></td>
-   <td><a href="#importanceheight" title="">ImportanceHeight</a></td>
+   <td><a href="#importanceheight" title="Block height at which an Importance was calculated.">ImportanceHeight</a></td>
    <td><p>activity start height </p></td>
    </tr>
    <tr>
@@ -2517,7 +2517,7 @@ HeightActivityBucket
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">total_fees_paid</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>total fees paid by account </p></td>
    </tr>
    <tr>
@@ -2601,7 +2601,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>address of account </p></td>
    </tr>
    <tr>
@@ -2609,7 +2609,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>height at which address has been obtained </p></td>
    </tr>
    <tr>
@@ -2617,7 +2617,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>public key of account </p></td>
    </tr>
    <tr>
@@ -2625,7 +2625,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">public_key_height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>height at which public key has been obtained </p></td>
    </tr>
    <tr>
@@ -2665,7 +2665,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked account public key </p></td>
    </tr>
    <tr>
@@ -2673,7 +2673,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">node_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>node public key </p></td>
    </tr>
    <tr>
@@ -2681,7 +2681,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">vrf_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>vrf public key </p></td>
    </tr>
    <tr>
@@ -2721,7 +2721,7 @@ AccountState
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">balances</code></td>
-   <td><a href="#mosaic" title="binary layout for a mosaic">Mosaic</a>&ZeroWidthSpace;[balances_count]</td>
+   <td><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a>&ZeroWidthSpace;[balances_count]</td>
    <td><p>balances of account </p></td>
    </tr>
    </tbody></table>
@@ -2760,7 +2760,7 @@ HashLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">owner_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>owner address </p></td>
    </tr>
    <tr>
@@ -2768,7 +2768,7 @@ HashLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#mosaic" title="binary layout for a mosaic">Mosaic</a></td>
+   <td><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a></td>
    <td><p>mosaic associated with lock </p></td>
    </tr>
    <tr>
@@ -2776,7 +2776,7 @@ HashLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">end_height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>height at which the lock expires </p></td>
    </tr>
    <tr>
@@ -2792,7 +2792,7 @@ HashLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash </p></td>
    </tr>
    </tbody></table>
@@ -2867,7 +2867,7 @@ MetadataEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">source_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>metadata source address (provider) </p></td>
    </tr>
    <tr>
@@ -2875,7 +2875,7 @@ MetadataEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -2952,7 +2952,7 @@ MosaicProperties
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>mosaic duration </p></td>
    </tr>
    </tbody></table>
@@ -2981,7 +2981,7 @@ MosaicDefinition
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">start_height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>block height </p></td>
    </tr>
    <tr>
@@ -2989,7 +2989,7 @@ MosaicDefinition
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">owner_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>mosaic owner </p></td>
    </tr>
    <tr>
@@ -3043,7 +3043,7 @@ MosaicEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>entry id </p></td>
    </tr>
    <tr>
@@ -3051,7 +3051,7 @@ MosaicEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">supply</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>total supply amount </p></td>
    </tr>
    <tr>
@@ -3113,7 +3113,7 @@ MultisigEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">account_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>account address </p></td>
    </tr>
    <tr>
@@ -3129,7 +3129,7 @@ MultisigEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">cosignatory_addresses</code></td>
-   <td><a href="#address" title="">Address</a>&ZeroWidthSpace;[cosignatory_addresses_count]</td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a>&ZeroWidthSpace;[cosignatory_addresses_count]</td>
    <td><p>cosignatories for account </p></td>
    </tr>
    <tr>
@@ -3145,7 +3145,7 @@ MultisigEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">multisig_addresses</code></td>
-   <td><a href="#address" title="">Address</a>&ZeroWidthSpace;[multisig_addresses_count]</td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a>&ZeroWidthSpace;[multisig_addresses_count]</td>
    <td><p>accounts for which the entry is cosignatory </p></td>
    </tr>
    </tbody></table>
@@ -3175,7 +3175,7 @@ NamespaceLifetime
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">lifetime_start</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>start height </p></td>
    </tr>
    <tr>
@@ -3183,7 +3183,7 @@ NamespaceLifetime
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">lifetime_end</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>end height </p></td>
    </tr>
    </tbody></table>
@@ -3220,7 +3220,7 @@ NamespaceAlias
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_alias</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>mosaic alias </p></td>
    </tr>
    <tr>
@@ -3228,7 +3228,7 @@ NamespaceAlias
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_alias</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>address alias </p></td>
    </tr>
    </tbody></table>
@@ -3319,7 +3319,7 @@ RootNamespaceHistory
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">owner_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>namespace owner address </p></td>
    </tr>
    <tr>
@@ -3388,7 +3388,7 @@ AccountRestrictionAddressValue
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_values</code></td>
-   <td><a href="#address" title="">Address</a>&ZeroWidthSpace;[restriction_values_count]</td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a>&ZeroWidthSpace;[restriction_values_count]</td>
    <td><p>restriction values </p></td>
    </tr>
    </tbody></table>
@@ -3425,7 +3425,7 @@ AccountRestrictionMosaicValue
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_values</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a>&ZeroWidthSpace;[restriction_values_count]</td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a>&ZeroWidthSpace;[restriction_values_count]</td>
    <td><p>restriction values </p></td>
    </tr>
    </tbody></table>
@@ -3553,7 +3553,7 @@ AccountRestrictions
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>address on which restrictions are placed </p></td>
    </tr>
    <tr>
@@ -3673,7 +3673,7 @@ RestrictionRule
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">reference_mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>identifier of the mosaic providing the restriction key </p></td>
    </tr>
    <tr>
@@ -3792,7 +3792,7 @@ MosaicAddressRestrictionEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>identifier of the mosaic to which the restriction applies </p></td>
    </tr>
    <tr>
@@ -3800,7 +3800,7 @@ MosaicAddressRestrictionEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>address being restricted </p></td>
    </tr>
    <tr>
@@ -3837,7 +3837,7 @@ MosaicGlobalRestrictionEntry
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>identifier of the mosaic to which the restriction applies </p></td>
    </tr>
    <tr>
@@ -3938,7 +3938,7 @@ SecretLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">owner_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>owner address </p></td>
    </tr>
    <tr>
@@ -3946,7 +3946,7 @@ SecretLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#mosaic" title="binary layout for a mosaic">Mosaic</a></td>
+   <td><a href="#mosaic" title="A quantity of a certain mosaic.">Mosaic</a></td>
    <td><p>mosaic associated with lock </p></td>
    </tr>
    <tr>
@@ -3954,7 +3954,7 @@ SecretLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">end_height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>height at which the lock expires </p></td>
    </tr>
    <tr>
@@ -3978,7 +3978,7 @@ SecretLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>transaction secret </p></td>
    </tr>
    <tr>
@@ -3986,7 +3986,7 @@ SecretLockInfo
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>transaction recipient </p></td>
    </tr>
    </tbody></table>
@@ -4004,7 +4004,7 @@ AccountKeyLinkTransaction
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/account_link/account_key_link.cats#L14">schema</a></td></tr>
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/account_link/src/model/AccountKeyLinkTransaction.h#L34">catapult model</a></td></tr>
        </table></div>
-   <p>This transaction is <strong>required</strong> for all accounts wanting to activate <em>remote</em> or <code>delegated</code> harvesting. <br/><a href="http://google.com">Announce</a> an <a href="#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a> to delegate the account importance score to a proxy account. </p>
+   <p>This transaction is required for all accounts wanting to activate remote or delegated harvesting. <br/>Announce an <a href="#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a> to delegate the account importance score to a proxy account. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -4044,14 +4044,14 @@ AccountKeyLinkTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -4060,7 +4060,7 @@ AccountKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4100,7 +4100,7 @@ AccountKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -4108,16 +4108,16 @@ AccountKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
-   <tr><td colspan="6" class="big-table-section"><a href="#accountkeylinktransactionbody" title="Shared content between AccountKeyLinkTransactionBody and EmbeddedAccountKeyLinkTransaction">AccountKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="#accountkeylinktransactionbody" title="Shared content between AccountKeyLinkTransactionBody and EmbeddedAccountKeyLinkTransaction.">AccountKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -4125,7 +4125,7 @@ AccountKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -4143,7 +4143,7 @@ EmbeddedAccountKeyLinkTransaction
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/account_link/account_key_link.cats#L22">schema</a></td></tr>
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/account_link/src/model/AccountKeyLinkTransaction.h#L34">catapult model</a></td></tr>
        </table></div>
-   <p>Embedded version of <a href="#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a> </p>
+   <p>Embedded version of <a href="#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a>. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -4191,7 +4191,7 @@ EmbeddedAccountKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4226,13 +4226,13 @@ EmbeddedAccountKeyLinkTransaction
    <td><a href="#transactiontype" title="enumeration of transaction types">TransactionType</a></td>
    <td><p>transaction type </p></td>
    </tr>
-   <tr><td colspan="6" class="big-table-section"><a href="#accountkeylinktransactionbody" title="Shared content between AccountKeyLinkTransactionBody and EmbeddedAccountKeyLinkTransaction">AccountKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="#accountkeylinktransactionbody" title="Shared content between AccountKeyLinkTransactionBody and EmbeddedAccountKeyLinkTransaction.">AccountKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -4240,7 +4240,7 @@ EmbeddedAccountKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -4298,14 +4298,14 @@ NodeKeyLinkTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -4314,7 +4314,7 @@ NodeKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4354,7 +4354,7 @@ NodeKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -4362,16 +4362,16 @@ NodeKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
-   <tr><td colspan="6" class="big-table-section"><a href="#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction.">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -4379,7 +4379,7 @@ NodeKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -4397,7 +4397,7 @@ EmbeddedNodeKeyLinkTransaction
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/account_link/node_key_link.cats#L22">schema</a></td></tr>
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/account_link/src/model/NodeKeyLinkTransaction.h#L34">catapult model</a></td></tr>
        </table></div>
-   <p>Embedded version of <a href="#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> </p>
+   <p>Embedded version of <a href="#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a>. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -4445,7 +4445,7 @@ EmbeddedNodeKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4480,13 +4480,13 @@ EmbeddedNodeKeyLinkTransaction
    <td><a href="#transactiontype" title="enumeration of transaction types">TransactionType</a></td>
    <td><p>transaction type </p></td>
    </tr>
-   <tr><td colspan="6" class="big-table-section"><a href="#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction.">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -4494,7 +4494,7 @@ EmbeddedNodeKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -4533,7 +4533,7 @@ DetachedCosignature
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>cosigner public key </p></td>
    </tr>
    <tr>
@@ -4541,7 +4541,7 @@ DetachedCosignature
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>cosigner signature </p></td>
    </tr>
    <tr>
@@ -4549,7 +4549,7 @@ DetachedCosignature
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">parent_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the aggregate transaction that is signed by this cosignature </p></td>
    </tr>
    </tbody></table>
@@ -4607,14 +4607,14 @@ AggregateCompleteTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -4623,7 +4623,7 @@ AggregateCompleteTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4663,7 +4663,7 @@ AggregateCompleteTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -4671,7 +4671,7 @@ AggregateCompleteTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#aggregatetransactionbody" title="binary layout for an aggregate transaction">AggregateTransactionBody</a><span style="float:right">40+ bytes = 0x28+ <i>(variable)</i></span></td></tr>
@@ -4680,7 +4680,7 @@ AggregateCompleteTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>aggregate hash of an aggregate's transactions </p></td>
    </tr>
    <tr>
@@ -4770,14 +4770,14 @@ AggregateBondedTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -4786,7 +4786,7 @@ AggregateBondedTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4826,7 +4826,7 @@ AggregateBondedTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -4834,7 +4834,7 @@ AggregateBondedTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#aggregatetransactionbody" title="binary layout for an aggregate transaction">AggregateTransactionBody</a><span style="float:right">40+ bytes = 0x28+ <i>(variable)</i></span></td></tr>
@@ -4843,7 +4843,7 @@ AggregateBondedTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>aggregate hash of an aggregate's transactions </p></td>
    </tr>
    <tr>
@@ -4933,14 +4933,14 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -4949,7 +4949,7 @@ VotingKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -4989,7 +4989,7 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -4997,7 +4997,7 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#votingkeylinktransactionbody" title="binary layout for a voting key link transaction">VotingKeyLinkTransactionBody</a><span style="float:right">41 bytes = 0x29</span></td></tr>
@@ -5006,7 +5006,7 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#votingpublickey" title="">VotingPublicKey</a></td>
+   <td><a href="#votingpublickey" title="A PublicKey used for voting during the finalization process.">VotingPublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -5014,7 +5014,7 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">start_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>start finalization epoch </p></td>
    </tr>
    <tr>
@@ -5022,7 +5022,7 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">end_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>end finalization epoch </p></td>
    </tr>
    <tr>
@@ -5030,7 +5030,7 @@ VotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -5096,7 +5096,7 @@ EmbeddedVotingKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5137,7 +5137,7 @@ EmbeddedVotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#votingpublickey" title="">VotingPublicKey</a></td>
+   <td><a href="#votingpublickey" title="A PublicKey used for voting during the finalization process.">VotingPublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -5145,7 +5145,7 @@ EmbeddedVotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">start_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>start finalization epoch </p></td>
    </tr>
    <tr>
@@ -5153,7 +5153,7 @@ EmbeddedVotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">end_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>end finalization epoch </p></td>
    </tr>
    <tr>
@@ -5161,7 +5161,7 @@ EmbeddedVotingKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -5219,14 +5219,14 @@ VrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -5235,7 +5235,7 @@ VrfKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5275,7 +5275,7 @@ VrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -5283,7 +5283,7 @@ VrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#vrfkeylinktransactionbody" title="binary layout for a vrf key link transaction">VrfKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
@@ -5292,7 +5292,7 @@ VrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -5300,7 +5300,7 @@ VrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -5366,7 +5366,7 @@ EmbeddedVrfKeyLinkTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5407,7 +5407,7 @@ EmbeddedVrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -5415,7 +5415,7 @@ EmbeddedVrfKeyLinkTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    </tbody></table>
@@ -5473,14 +5473,14 @@ HashLockTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -5489,7 +5489,7 @@ HashLockTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5529,7 +5529,7 @@ HashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -5537,7 +5537,7 @@ HashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#hashlocktransactionbody" title="binary layout for a hash lock transaction">HashLockTransactionBody</a><span style="float:right">56 bytes = 0x38</span></td></tr>
@@ -5546,7 +5546,7 @@ HashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a></td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a></td>
    <td><p>lock mosaic </p></td>
    </tr>
    <tr>
@@ -5554,7 +5554,7 @@ HashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>number of blocks for which a lock should be valid </p></td>
    </tr>
    <tr>
@@ -5562,7 +5562,7 @@ HashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>lock hash </p></td>
    </tr>
    </tbody></table>
@@ -5628,7 +5628,7 @@ EmbeddedHashLockTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5669,7 +5669,7 @@ EmbeddedHashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a></td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a></td>
    <td><p>lock mosaic </p></td>
    </tr>
    <tr>
@@ -5677,7 +5677,7 @@ EmbeddedHashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>number of blocks for which a lock should be valid </p></td>
    </tr>
    <tr>
@@ -5685,7 +5685,7 @@ EmbeddedHashLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>lock hash </p></td>
    </tr>
    </tbody></table>
@@ -5743,14 +5743,14 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -5759,7 +5759,7 @@ SecretLockTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5799,7 +5799,7 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -5807,7 +5807,7 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#secretlocktransactionbody" title="binary layout for a secret lock transaction">SecretLockTransactionBody</a><span style="float:right">81 bytes = 0x51</span></td></tr>
@@ -5816,7 +5816,7 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>locked mosaic recipient address </p></td>
    </tr>
    <tr>
@@ -5824,7 +5824,7 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>secret </p></td>
    </tr>
    <tr>
@@ -5832,7 +5832,7 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a></td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a></td>
    <td><p>locked mosaic </p></td>
    </tr>
    <tr>
@@ -5840,7 +5840,7 @@ SecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>number of blocks for which a lock should be valid </p></td>
    </tr>
    <tr>
@@ -5914,7 +5914,7 @@ EmbeddedSecretLockTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -5955,7 +5955,7 @@ EmbeddedSecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>locked mosaic recipient address </p></td>
    </tr>
    <tr>
@@ -5963,7 +5963,7 @@ EmbeddedSecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>secret </p></td>
    </tr>
    <tr>
@@ -5971,7 +5971,7 @@ EmbeddedSecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a></td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a></td>
    <td><p>locked mosaic </p></td>
    </tr>
    <tr>
@@ -5979,7 +5979,7 @@ EmbeddedSecretLockTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>number of blocks for which a lock should be valid </p></td>
    </tr>
    <tr>
@@ -6045,14 +6045,14 @@ SecretProofTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -6061,7 +6061,7 @@ SecretProofTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -6101,7 +6101,7 @@ SecretProofTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -6109,7 +6109,7 @@ SecretProofTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#secretprooftransactionbody" title="binary layout for a secret proof transaction">SecretProofTransactionBody</a><span style="float:right">59+ bytes = 0x3b+ <i>(variable)</i></span></td></tr>
@@ -6118,7 +6118,7 @@ SecretProofTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>locked mosaic recipient address </p></td>
    </tr>
    <tr>
@@ -6126,7 +6126,7 @@ SecretProofTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>secret </p></td>
    </tr>
    <tr>
@@ -6216,7 +6216,7 @@ EmbeddedSecretProofTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -6257,7 +6257,7 @@ EmbeddedSecretProofTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>locked mosaic recipient address </p></td>
    </tr>
    <tr>
@@ -6265,7 +6265,7 @@ EmbeddedSecretProofTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>secret </p></td>
    </tr>
    <tr>
@@ -6347,14 +6347,14 @@ AccountMetadataTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -6363,7 +6363,7 @@ AccountMetadataTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -6403,7 +6403,7 @@ AccountMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -6411,7 +6411,7 @@ AccountMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#accountmetadatatransactionbody" title="binary layout for an account metadata transaction">AccountMetadataTransactionBody</a><span style="float:right">36+ bytes = 0x24+ <i>(variable)</i></span></td></tr>
@@ -6420,7 +6420,7 @@ AccountMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -6518,7 +6518,7 @@ EmbeddedAccountMetadataTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -6559,7 +6559,7 @@ EmbeddedAccountMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -6649,14 +6649,14 @@ MosaicMetadataTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -6665,7 +6665,7 @@ MosaicMetadataTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -6705,7 +6705,7 @@ MosaicMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -6713,7 +6713,7 @@ MosaicMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#mosaicmetadatatransactionbody" title="binary layout for a mosaic metadata transaction">MosaicMetadataTransactionBody</a><span style="float:right">44+ bytes = 0x2c+ <i>(variable)</i></span></td></tr>
@@ -6722,7 +6722,7 @@ MosaicMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -6738,7 +6738,7 @@ MosaicMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>target mosaic identifier </p></td>
    </tr>
    <tr>
@@ -6828,7 +6828,7 @@ EmbeddedMosaicMetadataTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -6869,7 +6869,7 @@ EmbeddedMosaicMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -6885,7 +6885,7 @@ EmbeddedMosaicMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>target mosaic identifier </p></td>
    </tr>
    <tr>
@@ -6967,14 +6967,14 @@ NamespaceMetadataTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -6983,7 +6983,7 @@ NamespaceMetadataTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7023,7 +7023,7 @@ NamespaceMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -7031,7 +7031,7 @@ NamespaceMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#namespacemetadatatransactionbody" title="binary layout for a namespace metadata transaction">NamespaceMetadataTransactionBody</a><span style="float:right">44+ bytes = 0x2c+ <i>(variable)</i></span></td></tr>
@@ -7040,7 +7040,7 @@ NamespaceMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -7146,7 +7146,7 @@ EmbeddedNamespaceMetadataTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7187,7 +7187,7 @@ EmbeddedNamespaceMetadataTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -7285,14 +7285,14 @@ MosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -7301,7 +7301,7 @@ MosaicDefinitionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7341,7 +7341,7 @@ MosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -7349,7 +7349,7 @@ MosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#mosaicdefinitiontransactionbody" title="binary layout for a mosaic definition transaction">MosaicDefinitionTransactionBody</a><span style="float:right">22 bytes = 0x16</span></td></tr>
@@ -7358,7 +7358,7 @@ MosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>mosaic identifier </p></td>
    </tr>
    <tr>
@@ -7366,7 +7366,7 @@ MosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>mosaic duration </p></td>
    </tr>
    <tr>
@@ -7456,7 +7456,7 @@ EmbeddedMosaicDefinitionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7497,7 +7497,7 @@ EmbeddedMosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>mosaic identifier </p></td>
    </tr>
    <tr>
@@ -7505,7 +7505,7 @@ EmbeddedMosaicDefinitionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>mosaic duration </p></td>
    </tr>
    <tr>
@@ -7587,14 +7587,14 @@ MosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -7603,7 +7603,7 @@ MosaicSupplyChangeTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7643,7 +7643,7 @@ MosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -7651,7 +7651,7 @@ MosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#mosaicsupplychangetransactionbody" title="binary layout for a mosaic supply change transaction">MosaicSupplyChangeTransactionBody</a><span style="float:right">17 bytes = 0x11</span></td></tr>
@@ -7660,7 +7660,7 @@ MosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>affected mosaic identifier </p></td>
    </tr>
    <tr>
@@ -7668,7 +7668,7 @@ MosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">delta</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>change amount </p></td>
    </tr>
    <tr>
@@ -7742,7 +7742,7 @@ EmbeddedMosaicSupplyChangeTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7783,7 +7783,7 @@ EmbeddedMosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>affected mosaic identifier </p></td>
    </tr>
    <tr>
@@ -7791,7 +7791,7 @@ EmbeddedMosaicSupplyChangeTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">delta</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>change amount </p></td>
    </tr>
    <tr>
@@ -7857,14 +7857,14 @@ MultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -7873,7 +7873,7 @@ MultisigAccountModificationTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -7913,7 +7913,7 @@ MultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -7921,7 +7921,7 @@ MultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#multisigaccountmodificationtransactionbody" title="binary layout for a multisig account modification transaction">MultisigAccountModificationTransactionBody</a><span style="float:right">8+ bytes = 0x8+ <i>(variable)</i></span></td></tr>
@@ -7970,7 +7970,7 @@ MultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_additions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[address_additions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[address_additions_count]</td>
    <td><p>cosignatory address additions </p></td>
    </tr>
    <tr>
@@ -7978,7 +7978,7 @@ MultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_deletions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[address_deletions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[address_deletions_count]</td>
    <td><p>cosignatory address deletions </p></td>
    </tr>
    </tbody></table>
@@ -8044,7 +8044,7 @@ EmbeddedMultisigAccountModificationTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8125,7 +8125,7 @@ EmbeddedMultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_additions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[address_additions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[address_additions_count]</td>
    <td><p>cosignatory address additions </p></td>
    </tr>
    <tr>
@@ -8133,7 +8133,7 @@ EmbeddedMultisigAccountModificationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_deletions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[address_deletions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[address_deletions_count]</td>
    <td><p>cosignatory address deletions </p></td>
    </tr>
    </tbody></table>
@@ -8191,14 +8191,14 @@ AddressAliasTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -8207,7 +8207,7 @@ AddressAliasTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8247,7 +8247,7 @@ AddressAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -8255,7 +8255,7 @@ AddressAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#addressaliastransactionbody" title="binary layout for an address alias transaction">AddressAliasTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
@@ -8272,7 +8272,7 @@ AddressAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>aliased address </p></td>
    </tr>
    <tr>
@@ -8346,7 +8346,7 @@ EmbeddedAddressAliasTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8395,7 +8395,7 @@ EmbeddedAddressAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>aliased address </p></td>
    </tr>
    <tr>
@@ -8461,14 +8461,14 @@ MosaicAliasTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -8477,7 +8477,7 @@ MosaicAliasTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8517,7 +8517,7 @@ MosaicAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -8525,7 +8525,7 @@ MosaicAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#mosaicaliastransactionbody" title="binary layout for an mosaic alias transaction">MosaicAliasTransactionBody</a><span style="float:right">17 bytes = 0x11</span></td></tr>
@@ -8542,7 +8542,7 @@ MosaicAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>aliased mosaic identifier </p></td>
    </tr>
    <tr>
@@ -8616,7 +8616,7 @@ EmbeddedMosaicAliasTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8665,7 +8665,7 @@ EmbeddedMosaicAliasTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>aliased mosaic identifier </p></td>
    </tr>
    <tr>
@@ -8731,14 +8731,14 @@ NamespaceRegistrationTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -8747,7 +8747,7 @@ NamespaceRegistrationTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8787,7 +8787,7 @@ NamespaceRegistrationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -8795,7 +8795,7 @@ NamespaceRegistrationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#namespaceregistrationtransactionbody" title="binary layout for a namespace registration transaction">NamespaceRegistrationTransactionBody</a><span style="float:right">26+ bytes = 0x1a+ <i>(variable)</i></span></td></tr>
@@ -8804,7 +8804,7 @@ NamespaceRegistrationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>namespace duration </p></td>
    </tr>
    <tr>
@@ -8910,7 +8910,7 @@ EmbeddedNamespaceRegistrationTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -8951,7 +8951,7 @@ EmbeddedNamespaceRegistrationTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>namespace duration </p></td>
    </tr>
    <tr>
@@ -9049,14 +9049,14 @@ AccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -9065,7 +9065,7 @@ AccountAddressRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -9105,7 +9105,7 @@ AccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -9113,7 +9113,7 @@ AccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#accountaddressrestrictiontransactionbody" title="binary layout for an account address restriction transaction">AccountAddressRestrictionTransactionBody</a><span style="float:right">8+ bytes = 0x8+ <i>(variable)</i></span></td></tr>
@@ -9154,7 +9154,7 @@ AccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_additions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_additions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_additions_count]</td>
    <td><p>account restriction additions </p></td>
    </tr>
    <tr>
@@ -9162,7 +9162,7 @@ AccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_deletions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
    <td><p>account restriction deletions </p></td>
    </tr>
    </tbody></table>
@@ -9228,7 +9228,7 @@ EmbeddedAccountAddressRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -9301,7 +9301,7 @@ EmbeddedAccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_additions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_additions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_additions_count]</td>
    <td><p>account restriction additions </p></td>
    </tr>
    <tr>
@@ -9309,7 +9309,7 @@ EmbeddedAccountAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_deletions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
    <td><p>account restriction deletions </p></td>
    </tr>
    </tbody></table>
@@ -9367,14 +9367,14 @@ AccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -9383,7 +9383,7 @@ AccountMosaicRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -9423,7 +9423,7 @@ AccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -9431,7 +9431,7 @@ AccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#accountmosaicrestrictiontransactionbody" title="binary layout for an account mosaic restriction transaction">AccountMosaicRestrictionTransactionBody</a><span style="float:right">8+ bytes = 0x8+ <i>(variable)</i></span></td></tr>
@@ -9472,7 +9472,7 @@ AccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_additions</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_additions_count]</td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_additions_count]</td>
    <td><p>account restriction additions </p></td>
    </tr>
    <tr>
@@ -9480,7 +9480,7 @@ AccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_deletions</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
    <td><p>account restriction deletions </p></td>
    </tr>
    </tbody></table>
@@ -9546,7 +9546,7 @@ EmbeddedAccountMosaicRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -9619,7 +9619,7 @@ EmbeddedAccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_additions</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_additions_count]</td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_additions_count]</td>
    <td><p>account restriction additions </p></td>
    </tr>
    <tr>
@@ -9627,7 +9627,7 @@ EmbeddedAccountMosaicRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_deletions</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
    <td><p>account restriction deletions </p></td>
    </tr>
    </tbody></table>
@@ -9685,14 +9685,14 @@ AccountOperationRestrictionTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -9701,7 +9701,7 @@ AccountOperationRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -9741,7 +9741,7 @@ AccountOperationRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -9749,7 +9749,7 @@ AccountOperationRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#accountoperationrestrictiontransactionbody" title="binary layout for an account operation restriction transaction">AccountOperationRestrictionTransactionBody</a><span style="float:right">8+ bytes = 0x8+ <i>(variable)</i></span></td></tr>
@@ -9864,7 +9864,7 @@ EmbeddedAccountOperationRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10003,14 +10003,14 @@ MosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -10019,7 +10019,7 @@ MosaicAddressRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10059,7 +10059,7 @@ MosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -10067,7 +10067,7 @@ MosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#mosaicaddressrestrictiontransactionbody" title="binary layout for a mosaic address restriction transaction">MosaicAddressRestrictionTransactionBody</a><span style="float:right">56 bytes = 0x38</span></td></tr>
@@ -10076,7 +10076,7 @@ MosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic to which the restriction applies </p></td>
    </tr>
    <tr>
@@ -10108,7 +10108,7 @@ MosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>address being restricted </p></td>
    </tr>
    </tbody></table>
@@ -10174,7 +10174,7 @@ EmbeddedMosaicAddressRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10215,7 +10215,7 @@ EmbeddedMosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic to which the restriction applies </p></td>
    </tr>
    <tr>
@@ -10247,7 +10247,7 @@ EmbeddedMosaicAddressRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>address being restricted </p></td>
    </tr>
    </tbody></table>
@@ -10305,14 +10305,14 @@ MosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -10321,7 +10321,7 @@ MosaicGlobalRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10361,7 +10361,7 @@ MosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -10369,7 +10369,7 @@ MosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#mosaicglobalrestrictiontransactionbody" title="binary layout for a mosaic global restriction transaction">MosaicGlobalRestrictionTransactionBody</a><span style="float:right">42 bytes = 0x2a</span></td></tr>
@@ -10378,7 +10378,7 @@ MosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic being restricted </p></td>
    </tr>
    <tr>
@@ -10386,7 +10386,7 @@ MosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">reference_mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic providing the restriction key </p></td>
    </tr>
    <tr>
@@ -10492,7 +10492,7 @@ EmbeddedMosaicGlobalRestrictionTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10533,7 +10533,7 @@ EmbeddedMosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic being restricted </p></td>
    </tr>
    <tr>
@@ -10541,7 +10541,7 @@ EmbeddedMosaicGlobalRestrictionTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">reference_mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic providing the restriction key </p></td>
    </tr>
    <tr>
@@ -10639,14 +10639,14 @@ TransferTransaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -10655,7 +10655,7 @@ TransferTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10695,7 +10695,7 @@ TransferTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -10703,7 +10703,7 @@ TransferTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#transfertransactionbody" title="binary layout for a transfer transaction">TransferTransactionBody</a><span style="float:right">32+ bytes = 0x20+ <i>(variable)</i></span></td></tr>
@@ -10712,7 +10712,7 @@ TransferTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>recipient address </p></td>
    </tr>
    <tr>
@@ -10752,7 +10752,7 @@ TransferTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaics</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
    <td><p>attached mosaics </p></td>
    </tr>
    <tr>
@@ -10826,7 +10826,7 @@ EmbeddedTransferTransaction
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -10867,7 +10867,7 @@ EmbeddedTransferTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>recipient address </p></td>
    </tr>
    <tr>
@@ -10907,7 +10907,7 @@ EmbeddedTransferTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaics</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
    <td><p>attached mosaics </p></td>
    </tr>
    <tr>
@@ -10986,14 +10986,14 @@ VerifiableEntity
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11027,7 +11027,7 @@ EntityBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -11096,14 +11096,14 @@ BlockHeader
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -11112,7 +11112,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -11152,7 +11152,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">height</code></td>
-   <td><a href="#height" title="">Height</a></td>
+   <td><a href="#height" title="Index of a block in the blockchain.">Height</a></td>
    <td><p>block height </p></td>
    </tr>
    <tr>
@@ -11160,7 +11160,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">timestamp</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>number of milliseconds elapsed since creation of nemesis block </p></td>
    </tr>
    <tr>
@@ -11168,7 +11168,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">difficulty</code></td>
-   <td><a href="#difficulty" title="">Difficulty</a></td>
+   <td><a href="#difficulty" title="How hard it was to harvest this block.">Difficulty</a></td>
    <td><p>block difficulty </p></td>
    </tr>
    <tr>
@@ -11184,7 +11184,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous block hash </p></td>
    </tr>
    <tr>
@@ -11192,7 +11192,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the transactions in this block </p></td>
    </tr>
    <tr>
@@ -11200,7 +11200,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">receipts_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the receipts generated by this block </p></td>
    </tr>
    <tr>
@@ -11208,7 +11208,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">state_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>hash of the global chain state at this block </p></td>
    </tr>
    <tr>
@@ -11216,7 +11216,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">beneficiary_address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>beneficiary address designated by harvester </p></td>
    </tr>
    <tr>
@@ -11224,7 +11224,7 @@ BlockHeader
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee_multiplier</code></td>
-   <td><a href="#blockfeemultiplier" title="">BlockFeeMultiplier</a></td>
+   <td><a href="#blockfeemultiplier" title="Multiplier applied to the size of a transaction to obtain its fee, in absolute units.">BlockFeeMultiplier</a></td>
    <td><p>fee multiplier applied to block transactions </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11274,7 +11274,7 @@ ImportanceBlockFooter
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">total_voting_balance</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>total balance eligible for voting </p></td>
    </tr>
    <tr>
@@ -11282,7 +11282,7 @@ ImportanceBlockFooter
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">previous_importance_block_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>previous importance block hash </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11411,14 +11411,14 @@ Transaction
    <td>&nbsp;</td>
    <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
    <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align byte[64] on 8-byte boundary </p></td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
    </tr>
    <tr>
    <td class="indentation-cell">&nbsp;</td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>entity signature </p></td>
    </tr>
    <tr><td colspan="6" class="big-table-section"><a href="#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
@@ -11427,7 +11427,7 @@ Transaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -11467,7 +11467,7 @@ Transaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">fee</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>transaction fee </p></td>
    </tr>
    <tr>
@@ -11475,7 +11475,7 @@ Transaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">deadline</code></td>
-   <td><a href="#timestamp" title="">Timestamp</a></td>
+   <td><a href="#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
    <td><p>transaction deadline </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11571,7 +11571,7 @@ EmbeddedTransaction
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>entity signer's public key </p></td>
    </tr>
    <tr>
@@ -11607,7 +11607,7 @@ EmbeddedTransaction
    <td><p>transaction type </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
-   <a href="#embeddedaccountkeylinktransaction" title="Embedded version of AccountKeyLinkTransaction">EmbeddedAccountKeyLinkTransaction</a>, <a href="#embeddednodekeylinktransaction" title="Embedded version of NodeKeyLinkTransaction">EmbeddedNodeKeyLinkTransaction</a>, <a href="#embeddedvotingkeylinktransaction" title="binary layout for an embedded voting key link transaction">EmbeddedVotingKeyLinkTransaction</a>, <a href="#embeddedvrfkeylinktransaction" title="binary layout for an embedded vrf key link transaction">EmbeddedVrfKeyLinkTransaction</a>, <a href="#embeddedhashlocktransaction" title="binary layout for an embedded hash lock transaction">EmbeddedHashLockTransaction</a>, <a href="#embeddedsecretlocktransaction" title="binary layout for an embedded secret lock transaction">EmbeddedSecretLockTransaction</a>, <a href="#embeddedsecretprooftransaction" title="binary layout for an embedded secret proof transaction">EmbeddedSecretProofTransaction</a>, <a href="#embeddedaccountmetadatatransaction" title="binary layout for an embedded account metadata transaction">EmbeddedAccountMetadataTransaction</a>, <a href="#embeddedmosaicmetadatatransaction" title="binary layout for an embedded mosaic metadata transaction">EmbeddedMosaicMetadataTransaction</a>, <a href="#embeddednamespacemetadatatransaction" title="binary layout for an embedded namespace metadata transaction">EmbeddedNamespaceMetadataTransaction</a>, <a href="#embeddedmosaicdefinitiontransaction" title="binary layout for an embedded mosaic definition transaction">EmbeddedMosaicDefinitionTransaction</a>, <a href="#embeddedmosaicsupplychangetransaction" title="binary layout for an embedded mosaic supply change transaction">EmbeddedMosaicSupplyChangeTransaction</a>, <a href="#embeddedmultisigaccountmodificationtransaction" title="binary layout for an embedded multisig account modification transaction">EmbeddedMultisigAccountModificationTransaction</a>, <a href="#embeddedaddressaliastransaction" title="binary layout for an embedded address alias transaction">EmbeddedAddressAliasTransaction</a>, <a href="#embeddedmosaicaliastransaction" title="binary layout for an embedded mosaic alias transaction">EmbeddedMosaicAliasTransaction</a>, <a href="#embeddednamespaceregistrationtransaction" title="binary layout for an embedded namespace registration transaction">EmbeddedNamespaceRegistrationTransaction</a>, <a href="#embeddedaccountaddressrestrictiontransaction" title="binary layout for an embedded account address restriction transaction">EmbeddedAccountAddressRestrictionTransaction</a>, <a href="#embeddedaccountmosaicrestrictiontransaction" title="binary layout for an embedded account mosaic restriction transaction">EmbeddedAccountMosaicRestrictionTransaction</a>, <a href="#embeddedaccountoperationrestrictiontransaction" title="binary layout for an embedded account operation restriction transaction">EmbeddedAccountOperationRestrictionTransaction</a>, <a href="#embeddedmosaicaddressrestrictiontransaction" title="binary layout for an embedded mosaic address restriction transaction">EmbeddedMosaicAddressRestrictionTransaction</a>, <a href="#embeddedmosaicglobalrestrictiontransaction" title="binary layout for an embedded mosaic global restriction transaction">EmbeddedMosaicGlobalRestrictionTransaction</a>, <a href="#embeddedtransfertransaction" title="binary layout for an embedded transfer transaction">EmbeddedTransferTransaction</a>
+   <a href="#embeddedaccountkeylinktransaction" title="Embedded version of AccountKeyLinkTransaction.">EmbeddedAccountKeyLinkTransaction</a>, <a href="#embeddednodekeylinktransaction" title="Embedded version of NodeKeyLinkTransaction.">EmbeddedNodeKeyLinkTransaction</a>, <a href="#embeddedvotingkeylinktransaction" title="binary layout for an embedded voting key link transaction">EmbeddedVotingKeyLinkTransaction</a>, <a href="#embeddedvrfkeylinktransaction" title="binary layout for an embedded vrf key link transaction">EmbeddedVrfKeyLinkTransaction</a>, <a href="#embeddedhashlocktransaction" title="binary layout for an embedded hash lock transaction">EmbeddedHashLockTransaction</a>, <a href="#embeddedsecretlocktransaction" title="binary layout for an embedded secret lock transaction">EmbeddedSecretLockTransaction</a>, <a href="#embeddedsecretprooftransaction" title="binary layout for an embedded secret proof transaction">EmbeddedSecretProofTransaction</a>, <a href="#embeddedaccountmetadatatransaction" title="binary layout for an embedded account metadata transaction">EmbeddedAccountMetadataTransaction</a>, <a href="#embeddedmosaicmetadatatransaction" title="binary layout for an embedded mosaic metadata transaction">EmbeddedMosaicMetadataTransaction</a>, <a href="#embeddednamespacemetadatatransaction" title="binary layout for an embedded namespace metadata transaction">EmbeddedNamespaceMetadataTransaction</a>, <a href="#embeddedmosaicdefinitiontransaction" title="binary layout for an embedded mosaic definition transaction">EmbeddedMosaicDefinitionTransaction</a>, <a href="#embeddedmosaicsupplychangetransaction" title="binary layout for an embedded mosaic supply change transaction">EmbeddedMosaicSupplyChangeTransaction</a>, <a href="#embeddedmultisigaccountmodificationtransaction" title="binary layout for an embedded multisig account modification transaction">EmbeddedMultisigAccountModificationTransaction</a>, <a href="#embeddedaddressaliastransaction" title="binary layout for an embedded address alias transaction">EmbeddedAddressAliasTransaction</a>, <a href="#embeddedmosaicaliastransaction" title="binary layout for an embedded mosaic alias transaction">EmbeddedMosaicAliasTransaction</a>, <a href="#embeddednamespaceregistrationtransaction" title="binary layout for an embedded namespace registration transaction">EmbeddedNamespaceRegistrationTransaction</a>, <a href="#embeddedaccountaddressrestrictiontransaction" title="binary layout for an embedded account address restriction transaction">EmbeddedAccountAddressRestrictionTransaction</a>, <a href="#embeddedaccountmosaicrestrictiontransaction" title="binary layout for an embedded account mosaic restriction transaction">EmbeddedAccountMosaicRestrictionTransaction</a>, <a href="#embeddedaccountoperationrestrictiontransaction" title="binary layout for an embedded account operation restriction transaction">EmbeddedAccountOperationRestrictionTransaction</a>, <a href="#embeddedmosaicaddressrestrictiontransaction" title="binary layout for an embedded mosaic address restriction transaction">EmbeddedMosaicAddressRestrictionTransaction</a>, <a href="#embeddedmosaicglobalrestrictiontransaction" title="binary layout for an embedded mosaic global restriction transaction">EmbeddedMosaicGlobalRestrictionTransaction</a>, <a href="#embeddedtransfertransaction" title="binary layout for an embedded transfer transaction">EmbeddedTransferTransaction</a>
    </tr></td>
 
    </tbody></table>
@@ -11625,7 +11625,7 @@ AccountKeyLinkTransactionBody
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/account_link/account_key_link.cats#L4">schema</a></td></tr>
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/account_link/src/model/AccountKeyLinkTransaction.h#L32">catapult model</a></td></tr>
        </table></div>
-   <p>Shared content between <a href="#accountkeylinktransactionbody" title="Shared content between AccountKeyLinkTransactionBody and EmbeddedAccountKeyLinkTransaction">AccountKeyLinkTransactionBody</a> and <a href="#embeddedaccountkeylinktransaction" title="Embedded version of AccountKeyLinkTransaction">EmbeddedAccountKeyLinkTransaction</a> </p>
+   <p>Shared content between <a href="#accountkeylinktransactionbody" title="Shared content between AccountKeyLinkTransactionBody and EmbeddedAccountKeyLinkTransaction.">AccountKeyLinkTransactionBody</a> and <a href="#embeddedaccountkeylinktransaction" title="Embedded version of AccountKeyLinkTransaction.">EmbeddedAccountKeyLinkTransaction</a>. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -11637,7 +11637,7 @@ AccountKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -11645,11 +11645,11 @@ AccountKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
-   <a href="#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a>, <a href="#embeddedaccountkeylinktransaction" title="Embedded version of AccountKeyLinkTransaction">EmbeddedAccountKeyLinkTransaction</a>
+   <a href="#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a>, <a href="#embeddedaccountkeylinktransaction" title="Embedded version of AccountKeyLinkTransaction.">EmbeddedAccountKeyLinkTransaction</a>
    </tr></td>
 
    </tbody></table>
@@ -11667,7 +11667,7 @@ NodeKeyLinkTransactionBody
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/account_link/node_key_link.cats#L4">schema</a></td></tr>
        <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/account_link/src/model/NodeKeyLinkTransaction.h#L32">catapult model</a></td></tr>
        </table></div>
-   <p>Shared content between <a href="#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> and <a href="#embeddednodekeylinktransaction" title="Embedded version of NodeKeyLinkTransaction">EmbeddedNodeKeyLinkTransaction</a> </p>
+   <p>Shared content between <a href="#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> and <a href="#embeddednodekeylinktransaction" title="Embedded version of NodeKeyLinkTransaction.">EmbeddedNodeKeyLinkTransaction</a>. </p>
    </td></tr></table>
 
 .. raw:: html
@@ -11679,7 +11679,7 @@ NodeKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -11687,11 +11687,11 @@ NodeKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
-   <a href="#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a>, <a href="#embeddednodekeylinktransaction" title="Embedded version of NodeKeyLinkTransaction">EmbeddedNodeKeyLinkTransaction</a>
+   <a href="#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a>, <a href="#embeddednodekeylinktransaction" title="Embedded version of NodeKeyLinkTransaction.">EmbeddedNodeKeyLinkTransaction</a>
    </tr></td>
 
    </tbody></table>
@@ -11729,7 +11729,7 @@ Cosignature
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>cosigner public key </p></td>
    </tr>
    <tr>
@@ -11737,7 +11737,7 @@ Cosignature
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">signature</code></td>
-   <td><a href="#signature" title="">Signature</a></td>
+   <td><a href="#signature" title="A 64-byte (512 bits) array certifying that the signed data has not been modified.">Signature</a></td>
    <td><p>cosigner signature </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11770,7 +11770,7 @@ AggregateTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">transactions_hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>aggregate hash of an aggregate's transactions </p></td>
    </tr>
    <tr>
@@ -11836,7 +11836,7 @@ VotingKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#votingpublickey" title="">VotingPublicKey</a></td>
+   <td><a href="#votingpublickey" title="A PublicKey used for voting during the finalization process.">VotingPublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -11844,7 +11844,7 @@ VotingKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">start_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>start finalization epoch </p></td>
    </tr>
    <tr>
@@ -11852,7 +11852,7 @@ VotingKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">end_epoch</code></td>
-   <td><a href="#finalizationepoch" title="">FinalizationEpoch</a></td>
+   <td><a href="#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
    <td><p>end finalization epoch </p></td>
    </tr>
    <tr>
@@ -11860,7 +11860,7 @@ VotingKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11894,7 +11894,7 @@ VrfKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="#publickey" title="">PublicKey</a></td>
+   <td><a href="#publickey" title="A 32-byte (256 bits) integer derived from a private key.">PublicKey</a></td>
    <td><p>linked public key </p></td>
    </tr>
    <tr>
@@ -11902,7 +11902,7 @@ VrfKeyLinkTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">link_action</code></td>
-   <td><a href="#linkaction" title="enumeration of link actions">LinkAction</a></td>
+   <td><a href="#linkaction" title="Link actions.">LinkAction</a></td>
    <td><p>link action </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11936,7 +11936,7 @@ HashLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a></td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a></td>
    <td><p>lock mosaic </p></td>
    </tr>
    <tr>
@@ -11944,7 +11944,7 @@ HashLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>number of blocks for which a lock should be valid </p></td>
    </tr>
    <tr>
@@ -11952,7 +11952,7 @@ HashLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">hash</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>lock hash </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -11986,7 +11986,7 @@ SecretLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>locked mosaic recipient address </p></td>
    </tr>
    <tr>
@@ -11994,7 +11994,7 @@ SecretLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>secret </p></td>
    </tr>
    <tr>
@@ -12002,7 +12002,7 @@ SecretLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a></td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a></td>
    <td><p>locked mosaic </p></td>
    </tr>
    <tr>
@@ -12010,7 +12010,7 @@ SecretLockTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>number of blocks for which a lock should be valid </p></td>
    </tr>
    <tr>
@@ -12052,7 +12052,7 @@ SecretProofTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>locked mosaic recipient address </p></td>
    </tr>
    <tr>
@@ -12060,7 +12060,7 @@ SecretProofTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">secret</code></td>
-   <td><a href="#hash256" title="">Hash256</a></td>
+   <td><a href="#hash256" title="A 32-byte (256 bits) hash.">Hash256</a></td>
    <td><p>secret </p></td>
    </tr>
    <tr>
@@ -12118,7 +12118,7 @@ AccountMetadataTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -12184,7 +12184,7 @@ MosaicMetadataTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -12200,7 +12200,7 @@ MosaicMetadataTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>target mosaic identifier </p></td>
    </tr>
    <tr>
@@ -12258,7 +12258,7 @@ NamespaceMetadataTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>metadata target address </p></td>
    </tr>
    <tr>
@@ -12332,7 +12332,7 @@ MosaicDefinitionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>mosaic identifier </p></td>
    </tr>
    <tr>
@@ -12340,7 +12340,7 @@ MosaicDefinitionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>mosaic duration </p></td>
    </tr>
    <tr>
@@ -12398,7 +12398,7 @@ MosaicSupplyChangeTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>affected mosaic identifier </p></td>
    </tr>
    <tr>
@@ -12406,7 +12406,7 @@ MosaicSupplyChangeTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">delta</code></td>
-   <td><a href="#amount" title="">Amount</a></td>
+   <td><a href="#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
    <td><p>change amount </p></td>
    </tr>
    <tr>
@@ -12488,7 +12488,7 @@ MultisigAccountModificationTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_additions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[address_additions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[address_additions_count]</td>
    <td><p>cosignatory address additions </p></td>
    </tr>
    <tr>
@@ -12496,7 +12496,7 @@ MultisigAccountModificationTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address_deletions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[address_deletions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[address_deletions_count]</td>
    <td><p>cosignatory address deletions </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -12538,7 +12538,7 @@ AddressAliasTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">address</code></td>
-   <td><a href="#address" title="">Address</a></td>
+   <td><a href="#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
    <td><p>aliased address </p></td>
    </tr>
    <tr>
@@ -12588,7 +12588,7 @@ MosaicAliasTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#mosaicid" title="">MosaicId</a></td>
+   <td><a href="#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
    <td><p>aliased mosaic identifier </p></td>
    </tr>
    <tr>
@@ -12630,7 +12630,7 @@ NamespaceRegistrationTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">duration</code></td>
-   <td><a href="#blockduration" title="">BlockDuration</a></td>
+   <td><a href="#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
    <td><p>namespace duration </p></td>
    </tr>
    <tr>
@@ -12735,7 +12735,7 @@ AccountAddressRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_additions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_additions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_additions_count]</td>
    <td><p>account restriction additions </p></td>
    </tr>
    <tr>
@@ -12743,7 +12743,7 @@ AccountAddressRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_deletions</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
    <td><p>account restriction deletions </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -12808,7 +12808,7 @@ AccountMosaicRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_additions</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_additions_count]</td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_additions_count]</td>
    <td><p>account restriction additions </p></td>
    </tr>
    <tr>
@@ -12816,7 +12816,7 @@ AccountMosaicRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">restriction_deletions</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a>&ZeroWidthSpace;[restriction_deletions_count]</td>
    <td><p>account restriction deletions </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -12923,7 +12923,7 @@ MosaicAddressRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic to which the restriction applies </p></td>
    </tr>
    <tr>
@@ -12955,7 +12955,7 @@ MosaicAddressRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">target_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>address being restricted </p></td>
    </tr>
    <tr><td colspan="6"><br/>Included in: 
@@ -12989,7 +12989,7 @@ MosaicGlobalRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic being restricted </p></td>
    </tr>
    <tr>
@@ -12997,7 +12997,7 @@ MosaicGlobalRestrictionTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">reference_mosaic_id</code></td>
-   <td><a href="#unresolvedmosaicid" title="">UnresolvedMosaicId</a></td>
+   <td><a href="#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
    <td><p>identifier of the mosaic providing the restriction key </p></td>
    </tr>
    <tr>
@@ -13071,7 +13071,7 @@ TransferTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">recipient_address</code></td>
-   <td><a href="#unresolvedaddress" title="">UnresolvedAddress</a></td>
+   <td><a href="#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
    <td><p>recipient address </p></td>
    </tr>
    <tr>
@@ -13111,7 +13111,7 @@ TransferTransactionBody
    <td>&nbsp;</td>
    <td>&nbsp;</td>
    <td><code class="docutils literal">mosaics</code></td>
-   <td><a href="#unresolvedmosaic" title="binary layout for an unresolved mosaic">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
+   <td><a href="#unresolvedmosaic" title="A quantity of a certain mosaic, specified through an id or an alias.">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
    <td><p>attached mosaics </p></td>
    </tr>
    <tr>
