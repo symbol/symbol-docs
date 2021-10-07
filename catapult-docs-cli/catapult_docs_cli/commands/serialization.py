@@ -191,7 +191,8 @@ class SerializationCommand(Command):
                     # Do not look for keywords inside [markdown links](like this one).
                     ignore_keywords = True
                 # Separate any non-keyword chars (like parenthesis or punctuation) before looking words up
-                m = re.search(r'^([^a-zA-Z]*)([a-zA-Z]+)([^a-zA-Z]*)$', word)
+                # (And special-case an optional ending 's' for things like "MosaicId's")
+                m = re.search(r'^([^a-zA-Z]*)([a-zA-Z]+)([^a-rt-zA-Z]*)$', word)
                 if not ignore_keywords and m and m.group(2) in self.types:
                     output += m.group(1) + self.type_description(self.types[m.group(2)]) + m.group(3)
                 elif word == '\\note':
