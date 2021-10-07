@@ -186,8 +186,10 @@ class SerializationCommand(Command):
             else:
                 output += '<br/>'
             for word in line.split():
-                if word in self.types:
-                    output += self.type_description(self.types[word])
+                # Separate any non-keyword chars (like parenthesis or punctuation) before looking words up
+                m = re.search(r'^([^a-zA-Z]*)([a-zA-Z]+)([^a-zA-Z]*)$', word)
+                if m and m.group(2) in self.types:
+                    output += m.group(1) + self.type_description(self.types[m.group(2)]) + m.group(3)
                 elif word == '\\note':
                     output += '<br/><b>Note:</b>'
                 else:
