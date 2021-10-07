@@ -108,6 +108,8 @@ When there is low connectivity, or many bad actors, finalization can take longer
 
 Thus, clients that rely on the immutability of the blockchain history should only trust **transactions from finalized blocks**.
 
+Finalization rounds are actually called **Epochs** and happen every **1440 blocks** or about **12h** (see ``votingSetGrouping`` in the :ref:`network properties <config-network-properties>`). Each Epoch is divided in multiple **Finalization Points** (See the |techref| section 15.2 for more details).
+
 ********************
 Related transactions
 ********************
