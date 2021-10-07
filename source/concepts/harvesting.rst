@@ -104,6 +104,26 @@ As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is u
 
 See the :doc:`Harvesting guides <../guides/harvesting/index>` for step-by-step instructions on how to activate delegated harvesting and check if the delegation request has been granted.
 
+.. _persistentdelegationrequesttransaction:
+
+Persistent Delegation Request Transaction
+-----------------------------------------
+
+This is actually a :ref:`transfertransaction` sent to the node owner's account with a special 132-byte **message**, formatted as a 264-characters hexadecimal string:
+
+.. csv-table::
+    :header:  "Bytes", "Hex digits", "Description"
+    :widths: 10 10 80
+    :delim: ;
+
+    8; 16; Header: ``FE2A8061577301E2``
+    32; 64; Ephemeral keypair public key.
+    ;;**Below is encoded with the ephemeral key:**
+    16; 32; AES GCM tag.
+    12; 24; AES GCM initialization vector.
+    32; 64; remoteLinkedPrivateKey
+    32; 64; vrfPrivateKey
+
 ********************
 Related transactions
 ********************
