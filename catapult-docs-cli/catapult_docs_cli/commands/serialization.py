@@ -26,9 +26,9 @@ __md.stripTopLevelTags = False
 
 def make_anchor(type):
     """Takes a type name in CamelCase and returns the label (anchor) equivalent which is
-    words separated by hyphens, as Sphinx likes them.
+    all lower case, as the labels Sphinx generates for headers.
     """
-    return re.sub(r'(?<!^)(?=[A-Z])', '-', type).lower()
+    return type.lower()
 
 def make_keyword(keyword):
     """Adds HTML <code> tags around input
