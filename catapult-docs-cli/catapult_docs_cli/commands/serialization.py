@@ -155,20 +155,22 @@ class SerializationCommand(Command):
                     var = 1
         return (size, var)
 
-    def type_description(self, element):
-        """Receives a YAML object describing a type and returns an HTML string describing it.
-        For example: "byte[4]", "enum (2 bytes)" or an HTML hyperlink to another type in the page.
+    def field_description(self, field):
+        """Receives a YAML object describing a struct field and returns an HTML string.
+        For example: "byte[4]", or an HTML hyperlink to another type in the page.
         """
-        if element['type'] == 'byte':
-            return 'byte[{}]'.format(element['size'])
-        elif element['type'] == 'enum':
-            return 'enum ({} bytes)'.format(element['size'])
-        elif element['type'] == 'struct':
-            return '<a href="#{}" title="{}">{}</a>'.format(make_anchor(element['name']), make_title(element['comments']), element['name'])
+        if field['type'] == 'byte':
+            return 'byte[{}]'.format(field['size'])
         else:
-            # Add the array indicator only if the type has a size
-            return '<a href="#{}" title="{}">{}</a>{}'.format(make_anchor(element['type']), make_title(self.types[element['type']]['comments']), element['type'],
-                '' if element.get('size', 0) == 0 else '&ZeroWidthSpace;[{}]'.format(element['size']))
+            # Add the array indicator only if the field has a size
+            return '<a href="#{}" title="{}">{}</a>{}'.format(make_anchor(field['type']), make_title(self.types[field['type']]['comments']), field['type'],
+                '' if field.get('size', 0) == 0 else '&ZeroWidthSpace;[{}]'.format(field['size']))
+
+    def type_description(self, element):
+        """Receives a YAML object describing a type and returns an HTML string containing
+        a hyperlink to its section in the page.
+        """
+        return '<a href="#{}" title="{}">{}</a>'.format(make_anchor(element['name']), make_title(element['comments']), element['name'])
 
     def parse_comment(self, comment):
         """Build proper HTML comments:
@@ -292,7 +294,7 @@ class SerializationCommand(Command):
             print('   <td{}>&nbsp;</td>'.format('' if indent < 2 else ' class="indentation-cell"'))
             print('   <td{}>&nbsp;</td>'.format('' if indent < 3 else ' class="indentation-cell"'))
             print('   <td>{}</td>'.format(make_keyword(make_breakable(v['name']))))
-            print('   <td>{}</td>'.format(self.type_description(v)))
+            print('   <td>{}</td>'.format(self.field_description(v)))
             print('   <td>{}</td>'.format(comment))
             print('   </tr>')
 
