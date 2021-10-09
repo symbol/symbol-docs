@@ -26,9 +26,10 @@ def load_config(config):
 @click.option('--mainnet-report', '-t', default='target/report/peer-node-config.csv', help='file containing the CSV report from a symbol-bootstrap MAINNET configuration')
 @click.option('--schema', '-s', default='symbol.yaml', help='YAML file containing the whole Symbol schema obtained through the parser.')
 @click.option('--source-schema-path', '-h', default='../catbuffer-schemas/symbol', help='Path to local checkout of the catbuffer-schemas repo.')
-@click.option('--source-catapult-path', '-h', default='../catapult-src', help='Path to local checkout of the catapult-client repo.')
+@click.option('--source-catapult-path', '-a', default='../catapult-src', help='Path to local checkout of the catapult-client repo.')
+@click.option('--dst-path', '-d', default='../symbol-docs/source/serialization', help='Path to store generated files.')
 @click.argument('command', required=True)
-def main(command, config, mainnet_report, schema, source_schema_path, source_catapult_path):
+def main(command, config, mainnet_report, schema, source_schema_path, source_catapult_path, dst_path):
     """ COMMAND: properties | status-errors | cli-usage | serialization
     """
     config = load_config(config)
@@ -36,6 +37,7 @@ def main(command, config, mainnet_report, schema, source_schema_path, source_cat
     config['schema'] = schema
     config['source_schema_path'] = source_schema_path
     config['source_catapult_path'] = source_catapult_path
+    config['dst_path'] = dst_path
     config['core_version'] = subprocess.run(['git', '--git-dir', config['serverPath'] + '.git', 'describe', '--tags', '--abbrev=0'], stdout=subprocess.PIPE).stdout.decode('utf-8')
     if command == 'properties':
         PropertiesCommand(config).execute()

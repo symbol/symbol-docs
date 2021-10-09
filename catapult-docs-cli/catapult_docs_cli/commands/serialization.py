@@ -204,65 +204,67 @@ class SerializationCommand(Command):
                     ignore_keywords = False
         return markdown(output).replace('<code>', '<code class="docutils literal">')
 
-    def print_header(self, element, size, var):
-        """Prints header common to Enums and Structs, including:
+    def print_rst_header(self, element, index_file):
+        """Prints RST header common to Enums and Structs, including:
         - A RST label so this type can be referenced from other places
         - A RST header so Sphinx adds <h3> tags
+        """
+        name = element['name']
+        print('.. _{}:'.format(make_anchor(name)), file=index_file)
+        print(file=index_file)
+        print(name, file=index_file)
+        print('=' * len(name), file=index_file)
+        print(file=index_file)
+
+    def print_html_header(self, element, size, var, html_file):
+        """Prints HTML header common to Enums and Structs, including:
         - An two-cells HTML table containing the type's description on the left and
           an info box on the right with type size and code links.
         """
         name = element['name']
-        print('.. _{}:'.format(make_anchor(name)))
-        print()
-        print(name)
-        print('=' * len(name))
-        print()
-
-        print('.. raw:: html')
-        print()
-        print('   <table style="width: 100%;"><tr><td>')
-        print('       <div class="side-info"><table>')
-        print('       <tr><td class="side-info-icon">&varr;</td><td>Size: {}</td></tr>'.format(make_size_label(size, var)))
+        print('<table style="width: 100%;"><tr><td>', file=html_file)
+        print('    <div class="side-info"><table>', file=html_file)
+        print('    <tr><td class="side-info-icon">&varr;</td><td>Size: {}</td></tr>'.format(make_size_label(size, var)), file=html_file)
         if name in self.type_schema_locations:
-            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
+            print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
                 '<td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/{}#L{}">schema</a></td></tr>'.format( \
-                self.type_schema_locations[name][0], self.type_schema_locations[name][1]))
+                    self.type_schema_locations[name][0], self.type_schema_locations[name][1]), file=html_file)
         if name in self.type_catapult_locations:
-            print('       <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
+            print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
                 '<td><a href="https://github.com/symbol/catapult-client/blob/main/{}#L{}">catapult model</a></td></tr>'.format(
-                self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]))
-        print('       </table></div>')
-        print('   ' + self.parse_comment(element['comments']))
-        print('   </td></tr></table>')
-        print()
+                    self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]), file=html_file)
+        print('    </table></div>', file=html_file)
+        print(self.parse_comment(element['comments']), file=html_file)
+        print('</td></tr></table>', file=html_file)
+        print(file=html_file)
 
-    def print_type(self, element):
+    def print_type(self, element, index_file):
         """Adds a row to the basic types HTML table.
         """
-        print('   <tr id="{}">'.format(make_anchor(element['name'])))
-        print('   <td><b>{}</b></td>'.format(element['name']))
-        print('   <td>{}&nbsp;{}byte{}</td>'.format(element['size'], 'u' if element['signedness'] == 'unsigned' else '', 's' if element['size'] > 1 else ''))
-        print('   <td>{}</td>'.format(self.parse_comment(element['comments'])))
-        print('   </tr>')
+        print('   <tr id="{}">'.format(make_anchor(element['name'])), file=index_file)
+        print('   <td><b>{}</b></td>'.format(element['name']), file=index_file)
+        print('   <td>{}&nbsp;{}byte{}</td>'.
+            format(element['size'], 'u' if element['signedness'] == 'unsigned' else '', 's' if element['size'] > 1 else ''), file=index_file)
+        print('   <td>{}</td>'.format(self.parse_comment(element['comments'])), file=index_file)
+        print('   </tr>', file=index_file)
 
     def print_enum(self, element):
         """Describes an Enum type using the common header and an HTML table with all the values.
         """
-        self.print_header(element, element['size'], 0)
-        print('.. raw:: html')
-        print()
-        print('   <table class="big-table"><tbody>')
-        print('   <tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>')
-        for v in element['values']:
-            print('   <tr>')
-            print('   <td>{}</td>'.format(hex(v['value'])))
-            print('   <td>{}</td>'.format(make_keyword(v['name'])))
-            print('   <td>{}</td>'.format(self.parse_comment(v['comments'])))
-            print('   </tr>')
-        print('   </tbody></table>')
-        print()
+        filename = os.path.join(self.config['dst_path'], '{}.html'.format(element['name']))
+        with open(filename, 'w') as html_file:
+            self.print_html_header(element, element['size'], 0, html_file)
+            print('<table class="big-table"><tbody>', file=html_file)
+            print('<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>', file=html_file)
+            for v in element['values']:
+                print('<tr>', file=html_file)
+                print('<td>{}</td>'.format(hex(v['value'])), file=html_file)
+                print('<td>{}</td>'.format(make_keyword(v['name'])), file=html_file)
+                print('<td>{}</td>'.format(self.parse_comment(v['comments'])), file=html_file)
+                print('</tr>', file=html_file)
+            print('</tbody></table>', file=html_file)
 
-    def print_struct_content(self, element, indent):
+    def print_struct_content(self, element, indent, html_file):
         """Internal method to describe a Struct type. It calls itself to describe inlined structs, increasing the `indent` parameter.
         It prints HTML table rows so it assumes an HTML table with the correct number of columns has been already opened.
         Each entry in the `layout` array is printed as a row with name, type and description, except for inline struct which are expanded
@@ -278,16 +280,16 @@ class SerializationCommand(Command):
                 # If we ever have more than these many levels this will need to be made more generic.
                 if indent < 1:
                     print('   <tr><td colspan="6" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
-                        format(self.type_description(self.types[v['type']]), size_label))
+                        format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 elif indent < 2:
                     print('   <tr><td class="indentation-cell"></td>'
                         '<td colspan="5" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
-                        format(self.type_description(self.types[v['type']]), size_label))
+                        format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 else:
                     print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td>'
                         '<td colspan="4" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
-                        format(self.type_description(self.types[v['type']]), size_label))
-                self.print_struct_content(self.types[v['type']], indent + 1)
+                          format(self.type_description(self.types[v['type']]), size_label), file=html_file)
+                self.print_struct_content(self.types[v['type']], indent + 1, html_file)
                 continue
             elif disposition == 'const':
                 type = self.types.get(v['type'])
@@ -298,14 +300,14 @@ class SerializationCommand(Command):
             elif disposition == 'reserved':
                 comment = '<b>reserved</b> {}<br/>'.format(make_keyword(v['value']))
             comment += self.parse_comment(v['comments'])
-            print('   <tr>')
-            print('   <td{}>&nbsp;</td>'.format('' if indent < 1 else ' class="indentation-cell"'))
-            print('   <td{}>&nbsp;</td>'.format('' if indent < 2 else ' class="indentation-cell"'))
-            print('   <td{}>&nbsp;</td>'.format('' if indent < 3 else ' class="indentation-cell"'))
-            print('   <td>{}</td>'.format(make_keyword(make_breakable(v['name']))))
-            print('   <td>{}</td>'.format(self.field_description(v)))
-            print('   <td>{}</td>'.format(comment))
-            print('   </tr>')
+            print('   <tr>', file=html_file)
+            print('   <td{}>&nbsp;</td>'.format('' if indent < 1 else ' class="indentation-cell"'), file=html_file)
+            print('   <td{}>&nbsp;</td>'.format('' if indent < 2 else ' class="indentation-cell"'), file=html_file)
+            print('   <td{}>&nbsp;</td>'.format('' if indent < 3 else ' class="indentation-cell"'), file=html_file)
+            print('   <td>{}</td>'.format(make_keyword(make_breakable(v['name']))), file=html_file)
+            print('   <td>{}</td>'.format(self.field_description(v)), file=html_file)
+            print('   <td>{}</td>'.format(comment), file=html_file)
+            print('   </tr>', file=html_file)
 
     def print_struct(self, element):
         """Describes a Struct type using the common header and an HTML table with all the fields.
@@ -314,20 +316,19 @@ class SerializationCommand(Command):
         It adds a last row in the table with the list of all types which include this struct (only present
         in inline structs).
         """
-        (size, var) = self.calc_total_type_size(element)
-        self.print_header(element, size, var)
-        print('.. raw:: html')
-        print()
-        print('   <table class="big-table"><tbody>')
-        print('   <tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>')
-        self.print_struct_content(element, 0)
-        if len(element['inlined-from']) > 0:
-            print('   <tr><td colspan="6"><br/>Included in: ')
-            print('   %s' % ', '.join(self.type_description(self.types[x]) for x in element['inlined-from']))
-            print('   </tr></td>')
-            print()
-        print('   </tbody></table>')
-        print()
+        filename = os.path.join(self.config['dst_path'], '{}.html'.format(element['name']))
+        with open(filename, 'w') as html_file:
+            (size, var) = self.calc_total_type_size(element)
+            self.print_html_header(element, size, var, html_file)
+            print('<table class="big-table"><tbody>', file=html_file)
+            print('<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>', file=html_file)
+            self.print_struct_content(element, 0, html_file)
+            if len(element['inlined-from']) > 0:
+                print('<tr><td colspan="6"><br/>Included in: ', file=html_file)
+                print('%s' % ', '.join(self.type_description(self.types[x]) for x in element['inlined-from']), file=html_file)
+                print('</tr></td>', file=html_file)
+                print(file=html_file)
+            print('</tbody></table>', file=html_file)
 
     def execute(self):
         """Contains all the logic to execute the serialization command.
@@ -369,57 +370,73 @@ class SerializationCommand(Command):
         self.type_catapult_locations = find_catapult_model_locations(self.config['source_catapult_path'])
 
         # Print document title and introduction
-        print('#############')
-        print('Serialization')
-        print('#############')
-        print()
-        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.')
-        print()
+        filename = os.path.join(self.config['dst_path'], 'index.rst')
+        index_file = open(filename, 'w')
+        print('#############', file=index_file)
+        print('Serialization', file=index_file)
+        print('#############', file=index_file)
+        print(file=index_file)
+        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.', file=index_file)
+        print(file=index_file)
 
         # Hide level 4 headers from local TOC using CSS: there's too many of them and I could not find
         # a Sphinx-friendly way of doing it.
-        print('.. raw:: html')
-        print()
-        print('   <style>.bs-sidenav ul ul ul > li {display: none;}</style>')
-        print()
+        print('.. raw:: html', file=index_file)
+        print(file=index_file)
+        print('   <style>.bs-sidenav ul ul ul > li {display: none;}</style>', file=index_file)
+        print(file=index_file)
 
         # Process all basic types
-        print('Basic Types')
-        print('***********')
-        print()
-        print('.. raw:: html')
-        print()
-        print('   <table class="big-table"><tbody>')
-        print('   <tr><th>Name</th><th>Size</th><th style="width: 100%">Description</th></tr>')
+        print('Basic Types', file=index_file)
+        print('***********', file=index_file)
+        print(file=index_file)
+        print('.. raw:: html', file=index_file)
+        print(file=index_file)
+        print('   <table class="big-table"><tbody>', file=index_file)
+        print('   <tr><th>Name</th><th>Size</th><th style="width: 100%">Description</th></tr>', file=index_file)
         for e in self.schema:
             if e['type'] == 'byte':
-                self.print_type(e)
-        print('   </tbody></table>')
-        print()
+                self.print_type(e, index_file)
+        print('   </tbody></table>', file=index_file)
+        print(file=index_file)
 
         # Process all enums
-        print('Enumerations')
-        print('************')
-        print()
+        print('Enumerations', file=index_file)
+        print('************', file=index_file)
+        print(file=index_file)
         for e in self.schema:
             if e['type'] == 'enum':
+                self.print_rst_header(e, index_file)
+                print('.. raw:: html', file=index_file)
+                print('   :file: {}.html'.format(e['name']), file=index_file)
+                print(file=index_file)
                 self.print_enum(e)
 
         # Process all "user" structs
-        print('Structures')
-        print('**********')
-        print()
+        print('Structures', file=index_file)
+        print('**********', file=index_file)
+        print(file=index_file)
         for e in self.schema:
             if e['type'] == 'struct' and len(e['inlined-from']) == 0:
+                self.print_rst_header(e, index_file)
+                print('.. raw:: html', file=index_file)
+                print('   :file: {}.html'.format(e['name']), file=index_file)
+                print(file=index_file)
                 self.print_struct(e)
 
         # Process all "inner" structs
-        print('Inner Structures')
-        print('****************')
-        print()
-        print('These are structures only meant to be included inside other structures.')
-        print('Their description is already present in the containing structures above and is only repeated here for completeness.')
-        print()
+        print('Inner Structures', file=index_file)
+        print('****************', file=index_file)
+        print(file=index_file)
+        print('These are structures only meant to be included inside other structures.', file=index_file)
+        print('Their description is already present in the containing structures above and is only repeated here for completeness.', file=index_file)
+        print(file=index_file)
         for e in self.schema:
             if e['type'] == 'struct' and len(e['inlined-from']) > 0:
+                self.print_rst_header(e, index_file)
+                print('.. raw:: html', file=index_file)
+                print('   :file: {}.html'.format(e['name']), file=index_file)
+                print(file=index_file)
                 self.print_struct(e)
+
+        index_file.close()
