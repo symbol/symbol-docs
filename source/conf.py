@@ -43,7 +43,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.examplecode',
+    'examplecode',
     'sphinxcontrib.mermaid',
     'sphinxcontrib.viewsource',
     'sphinx_tabs.tabs',
@@ -193,10 +193,10 @@ html_additional_pages = {'404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
-    app.add_stylesheet("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&display=swap")
-    app.add_stylesheet("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
-    app.add_stylesheet("css/custom.css")  # may also be an URL
-    app.add_javascript("js/custom.js")
+    app.add_css_file("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&display=swap")
+    app.add_css_file("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
+    app.add_css_file("css/custom.css")  # may also be an URL
+    app.add_css_file("js/custom.js")
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.

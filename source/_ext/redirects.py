@@ -24,10 +24,10 @@ def generate_redirects(app):
         app.info("Could not find redirects file at '%s'" % path)
         return
 
-    in_suffix = app.config.source_suffix[0]
+    in_suffix = next(iter(app.config.source_suffix))
 
     if not type(app.builder) == builders.StandaloneHTMLBuilder:
-        app.warn("The 'sphinxcontib-redirects' plugin is only supported "
+        print("The 'sphinxcontib-redirects' plugin is only supported "
                  "by the 'html' builder. Skipping...")
         return
 
@@ -35,7 +35,7 @@ def generate_redirects(app):
         for line in redirects.readlines():
             from_path, to_path = line.rstrip().split(' ')
 
-            app.debug("Redirecting '%s' to '%s'" % (from_path, to_path))
+            print("Redirecting '%s' to '%s'" % (from_path, to_path))
 
             from_path = from_path.replace(in_suffix, '.html')
             to_path_prefix = '..%s' % os.path.sep * (
