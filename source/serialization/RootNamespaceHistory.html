@@ -1,0 +1,68 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 91+ bytes = 0x5b+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/namespace_history.cats#L5">schema</a></td></tr>
+    </table></div>
+<p>binary layout for non-historical root namespace history </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>serialization version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">id</code></td>
+   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
+   <td><p>id of the root namespace history </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">owner_address</code></td>
+   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
+   <td><p>namespace owner address </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">lifetime</code></td>
+   <td><a href="/serialization#namespacelifetime" title="binary layout for namespace lifetime">NamespaceLifetime</a></td>
+   <td><p>lifetime in blocks </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">root_alias</code></td>
+   <td><a href="/serialization#namespacealias" title="binary layout for alias">NamespaceAlias</a></td>
+   <td><p>root namespace alias </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">children_count</code></td>
+   <td>byte[8]</td>
+   <td><p>number of children </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">paths</code></td>
+   <td><a href="/serialization#namespacepath" title="binary layout for a namespace path">NamespacePath</a>&ZeroWidthSpace;[children_count]</td>
+   <td><p>save child sub-namespace paths </p></td>
+   </tr>
+</tbody></table>

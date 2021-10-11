@@ -1,0 +1,129 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 164 bytes = 0xa4</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/account_link/node_key_link.cats#L14">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/account_link/src/model/NodeKeyLinkTransaction.h#L34">catapult model</a></td></tr>
+    </table></div>
+<p>This transaction is required for all accounts willing to activate delegated harvesting. <br/>Announce a <a href="/serialization#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> to link an account with a public key used by TLS to create sessions. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">TRANSACTION_VERSION</code></td>
+   <td>byte[1]</td>
+   <td><b>const</b> <code class="docutils literal">1</code><br/></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">TRANSACTION_TYPE</code></td>
+   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
+   <td><b>const</b> <code class="docutils literal">NODE_KEY_LINK</code> (<code class="docutils literal">0x424c</code>)<br/></td>
+   </tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a><span style="float:right">128 bytes = 0x80</span></td></tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">size</code></td>
+   <td>byte[4]</td>
+   <td><p>entity size </p></td>
+   </tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#verifiableentity" title="binary layout for a verifiable entity">VerifiableEntity</a><span style="float:right">68 bytes = 0x44</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="/serialization#signature" title="A 64-byte (512 bit) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">signature</code></td>
+   <td><a href="/serialization#signature" title="A 64-byte (512 bit) array certifying that the signed data has not been modified.">Signature</a></td>
+   <td><p>entity signature </p></td>
+   </tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">signer_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>entity signer's public key </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">entity_body_reserved_1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[1]</td>
+   <td><p>entity version </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">network</code></td>
+   <td><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></td>
+   <td><p>entity network </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">type</code></td>
+   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
+   <td><p>transaction type </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">fee</code></td>
+   <td><a href="/serialization#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
+   <td><p>transaction fee </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">deadline</code></td>
+   <td><a href="/serialization#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
+   <td><p>transaction deadline </p></td>
+   </tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction.">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">linked_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>linked public key </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">link_action</code></td>
+   <td><a href="/serialization#linkaction" title="Link actions.">LinkAction</a></td>
+   <td><p>link action </p></td>
+   </tr>
+</tbody></table>

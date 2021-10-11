@@ -5,59 +5,18 @@ Transaction
 A transaction generally represents a unit of work within a database system.
 In the case of blockchain, that is when an action signed by an :doc:`account <account>` changes its state.
 
+.. _transaction-types:
+
 *****************
 Transaction types
 *****************
-
-.. _transaction-types:
 
 |codename| supports many different transaction types.
 For example, there are transactions to transfer :doc:`mosaics <mosaic>` between accounts, messages or configure the ownership of accounts (including the use of :doc:`multisig <multisig-account>` rules), and more.
 
 The following transaction types are included in |codename| based networks by default:
 
-.. csv-table::
-    :header:  "Id",  "Type", "Description"
-    :widths: 20 30 50
-    :delim: ;
-
-    **Account Link**;;
-    0x414C; :ref:`accountkeylinktransaction`; Delegate the account importance to a proxy account. Required for all accounts willing to activate delegated harvesting.
-    0x424C; :ref:`nodekeylinktransaction`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
-    **Aggregate**;;
-    0x4141; :ref:`aggregatecompletetransaction`; Send transactions in batches to different accounts.
-    0x4241; :ref:`aggregatebondedtransaction`; Propose an arrangement of transactions between different accounts.
-    --; :ref:`Cosignature <cosignature>`; Cosign an AggregateBondedTransaction.
-    **Core**;;
-    0x4143; :ref:`votingkeylinktransaction`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
-    0x4243; :ref:`vrfkeylinktransaction`; Link an account with a VRF public key. Required for all harvesting eligible accounts.
-    **Mosaic**;;
-    0x414D; :ref:`mosaicdefinitiontransaction`; Create a new mosaic.
-    0x424D; :ref:`mosaicsupplychangetransaction`; Change the mosaic total supply.
-    **Namespace**;;
-    0x414E; :ref:`namespaceregistrationtransaction`; Register a namespace to organize your assets.
-    0x424E; :ref:`addressaliastransaction`; Attach a namespace name to an account.
-    0x434E; :ref:`mosaicaliastransaction`; Attach a namespace name to a mosaic.
-    **Metadata**;;
-    0x4144; :ref:`accountmetadatatransaction`; Associate a key-value state to an account.
-    0x4244; :ref:`mosaicmetadatatransaction`; Associate a key-value state to a mosaic.
-    0x4344; :ref:`namespacemetadatatransaction`; Associate a key-value state to a namespace.
-    **Multisignature**;;
-    0x4155; :ref:`multisigaccountmodificationtransaction`; Create or modify a multisig contract.
-    **Hash Lock**;;
-    0x4148; :ref:`hashlocktransaction`;  Lock a deposit needed to announce aggregate bonded transactions.
-    **Secret Lock**;;
-    0x4152; :ref:`secretlocktransaction`; Start a token swap between different chains.
-    0x4252; :ref:`secretprooftransaction`; Conclude a token swap between different chains.
-    **Account restriction**;;
-    0x4150; :ref:`accountaddressrestrictiontransaction`; Allow or block incoming and outgoing transactions for a given a set of addresses.
-    0x4250; :ref:`accountmosaicrestrictiontransaction`; Allow or block incoming transactions containing a given set of mosaics.
-    0x4350; :ref:`accountoperationrestrictiontransaction`; Allow or block outgoing transactions by transaction type.
-    **Mosaic restriction**;;
-    0x4151; :ref:`mosaicglobalrestrictiontransaction`; Set global rules to transfer a restrictable mosaic.
-    0x4251; :ref:`mosaicaddressrestrictiontransaction`; Set address specific rules to transfer a restrictable mosaic.
-    **Transfer**;;
-    0x4154; :ref:`transfertransaction`; Send mosaics and messages between two accounts.
+.. serializationref:: TransactionType
 
 Every base transaction type available in |codename| is defined as a separate :doc:`plugin <plugin>`.
 The plugin approach allows developers to introduce new transaction types without modifying the core engine or disrupting other features.
@@ -69,7 +28,7 @@ Defining a transaction
 **********************
 
 Transactions are defined in a serialized form.
-Every transaction extends from the base :ref:`transaction schema definition <transaction>`, adding the type's particular properties.
+Every transaction extends from the base ``Transaction`` schema, adding the type's particular properties.
 
 All transactions should define a deadline and a max_fee:
 

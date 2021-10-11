@@ -1,0 +1,48 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 41 bytes = 0x29</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/coresystem/voting_key_link.cats#L4">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/coresystem/src/model/VotingKeyLinkTransaction.h#L31">catapult model</a></td></tr>
+    </table></div>
+<p>Shared content between <a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.">VotingKeyLinkTransaction</a> and <a href="/serialization#embeddedvotingkeylinktransaction" title="Embedded version of VotingKeyLinkTransaction.">EmbeddedVotingKeyLinkTransaction</a>. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">linked_public_key</code></td>
+   <td><a href="/serialization#votingpublickey" title="A PublicKey used for voting during the finalization process.">VotingPublicKey</a></td>
+   <td><p>linked public key </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">start_epoch</code></td>
+   <td><a href="/serialization#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
+   <td><p>start finalization epoch </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">end_epoch</code></td>
+   <td><a href="/serialization#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></td>
+   <td><p>end finalization epoch </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">link_action</code></td>
+   <td><a href="/serialization#linkaction" title="Link actions.">LinkAction</a></td>
+   <td><p>link action </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.">VotingKeyLinkTransaction</a>, <a href="/serialization#embeddedvotingkeylinktransaction" title="Embedded version of VotingKeyLinkTransaction.">EmbeddedVotingKeyLinkTransaction</a>
+</tr></td>
+
+</tbody></table>

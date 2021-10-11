@@ -1,0 +1,46 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 24 bytes = 0x18</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/receipts.cats#L90">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/model/Receipt.h#L105">catapult model</a></td></tr>
+    </table></div>
+<p>binary layout for an inflation receipt </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#receipt" title="binary layout for a receipt entity">Receipt</a><span style="float:right">8 bytes = 0x8</span></td></tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">size</code></td>
+   <td>byte[4]</td>
+   <td><p>entity size </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>receipt version </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">type</code></td>
+   <td><a href="/serialization#receipttype" title="enumeration of receipt types">ReceiptType</a></td>
+   <td><p>receipt type </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">mosaic</code></td>
+   <td><a href="/serialization#mosaic" title="A quantity of a certain mosaic.">Mosaic</a></td>
+   <td><p>mosaic </p></td>
+   </tr>
+</tbody></table>

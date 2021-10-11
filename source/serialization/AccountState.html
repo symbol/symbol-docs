@@ -1,0 +1,149 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 332+ bytes = 0x14c+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/account_state.cats#L10">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/cache_core/AccountStateCacheUtils.h#L31">catapult model</a></td></tr>
+    </table></div>
+<p>binary layout for non-historical account state </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>serialization version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">address</code></td>
+   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
+   <td><p>address of account </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">address_height</code></td>
+   <td><a href="/serialization#height" title="Index of a block in the blockchain.">Height</a></td>
+   <td><p>height at which address has been obtained </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>public key of account </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">public_key_height</code></td>
+   <td><a href="/serialization#height" title="Index of a block in the blockchain.">Height</a></td>
+   <td><p>height at which public key has been obtained </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">account_type</code></td>
+   <td><a href="/serialization#accounttype" title="enumeration of account types">AccountType</a></td>
+   <td><p>type of account </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">format</code></td>
+   <td><a href="/serialization#accountstateformat" title="enumeration of account state formats">AccountStateFormat</a></td>
+   <td><p>account format </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">supplemental_public_keys_mask</code></td>
+   <td><a href="/serialization#accountkeytypeflags" title="enumeration of account key type flags">AccountKeyTypeFlags</a></td>
+   <td><p>mask of supplemental public key flags </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">voting_public_keys_count</code></td>
+   <td>byte[1]</td>
+   <td><p>number of voting public keys </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">linked_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>linked account public key </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">node_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>node public key </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">vrf_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>vrf public key </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">voting_public_keys</code></td>
+   <td><a href="/serialization#pinnedvotingkey" title="pinned voting key">PinnedVotingKey</a>&ZeroWidthSpace;[voting_public_keys_count]</td>
+   <td><p>voting public keys </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">importance_snapshots</code></td>
+   <td><a href="/serialization#importancesnapshot" title="temporal importance information">ImportanceSnapshot</a></td>
+   <td><p>current importance snapshot of the account </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">activity_buckets</code></td>
+   <td><a href="/serialization#heightactivitybuckets" title="account activity buckets">HeightActivityBuckets</a></td>
+   <td><p>activity buckets of the account </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">balances_count</code></td>
+   <td>byte[2]</td>
+   <td><p>number of total balances (mosaics) </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">balances</code></td>
+   <td><a href="/serialization#mosaic" title="A quantity of a certain mosaic.">Mosaic</a>&ZeroWidthSpace;[balances_count]</td>
+   <td><p>balances of account </p></td>
+   </tr>
+</tbody></table>

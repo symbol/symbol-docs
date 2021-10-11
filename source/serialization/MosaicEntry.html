@@ -1,0 +1,44 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 64 bytes = 0x40</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/mosaic_entry.cats#L5">schema</a></td></tr>
+    </table></div>
+<p>binary layout for mosaic entry </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>serialization version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">mosaic_id</code></td>
+   <td><a href="/serialization#mosaicid" title="A Mosaic identifier.">MosaicId</a></td>
+   <td><p>entry id </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">supply</code></td>
+   <td><a href="/serialization#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
+   <td><p>total supply amount </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">definition</code></td>
+   <td><a href="/serialization#mosaicdefinition" title="binary layout for mosaic definition">MosaicDefinition</a></td>
+   <td><p>definition comprised of entry properties </p></td>
+   </tr>
+</tbody></table>

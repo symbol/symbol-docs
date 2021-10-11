@@ -1,0 +1,72 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 32+ bytes = 0x20+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/transfer/transfer.cats#L4">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/transfer/src/model/TransferTransaction.h#L33">catapult model</a></td></tr>
+    </table></div>
+<p>Shared content between <a href="/serialization#transfertransaction" title="Send mosaics and messages between two accounts.">TransferTransaction</a> and <a href="/serialization#embeddedtransfertransaction" title="Embedded version of TransferTransaction.">EmbeddedTransferTransaction</a>. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">recipient_address</code></td>
+   <td><a href="/serialization#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
+   <td><p>recipient address </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">message_size</code></td>
+   <td>byte[2]</td>
+   <td><p>size of attached message </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">mosaics_count</code></td>
+   <td>byte[1]</td>
+   <td><p>number of attached mosaics </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">transfer_&ZeroWidthSpace;transaction_&ZeroWidthSpace;body_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align mosaics on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">transfer_&ZeroWidthSpace;transaction_&ZeroWidthSpace;body_&ZeroWidthSpace;reserved_&ZeroWidthSpace;2</code></td>
+   <td>byte[1]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align mosaics on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">mosaics</code></td>
+   <td><a href="/serialization#unresolvedmosaic" title="A quantity of a certain mosaic, specified either through a MosaicId or an alias.">UnresolvedMosaic</a>&ZeroWidthSpace;[mosaics_count]</td>
+   <td><p>attached mosaics </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">message</code></td>
+   <td>byte[message_size]</td>
+   <td><p>attached message </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#transfertransaction" title="Send mosaics and messages between two accounts.">TransferTransaction</a>, <a href="/serialization#embeddedtransfertransaction" title="Embedded version of TransferTransaction.">EmbeddedTransferTransaction</a>
+</tr></td>
+
+</tbody></table>

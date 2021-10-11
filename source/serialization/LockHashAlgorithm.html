@@ -1,0 +1,27 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 1 byte = 0x1</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/lock_secret/lock_secret_types.cats#L2">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/lock_secret/src/model/LockHashAlgorithm.h#L28">catapult model</a></td></tr>
+    </table></div>
+<p>enumeration of lock hash algorithms </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>
+<tr>
+<td>0x0</td>
+<td><code class="docutils literal">SHA3_256</code></td>
+<td><p>input is hashed using sha-3 256 </p></td>
+</tr>
+<tr>
+<td>0x1</td>
+<td><code class="docutils literal">HASH_160</code></td>
+<td><p>input is hashed twice: first with sha-256 and then with ripemd-160 (bitcoin's OP_HASH160) </p></td>
+</tr>
+<tr>
+<td>0x2</td>
+<td><code class="docutils literal">HASH_256</code></td>
+<td><p>input is hashed twice with sha-256 (bitcoin's OP_HASH256) </p></td>
+</tr>
+</tbody></table>

@@ -1,0 +1,113 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 84 bytes = 0x54</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/namespace/address_alias.cats#L24">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/namespace/src/model/AddressAliasTransaction.h#L58">catapult model</a></td></tr>
+    </table></div>
+<p>Embedded version of <a href="/serialization#addressaliastransaction" title="Attach or detach a namespace to an account address.">AddressAliasTransaction</a>. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">TRANSACTION_VERSION</code></td>
+   <td>byte[1]</td>
+   <td><b>const</b> <code class="docutils literal">1</code><br/></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">TRANSACTION_TYPE</code></td>
+   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
+   <td><b>const</b> <code class="docutils literal">ADDRESS_ALIAS</code> (<code class="docutils literal">0x424e</code>)<br/></td>
+   </tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#embeddedtransaction" title="binary layout for an embedded transaction">EmbeddedTransaction</a><span style="float:right">48 bytes = 0x30</span></td></tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a><span style="float:right">8 bytes = 0x8</span></td></tr>
+   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td><code class="docutils literal">size</code></td>
+   <td>byte[4]</td>
+   <td><p>entity size </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">embedded_&ZeroWidthSpace;transaction_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">signer_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>entity signer's public key </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">entity_body_reserved_1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[1]</td>
+   <td><p>entity version </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">network</code></td>
+   <td><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></td>
+   <td><p>entity network </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">type</code></td>
+   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
+   <td><p>transaction type </p></td>
+   </tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#addressaliastransactionbody" title="Shared content between AddressAliasTransaction and EmbeddedAddressAliasTransaction.">AddressAliasTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">namespace_id</code></td>
+   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
+   <td><p>identifier of the namespace that will become an alias </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">address</code></td>
+   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
+   <td><p>aliased address </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">alias_action</code></td>
+   <td><a href="/serialization#aliasaction" title="enumeration of alias actions">AliasAction</a></td>
+   <td><p>alias action </p></td>
+   </tr>
+</tbody></table>

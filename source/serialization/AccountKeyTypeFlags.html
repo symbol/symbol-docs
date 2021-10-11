@@ -1,0 +1,31 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 1 byte = 0x1</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/account_state_types.cats#L19">schema</a></td></tr>
+    </table></div>
+<p>enumeration of account key type flags </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>
+<tr>
+<td>0x0</td>
+<td><code class="docutils literal">UNSET</code></td>
+<td><p>unset key </p></td>
+</tr>
+<tr>
+<td>0x1</td>
+<td><code class="docutils literal">LINKED</code></td>
+<td><p>linked account public key <br/><b>Note:</b> this can be either a remote or main account public key depending on context </p></td>
+</tr>
+<tr>
+<td>0x2</td>
+<td><code class="docutils literal">NODE</code></td>
+<td><p>node public key on which remote is allowed to harvest </p></td>
+</tr>
+<tr>
+<td>0x4</td>
+<td><code class="docutils literal">VRF</code></td>
+<td><p>VRF public key </p></td>
+</tr>
+</tbody></table>
