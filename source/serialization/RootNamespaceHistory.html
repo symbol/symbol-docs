@@ -6,63 +6,48 @@
 <p>binary layout for non-historical root namespace history </p>
 </td></tr></table>
 
-<table class="big-table"><tbody>
-<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
-   <tr><td colspan="6" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></td></tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">version</code></td>
-   <td>byte[2]</td>
-   <td><p>serialization version </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">id</code></td>
-   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
-   <td><p>id of the root namespace history </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">owner_address</code></td>
-   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
-   <td><p>namespace owner address </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">lifetime</code></td>
-   <td><a href="/serialization#namespacelifetime" title="binary layout for namespace lifetime">NamespaceLifetime</a></td>
-   <td><p>lifetime in blocks </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">root_alias</code></td>
-   <td><a href="/serialization#namespacealias" title="binary layout for alias">NamespaceAlias</a></td>
-   <td><p>root namespace alias </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">children_count</code></td>
-   <td>byte[8]</td>
-   <td><p>number of children </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">paths</code></td>
-   <td><a href="/serialization#namespacepath" title="binary layout for a namespace path">NamespacePath</a>&ZeroWidthSpace;[children_count]</td>
-   <td><p>save child sub-namespace paths </p></td>
-   </tr>
-</tbody></table>
+<div class="big-table6">
+   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">version</code></div>
+   <div>byte[2]</div>
+   <div class="description"><p>serialization version </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">id</code></div>
+   <div><a href="/serialization#namespaceid" title="">NamespaceId</a></div>
+   <div class="description"><p>id of the root namespace history </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">owner_address</code></div>
+   <div><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></div>
+   <div class="description"><p>namespace owner address </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">lifetime</code></div>
+   <div><a href="/serialization#namespacelifetime" title="binary layout for namespace lifetime">NamespaceLifetime</a></div>
+   <div class="description"><p>lifetime in blocks </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">root_alias</code></div>
+   <div><a href="/serialization#namespacealias" title="binary layout for alias">NamespaceAlias</a></div>
+   <div class="description"><p>root namespace alias </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">children_count</code></div>
+   <div>byte[8]</div>
+   <div class="description"><p>number of children </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">paths</code></div>
+   <div><a href="/serialization#namespacepath" title="binary layout for a namespace path">NamespacePath</a>&ZeroWidthSpace;[children_count]</div>
+   <div class="description"><p>save child sub-namespace paths </p></div>
+</div>

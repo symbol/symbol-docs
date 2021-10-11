@@ -7,99 +7,76 @@
 <p>Embedded version of <a href="/serialization#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a>. </p>
 </td></tr></table>
 
-<table class="big-table"><tbody>
-<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">TRANSACTION_VERSION</code></td>
-   <td>byte[1]</td>
-   <td><b>const</b> <code class="docutils literal">1</code><br/></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">TRANSACTION_TYPE</code></td>
-   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
-   <td><b>const</b> <code class="docutils literal">NODE_KEY_LINK</code> (<code class="docutils literal">0x424c</code>)<br/></td>
-   </tr>
-   <tr><td colspan="6" class="big-table-section"><a href="/serialization#embeddedtransaction" title="binary layout for an embedded transaction">EmbeddedTransaction</a><span style="float:right">48 bytes = 0x30</span></td></tr>
-   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a><span style="float:right">8 bytes = 0x8</span></td></tr>
-   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td><td colspan="4" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td><code class="docutils literal">size</code></td>
-   <td>byte[4]</td>
-   <td><p>entity size </p></td>
-   </tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">embedded_&ZeroWidthSpace;transaction_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
-   <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a> on 8-byte boundary </p></td>
-   </tr>
-   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">signer_public_key</code></td>
-   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
-   <td><p>entity signer's public key </p></td>
-   </tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">entity_body_reserved_1</code></td>
-   <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></td>
-   </tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">version</code></td>
-   <td>byte[1]</td>
-   <td><p>entity version </p></td>
-   </tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">network</code></td>
-   <td><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></td>
-   <td><p>entity network </p></td>
-   </tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">type</code></td>
-   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
-   <td><p>transaction type </p></td>
-   </tr>
-   <tr><td colspan="6" class="big-table-section"><a href="/serialization#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction.">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></td></tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">linked_public_key</code></td>
-   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
-   <td><p>linked public key </p></td>
-   </tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">link_action</code></td>
-   <td><a href="/serialization#linkaction" title="Link actions.">LinkAction</a></td>
-   <td><p>link action </p></td>
-   </tr>
-</tbody></table>
+<div class="big-table6">
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">TRANSACTION_VERSION</code></div>
+   <div>byte[1]</div>
+   <div class="description"><b>const</b> <code class="docutils literal">1</code><br/></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">TRANSACTION_TYPE</code></div>
+   <div><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></div>
+   <div class="description"><b>const</b> <code class="docutils literal">NODE_KEY_LINK</code> (<code class="docutils literal">0x424c</code>)<br/></div>
+   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#embeddedtransaction" title="binary layout for an embedded transaction">EmbeddedTransaction</a><span style="float:right">48 bytes = 0x30</span></div>
+   <div class="indentation-cell-h"></div><div style="grid-column: 2 / span 5;" class="big-table-section-h"><a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a><span style="float:right">8 bytes = 0x8</span></div>
+   <div class="indentation-cell-h"></div><div class="indentation-cell-h"></div><div style="grid-column: 3 / span 4;" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div><code class="docutils literal">size</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p>entity size </p></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">embedded_&ZeroWidthSpace;transaction_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></div>
+   <div>byte[4]</div>
+   <div class="description"><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a> on 8-byte boundary </p></div>
+   <div class="indentation-cell-h"></div><div style="grid-column: 2 / span 5;" class="big-table-section-h"><a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">signer_public_key</code></div>
+   <div><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></div>
+   <div class="description"><p>entity signer's public key </p></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">entity_body_reserved_1</code></div>
+   <div>byte[4]</div>
+   <div class="description"><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">version</code></div>
+   <div>byte[1]</div>
+   <div class="description"><p>entity version </p></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">network</code></div>
+   <div><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></div>
+   <div class="description"><p>entity network </p></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">type</code></div>
+   <div><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></div>
+   <div class="description"><p>transaction type </p></div>
+   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#nodekeylinktransactionbody" title="Shared content between NodeKeyLinkTransaction and EmbeddedNodeKeyLinkTransaction.">NodeKeyLinkTransactionBody</a><span style="float:right">33 bytes = 0x21</span></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">linked_public_key</code></div>
+   <div><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></div>
+   <div class="description"><p>linked public key </p></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">link_action</code></div>
+   <div><a href="/serialization#linkaction" title="Link actions.">LinkAction</a></div>
+   <div class="description"><p>link action </p></div>
+</div>
