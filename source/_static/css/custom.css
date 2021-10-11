@@ -116,28 +116,74 @@ table {
 table a:not(.btn), .table a:not(.btn){
     text-decoration: none;
 }
-.big-table { /* Tables with lot of content */
+.big-table3 { /* Tables with lots of content in 3 columns */
     font-size: small;
     word-break: normal;
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+    margin-top: 20px;
 }
-.big-table td {
-    padding-right: 10px;
+.big-table6 { /* Tables with lots of content in 6 columns*/
+    font-size: small;
+    word-break: normal;
+    display: grid;
+    grid-template-columns: 10px 10px 10px min-content min-content auto;
+    margin-top: 20px;
+}
+/* divs inside big-table are actually cells */
+.big-table3 div, .big-table6 div {
     padding-left: 10px;
     vertical-align: top;
     border-top: 1px solid lightgray;
 }
-.big-table th {
-    padding-right: 10px;
-    padding-left: 10px;
-    vertical-align: top;
-}
+/* Section titles inside big-table */
 .big-table-section {
     opacity: 40%;
 }
-.indentation-cell {
+/* Small, empty cell, just to show the vertical guide line.
+   The -h version is for header lines. */
+.indentation-cell, .indentation-cell-h {
     border-right: 3px solid lightgray;
     border-top: 0 !important;
 }
+
+/* For small screens */
+@media (max-width: 600px) {
+  .big-table3 {
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+  }
+  .big-table6 {
+    grid-template-columns: 10px 10px 10px auto auto;
+    margin-top: 20px;
+  }
+  /* The description column moves to the next row, and spans two columns */
+  .big-table3 .description {
+  	grid-column: 1 / span 2;
+  	border-top: 0;
+  }
+  /* The description column moves to the next row, and spans three columns */
+  .big-table6 .description {
+    grid-column: 4 / span 3;
+    border-top: 0;
+  }
+  /* There's an extra row (the description) but we have no extra indentation cells,
+     therefore, make the existing ones one row taller. */
+  .indentation-cell {
+    border-right: 3px solid lightgray;
+    border-top: 0 !important;
+    grid-row: span 2;
+  }
+}
+
+/* Lists which should group in columns if possible */
+.tabulated-list {
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
+    margin-left: 20px;
+}
+
 /* Layout*/
 body > .container {
     padding-top: 20px;

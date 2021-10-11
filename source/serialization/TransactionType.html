@@ -6,126 +6,77 @@
 <p>Enumeration of <a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> types </p>
 </td></tr></table>
 
-<table class="big-table"><tbody>
-<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>
-<tr>
-<td>0x414c</td>
-<td><code class="docutils literal">ACCOUNT_KEY_LINK</code></td>
-<td><p><a href="/serialization#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x424c</td>
-<td><code class="docutils literal">NODE_KEY_LINK</code></td>
-<td><p><a href="/serialization#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4141</td>
-<td><code class="docutils literal">AGGREGATE_COMPLETE</code></td>
-<td><p><a href="/serialization#aggregatecompletetransaction" title="Send transactions in batches to different accounts.">AggregateCompleteTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4241</td>
-<td><code class="docutils literal">AGGREGATE_BONDED</code></td>
-<td><p><a href="/serialization#aggregatebondedtransaction" title="Propose an arrangement of transactions between different accounts.">AggregateBondedTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4143</td>
-<td><code class="docutils literal">VOTING_KEY_LINK</code></td>
-<td><p><a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.">VotingKeyLinkTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4243</td>
-<td><code class="docutils literal">VRF_KEY_LINK</code></td>
-<td><p><a href="/serialization#vrfkeylinktransaction" title="Link an account with a VRF public key. Required for all harvesting eligible accounts.">VrfKeyLinkTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4148</td>
-<td><code class="docutils literal">HASH_LOCK</code></td>
-<td><p><a href="/serialization#hashlocktransaction" title="Lock a deposit needed to announce an AggregateBondedTransaction.">HashLockTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4152</td>
-<td><code class="docutils literal">SECRET_LOCK</code></td>
-<td><p><a href="/serialization#secretlocktransaction" title="Start a token swap between different chains.">SecretLockTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4252</td>
-<td><code class="docutils literal">SECRET_PROOF</code></td>
-<td><p><a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4144</td>
-<td><code class="docutils literal">ACCOUNT_METADATA</code></td>
-<td><p><a href="/serialization#accountmetadatatransaction" title="Associate a key-value state to an account.">AccountMetadataTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4244</td>
-<td><code class="docutils literal">MOSAIC_METADATA</code></td>
-<td><p><a href="/serialization#mosaicmetadatatransaction" title="Associate a key-value state to a mosaic.">MosaicMetadataTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4344</td>
-<td><code class="docutils literal">NAMESPACE_METADATA</code></td>
-<td><p><a href="/serialization#namespacemetadatatransaction" title="Associate a key-value state to a namespace.">NamespaceMetadataTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x414d</td>
-<td><code class="docutils literal">MOSAIC_DEFINITION</code></td>
-<td><p><a href="/serialization#mosaicdefinitiontransaction" title="Create a new mosaic.">MosaicDefinitionTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x424d</td>
-<td><code class="docutils literal">MOSAIC_SUPPLY_CHANGE</code></td>
-<td><p><a href="/serialization#mosaicsupplychangetransaction" title="Change the total supply of a mosaic.">MosaicSupplyChangeTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4155</td>
-<td><code class="docutils literal">MULTISIG_ACCOUNT_MODIFICATION</code></td>
-<td><p><a href="/serialization#multisigaccountmodificationtransaction" title="Create or modify a multi-signature contract.">MultisigAccountModificationTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x424e</td>
-<td><code class="docutils literal">ADDRESS_ALIAS</code></td>
-<td><p><a href="/serialization#addressaliastransaction" title="Attach or detach a namespace to an account address.">AddressAliasTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x434e</td>
-<td><code class="docutils literal">MOSAIC_ALIAS</code></td>
-<td><p><a href="/serialization#mosaicaliastransaction" title="Attach or detach a namespace to a mosaic.">MosaicAliasTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x414e</td>
-<td><code class="docutils literal">NAMESPACE_REGISTRATION</code></td>
-<td><p><a href="/serialization#namespaceregistrationtransaction" title="Register a namespace to organize assets.">NamespaceRegistrationTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4150</td>
-<td><code class="docutils literal">ACCOUNT_ADDRESS_RESTRICTION</code></td>
-<td><p><a href="/serialization#accountaddressrestrictiontransaction" title="Allow or block incoming and outgoing transactions for a given a set of addresses.">AccountAddressRestrictionTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4250</td>
-<td><code class="docutils literal">ACCOUNT_MOSAIC_RESTRICTION</code></td>
-<td><p><a href="/serialization#accountmosaicrestrictiontransaction" title="Allow or block incoming transactions containing a given set of mosaics.">AccountMosaicRestrictionTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4350</td>
-<td><code class="docutils literal">ACCOUNT_OPERATION_RESTRICTION</code></td>
-<td><p><a href="/serialization#accountoperationrestrictiontransaction" title="Allow or block outgoing transactions depending on their transaction type.">AccountOperationRestrictionTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4251</td>
-<td><code class="docutils literal">MOSAIC_ADDRESS_RESTRICTION</code></td>
-<td><p><a href="/serialization#mosaicaddressrestrictiontransaction" title="Set address specific rules to transfer a restrictable mosaic.">MosaicAddressRestrictionTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4151</td>
-<td><code class="docutils literal">MOSAIC_GLOBAL_RESTRICTION</code></td>
-<td><p><a href="/serialization#mosaicglobalrestrictiontransaction" title="Set global rules to transfer a restrictable mosaic.">MosaicGlobalRestrictionTransaction</a> </p></td>
-</tr>
-<tr>
-<td>0x4154</td>
-<td><code class="docutils literal">TRANSFER</code></td>
-<td><p><a href="/serialization#transfertransaction" title="Send mosaics and messages between two accounts.">TransferTransaction</a> </p></td>
-</tr>
-</tbody></table>
+<div class="big-table3">
+<div><b>0x414c</b></div>
+<div><code class="docutils literal">ACCOUNT_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a> </p></div>
+<div><b>0x424c</b></div>
+<div><code class="docutils literal">NODE_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> </p></div>
+<div><b>0x4141</b></div>
+<div><code class="docutils literal">AGGREGATE_COMPLETE</code></div>
+<div class="description"><p><a href="/serialization#aggregatecompletetransaction" title="Send transactions in batches to different accounts.">AggregateCompleteTransaction</a> </p></div>
+<div><b>0x4241</b></div>
+<div><code class="docutils literal">AGGREGATE_BONDED</code></div>
+<div class="description"><p><a href="/serialization#aggregatebondedtransaction" title="Propose an arrangement of transactions between different accounts.">AggregateBondedTransaction</a> </p></div>
+<div><b>0x4143</b></div>
+<div><code class="docutils literal">VOTING_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.">VotingKeyLinkTransaction</a> </p></div>
+<div><b>0x4243</b></div>
+<div><code class="docutils literal">VRF_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#vrfkeylinktransaction" title="Link an account with a VRF public key. Required for all harvesting eligible accounts.">VrfKeyLinkTransaction</a> </p></div>
+<div><b>0x4148</b></div>
+<div><code class="docutils literal">HASH_LOCK</code></div>
+<div class="description"><p><a href="/serialization#hashlocktransaction" title="Lock a deposit needed to announce an AggregateBondedTransaction.">HashLockTransaction</a> </p></div>
+<div><b>0x4152</b></div>
+<div><code class="docutils literal">SECRET_LOCK</code></div>
+<div class="description"><p><a href="/serialization#secretlocktransaction" title="Start a token swap between different chains.">SecretLockTransaction</a> </p></div>
+<div><b>0x4252</b></div>
+<div><code class="docutils literal">SECRET_PROOF</code></div>
+<div class="description"><p><a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a> </p></div>
+<div><b>0x4144</b></div>
+<div><code class="docutils literal">ACCOUNT_METADATA</code></div>
+<div class="description"><p><a href="/serialization#accountmetadatatransaction" title="Associate a key-value state to an account.">AccountMetadataTransaction</a> </p></div>
+<div><b>0x4244</b></div>
+<div><code class="docutils literal">MOSAIC_METADATA</code></div>
+<div class="description"><p><a href="/serialization#mosaicmetadatatransaction" title="Associate a key-value state to a mosaic.">MosaicMetadataTransaction</a> </p></div>
+<div><b>0x4344</b></div>
+<div><code class="docutils literal">NAMESPACE_METADATA</code></div>
+<div class="description"><p><a href="/serialization#namespacemetadatatransaction" title="Associate a key-value state to a namespace.">NamespaceMetadataTransaction</a> </p></div>
+<div><b>0x414d</b></div>
+<div><code class="docutils literal">MOSAIC_DEFINITION</code></div>
+<div class="description"><p><a href="/serialization#mosaicdefinitiontransaction" title="Create a new mosaic.">MosaicDefinitionTransaction</a> </p></div>
+<div><b>0x424d</b></div>
+<div><code class="docutils literal">MOSAIC_SUPPLY_CHANGE</code></div>
+<div class="description"><p><a href="/serialization#mosaicsupplychangetransaction" title="Change the total supply of a mosaic.">MosaicSupplyChangeTransaction</a> </p></div>
+<div><b>0x4155</b></div>
+<div><code class="docutils literal">MULTISIG_ACCOUNT_MODIFICATION</code></div>
+<div class="description"><p><a href="/serialization#multisigaccountmodificationtransaction" title="Create or modify a multi-signature contract.">MultisigAccountModificationTransaction</a> </p></div>
+<div><b>0x424e</b></div>
+<div><code class="docutils literal">ADDRESS_ALIAS</code></div>
+<div class="description"><p><a href="/serialization#addressaliastransaction" title="Attach or detach a namespace to an account address.">AddressAliasTransaction</a> </p></div>
+<div><b>0x434e</b></div>
+<div><code class="docutils literal">MOSAIC_ALIAS</code></div>
+<div class="description"><p><a href="/serialization#mosaicaliastransaction" title="Attach or detach a namespace to a mosaic.">MosaicAliasTransaction</a> </p></div>
+<div><b>0x414e</b></div>
+<div><code class="docutils literal">NAMESPACE_REGISTRATION</code></div>
+<div class="description"><p><a href="/serialization#namespaceregistrationtransaction" title="Register a namespace to organize assets.">NamespaceRegistrationTransaction</a> </p></div>
+<div><b>0x4150</b></div>
+<div><code class="docutils literal">ACCOUNT_ADDRESS_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#accountaddressrestrictiontransaction" title="Allow or block incoming and outgoing transactions for a given a set of addresses.">AccountAddressRestrictionTransaction</a> </p></div>
+<div><b>0x4250</b></div>
+<div><code class="docutils literal">ACCOUNT_MOSAIC_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#accountmosaicrestrictiontransaction" title="Allow or block incoming transactions containing a given set of mosaics.">AccountMosaicRestrictionTransaction</a> </p></div>
+<div><b>0x4350</b></div>
+<div><code class="docutils literal">ACCOUNT_OPERATION_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#accountoperationrestrictiontransaction" title="Allow or block outgoing transactions depending on their transaction type.">AccountOperationRestrictionTransaction</a> </p></div>
+<div><b>0x4251</b></div>
+<div><code class="docutils literal">MOSAIC_ADDRESS_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#mosaicaddressrestrictiontransaction" title="Set address specific rules to transfer a restrictable mosaic.">MosaicAddressRestrictionTransaction</a> </p></div>
+<div><b>0x4151</b></div>
+<div><code class="docutils literal">MOSAIC_GLOBAL_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#mosaicglobalrestrictiontransaction" title="Set global rules to transfer a restrictable mosaic.">MosaicGlobalRestrictionTransaction</a> </p></div>
+<div><b>0x4154</b></div>
+<div><code class="docutils literal">TRANSFER</code></div>
+<div class="description"><p><a href="/serialization#transfertransaction" title="Send mosaics and messages between two accounts.">TransferTransaction</a> </p></div>
+</div>

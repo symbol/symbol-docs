@@ -7,27 +7,22 @@
 <p>binary layout for an embedded transaction header </p>
 </td></tr></table>
 
-<table class="big-table"><tbody>
-<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
-   <tr><td colspan="6" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
-   <tr>
-   <td class="indentation-cell">&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">size</code></td>
-   <td>byte[4]</td>
-   <td><p>entity size </p></td>
-   </tr>
-   <tr>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td>&nbsp;</td>
-   <td><code class="docutils literal">embedded_&ZeroWidthSpace;transaction_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
-   <td>byte[4]</td>
-   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a> on 8-byte boundary </p></td>
-   </tr>
-<tr><td colspan="6"><br/>Included in: 
+<div class="big-table6">
+   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></div>
+   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">size</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p>entity size </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">embedded_&ZeroWidthSpace;transaction_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></div>
+   <div>byte[4]</div>
+   <div class="description"><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a> on 8-byte boundary </p></div>
+</div>
+<details><summary>Included in:</summary><div class="tabulated-list"><div>
 <a href="/serialization#embeddedtransaction" title="binary layout for an embedded transaction">EmbeddedTransaction</a>
-</tr></td>
+</div></div></details>
 
-</tbody></table>
