@@ -707,3 +707,27 @@ div.topic {
     line-height: normal;
     padding-right: 7px;
 }
+/* Animated Details */
+summary {
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+}
+summary:before {
+  content: '';
+  border-width: .7rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #333;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+summary::-webkit-details-marker {
+  display:none;
+}
