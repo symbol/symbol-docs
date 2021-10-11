@@ -355,6 +355,7 @@ linkcheck_ignore = [
     r'.*\.ts', r'.*\.js', r'.*\.java', r'.*\.cats', # Too many of them, GitHub complains
     r'https://nemplatform.com/.*#', r'https://forum.nem.io', # DDoS protection delays serving the real page
     r'https://twitter.com/', # Returns 400 Client Error: Bad Request for url
+    r'/_images/.*', # Ignore image targets, linkcheck does not know they will be deployed
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 
