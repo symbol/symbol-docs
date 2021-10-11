@@ -163,14 +163,14 @@ class SerializationCommand(Command):
             return 'byte[{}]'.format(field['size'])
         else:
             # Add the array indicator only if the field has a size
-            return '<a href="#{}" title="{}">{}</a>{}'.format(make_anchor(field['type']), make_title(self.types[field['type']]['comments']), field['type'],
+            return '<a href="/serialization#{}" title="{}">{}</a>{}'.format(make_anchor(field['type']), make_title(self.types[field['type']]['comments']), field['type'],
                 '' if field.get('size', 0) == 0 else '&ZeroWidthSpace;[{}]'.format(field['size']))
 
     def type_description(self, element):
         """Receives a YAML object describing a type and returns an HTML string containing
         a hyperlink to its section in the page.
         """
-        return '<a href="#{}" title="{}">{}</a>'.format(make_anchor(element['name']), make_title(element['comments']), element['name'])
+        return '<a href="/serialization#{}" title="{}">{}</a>'.format(make_anchor(element['name']), make_title(element['comments']), element['name'])
 
     def parse_comment(self, comment):
         """Build proper HTML comments:
