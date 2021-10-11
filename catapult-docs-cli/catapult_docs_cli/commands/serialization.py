@@ -241,12 +241,10 @@ class SerializationCommand(Command):
     def print_type(self, element, index_file):
         """Adds a row to the basic types HTML table.
         """
-        print('   <tr id="{}">'.format(make_anchor(element['name'])), file=index_file)
-        print('   <td><b>{}</b></td>'.format(element['name']), file=index_file)
-        print('   <td>{}&nbsp;{}byte{}</td>'.
+        print('   <div id="{}"><b>{}</b></div>'.format(make_anchor(element['name']), element['name']), file=index_file)
+        print('   <div>{}&nbsp;{}byte{}</div>'.
             format(element['size'], 'u' if element['signedness'] == 'unsigned' else '', 's' if element['size'] > 1 else ''), file=index_file)
-        print('   <td>{}</td>'.format(self.parse_comment(element['comments'])), file=index_file)
-        print('   </tr>', file=index_file)
+        print('   <div class="description">{}</div>'.format(self.parse_comment(element['comments'])), file=index_file)
 
     def print_enum(self, element):
         """Describes an Enum type using the common header and an HTML table with all the values.
@@ -254,15 +252,12 @@ class SerializationCommand(Command):
         filename = os.path.join(self.config['dst_path'], '{}.html'.format(element['name']))
         with open(filename, 'w') as html_file:
             self.print_html_header(element, element['size'], 0, html_file)
-            print('<table class="big-table"><tbody>', file=html_file)
-            print('<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>', file=html_file)
+            print('<div class="big-table3">', file=html_file)
             for v in element['values']:
-                print('<tr>', file=html_file)
-                print('<td>{}</td>'.format(hex(v['value'])), file=html_file)
-                print('<td>{}</td>'.format(make_keyword(v['name'])), file=html_file)
-                print('<td>{}</td>'.format(self.parse_comment(v['comments'])), file=html_file)
-                print('</tr>', file=html_file)
-            print('</tbody></table>', file=html_file)
+                print('<div><b>{}</b></div>'.format(hex(v['value'])), file=html_file)
+                print('<div>{}</div>'.format(make_keyword(v['name'])), file=html_file)
+                print('<div class="description">{}</div>'.format(self.parse_comment(v['comments'])), file=html_file)
+            print('</div>', file=html_file)
 
     def print_struct_content(self, element, indent, html_file):
         """Internal method to describe a Struct type. It calls itself to describe inlined structs, increasing the `indent` parameter.
@@ -279,15 +274,15 @@ class SerializationCommand(Command):
                 # Manual handling of up to 3 indentation levels.
                 # If we ever have more than these many levels this will need to be made more generic.
                 if indent < 1:
-                    print('   <tr><td colspan="6" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
+                    print('   <div style="grid-column: 1 / span 6;" class="big-table-section">{}<span style="float:right">{}</span></div>'.
                         format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 elif indent < 2:
-                    print('   <tr><td class="indentation-cell"></td>'
-                        '<td colspan="5" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
+                    print('   <div class="indentation-cell-h"></div>'
+                        '<div style="grid-column: 2 / span 5;" class="big-table-section-h">{}<span style="float:right">{}</span></div>'.
                         format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 else:
-                    print('   <tr><td class="indentation-cell"></td><td class="indentation-cell"></td>'
-                        '<td colspan="4" class="big-table-section">{}<span style="float:right">{}</span></td></tr>'.
+                    print('   <div class="indentation-cell-h"></div><div class="indentation-cell-h"></div>'
+                        '<div style="grid-column: 3 / span 4;" class="big-table-section">{}<span style="float:right">{}</span></div>'.
                           format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 self.print_struct_content(self.types[v['type']], indent + 1, html_file)
                 continue
@@ -300,14 +295,12 @@ class SerializationCommand(Command):
             elif disposition == 'reserved':
                 comment = '<b>reserved</b> {}<br/>'.format(make_keyword(v['value']))
             comment += self.parse_comment(v['comments'])
-            print('   <tr>', file=html_file)
-            print('   <td{}>&nbsp;</td>'.format('' if indent < 1 else ' class="indentation-cell"'), file=html_file)
-            print('   <td{}>&nbsp;</td>'.format('' if indent < 2 else ' class="indentation-cell"'), file=html_file)
-            print('   <td{}>&nbsp;</td>'.format('' if indent < 3 else ' class="indentation-cell"'), file=html_file)
-            print('   <td>{}</td>'.format(make_keyword(make_breakable(v['name']))), file=html_file)
-            print('   <td>{}</td>'.format(self.field_description(v)), file=html_file)
-            print('   <td>{}</td>'.format(comment), file=html_file)
-            print('   </tr>', file=html_file)
+            print('   <div{}>&nbsp;</div>'.format('' if indent < 1 else ' class="indentation-cell"'), file=html_file)
+            print('   <div{}>&nbsp;</div>'.format('' if indent < 2 else ' class="indentation-cell"'), file=html_file)
+            print('   <div{}>&nbsp;</div>'.format('' if indent < 3 else ' class="indentation-cell"'), file=html_file)
+            print('   <div>{}</div>'.format(make_keyword(make_breakable(v['name']))), file=html_file)
+            print('   <div>{}</div>'.format(self.field_description(v)), file=html_file)
+            print('   <div class="description">{}</div>'.format(comment), file=html_file)
 
     def print_struct(self, element):
         """Describes a Struct type using the common header and an HTML table with all the fields.
@@ -320,15 +313,14 @@ class SerializationCommand(Command):
         with open(filename, 'w') as html_file:
             (size, var) = self.calc_total_type_size(element)
             self.print_html_header(element, size, var, html_file)
-            print('<table class="big-table"><tbody>', file=html_file)
-            print('<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>', file=html_file)
+            print('<div class="big-table6">', file=html_file)
             self.print_struct_content(element, 0, html_file)
+            print('</div>', file=html_file)
             if len(element['inlined-from']) > 0:
-                print('<tr><td colspan="6"><br/>Included in: ', file=html_file)
-                print('%s' % ', '.join(self.type_description(self.types[x]) for x in element['inlined-from']), file=html_file)
-                print('</tr></td>', file=html_file)
+                print('<details><summary>Included in:</summary><div class="tabulated-list"><div>', file=html_file)
+                print('</div><div>'.join(self.type_description(self.types[x]) for x in element['inlined-from']), file=html_file)
+                print('</div></div></details>', file=html_file)
                 print(file=html_file)
-            print('</tbody></table>', file=html_file)
 
     def execute(self):
         """Contains all the logic to execute the serialization command.
@@ -392,12 +384,11 @@ class SerializationCommand(Command):
         print(file=index_file)
         print('.. raw:: html', file=index_file)
         print(file=index_file)
-        print('   <table class="big-table"><tbody>', file=index_file)
-        print('   <tr><th>Name</th><th>Size</th><th style="width: 100%">Description</th></tr>', file=index_file)
+        print('   <div class="big-table3">', file=index_file)
         for e in self.schema:
             if e['type'] == 'byte':
                 self.print_type(e, index_file)
-        print('   </tbody></table>', file=index_file)
+        print('   </div>', file=index_file)
         print(file=index_file)
 
         # Process all enums
