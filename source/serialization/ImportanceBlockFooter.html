@@ -1,0 +1,48 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 52 bytes = 0x34</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/block.cats#L69">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/model/Block.h#L85">catapult model</a></td></tr>
+    </table></div>
+<p>binary layout for an importance block footer </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">voting_eligible_accounts_count</code></td>
+   <td>byte[4]</td>
+   <td><p>number of voting eligible accounts </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">harvesting_&ZeroWidthSpace;eligible_&ZeroWidthSpace;accounts_&ZeroWidthSpace;count</code></td>
+   <td>byte[8]</td>
+   <td><p>number of harvesting eligible accounts </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">total_voting_balance</code></td>
+   <td><a href="/serialization#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
+   <td><p>total balance eligible for voting </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">previous_importance_block_hash</code></td>
+   <td><a href="/serialization#hash256" title="A 32-byte (256 bit) hash.">Hash256</a></td>
+   <td><p>previous importance block hash </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#nemesisblockheader" title="binary layout for a nemesis block header">NemesisBlockHeader</a>, <a href="/serialization#importanceblockheader" title="binary layout for an importance block header">ImportanceBlockHeader</a>
+</tr></td>
+
+</tbody></table>

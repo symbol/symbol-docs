@@ -1,0 +1,32 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 1 byte = 0x1</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/account_state_types.cats#L4">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/state/AccountState.h#L32">catapult model</a></td></tr>
+    </table></div>
+<p>enumeration of account types </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>
+<tr>
+<td>0x0</td>
+<td><code class="docutils literal">UNLINKED</code></td>
+<td><p>account is not linked to another account </p></td>
+</tr>
+<tr>
+<td>0x1</td>
+<td><code class="docutils literal">MAIN</code></td>
+<td><p>account is a balance-holding account that is linked to a remote harvester account </p></td>
+</tr>
+<tr>
+<td>0x2</td>
+<td><code class="docutils literal">REMOTE</code></td>
+<td><p>account is a remote harvester account that is linked to a balance-holding account </p></td>
+</tr>
+<tr>
+<td>0x3</td>
+<td><code class="docutils literal">REMOTE_UNLINKED</code></td>
+<td><p>account is a remote harvester eligible account that is unlinked <br/><b>Note:</b> this allows an account that has previously been used as remote to be reused as a remote </p></td>
+</tr>
+</tbody></table>

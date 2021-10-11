@@ -1,0 +1,161 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 157+ bytes = 0x9d+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/namespace/namespace_registration.cats#L25">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/namespace/src/model/NamespaceRegistrationTransaction.h#L95">catapult model</a></td></tr>
+    </table></div>
+<p>Register a namespace to organize assets. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">TRANSACTION_VERSION</code></td>
+   <td>byte[1]</td>
+   <td><b>const</b> <code class="docutils literal">1</code><br/></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">TRANSACTION_TYPE</code></td>
+   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
+   <td><b>const</b> <code class="docutils literal">NAMESPACE_REGISTRATION</code> (<code class="docutils literal">0x414e</code>)<br/></td>
+   </tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a><span style="float:right">128 bytes = 0x80</span></td></tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">size</code></td>
+   <td>byte[4]</td>
+   <td><p>entity size </p></td>
+   </tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#verifiableentity" title="binary layout for a verifiable entity">VerifiableEntity</a><span style="float:right">68 bytes = 0x44</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">verifiable_&ZeroWidthSpace;entity_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align <a href="/serialization#signature" title="A 64-byte (512 bit) array certifying that the signed data has not been modified.">Signature</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">signature</code></td>
+   <td><a href="/serialization#signature" title="A 64-byte (512 bit) array certifying that the signed data has not been modified.">Signature</a></td>
+   <td><p>entity signature </p></td>
+   </tr>
+   <tr><td class="indentation-cell"></td><td colspan="5" class="big-table-section"><a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">signer_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>entity signer's public key </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">entity_body_reserved_1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[1]</td>
+   <td><p>entity version </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">network</code></td>
+   <td><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></td>
+   <td><p>entity network </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">type</code></td>
+   <td><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></td>
+   <td><p>transaction type </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">fee</code></td>
+   <td><a href="/serialization#amount" title="A quantity of mosaics in absolute units.">Amount</a></td>
+   <td><p>transaction fee </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">deadline</code></td>
+   <td><a href="/serialization#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></td>
+   <td><p>transaction deadline </p></td>
+   </tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#namespaceregistrationtransactionbody" title="Shared content between NamespaceRegistrationTransaction and EmbeddedNamespaceRegistrationTransaction.">NamespaceRegistrationTransactionBody</a><span style="float:right">26+ bytes = 0x1a+ <i>(variable)</i></span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">duration</code></td>
+   <td><a href="/serialization#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
+   <td><p>namespace duration </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">parent_id</code></td>
+   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
+   <td><p>parent namespace identifier </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">id</code></td>
+   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
+   <td><p>namespace identifier </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">registration_type</code></td>
+   <td><a href="/serialization#namespaceregistrationtype" title="enumeration of namespace registration types">NamespaceRegistrationType</a></td>
+   <td><p>namespace registration type </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">name_size</code></td>
+   <td>byte[1]</td>
+   <td><p>namespace name size </p></td>
+   </tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">name</code></td>
+   <td>byte[name_size]</td>
+   <td><p>namespace name </p></td>
+   </tr>
+</tbody></table>

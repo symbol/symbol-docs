@@ -1,0 +1,68 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 69+ bytes = 0x45+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/metadata_entry.cats#L6">schema</a></td></tr>
+    </table></div>
+<p>binary layout of a metadata entry </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>serialization version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">source_address</code></td>
+   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
+   <td><p>metadata source address (provider) </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">target_address</code></td>
+   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
+   <td><p>metadata target address </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">scoped_metadata_key</code></td>
+   <td><a href="/serialization#scopedmetadatakey" title="">ScopedMetadataKey</a></td>
+   <td><p>metadata key scoped to source, target and type </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">target_id</code></td>
+   <td>byte[8]</td>
+   <td><p>target id </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">metadata_type</code></td>
+   <td><a href="/serialization#metadatatype" title="enum for the different types of metadata">MetadataType</a></td>
+   <td><p>metadata type </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">value</code></td>
+   <td><a href="/serialization#metadatavalue" title="binary layout of a metadata entry value">MetadataValue</a></td>
+   <td><p>value </p></td>
+   </tr>
+</tbody></table>

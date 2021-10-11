@@ -1,0 +1,64 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 26+ bytes = 0x1a+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/namespace/namespace_registration.cats#L5">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/namespace/src/model/NamespaceRegistrationTransaction.h#L34">catapult model</a></td></tr>
+    </table></div>
+<p>Shared content between <a href="/serialization#namespaceregistrationtransaction" title="Register a namespace to organize assets.">NamespaceRegistrationTransaction</a> and <a href="/serialization#embeddednamespaceregistrationtransaction" title="Embedded version of NamespaceRegistrationTransaction.">EmbeddedNamespaceRegistrationTransaction</a>. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">duration</code></td>
+   <td><a href="/serialization#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></td>
+   <td><p>namespace duration </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">parent_id</code></td>
+   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
+   <td><p>parent namespace identifier </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">id</code></td>
+   <td><a href="/serialization#namespaceid" title="">NamespaceId</a></td>
+   <td><p>namespace identifier </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">registration_type</code></td>
+   <td><a href="/serialization#namespaceregistrationtype" title="enumeration of namespace registration types">NamespaceRegistrationType</a></td>
+   <td><p>namespace registration type </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">name_size</code></td>
+   <td>byte[1]</td>
+   <td><p>namespace name size </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">name</code></td>
+   <td>byte[name_size]</td>
+   <td><p>namespace name </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#namespaceregistrationtransaction" title="Register a namespace to organize assets.">NamespaceRegistrationTransaction</a>, <a href="/serialization#embeddednamespaceregistrationtransaction" title="Embedded version of NamespaceRegistrationTransaction.">EmbeddedNamespaceRegistrationTransaction</a>
+</tr></td>
+
+</tbody></table>

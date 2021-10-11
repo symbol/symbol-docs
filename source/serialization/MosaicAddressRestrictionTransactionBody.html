@@ -1,0 +1,56 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 56 bytes = 0x38</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/restriction_mosaic/mosaic_address_restriction.cats#L4">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/restriction_mosaic/src/model/MosaicAddressRestrictionTransaction.h#L32">catapult model</a></td></tr>
+    </table></div>
+<p>Shared content between <a href="/serialization#mosaicaddressrestrictiontransaction" title="Set address specific rules to transfer a restrictable mosaic.">MosaicAddressRestrictionTransaction</a> and <a href="/serialization#embeddedmosaicaddressrestrictiontransaction" title="Embedded version of MosaicAddressRestrictionTransaction.">EmbeddedMosaicAddressRestrictionTransaction</a>. </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">mosaic_id</code></td>
+   <td><a href="/serialization#unresolvedmosaicid" title="Either a MosaicId or a NamespaceId.">UnresolvedMosaicId</a></td>
+   <td><p>identifier of the mosaic to which the restriction applies </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">restriction_key</code></td>
+   <td>byte[8]</td>
+   <td><p>restriction key </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">previous_restriction_value</code></td>
+   <td>byte[8]</td>
+   <td><p>previous restriction value </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">new_restriction_value</code></td>
+   <td>byte[8]</td>
+   <td><p>new restriction value </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">target_address</code></td>
+   <td><a href="/serialization#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></td>
+   <td><p>address being restricted </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#mosaicaddressrestrictiontransaction" title="Set address specific rules to transfer a restrictable mosaic.">MosaicAddressRestrictionTransaction</a>, <a href="/serialization#embeddedmosaicaddressrestrictiontransaction" title="Embedded version of MosaicAddressRestrictionTransaction.">EmbeddedMosaicAddressRestrictionTransaction</a>
+</tr></td>
+
+</tbody></table>

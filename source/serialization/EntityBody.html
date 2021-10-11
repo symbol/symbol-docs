@@ -1,0 +1,48 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 38 bytes = 0x26</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/entity.cats#L25">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/model/EntityBody.h#L33">catapult model</a></td></tr>
+    </table></div>
+<p>binary layout for a blockchain entity (block or transaction) </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">signer_public_key</code></td>
+   <td><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></td>
+   <td><p>entity signer's public key </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">entity_body_reserved_1</code></td>
+   <td>byte[4]</td>
+   <td><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[1]</td>
+   <td><p>entity version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">network</code></td>
+   <td><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></td>
+   <td><p>entity network </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#blockheader" title="binary layout for a block header">BlockHeader</a>, <a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a>, <a href="/serialization#embeddedtransaction" title="binary layout for an embedded transaction">EmbeddedTransaction</a>
+</tr></td>
+
+</tbody></table>

@@ -1,0 +1,41 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 8 bytes = 0x8</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/receipts.cats#L57">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/model/Receipt.h#L35">catapult model</a></td></tr>
+    </table></div>
+<p>binary layout for a receipt entity </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">size</code></td>
+   <td>byte[4]</td>
+   <td><p>entity size </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>receipt version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">type</code></td>
+   <td><a href="/serialization#receipttype" title="enumeration of receipt types">ReceiptType</a></td>
+   <td><p>receipt type </p></td>
+   </tr>
+<tr><td colspan="6"><br/>Included in: 
+<a href="/serialization#balancetransferreceipt" title="binary layout for a balance transfer receipt">BalanceTransferReceipt</a>, <a href="/serialization#balancechangereceipt" title="binary layout for a balance change receipt">BalanceChangeReceipt</a>, <a href="/serialization#inflationreceipt" title="binary layout for an inflation receipt">InflationReceipt</a>, <a href="/serialization#mosaicexpiryreceipt" title="binary layout for a mosaic expiry receipt">MosaicExpiryReceipt</a>, <a href="/serialization#namespaceexpiryreceipt" title="binary layout for a namespace expiry receipt">NamespaceExpiryReceipt</a>, <a href="/serialization#mosaicresolutionstatement" title="binary layout for a mosaic resolution statement">MosaicResolutionStatement</a>, <a href="/serialization#addressresolutionstatement" title="binary layout for an address resolution statement">AddressResolutionStatement</a>
+</tr></td>
+
+</tbody></table>

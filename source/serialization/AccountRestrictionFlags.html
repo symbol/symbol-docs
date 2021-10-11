@@ -1,0 +1,37 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 2 bytes = 0x2</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/restriction_account/restriction_account_types.cats#L4">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/restriction_account/src/model/AccountRestrictionFlags.h#L29">catapult model</a></td></tr>
+    </table></div>
+<p>enumeration of account restriction flags </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th>Value</th><th>Name</th><th style="width: 100%">Description</th></tr>
+<tr>
+<td>0x1</td>
+<td><code class="docutils literal">ADDRESS</code></td>
+<td><p>restriction type is an address </p></td>
+</tr>
+<tr>
+<td>0x2</td>
+<td><code class="docutils literal">MOSAIC_ID</code></td>
+<td><p>restriction type is a mosaic identifier </p></td>
+</tr>
+<tr>
+<td>0x4</td>
+<td><code class="docutils literal">TRANSACTION_TYPE</code></td>
+<td><p>restriction type is a transaction type </p></td>
+</tr>
+<tr>
+<td>0x4000</td>
+<td><code class="docutils literal">OUTGOING</code></td>
+<td><p>restriction is interpreted as outgoing </p></td>
+</tr>
+<tr>
+<td>0x8000</td>
+<td><code class="docutils literal">BLOCK</code></td>
+<td><p>restriction is interpreted as blocking (instead of allowing) operation </p></td>
+</tr>
+</tbody></table>

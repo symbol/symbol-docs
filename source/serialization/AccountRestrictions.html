@@ -1,0 +1,44 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 34+ bytes = 0x22+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/restriction_account.cats#L6">schema</a></td></tr>
+    </table></div>
+<p>binary layout for account restrictions </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr><td colspan="6" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></td></tr>
+   <tr>
+   <td class="indentation-cell">&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">version</code></td>
+   <td>byte[2]</td>
+   <td><p>serialization version </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">address</code></td>
+   <td><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></td>
+   <td><p>address on which restrictions are placed </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">restrictions_count</code></td>
+   <td>byte[8]</td>
+   <td><p>number of restrictions </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">restrictions</code></td>
+   <td><a href="/serialization#accountrestrictionsinfo" title="binary layout for account restrictions">AccountRestrictionsInfo</a>&ZeroWidthSpace;[restrictions_count]</td>
+   <td><p>account restrictions </p></td>
+   </tr>
+</tbody></table>

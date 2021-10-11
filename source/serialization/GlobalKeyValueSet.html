@@ -1,0 +1,27 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 1+ byte = 0x1+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/state/restriction_mosaic_types.cats#L48">schema</a></td></tr>
+    </table></div>
+<p>binary layout for a global restriction key-value set </p>
+</td></tr></table>
+
+<table class="big-table"><tbody>
+<tr><th></th><th></th><th></th><th>Name</th><th>Type</th><th style="width: 100%">Description</th></tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">key_value_count</code></td>
+   <td>byte[1]</td>
+   <td><p>number of key value pairs </p></td>
+   </tr>
+   <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><code class="docutils literal">keys</code></td>
+   <td><a href="/serialization#globalkeyvalue" title="binary layout for a global key-value">GlobalKeyValue</a>&ZeroWidthSpace;[key_value_count]</td>
+   <td><p>key value array </p></td>
+   </tr>
+</tbody></table>
