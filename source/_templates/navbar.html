@@ -2,43 +2,45 @@
      id="navbar">
     <div class="container navbar-top hidden-xs hidden-sm">
         <div class="row">
-            <div class="col-lg-8 col-md-7">
-                {% include "include/language.html" %}
-            </div>
-            <div class="col-lg-4 col-md-5">
+            <div class="col-lg-5 col-md-5 col-lg-offset-5 col-md-offset-5">
                 {% with search_id="desktop" %}
                 {% include "include/searchbox.html" %}
                 {% endwith %}
                 {% include "include/social.html" %}
+            </div>
+            <div class="col-lg-2 col-md-2">
+                {% include "include/language.html" %}
             </div>
         </div>
     </div>
     <hr/>
     <div class="container navbar-main">
         <div class="row">
-            <div class="navbar-header col-lg-6 col-md-4 col-xs-6">
+            <div class="navbar-header col-lg-6 col-md-6 col-xs-6">
                 <a class="navbar-brand" href="{{ pathto('index') }}">
                     {% block sidebarlogo %}
-                    {% if logo %}<span><img alt="NEM logo" src="{{ pathto('_static/' + logo, 1) }}"></span>{% endif %}
+                    {% if logo %}<span><img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}"></span>{% endif %}
                     {% endblock %}
                 </a>
             </div>
-            <div class="navbar-right col-lg-6 col-md-8 hidden-xs hidden-sm">
+            <div class="navbar-right col-lg-6 col-md-6 hidden-xs hidden-sm">
                 {% include "include/navbar-right.html" %}
             </div>
-            <div class="navbar-right col-xs-6 hidden-lg hidden-md">
+            <div class="navbar-right col-sm-6 col-xs-6 hidden-lg hidden-md">
                 {% with search_id="mobile" %}
                 {% include "include/searchbox.html" %}
                 {% endwith %}
-
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 sidebar-xs visible-xs visible-sm">
+            <div class="sidebar-xs visible-xs visible-sm">
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ _('Navigation') }} <b
                             class="caret"></b></a>
                     <ul class="dropdown-menu globaltoc">{{ toctree() }}</ul>
+                </div>
+                <div class="language-selector">
+                    {% include "include/language.html" %}
                 </div>
             </div>
         </div>

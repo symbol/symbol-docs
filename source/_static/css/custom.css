@@ -277,36 +277,9 @@ body > .container {
     right: 0;
     z-index: -1;
 }
-#language .select {
-    overflow: hidden;
-    width: 50px;
-    position: relative;
-    display: block;
-}
-#language select {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #FFF;
-    font-weight: normal;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-}
-#language .select::after {
-    content: "";
-    font-family: "Font Awesome 5 Free";
-    font-weight: bold;
-    color: #FFF;
-    position: absolute;
-    right: 14px;
-    top: 4px;
-    font-size: 12px;
-}
-#language option {
-    color: #333;
-    padding: 0 5px;
+.language-icon-selected {
+    box-shadow: 0px 0px 4px 4px #9bd2f2;
+    border-radius: 12px;
 }
 #social li {
     float: right;
@@ -431,6 +404,14 @@ body > .container {
 }
 .sidebar-xs a.dropdown-toggle:hover {
     color: #fff;
+}
+.sidebar-xs {
+  position: relative;
+}
+.sidebar-xs .language-selector {
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
 .caret {
     color: #fff;
@@ -641,7 +622,7 @@ div.figure .caption {
 #search-box .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]{
     border: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     #search-box {
         width: 70%;
     }
