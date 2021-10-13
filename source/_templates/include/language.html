@@ -1,10 +1,7 @@
-<div id="language">
-    <label class="select">
-        <select>
-            <option id="english" value="en">EN</option>
-            <option id="japanese" value="ja">JA</option>
-            <!--<option id="chinese" value="zh_CN">中文</option>-->
-            <option id="translate" value="translate">{{ gettext('Translate') }}</option>
-        </select>
-    </label>
-</div>
+{% if language == "'ja'" %}
+<a href="/{{ pagename }}.html"><img src="/_static/images/english-icon.png" width="24px"/></a>
+<img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px"/>
+{% else %}
+<img class="language-icon-selected" src="/_static/images/english-icon.png" width="24px"/>
+<a href="/ja/{{ pagename }}.html"><img src="/_static/images/japanese-icon.png" width="24px"/></a>
+{% endif %}

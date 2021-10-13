@@ -1,40 +1,3 @@
-/* Translation */
-const translations = ['ja', 'zh_CN'];
-
-function translatePathRedirect(languageCode) {
-    const path = window.location.pathname;
-    let splitPath = path.split('/');
-    if (splitPath[1] !== languageCode) {
-        if (languageCode === 'en') {
-            splitPath.splice(1, 1);
-        } else if (translations.indexOf(splitPath[1]) > -1) {
-            splitPath[1] = languageCode;
-        } else if (translations.indexOf(languageCode) > -1) {
-            splitPath.splice(1, 0, languageCode);
-        }
-        window.location.href = splitPath.join('/');
-    }
-}
-
-function initLanguageSelector() {
-    const languageSelector = $('#language select');
-    const path = window.location.pathname;
-    const languageCode = path.split('/')[1];
-    if (translations.indexOf(languageCode) > -1) {
-        languageSelector.val(languageCode);
-    } else {
-        languageSelector.val('en');
-    }
-    languageSelector.change(function () {
-        if ($(this).val() !== 'translate') {
-            translatePathRedirect($(this).val());
-        }
-        else {
-            window.location.href = '/guidelines/translating-the-documentation.html';
-        }
-    });
-}
-
 /* Code tabs */
 function addBlockCaptionInsideCodeExample() {
     $(".code-block-caption").each(function () {
@@ -72,7 +35,6 @@ function highlightSidebarLinksOnScroll(){
 
 $(document).ready(function () {
     addBlockCaptionInsideCodeExample();
-    initLanguageSelector();
     addTargetBlankAttributeToExternalLinks();
     highlightSidebarLinksOnScroll();
 });
