@@ -4,7 +4,7 @@
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/resolution_statement/resolution_statement_types.cats#L2">schema</a></td></tr>
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/src/catapult/model/ReceiptSource.h#L30">catapult model</a></td></tr>
     </table></div>
-<p>binary layout for receipt source </p>
+<p>The transaction inside the block that triggered the receipt. </p>
 </td></tr></table>
 
 <div class="big-table6">
@@ -13,11 +13,11 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">primary_id</code></div>
    <div>byte[4]</div>
-   <div class="description"><p>transaction primary source (e.g. index within block) </p></div>
+   <div class="description"><p><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> primary source (e.g. index within the block). </p></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">secondary_id</code></div>
    <div>byte[4]</div>
-   <div class="description"><p>transaction secondary source (e.g. index within aggregate) </p></div>
+   <div class="description"><p><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> secondary source (e.g. index within aggregate). </p></div>
 </div>

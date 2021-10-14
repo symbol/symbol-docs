@@ -4,7 +4,7 @@
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/metadata/account_metadata.cats#L4">schema</a></td></tr>
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/metadata/src/model/AccountMetadataTransaction.h#L34">catapult model</a></td></tr>
     </table></div>
-<p>Shared content between <a href="/serialization#accountmetadatatransaction" title="Associate a key-value state to an account.">AccountMetadataTransaction</a> and <a href="/serialization#embeddedaccountmetadatatransaction" title="Embedded version of AccountMetadataTransaction.">EmbeddedAccountMetadataTransaction</a>. </p>
+<p>Shared content between <a href="/serialization#accountmetadatatransaction" title="Associate a key-value state (metadata) to an account.">AccountMetadataTransaction</a> and <a href="/serialization#embeddedaccountmetadatatransaction" title="Embedded version of AccountMetadataTransaction.">EmbeddedAccountMetadataTransaction</a>. </p>
 </td></tr></table>
 
 <div class="big-table6">
@@ -13,33 +13,33 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">target_address</code></div>
    <div><a href="/serialization#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></div>
-   <div class="description"><p>metadata target address </p></div>
+   <div class="description"><p>Account whose metadata should be modified. </p></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">scoped_metadata_key</code></div>
    <div>byte[8]</div>
-   <div class="description"><p>metadata key scoped to source, target and type </p></div>
+   <div class="description"><p>Metadata key scoped to source, target and type. </p></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">value_size_delta</code></div>
    <div>byte[2]</div>
-   <div class="description"><p>change in value size in bytes </p></div>
+   <div class="description"><p>Change in value size in bytes, compared to previous size. </p></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">value_size</code></div>
    <div>byte[2]</div>
-   <div class="description"><p>value size in bytes </p></div>
+   <div class="description"><p>Size in bytes of the <code class="docutils literal">value</code> array. </p></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">value</code></div>
    <div>byte[value_size]</div>
-   <div class="description"><p>difference between existing value and new value <br/><b>Note:</b> when there is no existing value, new value is same this value <br/><b>Note:</b> when there is an existing value, new value is calculated as xor(previous-value, value) </p></div>
+   <div class="description"><p>Difference between existing value and new value. <br/><b>Note:</b> When there is no existing value, this array is directly used and <code class="docutils literal">value_size_delta</code>==<code class="docutils literal">value_size</code>. <br/><b>Note:</b> When there is an existing value, the new value is the byte-wise XOR of the previous value and this array. </p></div>
 </div>
 <details><summary>Included in:</summary><div class="tabulated-list"><div>
-<a href="/serialization#accountmetadatatransaction" title="Associate a key-value state to an account.">AccountMetadataTransaction</a></div><div><a href="/serialization#embeddedaccountmetadatatransaction" title="Embedded version of AccountMetadataTransaction.">EmbeddedAccountMetadataTransaction</a>
+<a href="/serialization#accountmetadatatransaction" title="Associate a key-value state (metadata) to an account.">AccountMetadataTransaction</a></div><div><a href="/serialization#embeddedaccountmetadatatransaction" title="Embedded version of AccountMetadataTransaction.">EmbeddedAccountMetadataTransaction</a>
 </div></div></details>
 
