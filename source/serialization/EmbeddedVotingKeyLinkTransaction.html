@@ -1,10 +1,10 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
     <tr><td class="side-info-icon">&varr;</td><td>Size: 92 bytes = 0x5c</td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/coresystem/voting_key_link.cats#L26">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/coresystem/voting_key_link.cats#L38">schema</a></td></tr>
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/coresystem/src/model/VotingKeyLinkTransaction.h#L58">catapult model</a></td></tr>
     </table></div>
-<p>Embedded version of <a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.">VotingKeyLinkTransaction</a>. </p>
+<p>Embedded version of <a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key required for finalization voting.">VotingKeyLinkTransaction</a>. </p>
 </td></tr></table>
 
 <div class="big-table6">
@@ -22,44 +22,44 @@
    <div class="description"><b>const</b> <code class="docutils literal">VOTING_KEY_LINK</code> (<code class="docutils literal">0x4143</code>)<br/></div>
    <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#embeddedtransaction" title="binary layout for an embedded transaction">EmbeddedTransaction</a><span style="float:right">48 bytes = 0x30</span></div>
    <div class="indentation-cell-h"></div><div style="grid-column: 2 / span 5;" class="big-table-section-h"><a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a><span style="float:right">8 bytes = 0x8</span></div>
-   <div class="indentation-cell-h"></div><div class="indentation-cell-h"></div><div style="grid-column: 3 / span 4;" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="binary layout for a size-prefixed entity">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></div>
+   <div class="indentation-cell-h"></div><div class="indentation-cell-h"></div><div style="grid-column: 3 / span 4;" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="Serialization of an entity that has its size stated as a prefix (header).">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div><code class="docutils literal">size</code></div>
    <div>byte[4]</div>
-   <div class="description"><p>entity size </p></div>
+   <div class="description"><p>Entity size in bytes. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">embedded_&ZeroWidthSpace;transaction_&ZeroWidthSpace;header_&ZeroWidthSpace;reserved_&ZeroWidthSpace;1</code></div>
    <div>byte[4]</div>
    <div class="description"><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a> on 8-byte boundary </p></div>
-   <div class="indentation-cell-h"></div><div style="grid-column: 2 / span 5;" class="big-table-section-h"><a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a><span style="float:right">38 bytes = 0x26</span></div>
+   <div class="indentation-cell-h"></div><div style="grid-column: 2 / span 5;" class="big-table-section-h"><a href="/serialization#entitybody" title="Serialization of an entity.">EntityBody</a><span style="float:right">38 bytes = 0x26</span></div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">signer_public_key</code></div>
    <div><a href="/serialization#publickey" title="A 32-byte (256 bit) integer derived from a private key.">PublicKey</a></div>
-   <div class="description"><p>entity signer's public key </p></div>
+   <div class="description"><p>Public key of the signer of the entity. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">entity_body_reserved_1</code></div>
    <div>byte[4]</div>
-   <div class="description"><b>reserved</b> <code class="docutils literal">0</code><br/><p>reserved padding to align end of <a href="/serialization#entitybody" title="binary layout for a blockchain entity (block or transaction)">EntityBody</a> on 8-byte boundary </p></div>
+   <div class="description"><b>reserved</b> <code class="docutils literal">0</code><br/><p>Reserved padding to align end of <a href="/serialization#entitybody" title="Serialization of an entity.">EntityBody</a> to an 8-byte boundary. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">version</code></div>
    <div>byte[1]</div>
-   <div class="description"><p>entity version </p></div>
+   <div class="description"><p>Version of this structure. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">network</code></div>
-   <div><a href="/serialization#networktype" title="enumeration of network types">NetworkType</a></div>
-   <div class="description"><p>entity network </p></div>
+   <div><a href="/serialization#networktype" title="Enumeration of network types.">NetworkType</a></div>
+   <div class="description"><p>Network on which this entity was created. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
@@ -72,23 +72,23 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">linked_public_key</code></div>
    <div><a href="/serialization#votingpublickey" title="A PublicKey used for voting during the finalization process.">VotingPublicKey</a></div>
-   <div class="description"><p>linked public key </p></div>
+   <div class="description"><p>Linked voting public key. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">start_epoch</code></div>
    <div><a href="/serialization#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></div>
-   <div class="description"><p>start finalization epoch </p></div>
+   <div class="description"><p>Starting finalization epoch. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">end_epoch</code></div>
    <div><a href="/serialization#finalizationepoch" title="Index of a finalization epoch.">FinalizationEpoch</a></div>
-   <div class="description"><p>end finalization epoch </p></div>
+   <div class="description"><p>Ending finalization epoch. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">link_action</code></div>
    <div><a href="/serialization#linkaction" title="Link actions.">LinkAction</a></div>
-   <div class="description"><p>link action </p></div>
+   <div class="description"><p>Account link action. </p></div>
 </div>

@@ -4,20 +4,20 @@
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/mosaic/mosaic_types.cats#L4">schema</a></td></tr>
     <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/mosaic/src/model/MosaicFlags.h#L29">catapult model</a></td></tr>
     </table></div>
-<p>enumeration of mosaic property flags </p>
+<p>Enumeration of mosaic property flags. </p>
 </td></tr></table>
 
 <div class="big-table3">
 <div><b>0x0</b></div>
 <div><code class="docutils literal">NONE</code></div>
-<div class="description"><p>no flags present </p></div>
+<div class="description"><p>No flags present. </p></div>
 <div><b>0x1</b></div>
 <div><code class="docutils literal">SUPPLY_MUTABLE</code></div>
-<div class="description"><p>mosaic supports supply changes even when mosaic owner owns partial supply </p></div>
+<div class="description"><p><a href="/serialization#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> supports supply changes through a <a href="/serialization#mosaicsupplychangetransaction" title="Change the total supply of a mosaic.">MosaicSupplyChangeTransaction</a> even when mosaic creator only owns a partial supply. <br/>If the mosaic creator owns the totality of the supply, it can be changed even if this flag is not set. </p></div>
 <div><b>0x2</b></div>
 <div><code class="docutils literal">TRANSFERABLE</code></div>
-<div class="description"><p>mosaic supports transfers between arbitrary accounts <br/><b>Note:</b> when not set, mosaic can only be transferred to and from mosaic owner </p></div>
+<div class="description"><p><a href="/serialization#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> supports <a href="/serialization#transfertransaction" title="Send mosaics and messages between two accounts.">TransferTransaction</a> between arbitrary accounts. When not set, this mosaic can only be transferred to or from the mosaic creator. </p></div>
 <div><b>0x4</b></div>
 <div><code class="docutils literal">RESTRICTABLE</code></div>
-<div class="description"><p>mosaic supports custom restrictions configured by mosaic owner </p></div>
+<div class="description"><p><a href="/serialization#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> supports custom restrictions configured by the mosaic creator. <br/>See <a href="/serialization#mosaicaddressrestrictiontransaction" title="Set address specific rules to transfer a restrictable mosaic.">MosaicAddressRestrictionTransaction</a> and <a href="/serialization#mosaicglobalrestrictiontransaction" title="Set global rules to transfer a restrictable mosaic.">MosaicGlobalRestrictionTransaction</a>. </p></div>
 </div>
