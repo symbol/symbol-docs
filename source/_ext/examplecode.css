@@ -28,3 +28,9 @@ ul.example-selector li.selected {
 ul.example-selector li.selected:hover {
     background-color: #333;
 }
+div.literal-block-wrapper {
+    margin: 0;
+}
+div[class*="highlight-"] {
+    margin-top: 0;
+}

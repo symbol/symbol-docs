@@ -494,6 +494,7 @@ div.figure .caption {
     text-align: right;
     height: 0;
     padding: 0 5px;
+    margin: 0;
 }
 .literal-block-wrapper {
     padding: 0 !important;
