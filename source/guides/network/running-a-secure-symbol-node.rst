@@ -92,7 +92,7 @@ This step will create a ``symbol-cli`` profile to hold the main account and sign
             --url http://localhost:3000 --network TEST_NET \
             --generation-hash 45FBCF2F0EA36EFA7923C9BC923D6503169651F7FA4EFC46A8EAF5AE09057EBD \
             --namespace-id symbol.xym --divisibility 6 \
-            --epoch-adjustment 1573430400
+            --epoch-adjustment 1616694977
 
 When prompted, enter a password to secure your profile and select the ``PrivateKey`` import type:
 
