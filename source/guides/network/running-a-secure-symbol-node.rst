@@ -90,7 +90,7 @@ This step will create a ``symbol-cli`` profile to hold the main account and sign
 
          symbol-cli profile create --profile offline-test --default \
             --url http://localhost:3000 --network TEST_NET \
-            --generation-hash 45FBCF2F0EA36EFA7923C9BC923D6503169651F7FA4EFC46A8EAF5AE09057EBD \
+            --generation-hash 3B5E1FA6445653C971A50687E75E6D09FB30481055E3990C84B25E9222DC1155 \
             --namespace-id symbol.xym --divisibility 6 \
             --epoch-adjustment 1616694977
 
