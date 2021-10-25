@@ -278,7 +278,7 @@ class SerializationCommand(Command):
                         format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 elif indent < 2:
                     print('   <div class="indentation-cell-h"></div>'
-                        '<div style="grid-column: 2 / span 5;" class="big-table-section-h">{}<span style="float:right">{}</span></div>'.
+                        '<div style="grid-column: 2 / span 5;" class="big-table-section">{}<span style="float:right">{}</span></div>'.
                         format(self.type_description(self.types[v['type']]), size_label), file=html_file)
                 else:
                     print('   <div class="indentation-cell-h"></div><div class="indentation-cell-h"></div>'
