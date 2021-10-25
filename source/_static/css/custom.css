@@ -777,3 +777,8 @@ details[open] > summary:before {
 summary::-webkit-details-marker {
   display:none;
 }
+
+/* Default text alignment for tables */
+.align-default {
+  text-align: left;
+}
