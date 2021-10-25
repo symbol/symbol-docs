@@ -423,6 +423,7 @@ class SerializationCommand(Command):
         print(file=index_file)
         print('* TOC', file=index_file)
         print('{:toc}', file=index_file)
+        print(file=index_file)
 
         # Process all basic types
         print('## Basic Types', file=index_file)
