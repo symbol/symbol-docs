@@ -28,8 +28,9 @@ def load_config(config):
 @click.option('--source-schema-path', '-h', default='../catbuffer-schemas/symbol', help='Path to local checkout of the catbuffer-schemas repo.', show_default=True)
 @click.option('--source-catapult-path', '-a', default='../catapult-src', help='Path to local checkout of the catapult-client repo.', show_default=True)
 @click.option('--dst-path', '-d', default='../symbol-docs/source/serialization', help='Path to store generated files.', show_default=True)
+@click.option('--format', '-f', type=click.Choice(['rst', 'md'], case_sensitive=False), default='rst', help='Type of the index serialization file,', show_default=True)
 @click.argument('command', required=True)
-def main(command, config, mainnet_report, schema, source_schema_path, source_catapult_path, dst_path):
+def main(command, config, mainnet_report, schema, source_schema_path, source_catapult_path, dst_path, format):
     """ COMMAND: properties | status-errors | cli-usage | serialization
     """
     config = load_config(config)
@@ -38,6 +39,7 @@ def main(command, config, mainnet_report, schema, source_schema_path, source_cat
     config['source_schema_path'] = source_schema_path
     config['source_catapult_path'] = source_catapult_path
     config['dst_path'] = dst_path
+    config['format'] = format
     config['core_version'] = subprocess.run(['git', '--git-dir', config['serverPath'] + '.git', 'describe', '--tags', '--abbrev=0'], stdout=subprocess.PIPE).stdout.decode('utf-8')
     if command == 'properties':
         PropertiesCommand(config).execute()
