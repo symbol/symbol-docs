@@ -82,6 +82,32 @@ catapult-docs-cli properties > properties.rst
 diff properties_bison.rst properties_cow.rst
 ```
 
+### Generate serialization docs for Symbol
+
+Checkout the following git repositories:
+
+- [catapult-docs-cli](git@github.com:symbol/catapult-docs-cli.git)
+- [catbuffer-schemas](git@github.com:symbol/catbuffer-schemas.git)
+- [catbuffer-parser](git@github.com:symbol/catbuffer-parser.git)
+- [catapult-client](git@github.com:symbol/catapult-client.git)
+- [symbol-docs](git@github.com:symbol/symbol-docs.git)
+
+From within ``catbuffer-parser`` run:
+
+``` bash
+python3 -m catparser -s ../catbuffer-schemas/symbol/all.cats -i ../catbuffer-schemas/symbol/ > ../catapult-docs-cli/symbol.yaml
+```
+
+This will produce a ``symbol.yaml`` in the ``catapult-docs-cli`` folder. Go to that folder and run:
+
+``` bash
+python3 -m catapult_docs_cli.cli serialization
+```
+
+The default values are already configured to work with the above folder structure so you don't need to provide any additional parameters.
+
+The default output folder is ``../symbol-docs/source/serialization``, and a lot of ``.html`` and one ``.rst`` file will be generated there.
+
 ## License
 
 [MIT License](LICENSE.md)
