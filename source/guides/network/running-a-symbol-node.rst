@@ -256,7 +256,7 @@ Interacting with the network
 
 You can use the following tools to test the functionality of your new node:
 
-* |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the test network.
+* |blockchain-explorer|: Search for transactions, accounts, assets, and blocks in the network.
 * :ref:`Desktop Wallet <wallet-desktop>`: Cross-platform client for |codename|. Available for Mac, Linux, and Windows.
 * :ref:`Command-Line Interface <wallet-cli>`: Execute the most commonly used actions from your terminal.
 * The |codename| |faucet|: Receive |networkcurrency| units to test |codename|'s services.
@@ -276,7 +276,7 @@ Now that your node is up and running, you can take a look at the following guide
 
 .. |blockchain-explorer| raw:: html
 
-   <a href="http://explorer.testnet.symboldev.network/" target="_blank">Blockchain Explorer</a>
+   Blockchain Explorer (<a href="http://explorer.symbolblockchain.io/" target="_blank">MAINNET</a> and <a href="http://explorer.testnet.symboldev.network/" target="_blank">TESTNET</a>)
 
 .. |faucet| raw:: html
 
