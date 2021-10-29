@@ -495,4 +495,4 @@ The node should start and a lot of debug output should appear on the screen.
 
 Your node should now be **up and running** and its main private key has never left the configuration (offline) machine.
 
-For added security, you can now turn the node's main account into a :doc:`../../concepts/multisig-account`. This is useful, for example, for node providers that work in a **non-custodial** manner. Read about this process in the :doc:`non-custodial-node-setup` guide.
+For added security, you can now turn the node's main account into a :doc:`../../concepts/multisig-account`. This is useful, for example, for service providers that work in a **non-custodial** manner. Read about this process in the :doc:`non-custodial-node-setup` guide.

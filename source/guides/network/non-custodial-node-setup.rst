@@ -9,7 +9,9 @@ Non-custodial node setup
 
 How to **relinquish control of a node's main account to an external account**, so that the external account's private key is never required in the node setup process.
 
-This is useful, for example, for node providers that work in a **non-custodial** manner. This is, **customers** hire the **node provider** to setup nodes for them and have any node rewards sent to their main accounts, without ever sending their account keys to the node provider.
+This is useful, for example, for service providers (also known as *staking* service providers or *hosting* service providers) that work in a **non-custodial** manner. This is, **customers** hire the **service provider** to setup nodes for them and have any node rewards sent to their main accounts, without ever sending their account keys to the service provider.
+
+This guide is intended for the service provider setting up a node on behalf of their customer.
 
 There are **many mechanisms** to achieve this in |codename|. This page explains the **simplest one**, assuming that the customer is not tech-savvy (and therefore prefers not to use command-line tools like ``symbol-cli``), and that **the customer's key are not allowed on an online machine**.
 
@@ -20,9 +22,9 @@ There are **many mechanisms** to achieve this in |codename|. This page explains 
 
 **In summary**, once the node is completely setup, full control of the node's **main account** will be transferred to the customer account (called **external account**) by turning main into a :doc:`../../concepts/multisig-account`:
 
-- The node provider will prepare a transaction for offline signing and send it to the customer.
+- The service provider will prepare a transaction for offline signing and send it to the customer.
 - The customer signs the transaction using their Wallet from an offline machine, and returns the signature.
-- The node provider announces the transaction.
+- The service provider announces the transaction.
 
 *************
 Prerequisites
@@ -51,14 +53,14 @@ So far, the node's main account is a regular account. A :ref:`multisigaccountmod
 
 This means that **any operation** on the main account will **require the signature** of the external account.
 
-This transaction will be prepared by the node provider using ``symbol-cli`` and sent to the customer for signing.
+This transaction will be prepared by the service provider using ``symbol-cli`` and sent to the customer for signing.
 
 Notes on this transaction:
 
 - The ``--max-fee 1000000`` parameter means that **1 XYM** will be paid for the transaction. Feel free to use a different number after reading the :doc:`fees documentation <../../concepts/fees>`.
 - The default transaction deadline in ``symbol-cli`` is **2 hours**. Use the ``--deadline`` parameter if you need more time to get the customer's signature.
 
-Run:
+Run this from **the configuration machine**:
 
 .. code-block:: bash
 
@@ -140,11 +142,11 @@ The customer uses their :ref:`Symbol Desktop Wallet <wallet-desktop>` to create 
 
 - Copy the whole line of text (for example by triple-clicking on it) and paste it into a new text file named ``signature.txt``.
 
-**************************
-Send signature to provider
-**************************
+**********************************
+Send signature to service provider
+**********************************
 
-Send ``signature.txt`` back to the node provider, as a plain text file.
+Send ``signature.txt`` back to the service provider, as a plain text file.
 
 ********************
 Announce transaction
