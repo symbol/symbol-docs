@@ -26,7 +26,7 @@ The main version to keep track of is the **Catapult client version**, since this
 
 - **Finding out what are the latest versions**:
 
-  Whenever there is a new client version released it will be announced through the NEM |forum|, |twitter| and the |discord| channel. You can also keep an eye on the different |github| repositories and :doc:`the compatibility matrix page <../../compatibility>` to know the latest client and REST versions.
+  Whenever there is a new client version released it will be announced through the Symbol |twitter| and the |discord| channel. You can also keep an eye on the different |github| repositories and :doc:`the compatibility matrix page <../../compatibility>` to know the latest client and REST versions.
 
 - **Finding out your node versions**:
 
