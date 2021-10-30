@@ -48,6 +48,8 @@ The main version to keep track of is the **Catapult client version**, since this
 
 The exact procedure to update your node depends on how you created it. Read the appropriate section below.
 
+.. _update-bootstrap-nodes:
+
 Update nodes created with Bootstrap
 ===================================
 
