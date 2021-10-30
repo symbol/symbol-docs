@@ -296,10 +296,6 @@ rst_prolog = """
 
    <a href="https://github.com/symbol/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
 
-.. |forum| raw:: html
-
-   <a href="https://forum.nem.io/c/announcement" target="_blank">Forum</a>
-
 .. |techref| raw:: html
 
    <a href="https://docs.symbolplatform.com/symbol-technicalref/main.pdf" target="_blank">Technical Reference</a>

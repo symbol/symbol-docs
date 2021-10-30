@@ -28,7 +28,7 @@ This guide explains the concepts behind |symbol-bootstrap|, a package which cont
 
 After reading this you will be able to better understand the :doc:`creating-a-private-test-net` and :doc:`running-a-symbol-node` guides.
 
-**This package replaces the previous tools** |catapult-service-bootstrap| and |symbol-testnet-bootstrap|.
+**This package replaces the previous tools** ``catapult-service-bootstrap`` and ``symbol-testnet-bootstrap``.
 
 .. _symbol-bootstrap-requirements:
 
@@ -42,9 +42,9 @@ Environment
 
 The setup scripts are automated using **docker**. To run a test net or node, you will need to have installed the following tools:
 
-* `node.js`_ version 12 or higher (**It is recommended that you install node.js using** `nvm <https://github.com/nvm-sh/nvm>`__)
-* `docker`_
-* `docker-compose`_
+* `node.js <https://nodejs.org/en/download>`__ version 12 or higher (**It is recommended that you install node.js using** `nvm <https://github.com/nvm-sh/nvm>`__)
+* `docker <https://docs.docker.com/install/>`__
+* `docker-compose <https://docs.docker.com/compose/install/>`__
 
 =====
 Ports
@@ -182,7 +182,7 @@ The above three commands (``config``, ``compose`` and ``run``) can be merged int
 
     symbol-bootstrap start -p <preset> -a <assembly>
 
-That's right, a test network or node can be instantiated and booted with a single command!
+That's right, a |codename| node (or test network with many nodes) can be instantiated and booted with a single command!
 
 **********
 Next steps
@@ -194,17 +194,3 @@ Proceed to the following guides to put what you have learned into practice!
 - :doc:`running-a-symbol-node`: How to set up your own node and join |codename|'s network.
 
 Read the `complete list <https://github.com/symbol/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
-
-.. _node.js: https://nodejs.org/en/download/
-
-.. _docker: https://docs.docker.com/install/
-
-.. _docker-compose: https://docs.docker.com/compose/install/
-
-.. |catapult-service-bootstrap| raw:: html
-
-    <a href="https://github.com/symbol/catapult-service-bootstrap" target="_blank">Catapult Service Bootstrap</a>
-
-.. |symbol-testnet-bootstrap| raw:: html
-
-    <a href="https://github.com/symbol/symbol-testnet-bootstrap" target="_blank">Symbol Testnet Bootstrap</a>

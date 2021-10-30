@@ -13,8 +13,6 @@ You can safely experiment connecting to |codename|'s network by connecting to th
 
 To run the network, you are going to use the package |symbol-bootstrap|. To better understand how this package works it is highly recommended to read the :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>` guide.
 
-.. note:: |symbol-bootstrap| runs on all the supported Operating Systems (**Windows**, **Mac** and **Linux**). This guide works out-of-the-box on **Ubuntu 20.04** but other Linux distributions might require some adjustments. For instructions specific to **CentOS 8** please follow `spizzerb's CentOS 8 guide <https://forum.nem.io/t/complete-guide-to-run-a-dual-node-on-centos-8-using-symbol-bootstrap>`__ (developed by a NEM community member).
-
 *********************
 Hardware requirements
 *********************
