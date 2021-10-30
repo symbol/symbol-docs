@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-##############################
-Running a Symbol node manually
-##############################
+#######################
+Running a node manually
+#######################
 
 This guide walks you through the process of setting up a node to join |codename|'s network **without** using Symbol Bootstrap.
 

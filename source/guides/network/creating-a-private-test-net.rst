@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-##############################
-Creating private test networks
-##############################
+#####################
+Private test networks
+#####################
 
 This guide will walk you through the process of setting up your own private network using |codename|.
 

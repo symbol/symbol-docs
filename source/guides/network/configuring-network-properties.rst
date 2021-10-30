@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-##############################
-Configuring network properties
-##############################
+##################
+Network properties
+##################
 
 There is a large number of network-related settings that can be customized in |codename|.
 

@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-############################
-Running a Secure Symbol node
-############################
+#####################
+Running a secure node
+#####################
 
 The :doc:`running-a-symbol-node` guide explains how to easily **create a node using Symbol Bootstrap**. In that guide, the setup process is conducted on the same machine that will host the node, meaning that private keys are generated on a machine connected to the Internet. If you need a **hardened level of security** you can follow this guide instead, at the cost of a more involved setup process.
 

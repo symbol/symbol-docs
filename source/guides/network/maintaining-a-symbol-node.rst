@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-#########################
-Maintaining a Symbol Node
-#########################
+##################
+Maintaining a Node
+##################
 
 Once you have created a |codename| node, be it :doc:`manually <running-a-symbol-node-manually>` or :doc:`using Symbol bootstrap <running-a-symbol-node>`, the node is **mostly autonomous**. But there is still a little bit of maintenance required, explained in this guide.
 

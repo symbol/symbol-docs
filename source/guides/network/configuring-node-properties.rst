@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-###########################
-Configuring node properties
-###########################
+###############
+Node properties
+###############
 
 There is a large number of node-related settings that can be customized in |codename|.
 

@@ -3,9 +3,9 @@
     :excerpt: 1
     :nocomments:
 
-#####################
-Running a Symbol node
-#####################
+##############
+Running a node
+##############
 
 This guide walks you through the process of setting up a node to join |codename|'s **public network**.
 
