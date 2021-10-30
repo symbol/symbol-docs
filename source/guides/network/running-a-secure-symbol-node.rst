@@ -134,7 +134,7 @@ Preset
 
 You can read more about these properties in the `security mode section <https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
 
-If you have customizations to make, like enabling :ref:`voting <finalization>` or enrolling in a :doc:`Reward Program <../../concepts/reward-programs>`, you can provide them too:
+If you have customizations to make, like enabling :ref:`voting <finalization>`, you can provide them too:
 
 .. code-block:: yaml
 
@@ -143,7 +143,6 @@ If you have customizations to make, like enabling :ref:`voting <finalization>` o
    -
      mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
      voting: true
-     rewardProgram: SuperNode
      host: my-symbol-node.com # Could also be an IP address
 
 Configure

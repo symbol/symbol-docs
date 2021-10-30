@@ -17,4 +17,3 @@ Guides related to creating nodes and test networks.
     configuring-node-properties
     configuring-network-properties
     connecting-to-mongodb
-    supernode-enrollment
