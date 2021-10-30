@@ -260,7 +260,7 @@ You need to own the domain ``awesomenode.mycompany.net`` and it needs to resolve
 
 .. note::
 
-   This option has been heavily inspired by `this great blog <https://nemlog.nem.social/blog/58808>`__. Symbol Bootstrap simply bundles this solution. If you have followed the blog instructions before, you can keep your node without modifying Bootstrap or migrate it to the Bootstrap service removing the extra compose file and process.
+   This option has been heavily inspired by `this great blog <https://nemlog.nem.social/blog/58808>`__. Symbol Bootstrap simply bundles this solution, streamlining the process.
 
 **********
 Next steps
