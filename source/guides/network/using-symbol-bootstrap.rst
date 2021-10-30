@@ -24,11 +24,13 @@ Using Symbol Bootstrap
 
       npm install -g symbol-bootstrap
 
-This guide explains the concepts behind |symbol-bootstrap|, a package which contains the necessary setup scripts to help developers quickly configure and run their own network or node in any of the **supported operating systems** (Windows, Linux and Mac).
+This guide explains the concepts behind |symbol-bootstrap|, a program that allows quickly configuring and running |codename| nodes on multiple operating systems (Windows, Linux and Mac).
 
-After reading this you will be able to better understand the :doc:`creating-a-private-test-net` and :doc:`running-a-symbol-node` guides.
+It can also deploy several nodes at once to quickly create a test network.
 
-**This package replaces the previous tools** ``catapult-service-bootstrap`` and ``symbol-testnet-bootstrap``.
+After reading this you will be able to better understand the :doc:`running-a-symbol-node` and :doc:`creating-a-private-test-net` guides.
+
+**This program replaces the previous tools** ``catapult-service-bootstrap`` **and** ``symbol-testnet-bootstrap``.
 
 .. _symbol-bootstrap-requirements:
 
@@ -40,7 +42,7 @@ Requirements
 Environment
 ===========
 
-The setup scripts are automated using **docker**. To run a test net or node, you will need to have installed the following tools:
+The setup scripts are automated using **Docker**. To run a node or test network, you will need to have installed the following tools:
 
 * `node.js <https://nodejs.org/en/download>`__ version 12 or higher (**It is recommended that you install node.js using** `nvm <https://github.com/nvm-sh/nvm>`__)
 * `docker <https://docs.docker.com/install/>`__
@@ -54,7 +56,7 @@ Make sure that the client's host is accessible from the internet and that **the 
 
 * Port ``7900`` is used by catapult-client to communicate between nodes.
 * Port ``3000`` is used by the REST Gateway to expose the endpoints to interact with the node.
-* Port ``7881`` is used by the :ref:`monitoring agent <reward-programs-controller>`. Only required when enrolled to some of the :doc:`../../concepts/reward-programs`, and can be customized.
+* Port ``3001`` is used by the REST Gateway in HTTPS mode.
 
 ************
 Installation
@@ -66,13 +68,13 @@ Installation
 
     npm install -g symbol-bootstrap
 
-Notes:
+.. topic:: Notes:
 
-- You can run the above command again to install a newer version of ``symbol-bootstrap`` every time one becomes available.
+   - You can run the above command again to install a newer version of ``symbol-bootstrap`` every time one becomes available.
 
-  Remember to stop ``symbol-bootstrap`` before upgrading and then start it again afterwards, as shown below.
+     Remember to stop ``symbol-bootstrap`` before upgrading and then start it again afterwards, as shown below.
 
-- If you get permission errors read nodejs's guide to `Resolving EACCES permissions errors when installing packages globally <https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally>`__.
+   - If you get permission errors read nodejs's guide to `Resolving EACCES permissions errors when installing packages globally <https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally>`__.
 
 *************
 Configuration
@@ -84,7 +86,7 @@ Configuration
 Presets
 =======
 
-Node configuration is done through a **YAML configuration file** which specifies every possible network parameter. Since the complete file can be several hundred lines long, a number of **presets** are available to simplify its handling:
+Node configuration is done through a **YAML configuration file** which specifies every possible network parameter. Since the complete file can be several hundred lines long, a number of **presets** are available to simplify its handling. Specify the preset with the ``‑‑preset`` or ``‑p`` parameters.
 
 .. csv-table::
     :header: "Preset", "Description"
@@ -95,44 +97,54 @@ Node configuration is done through a **YAML configuration file** which specifies
     ``bootstrap``; **Autonomous network** with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/network.yml>`__). This is the default preset.
     ``testnet``; A **single node** that connects to the current public **test** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
 
-Presets can be further customized by specifying an **assembly** (or flavor) which provides additional parameters:
+Presets can be further customized by indicating an **assembly** (or flavor) which provides additional parameters. Specify the assembly with the ``‑‑assembly`` or ``‑a`` parameters.
 
 .. csv-table::
     :header: "Preset", "Available assemblies", "Description"
     :delim: ;
     :widths: 20, 20, 60
 
-    ``mainnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__).
-    ``mainnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__).
-    ``mainnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__).
+    ``mainnet``; ``peer``; The node is a :ref:`peer-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__).
+    ``mainnet``; ``api``; The node is an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__).
+    ``mainnet``; ``dual``; The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__).
     ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).
     ``bootstrap``; ``full``; It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 faucet. Great for demonstration purposes. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__).
-    ``testnet``; ``peer``; The node is a harvester (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
-    ``testnet``; ``api``; The node runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__).
-    ``testnet``; ``dual``; The node is a harvester and runs its own mongo database and rest gateway (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__).
+    ``testnet``; ``peer``; The node is a :ref:`peer-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
+    ``testnet``; ``api``; The node runs is an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__).
+    ``testnet``; ``dual``; The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__).
 
-Finally, if additional configuration is required, a **custom YAML file** can be provided. Any value in this file overrides the default values set by the preset or the assembly so it can be combined on top of them. Take a look at the :doc:`Configuring network properties <configuring-network-properties>` guide to know which parameters are available.
+==============
+Custom presets
+==============
 
-===============================
-Creating the configuration file
-===============================
+Furthermore, if additional configuration is required, a **custom preset file** can be provided. Any value in this file overrides the default values set by the preset or the assembly so it can be combined on top of them. All properties in the :doc:`configuring-network-properties` or :doc:`configuring-node-properties` guides can be set through this file, for example.
 
-Before building the network the full configuration file has to be created by using the `symbol-bootstrap config <https://github.com/symbol/symbol-bootstrap/blob/main/docs/config.md>`_ command and providing the desired preset and assembly:
+Specify a custom preset file with the ``‑‑customPreset`` or ``‑c`` parameters.
+
+.. note::
+
+   If you ever change your custom preset file once your node is already running you will need to upgrade the node as explained in the :ref:`update-bootstrap-nodes` guide.
+
+**********************
+The ``config`` command
+**********************
+
+Before building the node or network a full configuration file has to be created by using the `symbol-bootstrap config <https://github.com/symbol/symbol-bootstrap/blob/main/docs/config.md>`_ command:
 
 .. code-block:: bash
 
     symbol-bootstrap config -p <preset> -a <assembly> -c <custom_parameters_file.yml>
 
-Some examples:
+For example:
 
 .. code-block:: bash
 
     symbol-bootstrap config -p bootstrap
-    symbol-bootstrap config -p testnet -a peer
-    symbol-bootstrap config -p testnet -a dual
-    symbol-bootstrap config -p testnet -a dual -c custom_parameters.yml
+    symbol-bootstrap config -p mainnet -a peer
+    symbol-bootstrap config -p mainnet -a dual
+    symbol-bootstrap config -p mainnet -a dual -c custom_parameters.yml
 
-This will create a folder, called ``target`` by default (It can be changed with the ``-t`` option), containing among other things the generated complete configuration file (``target/preset.yml``) ready to be used to build the network.
+This will create a folder, called ``target`` by default (it can be changed with the ``‑‑target`` or ``‑t`` parameters), containing among other things the generated complete configuration file (``target/preset.yml``) ready to be used to build the node or network.
 
 .. note:: On Linux, if you get the error ``Permission denied while trying to connect to the Docker daemon socket`` it means that your user does not belong to the ``docker`` group. Add it with:
 
@@ -140,9 +152,9 @@ This will create a folder, called ``target`` by default (It can be changed with 
 
     sudo addgroup $USER docker
 
-******************************
-Building the network and nodes
-******************************
+***********************
+The ``compose`` command
+***********************
 
 This command prepares the necessary Docker files based on the provided configuration:
 
@@ -150,13 +162,13 @@ This command prepares the necessary Docker files based on the provided configura
 
     symbol-bootstrap compose
 
-It only needs to be run once.
+Just like the config step, this only needs to be run once.
 
 *******************
-Running the network
+The ``run`` command
 *******************
 
-Finally, execute this command to start the necessary Docker instances and boot your network:
+Finally, execute this command to start the necessary Docker instances and boot your node or network:
 
 .. code-block:: bash
 
@@ -166,7 +178,7 @@ Stop the process by pressing ``Ctrl+C``.
 
 .. note::
 
-    To run the docker containers in the background of your terminal, you can run the service in detached mode using the option ``--detach`` or ``-d``.
+    To run the Docker containers in the background of your terminal, you can run the service in detached mode using the ``‑‑detached`` or ``‑d`` parameters.
 
     You then have to stop them with ``symbol-bootstrap stop``.
 
@@ -180,17 +192,81 @@ The above three commands (``config``, ``compose`` and ``run``) can be merged int
 
 .. code-block:: bash
 
-    symbol-bootstrap start -p <preset> -a <assembly>
+    symbol-bootstrap start -p <preset> -a <assembly> -c <custom_parameters_file.yml>
 
 That's right, a |codename| node (or test network with many nodes) can be instantiated and booted with a single command!
+
+Steps that only need to be done once (``config`` and ``compose``) will not be repeated, so you can use this command every time.
+
+**********************
+Providing HTTPS access
+**********************
+
+:ref:`API nodes <api-node>` created using the ``api`` or ``dual`` assemblies accept HTTP commands through port 3000. HTTPS access can be enabled too in two different ways.
+
+========================
+Use your own certificate
+========================
+
+If you already have an SSL for your host you can pass it onto Symbol Bootstrap inside a custom preset file.
+
+In order for the custom preset file to be self-contained, though, your certificate's **Key** and **Crt** files must be converted to a `Base64 <https://en.wikipedia.org/wiki/Base64>`__ string and copied into the preset file:
+
+.. code-block:: bash
+
+   cat restSsl.key | base64 -w 0
+   cat restSsl.crt | base64 -w 0
+
+Copy the output of these commands into the preset file, in a section like this:
+
+.. code-block:: yaml
+
+   nodes:
+   - friendlyName: My Awesome Node # Use anything you want here
+     host: awesomenode.mycompany.net # Use your node's host name
+   gateways:
+   - restProtocol: HTTPS
+     openPort: 3001
+     restSSLCertificateBase64: >-
+       LS0tLS1CRUdJTiBDRVJUSUZ...Base64...==
+     restSSLKeyBase64: >-
+       LS0tLS1CRUdJTiBSU0EgUFJ...Base64...=
+
+The provided certificate needs to be valid for the hostname ``awesomenode.mycompany.net``. The domain needs to resolve the IP address of your node.
+
+When the certificates eventually expire you need to update the custom preset file and then upgrade the node as explained in the :ref:`update-bootstrap-nodes` guide.
+
+This option only leaves HTTPS port 3001 open, not HTTP 3000. **Remember to open port 3001 in your firewall or security group**. Port 3000 can be closed as it is not used anymore.
+
+===================================
+Automatic Let's Encrypt certificate
+===================================
+
+Bootstrap can also take care of obtaining the necessary SSL certificates through the public and free `Let's Encrypt <https://letsencrypt.org/>`__ service.
+
+To enable it, just opt-in by adding an ``httpsProxies`` section to your custom preset file:
+
+.. code-block:: yaml
+
+   nodes:
+       - friendlyName: My Awesome Node # Use anything you want here
+         host: awesomenode.mycompany.net # Use your node's host name
+   httpsProxies:
+       - excludeDockerService: false
+
+You need to own the domain ``awesomenode.mycompany.net`` and it needs to resolve the IP address of your node. The Let’s Encrypt service will handle the certificate creation and renewals for you.
+
+**Remember to open ports 3001 and 80 in your firewall or security group**. Port 3000 may or may not be closed. `Port 80 is needed by Let's Encrypt <https://letsencrypt.org/docs/challenge-types/#http-01-challenge>`__.
+
+.. note::
+
+   This option has been heavily inspired by `this great blog <https://nemlog.nem.social/blog/58808>`__. Symbol Bootstrap simply bundles this solution. If you have followed the blog instructions before, you can keep your node without modifying Bootstrap or migrate it to the Bootstrap service removing the extra compose file and process.
 
 **********
 Next steps
 **********
 
-Proceed to the following guides to put what you have learned into practice!
+- Read the `complete list <https://github.com/symbol/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
 
-- :doc:`creating-a-private-test-net`: How to set up your own private network and access its nodes.
-- :doc:`running-a-symbol-node`: How to set up your own node and join |codename|'s network.
+- Go ahead and create a node following the :doc:`running-a-symbol-node` guide.
 
-Read the `complete list <https://github.com/symbol/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
