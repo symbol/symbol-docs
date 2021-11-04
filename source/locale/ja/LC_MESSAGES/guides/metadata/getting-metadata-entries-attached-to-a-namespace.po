@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-10-28 13:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:49
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:9
 msgid "Getting metadata entries attached to a namespace"
 msgstr "ネームスペースにアタッチされたメタデータエントリを取得する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:51
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:11
 msgid "Get the list of metadata entries attached to an namespace."
 msgstr "ネームスペースにアタッチされたメタデータエントリの一覧を取得する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:55
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:15
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:57
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:17
 msgid ""
 "Complete :doc:`assigning metadata entries to a namespace <assigning-"
 "metadata-entries-to-a-namespace>` guide."
@@ -41,10 +41,10 @@ msgstr ""
 ":doc:`ネームスペースへのメタデータの割り当て <assigning-metadata-entries-to-an-account>` "
 "ガイドを完了している"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:61
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:21
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:82
+#: ../../source/guides/metadata/getting-metadata-entries-attached-to-a-namespace.rst:42
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

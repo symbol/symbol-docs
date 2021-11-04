@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-15 05:56+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-07-02 14:32+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/consensus-algorithm.rst:43
+#: ../../source/concepts/consensus-algorithm.rst:3
 msgid "Consensus"
 msgstr "コンセンサス"
 
-#: ../../source/concepts/consensus-algorithm.rst:45
+#: ../../source/concepts/consensus-algorithm.rst:5
 msgid ""
 "The consensus algorithm is the dynamic method through which nodes in a "
 "blockchain system **reach an agreement** and **make decisions**."
 msgstr "コンセンサスアルゴリズムとはブロックチェーンシステムのノードが **合意形成** と **意志決定** をするための動的メソッドです。"
 
-#: ../../source/concepts/consensus-algorithm.rst:47
+#: ../../source/concepts/consensus-algorithm.rst:7
 msgid ""
 "|codename| utilizes an innovative mechanism called the **Proof-of-Stake "
 "Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) "
@@ -40,7 +40,7 @@ msgstr ""
 "|codename| では、有名な **Proof-of-Stake** (|pos|) プコンセンサスの改善バージョンである **Proof-of-"
 "Stake Plus** (PoS+) と呼ばれる革新的なメカニズムを利用します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:49
+#: ../../source/concepts/consensus-algorithm.rst:9
 msgid ""
 "In a basic **PoS** consensus algorithm, the formation of a new block in the "
 "blockchain is stochastically assigned to a node based on a combination of "
@@ -49,7 +49,7 @@ msgstr ""
 "基本的な **PoS** コンセンサスアルゴリズムでは、ブロックチェーン内の新しいブロック生成は **ノード所有者の富にのみ関連する** "
 "要因の組み合わせに基づいて、確率的にノードに割り当てられます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:51
+#: ../../source/concepts/consensus-algorithm.rst:11
 msgid ""
 "The **PoS+** mechanism considers the account's stakes too, but it also "
 "promotes the ecosystem's health by rewarding participants **based on their "
@@ -58,11 +58,11 @@ msgstr ""
 "**PoS+** メカニズムはアカウントの利害関係も考慮しますが、 **参加者の活動に基づいた** "
 "報酬を与えることにより、エコシステムの健全性も促進します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:57
+#: ../../source/concepts/consensus-algorithm.rst:17
 msgid "Factors"
 msgstr "要因"
 
-#: ../../source/concepts/consensus-algorithm.rst:59
+#: ../../source/concepts/consensus-algorithm.rst:19
 msgid ""
 "The algorithm considers the following factors when calculating an account's "
 "**importance**, the measure that will ultimately be used to choose the next "
@@ -70,7 +70,7 @@ msgid ""
 msgstr ""
 "アルゴリズムはアカウントの **インポータンス** を計算する際に、次のハーベスティングノードを選択するために最終的に使用される指標を考慮します:"
 
-#: ../../source/concepts/consensus-algorithm.rst:61
+#: ../../source/concepts/consensus-algorithm.rst:21
 msgid ""
 "**Stake**: The total amount of :ref:`harvesting mosaic <harvesting-mosaic>` "
 "held, since owners with larger balances have the incentive to see the "
@@ -82,7 +82,7 @@ msgstr ""
 "の合計量。残高が多い保有者はエコシステムの繁栄を見るインセンティブがあります。10,000 を超えるハーベスティングモザイクを保持しているアカウント "
 "(**高価値アカウント**) のみがハーベスティングに :ref:`適格 <account_eligibility>` となります。"
 
-#: ../../source/concepts/consensus-algorithm.rst:62
+#: ../../source/concepts/consensus-algorithm.rst:22
 msgid ""
 "**Transactions**: The total amount of :doc:`fees <fees>` paid by an account."
 " This encourages being an active account in the network."
@@ -90,7 +90,7 @@ msgstr ""
 "**Transactions**: アカウントによって支払われた :doc:`手数料 <fees>` "
 "の合計。これによりアカウントはネットワークでアクティブになります。"
 
-#: ../../source/concepts/consensus-algorithm.rst:63
+#: ../../source/concepts/consensus-algorithm.rst:23
 msgid ""
 "**Nodes**: The number of times an account has been the :ref:`beneficiary "
 "<harvesting-rewards>` of the fees collected by a node. Thus the network "
@@ -99,7 +99,7 @@ msgstr ""
 "**Nodes**: アカウントがノードによってハーベストされた手数料の :ref:`受取人 <harvesting-rewards>` "
 "であった回数。したがってネットワークはノードを実行するアカウントにインセンティブを与えます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:65
+#: ../../source/concepts/consensus-algorithm.rst:25
 msgid ""
 "Periodically, an **importance score** based on these three factors is "
 "calculated for all high-value accounts. The importance score determines an "
@@ -108,11 +108,11 @@ msgstr ""
 "すべての高価値アカウントについて、定期的にこれら 3 つの要素に基づいて **インポータンススコア** "
 "が計算されます。インポータンススコアはアカウントが次のブロックを :doc:`ハーベスト <harvesting>` する確率を決定します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:69
+#: ../../source/concepts/consensus-algorithm.rst:29
 msgid "Partial scores"
 msgstr "部分スコア"
 
-#: ../../source/concepts/consensus-algorithm.rst:71
+#: ../../source/concepts/consensus-algorithm.rst:31
 msgid ""
 "The network calculates first the following **partial scores** for all high-"
 "value accounts at the end of each importance period (720 blocks, roughly 6 "
@@ -121,13 +121,13 @@ msgstr ""
 "ネットワークは最初に、各インポータンス期間 (720 ブロック、約 6 時間 :ref:`config-network-properties` の "
 "``importanceGrouping`` を参照) の終わりに、すべての高価値アカウントについて、次の **部分スコア** を計算します:"
 
-#: ../../source/concepts/consensus-algorithm.rst:73
+#: ../../source/concepts/consensus-algorithm.rst:33
 msgid ""
 "**Stake Score** (:math:`S`): Account's balance divided by the balance of all"
 " high value accounts, at the end of the period."
 msgstr "**Stake Score** (:math:`S`): 期末時点のアカウントの残高をすべての高価値アカウントの残高で割ったもの。"
 
-#: ../../source/concepts/consensus-algorithm.rst:74
+#: ../../source/concepts/consensus-algorithm.rst:34
 msgid ""
 "**Transaction Score** (:math:`T`): Total amount of fees paid by the account "
 "divided by the total amount of fees paid by all high value accounts during "
@@ -136,7 +136,7 @@ msgstr ""
 "**Transaction Score** (:math:`T`): "
 "アカウントによって支払われた手数料の合計を、期間中にすべての高価値アカウントによって支払われた手数料の合計で割ったもの。"
 
-#: ../../source/concepts/consensus-algorithm.rst:75
+#: ../../source/concepts/consensus-algorithm.rst:35
 msgid ""
 "**Node Score** (:math:`N`): Number of times the account has been the "
 ":ref:`beneficiary <harvesting-rewards>` of a node fee divided by the number "
@@ -146,7 +146,7 @@ msgstr ""
 "**Node Score** (:math:`N`): 期間中にアカウントがノード手数料の :ref:`受益者 <harvesting-"
 "rewards>` であった回数を、すべての高価値アカウントがノード料金の受益者であった回数で割ったもの。"
 
-#: ../../source/concepts/consensus-algorithm.rst:76
+#: ../../source/concepts/consensus-algorithm.rst:36
 msgid ""
 "**Activity Score** (:math:`A`): Average of the :math:`T` and :math:`N` "
 "scores weighted **80%** and **20%** respectively, divided by the account's "
@@ -158,11 +158,11 @@ msgstr ""
 " **20％** "
 "で重み付けされ、アカウント残高で除算されます。アカウント残高で割ると、小さなアカウントがいくらか後押しされます。これはアカウントのインポータンススコアがアクティビティに依存し、ステークには依存しないためです。"
 
-#: ../../source/concepts/consensus-algorithm.rst:78
+#: ../../source/concepts/consensus-algorithm.rst:38
 msgid "An absolute activity score (:math:`A'`) is calculated first:"
 msgstr "最初に絶対アクティビティスコア (:math:`A'`) が計算されます:"
 
-#: ../../source/concepts/consensus-algorithm.rst:84
+#: ../../source/concepts/consensus-algorithm.rst:44
 msgid ""
 "And the actual activity score (:math:`A`) is calculated by dividing "
 ":math:`A'` by the sum of the absolute activity scores of all high value "
@@ -171,16 +171,16 @@ msgstr ""
 "また、実際のアクティビティスコア (:math:`A`) は :math:`A'` "
 "をすべての高価値アカウントの絶対アクティビティスコアの合計で割って計算されます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:86
+#: ../../source/concepts/consensus-algorithm.rst:46
 msgid ""
 "The importance score is then calculated based on the above partial scores."
 msgstr "次に、上記の部分スコアに基づいてインポータンススコアが計算されます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:90
+#: ../../source/concepts/consensus-algorithm.rst:50
 msgid "Importance score"
 msgstr "インポータンススコア"
 
-#: ../../source/concepts/consensus-algorithm.rst:92
+#: ../../source/concepts/consensus-algorithm.rst:52
 msgid ""
 "The importance score :math:`I` is calculated as the average of the :math:`S`"
 " and :math:`A` scores, weighted by an activity factor :math:`\\gamma`:"
@@ -188,11 +188,11 @@ msgstr ""
 "インポータンススコア :math:`I` はアクティビティ係数 :math:`\\gamma` で重み付けされた :math:`S` スコアと "
 ":math:`A` スコアの平均が計算されます。"
 
-#: ../../source/concepts/consensus-algorithm.rst:98
+#: ../../source/concepts/consensus-algorithm.rst:58
 msgid "In the |codename| network :math:`\\gamma` is 0.05 (**5%**)"
 msgstr "|codename| ネットワークにおいて :math:`\\gamma` は 0.05 (**5%**) です"
 
-#: ../../source/concepts/consensus-algorithm.rst:100
+#: ../../source/concepts/consensus-algorithm.rst:60
 msgid ""
 "Finally, among all accounts :ref:`eligible for harvesting "
 "<account_eligibility>`, the probability that a particular one is chosen is "
@@ -202,7 +202,7 @@ msgstr ""
 "最後に、すべての :ref:`ハーベスティング適格 <account_eligibility>` アカウントのうち、特定のアカウントが選択される確率は "
 "**直近 2 つのうち小さい方と定義されるインポータンススコア** :math:`I` の **有効なインポータンススコア** に比例します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:104
+#: ../../source/concepts/consensus-algorithm.rst:64
 msgid ""
 "Since scores are calculated every 720 blocks (roughly 6 hours) and the "
 "smaller of the previous **two scores** is used when calculating harvesting "
@@ -212,11 +212,11 @@ msgstr ""
 "スコアは 720 ブロック毎 (およそ 6 時間) で計算され、ハーベスティング可能性を計算する際、直近の **2 つのスコア** "
 "で小さい方が使用され、アカウントへ最初に資産を提供する際、ゼロより大きい確率を得るには **12 時間** が必要です。"
 
-#: ../../source/concepts/consensus-algorithm.rst:108
+#: ../../source/concepts/consensus-algorithm.rst:68
 msgid "Customization"
 msgstr "カスタマイズ"
 
-#: ../../source/concepts/consensus-algorithm.rst:110
+#: ../../source/concepts/consensus-algorithm.rst:70
 msgid ""
 "Private networks can **customize the consensus algorithm** by changing the "
 "following configuration properties. See :ref:`config-network-properties`."
@@ -255,6 +255,6 @@ msgid ""
 msgstr ""
 "アクティビティスコアの寄与 (:math:`\\gamma`) が 0 の場合、 PoS+ コンセンサスは、従来の PoS と同じように動作します。"
 
-#: ../../source/concepts/consensus-algorithm.rst:121
+#: ../../source/concepts/consensus-algorithm.rst:81
 msgid "Continue: :doc:`Harvesting <harvesting>`."
 msgstr "次項: :doc:`ハーベスティング <harvesting>`"

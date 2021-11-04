@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:49
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:9
 msgid "Creating a subnamespace"
 msgstr "サブネームスペースの作成"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:51
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:11
 msgid ""
 "Once you have a registered root :doc:`namespace <../../concepts/namespace>`,"
 " you can create up to ``3`` levels of subnamespaces to organize your assets."
@@ -33,31 +33,31 @@ msgstr ""
 "ルート :doc:`ネームスペース <../../concepts/namespace>` を取得すると ``3`` "
 "つまでのサブネームスペースを作って、アセットの整理をすることができます。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:55
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:15
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:57
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:17
 msgid ""
 "Complete :doc:`registering a namespace <registering-a-namespace>` guide."
 msgstr ":doc:`ネームスペースの取得 <registering-a-namespace>` ガイドを完了している"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:58
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:18
 msgid ""
 "Register a :doc:`namespace <../../concepts/namespace>` with an account."
 msgstr "アカウントで :doc:`ネームスペース <../../concepts/namespace>` を登録します。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:62
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:22
 msgid "Method #01: Using the Desktop Wallet"
 msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:64
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:24
 msgid ""
 "Click on \"**Namespace**\" on the left-side menu. Go to the \"**Create "
 "subnamespaces**\" tab."
 msgstr "左側のメニューの \"**ネームスペース**\" をクリックします。\"**サブネームスペースの作成**\" タブへ遷移します。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:70
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:30
 msgid ""
 "Enter information for your subnamespace. Click \"**Send**\". Verify the "
 "information on the popup and enter your wallet password. Click "
@@ -66,14 +66,14 @@ msgstr ""
 "サブネームスペースの情報を入力します。 \"**送信**\" をクリックします。ポップアップの情報を確認し、ウォレットのパスワードを入力します。 "
 "\"**確認**\" をクリックします。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:76
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:36
 msgid ""
 "You can check that the sub namespace has been created by going back to the "
 "\"**Owned namespaces**\" tab. If the subnamespace does not show, try "
 "clicking on the update icon."
 msgstr "\"**Owned namespaces**\" タブに戻って、サブネームスペースが作成されたことを確認できます。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:82
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:42
 msgid ""
 "When the subnamespace is created, link the subnamespace with a :doc:`mosaic "
 "<../namespace/link-a-namespace-to-a-mosaic>` or :doc:`address "
@@ -83,21 +83,21 @@ msgstr ""
 "または :doc:`アドレス <../namespace/link-a-namespace-to-an-address>` "
 "がサブネームスペースとリンクします。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:86
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:46
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:88
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:48
 msgid ""
 "The next code snippet creates a subnamespace called ``bar`` under the "
 "namespace ``foo``."
 msgstr "次のコードスニペットは、ネームスペース ``foo`` の下に ``bar`` というサブネームスペースを作成します。"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:104
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:64
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
-#: ../../source/guides/namespace/registering-a-subnamespace.rst:106
+#: ../../source/guides/namespace/registering-a-subnamespace.rst:66
 msgid ""
 "To create a subnamespace, open a terminal window and run the following "
 "command. Replace ``foo`` with the root namespace name and ``bar`` with the "

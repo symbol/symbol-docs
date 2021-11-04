@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 08:57+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,25 +21,25 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/cli.rst:43
+#: ../../source/cli.rst:3
 msgid "CLI"
 msgstr "CLI"
 
-#: ../../source/cli.rst:51
+#: ../../source/cli.rst:11
 msgid ""
 "|cli| is an |open-source| command-line interface to interact with the "
 "blockchain."
 msgstr "|cli| はブロックチェーンと疎通する、 |open-source| コマンドラインインターフェイスです。"
 
-#: ../../source/cli.rst:55
+#: ../../source/cli.rst:15
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/cli.rst:57
+#: ../../source/cli.rst:17
 msgid "|cli| is distributed using the node package manager ``npm``."
 msgstr "|cli| は node パッケージマネージャの ``npm`` によって公開されています。"
 
-#: ../../source/cli.rst:59
+#: ../../source/cli.rst:19
 msgid ""
 "Symbol CLI requires `node.js <http://nodejs.org>`__  12 LTS to run. It is "
 "recommended that you install node.js using `nvm <https://github.com/nvm-"
@@ -48,15 +48,15 @@ msgstr ""
 "Symbol CLI を実行するには `node.js <http://nodejs.org>`__  12 LTS が必要です。node.js "
 "のインストールには `nvm <https://github.com/nvm-sh/nvm>`__ を使用することを推奨します。"
 
-#: ../../source/cli.rst:61
+#: ../../source/cli.rst:21
 msgid "Execute the following command in a new terminal:"
 msgstr "次のコマンドを新しいターミナルで実行します:"
 
-#: ../../source/cli.rst:69
+#: ../../source/cli.rst:29
 msgid "Configuration"
 msgstr "設定"
 
-#: ../../source/cli.rst:71
+#: ../../source/cli.rst:31
 msgid ""
 "To start using |cli|, configure a profile. Profiles are used to set a base "
 "URL and account to sign transactions."
@@ -64,7 +64,7 @@ msgstr ""
 "|cli| の使用を開始するには、まずプロファイルを構成します。プロファイルはベース URL "
 "をセットし、トランザクションに署名するためのアカウントを保存するために使われます。"
 
-#: ../../source/cli.rst:78
+#: ../../source/cli.rst:38
 msgid ""
 "By default, |cli| will always use the default profile. To use a named "
 "profile with any other command, add the ``--profile`` option to the command."
@@ -72,28 +72,28 @@ msgstr ""
 "|cli| は常にデフォルトプロファイルを使用します。他のコマンドでも名前付きプロファイルを使用する場合は、コマンドに ``--profile`` "
 "オプションを追加します。"
 
-#: ../../source/cli.rst:85
+#: ../../source/cli.rst:45
 msgid ""
 "If you are going to use named profile for multiple commands, you can change "
 "the default profile with the following command."
 msgstr "名前付きプロファイルを複数のコマンドで使いたい場合は、デフォルトプロファイルを次のコマンドで変更できます。"
 
-#: ../../source/cli.rst:91
+#: ../../source/cli.rst:51
 msgid ""
 "If you do not have a private key to create a profile, you can generate a new"
 " account, add a node URL and save it as default or named profile."
 msgstr ""
 "プロファイルを作成する秘密鍵がない場合は、新しいアカウントを生成し、ノード URL を追加して、デフォルトまたは名前付きプロファイルとして保存します。"
 
-#: ../../source/cli.rst:99
+#: ../../source/cli.rst:59
 msgid "Commands"
 msgstr "コマンド"
 
-#: ../../source/cli.rst:101
+#: ../../source/cli.rst:61
 msgid "These are the available commands for Symbol CLI separated by version."
 msgstr "これらはバージョンごとに分けられた Symbol CLI で使用可能なコマンドです。"
 
-#: ../../source/cli.rst:103
+#: ../../source/cli.rst:63
 msgid ""
 "Find out which CLI version do you have installed by running ``symbol-cli`` "
 "from the command line."

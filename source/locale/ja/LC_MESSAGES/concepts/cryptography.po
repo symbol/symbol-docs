@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 18:11+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/cryptography.rst:43
+#: ../../source/concepts/cryptography.rst:3
 msgid "Cryptography"
 msgstr "暗号理論"
 
-#: ../../source/concepts/cryptography.rst:45
+#: ../../source/concepts/cryptography.rst:5
 msgid ""
 "|codename| uses `elliptic curve cryptography <https://en.wikipedia.org/wiki"
 "/Elliptic-curve_cryptography>`__ to verify data integrity and to "
@@ -34,11 +34,11 @@ msgstr ""
 "|codename| はデータの整合性を検証し、署名者の身元を認証するために `楕円曲線暗号 "
 "<https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__ を使用します。"
 
-#: ../../source/concepts/cryptography.rst:51
+#: ../../source/concepts/cryptography.rst:11
 msgid "Key pair"
 msgstr "キーペア"
 
-#: ../../source/concepts/cryptography.rst:53
+#: ../../source/concepts/cryptography.rst:13
 msgid ""
 "Elliptic curve cryptography is based on **key pairs**: a private and a "
 "matching public key. In particular, |codename| uses the `Twisted Edwards "
@@ -50,15 +50,15 @@ msgstr ""
 "<https://ed25519.cr.yp.to>`__ とハッシュアルゴリズム **SHA-512** と一緒に `Twisted Edwards "
 "curve <https://en.wikipedia.org/wiki/Twisted_Edwards_curve>`__ を使用します:"
 
-#: ../../source/concepts/cryptography.rst:55
+#: ../../source/concepts/cryptography.rst:15
 msgid ""
 "**Private key**: A random 256-bit (32 byte) integer used to sign "
-":ref:`entities <verifiable-entity>` known by the owner."
+":ref:`entities <verifiableentity>` known by the owner."
 msgstr ""
-"**秘密鍵**: :ref:`エンティティ <verifiable-entity>` に署名するために使用する、所有者が知っているランダムな "
+"**秘密鍵**: :ref:`エンティティ <verifiableentity>` に署名するために使用する、所有者が知っているランダムな "
 "256-bit (32 byte) 整数"
 
-#: ../../source/concepts/cryptography.rst:57
+#: ../../source/concepts/cryptography.rst:17
 msgid ""
 "**Public key**: A 256-bit (32 bytes) integer derived from the private key. "
 "It serves as the public identifier of the key pair and can be disseminated "
@@ -68,46 +68,46 @@ msgstr ""
 "**公開鍵**: 秘密鍵から導出される 256-bit (32 byte) "
 "の整数値。広く普及させることのできるキーペアの公開識別子です。対となる秘密鍵でエンティティが署名されていることの証明に使用します。"
 
-#: ../../source/concepts/cryptography.rst:59
+#: ../../source/concepts/cryptography.rst:19
 msgid ""
 "The public key can be derived from the private key, but **not the other way "
 "around**."
 msgstr "公開鍵は秘密鍵から取得できますが **その逆はできません** 。"
 
-#: ../../source/concepts/cryptography.rst:64
+#: ../../source/concepts/cryptography.rst:24
 msgid "|codename| keys"
 msgstr "|codename| キー"
 
-#: ../../source/concepts/cryptography.rst:66
+#: ../../source/concepts/cryptography.rst:26
 msgid ""
 "Key pairs are used in |codename| in different places, for **different "
 "purposes**. This is a summary of the keys used:"
 msgstr "キーペアは |codename| のさまざまな場所で **さまざまな目的** に使用されます。これはキーの使用目的の要約です:"
 
-#: ../../source/concepts/cryptography.rst:68
+#: ../../source/concepts/cryptography.rst:28
 msgid ""
 "**Main**: This key pair manages a **regular** :doc:`account`, containing "
 "assets like mosaics or namespaces."
 msgstr "**Main**: このキーペアは資産やモザイク、ネームスペースを保有する **通常** :doc:`account` を管理します。"
 
-#: ../../source/concepts/cryptography.rst:69
+#: ../../source/concepts/cryptography.rst:29
 msgid ""
 "**Remote**: This key pair manages the **remote account** used in :ref"
 ":`remote-harvesting`."
 msgstr ""
 "**Remote**: このキーペアは :ref:`remote-harvesting` において **リモートアカウント** を管理します。"
 
-#: ../../source/concepts/cryptography.rst:70
+#: ../../source/concepts/cryptography.rst:30
 msgid "**VRF**: Required :ref:`for harvesting <account_eligibility>`."
 msgstr "**VRF**: :ref:`ハーベスティング <account_eligibility>` で要求されます。"
 
-#: ../../source/concepts/cryptography.rst:71
+#: ../../source/concepts/cryptography.rst:31
 msgid ""
 "**Voting**: Required for nodes participating in the :ref:`finalization` "
 "process."
 msgstr "**Voting**: :ref:`finalization` プロセスに参加するノードに必要です。"
 
-#: ../../source/concepts/cryptography.rst:72
+#: ../../source/concepts/cryptography.rst:32
 msgid ""
 "**Transport**: This key pair is used by nodes for secure transport over `TLS"
 " <https://en.wikipedia.org/wiki/Transport_Layer_Security>`__."
@@ -116,7 +116,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Transport_Layer_Security>`__ "
 "を介した、安全な転送のためにノードが使用します。"
 
-#: ../../source/concepts/cryptography.rst:76
+#: ../../source/concepts/cryptography.rst:36
 msgid ""
 "As a rule of thumb, the **private key** in any key pair should be kept "
 "secret at all times. However, **how bad is it to have a private key "
@@ -170,17 +170,17 @@ msgid ""
 "harmless otherwise."
 msgstr "攻撃者はハーベスティングの委任をノードから盗むことができますが、それ以外に害はありません。"
 
-#: ../../source/concepts/cryptography.rst:91
+#: ../../source/concepts/cryptography.rst:51
 msgid "Signature"
 msgstr "署名"
 
-#: ../../source/concepts/cryptography.rst:93
+#: ../../source/concepts/cryptography.rst:53
 msgid ""
 "**All transactions are signed** using a private key, producing 512-bit (64 "
 "byte) **signatures**."
 msgstr "**すべてのトランザクションは秘密鍵を使用して署名され** 512 bit (64 byte) の **署名** を生成します。"
 
-#: ../../source/concepts/cryptography.rst:95
+#: ../../source/concepts/cryptography.rst:55
 msgid ""
 "As part of the regular workflow of the protocol, signatures are "
 "**validated** using the matching public key. This ensures the authenticity "
@@ -188,34 +188,34 @@ msgid ""
 msgstr ""
 "プロトコルは通常のワークフローの一部として、一致する公開鍵を使用して署名を **検証** します。これによりエンティティの署名者の信頼性が保証されます。"
 
-#: ../../source/concepts/cryptography.rst:101
+#: ../../source/concepts/cryptography.rst:61
 #: ../../source/concepts/cryptography.rst:1
 msgid "Address"
 msgstr "アドレス"
 
-#: ../../source/concepts/cryptography.rst:103
+#: ../../source/concepts/cryptography.rst:63
 msgid ""
 "|codename| public keys can be shared in a **shorter form** as **addresses**."
 msgstr "|codename| 公開鍵は **より短い形式** である **アドレス** として共有できます。"
 
-#: ../../source/concepts/cryptography.rst:105
+#: ../../source/concepts/cryptography.rst:65
 msgid "First, a **24-byte** **raw address** is built, consisting of:"
 msgstr "前 **24-byte** **Raw アドレス** が構成されています:"
 
-#: ../../source/concepts/cryptography.rst:107
+#: ../../source/concepts/cryptography.rst:67
 msgid "A network-id byte."
 msgstr "network-id バイト"
 
-#: ../../source/concepts/cryptography.rst:108
+#: ../../source/concepts/cryptography.rst:68
 msgid "A 160-bit (20 byte) hash of the account's public key."
 msgstr "アカウントの公開鍵の 160-bit (20 byte) ハッシュ"
 
-#: ../../source/concepts/cryptography.rst:109
+#: ../../source/concepts/cryptography.rst:69
 msgid ""
 "A 3-byte checksum, to allow the quick recognition of mistyped addresses."
 msgstr "アドレスのミスタイプを素早く確認するための 3-byte のチェックサム"
 
-#: ../../source/concepts/cryptography.rst:111
+#: ../../source/concepts/cryptography.rst:71
 msgid ""
 "However, the raw address is inconvenient to use because it is a binary "
 "array, so it is typically `Base32-encoded "
@@ -226,13 +226,13 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Base32>` __ を **エンコード済みアドレス** または単に **アドレス** "
 "と呼ばれる **39 文字** のテキストへ変換します。"
 
-#: ../../source/concepts/cryptography.rst:113
+#: ../../source/concepts/cryptography.rst:73
 msgid ""
 "Finally, for easier reading, hyphens can be added every 6 characters to "
 "create a **pretty address**."
 msgstr "最後に、読みやすくするために、6 文字ごとにハイフンを追加して **きれいなアドレス** へ整形します。"
 
-#: ../../source/concepts/cryptography.rst:115
+#: ../../source/concepts/cryptography.rst:75
 msgid "Examples:"
 msgstr "例:"
 
@@ -256,7 +256,7 @@ msgstr "整形アドレス"
 msgid "45 chars"
 msgstr "45 文字"
 
-#: ../../source/concepts/cryptography.rst:125
+#: ../../source/concepts/cryptography.rst:85
 msgid ""
 "It is possible to create an address without interacting with the blockchain."
 " In fact, the blockchain only tracks addresses and public keys when they "
@@ -264,11 +264,11 @@ msgid ""
 msgstr ""
 "ブロックチェーンと疎通せずにアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。"
 
-#: ../../source/concepts/cryptography.rst:131
+#: ../../source/concepts/cryptography.rst:91
 msgid "HD-Wallets and Mnemonics"
 msgstr "HD-Wallets とニーモニック"
 
-#: ../../source/concepts/cryptography.rst:133
+#: ../../source/concepts/cryptography.rst:93
 msgid ""
 "**Hierarchical Deterministic Wallets** (HD-Wallets for short) can **derive a"
 " series of accounts** from a single seed account. This allows handling a "
@@ -279,16 +279,16 @@ msgstr ""
 "できます。これにより単一の :ref:`キーペア <keypair>` "
 "を使用してアカウントのグループを処理できるようになり、管理が大幅に簡素化されます。"
 
-#: ../../source/concepts/cryptography.rst:135
+#: ../../source/concepts/cryptography.rst:95
 msgid "Only one key to protect."
 msgstr "一つの鍵だけを守る"
 
-#: ../../source/concepts/cryptography.rst:136
+#: ../../source/concepts/cryptography.rst:96
 msgid ""
 "Multiple accounts can be stored in a single QR code or **mnemonic phrase**."
 msgstr "複数のアカウントを 1 つの QR コードまたは **ニーモニック語群** に保存できます。"
 
-#: ../../source/concepts/cryptography.rst:138
+#: ../../source/concepts/cryptography.rst:98
 msgid ""
 "A **Mnemonic Phrase** is human-friendly representation for a private key, "
 "composed of **24 random English words**. Mnemonic phrases are sometimes used"
@@ -298,7 +298,7 @@ msgstr ""
 "**ニーモニック語群** は秘密鍵をヒューマンフレンドリーな **24 のランダムな英単語** 表現です。ニーモニックフレーズは "
 "**人間にとって覚えやすく、書き留めやすい** ため、秘密鍵の代わりに使用されることがあります。"
 
-#: ../../source/concepts/cryptography.rst:140
+#: ../../source/concepts/cryptography.rst:100
 msgid ""
 "However, they are **equivalent to private keys** so it is critical that they"
 " are kept secret at all times. Even more so in the |codename| :ref:`wallet-"
@@ -307,7 +307,7 @@ msgstr ""
 "ただし、これらは **秘密鍵** と同等なので、常に秘密にしておかなければなりません。 |codename| では、さらにそうですが :ref"
 ":`wallet-desktop` **ニーモニックフレーズはシードアカウントのキーをエンコードします** 。"
 
-#: ../../source/concepts/cryptography.rst:142
+#: ../../source/concepts/cryptography.rst:102
 msgid ""
 "See the `NIP-6 <https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ "
 "document for technical details on |codename|'s mechanism to create HD "
@@ -316,6 +316,6 @@ msgstr ""
 "HD ウォレットを作成する |codename| のメカニズムに関する技術的な詳細は `NIP-6 "
 "<https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ドキュメントを参照してください。"
 
-#: ../../source/concepts/cryptography.rst:144
+#: ../../source/concepts/cryptography.rst:104
 msgid "Continue: :doc:`Block <block>`."
 msgstr "次項: :doc:`ブロック <block>`"

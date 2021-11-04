@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 15:25+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-06-04 17:23+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,20 +21,20 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:43
+#: ../../source/guidelines/generating-transaction-builders.rst:3
 msgid "Generating transaction builders"
 msgstr "トランザクションビルダの生成"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:45
+#: ../../source/guidelines/generating-transaction-builders.rst:5
 msgid ""
 "Learn how to generate transaction builders for your target SDK language."
 msgstr "ターゲットとする SDK 用言語のトランザクションビルダを生成する方法を学習します。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:49
+#: ../../source/guidelines/generating-transaction-builders.rst:9
 msgid "Background"
 msgstr "背景"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:51
+#: ../../source/guidelines/generating-transaction-builders.rst:11
 msgid ""
 "The `catbuffer library <https://github.com/symbol/catbuffer-generators>`_ "
 "defines the protocol to serialize and deserialize |codename| entities. The "
@@ -46,19 +46,19 @@ msgstr ""
 "|codename| のエンティティをシリアライズ/デシリアライズするプロトコルを定義します。SDK とアプリケーションは REST "
 "トランザクションエンドポイントと疎通するために生成されたコードを利用します。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:59
+#: ../../source/guidelines/generating-transaction-builders.rst:19
 msgid "|sdk| serialization module"
 msgstr "|sdk| シリアル化モジュール"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:61
+#: ../../source/guidelines/generating-transaction-builders.rst:21
 msgid "The library accomplishes the following properties:"
 msgstr "このライブラリは以下の特性を達成します:"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:63
+#: ../../source/guidelines/generating-transaction-builders.rst:23
 msgid "**Memory Efficiency**"
 msgstr "**効率的なメモリ使用**"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:65
+#: ../../source/guidelines/generating-transaction-builders.rst:25
 msgid ""
 "Large networks compute a large number of transactions. Working with binary "
 "optimized in size makes the communication faster. Furthermore, reading "
@@ -67,11 +67,11 @@ msgstr ""
 "大きなネットワークはたくさんのトランザクションを計算します。バイナリに最適化された仕事はコミュニケーションを高速にします。さらに、メモリバッファからのエンティティ"
 " - またはそれらの一部 - の読み込みはメモリを効率的に使用します。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:69
+#: ../../source/guidelines/generating-transaction-builders.rst:29
 msgid "**Flexibility**"
 msgstr "**柔軟性**"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:71
+#: ../../source/guidelines/generating-transaction-builders.rst:31
 msgid ""
 "REST `transaction endpoints <https://docs.symbolplatform.com/symbol-"
 "openapi/v0.11.3/#operation/announceTransaction>`_ handle the calls to update"
@@ -84,11 +84,11 @@ msgstr ""
 "はブロックチェーンの状態を更新する呼び出しをハンドリングします。シリアライズされたトランザクションのペイロードは POST "
 "呼び出しのボディに追加されます。これらのエンドポイントにより、API 規約を変更せずにクライアントへ新しい機能を追加することができます。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:75
+#: ../../source/guidelines/generating-transaction-builders.rst:35
 msgid "**Reusability**"
 msgstr "**再利用性**"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:77
+#: ../../source/guidelines/generating-transaction-builders.rst:37
 msgid ""
 "Applications can embed the generated code without managing dependencies, "
 "which is particularly desirable in highly-secure environments. Besides, "
@@ -97,7 +97,7 @@ msgid ""
 msgstr ""
 "アプリケーションは依存性の管理することなく、生成されたコードを組み込むことができ、安全性の高い環境において、特に望ましいです。さらに共通のコードベースを共有することは、より少ない労力で新しい機能を追加することを可能にします。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:80
+#: ../../source/guidelines/generating-transaction-builders.rst:40
 msgid ""
 "The `schemas <https://github.com/symbol/catbuffer-"
 "schemas/tree/main/symbol>`_ define the entities' data structure. The library"
@@ -107,29 +107,29 @@ msgstr ""
 "`スキーマ <https://github.com/symbol/catbuffer-schemas/tree/main/symbol>`_ "
 "はエンティティのデータ構造を定義します。このライブラリは定義済みエンティティを、シリアライズまたはデシリアライズするために必要な最低限のコードを生成します。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:85
+#: ../../source/guidelines/generating-transaction-builders.rst:45
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:87
+#: ../../source/guidelines/generating-transaction-builders.rst:47
 msgid "Clone the ``catbuffer-generators`` repository."
 msgstr "``catbuffer-generators`` リポジトリをクローンしてください。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:93
+#: ../../source/guidelines/generating-transaction-builders.rst:53
 msgid "Install the package requirements."
 msgstr "必須パッケージをインストール"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:99
+#: ../../source/guidelines/generating-transaction-builders.rst:59
 msgid ""
 "Clone the ``catbuffer-schemas`` repository inside the ``catbuffer-"
 "generators`` folder."
 msgstr "``catbuffer-schemas`` リポジトリを ``catbuffer-generators`` の中にクローンしてください。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:107
+#: ../../source/guidelines/generating-transaction-builders.rst:67
 msgid "Usage"
 msgstr "使い方"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:110
+#: ../../source/guidelines/generating-transaction-builders.rst:70
 msgid ""
 "Under the ``catbuffer-schemas`` folder of the catbuffer repository, you can "
 "find the entities' data structure. With the help of a code generator, you "
@@ -139,22 +139,20 @@ msgstr ""
 "catbuffer リポジトリの ``catbuffer-schemas`` "
 "フォルダーの下にエンティティのデータ構造があります。コードジェネレーターを使用すると、これらのエンティティをシリアル化および逆シリアル化するために必要な、最もリーンなコードを生成できます。"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:112
+#: ../../source/guidelines/generating-transaction-builders.rst:72
 msgid ""
 "For example, run the following command to generate C++ transaction builders "
-"for a :ref:`TransferTransaction <transfer-transaction>`:"
-msgstr ""
-"例えば、次のコマンドを実行して :ref:`TransferTransaction <transfer-transaction>` の C++ "
-"トランザクションビルダを生成します:"
+"for a :ref:`transfertransaction`:"
+msgstr "例えば、次のコマンドを実行して :ref:`transfertransaction` の C++ トランザクションビルダを生成します:"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:118
+#: ../../source/guidelines/generating-transaction-builders.rst:78
 msgid ""
 "You can also generate code for all the schemas running the following command"
 " under the ``catbuffer-generators`` directory:"
 msgstr ""
 "``catbuffer-generators`` ディレクトリで次のコマンドを実行することで、すべてのスキーマのコードを生成することもできます:"
 
-#: ../../source/guidelines/generating-transaction-builders.rst:124
+#: ../../source/guidelines/generating-transaction-builders.rst:84
 msgid ""
 "The generator creates a new file for every schema under the "
 "``catbuffer/_generated/cpp_builder`` folder."

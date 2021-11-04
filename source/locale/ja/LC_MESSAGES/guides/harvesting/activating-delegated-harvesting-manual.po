@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 15:25+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2021-03-02 10:55+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:49
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:9
 msgid "Activating delegated harvesting manually"
 msgstr "デリゲートハーベスティングを手動で有効化"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:51
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:11
 msgid "Share your account's importance securely with a node and get rewarded."
 msgstr "あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:55
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:15
 msgid "Introduction"
 msgstr "紹介"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:57
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:17
 msgid ""
 ":ref:`Delegated harvesting <delegated-harvesting>` enables accounts to "
 "**receive rewards** from creating new blocks **without running a node**. At "
@@ -44,7 +44,7 @@ msgstr ""
 "**ブロック報酬を得る** ことができます。同時にノードはアカウントの (おそらくはより高い) :ref:`インポータンススコア "
 "<importance-calculation>` の恩恵を受けることができます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:59
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:19
 msgid ""
 "Node owners have access to the node's configuration so it's more convenient "
 "for them to use :ref:`Remote harvesting <remote-harvesting>` instead."
@@ -52,7 +52,7 @@ msgstr ""
 "ノード所有者はノードの設定にアクセスできるため、 :ref:`リモートハーベスティング <remote-harvesting>` "
 "を利用する方が便利です。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:61
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:21
 msgid ""
 "This guide explains how to **manually** activate delegated harvesting using "
 "the :doc:`SDK </sdk>` or the :doc:`CLI </cli>` interface and is therefore "
@@ -63,52 +63,39 @@ msgstr ""
 "デリゲートハーベスティングを有効にする方法をガイドします。一般ユーザは :doc:`デスクトップウォレット <activating-delegated-"
 "harvesting-wallet>` を使用してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:65
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:25
 msgid "Summary"
 msgstr "概要"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:67
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:27
 msgid "Required steps:"
 msgstr "必要なステップ:"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:69
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:29
 msgid ""
 "Delegate the **main account (M)** importance to a **remote account (R)** "
-"using an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>`."
+"using an :ref:`accountkeylinktransaction`."
 msgstr ""
-":ref:`AccountKeyLinkTransaction <account-key-link-transaction>` を使用して "
-"**メインアカウント (M)** のインポータンスを **リモートアカウント (R)** に委譲します。"
+":ref:`accountkeylinktransaction` を使用して **メインアカウント (M)** のインポータンスを "
+"**リモートアカウント (R)** に委譲します。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:71
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:31
 msgid ""
 "Link the main account **M** to a **VRF account (V)** for randomized block "
-"production and account selection using a :ref:`VrfKeyLinkTransaction <vrf-"
-"key-link-transaction>`."
+"production and account selection using a :ref:`vrfkeylinktransaction`."
 msgstr ""
-":ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` "
-"を使用して、ランダム化したブロック生成とアカウント選択のために、メインアカウント **M** を **VRF アカウント (V)** にリンクします。"
+":ref:`vrfkeylinktransaction` を使用して、ランダム化したブロック生成とアカウント選択のために、メインアカウント **M** "
+"を **VRF アカウント (V)** にリンクします。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:73
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:33
 msgid ""
 "Link the main account **M** to a node in order to harvest through that node "
-"using a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>`."
+"using a :ref:`nodekeylinktransaction`."
 msgstr ""
-":ref:`NodeKeyLinkTransaction <node-key-link-transaction>` "
-"を使用してノードを介してハーベスティングをするために、メインアカウント **M** をノードにリンクします。"
+":ref:`nodekeylinktransaction` を使用してノードを介してハーベスティングをするために、メインアカウント **M** "
+"をノードにリンクします。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:75
-msgid ""
-"Request the node to add the remote account **R** as a harvester using a "
-":ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-"
-"transaction>`. Conversely, if the node configuration is accessible, the "
-"remote account's private key can be set in the node configuration."
-msgstr ""
-"ハーベスタとしてリモートアカウント **R** を追加するために "
-":ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-"
-"transaction>` "
-"を使用して、ノードにリクエストを行います。ノード構成にアクセスできる場合は、リモートアカウントの秘密鍵をノードの構成に設定できます。"
-
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:77
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:37
 msgid ""
 "Please note that it is entirely up to the node to comply with the request. "
 "Some nodes can be asked for their current list of delegated harvesters but "
@@ -118,11 +105,11 @@ msgstr ""
 "リクエストに応じるのは完全にノード次第であることに注意してください。一部のノードは現在のデリゲートハーベスタの一覧を要求できますが、この情報が常に利用できるとは限りません。"
 " (以下の :ref:`delegated-harvesting-verifying-activation` を参照)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:81
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:41
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:83
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:43
 msgid ""
 "Complete the :doc:`sending mosaics and messages between two accounts "
 "<../transfer/sending-a-transfer-transaction>` guide to have a basic "
@@ -131,12 +118,12 @@ msgstr ""
 "トランザクションの基本の理解のために :doc:`モザイクとメッセージを２つのアカウント間で送信する <../transfer/sending-a"
 "-transfer-transaction>` ガイドを完了している"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:85
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:45
 msgid ""
 "Before you can activate delegated harvesting, you need the following items:"
 msgstr "デリゲートハーベスティングを有効にするには、次のアイテムが必要です:"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:87
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:47
 msgid ""
 "A **Main account (M)** with at least **10,000** |networkcurrency| to be "
 ":ref:`eligible <account_eligibility>` and then some more to pay for "
@@ -150,7 +137,7 @@ msgstr ""
 "<importance-calculation>` (このスコアは 12 時間ごとに計算されます) "
 "が必要です。これはハーベスト手数料を受け取るアカウントです。その秘密鍵は常に秘匿してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:89
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:49
 msgid ""
 "A **Remote account (R)** that will act as a proxy between **M** and the "
 "node. This account **must have never sent or received any transaction**, and"
@@ -159,7 +146,7 @@ msgstr ""
 "**リモートアカウント (R)** は **M** とノード間でプロキシとして機能します。このアカウントは "
 "**トランザクションを送受信したことがない** 必要があり、デリゲートアカウントである間はトランザクションに関与できません。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:91
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:51
 msgid ""
 "A **VRF account (V)** that has never sent or received any transactions. It "
 "is a regular account used to add randomness to the account selection "
@@ -168,7 +155,7 @@ msgstr ""
 "**VRF アカウント (V)** "
 "はトランザクションを送受信したことがないものです。これはアカウントの選択プロセスにランダム性を追加するために使用される通常アカウントです。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:93
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:53
 msgid ""
 "The **node's public TLS key**. This is the key the node uses to authenticate"
 " data for transport over `TLS "
@@ -179,7 +166,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Transport_Layer_Security>`__ "
 "を介した転送のために、データを認証するためのキーであり、通常はノード所有者によって提供されます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:95
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:55
 msgid ""
 "Refer to the :doc:`Creating an account <../account/creating-an-account>` "
 "guide to know how to create new accounts if you need to."
@@ -187,7 +174,7 @@ msgstr ""
 "必要であれば、新しいアカウントの作成ついて、 :doc:`アカウントの作成 <../account/creating-an-account>` "
 "ガイドを参照してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:97
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:57
 msgid ""
 "The following bash code snippets make use of :doc:`symbol-cli <../../cli>` "
 "and assume that the **main account (M)** is set as the **default** profile. "
@@ -196,38 +183,19 @@ msgstr ""
 "次の bash コードスニペットは :doc:`symbol-cli <../../cli>` で **メインアカウント (M)** が "
 "**デフォルト** プロファイルとして設定されていることを前提としています。そうでない場合は ``‑‑profile`` パラメタを使用してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:101
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:61
 msgid "Guide"
 msgstr "ガイド"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:103
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:76
 msgid ""
-"Create an :ref:`AccountKeyLinkTransaction <account-key-link-transaction>` to"
-" **delegate M's importance to R**. Sign the transaction with **M** and "
-"announce it to the network."
+"Create a :ref:`vrfkeylinktransaction` to **link M to a VRF key**. Sign the "
+"transaction with  **M** and announce it to the network."
 msgstr ""
-"**M のインポータンスを R へ委譲** するための :ref:`AccountKeyLinkTransaction <account-key-"
-"link-transaction>` を作成します。 **M** でトランザクションに署名し、ネットワークにアナウンスします。"
+"**M を VRF キーへリンク** するための :ref:`vrfkeylinktransaction` を作成します。 **M** "
+"でトランザクションに署名し、ネットワークにアナウンスします。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:116
-msgid ""
-"Create a :ref:`VrfKeyLinkTransaction <vrf-key-link-transaction>` to **link M"
-" to a VRF key**. Sign the transaction with  **M** and announce it to the "
-"network."
-msgstr ""
-"**M を VRF キーへリンク** するための :ref:`VrfKeyLinkTransaction <vrf-key-link-"
-"transaction>` を作成します。 **M** でトランザクションに署名し、ネットワークにアナウンスします。"
-
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:129
-msgid ""
-"Create a :ref:`NodeKeyLinkTransaction <node-key-link-transaction>` to **link"
-" M to a node's TLS key**. Sign the NodeKeyLinkTransaction with **M** and "
-"announce it to the network."
-msgstr ""
-"**M をノードの TLS キーへリンク** するための :ref:`NodeKeyLinkTransaction <node-key-link-"
-"transaction>` を作成します。 **M** で NodeKeyLinkTransaction に署名し、ネットワークにアナウンスします。"
-
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:133
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:93
 msgid ""
 "The node's public TLS key is typically provided by the node owner. However, "
 "**Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>`"
@@ -242,11 +210,11 @@ msgstr ""
 "/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_ ``node/info`` の "
 "``nodePublicKey`` フィールドで提供します。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:135
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:95
 msgid "Just point your browser to ``http://<NODE_URL>:3000/node/info``."
 msgstr "ブラウザで ``http://<NODE_URL>:3000/node/info`` を開きます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:148
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:108
 msgid ""
 "Once the transactions are confirmed, the next step is to **share R's private"
 " key with the node**. This can be done in one of two ways depending on "
@@ -256,7 +224,7 @@ msgstr ""
 "トランザクションが確認されたら、次のステップで **R の秘密鍵をノードと共有** "
 "します。これはノードの所有者であり、ノードの構成にアクセスできるかどうかに応じて、2 つの方法があります。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:150
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:110
 msgid ""
 "If you are the **node owner**, you simply need to set the remote account's "
 "private signing key in the ``harvesterSigningPrivateKey`` field in the :ref"
@@ -265,43 +233,13 @@ msgstr ""
 "**ノード所有者** の場合は、フィールドにリモートアカウントの秘密署名鍵を :ref:`node-properties-harvesting-"
 "configuration` の ``harvesterSigningPrivateKey`` 設定するだけです。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:152
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:129
 msgid ""
-"**Otherwise**, a :ref:`PersistentDelegationRequestTransaction <persistent-"
-"delegation-request-transaction>` must be used. As the private key will be "
-"shared in an **encrypted message**, only the node will be able to see it. "
-"Moreover, **R** does not own any mosaic."
-msgstr ""
-"**それ以外の場合** :ref:`PersistentDelegationRequestTransaction <persistent-"
-"delegation-request-transaction>` を使用しなければなりません。秘密鍵は **暗号化メッセージ** "
-"で共有されるため、ノードだけが平文を確認できます。さらに **R** はモザイクを保有していません。"
+"All the above transactions can be announced together in a single :ref"
+":`aggregate-transaction`."
+msgstr "上記すべてのトランザクションは、単一の :ref:`aggregate-transaction` でまとめてアナウンスできます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:154
-msgid ""
-"The harvesting fees will be sent to **M** as it has established a link with "
-"the node through the :ref:`NodeKeyLinkTransaction <node-key-link-"
-"transaction>`."
-msgstr ""
-"ハーベスティング手数料は :ref:`NodeKeyLinkTransaction <node-key-link-transaction>` "
-"を介してノードとリンクを確立しているので、**M** へ送られます"
-
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:156
-msgid ""
-"Sign the :ref:`PersistentDelegationRequestTransaction <persistent-"
-"delegation-request-transaction>` with **M** and announce it to the network."
-msgstr ""
-"**M** の :ref:`PersistentDelegationRequestTransaction <persistent-delegation-"
-"request-transaction>` で署名して、ネットワークへアナウンスします。"
-
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:169
-msgid ""
-"All the above transactions can be announced together in a single "
-":ref:`Aggregate Transaction <aggregate-transaction>`."
-msgstr ""
-"上記すべてのトランザクションは、単一の :ref:`アグリゲートトランザクション <aggregate-transaction>` "
-"でまとめてアナウンスできます。"
-
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:171
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:131
 msgid ""
 "If everything is successful, the node will receive the encrypted message "
 "through :ref:`WebSockets <websockets>`. Once the node decrypts the private "
@@ -312,19 +250,19 @@ msgstr ""
 "を使用して暗号化メッセージを受信します。ノードがデリゲートハーベスティングをする秘密鍵を復号すると、次の条件を満たす場合、ノードの所有者は "
 "**デリゲートハーベスターとして R を追加** できます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:173
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:133
 msgid "The node permits delegated harvesting."
 msgstr "ノードがデリゲートハーベスティングを許可していること"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:174
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:134
 msgid "The node has harvesting slots available (See next section)."
 msgstr "ノードのハーベスティングスロットが有効であること (次のセクションを参照)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:175
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:135
 msgid "The remote account has never sent or received transactions before."
 msgstr "リモートアカウントは以前にトランザクションを送信も受信もしていないこと"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:177
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:137
 msgid ""
 "As the remote private key is **saved on disk** by the node, even if the node"
 " disconnects temporarily the persistent delegated harvesters will be "
@@ -333,7 +271,7 @@ msgstr ""
 "リモート秘密鍵はノードごとに **ディスクに保存されている** "
 "ため、ノードが一時的に切断された場合でも、ノードがネットワークに再接続すると、永続的にデリゲートハーベスタが再確立されます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:179
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:139
 msgid ""
 "Additionally, the use of an encrypted message creates a **backup** of the "
 "information for the nodes. If the disk containing the delegated keys becomes"
@@ -343,25 +281,23 @@ msgstr ""
 "さらに、暗号化メッセージを使用すると、ノード情報の **バックアップ** "
 "が作成されます。デリゲートキーを含むディスクが破損や破壊された場合でも、ノード所有者はブロックチェーンを照会してデータを取得できます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:185
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:145
 msgid "Verifying activation"
 msgstr "有効化の確認"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:187
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:147
 msgid ""
 "When requesting delegation through a "
-":ref:`PersistentDelegationRequestTransaction <persistent-delegation-request-"
-"transaction>` instead of directly configuring the node, whether the node "
-"enables delegated harvesting depends entirely on the node and **not on the "
-"network**. It is entirely up to the node to comply with the request or even "
-"to lie about its state."
+":ref:`persistentdelegationrequesttransaction` instead of directly "
+"configuring the node, whether the node enables delegated harvesting depends "
+"entirely on the node and **not on the network**. It is entirely up to the "
+"node to comply with the request or even to lie about its state."
 msgstr ""
-"ノードを構成するのではなく :ref:`PersistentDelegationRequestTransaction <persistent-"
-"delegation-request-transaction>` "
+"ノードを構成するのではなく :ref:`persistentdelegationrequesttransaction` "
 "を介して委任をリクエストする場合、ノードがデリゲートハーベスティングを有効にしているかどうかは、 **ネットワークではなく** "
 "ノードに依存しています。要求に応じるか、その状態について嘘をつくかは、完全にノードによります。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:189
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:149
 msgid ""
 "Therefore, there is no **reliable** way to know if your account has become a"
 " harvester or not (besides waiting to see if any blocks appear on the "
@@ -371,7 +307,7 @@ msgstr ""
 "したがって、アカウントがハーベスターになったかどうかを知るための **信頼できる** 方法は "
 "(ブロックチェーンにリモートアカウントが署名したブロックが表示され、メインアカウントがハーベスト手数料の受け取りが始まるのを待つ以外に) ありません。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:191
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:151
 msgid ""
 "That said, nodes configured to act as **Dual** nodes (being both :ref:`Peer "
 "<peer-node>` and :ref:`API <api-node>` nodes) can be queried for their "
@@ -383,7 +319,7 @@ msgstr ""
 "node>` ノードの両方) "
 "は現在のデリゲートハーベスタのリストを照会できます。繰り返しますが、この情報はノードから取得されるものであり、ブロックチェーンにバックアップされないので、あまり信頼しないでください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:193
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:153
 msgid ""
 "You can retrieve this list using the ``getUnlockedAccount`` `API endpoint "
 "<https://docs.symbolplatform.com/symbol-"
@@ -403,7 +339,7 @@ msgstr ""
 " for example) を使用して取得できます。これにはノードに登録している、すべてのデリゲートハーベスタ公開鍵が含まれているため "
 "**リモートアカウント (R)** の公開鍵がここに表示されます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:195
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:155
 msgid ""
 "By default a node can have up to 5 delegated harvesters (harvesting slots) "
 "and excess requests can be priorized as the node sees fit. This can be "
@@ -416,11 +352,11 @@ msgstr ""
 "harvesting-configuration` の ``maxUnlockedAccounts`` と "
 "``delegatePrioritizationPolicy`` で設定できます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:199
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:159
 msgid "Final words"
 msgstr "最後に"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:201
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:161
 msgid ""
 "**Accounts with higher importance are selected more often to perform "
 "harvesting**. Even if you successfully register as a delegated harvester "
@@ -431,7 +367,7 @@ msgstr ""
 " :ref:`インポータンススコア <importance-calculation>` "
 "が十分に高くない限りは、ブロックをハーベスティングすることはありません。 (報酬も受け取りません)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:203
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:163
 msgid ""
 "**Importance score calculation does not happen continuously**. By default, "
 "account importance scores are recalculated every 1440 blocks (about every 12"
@@ -442,7 +378,7 @@ msgstr ""
 "時間ごと) に再計算されます。 :ref:`ネットワークプロパティの設定 <config-network-properties>` ガイドの "
 "``importanceGrouping`` プロパティを参照してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:205
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:165
 msgid ""
 "Finally, as explained in :ref:`delegated-harvesting-verifying-activation` "
 "above, **announcing a Harvesting Delegation request does not guarantee being"

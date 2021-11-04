@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-06-05 14:13+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guidelines/style-guide.rst:43
+#: ../../source/guidelines/style-guide.rst:3
 msgid "Style guide"
 msgstr "スタイルガイド"
 
-#: ../../source/guidelines/style-guide.rst:45
+#: ../../source/guidelines/style-guide.rst:5
 msgid ""
 "As |codename| grows as an open source project, more developers will begin to"
 " rely on documentation to provide quick and efficient education about the "
@@ -39,20 +39,20 @@ msgstr ""
 " |sitename| デベロッパーセンターの多数の記事に渡って高いレベルの結束が達成されることが不可欠です。次項のスタイルガイドは "
 "|codename| テクニカルライティングチームによる、執筆の一貫性と質を向上させるためのガイドラインを提供しています。"
 
-#: ../../source/guidelines/style-guide.rst:54
+#: ../../source/guidelines/style-guide.rst:14
 msgid "Getting started"
 msgstr "入門"
 
-#: ../../source/guidelines/style-guide.rst:56
+#: ../../source/guidelines/style-guide.rst:16
 msgid ""
 "Before you start your writing process, here are some things to consider:"
 msgstr "ライティングを始める前に理解しておくべきことがあります:"
 
-#: ../../source/guidelines/style-guide.rst:58
+#: ../../source/guidelines/style-guide.rst:18
 msgid "**1. Determine purpose and use**"
 msgstr "**1. 目的と用途の決定**"
 
-#: ../../source/guidelines/style-guide.rst:60
+#: ../../source/guidelines/style-guide.rst:20
 msgid ""
 "Establishing the purpose of your article should be the first step of your "
 "writing process. Determine what you want the readers to know when they "
@@ -61,21 +61,21 @@ msgid ""
 msgstr ""
 "あなたの記事の目的を定めることは、あなたの執筆プロセスの最初のステップであるべきです。読者が読み終わったときに何を知って欲しいかを明確にすることです。目的を定義することは、各ステップを執筆する上であなたの助けになるでしょう。"
 
-#: ../../source/guidelines/style-guide.rst:65
+#: ../../source/guidelines/style-guide.rst:25
 msgid "**2. Identify the audience and their need**"
 msgstr "**2. 観客とニーズの特定**"
 
-#: ../../source/guidelines/style-guide.rst:73
+#: ../../source/guidelines/style-guide.rst:33
 msgid "**3. Organize the information**"
 msgstr "**3. 組織の情報**"
 
-#: ../../source/guidelines/style-guide.rst:75
+#: ../../source/guidelines/style-guide.rst:35
 msgid ""
 "Once you have determined what information the readers need, organize the "
 "information in a logical manner for the best flow and comprehension."
 msgstr "読者に必要な情報が決まったら、情報を論理的に整理して最良の流れと理解を得ます。"
 
-#: ../../source/guidelines/style-guide.rst:79
+#: ../../source/guidelines/style-guide.rst:39
 msgid ""
 "You are now ready to begin writing! Visit this :doc:`page <suggesting-"
 "changes>` to learn how to download the project and submit documentation."
@@ -83,15 +83,15 @@ msgstr ""
 "これで書き始める準備が整いました！プロジェクトをダウンロードしてドキュメントを提出する方法を学ぶために :doc:`page <suggesting-"
 "changes>` を確認してください。"
 
-#: ../../source/guidelines/style-guide.rst:83
+#: ../../source/guidelines/style-guide.rst:43
 msgid "Tools"
 msgstr "ツール"
 
-#: ../../source/guidelines/style-guide.rst:106
+#: ../../source/guidelines/style-guide.rst:66
 msgid "Writing patterns"
 msgstr "記述パターン"
 
-#: ../../source/guidelines/style-guide.rst:115
+#: ../../source/guidelines/style-guide.rst:75
 msgid "Tone"
 msgstr "語調"
 
@@ -115,11 +115,11 @@ msgstr "受動的な口語の使用"
 msgid "Be Concise."
 msgstr "簡潔に"
 
-#: ../../source/guidelines/style-guide.rst:129
+#: ../../source/guidelines/style-guide.rst:89
 msgid "Basic formatting"
 msgstr "基本フォーマット"
 
-#: ../../source/guidelines/style-guide.rst:131
+#: ../../source/guidelines/style-guide.rst:91
 msgid "Sustaining a uniform format is also essential for consistency."
 msgstr "統一なフォーマットを維持することも一貫性のために不可欠です。"
 
@@ -140,7 +140,7 @@ msgstr "重要な違いを強調する。"
 msgid "Writing headers for a table."
 msgstr "テーブルのヘッダを書く。"
 
-#: ../../source/guidelines/style-guide.rst:148
+#: ../../source/guidelines/style-guide.rst:108
 msgid "Code snippets"
 msgstr "コードスニペット"
 
@@ -152,6 +152,6 @@ msgstr "Bash コマンドのドキュメント化"
 msgid "Using code snippets."
 msgstr "コードスニペットの使用"
 
-#: ../../source/guidelines/style-guide.rst:165
+#: ../../source/guidelines/style-guide.rst:125
 msgid "List of terms that are prone to be written in different ways."
 msgstr "頻繁に表記ゆれの傾向がある用語のリスト。"

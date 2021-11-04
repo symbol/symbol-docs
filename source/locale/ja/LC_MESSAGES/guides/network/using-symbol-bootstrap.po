@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Radio, 2021
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
@@ -11,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2020-12-18 17:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,15 +22,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:48
+#: ../../source/guides/network/using-symbol-bootstrap.rst:8
 msgid "Using Symbol Bootstrap"
 msgstr "Symbol Bootstrap の使用"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:52
+#: ../../source/guides/network/using-symbol-bootstrap.rst:12
 msgid "On Linux systems using ``apt``:"
 msgstr "``apt`` を使用する Linux システム:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:61
+#: ../../source/guides/network/using-symbol-bootstrap.rst:21
 msgid ""
 "If the obtained node version is high enough (see :ref:`symbol-bootstrap-"
 "requirements`), then you can install Symbol Bootstrap:"
@@ -37,91 +38,90 @@ msgstr ""
 "取得した node のバージョンが十分に高い場合 (:ref:`symbol-bootstrap-requirements` を参照) は Symbol"
 " Bootstrapをインストールできます:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:67
+#: ../../source/guides/network/using-symbol-bootstrap.rst:27
 msgid ""
-"This guide explains the concepts behind |symbol-bootstrap|, a package which "
-"contains the necessary setup scripts to help developers quickly configure "
-"and run their own network or node in any of the **supported operating "
-"systems** (Windows, Linux and Mac)."
+"This guide explains the concepts behind |symbol-bootstrap|, a program that "
+"allows quickly configuring and running |codename| nodes on multiple "
+"operating systems (Windows, Linux and Mac)."
 msgstr ""
-"このガイドでは、**サポートしている OS** (Windows, Linux, Mac) "
-"で、開発者が独自のネットワークまたはノードを手早く構成し、実行するために必要なセットアップスクリプトを含むパッケージである |symbol-"
-"bootstrap| のコンセプトについて説明します。"
+"このガイドでは、複数のオペレーティングシステム (Windows、Linux、Mac) で |codename| "
+"ノードを迅速に設定し、実行できるプログラムである |Symbol Bootstrap| の概念を説明しています。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:69
+#: ../../source/guides/network/using-symbol-bootstrap.rst:29
 msgid ""
-"After reading this you will be able to better understand the "
-":doc:`creating-a-private-test-net` and :doc:`running-a-symbol-node` guides."
+"It can also deploy several nodes at once to quickly create a test network."
+msgstr "また、複数のノードを一度にデプロイして、テストネットワーク環境を素早く構築することもできます。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:31
+msgid ""
+"After reading this you will be able to better understand the :doc:`running-a"
+"-symbol-node` and :doc:`creating-a-private-test-net` guides."
 msgstr ""
-"こちらを読んだ後には :doc:`creating-a-private-test-net` と :doc:`running-a-symbol-node`"
+"こちらを読んだ後には :doc:`running-a-symbol-node` と :doc:`creating-a-private-test-net`"
 " ガイドをより理解することができるでしょう。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:71
+#: ../../source/guides/network/using-symbol-bootstrap.rst:33
 msgid ""
-"**This package replaces the previous tools** |catapult-service-bootstrap| "
-"and |symbol-testnet-bootstrap|."
+"**This program replaces the previous tools** ``catapult-service-bootstrap`` "
+"**and** ``symbol-testnet-bootstrap``."
 msgstr ""
-"**このパッケージは以前のツールを置き換えます** |catapult-service-bootstrap| と |symbol-testnet-"
-"bootstrap|"
+"**このプログラムは以前のツールを置き換えます** ``catapult-service-bootstrap`` **と** ``symbol-"
+"testnet-bootstrap``"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:77
+#: ../../source/guides/network/using-symbol-bootstrap.rst:39
 msgid "Requirements"
 msgstr "必須項目"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:81
+#: ../../source/guides/network/using-symbol-bootstrap.rst:43
 msgid "Environment"
 msgstr "環境"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:83
+#: ../../source/guides/network/using-symbol-bootstrap.rst:45
 msgid ""
-"The setup scripts are automated using **docker**. To run a test net or node,"
-" you will need to have installed the following tools:"
+"The setup scripts are automated using **Docker**. To run a node or test "
+"network, you will need to have installed the following tools:"
 msgstr ""
-"セットアップスクリプトは **docker** "
-"を使用して自動化されます。テストネットノードを立ち上げるには、次のツールをインストールする必要があります。"
+"セットアップスクリプトは **Docker** "
+"を使用して自動化されます。ノードまたはテストネットワークを立ち上げるには、次のツールをインストールする必要があります。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:85
+#: ../../source/guides/network/using-symbol-bootstrap.rst:47
 msgid ""
-"`node.js`_ version 12 or higher (**It is recommended that you install "
-"node.js using** `nvm <https://github.com/nvm-sh/nvm>`__)"
+"`node.js <https://nodejs.org/en/download>`__ version 12 or higher (**It is "
+"recommended that you install node.js using** `nvm <https://github.com/nvm-"
+"sh/nvm>`__)"
 msgstr ""
-"`node.js`_ バージョン 12 以上 (node.js は `nvm <https://github.com/nvm-sh/nvm>`__ を "
-"**使用してインストールすることを推奨** します)"
+"`node.js <https://nodejs.org/en/download>`__ バージョン 12 以上 (node.js は `nvm "
+"<https://github.com/nvm-sh/nvm>`__ を **使用してインストールすることを推奨** します)"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:91
+#: ../../source/guides/network/using-symbol-bootstrap.rst:53
 msgid "Ports"
 msgstr "ポート"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:93
+#: ../../source/guides/network/using-symbol-bootstrap.rst:55
 msgid ""
 "Make sure that the client's host is accessible from the internet and that "
 "**the following ports are open and available**:"
 msgstr "クライアントのホストがインターネットからアクセス可能であり、 **次のポートが開いていて、使用可能であること** を確認してください。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:95
+#: ../../source/guides/network/using-symbol-bootstrap.rst:57
 msgid "Port ``7900`` is used by catapult-client to communicate between nodes."
 msgstr "``7900`` 番ポートはノード間の通信するに catapult-client が使用します。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:96
+#: ../../source/guides/network/using-symbol-bootstrap.rst:58
 msgid ""
 "Port ``3000`` is used by the REST Gateway to expose the endpoints to "
 "interact with the node."
 msgstr "``3000`` 番ポートは REST ゲートウェイがエンドポイントを公開してノードとの疎通に使用します。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:97
-msgid ""
-"Port ``7881`` is used by the :ref:`monitoring agent <reward-programs-"
-"controller>`. Only required when enrolled to some of the "
-":doc:`../../concepts/reward-programs`, and can be customized."
-msgstr ""
-"ポート ``7881`` は :ref:`監視エージェント <reward-programs-controller>` が使用します。 "
-":doc:`../../concepts/reward-programs` の一部に登録する場合に必要で、カスタマイズ可能です。"
+#: ../../source/guides/network/using-symbol-bootstrap.rst:59
+msgid "Port ``3001`` is used by the REST Gateway in HTTPS mode."
+msgstr "``3001`` 番ポートは REST ゲートウェイの HTTPS モードにおいて使用されます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:101
+#: ../../source/guides/network/using-symbol-bootstrap.rst:63
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:103
+#: ../../source/guides/network/using-symbol-bootstrap.rst:65
 msgid ""
 "|symbol-bootstrap| is provided as an installable tool, there is no need to "
 "clone a repository and build it. Just run this from a terminal or command "
@@ -130,24 +130,20 @@ msgstr ""
 "|symbol-bootstrap| "
 "はインストール可能なツールとして提供されており、リポジトリからクローンやビルドする必要はありません。ターミナルまたはコマンドプロンプトから次を実行します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:109
-msgid "Notes:"
-msgstr "注釈:"
-
-#: ../../source/guides/network/using-symbol-bootstrap.rst:111
+#: ../../source/guides/network/using-symbol-bootstrap.rst:73
 msgid ""
 "You can run the above command again to install a newer version of ``symbol-"
 "bootstrap`` every time one becomes available."
 msgstr ""
 "新しいバージョンの ``symbol-bootstrap`` が公開されるたびに、上記のコマンドを再度実行することで、最新版をインストールできます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:113
+#: ../../source/guides/network/using-symbol-bootstrap.rst:75
 msgid ""
 "Remember to stop ``symbol-bootstrap`` before upgrading and then start it "
 "again afterwards, as shown below."
 msgstr "後述のように、アップグレードする前には ``symbol-bootstrap`` を停止して、その後に再開することを忘れないでください。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:115
+#: ../../source/guides/network/using-symbol-bootstrap.rst:77
 msgid ""
 "If you get permission errors read nodejs's guide to `Resolving EACCES "
 "permissions errors when installing packages globally <https://docs.npmjs.com"
@@ -157,23 +153,25 @@ msgstr ""
 "<https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-"
 "packages-globally>`__ を参照してください。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:119
+#: ../../source/guides/network/using-symbol-bootstrap.rst:81
 msgid "Configuration"
 msgstr "設定"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:125
+#: ../../source/guides/network/using-symbol-bootstrap.rst:87
 msgid "Presets"
 msgstr "プリセット"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:127
+#: ../../source/guides/network/using-symbol-bootstrap.rst:89
 msgid ""
 "Node configuration is done through a **YAML configuration file** which "
 "specifies every possible network parameter. Since the complete file can be "
 "several hundred lines long, a number of **presets** are available to "
-"simplify its handling:"
+"simplify its handling. Specify the preset with the ``‑‑preset`` or ``‑p`` "
+"parameters."
 msgstr ""
 "ノードの設定は、すべてのネットワークパラメータを指定する **YAML設定ファイル** "
-"を介して行われます。ファイル全体の長さは数百行に及ぶため、処理の簡素化のために **プリセット** を使用できます:"
+"を介して行われます。ファイル全体の長さは数百行に及ぶため、処理の簡素化のために **プリセット** を使用できます。 ``‑‑preset`` または "
+"``‑p`` パラメタで指定することができます。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
@@ -219,12 +217,14 @@ msgstr ""
 "``assembly`` を要求します (`設定ファイル <https://github.com/symbol/symbol-"
 "bootstrap/blob/main/presets/testnet/network.yml>`__)"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:138
+#: ../../source/guides/network/using-symbol-bootstrap.rst:100
 msgid ""
-"Presets can be further customized by specifying an **assembly** (or flavor) "
-"which provides additional parameters:"
+"Presets can be further customized by indicating an **assembly** (or flavor) "
+"which provides additional parameters. Specify the assembly with the "
+"``‑‑assembly`` or ``‑a`` parameters."
 msgstr ""
-"追加のパラメーターを提供する **assembly** (またはフレーバー) を指定することにより、プリセットをさらにカスタマイズできます:"
+"プリセットは、追加パラメータを提供する **assembly** (または特徴) を指定することで、さらなるカスタマイズが可能です。 "
+"``‑‑assembly`` または ``‑a`` パラメータでアセンブリを指定します。"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid "Available assemblies"
@@ -232,29 +232,31 @@ msgstr "利用可能な構成"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
-"The node is a harvester (`configuration file <https://github.com/symbol"
-"/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__)."
+"The node is a :ref:`peer-node` (`configuration file "
+"<https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet"
+"/assembly-peer.yml>`__)."
 msgstr ""
-"ノードはハーベスタです (`設定ファイル <https://github.com/symbol/symbol-"
+"ノードは :ref:`peer-node` (`設定ファイル <https://github.com/symbol/symbol-"
 "bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__)"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
-"The node runs its own mongo database and rest gateway (`configuration file "
+"The node is an :ref:`api-node` (`configuration file "
 "<https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet"
 "/assembly-api.yml>`__)."
 msgstr ""
-"ノードは mongo データベースと REST ゲートウェイを起動しています (`設定ファイル <https://github.com/symbol"
-"/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__)"
+"ノードは :ref:`api-node` (`設定ファイル <https://github.com/symbol/symbol-"
+"bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__)"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
-"The node is a harvester and runs its own mongo database and rest gateway "
-"(`configuration file <https://github.com/symbol/symbol-"
-"bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__)."
+"The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration "
+"file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet"
+"/assembly-dual.yml>`__)."
 msgstr ""
-"ノードは mongo データベースと REST ゲートウェイを起動しています (`設定ファイル <https://github.com/symbol"
-"/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__)"
+"ノードは :ref:`peer-node` と :ref:`api-node` の両方 (`設定ファイル "
+"<https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet"
+"/assembly-dual.yml>`__)"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
@@ -281,72 +283,95 @@ msgstr ""
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
-"The node is a harvester (`configuration file <https://github.com/symbol"
-"/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__)."
+"The node is a :ref:`peer-node` (`configuration file "
+"<https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet"
+"/assembly-peer.yml>`__)."
 msgstr ""
-"ノードはハーベスタです (`設定ファイル <https://github.com/symbol/symbol-"
+"ノードは :ref:`peer-node` (`設定ファイル <https://github.com/symbol/symbol-"
 "bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__)"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
-"The node runs its own mongo database and rest gateway (`configuration file "
+"The node runs is an :ref:`api-node` (`configuration file "
 "<https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet"
 "/assembly-api.yml>`__)."
 msgstr ""
-"ノードは mongo データベースと REST ゲートウェイを起動しています (`設定ファイル <https://github.com/symbol"
-"/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__)"
+"ノードは :ref:`api-node` で動作 (`設定ファイル <https://github.com/symbol/symbol-"
+"bootstrap/blob/main/presets/testnet/assembly-api.yml>`__)"
 
 #: ../../source/guides/network/using-symbol-bootstrap.rst:1
 msgid ""
-"The node is a harvester and runs its own mongo database and rest gateway "
-"(`configuration file <https://github.com/symbol/symbol-"
-"bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__)."
+"The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration "
+"file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet"
+"/assembly-dual.yml>`__)."
 msgstr ""
-"ノードは mongo データベースと REST ゲートウェイを起動しています (`設定ファイル <https://github.com/symbol"
-"/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__)"
+"ノードは :ref:`peer-node` と :ref:`api-node` の両方 (`設定ファイル "
+"<https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet"
+"/assembly-dual.yml>`__)"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:154
+#: ../../source/guides/network/using-symbol-bootstrap.rst:118
+msgid "Custom presets"
+msgstr "カスタムプリセット"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:120
 msgid ""
-"Finally, if additional configuration is required, a **custom YAML file** can"
-" be provided. Any value in this file overrides the default values set by the"
-" preset or the assembly so it can be combined on top of them. Take a look at"
-" the :doc:`Configuring network properties <configuring-network-properties>` "
-"guide to know which parameters are available."
+"Furthermore, if additional configuration is required, a **custom preset "
+"file** can be provided. Any value in this file overrides the default values "
+"set by the preset or the assembly so it can be combined on top of them. All "
+"properties in the :doc:`configuring-network-properties` or :doc"
+":`configuring-node-properties` guides can be set through this file, for "
+"example."
 msgstr ""
-"最後に、追加の設定が必要な場合は **カスタム YAML "
-"ファイル**で提供します。このファイルの値は、プリセットまたはアセンブリによって設定されたデフォルト値を上書きするので、それらの設定に組み合わせることができます。使用可能なパラメータについては"
-" :doc:`ネットワークプロパティの設定 <configuring-network-properties>` ガイドを参照してください。"
+"さらに、追加の設定が必要な場合は **カスタムプリセットファイル** "
+"を使用することができます。このファイルのどの値も、プリセットまたはアセンブリによって設定されたデフォルト値を上書きするので、それらの上位として組み合わせることができます。例えば"
+" :doc:`configuring-network-properties` または :doc:`configuring-node-"
+"properties` のすべてのプロパティはこのファイルを介して設定できます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:158
-msgid "Creating the configuration file"
-msgstr "設定ファイルの作成"
-
-#: ../../source/guides/network/using-symbol-bootstrap.rst:160
+#: ../../source/guides/network/using-symbol-bootstrap.rst:122
 msgid ""
-"Before building the network the full configuration file has to be created by"
-" using the `symbol-bootstrap config <https://github.com/symbol/symbol-"
-"bootstrap/blob/main/docs/config.md>`_ command and providing the desired "
-"preset and assembly:"
-msgstr ""
-"ネットワークを構築する前に、目的とするプリセットとアセンブリを指定して `symbol-bootstrap config "
-"<https://github.com/symbol/symbol-bootstrap/blob/main/docs/config.md>`_ "
-"コマンドを実行し、構成ファイル全体を作成します:"
+"Specify a custom preset file with the ``‑‑customPreset`` or ``‑c`` "
+"parameters."
+msgstr "カスタムプリセットファイルは ``‑‑customPreset`` または ``‑c`` パラメタで指定できます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:166
-msgid "Some examples:"
+#: ../../source/guides/network/using-symbol-bootstrap.rst:126
+msgid ""
+"If you ever change your custom preset file once your node is already running"
+" you will need to upgrade the node as explained in the :ref:`update-"
+"bootstrap-nodes` guide."
+msgstr ""
+"ノードがすでに実行されている状態で、カスタムプリセットファイルを変更した場合は、Bootstrap で作成したノードをアップデートする :ref"
+":`update-bootstrap-nodes` ガイドで説明されている方法で、ノードをアップグレードする必要があります。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:130
+msgid "The ``config`` command"
+msgstr "``config`` コマンド"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:132
+msgid ""
+"Before building the node or network a full configuration file has to be "
+"created by using the `symbol-bootstrap config <https://github.com/symbol"
+"/symbol-bootstrap/blob/main/docs/config.md>`_ command:"
+msgstr ""
+"ノードまたはネットワークを構築する前に `symbol-bootstrap config <https://github.com/symbol"
+"/symbol-bootstrap/blob/main/docs/config.md>`_ "
+"コマンドを使用して、完全な構成ファイルを作成する必要があります:"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:138
+msgid "For example:"
 msgstr "例:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:175
+#: ../../source/guides/network/using-symbol-bootstrap.rst:147
 msgid ""
-"This will create a folder, called ``target`` by default (It can be changed "
-"with the ``-t`` option), containing among other things the generated "
-"complete configuration file (``target/preset.yml``) ready to be used to "
-"build the network."
+"This will create a folder, called ``target`` by default (it can be changed "
+"with the ``‑‑target`` or ``‑t`` parameters), containing among other things "
+"the generated complete configuration file (``target/preset.yml``) ready to "
+"be used to build the node or network."
 msgstr ""
-"これはデフォルトで ``target`` フォルダ ( ``-t`` オプションで指定できます) "
-"を作成し、ネットワークを構築するために生成された完全な構成ファイル (``target/preset.yml``) が含まれています。"
+"これは、デフォルトで ``target`` ( ``--target`` または ``-t`` パラメタで変更できます)  "
+"フォルダを作成し、ノードまたはネットワークを構築するために使用する、生成された完全な構成ファイル (``target/preset.yml``) "
+"が含まれます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:177
+#: ../../source/guides/network/using-symbol-bootstrap.rst:149
 msgid ""
 "On Linux, if you get the error ``Permission denied while trying to connect "
 "to the Docker daemon socket`` it means that your user does not belong to the"
@@ -355,84 +380,190 @@ msgstr ""
 "Linux では、ユーザが ``docker`` グループに属していないと ``Permission denied while trying to "
 "connect to the Docker daemon socket`` というエラーが表示される場合があります。その場合は次のように追加します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:185
-msgid "Building the network and nodes"
-msgstr "ネットワークとノードを構築"
+#: ../../source/guides/network/using-symbol-bootstrap.rst:157
+msgid "The ``compose`` command"
+msgstr "``compose`` コマンド"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:187
+#: ../../source/guides/network/using-symbol-bootstrap.rst:159
 msgid ""
 "This command prepares the necessary Docker files based on the provided "
 "configuration:"
 msgstr "このコマンドは提供した構成に基づいて、必要な Docker ファイルを準備します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:193
-msgid "It only needs to be run once."
-msgstr "これは一度実行する必要があります。"
+#: ../../source/guides/network/using-symbol-bootstrap.rst:165
+msgid "Just like the config step, this only needs to be run once."
+msgstr "設定手順と同様に、これも１度だけ実行する必要があります。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:197
-msgid "Running the network"
-msgstr "ネットワークの立ち上げ"
+#: ../../source/guides/network/using-symbol-bootstrap.rst:169
+msgid "The ``run`` command"
+msgstr "``run`` コマンド"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:199
+#: ../../source/guides/network/using-symbol-bootstrap.rst:171
 msgid ""
 "Finally, execute this command to start the necessary Docker instances and "
-"boot your network:"
-msgstr "最後に、次のコマンドを実行して必要な Docker インスタンスを起動し、ネットワークを起動します:"
+"boot your node or network:"
+msgstr "最後に、次のコマンドを実行して必要な Docker インスタンスを起動し、ノードまたはネットワークを起動します:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:205
+#: ../../source/guides/network/using-symbol-bootstrap.rst:177
 msgid "Stop the process by pressing ``Ctrl+C``."
 msgstr "プロセスを停止するには ``Ctrl+C`` を押下します。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:209
+#: ../../source/guides/network/using-symbol-bootstrap.rst:181
 msgid ""
-"To run the docker containers in the background of your terminal, you can run"
-" the service in detached mode using the option ``--detach`` or ``-d``."
+"To run the Docker containers in the background of your terminal, you can run"
+" the service in detached mode using the ``‑‑detached`` or ``‑d`` parameters."
 msgstr ""
-"ターミナルのバックグラウンドで Docker コンテナを実行するには ``--detach`` または ``-d`` "
-"オプション使用してサービスをデタッチモードで実行します。"
+"ターミナルで Docker コンテナをバックグラウンド実行するには ``‑‑detached`` または ``‑d`` "
+"パラメータを使用することで、サービスをデタッチモードで実行出来ます。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:211
+#: ../../source/guides/network/using-symbol-bootstrap.rst:183
 msgid "You then have to stop them with ``symbol-bootstrap stop``."
 msgstr "次に ``symbol-bootstrap stop`` を使用して、それらを停止してください。"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:217
+#: ../../source/guides/network/using-symbol-bootstrap.rst:189
 msgid "The all-in-one ``start`` command"
 msgstr "オールインワンの ``start`` コマンド"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:219
+#: ../../source/guides/network/using-symbol-bootstrap.rst:191
 msgid ""
 "The above three commands (``config``, ``compose`` and ``run``) can be merged"
 " into one:"
 msgstr "上記３つのコマンドは (``config``, ``compose``, ``run``) １つにまとまります:"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:225
+#: ../../source/guides/network/using-symbol-bootstrap.rst:197
 msgid ""
-"That's right, a test network or node can be instantiated and booted with a "
-"single command!"
-msgstr "そうです、テストネットワークまたはノードを 1 つのコマンドでインスタンス化して起動することができます。"
+"That's right, a |codename| node (or test network with many nodes) can be "
+"instantiated and booted with a single command!"
+msgstr ""
+"そのとおり、単一のコマンドで |codename| ノード (または多くのノードを持つテストネットワーク) をインスタンス化して起動できます！"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:229
+#: ../../source/guides/network/using-symbol-bootstrap.rst:199
+msgid ""
+"Steps that only need to be done once (``config`` and ``compose``) will not "
+"be repeated, so you can use this command every time."
+msgstr ""
+"１度だけ実行する必要のある手順 (``config`` と ``compose``) は繰り返し行わないので、このコマンドを毎回使用できます。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:203
+msgid "Providing HTTPS access"
+msgstr "HTTPS アクセスの提供"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:205
+msgid ""
+":ref:`API nodes <api-node>` created using the ``api`` or ``dual`` assemblies"
+" accept HTTP commands through port 3000. HTTPS access can be enabled too in "
+"two different ways."
+msgstr ""
+"``api`` もしくは ``dual`` を用いて作成された :ref:`API ノード <api-node>` は 3000 番ポートを介して "
+"HTTP コマンドを受け付けます。HTTPS アクセスも同様で、他の２通りの異なる方法により有効化できます。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:209
+msgid "Use your own certificate"
+msgstr "所有する証明書を使用する"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:211
+msgid ""
+"If you already have an SSL for your host you can pass it onto Symbol "
+"Bootstrap inside a custom preset file."
+msgstr ""
+"もし、すでにあなたのホスト向けの SSL をお持ちなら、Symbol Bootstrap にはカスタムプリセットファイル経由で、それを適用できます。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:213
+msgid ""
+"In order for the custom preset file to be self-contained, though, your "
+"certificate's **Key** and **Crt** files must be converted to a `Base64 "
+"<https://en.wikipedia.org/wiki/Base64>`__ string and copied into the preset "
+"file:"
+msgstr ""
+"カスタムプリセットファイルを自己完結型とするためには、あなたの証明書の **Key** ファイルと **Crt** ファイルを `Base64 "
+"<https://en.wikipedia.org/wiki/Base64>`__ 文字列に変換し、プリセットファイルにコピーする必要があります:"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:220
+msgid ""
+"Copy the output of these commands into the preset file, in a section like "
+"this:"
+msgstr "このようにセクション内に、これらのコマンド出力をプリセットファイルにコピーします:"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:235
+msgid ""
+"The provided certificate needs to be valid for the hostname "
+"``awesomenode.mycompany.net``. The domain needs to resolve the IP address of"
+" your node."
+msgstr ""
+"提供した証明書は、ホスト名 ``awesomenode.mycompany.net`` に対して正当なものでなければなりません。ドメインはノードの IP"
+" アドレスを解決できる必要があります。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:237
+msgid ""
+"When the certificates eventually expire you need to update the custom preset"
+" file and then upgrade the node as explained in the :ref:`update-bootstrap-"
+"nodes` guide."
+msgstr ""
+"後に、証明書の有効期限が切れた場合、カスタムプリセットファイルを更新し、 :ref:`update-bootstrap-nodes` "
+"ガイドにあるように、ノードをアップグレードする必要があります。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:239
+msgid ""
+"This option only leaves HTTPS port 3001 open, not HTTP 3000. **Remember to "
+"open port 3001 in your firewall or security group**. Port 3000 can be closed"
+" as it is not used anymore."
+msgstr ""
+"このオプションでは、HTTP 3000 番ポートではなく、HTTPS 3001 番ポートのみを開放します。 "
+"**ファイアウォールまたはセキュリティグループで、ポート 3001 番を開放しておいてください**。ポート 3000 "
+"番は、もう使用されないので、閉じてもよいです。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:243
+msgid "Automatic Let's Encrypt certificate"
+msgstr "自動 Let's Encrypt 証明書"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:245
+msgid ""
+"Bootstrap can also take care of obtaining the necessary SSL certificates "
+"through the public and free `Let's Encrypt <https://letsencrypt.org/>`__ "
+"service."
+msgstr ""
+"Bootstrap は公衆用で無料の `Let's Encrypt <https://letsencrypt.org/>`__ "
+"サービスを利用して、必要な SSL 証明書を取得することもできます。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:247
+msgid ""
+"To enable it, just opt-in by adding an ``httpsProxies`` section to your "
+"custom preset file:"
+msgstr "有効化するには、カスタムプリセットファイルに ``httpsProxies`` セクションを追加してオプトインします:"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:257
+msgid ""
+"You need to own the domain ``awesomenode.mycompany.net`` and it needs to "
+"resolve the IP address of your node. The Let’s Encrypt service will handle "
+"the certificate creation and renewals for you."
+msgstr ""
+"``awesomenode.mycompany.net`` ドメインを所有しており、それがノードの IP "
+"アドレスの名前解決をする必要があります。Let's Encrypt サービスは証明書の作成と更新を代行を行います。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:259
+msgid ""
+"**Remember to open ports 3001 and 80 in your firewall or security group**. "
+"Port 3000 may or may not be closed. `Port 80 is needed by Let's Encrypt "
+"<https://letsencrypt.org/docs/challenge-types/#http-01-challenge>`__."
+msgstr ""
+"**ファイアウォールまたはセキュリティグループで、ポート 3001 番と 80 番を開放することを忘れないでください** 。ポート 3000 "
+"番は閉じていても、いなくても、構いません。 `ポート 80 番は Let's Encrypt が必要とします "
+"<https://letsencrypt.org/docs/challenge-types/#http-01-challenge>`__ 。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:263
+msgid ""
+"This option has been heavily inspired by `this great blog "
+"<https://nemlog.nem.social/blog/58808>`__. Symbol Bootstrap simply bundles "
+"this solution, streamlining the process."
+msgstr ""
+"このオプションは `この優良なブログ記事 <https://nemlog.nem.social/blog/58808>`__ "
+"から大きな影響を受けました。Symbol Bootstrap では、この解決方法を組み合わせて処理を合理的に行います。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:267
 msgid "Next steps"
 msgstr "次の手順"
 
-#: ../../source/guides/network/using-symbol-bootstrap.rst:231
-msgid ""
-"Proceed to the following guides to put what you have learned into practice!"
-msgstr "次のガイドに進み、学習したことを実践してください！"
-
-#: ../../source/guides/network/using-symbol-bootstrap.rst:233
-msgid ""
-":doc:`creating-a-private-test-net`: How to set up your own private network "
-"and access its nodes."
-msgstr ":doc:`creating-a-private-test-net`: 自分のプライベートネットワークのセットアップとアクセスの方法"
-
-#: ../../source/guides/network/using-symbol-bootstrap.rst:234
-msgid ""
-":doc:`running-a-symbol-node`: How to set up your own node and join "
-"|codename|'s network."
-msgstr ":doc:`running-a-symbol-node`: 自分のノードのセットアップと |codename| ネットワークへ参加する方法"
-
-#: ../../source/guides/network/using-symbol-bootstrap.rst:236
+#: ../../source/guides/network/using-symbol-bootstrap.rst:269
 msgid ""
 "Read the `complete list <https://github.com/symbol/symbol-"
 "bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-"
@@ -440,3 +571,8 @@ msgid ""
 msgstr ""
 "``symbol-bootstrap`` コマンドの `全リスト <https://github.com/symbol/symbol-"
 "bootstrap/blob/main/README.md#user-content-commands>`_ を参照してください。"
+
+#: ../../source/guides/network/using-symbol-bootstrap.rst:271
+msgid ""
+"Go ahead and create a node following the :doc:`running-a-symbol-node` guide."
+msgstr "こちらの :doc:`running-a-symbol-node` ガイドに従ってノードを作成してみてください。"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/aggregate.rst:43
+#: ../../source/serialization/aggregate.rst:3
 msgid "Hash Lock Schemas"
 msgstr "ハッシュロックスキーマ"
 
-#: ../../source/serialization/aggregate.rst:45
+#: ../../source/serialization/aggregate.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,7 +38,7 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/aggregate.rst:56
+#: ../../source/serialization/aggregate.rst:16
 msgid ""
 "Announce an AggregateTransaction to combine multiple transactions together."
 msgstr "複数の転送トランザクションを集約するために AggregateTransaction をアナウンスします。"
@@ -77,7 +77,7 @@ msgid ""
 "body space after transactions."
 msgstr ":ref:`連署者 <cosignature>` トランザクションの配列。トランザクションの後ろの残りの本体スペースを埋めます。"
 
-#: ../../source/serialization/aggregate.rst:85
+#: ../../source/serialization/aggregate.rst:45
 msgid ""
 "Cosignature transactions are used to sign :ref:`announced "
 "AggregateBondedTransactions <aggregate-transaction>` with missing "
@@ -90,7 +90,7 @@ msgstr ""
 msgid "AggregateBondedTransaction hash to cosign."
 msgstr "署名すべき AggregateBondedTransaction ハッシュ"
 
-#: ../../source/serialization/aggregate.rst:102
+#: ../../source/serialization/aggregate.rst:62
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 09:13+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,43 +21,43 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:49
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:9
 msgid "Modifying the mosaic supply"
 msgstr "モザイク供給量の変更"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:51
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:11
 msgid ""
 "If a mosaic was created with the \"**Supply Mutable**\" property, you can "
 "make more tokens or reduce the total supply."
 msgstr "\"**Supply Mutable**\" プロパティを使用してモザイクを作成した場合、トークンを増やすか、総供給量を減らすことができます。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:55
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:15
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:57
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:17
 msgid "Complete :doc:`creating a mosaic guide <creating-a-mosaic>`."
 msgstr ":doc:`モザイクの作成  <creating-a-mosaic>` ガイドを完了している"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:58
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:18
 msgid "Have registered a supply mutable mosaic."
 msgstr "供給量を変えることができるモザイクを作成している"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:62
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:22
 msgid "Method #01: Using the Desktop Wallet"
 msgstr "方法 #01: デスクトップウォレットを使用する"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:64
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:24
 msgid "Click on the \"**Mosaic**\" tab on the left-side menu."
 msgstr "左側のメニューの \"**モザイク**\" タブをクリックします。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:70
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:30
 msgid ""
 "2. Click on the edit icon (represented by a pen) on the right side of the "
 "mosaic that you desire to edit. Click \"**modify supply**\". Note:"
 msgstr "2. 編集したいモザイクの右側の編集アイコン (ペン) をクリックします。 \"**モザイク供給量**\" をクリックします。 備考:"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:77
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:37
 msgid ""
 "Select the \"**Supply Change Direction**\" to indicate whether you desire to"
 " increase or decrease the supply. Then enter the amount by you wish to edit "
@@ -68,14 +68,14 @@ msgstr ""
 "を選択してください。次に、相対供給量に変更する量を入力します。 \"**送信**\" "
 "をクリックします。次のページの情報を確認し、ウォレットのパスワードを入力します。 \"**確認**\" をクリックします。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:79
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:39
 msgid ""
 "In our example, the relative supply is increased by 1,000,000. Since the "
 "divisibility property of the mosaic is 0, the change in absolute supply is "
 "identical."
 msgstr "この例では、相対供給量が 1,000,000 増加します。モザイクの可分性プロパティは 0 なので、絶対供給量の変化は同じです。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:81
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:41
 msgid ""
 "If you enter a negative number, it will do the inverse of the indicated "
 "\"**Supply Change Direction**\". For example, if you choose to increase by "
@@ -85,28 +85,28 @@ msgstr ""
 "負の数を入力すると、指示された \"**供給変更方向**\" の逆になります。たとえば、 -100 の増加を選択した場合、相対供給量は 100 "
 "減少します。供給量を減らすには、モザイクの所有者が、少なくとも削除する単位の数を保有している必要があります。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:87
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:47
 msgid ""
 "You can verify the change in supply on the \"**Mosaics**\" page. If you "
 "still see the old supply, try clicking on the update icon on the top right."
 msgstr "\"**モザイク**\" ページで供給量の変更を確認できます。それでも古い供給量が表示される場合は、右上の更新アイコンをクリックしてみてください。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:95
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:55
 msgid "Method #02: Using the SDK"
 msgstr "方法 #02: SDK を使用する"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:97
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:57
 msgid ""
-"1. Define a :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-"
-"transaction>` as in the next code snippet. Then, replace the ``mosaicId`` "
-"and ``divisibility`` with the current mosaic properties. Edit ``delta`` with"
-" the relative amount of mosaics you want to increase."
+"1. Define a :ref:`mosaicsupplychangetransaction` as in the next code "
+"snippet. Then, replace the ``mosaicId`` and ``divisibility`` with the "
+"current mosaic properties. Edit ``delta`` with the relative amount of "
+"mosaics you want to increase."
 msgstr ""
-"1. 次のコードスニペットのように :ref:`MosaicSupplyChangeTransaction <mosaic-supply-change-"
-"transaction>` を定義します。そして、 ``mosaicId`` と ``divisibility`` "
-"を現在のモザイクプロパティに置き換えます。増やしたいモザイクの相対量である ``delta`` を編集します。"
+"1. 次のコードスニペットのように :ref:`mosaicsupplychangetransaction` を定義します。そして、 "
+"``mosaicId`` と ``divisibility`` を現在のモザイクプロパティに置き換えます。増やしたいモザイクの相対量である "
+"``delta`` を編集します。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:118
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:78
 msgid ""
 "|codename| works with **absolute amounts**. To get an absolute amount, "
 "multiply the number of assets you want to increase/decrease by 10\\ "
@@ -116,13 +116,13 @@ msgstr ""
 "|codename| は **絶対量** を扱います。絶対量を取得するには、増減するアセットの量に 10\\ :sup:`divisibility` "
 "を乗じてください。例えば、モザイクが **可分性** 2 である場合、10 単位 (相対) 増減するには 1000 (絶対) と定義します。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:120
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:80
 msgid ""
 "Sign the transaction with the mosaic creator account and announce it to the "
 "network."
 msgstr "モザイク作成者のアカウントでトランザクションに署名して、ネットワークにアナウンスします。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:139
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:99
 msgid ""
 "Otherwise, you can decrease a mosaic supply by changing "
 "``MosaicSupplyChangeAction.Increase`` to "
@@ -135,15 +135,15 @@ msgstr ""
 "に変更することでモザイクの供給を減らすことができます。この2番目の場合、モザイク作成者アカウントはモザイクの供給を減らすために、少なくとも "
 "``delta`` 単位を保有していなければなりません。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:144
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:104
 msgid "Method #03: Using the CLI"
 msgstr "方法 #03: CLI を使用する"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:146
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:106
 msgid "Open a terminal window and run the following command."
 msgstr "ターミナルを開き、次のコマンドを実行します。"
 
-#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:148
+#: ../../source/guides/mosaic/modifying-mosaic-supply.rst:108
 msgid ""
 "Replace ``7cdf3b117a3c40cc`` with the mosaic identifier and ``1000000`` with"
 " the absolute units to be increased."
