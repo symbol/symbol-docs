@@ -1,12 +1,13 @@
 .. figure:: resources/images/symbol-logo.png
     :align: center
-    :width: 600px
+    :width: 200px
+    :class: no-background
 
 .. title:: Symbol Documentation
 
 .. rst-class:: h1centered
 
-    Technical Documentation
+    Symbol Technical Documentation
 
 Welcome to |codename|'s **technical documentation site**, your primary source of information to integrate |codename|'s blockchain technology into your projects.
 
