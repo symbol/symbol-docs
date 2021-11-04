@@ -194,7 +194,6 @@ html_additional_pages = {'404': '404.html'}
 
 ## Custom style overrides
 def setup(app):
-    app.add_css_file("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&display=swap")
     app.add_css_file("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
     app.add_css_file("css/custom.css")  # may also be an URL
     app.add_js_file("js/custom.js")

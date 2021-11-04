@@ -1,4 +1,13 @@
 /* General */
+@font-face {
+    font-family: "ProtipoRegular";
+    src: url("../fonts/Protipo-Regular.otf");
+}
+@font-face {
+    font-family: "Industry";
+    src: url("../fonts/Industry Inc.otf");
+}
+
 html {
     overflow-x: hidden;
     height: 100%;
@@ -9,13 +18,13 @@ body {
     min-height: 100%;
     position: relative;
     font-size: 16px;
-    font-family: "Noto Sans", sans-serif !important;
+    font-family: "ProtipoRegular", sans-serif !important;
     color: #CCC;
     background: #0B0118
 
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Noto Sans", sans-serif !important;
+    font-family: "Industry", sans-serif !important;
     color: #CCC;
     font-weight: 700;
 }
@@ -206,7 +215,7 @@ body > .container {
 }
 /* Content */
 .content {
-    line-height: 1.85;
+    line-height: 1.55;
     padding-bottom: 50px;
 }
 .content a {
@@ -709,6 +718,7 @@ ul.postlist-style-circle .first {
     margin-bottom: 40px;
     color: #5200c6;
     text-align: center;
+    font-family: "Industry", sans-serif !important;
     font-size: 40px;
     font-weight: 900;
 }
