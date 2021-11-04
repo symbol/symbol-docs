@@ -10,27 +10,32 @@ body {
     position: relative;
     font-size: 16px;
     font-family: "Noto Sans", sans-serif !important;
-    color: #333;
+    color: #CCC;
+    background: #0B0118
+
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Noto Sans", sans-serif !important;
-    color: #333;
+    color: #CCC;
     font-weight: 700;
 }
 h1 {
     margin-top: 0;
     margin-bottom: 40px;
-    color: #5200c6;
+    color: #B32AF9;
 }
 h2 {
     font-size: 30px;
     margin: 40px 0 20px 0;
-    color: #44004e;
+    color: #87269F;
 }
 h3 {
     font-size: 24px;
     margin: 20px 0;
-    color: #333;
+    color: #704892;
+}
+h4 {
+  color: #704892;
 }
 a, a:hover {
     color: #00c8ff;
@@ -39,7 +44,7 @@ pre {
     margin: 5px 0 10px 0;
 }
 b {
-    color: #44004E;
+    color: #E8E;
 }
 /* Colors */
 .gradient {
@@ -99,10 +104,13 @@ input.form-control:focus {
 .alert {
     margin: 20px 0;
     padding: 5px 1.5rem !important;
-    background: #F5F5F5;
-    color: #333;
+    background: #251B34;
+    color: #CCC;
     border-left: 6px solid #00c8ff;
     border-radius: 0px 4px 4px 0px;
+}
+.alert .admonition-title {
+  color: #00c8ff;
 }
 /* Label */
 .label {
@@ -202,7 +210,7 @@ body > .container {
     padding-bottom: 50px;
 }
 .content a {
-    color: #5200c6;
+    color: #695ED1;
 }
 .content ul {
     list-style: disc;
@@ -244,7 +252,7 @@ body > .container {
     position: relative;
 }
 .navbar-default a, .navbar-default a:hover {
-    color: #FFF;
+    color: #CCC;
     text-decoration: none;
 }
 .navbar-default .navbar-top {
@@ -322,8 +330,8 @@ body > .container {
 .bs-sidenav {
     top: 0;
     margin: 0;
-    padding: 0;
-    background-color: #fff;
+    padding: 10px;
+    background-color: transparent;
     border-radius: 0;
     word-break: break-word;
     text-shadow: none;
@@ -339,13 +347,13 @@ body > .container {
 }
 .bs-sidenav ul > li > a {
     display: block;
-    color: #333;
+    color: #CCC;
     padding: 5px 20px;
     text-decoration: none;
 }
 .bs-sidenav ul > li > a.current, .bs-sidenav ul > li > a:hover {
     text-decoration: none;
-    color: #5200c6;
+    color: #B32AF9;
 }
 .bs-sidenav ul ul > li > a {
     padding: 3px 20px;
@@ -390,7 +398,7 @@ body > .container {
 }
 #sidebar .caption-text, .sidebar-xs .caption-text {
     font-weight: bold;
-    color: #333;
+    color: #FFF;
 }
 .sidebar-xs .caption-text {
     padding-left: 10px;
@@ -405,9 +413,12 @@ body > .container {
     border: 0;
     max-height: 70vh;
     overflow: auto;
+    background-color: #251B34;
+    box-shadow: 6px 6px 6px #000;
 }
 .sidebar-xs .dropdown-menu > li > a {
     white-space: normal;
+    color: #FFF;
 }
 .sidebar-xs .dropdown-menu .toctree-l1 > a {
     font-weight: bold;
@@ -420,14 +431,14 @@ body > .container {
     font-size: 90%
 }
 .sidebar-xs .dropdown-menu .current > a {
-    color: #5200c6;
+    color: #B32AF9;
 }
 .sidebar-xs .dropdown a {
     padding-left: 10px;
 }
 .sidebar-xs .dropdown a:hover {
     background-color: transparent;
-    color: #5200c6;
+    color: #B32AF9;
 }
 .sidebar-xs a.dropdown-toggle:hover {
     color: #fff;
@@ -439,7 +450,6 @@ body > .container {
     margin-top: 10px;
 }
 .bs-sidenav.secondary {
-    border-left: 1px solid #e5e3e9;
     width: inherit;
     padding: 0;
     display: none;
@@ -456,7 +466,7 @@ body > .container {
     padding: 10px 20px;
 }
 .bs-sidenav.secondary .edit-github a {
-    color: #333;
+    color: #777;
 }
 @media screen and (min-width: 992px) {
     #sidebar {
@@ -487,7 +497,7 @@ div.figure .caption {
 /* Tabs */
 .docutils.literal {
     background-color: #00000020;
-    color: #44004E;
+    color: #2498C0;
     border-radius: 4px;
 }
 .sphinx-tabs {
@@ -515,12 +525,35 @@ div.figure .caption {
 .sphinx-tabs .sphinx-menu a.active.item, .sphinx-tab {
     border-color: #5200c6 !important;
 }
+div .sphinx-tabs-panel {
+    background-color: #251B34;
+    border: none;
+    padding: 8px;
+    border-top-right-radius: 4px;
+}
+div .sphinx-tabs-tab {
+    border: 1px solid #251B34;
+    border-bottom: none;
+    padding: 8px;
+    color: #5200c6;
+}
+div .sphinx-tabs-tab[aria-selected="true"] {
+    background-color: #251B34;
+    border: 1px solid #251B34;
+    color: #D1C9F3;
+}
+div [role="tablist"] {
+  border-bottom: none;
+}
 .highlight > pre {
-    color: #fff;
-    background-color: #333;
+    color: #2498C0;
+    background-color: #251B34;
     border-radius: 4px;
     padding: 12px;
     border: 0;
+}
+.sphinx-tabs pre {
+  background-color: #150f1e;
 }
 .example-code {
     padding: 0;
@@ -533,7 +566,6 @@ div.figure .caption {
     border-radius: 0 5px 5px 5px;
 }
 .example-selector {
-    background-color: #fff;
     padding: 5px 0 0 0 !important;
     height: 100% !important;
     margin-bottom: 0 !important;
@@ -542,18 +574,20 @@ div.figure .caption {
     content: " " !important;
 }
 .example-selector > li {
-    color: #44004E !important;
-    background-color: #ccc !important;
+    color: #5200c6 !important;
+    background-color: transparent !important;
     float: none !important;
     display: inline-block !important;
     font-weight: normal !important;
     margin: 0 2px 0 0 !important;
     padding: 0 10px !important;
+    border: 1px solid #251B34;
+    border-bottom: none;
     border-radius: 10px 10px 0 0 !important;
 }
 .example-selector > li.selected {
-    background-color: #333 !important;
-    color: #00c8ff !important;
+    background-color: #251B34 !important;
+    color: #D1C9F3 !important;
 }
 .example-code .code-block-caption {
     top: -28px;
@@ -679,10 +713,13 @@ ul.postlist-style-circle .first {
     font-weight: 900;
 }
 div.sidebar {
-    background-color: #9bd2f2;
+    background-color: #1E0F46;
     border: 0px;
     border-radius: 4px;
     width: 50%;
+}
+.content img {
+  background-color: #FFF;
 }
 img.with-shadow {
     border: 1px lightgray;
@@ -696,6 +733,9 @@ img.with-rounded-shadow {
 img.align-right {
     margin-bottom: 16px;
 }
+img.no-background {
+    background: transparent;
+}
 .right-align {
     text-align: right;
 }
@@ -706,26 +746,32 @@ img.align-right {
 }
 .warning {
     border-left: 6px solid red;
-    background-color: pink;
+    background-color: 251B34;
     text-align:center;
 }
 .caution {
     border-left: 6px solid orange;
-    background-color: #fffae6;
+    background-color: #251B34;
+}
+.caution .admonition-title {
+  color: orange;
 }
 /* Topics, similar to Notes but with custom titles.
  * Copied from .alert */
 div.topic {
     margin: 20px 0;
     padding: 5px 1.5rem !important;
-    background: #F5F5F5;
-    color: #333;
+    background: #251B34;
+    color: #CCC;
     border: 0px;
     border-left: 6px solid #00c8ff;
     border-radius: 0px 4px 4px 0px;
 }
+div.topic .topic-title {
+  color: #00c8ff;
+}
 .git-info {
-    color: #999;
+    color: #777;
     font-size: small;
 }
 .git-info a {
@@ -739,7 +785,7 @@ div.topic {
 }
 .side-info {
     float: right;
-    background-color: #9bd2f2;
+    background-color: #251B34;
     border-radius: 4px;
     padding: 7px;
     margin-left: 10px;
@@ -749,7 +795,7 @@ div.topic {
 .side-info-icon {
     text-align: center;
     font-size: large;
-    color: black;
+    color: #E8E;
     line-height: normal;
     padding-right: 7px;
 }
@@ -788,6 +834,22 @@ a .xref {
     text-decoration: underline 1px dotted;
 }
 
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #251B34;
+  background: #00000080;
+}
+::-webkit-scrollbar-thumb {
+  background: #4E2067;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8337ad;
+}
 /* GitHub contributors list */
 .ghcontributors {
   display: flex;

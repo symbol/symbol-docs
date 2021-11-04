@@ -120,7 +120,7 @@ If none of the languages fits your project, you can always query the blockchain 
 
     .. tab:: TypeScript
 
-        .. note:: Symbol SDK require Node.js 12 LTS to execute.
+        .. note:: Symbol SDK requires Node.js 12 LTS to execute.
 
         1. Create a ``package.json`` file.
 
