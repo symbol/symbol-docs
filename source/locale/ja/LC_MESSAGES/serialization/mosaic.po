@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/mosaic.rst:43
+#: ../../source/serialization/mosaic.rst:3
 msgid "Mosaic Schemas"
 msgstr "モザイクスキーマ"
 
-#: ../../source/serialization/mosaic.rst:45
+#: ../../source/serialization/mosaic.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,16 +38,16 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/mosaic.rst:49
+#: ../../source/serialization/mosaic.rst:9
 msgid "Mosaic Definition"
 msgstr "モザイク定義"
 
-#: ../../source/serialization/mosaic.rst:56
+#: ../../source/serialization/mosaic.rst:16
 msgid "Announce a MosaicDefinitionTransaction to create a new mosaic."
 msgstr "新しいモザイクを作るために MosaicDefinitionTransaction をアナウンスします。"
 
-#: ../../source/serialization/mosaic.rst:64
-#: ../../source/serialization/mosaic.rst:93
+#: ../../source/serialization/mosaic.rst:24
+#: ../../source/serialization/mosaic.rst:53
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -84,11 +84,11 @@ msgstr "モザイクフラグ"
 msgid "Mosaic divisibility."
 msgstr "モザイク可分性"
 
-#: ../../source/serialization/mosaic.rst:78
+#: ../../source/serialization/mosaic.rst:38
 msgid "Mosaic Supply Change"
 msgstr "モザイク供給量変更"
 
-#: ../../source/serialization/mosaic.rst:85
+#: ../../source/serialization/mosaic.rst:45
 msgid ""
 "Announce a supply change transaction to increase or decrease a mosaic's "
 "supply."
@@ -106,7 +106,7 @@ msgstr "モザイク供給量の増加または減少の総量。"
 msgid "Supply change action."
 msgstr "供給量変更アクション"
 
-#: ../../source/serialization/mosaic.rst:105
+#: ../../source/serialization/mosaic.rst:65
 msgid "Mosaic Types"
 msgstr "モザイクタイプ"
 

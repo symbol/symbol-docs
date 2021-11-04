@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2020-06-11 06:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/overview.rst:43
+#: ../../source/concepts/overview.rst:3
 msgid "Concepts"
 msgstr "コンセプト"
 
-#: ../../source/concepts/overview.rst:45
+#: ../../source/concepts/overview.rst:5
 msgid ""
 "These are the important concepts behind blockchain technology and the "
 "|codename| platform in particular."

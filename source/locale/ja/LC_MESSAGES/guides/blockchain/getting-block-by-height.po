@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 09:12+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,46 +21,46 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:49
+#: ../../source/guides/blockchain/getting-block-by-height.rst:9
 msgid "Getting a block by height"
 msgstr "ブロック高によるブロックの取得"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:51
+#: ../../source/guides/blockchain/getting-block-by-height.rst:11
 msgid "Get the block information given a height."
 msgstr "与えられたブロック高のブロック情報を取得する。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:55
+#: ../../source/guides/blockchain/getting-block-by-height.rst:15
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:57
+#: ../../source/guides/blockchain/getting-block-by-height.rst:17
 msgid ""
 "Complete the :doc:`getting started section <../../getting-started/setup-"
 "workstation>`."
 msgstr ":doc:`入門セクション <../../getting-started/setup-workstation>` を完了している"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:61
+#: ../../source/guides/blockchain/getting-block-by-height.rst:21
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:63
+#: ../../source/guides/blockchain/getting-block-by-height.rst:23
 msgid ""
 "What happened in the genesis block? Run the following code to get the first "
 "block header recorded on the blockchain."
 msgstr "ジェネシスブロックでは何が発生したのでしょう？次のコードを実行してブロックチェーンに最初に記録されたブロックのヘッダを取得します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:82
+#: ../../source/guides/blockchain/getting-block-by-height.rst:42
 msgid "The following snippet returns the height of the latest block."
 msgstr "以下のスニペットは最終ブロックの高さを返却します。"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:98
+#: ../../source/guides/blockchain/getting-block-by-height.rst:58
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:100
+#: ../../source/guides/blockchain/getting-block-by-height.rst:60
 msgid "Get the block header:"
 msgstr "ブロックヘッダの取得:"
 
-#: ../../source/guides/blockchain/getting-block-by-height.rst:106
+#: ../../source/guides/blockchain/getting-block-by-height.rst:66
 msgid "Get the height of the blockchain:"
 msgstr "ブロックチェーン高の取得:"

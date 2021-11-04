@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-11-03 08:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,28 +21,28 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:49
+#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:9
 msgid "Getting mosaic address restrictions attached to an account"
 msgstr "アカウントにアタッチされたモザイクアドレス制限を取得する"
 
-#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:51
+#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:11
 msgid "Get the list of mosaic address restrictions."
 msgstr "モザイクのアドレス制限リストの取得"
 
-#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:55
+#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:15
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:57
+#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:17
 msgid ""
 "Complete :doc:`restricting mosaics transfers <restricting-mosaics-"
 "transfers>` guide."
 msgstr ":doc:`モザイク転送の制限 <restricting-mosaics-transfers>` ガイドを完了している"
 
-#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:61
+#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:21
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:82
+#: ../../source/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.rst:42
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

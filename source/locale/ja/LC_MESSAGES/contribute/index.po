@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-15 05:56+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,32 +21,32 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/contribute/index.rst:43
+#: ../../source/contribute/index.rst:3
 msgid "Contributing"
 msgstr "貢献"
 
-#: ../../source/contribute/index.rst:45
+#: ../../source/contribute/index.rst:5
 msgid "|codename| is an |open-source| project:"
 msgstr "|codename| は |open-source| プロジェクトです:"
 
-#: ../../source/contribute/index.rst:47
+#: ../../source/contribute/index.rst:7
 msgid "Reach our community joining the official |discord| server."
 msgstr "私達のコミュニティは公式 |discord| サーバから参加できます。"
 
-#: ../../source/contribute/index.rst:48
+#: ../../source/contribute/index.rst:8
 msgid ""
 "Check the :doc:`contributing guidelines <contributing>` to propose changes."
 msgstr "変更を提案するためには :doc:`貢献ガイドライン <contributing>` を確認してください。"
 
-#: ../../source/contribute/index.rst:49
+#: ../../source/contribute/index.rst:9
 msgid "Follow the development updates on |twitter|."
 msgstr "|twitter| で開発のアップデートを追いかけましょう。"
 
-#: ../../source/contribute/index.rst:50
+#: ../../source/contribute/index.rst:10
 msgid "Explore our |github| repositories."
 msgstr "|github| リポジトリを探索しましょう。"
 
-#: ../../source/contribute/index.rst:51
+#: ../../source/contribute/index.rst:11
 msgid ""
 "Take a look at the `member directory "
 "<https://docs.symbolplatform.com/handbook/en/directory.html>`__."

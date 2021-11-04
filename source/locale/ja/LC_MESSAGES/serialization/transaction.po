@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-15 05:56+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/transaction.rst:43
+#: ../../source/serialization/transaction.rst:3
 msgid "Transaction Schemas"
 msgstr "トランザクションスキーマ"
 
-#: ../../source/serialization/transaction.rst:45
+#: ../../source/serialization/transaction.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,13 +38,13 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/transaction.rst:56
+#: ../../source/serialization/transaction.rst:16
 msgid "Serialization of a transaction."
 msgstr "トランザクションのシリアル化"
 
-#: ../../source/serialization/transaction.rst:58
-#: ../../source/serialization/transaction.rst:79
-#: ../../source/serialization/transaction.rst:96
+#: ../../source/serialization/transaction.rst:18
+#: ../../source/serialization/transaction.rst:39
+#: ../../source/serialization/transaction.rst:56
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
@@ -55,8 +55,13 @@ msgid "Property"
 msgstr "プロパティ"
 
 #: ../../source/serialization/transaction.rst:1
+#: ../../source/serialization/transaction.rst:1
+msgid "Type of transaction."
+msgstr "トランザクションタイプ"
+
+#: ../../source/serialization/transaction.rst:1
 msgid "Maximum fee allowed to spend for the transaction."
-msgstr "トランザクションに最大の手数料を支払うことが許可されています。"
+msgstr "トランザクションに支払うことを許容する最大手数料"
 
 #: ../../source/serialization/transaction.rst:1
 msgid ""
@@ -68,7 +73,7 @@ msgstr ""
 "ネメシスブロックが作成されてから経過したミリ秒数。期限までにトランザクションがブロックに含まれなかった場合は削除されます。デッドラインは ``24`` "
 "時間先までが許容されています。"
 
-#: ../../source/serialization/transaction.rst:77
+#: ../../source/serialization/transaction.rst:37
 msgid "Binary layout for an embedded transaction header."
 msgstr "埋め込みトランザクションヘッダーのバイナリレイアウト。"
 
@@ -78,7 +83,7 @@ msgid ""
 "boundary."
 msgstr "EmbeddedTransactionHeader の終わりを 8 バイト境界に揃える予約パディング"
 
-#: ../../source/serialization/transaction.rst:94
+#: ../../source/serialization/transaction.rst:54
 msgid ""
 "Serialization of an :doc:`aggregate <../concepts/aggregate-transaction>` "
 "inner transaction."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 15:25+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2021-03-02 08:33+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/reward-programs.rst:43
+#: ../../source/concepts/reward-programs.rst:3
 msgid "Reward Programs"
 msgstr "報酬プログラム"
 
-#: ../../source/concepts/reward-programs.rst:45
+#: ../../source/concepts/reward-programs.rst:5
 msgid ""
 ":doc:`Nodes <node>` **are the backbone of any blockchain**, since they are "
 "the ones creating and storing the blocks, among other things. It is "
@@ -35,7 +35,7 @@ msgstr ""
 ":doc:`ノード <node>` はブロックを生成しては保存するので、 **いかなるブロックチェーンにおいても大黒柱です** "
 "。したがって、ネットワーク内には常にできるだけ多くのノードがアクティブであることが **重要** です。"
 
-#: ../../source/concepts/reward-programs.rst:47
+#: ../../source/concepts/reward-programs.rst:7
 msgid ""
 "Beyond the direct **block rewards** (:doc:`fees` and :doc:`inflation`) that "
 "nodes obtain for producing blocks, |codename| **provides a series of special"
@@ -46,24 +46,22 @@ msgstr ""
 "による直接な報酬の他に、 |codename| ユーザによるノードの作成および維持を奨励することを目的とした **一連の特別な報酬プログラムを提供** "
 "します。"
 
-#: ../../source/concepts/reward-programs.rst:49
+#: ../../source/concepts/reward-programs.rst:9
 msgid "Each of these programs rewards **a different aspect of the network**:"
 msgstr "これらの各プログラムは **ネットワークのさまざまな側面** で報酬を与えます:"
 
-#: ../../source/concepts/reward-programs.rst:51
-msgid ""
-":ref:`supernode-program`: For powerful, high-availability and high-"
-"throughput nodes."
-msgstr ":ref:`supernode-program`: 強力な、高可用、高スループットのノード向け"
-
-#: ../../source/concepts/reward-programs.rst:52
+#: ../../source/concepts/reward-programs.rst:11
 msgid ""
 ":ref:`voting-node-program`: For nodes supporting Finalization, |codename|'s "
 "fork resolution mechanism."
 msgstr ""
 ":ref:`voting-node-program`: ファイナライズと |codename| のフォーク解決メカニズムを支持するノード向け"
 
-#: ../../source/concepts/reward-programs.rst:54
+#: ../../source/concepts/reward-programs.rst:12
+msgid "*More programs might be added in the future*."
+msgstr "*今後、さらに多くのプログラムが追加される可能性があります*"
+
+#: ../../source/concepts/reward-programs.rst:14
 msgid ""
 "In most cases, node owners wishing to benefit from these programs must "
 "explicitly **enroll** to them. The descriptions below contain **guides** "
@@ -72,166 +70,27 @@ msgstr ""
 "ほとんどの場合、これらのプログラムの恩恵を受けたいノード所有者は、明示的に **登録** する必要があります。各プログラムへの登録方法は、以下の説明に "
 "**ガイド** が含まれています。"
 
-#: ../../source/concepts/reward-programs.rst:56
-msgid ""
-"None of the reward programs has launched yet. The information shown below is"
-" subject to change until the programs officially start."
-msgstr "報酬プログラムはまだ開始されていません。以下の情報はプログラムが正式に開始されるまで変更される場合があります。"
+#: ../../source/concepts/reward-programs.rst:20
+msgid "Voting Node Program"
+msgstr "投票ノードプログラム"
 
-#: ../../source/concepts/reward-programs.rst:62
-msgid "Supernode Program"
-msgstr "スーパーノードプログラム"
-
-#: ../../source/concepts/reward-programs.rst:64
-msgid ""
-"This program aims at ensuring that a sufficiently large number of **powerful"
-" nodes** will always be available to guarantee the smooth functioning of the"
-" network."
-msgstr ""
-"このプログラムの目的は、ネットワークの円滑な機能を保証するために、十分な数の **強力なノード** が常に利用可能であることを保証するためです。"
-
-#: ../../source/concepts/reward-programs.rst:67
-#: ../../source/concepts/reward-programs.rst:136
+#: ../../source/concepts/reward-programs.rst:27
 msgid "Requirements"
 msgstr "要求事項"
 
-#: ../../source/concepts/reward-programs.rst:69
+#: ../../source/concepts/reward-programs.rst:29
 msgid ""
-"Supernodes are regular nodes meeting the following additional hardware and "
-"operational requirements:"
-msgstr "スーパーノードとは、次の追加のハードウェアおよび運用要件を満たす、通常ノードです:"
+"Voting nodes are regular nodes meeting the following additional "
+"requirements:"
+msgstr "投票ノードとは、次の追加要件を満たす、通常ノードです:"
 
-#: ../../source/concepts/reward-programs.rst:1
 #: ../../source/concepts/reward-programs.rst:1
 msgid "Parameter"
 msgstr "パラメータ"
 
 #: ../../source/concepts/reward-programs.rst:1
-#: ../../source/concepts/reward-programs.rst:1
 msgid "Requirement"
 msgstr "要求事項"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Node type**"
-msgstr "**ノードタイプ**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"Must be a Dual node (Both a :ref:`Peer <peer-node>` and an :ref:`API <api-"
-"node>` node)."
-msgstr ""
-"デュアルノード (:ref:`Peer <peer-node>` と :ref:`API <api-node>` ノードの両方) である必要があります。"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Bandwidth**"
-msgstr "**帯域**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"**5'000 kbit/s** or higher, calculated by downloading 2MB files from 3 other"
-" random nodes on the network."
-msgstr ""
-"**5'000 kbit/s** 以上、ネットワーク上にある、他の3つのランダムなノードから、2MB のファイルダウンロードによって計測されます。"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Chain Height**"
-msgstr "**チェーン高**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"Chain must be synchronized no more than **4 blocks** behind the reference "
-"height."
-msgstr "チェーンは基準の高さから **4 ブロック** 以内に同期できていなければなりません。"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Chain Part**"
-msgstr "**チェーン部分**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"Upload **50 random blocks hashes** of the chain accurately. These are "
-"compared to the reference chain hashes for accuracy."
-msgstr ""
-"チェーンの **50個のランダムなブロックハッシュ** を正確にアップロードします。これらを正確さのために参照チェーンのハッシュと比較します。"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Computing Power**"
-msgstr "**計算力**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"Hash at least **2'000 iterations per second**. Node is requested to "
-"calculate 10'000 iterations of a 32 byte seed. Speed and accuracy are "
-"measured."
-msgstr ""
-"最低でも **1 秒あたり 2,000回反復** をハッシュ計算を行います。ノードは 32 byte シードを 10,000 "
-"回の反復の計算を要求されます。速度と精度を測定します。"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"At least **1, 2 or 3 million** |networkcurrency| must be stacked on the "
-"node. The amount will decide the reward tier (see below)."
-msgstr ""
-"ノードには最低でも **1, 2, 3 百万** |networkcurrency| の保有が求められます。総量で報酬形態が変わります。 (以下を参照)"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Version**"
-msgstr "**バージョン**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Ping**"
-msgstr "**Ping**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"**200ms response or less**. Node is requested to ping 20 other random nodes "
-"on the network and at least one ping time must pass the test (each node will"
-" be pinged 5 times and response times averaged)."
-msgstr ""
-"**200ms 以下のレスポンス** ノードはネットワーク上の他のノードに 20 回のランダムな ping の実行を要求され、最低 1 回の ping "
-"応答がテストに合格しなければなりません (各ノードは 5 回 ping され、応答時間は平均化されます)"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid "**Responsiveness**"
-msgstr "**応答性**"
-
-#: ../../source/concepts/reward-programs.rst:1
-msgid ""
-"**1 second**. 10 blockchain height requests will be made and at least 9 must"
-" answer in less than 1 second."
-msgstr "**1秒**: 10 個のブロックチェーン高がリクエストされ、最低でも 9 個を 1 秒以内に応答しなければなりません。"
-
-#: ../../source/concepts/reward-programs.rst:91
-#: ../../source/concepts/reward-programs.rst:151
-msgid "Rewards"
-msgstr "報酬"
-
-#: ../../source/concepts/reward-programs.rst:119
-msgid ""
-"See the complete `Terms & Conditions "
-"<https://drive.google.com/file/d/1Q51SJNxeKVFWXQOogRSUrcn8e1Le-k2-/view?usp=sharing>`__."
-msgstr ""
-"完全な `利用規約 "
-"<https://drive.google.com/file/d/1Q51SJNxeKVFWXQOogRSUrcn8e1Le-k2-/view?usp=sharing>`__"
-" はこちらを参照してください。"
-
-#: ../../source/concepts/reward-programs.rst:123
-msgid ""
-":doc:`Follow this guide to enroll to the Supernode program "
-"<../guides/network/supernode-enrollment>`."
-msgstr ""
-":doc:`スーパーノードプログラムに参加するにはこのガイドに従ってください <../guides/network/supernode-"
-"enrollment>`"
-
-#: ../../source/concepts/reward-programs.rst:129
-msgid "Voting Node Program"
-msgstr "投票ノードプログラム"
-
-#: ../../source/concepts/reward-programs.rst:138
-msgid ""
-"Voting nodes are regular nodes meeting the following additional "
-"requirements:"
-msgstr "投票ノードとは、次の追加要件を満たす、通常ノードです:"
 
 #: ../../source/concepts/reward-programs.rst:1
 msgid "At least **3 million** |networkcurrency| must be stacked on the node."
@@ -241,7 +100,11 @@ msgstr "ノードには最低でも **300 万** |networkcurrency| のステー�
 msgid "**Voting keys**"
 msgstr "**投票キー**"
 
-#: ../../source/concepts/reward-programs.rst:157
+#: ../../source/concepts/reward-programs.rst:40
+msgid "Rewards"
+msgstr "報酬"
+
+#: ../../source/concepts/reward-programs.rst:46
 msgid ""
 "If you created your node using Symbol Bootstrap, :ref:`follow this guide to "
 "enable voting <bootstrap-enable-voting>`."
@@ -249,13 +112,13 @@ msgstr ""
 "Symbol Bootstrap を使用してノードを作成した場合は :ref:`このガイドに従って投票 <bootstrap-enable-"
 "voting>` を有効にしてください。"
 
-#: ../../source/concepts/reward-programs.rst:159
+#: ../../source/concepts/reward-programs.rst:48
 msgid ""
 "Otherwise, :ref:`follow this guide to enable voting manually <manual-enable-"
 "voting>`."
 msgstr "または :ref:`このガイドに従い、手動で投票を有効化 <manual-enable-voting>` します。"
 
-#: ../../source/concepts/reward-programs.rst:161
+#: ../../source/concepts/reward-programs.rst:50
 msgid ""
 "See the complete `Terms & Conditions <https://drive.google.com/file/d/1Q-"
 "Ph2KGKN3Vr6GVampFvlfitZHirhthA/view?usp=sharing>`__."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/resolution_statement.rst:43
+#: ../../source/serialization/resolution_statement.rst:3
 msgid "Resolution Statement Schemas"
 msgstr "解決ステートメントスキーマ"
 
-#: ../../source/serialization/resolution_statement.rst:45
+#: ../../source/serialization/resolution_statement.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,11 +38,11 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/resolution_statement.rst:49
+#: ../../source/serialization/resolution_statement.rst:9
 msgid "Resolution Statement Types"
 msgstr "解決ステートメントタイプ"
 
-#: ../../source/serialization/resolution_statement.rst:56
+#: ../../source/serialization/resolution_statement.rst:16
 msgid "The transaction that triggered the receipt."
 msgstr "レシートをトリガしたトランザクション。"
 
@@ -64,7 +64,7 @@ msgstr ""
 "AggregateTransaction 内のトランザクションのインデックス。トランザクションがインナートランザクションではない場合、セカンダリ識別子は"
 " 0 に設定されます。"
 
-#: ../../source/serialization/resolution_statement.rst:74
+#: ../../source/serialization/resolution_statement.rst:34
 msgid "A single resolution statement can have multiple resolution entries."
 msgstr "1つの解決ステートメントには複数の解決エントリを含まれることがあります。"
 
@@ -80,21 +80,21 @@ msgstr "解決済みアドレスまたは解決済みモザイクの識別子"
 msgid "Information about the transaction that triggered the receipt."
 msgstr "レシートをトリガしたトランザクションの情報。"
 
-#: ../../source/serialization/resolution_statement.rst:85
+#: ../../source/serialization/resolution_statement.rst:45
 msgid "Resolution Statements"
 msgstr "解決ステートメント"
 
-#: ../../source/serialization/resolution_statement.rst:92
+#: ../../source/serialization/resolution_statement.rst:52
 msgid ""
 "A resolution statement keeps the relation between a namespace alias used in "
 "a transaction and the real address or mosaic id."
 msgstr "解決ステートメントはトランザクションで使用されるネームスペースエイリアスと実際のアドレスまたは mosaic id 間の関係を保持します。"
 
-#: ../../source/serialization/resolution_statement.rst:95
+#: ../../source/serialization/resolution_statement.rst:55
 msgid "**type**: Address_Alias_Resolution or Mosaic_Alias_Resolution"
 msgstr "**type**: Address_Alias_Resolution または Mosaic_Alias_Resolution"
 
-#: ../../source/serialization/resolution_statement.rst:97
+#: ../../source/serialization/resolution_statement.rst:57
 msgid "**Inlines**:"
 msgstr "**インライン**"
 

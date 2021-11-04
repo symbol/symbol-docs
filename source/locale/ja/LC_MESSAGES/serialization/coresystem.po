@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/coresystem.rst:43
+#: ../../source/serialization/coresystem.rst:3
 msgid "Core System Schemas"
 msgstr "コアシステムスキーマ"
 
-#: ../../source/serialization/coresystem.rst:45
+#: ../../source/serialization/coresystem.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,17 +38,17 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/coresystem.rst:49
+#: ../../source/serialization/coresystem.rst:9
 msgid "Voting Key Link"
 msgstr "投票リンクキー"
 
-#: ../../source/serialization/coresystem.rst:56
+#: ../../source/serialization/coresystem.rst:16
 msgid ""
 "This transaction is required for node operators wanting to vote for "
 ":ref:`finalized <finalization>` blocks."
 msgstr "このトランザクションは :ref:`ファイナライズ済み <finalization>` ブロックに投票するノードオペレーターに必要です。"
 
-#: ../../source/serialization/coresystem.rst:58
+#: ../../source/serialization/coresystem.rst:18
 msgid ""
 "Announce a VotingKeyLinkTransaction to associate a voting key with an "
 "account during a fixed period. An account can be linked to up to ``3`` "
@@ -57,7 +57,7 @@ msgstr ""
 "投票キーを関連付けるために、一定期間のアカウントを持つ公開鍵で、 VotingKeyLinkTransaction "
 "をアナウンスします。アカウントは同時に最大 ``3`` つの異なる投票キーにリンクできます。"
 
-#: ../../source/serialization/coresystem.rst:60
+#: ../../source/serialization/coresystem.rst:20
 msgid ""
 "The recommended production setting is to always have at least ``2`` linked "
 "keys with different ``endPoint`` values to ensure a key is registered after "
@@ -67,8 +67,8 @@ msgstr ""
 "本番環境の推奨設定では、最初のキーの有効期限が切れた後にキーが確実に登録されるように、常に異なる ``endPoint`` 値を持つ、最低でも "
 "``2`` つのキーをリンクします。詳細は :ref:`ガイド <manual-voting-key-renewal>` を参照してください。"
 
-#: ../../source/serialization/coresystem.rst:68
-#: ../../source/serialization/coresystem.rst:100
+#: ../../source/serialization/coresystem.rst:28
+#: ../../source/serialization/coresystem.rst:60
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -106,17 +106,17 @@ msgstr ""
 msgid "Account link action."
 msgstr "アカウントリンクアクション"
 
-#: ../../source/serialization/coresystem.rst:82
+#: ../../source/serialization/coresystem.rst:42
 msgid "Vrf Key Link"
 msgstr "Vrf キーリンク"
 
-#: ../../source/serialization/coresystem.rst:89
+#: ../../source/serialization/coresystem.rst:49
 msgid ""
 "This transaction is required for all :ref:`harvesting eligible accounts "
 "<account_eligibility>`."
 msgstr "このトランザクションはすべての :ref:`ハーベスティング適格アカウント <account_eligibility>` に必要です。"
 
-#: ../../source/serialization/coresystem.rst:91
+#: ../../source/serialization/coresystem.rst:51
 msgid ""
 "Announce a VrfKeyLinkTransaction to link an account with a VRF public key. "
 "The linked key is used to randomize block production and leader/participant "

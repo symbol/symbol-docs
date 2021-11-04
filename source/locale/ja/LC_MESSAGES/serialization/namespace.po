@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/namespace.rst:43
+#: ../../source/serialization/namespace.rst:3
 msgid "Namespace Schemas"
 msgstr "ネームスペーススキーマ"
 
-#: ../../source/serialization/namespace.rst:45
+#: ../../source/serialization/namespace.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,20 +38,20 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/namespace.rst:49
+#: ../../source/serialization/namespace.rst:9
 msgid "Address Alias"
 msgstr "アドレスエイリアス"
 
-#: ../../source/serialization/namespace.rst:56
+#: ../../source/serialization/namespace.rst:16
 msgid ""
 "Announce an AliasTransaction to attach a namespace to an account. A "
 "namespace can be assigned to any account present in the network."
 msgstr ""
 "ネームスペースをアカウントへ関連付けるためにはエイリアストランザクションをアナウンスします。ネームスペースはネットワーク上に存在するいかなるアカウントにも割り当てることができます。"
 
-#: ../../source/serialization/namespace.rst:64
-#: ../../source/serialization/namespace.rst:91
-#: ../../source/serialization/namespace.rst:142
+#: ../../source/serialization/namespace.rst:24
+#: ../../source/serialization/namespace.rst:51
+#: ../../source/serialization/namespace.rst:102
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -80,11 +80,11 @@ msgstr "エイリアスアドレス"
 msgid "Alias action."
 msgstr "エイリアスアクション"
 
-#: ../../source/serialization/namespace.rst:76
+#: ../../source/serialization/namespace.rst:36
 msgid "Mosaic Alias"
 msgstr "モザイクエイリアス"
 
-#: ../../source/serialization/namespace.rst:83
+#: ../../source/serialization/namespace.rst:43
 msgid ""
 "Announce an AliasTransaction to attach a namespace to a mosaic. Setting an "
 "alias to a mosaic is only possible if the account announcing the transaction"
@@ -96,11 +96,11 @@ msgstr ""
 msgid "Aliased mosaic identifier."
 msgstr "エイリアス済みモザイク識別子"
 
-#: ../../source/serialization/namespace.rst:103
+#: ../../source/serialization/namespace.rst:63
 msgid "Namespace Receipts"
 msgstr "ネームスペースレシート"
 
-#: ../../source/serialization/namespace.rst:110
+#: ../../source/serialization/namespace.rst:70
 msgid "A :doc:`namespace <namespace>` expired."
 msgstr "期限切れの :doc:`ネームスペース <namespace>`"
 
@@ -109,11 +109,11 @@ msgstr "期限切れの :doc:`ネームスペース <namespace>`"
 msgid "Namespace identifier."
 msgstr "ネームスペース識別子"
 
-#: ../../source/serialization/namespace.rst:127
+#: ../../source/serialization/namespace.rst:87
 msgid "Namespace Registration"
 msgstr "ネームスペース登録"
 
-#: ../../source/serialization/namespace.rst:134
+#: ../../source/serialization/namespace.rst:94
 msgid ""
 "Announce a NamespaceRegistrationTransaction to register and re-rent a "
 "namespace."
@@ -141,7 +141,7 @@ msgstr "バイト換算のネームスペース名"
 msgid "Namespace name."
 msgstr "ネームスペース名"
 
-#: ../../source/serialization/namespace.rst:157
+#: ../../source/serialization/namespace.rst:117
 msgid "Namespace Types"
 msgstr "ネームスペースタイプ"
 

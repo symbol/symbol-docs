@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-06-06 21:51+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,27 +21,27 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:49
+#: ../../source/guides/namespace/getting-namespace-information.rst:9
 msgid "Getting the namespace information"
 msgstr "ネームスペースの情報を取得する"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:51
+#: ../../source/guides/namespace/getting-namespace-information.rst:11
 msgid "Get the ownership and duration for a given namespace identifier."
 msgstr "ネームスペース識別子による所有権と期間の取得"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:55
+#: ../../source/guides/namespace/getting-namespace-information.rst:15
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:57
+#: ../../source/guides/namespace/getting-namespace-information.rst:17
 msgid ""
 "Complete :doc:`registering a namespace <registering-a-namespace>` guide."
 msgstr ":doc:`ネームスペースの取得 <registering-a-namespace>` ガイドを完了している"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:61
+#: ../../source/guides/namespace/getting-namespace-information.rst:21
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/namespace/getting-namespace-information.rst:82
+#: ../../source/guides/namespace/getting-namespace-information.rst:42
 msgid "Method #02: Using the CLI"
 msgstr "方法 #02: CLI を使用する"

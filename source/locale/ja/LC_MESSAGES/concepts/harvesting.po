@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,16 +21,16 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/harvesting.rst:43
+#: ../../source/concepts/harvesting.rst:3
 msgid "Harvesting"
 msgstr "ハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:45
+#: ../../source/concepts/harvesting.rst:5
 msgid ""
 "The process of creating new :doc:`blocks <block>` is called harvesting."
 msgstr "新しい :doc:`ブロック <block>` を生成するプロセスをハーベスティングと呼びます。"
 
-#: ../../source/concepts/harvesting.rst:47
+#: ../../source/concepts/harvesting.rst:7
 msgid ""
 "In this process, the :doc:`account <account>` that harvests a block is "
 "called the **harvester** and is rewarded with any :doc:`transaction fees "
@@ -39,18 +39,18 @@ msgstr ""
 "このプロセス中に **ハーベスタ** と呼ばれる、ブロックをハーベストする :doc:`アカウント <account>` は、生産した "
 ":doc:`トランザクション手数料 <fees>` と発生した :doc:`インフレーション <inflation>` トークンで報われます。"
 
-#: ../../source/concepts/harvesting.rst:49
+#: ../../source/concepts/harvesting.rst:9
 msgid ""
 "Each produced block stores in its :ref:`header <block-header>` the public "
 "key of the harvester account and the block's signature that it created."
 msgstr ""
 "生成された各ブロックは、ハーベスタアカウントの公開鍵とそれが作成したブロック署名を :ref:`ヘッダー <block-header>` に格納します。"
 
-#: ../../source/concepts/harvesting.rst:55
+#: ../../source/concepts/harvesting.rst:15
 msgid "Eligibility criteria"
 msgstr "適格基準"
 
-#: ../../source/concepts/harvesting.rst:57
+#: ../../source/concepts/harvesting.rst:17
 msgid ""
 "The :ref:`importance score <importance-calculation>` determines the "
 "probability that an account is chosen to harvest the next block among all "
@@ -59,7 +59,7 @@ msgstr ""
 ":ref:`インポータンススコア <importance-calculation>` "
 "はハーベストが有効になっているすべてのアカウントの中から、次のブロックを収集するためにアカウントを選択する確率を決定します。"
 
-#: ../../source/concepts/harvesting.rst:59
+#: ../../source/concepts/harvesting.rst:19
 msgid ""
 "|codename|'s public network defines that an account needs to hold at least "
 "**10,000** :ref:`harvesting mosaics <harvesting-mosaic>` to have an "
@@ -72,21 +72,20 @@ msgstr ""
 "harvesting>` または、別のノードに :ref:`デリゲートハーベスティング <delegated-harvesting>` "
 "を有効にすることで、適格なアカウントはそのインポータンススコアを使用して新しいブロック生成を行います。"
 
-#: ../../source/concepts/harvesting.rst:62
+#: ../../source/concepts/harvesting.rst:22
 msgid ""
 "Regardless of the method chosen, **any account willing to activate "
-"harvesting must first announce a valid** :ref:`VrfKey transaction <vrf-key-"
-"link-transaction>`. This key is required by |codename| to randomize "
-"harvester selection."
+"harvesting must first announce a valid** :ref:`vrfkeylinktransaction`. This "
+"key is required by |codename| to randomize harvester selection."
 msgstr ""
-"選択した方法に関係なく、 **ハーベスティングをアクティブ化したいアカウント** は、最初に有効な :ref:`VrfKey トランザクション "
-"<vrf-key-link-transaction>` を通知します。このキーは |codename| のランダムなハーベスタ選択に必要です。"
+"選択した方法に関係なく、 **ハーベスティングをアクティブ化したいアカウント** は、最初に有効な "
+":ref:`vrfkeylinktransaction` を通知します。このキーは |codename| のランダムなハーベスタ選択に必要です。"
 
-#: ../../source/concepts/harvesting.rst:68
+#: ../../source/concepts/harvesting.rst:28
 msgid "Harvesting mosaic"
 msgstr "ハーベスティングモザイク"
 
-#: ../../source/concepts/harvesting.rst:70
+#: ../../source/concepts/harvesting.rst:30
 msgid ""
 "The |codename| platform supports :ref:`defining any mosaic <config-network-"
 "properties>` for harvesting purposes to fit different business needs."
@@ -94,7 +93,7 @@ msgstr ""
 "|codename| プラットフォームは様々なビジネスニーズに合わせたハーベスティングを目的とした :ref:`モザイク定義 <config-"
 "network-properties>` をサポートします。"
 
-#: ../../source/concepts/harvesting.rst:72
+#: ../../source/concepts/harvesting.rst:32
 msgid ""
 "For example, consortium networks can distribute harvesting mosaics between "
 "the companies that are running the infrastructure, while other participants "
@@ -104,7 +103,7 @@ msgstr ""
 "例えばコンソーシアムネットワークではインフラを運営する企業間でハーベスティングモザイクを配布することができますが、他の参加者はサービスを利用するために "
 ":doc:`通貨モザイク <fees>` を支払う必要があります。"
 
-#: ../../source/concepts/harvesting.rst:74
+#: ../../source/concepts/harvesting.rst:34
 msgid ""
 "By contrast, public networks might use the same mosaic for paying "
 "transaction fees and running the network. |codename|'s public network uses "
@@ -115,11 +114,11 @@ msgstr ""
 "|codename| のパブリックネットワークでは |networkcurrency| "
 "をハーベストモザイクとして使用して、適格な参加者が新しいブロックをハーベストできるようにしています。"
 
-#: ../../source/concepts/harvesting.rst:81
+#: ../../source/concepts/harvesting.rst:41
 msgid "Rewards"
 msgstr "報酬"
 
-#: ../../source/concepts/harvesting.rst:83
+#: ../../source/concepts/harvesting.rst:43
 msgid ""
 "Network operators can define a **network fee sink account** that will "
 "receive a percentage of the harvesting rewards (block :doc:`fees <fees>` and"
@@ -131,7 +130,7 @@ msgstr ""
 "<inflation>`）の割合を受け取る **ネットワーク手数料シンクアカウント** を定義できます。パブリックメインネットワークにおいて、この料金は"
 " **5％** に設定されており、さまざまな :doc:`reward-programs` をサポートするために使用されます。"
 
-#: ../../source/concepts/harvesting.rst:85
+#: ../../source/concepts/harvesting.rst:45
 msgid ""
 "Additionally, each node can set a **beneficiary account** to share a "
 "percentage (up to 25%) of the harvesting rewards. The node operators can use"
@@ -140,7 +139,7 @@ msgstr ""
 "さらに、各ノードは **受益者アカウント** を設定して、ハーベスト報酬の割合 (最大25％) "
 "を共有できます。ノードオペレータはこの機能を使用して、ノードサポータのインセンティブ構造を作成できます。"
 
-#: ../../source/concepts/harvesting.rst:87
+#: ../../source/concepts/harvesting.rst:47
 msgid ""
 "The sharing ratios for the beneficiary and network sink accounts are "
 ":ref:`configurable per network <config-network-properties>`."
@@ -148,13 +147,13 @@ msgstr ""
 "受取人の共有比率とネットワークシンクアカウントは :ref:`ネットワークごとに設定可能 <config-network-properties>` "
 "です。"
 
-#: ../../source/concepts/harvesting.rst:93
+#: ../../source/concepts/harvesting.rst:53
 msgid ""
 "Rewards division when the network's sharing ratio for network sink is 20% "
 "and for beneficiary is 10%."
 msgstr "ネットワークシンクに対するネットワークの共有率が20％、受益者に対するネットワークの共有率が10％である場合の報酬区分。"
 
-#: ../../source/concepts/harvesting.rst:95
+#: ../../source/concepts/harvesting.rst:55
 msgid ""
 "The calculation of the beneficiary percentage will occur after the network "
 "sink calculation. When the node operator does not define a beneficiary or a "
@@ -162,11 +161,11 @@ msgid ""
 msgstr ""
 "受益者の割合の計算は、ネットワークシンク計算後に行われます。ノードオペレーターが受取人またはネットワーク手数料シンクを定義しない場合、すべての報酬はブロック署名者に送られます。"
 
-#: ../../source/concepts/harvesting.rst:101
+#: ../../source/concepts/harvesting.rst:61
 msgid "Harvesting types"
 msgstr "ハーベスティングタイプ"
 
-#: ../../source/concepts/harvesting.rst:103
+#: ../../source/concepts/harvesting.rst:63
 msgid ""
 "There are different kinds of harvesting available, depending on whether or "
 "not the harvester account owns the node and the amount of desired security: "
@@ -177,11 +176,11 @@ msgstr ""
 ":ref:`ローカル <local-harvesting>`, :ref:`リモート <remote-harvesting>` そして "
 ":ref:`デリゲート <delegated-harvesting>` です。"
 
-#: ../../source/concepts/harvesting.rst:109
+#: ../../source/concepts/harvesting.rst:69
 msgid "Local harvesting"
 msgstr "ローカルハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:111
+#: ../../source/concepts/harvesting.rst:71
 msgid ""
 "This is the **simplest to set up**, and the **most insecure method**. It "
 "requires changing a node's configuration, so it is only available to node "
@@ -193,7 +192,7 @@ msgstr ""
 "です。ノード設定を変更する必要があるため、ノード所有者のみが利用できます。これは :ref:`ノード構成 <node-properties-"
 "harvesting-configuration>` ファイルにハーベスティングプロパティを適切に入力することで有効になります。"
 
-#: ../../source/concepts/harvesting.rst:113
+#: ../../source/concepts/harvesting.rst:73
 msgid ""
 "As it can be seen, the harvester account's **private key** is stored in the "
 "``harvesterSigningPrivateKey`` property, since it is needed to sign off "
@@ -206,7 +205,7 @@ msgstr ""
 "**秘密鍵** が要求されます。このアカウントには資産が含まれており、ノードが侵害された場合、侵入者が設定ファイルにアクセスする可能性という "
 "**セキュリティ上の懸念** が存在します。資産が提供されたアカウントの **秘密鍵は常にオフラインで保存する必要があります** 。"
 
-#: ../../source/concepts/harvesting.rst:115
+#: ../../source/concepts/harvesting.rst:75
 msgid ""
 "Therefore, **this method is strongly discouraged**. :ref:`Remote <remote-"
 "harvesting>` or :ref:`delegated <delegated-harvesting>` harvesting are "
@@ -215,11 +214,11 @@ msgstr ""
 "そのため **この方法はあまり良くありません** 。 :ref:`リモート <remote-harvesting>` または :ref:`デリゲート "
 "<delegated-harvesting>` ハーベスティングを推奨します。"
 
-#: ../../source/concepts/harvesting.rst:121
+#: ../../source/concepts/harvesting.rst:81
 msgid "Remote harvesting"
 msgstr "リモートハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:123
+#: ../../source/concepts/harvesting.rst:83
 msgid ""
 "Node owners can use a **remote account** to **act as proxy** and sign off "
 "the newly created blocks, while harvesting fees are still collected by their"
@@ -233,27 +232,26 @@ msgstr ""
 "**リモートアカウントは資産を持たない** ので、その秘密鍵がノード上の設定ファイルに記述されていることは問題になりません。引き続き、メインアカウントの"
 " :ref:`重要度スコア <importance-calculation>` に基づきます。"
 
-#: ../../source/concepts/harvesting.rst:125
+#: ../../source/concepts/harvesting.rst:85
 msgid ""
 "In this setup the main account is still called the **Harvester**, for "
 "simplicity, whereas the remote account is called a **Proxy**."
 msgstr ""
 "この設定では、簡単にするために、引き続きメインアカウントは **ハーベスタ** と呼ばれますが、リモートアカウントは **プロキシ** と呼ばれます。"
 
-#: ../../source/concepts/harvesting.rst:127
+#: ../../source/concepts/harvesting.rst:87
 msgid ""
 "Remote harvesting is enabled just like :ref:`local harvesting <local-"
 "harvesting>` but using the remote account's private key in the "
 "``harvesterSigningPrivateKey`` property and announcing an "
-":ref:`AccountKeyLink transaction <account-key-link-transaction>` that links "
-"the remote and main accounts."
+":ref:`accountkeylinktransaction` that links the remote and main accounts."
 msgstr ""
 "リモートハーベスティングは :ref:`ローカルハーベスティング <local-harvesting>` と同様に有効になりますが、 "
 "``harvesterSigningPrivateKey`` "
 "プロパティに設定されたリモートアカウントの秘密鍵を使用し、リモートアカウントとメインアカウントをリンクする "
-":ref:`AccountKeyLinkトランザクション <account-key-link-transaction>` をアナウンスします。"
+":ref:`accountkeylinktransaction` をアナウンスします。"
 
-#: ../../source/concepts/harvesting.rst:129
+#: ../../source/concepts/harvesting.rst:89
 msgid ""
 "This is the **recommended method** for node owners. See the :doc:`Harvesting"
 " guides <../guides/harvesting/index>` for step-by-step instructions on how "
@@ -262,11 +260,11 @@ msgstr ""
 "これはノード所有者に **推奨される方法** です。リモートハーベスティングをアクティブ化する方法の詳細な手順については、 "
 ":doc:`ハーベスティングガイド <../guides/harvesting/index>` を参照してください。"
 
-#: ../../source/concepts/harvesting.rst:135
+#: ../../source/concepts/harvesting.rst:95
 msgid "Delegated harvesting"
 msgstr "デリゲートハーベスティング"
 
-#: ../../source/concepts/harvesting.rst:137
+#: ../../source/concepts/harvesting.rst:97
 msgid ""
 ":ref:`Eligible accounts <account_eligibility>` **not owning a node** can "
 "still benefit from harvesting by **requesting a node to harvest for them**. "
@@ -281,27 +279,27 @@ msgstr ""
 "(:ref:`報酬 <harvesting-rewards>` セクションで説明) されます。 **これはアカウントとノードの両方にとって有益** "
 "です。"
 
-#: ../../source/concepts/harvesting.rst:139
+#: ../../source/concepts/harvesting.rst:99
 msgid ""
 "It is then said that the account **delegates harvesting** to the node, but "
 "the account is still considered the harvester."
 msgstr "その後、アカウントはノードに **デリゲートハーベスティング** すると言われますが、依然としてアカウントはハーベスタと見なされます。"
 
-#: ../../source/concepts/harvesting.rst:141
+#: ../../source/concepts/harvesting.rst:101
 msgid ""
 "Delegated harvesting is enabled similarly to :ref:`remote harvesting "
 "<remote-harvesting>` but, since the account has no access to the node's "
 "configuration, it announces a :ref:`PersistentDelegationRequest transaction "
-"<persistent-delegation-request-transaction>` instead. Upon receiving the "
+"<persistentdelegationrequesttransaction>` instead. Upon receiving the "
 "request, **the node may or may not grant it**, depending on its "
 "configuration and the rest of requests received."
 msgstr ""
 "デリゲートハーベスティングは :ref:`リモートハーベスティング <remote-harvesting>` "
 "と同じように有効になりますが、アカウントはノード設定にアクセスできないため、代わりに :ref:`PersistentDelegationRequest"
-" トランザクション <persistent-delegation-request-transaction>` "
+" トランザクション <persistentdelegationrequesttransaction>` "
 "をアナウンスします。リクエストを受信すると、その設定と残りのリクエスト数に応じて **ノードはリクエストを許可する場合と許可しない場合があります** 。"
 
-#: ../../source/concepts/harvesting.rst:143
+#: ../../source/concepts/harvesting.rst:103
 msgid ""
 "As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account "
 "is used so the main account's private key is never put at risk."
@@ -309,7 +307,7 @@ msgstr ""
 ":ref:`リモートハーベスティング <remote-harvesting>` "
 "と同様に、プロキシリモートアカウントが使用されるため、メインアカウントの秘密鍵が危険に晒されることはありません。"
 
-#: ../../source/concepts/harvesting.rst:145
+#: ../../source/concepts/harvesting.rst:105
 msgid ""
 "See the :doc:`Harvesting guides <../guides/harvesting/index>` for step-by-"
 "step instructions on how to activate delegated harvesting and check if the "
@@ -319,17 +317,18 @@ msgstr ""
 ":doc:`ハーベスティングガイド<../guides/harvesting/index>` "
 "を参照し、デリゲートリクエストが許可されているかを確認します。"
 
-#: ../../source/concepts/harvesting.rst:149
+#: ../../source/concepts/harvesting.rst:1
+#: ../../source/concepts/harvesting.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/concepts/harvesting.rst:129
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
 #: ../../source/concepts/harvesting.rst:1
 msgid "Type"
 msgstr "タイプ"
-
-#: ../../source/concepts/harvesting.rst:1
-msgid "Description"
-msgstr "説明"
 
 #: ../../source/concepts/harvesting.rst:1
 msgid ""
@@ -355,16 +354,16 @@ msgstr ""
 #: ../../source/concepts/harvesting.rst:1
 msgid ""
 "Request a node to add an account as a harvester. This is actually a "
-":ref:`TransferTransaction <transfer-transaction>` with a special message "
+":ref:`TransferTransaction <transfertransaction>` with a special message "
 "type."
 msgstr ""
 "ハーベスタとしてアカウントを追加するためにノードへ要求します。これは特別なメッセージを持たせた :ref:`TransferTransaction "
-"<transfer-transaction>` です。"
+"<transfertransaction>` です。"
 
-#: ../../source/concepts/harvesting.rst:163
+#: ../../source/concepts/harvesting.rst:143
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/harvesting.rst:173
+#: ../../source/concepts/harvesting.rst:153
 msgid "Continue: :doc:`Inflation <inflation>`."
 msgstr "次項: :doc:`インフレーション <inflation>`"
