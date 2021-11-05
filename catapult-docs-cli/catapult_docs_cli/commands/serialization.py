@@ -349,6 +349,7 @@ class SerializationCommand(Command):
         print('.. raw:: html', file=index_file)
         print(file=index_file)
         print('   <style>.bs-sidenav ul ul ul > li {display: none;}</style>', file=index_file)
+        print('   <div id="serialization">', file=index_file)
         print(file=index_file)
 
         # Process all basic types
@@ -403,6 +404,9 @@ class SerializationCommand(Command):
                 print(file=index_file)
                 self.print_struct(e)
 
+        print('.. raw:: html', file=index_file)
+        print(file=index_file)
+        print('   </div>', file=index_file)
         index_file.close()
 
     def output_md(self):
