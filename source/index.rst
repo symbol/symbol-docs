@@ -1,4 +1,4 @@
-.. figure:: resources/images/symbol-logo.png
+.. figure:: resources/images/symbol-logo.svg
     :align: center
     :width: 200px
     :class: no-background

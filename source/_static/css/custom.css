@@ -18,6 +18,7 @@ body {
     min-height: 100%;
     position: relative;
     font-size: 16px;
+    font-weight: 300;
     font-family: "ProtipoRegular", sans-serif !important;
     color: #CCC;
     background: #0B0118
@@ -36,31 +37,31 @@ h1 {
 h2 {
     font-size: 30px;
     margin: 40px 0 20px 0;
-    color: #87269F;
+    color: #B32AF9;
 }
 h3 {
     font-size: 24px;
     margin: 20px 0;
-    color: #704892;
+    color: #B32AF9;
 }
 h4 {
-  color: #704892;
+  color: #B32AF9;
 }
 a, a:hover {
-    color: #00c8ff;
+    color: #27c5f3;
 }
 pre {
     margin: 5px 0 10px 0;
 }
 b {
-    color: #E8E;
+    color: #9773ff;
 }
 /* Colors */
 .gradient {
     background: rgb(82, 0, 198);
-    background: -moz-linear-gradient(135deg, rgba(82, 0, 198, 1) 0%, rgba(68, 0, 78, 1) 100%);
-    background: -webkit-linear-gradient(135deg, rgba(82, 0, 198, 1) 0%, rgba(68, 0, 78, 1) 100%);
-    background: linear-gradient(135deg, rgba(82, 0, 198, 1) 0%, rgba(68, 0, 78, 1) 100%);
+    background: -moz-linear-gradient(300deg, rgba(82, 0, 198, 1) 0%, rgba(68, 0, 78, 1) 100%);
+    background: -webkit-linear-gradient(300deg, rgba(82, 0, 198, 1) 0%, rgba(68, 0, 78, 1) 100%);
+    background: linear-gradient(300deg, rgba(82, 0, 198, 1) 0%, rgba(68, 0, 78, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5200c6", endColorstr="#44004e", GradientType=1);
     color: #FFF;
 }
@@ -115,11 +116,11 @@ input.form-control:focus {
     padding: 5px 1.5rem !important;
     background: #251B34;
     color: #CCC;
-    border-left: 6px solid #00c8ff;
+    border-left: 6px solid #27C5F3;
     border-radius: 0px 4px 4px 0px;
 }
 .alert .admonition-title {
-  color: #00c8ff;
+  color: #27C5F3;
 }
 /* Label */
 .label {
@@ -151,7 +152,7 @@ table a:not(.btn), .table a:not(.btn){
 .big-table3 div, .big-table6 div {
     padding-left: 10px;
     vertical-align: top;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #231C32;
 }
 /* Section titles inside big-table */
 .big-table-section {
@@ -160,7 +161,7 @@ table a:not(.btn), .table a:not(.btn){
 /* Small, empty cell, just to show the vertical guide line.
    The -h version is for header lines. */
 .indentation-cell, .indentation-cell-h {
-    border-right: 3px solid lightgray;
+    border-right: 3px solid #231C32;
     border-top: 0 !important;
 }
 
@@ -187,7 +188,7 @@ table a:not(.btn), .table a:not(.btn){
   /* There's an extra row (the description) but we have no extra indentation cells,
      therefore, make the existing ones one row taller. */
   .indentation-cell {
-    border-right: 3px solid lightgray;
+    border-right: 3px solid #231C32;
     border-top: 0 !important;
     grid-row: span 2;
   }
@@ -219,7 +220,7 @@ body > .container {
     padding-bottom: 50px;
 }
 .content a {
-    color: #695ED1;
+    color: #27c5f3;
 }
 .content ul {
     list-style: disc;
@@ -233,7 +234,7 @@ body > .container {
 }
 .content .headerlink {
     visibility: hidden !important;
-    color: #00c8ff;
+    color: #27c5f3;
 }
 .content .headerlink::before {
     content: "";
@@ -282,7 +283,6 @@ body > .container {
 }
 .navbar-default::after{
     content: "";
-    background: url(../images/mesh.jpg) center left;
     background-size: cover;
     position: absolute;
     opacity: 0.2;
@@ -422,7 +422,7 @@ body > .container {
     border: 0;
     max-height: 70vh;
     overflow: auto;
-    background-color: #251B34;
+    background-color: #231C32;
     box-shadow: 6px 6px 6px #000;
 }
 .sidebar-xs .dropdown-menu > li > a {
@@ -505,7 +505,7 @@ div.figure .caption {
 }
 /* Tabs */
 .docutils.literal {
-    background-color: #00000020;
+    background-color: #FFFFFF20;
     color: #2498C0;
     border-radius: 4px;
 }
@@ -556,7 +556,7 @@ div [role="tablist"] {
 }
 .highlight > pre {
     color: #2498C0;
-    background-color: #251B34;
+    background-color: #170A29;
     border-radius: 4px;
     padding: 12px;
     border: 0;
@@ -583,7 +583,7 @@ div [role="tablist"] {
     content: " " !important;
 }
 .example-selector > li {
-    color: #5200c6 !important;
+    color: #9773FF !important;
     background-color: transparent !important;
     float: none !important;
     display: inline-block !important;
@@ -595,8 +595,8 @@ div [role="tablist"] {
     border-radius: 10px 10px 0 0 !important;
 }
 .example-selector > li.selected {
-    background-color: #251B34 !important;
-    color: #D1C9F3 !important;
+    background-color: #170A29 !important;
+    color: #B32AF9 !important;
 }
 .example-code .code-block-caption {
     top: -28px;
@@ -716,14 +716,14 @@ ul.postlist-style-circle .first {
 .h1centered {
     margin-top: 0;
     margin-bottom: 40px;
-    color: #5200c6;
+    color: #B32AF9;
     text-align: center;
     font-family: "Industry", sans-serif !important;
     font-size: 40px;
     font-weight: 900;
 }
 div.sidebar {
-    background-color: #1E0F46;
+    background-color: #231C32;
     border: 0px;
     border-radius: 4px;
     width: 50%;
@@ -780,12 +780,15 @@ div.topic {
 div.topic .topic-title {
   color: #00c8ff;
 }
+.sidebar-title {
+  color: #B32AF9;
+}
 .git-info {
-    color: #777;
+    color: #CCCCCC80;
     font-size: small;
 }
 .git-info a {
-    color: #999;
+    color: #27C5F380;
     font-size: small;
     font-weight: bold;
 }
@@ -805,7 +808,7 @@ div.topic .topic-title {
 .side-info-icon {
     text-align: center;
     font-size: large;
-    color: #E8E;
+    color: #9773ff;
     line-height: normal;
     padding-right: 7px;
 }
@@ -850,17 +853,30 @@ a .xref {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #251B34;
   background: #00000080;
 }
 ::-webkit-scrollbar-thumb {
-  background: #4E2067;
+  background: #231C32;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8337ad;
+  background: #655191;
 }
-/* GitHub contributors list */
+/* Special case for serialization docs headers, which need
+ * a font with upper and lower case. */
+#serialization h3 {
+  font-family: 'ProtipoRegular' !important;
+}
+/* Dividers */
+hr {
+  border-top: 1px solid #9773FF;
+}
+.table thead tr th {
+  border-bottom: 1px solid #9773FF !important;
+}
+.table tbody tr td {
+  border-top: 1px solid #9773FF80;
+}/* GitHub contributors list */
 .ghcontributors {
   display: flex;
   flex-wrap: wrap;
