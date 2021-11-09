@@ -84,7 +84,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         raise errors.ExtensionError("Can't fetch git history for %s.rst." %
                                     fullpagename)
     except StopIteration:
-        app.warn("File not under source control yet.")
+        print("File not under source control yet.")
 
 
 # Only add the page context handler if we're generating html
@@ -102,7 +102,7 @@ def what_build_am_i(app):
         global g
         g = git.Repo('.')
     except Exception:
-        app.warn("gitstamp extension enabled, but no git repository found. No git datestamps will be generated.")
+        print("gitstamp extension enabled, but no git repository found. No git datestamps will be generated.")
     else:
         app.connect('html-page-context', page_context_handler)
 
@@ -118,8 +118,8 @@ def what_build_am_i(app):
         else:
             raise errors.ExtensionError("Missing GITHUB_TOKEN environment variable.")
     except Exception as e:
-        app.warn(e)
-        app.warn("gitstamp extension enabled, but GitHub link failed. No GH links will be generated.")
+        print(e)
+        print("gitstamp extension enabled, but GitHub link failed. No GH links will be generated.")
 
 # We can't immediately add a page context handler: we need to wait until we
 # know what the build output format is.
