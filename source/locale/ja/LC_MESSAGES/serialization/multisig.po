@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:53+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/multisig.rst:43
+#: ../../source/serialization/multisig.rst:3
 msgid "Multisig Schemas"
 msgstr "マルチシグスキーマ"
 
-#: ../../source/serialization/multisig.rst:45
+#: ../../source/serialization/multisig.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,31 +38,31 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/multisig.rst:49
+#: ../../source/serialization/multisig.rst:9
 msgid "Multisig Account Modification"
 msgstr "マルチシグアカウント変更"
 
-#: ../../source/serialization/multisig.rst:56
+#: ../../source/serialization/multisig.rst:16
 msgid "Announce a MultisigAccountModificationTransaction to:"
 msgstr "MultisigAccountModificationTransaction のアナウンス:"
 
-#: ../../source/serialization/multisig.rst:58
+#: ../../source/serialization/multisig.rst:18
 msgid "Transform an account to multisig account."
 msgstr "マルチシグアカウントへの変換"
 
-#: ../../source/serialization/multisig.rst:59
+#: ../../source/serialization/multisig.rst:19
 msgid "Change the configurable properties of a multisig account."
 msgstr "マルチシグアカウントの設定可能なプロパティを変更"
 
-#: ../../source/serialization/multisig.rst:60
+#: ../../source/serialization/multisig.rst:20
 msgid "Add or delete cosignatories from a multisig account."
 msgstr "マルチシグアカウントから連署者の追加または削除"
 
-#: ../../source/serialization/multisig.rst:66
+#: ../../source/serialization/multisig.rst:26
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/serialization/multisig.rst:68
+#: ../../source/serialization/multisig.rst:28
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2020-02-28 13:04+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:48
+#: ../../source/guides/network/connecting-to-mongodb.rst:8
 msgid "How to connect to MongoDB"
 msgstr "MongoDB への接続方法"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:50
+#: ../../source/guides/network/connecting-to-mongodb.rst:10
 msgid "Learn how to access your API node's MongoDB instance."
 msgstr "あなたの API ノードの MongoDB インスタンスへ接続する方法の学習"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:52
+#: ../../source/guides/network/connecting-to-mongodb.rst:12
 msgid "**This is an advanced feature**"
 msgstr "**これは上級機能です**"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:54
+#: ../../source/guides/network/connecting-to-mongodb.rst:14
 msgid ""
 "The :doc:`REST Gateway <../../api>` offers a broad range of endpoints so "
 "that you don't have to connect to an API node's internal database directly."
@@ -41,7 +41,7 @@ msgstr ""
 ":doc:`REST ゲートウェイ <../../api>` は幅広いエンドポイントを提供しているので、API "
 "ノードの内部データベースに直接接続する必要はありません。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:56
+#: ../../source/guides/network/connecting-to-mongodb.rst:16
 msgid ""
 "However, if you are developing new plugins for Symbol, or analyzing "
 "extensive blockchain data, you might need to connect directly to MongoDB "
@@ -50,17 +50,17 @@ msgstr ""
 "しかし、新規に Symbol のプラグインを開発している場合や広範なブロックチェーンデータを分析している場合は **デバッグ目的** で MongoDB"
 " に直接接続する必要があるかもしれません。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:58
+#: ../../source/guides/network/connecting-to-mongodb.rst:18
 msgid ""
 "By the end of this guide, you will be connected to your API node database "
 "instance and doing some basic queries."
 msgstr "このガイドのでは、API ノードデータベースインスタンスに接続し、いくつかの基本的なクエリを実行します。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:62
+#: ../../source/guides/network/connecting-to-mongodb.rst:22
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:64
+#: ../../source/guides/network/connecting-to-mongodb.rst:24
 msgid ""
 "Have an :doc:`API or Dual node running <running-a-symbol-node>` inside "
 "Docker **with an open port to the database** (See next section)."
@@ -68,11 +68,11 @@ msgstr ""
 "Docker 上で :doc:`API または Dual ノードが起動 <running-a-symbol-node>` していて "
 "**データベースのポートが開いている** (次のセクションを参照)"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:68
+#: ../../source/guides/network/connecting-to-mongodb.rst:28
 msgid "Open the database port"
 msgstr "データベースのポートを開く"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:70
+#: ../../source/guides/network/connecting-to-mongodb.rst:30
 msgid ""
 "In the :doc:`running-a-symbol-node` guide you have used ``symbol-bootstrap``"
 " to instantiate and run the necessary node services (catapult-client, API "
@@ -85,7 +85,7 @@ msgstr ""
 "をインスタンス化して実行しました。セキュリティ上の理由から、これらのサービスはすべて Docker "
 "コンテナー内で実行され、パブリックエンドポイントを除いて、外部からは分離されています。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:72
+#: ../../source/guides/network/connecting-to-mongodb.rst:32
 msgid ""
 "This means that the MongoDB database that API nodes use to cache the state "
 "of the blockchain is **inaccessible by default**. To forward its internal "
@@ -96,12 +96,12 @@ msgstr ""
 "ことを意味します。内部ポートをホストに転送するには ``symbol-bootstrap`` に次の行を含む :ref:`カスタムプリセットファイル "
 "<symbol-bootstrap-presets>` を指定します。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:79
+#: ../../source/guides/network/connecting-to-mongodb.rst:39
 msgid ""
 "And then use this file when configuring ``symbol-bootstrap``, for example:"
 msgstr "そして ``symbol-bootstrap`` で構成する際に、このファイルを使用します。例:"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:85
+#: ../../source/guides/network/connecting-to-mongodb.rst:45
 msgid ""
 "This will make the database's TCP port ``27017`` accessible from the host so"
 " be careful, and only use this feature **for development purposes**."
@@ -109,11 +109,11 @@ msgstr ""
 "これにより、データベースの TCP ポート ``27017`` がホストからアクセスできるようになるので注意してください。この機能は **開発目的** "
 "でのみ使用してください。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:89
+#: ../../source/guides/network/connecting-to-mongodb.rst:49
 msgid "Install Robo 3T"
 msgstr "Robo 3T のインストール"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:91
+#: ../../source/guides/network/connecting-to-mongodb.rst:51
 msgid ""
 "For this tutorial, we are going to use |Robo3T| (formerly RoboMongo), a "
 "cross-platform MongoDB management tool, to interact with the database."
@@ -121,15 +121,15 @@ msgstr ""
 "このチュートリアルでは |Robo3T| (前 RoboMongo) を使用します。データベースと対話する、クロスプラットフォームの  MongoDB "
 "管理ツールです。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:93
+#: ../../source/guides/network/connecting-to-mongodb.rst:53
 msgid "Download Robo 3T `here <https://robomongo.org/download>`_."
 msgstr "Robo 3T を `ここ <https://robomongo.org/download>`_ からダウンロードします。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:94
+#: ../../source/guides/network/connecting-to-mongodb.rst:54
 msgid "Open the installer and follow the installation instructions."
 msgstr "インストーラを開き、手順に従います。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:96
+#: ../../source/guides/network/connecting-to-mongodb.rst:56
 msgid ""
 "In case of doubt, follow the `official installation docs "
 "<https://studio3t.com/knowledge-base/articles/installation/>`_."
@@ -137,24 +137,24 @@ msgstr ""
 "問題がある場合は `公式のインストールガイド <https://studio3t.com/knowledge-"
 "base/articles/installation/>`_ に従います。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:100
+#: ../../source/guides/network/connecting-to-mongodb.rst:60
 msgid "Create a new connection"
 msgstr "新しいコネクションの作成"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:102
+#: ../../source/guides/network/connecting-to-mongodb.rst:62
 msgid ""
 "Launch Robo 3T and click on the **\"Create\"** link to add a new connection."
 msgstr "Robo 3T を起動したら、 **\"Create\"** リンクをクリックして新しい接続を追加します。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:107
+#: ../../source/guides/network/connecting-to-mongodb.rst:67
 msgid "Enter the following details under the **\"Connection\"** tab:"
 msgstr "**\"Connection\"** タブで次の詳細を入力します。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:112
+#: ../../source/guides/network/connecting-to-mongodb.rst:72
 msgid "**Type**: Direct Connection"
 msgstr "**Type**: 直接接続"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:117
+#: ../../source/guides/network/connecting-to-mongodb.rst:77
 msgid ""
 "If the node is running locally, click **\"Connect\"** and move to the next "
 "section :ref:`Querying MongoDB <querying-mongodb>`."
@@ -162,7 +162,7 @@ msgstr ""
 "ノードがローカルで動作している場合は、 **\"Connect\"** をクリックして、次のセクション :ref:`Querying MongoDB "
 "<querying-mongodb>` へ進んでください。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:119
+#: ../../source/guides/network/connecting-to-mongodb.rst:79
 msgid ""
 "Otherwise, if you are running the node in a **virtual private server** "
 "(VPS), create a tunnel first between your computer and the server."
@@ -170,16 +170,16 @@ msgstr ""
 "または、 **virtual private server** (VPS) "
 "上でノードが動作している場合は、あなたのコンピュータとサーバ間にトンネルを通してください。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:121
+#: ../../source/guides/network/connecting-to-mongodb.rst:81
 msgid "Go to the **SSH tab** and add the server's details:"
 msgstr "**SSH tab** へ移動しサーバの詳細を追加します:"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:127
+#: ../../source/guides/network/connecting-to-mongodb.rst:87
 msgid ""
 "Replace the **SSH Address**, **username**, and **authentication** method."
 msgstr "**SSH Address**, **username**, **authentication** を置き換えてください。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:129
+#: ../../source/guides/network/connecting-to-mongodb.rst:89
 msgid ""
 "After you click \"Connect\", you should see the MongoDB collections under "
 "the database named **\"catapult\"**."
@@ -187,21 +187,21 @@ msgstr ""
 "\"Connect\" をクリックすると **\"catapult\"** と名付けられたデータベース配下に MongoDB "
 "のコレクションが確認できます。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:135
+#: ../../source/guides/network/connecting-to-mongodb.rst:95
 msgid "Querying MongoDB"
 msgstr "MongoDB でのクエリ実行"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:137
+#: ../../source/guides/network/connecting-to-mongodb.rst:97
 msgid ""
 "Only use this method to read from the database. Do not alter any document "
 "directly on MongoDB."
 msgstr "このメソッドはデータベースから読み取るためにのみ使用します。MongoDB でドキュメントを直接変更しないでください。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:139
+#: ../../source/guides/network/connecting-to-mongodb.rst:99
 msgid "On the left sidebar, open the collection you want to query."
 msgstr "左側のサイドバーからクエリを実行するコレクションを開きます。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:145
+#: ../../source/guides/network/connecting-to-mongodb.rst:105
 msgid ""
 "2. In most cases, you may want to filter a set of entries by one of its "
 "attributes. To filter, for example, a given transaction type, write a query "
@@ -210,7 +210,7 @@ msgstr ""
 "2. ほとんどの場合、エントリのセットをある属性の 1 つでフィルタリングするでしょう。たとえば、特定のトランザクションタイプをフィルタリングするには "
 "Robo 3T シェルで次のクエリを作成します:"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:152
+#: ../../source/guides/network/connecting-to-mongodb.rst:112
 msgid ""
 "For other advanced queries, check the `Robo3T <https://studio3t.com"
 "/knowledge-base/articles/query-mongodb/>`_ docs."
@@ -218,6 +218,6 @@ msgstr ""
 "より応用的なクエリを実行するには `Robo3T <https://studio3t.com/knowledge-base/articles"
 "/query-mongodb/>`_ ドキュメントを参照してください。"
 
-#: ../../source/guides/network/connecting-to-mongodb.rst:154
+#: ../../source/guides/network/connecting-to-mongodb.rst:114
 msgid "Click on the **\"Play\"** button to execute the query."
 msgstr "クエリを実行するために **\"Play\"** ボタンをクリックします。"

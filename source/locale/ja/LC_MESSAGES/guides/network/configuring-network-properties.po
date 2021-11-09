@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-10-30 16:39+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/guides/network/configuring-network-properties.rst:48
-msgid "Configuring network properties"
-msgstr "ネットワークプロパティの設定"
+#: ../../source/guides/network/configuring-network-properties.rst:8
+msgid "Network properties"
+msgstr "ネットワークプロパティ"
 
-#: ../../source/guides/network/configuring-network-properties.rst:50
+#: ../../source/guides/network/configuring-network-properties.rst:10
 msgid ""
 "There is a large number of network-related settings that can be customized "
 "in |codename|."
 msgstr "|codename| には多数のカスタマイズ可能なネットワーク関連の設定があります。 "
 
-#: ../../source/guides/network/configuring-network-properties.rst:52
+#: ../../source/guides/network/configuring-network-properties.rst:12
 msgid ""
 "The easiest way to change them is by using |symbol-bootstrap|'s custom "
 "presets (read :doc:`Using Symbol Bootstrap<using-symbol-bootstrap>`): Put "
@@ -42,7 +42,7 @@ msgstr ""
 "Bootstrap の使用 <using-symbol-bootstrap>`): 設定を YAML ファイルに記述して、-c パラメータを使用して "
 "``symbol-bootstrap config`` に渡します。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:54
+#: ../../source/guides/network/configuring-network-properties.rst:14
 msgid ""
 "These settings can also be directly provided to |catapult-client| through "
 "``.properties`` files. The header of each of the tables below indicates "
@@ -51,7 +51,7 @@ msgstr ""
 "これらの設定は ``.properties`` ファイルを介して |catapult-client| "
 "に直接提供することもできます。以下の各テーブルのヘッダーは、そのテーブルのプロパティが含まれているファイルを示しています。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:56
+#: ../../source/guides/network/configuring-network-properties.rst:16
 msgid ""
 "For **node**-related properties, read the :doc:`Configuring node properties "
 "<configuring-node-properties>` guide."
@@ -59,10 +59,10 @@ msgstr ""
 "**ノード** 関連のプロパティについては、:doc:`ノードプロパティの設定 <configuring-node-properties>` "
 "ガイドを参照してください。"
 
-#: ../../source/guides/network/configuring-network-properties.rst:62
+#: ../../source/guides/network/configuring-network-properties.rst:22
 msgid "Network configuration"
 msgstr "ネットワーク設定"
 
-#: ../../source/guides/network/configuring-network-properties.rst:69
+#: ../../source/guides/network/configuring-network-properties.rst:29
 msgid "Inflation configuration"
 msgstr "インフレーション設定"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 08:35+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/transfer-transaction.rst:43
+#: ../../source/concepts/transfer-transaction.rst:3
 msgid "Transfer Transaction"
 msgstr "転送トランザクション"
 
-#: ../../source/concepts/transfer-transaction.rst:45
+#: ../../source/concepts/transfer-transaction.rst:5
 msgid ""
 "Transfer transactions are used to send :doc:`mosaics <mosaic>` and messages "
 "between two :doc:`accounts <account>`."
@@ -33,37 +33,37 @@ msgstr ""
 "転送トランザクションは :doc:`モザイク <mosaic>` とメッセージを2つの :doc:`アカウント <account>` "
 "間で送信するために使われます。 "
 
-#: ../../source/concepts/transfer-transaction.rst:51
+#: ../../source/concepts/transfer-transaction.rst:11
 msgid "Alice sends 10 |networkcurrency| to Bob"
 msgstr "Alice は 10 |networkcurrency| を Bob へ送る"
 
-#: ../../source/concepts/transfer-transaction.rst:55
+#: ../../source/concepts/transfer-transaction.rst:15
 msgid "Recipient"
 msgstr "受信者"
 
-#: ../../source/concepts/transfer-transaction.rst:57
+#: ../../source/concepts/transfer-transaction.rst:17
 msgid ""
 "The recipient is the address or :ref:`alias <alias>` of the account that "
 "receives the TransferTransaction."
 msgstr "受信者は転送トランザクションを受け取るアカウントのアドレスまたは :ref:`エイリアス <alias>` です。"
 
-#: ../../source/concepts/transfer-transaction.rst:59
+#: ../../source/concepts/transfer-transaction.rst:19
 msgid ""
 "It is possible to send mosaics to any valid address, even if the address has"
 " not previously participated in any transaction."
 msgstr "過去にトランザクションに関与したことがなくても、正当なアドレスであればモザイクを送信することができます。 "
 
-#: ../../source/concepts/transfer-transaction.rst:61
+#: ../../source/concepts/transfer-transaction.rst:21
 msgid ""
 "If nobody owns the private key of the recipient's account, the funds are "
 "most likely lost forever."
 msgstr "もし受信するアドレスの秘密鍵を誰も持っていない場合、その資産は永久に使うことができなくなります。"
 
-#: ../../source/concepts/transfer-transaction.rst:65
+#: ../../source/concepts/transfer-transaction.rst:25
 msgid "Mosaics"
 msgstr "モザイク"
 
-#: ../../source/concepts/transfer-transaction.rst:67
+#: ../../source/concepts/transfer-transaction.rst:27
 msgid ""
 "A :doc:`mosaic <mosaic>` could be a token, but it could also be more "
 "specialized assets such as reward points, shares of stock, signatures, "
@@ -72,16 +72,16 @@ msgstr ""
 ":doc:`モザイク <mosaic>` "
 "はトークンといえますが、報酬ポイント、株式、署名、状態フラグ、投票やその他の貨幣などのより特化した資産とみなすこともできます。"
 
-#: ../../source/concepts/transfer-transaction.rst:69
+#: ../../source/concepts/transfer-transaction.rst:29
 msgid ""
 "You can send a combination of different mosaics in the same transaction."
 msgstr "同じトランザクションで異なるモザイクの組み合わせを送信することができます。"
 
-#: ../../source/concepts/transfer-transaction.rst:73
+#: ../../source/concepts/transfer-transaction.rst:33
 msgid "Message"
 msgstr "メッセージ"
 
-#: ../../source/concepts/transfer-transaction.rst:75
+#: ../../source/concepts/transfer-transaction.rst:35
 msgid ""
 "In the :ref:`public network <config-network-properties>`, transfer "
 "transactions can hold a message up to ``1023`` characters in length, making "
@@ -90,21 +90,21 @@ msgstr ""
 ":ref:`パブリックネットワーク <config-network-properties>` では、転送トランザクションは ``1023`` "
 "文字までの長さのメッセージを持つことができ、ブロックチェーンにデータを永続的にタイムスタンプするのに適しています。"
 
-#: ../../source/concepts/transfer-transaction.rst:77
+#: ../../source/concepts/transfer-transaction.rst:37
 msgid ""
 "By default, the messages attached are visible to all network participants."
 msgstr "デフォルトでは、添付されたメッセージはネットワーク参加者の全員が見ることができます。"
 
-#: ../../source/concepts/transfer-transaction.rst:80
+#: ../../source/concepts/transfer-transaction.rst:40
 msgid "Encrypted message"
 msgstr "暗号化メッセージ"
 
-#: ../../source/concepts/transfer-transaction.rst:82
+#: ../../source/concepts/transfer-transaction.rst:42
 msgid ""
 "Encrypted messages are only accessible by the sender and the recipient."
 msgstr "暗号化メッセージは送信者と受信者だけが平文を読むことができます。"
 
-#: ../../source/concepts/transfer-transaction.rst:84
+#: ../../source/concepts/transfer-transaction.rst:44
 msgid ""
 "|codename| uses Bouncy Castle's AES block cipher implementation in `CBC mode"
 " <https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ to "
@@ -114,7 +114,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC>`_ の  "
 "Bouncy Castle's AES ブロック暗号化実装を使ってメッセージの暗号化と復号を行います。"
 
-#: ../../source/concepts/transfer-transaction.rst:86
+#: ../../source/concepts/transfer-transaction.rst:46
 msgid ""
 "You can find under the ``crypto`` module how to `encode "
 "<https://github.com/symbol/symbol-sdk-typescript-"
@@ -135,7 +135,7 @@ msgstr ""
 "javascript/0.23.2/classes/_model_account_account_.account.html#decryptmessage>`_"
 " を使用することを推奨します。"
 
-#: ../../source/concepts/transfer-transaction.rst:90
+#: ../../source/concepts/transfer-transaction.rst:50
 msgid "Related transactions"
 msgstr "関連トランザクション"
 
@@ -148,17 +148,13 @@ msgid "Description"
 msgstr "説明"
 
 #: ../../source/concepts/transfer-transaction.rst:1
-msgid ":ref:`TransferTransaction <transfer-transaction>`"
-msgstr ":ref:`転送トランザクション <transfer-transaction>`"
-
-#: ../../source/concepts/transfer-transaction.rst:1
 msgid "Send mosaics and messages between two accounts."
 msgstr "モザイクとメッセージを２つのアカウント間で送信します。"
 
-#: ../../source/concepts/transfer-transaction.rst:101
+#: ../../source/concepts/transfer-transaction.rst:61
 msgid "Guides"
 msgstr "ガイド"
 
-#: ../../source/concepts/transfer-transaction.rst:111
+#: ../../source/concepts/transfer-transaction.rst:71
 msgid "Continue: :doc:`Aggregate Transaction <aggregate-transaction>`."
 msgstr "次項: :doc:`アグリゲートトランザクション <aggregate-transaction>`"

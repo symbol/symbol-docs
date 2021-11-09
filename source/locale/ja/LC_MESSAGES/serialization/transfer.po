@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-22 06:48+0000\n"
 "PO-Revision-Date: 2020-06-19 17:54+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/serialization/transfer.rst:43
+#: ../../source/serialization/transfer.rst:3
 msgid "Transfer Schemas"
 msgstr "転送スキーマ"
 
-#: ../../source/serialization/transfer.rst:45
+#: ../../source/serialization/transfer.rst:5
 msgid ""
 "The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ "
 "repository defines how each transaction type should be serialized. In "
@@ -38,7 +38,7 @@ msgstr ""
 "<https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/transfer.rst:56
+#: ../../source/serialization/transfer.rst:16
 msgid ""
 "Announce a TransferTransaction to send :doc:`mosaics <mosaic>` or messages "
 "between two :doc:`accounts <../concepts/account>`."
@@ -46,11 +46,11 @@ msgstr ""
 ":doc:`モザイク <mosaic>` またはメッセージを2つの :doc:`アカウント <../concepts/account>` "
 "間で送信するためには、転送トランザクションをアナウンスします。"
 
-#: ../../source/serialization/transfer.rst:62
+#: ../../source/serialization/transfer.rst:22
 msgid "**Inlines**:"
 msgstr "**インライン**"
 
-#: ../../source/serialization/transfer.rst:64
+#: ../../source/serialization/transfer.rst:24
 msgid ""
 ":ref:`Transaction <transaction>` or :ref:`EmbeddedTransaction <embedded-"
 "transaction>`"
@@ -87,7 +87,7 @@ msgstr "送信する添付モザイク"
 msgid ":ref:`Message type <message-type>` and hexadecimal payload."
 msgstr ":ref:`メッセージタイプ <message-type>` と 16 進数のペイロード"
 
-#: ../../source/serialization/transfer.rst:83
+#: ../../source/serialization/transfer.rst:43
 msgid ""
 "This is actually a :ref:`TransferTransaction <transfer-transaction>` with a "
 ":ref:`Message type <message-type>` equal to ``0xFE``."

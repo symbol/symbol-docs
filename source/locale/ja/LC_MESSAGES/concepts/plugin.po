@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2020-04-07 17:42+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/plugin.rst:43
+#: ../../source/concepts/plugin.rst:3
 msgid "Extending Symbol"
 msgstr "Symbol の拡張"
 
-#: ../../source/concepts/plugin.rst:45
+#: ../../source/concepts/plugin.rst:5
 msgid ""
 "|codename| comes with improved extensibility through its plugin-based "
 "architecture."
 msgstr "|codename| はプラグインベースのアーキテクチャにより拡張性が向上しています。"
 
-#: ../../source/concepts/plugin.rst:47
+#: ../../source/concepts/plugin.rst:7
 msgid ""
 "A **plugin** is a self-contained group of functions that can be added to the"
 " |codename|'s protocol to extend its capabilities. The plugin approach "
@@ -42,7 +42,7 @@ msgstr ""
 "**プラグイン** は |codename| "
 "の機能を拡張するためにプロトコルに追加できる自己完結型の機能グループです。プラグインアプローチにより開発者はコアエンジンを変更したり、他の機能を中断したりせずに、トランザクションを介してチェーンの状態を変更するさまざまな方法を導入できます。"
 
-#: ../../source/concepts/plugin.rst:50
+#: ../../source/concepts/plugin.rst:10
 msgid ""
 "Every base :doc:`transaction type <transaction>` available in |codename| is "
 "defined as a separate plugin. This separation makes it possible to only load"
@@ -51,11 +51,11 @@ msgstr ""
 "|codename| では、各基本 :doc:`トランザクションタイプ <transaction>` "
 "がプラグインとして分離して定義されています。この分離によって、ネットワーク要件を満たすために機能の最小サブセットのみをロードすることが可能になります。"
 
-#: ../../source/concepts/plugin.rst:55
+#: ../../source/concepts/plugin.rst:15
 msgid "Architecture"
 msgstr "アーキテクチャ"
 
-#: ../../source/concepts/plugin.rst:57
+#: ../../source/concepts/plugin.rst:17
 msgid ""
 "The simplest form of a |codename| plugin is a file written in C++ that "
 "registers a ``PluginManager`` and exposes a single entry point. The file has"
@@ -66,7 +66,7 @@ msgstr ""
 "を登録し、単一のエントリポイントを公開します。 :doc:`catapult-client <../server>` "
 "がプラグインを動的にリンクできるように、ファイルは次の形式に一致する必要があります。"
 
-#: ../../source/concepts/plugin.rst:74
+#: ../../source/concepts/plugin.rst:34
 msgid ""
 "All the plugin related files are stored in the same folder under the "
 "``plugins`` directory to keep the code organized. The folder also includes "
@@ -77,7 +77,7 @@ msgstr ""
 "ディレクトリ以下の同じフォルダに保存して、コードを整頓しています。このフォルダにはプラグインのビルド方法をコンパイラに指示するファイル "
 "``CMakeLists.txt`` も含まれます。"
 
-#: ../../source/concepts/plugin.rst:85
+#: ../../source/concepts/plugin.rst:45
 msgid ""
 "The plugin may define the following submodules internally to keep the code "
 "organized:"
@@ -139,11 +139,11 @@ msgid ""
 msgstr ""
 "ステートレスおよびステートフルのバリデータは、ブロックおよびトランザクション処理によって生成された通知を処理します。登録されたバリデータは、一般的な通知またはプラグイン定義の通知を購読し、許可されていない値または状態の変更を拒否できます。"
 
-#: ../../source/concepts/plugin.rst:101
+#: ../../source/concepts/plugin.rst:61
 msgid "Security"
 msgstr "セキュリティ"
 
-#: ../../source/concepts/plugin.rst:103
+#: ../../source/concepts/plugin.rst:63
 msgid ""
 "The code defined in a plugin runs forever unless the network is stopped or "
 "all network nodes decide to use a new configuration that disables the "
@@ -153,7 +153,7 @@ msgstr ""
 "プラグインで定義したコードは、ネットワークが停止するか、すべてのネットワークノードがプラグインを無効にする新しい構成を使用することを決定しない限り、永久に実行されます。ノードのサブセットが構成変更を採用しない場合、チェーンは"
 " 2 つに分割されます。"
 
-#: ../../source/concepts/plugin.rst:106
+#: ../../source/concepts/plugin.rst:66
 msgid ""
 "Before writing custom logic, developers should try to solve the use case by "
 "using the set of :doc:`transactions provided  <transaction>` in |codename| "
@@ -166,7 +166,7 @@ msgstr ""
 "の基本プラグインは監査済みです。プラットフォームは一般公開前に大規模なテストネット期間を実行しており、そのコードは2018 "
 "年4月からオープンソースになっています。"
 
-#: ../../source/concepts/plugin.rst:109
+#: ../../source/concepts/plugin.rst:69
 msgid ""
 "If you decide to create a new plugin, it is recommended to test the code "
 "extensively, bring external auditors, and run a testnet period before "

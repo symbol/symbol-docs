@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:06+0000\n"
+"POT-Creation-Date: 2021-10-30 22:34+0000\n"
 "PO-Revision-Date: 2020-02-28 13:02+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/concepts/data-validation.rst:43
+#: ../../source/concepts/data-validation.rst:3
 msgid "Data Validation"
 msgstr "データバリデーション"
 
-#: ../../source/concepts/data-validation.rst:45
+#: ../../source/concepts/data-validation.rst:5
 msgid ""
 "|codename| uses tree structures to store large data associated with a block "
 "that cannot be retrieved directly from the :doc:`block header <block>`. This"
@@ -38,11 +38,11 @@ msgstr ""
 ":doc:`トランザクション <transaction>` や :doc:`レシートステートメント <receipt>`) "
 "を帳簿全体の履歴を必要とすることなく検証できるようになります。"
 
-#: ../../source/concepts/data-validation.rst:50
+#: ../../source/concepts/data-validation.rst:10
 msgid "Merkle tree"
 msgstr "マークル木"
 
-#: ../../source/concepts/data-validation.rst:56
+#: ../../source/concepts/data-validation.rst:16
 msgid ""
 "A Merkle tree is a structure of nodes labeled by hashes. Pictured above is "
 "the simplest form of a Merkle tree, the binary Merkle tree. In particular, "
@@ -51,23 +51,23 @@ msgstr ""
 "マークル木とはハッシュによってラベル付けされたノード構造です。前述の図はマークル木の単純な形状で、マークル二分木です。具体的には |codename| "
 "はブロックごとに２つのマークル木を生成します。"
 
-#: ../../source/concepts/data-validation.rst:60
+#: ../../source/concepts/data-validation.rst:20
 msgid ""
 "**Transactions Merkle Tree**: Stores all the transactions included in the "
 "block."
 msgstr "**トランザクションマークル木**: ブロックに含まれるすべてのトランザクションを保存します。"
 
-#: ../../source/concepts/data-validation.rst:61
+#: ../../source/concepts/data-validation.rst:21
 msgid ""
 "**Receipts Merkle Tree**: Stores all the receipt statements linked to a "
 "block."
 msgstr "**レシートマークル木**: ブロックにリンクしたすべてのレシートステートメントを保存します。"
 
-#: ../../source/concepts/data-validation.rst:64
+#: ../../source/concepts/data-validation.rst:24
 msgid "Leaf nodes"
 msgstr "葉ノード"
 
-#: ../../source/concepts/data-validation.rst:66
+#: ../../source/concepts/data-validation.rst:26
 msgid ""
 "A leaf node of the tree contains the **SHA3-256** hash of an element "
 "attached to the block. The leaves are ordered by index as they appear on the"
@@ -78,17 +78,17 @@ msgstr ""
 "ハッシュが含まれます。葉はブロックに現れるインデックス順に並べられます。マークルツリーは 2 "
 "つのハッシュを左から右にハッシュすることで構築され、特異ハッシュが作成されるまでプロセスを繰り返します。"
 
-#: ../../source/concepts/data-validation.rst:70
+#: ../../source/concepts/data-validation.rst:30
 msgid ""
 "If there is a layer with an odd number of hashes (and the number is "
 "different to 1), the last hash is doubled."
 msgstr "ハッシュの数が奇数である (そしてその数が 1 ではない) 場合、最後のハッシュは 2 倍になります。"
 
-#: ../../source/concepts/data-validation.rst:73
+#: ../../source/concepts/data-validation.rst:33
 msgid "Merkle root"
 msgstr "マークルルート"
 
-#: ../../source/concepts/data-validation.rst:75
+#: ../../source/concepts/data-validation.rst:35
 msgid ""
 "The hash at the bottom of the tree is called the Merkle root. The Merkle "
 "root hashes for receipts and transactions are included in block headers to "
@@ -96,67 +96,67 @@ msgid ""
 msgstr ""
 "ツリーの下部にあるハッシュはマークルルートと呼ばれます。レシートおよびトランザクションのマークルルートハッシュはブロックヘッダーに含まれ、リンクされているデータを要約しています。"
 
-#: ../../source/concepts/data-validation.rst:78
+#: ../../source/concepts/data-validation.rst:38
 msgid ""
 "The following example shows how to verify that a block is composed of all "
 "its transactions:"
 msgstr "次の例示では、ブロックがすべてのトランザクションで構成されていることを確認する方法を示しています。"
 
-#: ../../source/concepts/data-validation.rst:80
-#: ../../source/concepts/data-validation.rst:102
+#: ../../source/concepts/data-validation.rst:40
+#: ../../source/concepts/data-validation.rst:62
 msgid "Obtain HRoot; in |codename|, this is stored in the block header."
 msgstr "HRoot を取得します。 |codename| では、ブロックヘッダーに格納されます。"
 
-#: ../../source/concepts/data-validation.rst:81
+#: ../../source/concepts/data-validation.rst:41
 msgid ""
 "Calculate HRoot' creating a Merkle tree with all the transactions within the"
 " block in natural order."
 msgstr "HRoot' を計算して、ブロック内のすべてのトランザクションを自然な順序でマークルツリーを作成します。"
 
-#: ../../source/concepts/data-validation.rst:82
+#: ../../source/concepts/data-validation.rst:42
 msgid "Compare HRoot and HRoot'."
 msgstr "HRoot と HRoot' を比較する。"
 
-#: ../../source/concepts/data-validation.rst:90
+#: ../../source/concepts/data-validation.rst:50
 msgid "Merkle proof"
 msgstr "マークル証明"
 
-#: ../../source/concepts/data-validation.rst:92
+#: ../../source/concepts/data-validation.rst:52
 msgid ""
 "A Merkle proof (also known as **Merkle path**) is the minimum number of "
 "nodes required to calculate the Merkle root again."
 msgstr "マークルプルーフ ( **マークルパス** とも呼ばれる) は、マークルルートを再度計算するために必要な最小ノード数です。"
 
-#: ../../source/concepts/data-validation.rst:98
+#: ../../source/concepts/data-validation.rst:58
 msgid ""
 "The following steps are taken to validate if an element belongs to a given "
 "block:"
 msgstr "ある要素が特定のブロックに属しているかどうかを検証するには、次の手順を実行します。"
 
-#: ../../source/concepts/data-validation.rst:100
+#: ../../source/concepts/data-validation.rst:60
 msgid ""
 "Calculate H(B); the hash of the element you want to validate if exists "
 "within a block."
 msgstr "H(B) を計算します。ブロック内に存在するかどうかを検証する要素のハッシュ。"
 
-#: ../../source/concepts/data-validation.rst:104
+#: ../../source/concepts/data-validation.rst:64
 msgid "Request the merkleProof: H1, H7, H10."
 msgstr "マークルプルーフを要求: H1, H7, H10."
 
-#: ../../source/concepts/data-validation.rst:106
+#: ../../source/concepts/data-validation.rst:66
 msgid ""
 "Calculate HRoot'. Concatenate H(B) with the first unprocessed item from the "
 "merkleProof list as follows:"
 msgstr "HRoot' を計算します。 H(B) を次のように merkleProof リストの最初の未処理のアイテムと連結します:"
 
-#: ../../source/concepts/data-validation.rst:112
+#: ../../source/concepts/data-validation.rst:72
 msgid "Repeat 4. for every item in the MerkleProof list."
 msgstr "4 を繰り返す。マークル証明リストの各アイテムごとに。"
 
-#: ../../source/concepts/data-validation.rst:114
+#: ../../source/concepts/data-validation.rst:74
 msgid "Compare if the HRoot' equals to HRoot."
 msgstr "HRoot' が HRoot と等しいかどうかを比較します。"
 
-#: ../../source/concepts/data-validation.rst:121
+#: ../../source/concepts/data-validation.rst:81
 msgid "Continue: :doc:`Consensus Algorithm <consensus-algorithm>`."
 msgstr "次項: :doc:`コンセンサスアルゴリズム <consensus-algorithm>`"
