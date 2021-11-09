@@ -17,6 +17,7 @@ All content is accessible through the **navigation menu**, which is divided into
 - :doc:`Concepts <concepts/overview>`: Detailed explanation of |codename|'s most important ideas.
 - :doc:`References <references/index>`: Usage guides for |codename|'s tools and SDKs.
 - :doc:`Contribute <contribute/index>`: How to contribute to this project.
+- :doc:`Syndicate's handbook <handbook/index>`: Instructions for all pirates and people interested in the Syndicate.
 
 .. topic:: Featured pages
 
@@ -31,3 +32,4 @@ All content is accessible through the **navigation menu**, which is divided into
     concepts/overview
     references/index
     contribute/index
+    handbook/index
