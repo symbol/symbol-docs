@@ -1,7 +1,7 @@
 /* General */
 @font-face {
-    font-family: "ProtipoRegular";
-    src: url("../fonts/Protipo-Regular.otf");
+    font-family: "ProtipoLight";
+    src: url("../fonts/Protipo-Light.otf");
 }
 @font-face {
     font-family: "Industry";
@@ -19,7 +19,7 @@ body {
     position: relative;
     font-size: 16px;
     font-weight: 300;
-    font-family: "ProtipoRegular", sans-serif !important;
+    font-family: "ProtipoLight", sans-serif !important;
     color: #CCC;
     background: #0B0118
 
@@ -865,7 +865,7 @@ a .xref {
 /* Special case for serialization docs headers, which need
  * a font with upper and lower case. */
 #serialization h3 {
-  font-family: 'ProtipoRegular' !important;
+  font-family: 'ProtipoLight' !important;
 }
 /* Dividers */
 hr {
