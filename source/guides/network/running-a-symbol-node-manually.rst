@@ -365,7 +365,7 @@ When the next epoch starts, if it is inside the Start and End epochs of one of y
 
 .. note::
 
-   Every epoch, at least **70%** of all eligible voting nodes need to cast their votes or **finalization stalls**.
+   Every epoch, more than **67%** of all eligible voting nodes need to cast their votes or **finalization stalls**.
 
    Therefore, **if you are planning to take your node offline** for a long time it is important that you **unlink your voting keys** for that period so that finalization is not affected.
 
