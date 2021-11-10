@@ -782,3 +782,8 @@ summary::-webkit-details-marker {
 .align-default {
   text-align: left;
 }
+
+/* Underline for Glossary terms */
+a .xref {
+    text-decoration: underline 1px dotted;
+}
