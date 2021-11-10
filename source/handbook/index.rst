@@ -24,10 +24,3 @@ The Symbol Handbook
     git-branching
     cpp-coding-guidelines
     documenting
-
-**Education**
-
-.. toctree::
-    :maxdepth: 1
-
-    glossary
