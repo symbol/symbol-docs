@@ -55,6 +55,7 @@ extensions = [
     'm2r2', # To support direct rendering of MarkDown files
     'gitstamp',
     'serializationref',
+    'glossarytooltips',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
