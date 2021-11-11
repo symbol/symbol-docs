@@ -4,6 +4,7 @@ The Symbol Handbook
 
 .. figure:: ../resources/images/handbook/welcome.png
     :align: center
+    :class: no-background
 
     Welcome to the Symbol Syndicate's pirate handbook!
 
