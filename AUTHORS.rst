@@ -28,7 +28,7 @@ We want to recognize as well the work of the |contributors| who provide content,
 
 .. |nem-knowledge-base| raw:: html
 
-   <a href="http://docs.nem.io/en" target="_blank">NEM Knowledge base</a>
+   <a href="https://nemproject.github.io/nem-docs" target="_blank">NEM Knowledge base</a>
 
 .. |nem-developer-guide| raw:: html
 

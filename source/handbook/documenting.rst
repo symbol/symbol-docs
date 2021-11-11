@@ -126,7 +126,7 @@ NIS1 documentation
     :delim: ;
     :widths: 30 70
 
-    **Site** ; General: `docs.nem.io/en <https://docs.nem.io/en>`__
+    **Site** ; General: Used to be ``docs.nem.io``
     ;API: `nemproject.github.io <https://nemproject.github.io/>`__
     **Source repo** ; General: `github.com/saulgray/nemioDev <https://github.com/saulgray/nemioDev>`__
     ;API: `https://github.com/NemProject/NemProject.github.io <https://github.com/NemProject/NemProject.github.io>`__

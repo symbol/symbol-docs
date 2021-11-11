@@ -74,7 +74,7 @@ In summary, all commits must have this format:
 Type
 ----
 
-Valid types (based on `the Angular convention <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines>`__) are:
+Valid types (based on `the Angular convention <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md>`__) are:
 
 .. csv-table::
     :delim: ;
