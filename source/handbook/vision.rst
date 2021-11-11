@@ -102,22 +102,22 @@ In all things, we serve **Symbol**, first and foremost.
 
 .. rubric:: Footnotes
 
-.. [1] Griffin Ichiba Hotchkiss, Andrei Maiboroda, and Paul Wackerow, “ETHEREUM VIRTUAL MACHINE (EVM),”docs, ethereum-org-website/src/content/developers/docs/evm/index.md, accessed June 7, 2021,[https://ethereum.org/en/developers/docs/evm/](https://ethereum.org/en/developers/docs/evm/)
+.. [1] Griffin Ichiba Hotchkiss, Andrei Maiboroda, and Paul Wackerow, “ETHEREUM VIRTUAL MACHINE (EVM)”, accessed June 7, 2021, https://ethereum.org/en/developers/docs/evm/
 
-.. [2] Store Data, Permanently.,”Home page, arweave.org, 2020,[https://www.arweave.org/](https://www.arweave.org/)
+.. [2] "Store Data, Permanently", Arweave home page, 2020, https://www.arweave.org/
 
-.. [3] David Vorick et al., “Decentralized Internet for a Free Future,”Home page, Skynet, 2021,[https://siasky.net/](https://siasky.net/)
+.. [3] David Vorick et al., "Decentralized Internet for a Free Future", Home page, Skynet, 2021, https://siasky.net/
 
-.. [4] Balaji S. Srinivasan, “Yes, You May Need a Blockchain,”Blog post, Balaji S. Srinivasan, May 14, 2019,[https://balajis.com/yes-you-may-need-a-blockchain/](https://balajis.com/yes-you-may-need-a-blockchain/)
+.. [4] Balaji S. Srinivasan, "Yes, You May Need a Blockchain", Blog post, Balaji S. Srinivasan, May 14, 2019, https://balajis.com/yes-you-may-need-a-blockchain/
 
-.. [5] Clayton M. Christensen, Michael E. Raynor, and Rory McDonald, “What Is Disruptive Innovation?,”*Harvard Business Review*, December 2015,[https://hbr.org/2015/12/what-is-disruptive-innovation](https://hbr.org/2015/12/what-is-disruptive-innovation)
+.. [5] Clayton M. Christensen, Michael E. Raynor, and Rory McDonald, "What Is Disruptive Innovation?", *Harvard Business Review*, December 2015, https://hbr.org/2015/12/what-is-disruptive-innovation
 
-.. [6] Lingfei Wu, Wang Dashun, and James A. Evans, “Large Teams Develop and Small Teams Disrupt Science and Technology,”*Nature* 566 (2019): 378–2,[https://par.nsf.gov/servlets/purl/10109889](https://par.nsf.gov/servlets/purl/10109889)
+.. [6] Lingfei Wu, Wang Dashun, and James A. Evans, "Large Teams Develop and Small Teams Disrupt Science and Technology", *Nature* 566 (2019): 378–2, https://par.nsf.gov/servlets/purl/10109889
 
-.. [7] Aaron Shaw and Benjamin Mako Hill, “Laboratories of Oligarchy? How the Iron Law Extends to Peer Production,”*Arxiv*, 2014,[https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf](https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf)
+.. [7] Aaron Shaw and Benjamin Mako Hill, "Laboratories of Oligarchy? How the Iron Law Extends to Peer Production", *Arxiv*, 2014, https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf
 
-.. [8] Flashbots,”software repository, github.com/flashbots, 2021,[https://github.com/flashbots/pm](https://github.com/flashbots/pm)
+.. [8] Flashbots, software repository, github.com/flashbots, 2021, https://github.com/flashbots/pm
 
-.. [9] Phanish Puranam and Dorthe Døjbak Håkonsson, “Valve’s Way,”*Journal of Organization Design* 4, no. 2 (June 2015): 2–,[https://www.researchgate.net/publication/282395703_Valve%27s_Way](https://www.researchgate.net/publication/282395703_Valve%27s_Way)
+.. [9] Phanish Puranam and Dorthe Døjbak Håkonsson, "Valve’s Way", *Journal of Organization Design* 4, no. 2 (June 2015): 2–, https://www.researchgate.net/publication/282395703_Valve%27s_Way
 
-.. [10] Vitalik Buterin, Zoë Hitzig, and E. Glen Weyl, “Liberal Radicalism: A Flexible Design for Philanthropic Matching Funds,”*Available at SSRN 3243656*, 2018,[https://www.gwern.net/docs/economics/2018-buterin.pdf](https://www.gwern.net/docs/economics/2018-buterin.pdf)
+.. [10] Vitalik Buterin, Zoë Hitzig, and E. Glen Weyl, "Liberal Radicalism: A Flexible Design for Philanthropic Matching Funds", *Available at SSRN 3243656*, 2018, https://www.gwern.net/docs/economics/2018-buterin.pdf
