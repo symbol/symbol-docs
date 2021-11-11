@@ -2,10 +2,9 @@
 Contributing documentation
 ##########################
 
-There are currently 4 sources of documentation for Symbol. Feel free to jump to the one you are interested in.
+There are currently 3 sources of documentation for Symbol. Feel free to jump to the one you are interested in.
 
 - `Technical documentation <#technical-documentation>`__: Tool guides, developer tutorials, SDK reference guides and syndicate handbook.
-- `Symbol handbook <#symbol-handbook>`__: The syndicate's Handbook explaining its vision and organization.
 - `Working documentation <#working-documentation>`__: Meeting minutes, Community logs, stuff that changes often.
 - `NIS1 documentation <#nis1-documentation>`__: Old NIS1 guides, pending assimilation into the Symbol technical docs.
 
@@ -114,7 +113,7 @@ Examples are:
 
 To keep this area organized all documents should be **tagged**. Please add this line at the bottom of your document:
 
-.. code-block:: markdown
+.. code-block::
 
    ###### tags: `tag1` `tag2`
 

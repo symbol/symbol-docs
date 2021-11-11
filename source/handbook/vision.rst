@@ -12,6 +12,19 @@ Vision: Symbol²
 
     Version 1.0
 
+.. sidebar:: Available languages
+  
+    .. toctree::
+        :maxdepth: 1
+
+        Español <es/vision>
+        Bahasa Indonesia <id/vision>
+        Italiano <it/vision>
+        日本語 <ja/vision>
+        Português <pt/vision>
+        Русский <ru/vision>
+        中文 <zh/vision>
+
 Preface
 *******
 
