@@ -2,3 +2,16 @@ libraries.rst sdk.rst
 guides/accountlink/activating-delegated-harvesting.rst ../../guides/harvesting/activating-delegated-harvesting-manual.rst
 guides/network/running-a-test-net-node.rst ../../guides/network/running-a-symbol-node.rst
 contribute/community.rst ../contribute/index.rst
+handbook/en/index.rst ../../handbook
+handbook/en/vision.rst ../../handbook/vision.rst
+handbook/en/commit-discipline.rst ../../handbook/commit-discipline.rst
+handbook/en/cpp-coding-guidelines.rst ../../handbook/cpp-coding-guidelines.rst
+handbook/en/directory.rst ../../handbook/directory.rst
+handbook/en/git-branching.rst ../../handbook/git-branching.rst
+handbook/es/index.rst ../../handbook
+handbook/id/index.rst ../../handbook
+handbook/it/index.rst ../../handbook
+handbook/ja/index.rst ../../handbook
+handbook/pt/index.rst ../../handbook
+handbook/ru/index.rst ../../handbook
+handbook/zh/index.rst ../../handbook
