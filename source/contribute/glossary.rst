@@ -191,7 +191,7 @@ Glossary
       Incrementally Verifiable Computations.
 
     Kairos
-      From Ancient Greek: "The right, critical, or opportune moment". The codename for a collectible card game, built on top of Symbol. `Kairos <https://nem-software.atlassian.net/wiki/spaces/CD/overview?homepageId=633766243>`__.
+      From Ancient Greek: "The right, critical, or opportune moment". The codename for a collectible card game, built on top of Symbol.
 
     KYV
       Know Your Customer.
