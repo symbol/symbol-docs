@@ -887,7 +887,14 @@ hr {
 }
 .table tbody tr td {
   border-top: 1px solid #9773FF80;
-}/* GitHub contributors list */
+}
+
+/* Footnotes */
+dt:target, span.highlighted {
+    background-color: #9773ff;
+}
+
+/* GitHub contributors list */
 .ghcontributors {
   display: flex;
   flex-wrap: wrap;
