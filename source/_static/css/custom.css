@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     margin-top: 0;
     margin-bottom: 40px;
-    color: #B32AF9;
+    color: #9773ff;
 }
 h2 {
     font-size: 30px;
@@ -362,7 +362,7 @@ body > .container {
 }
 .bs-sidenav ul > li > a.current, .bs-sidenav ul > li > a:hover {
     text-decoration: none;
-    color: #B32AF9;
+    color: #9773ff;
 }
 .bs-sidenav ul ul > li > a {
     padding: 3px;
