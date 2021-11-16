@@ -65,7 +65,7 @@ class PropertiesTable(Table):
                 default_tn = ''
 
             if key[0] == '*':
-                result += '<tr style="background-color:#E0E0E0"><td colspan=4><b>' + key[1:] + '</b></td>'
+                result += '<tr><td colspan=4><b>' + key[1:] + '</b></td>'
             else:
                 result += '<tr><td><code class="docutils literal"><span class="pre">'
                 result += key + '</span></code></td>'

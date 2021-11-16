@@ -92,7 +92,7 @@ class Table(ABC):
         Returns:
             str: The header formatted as a string.
         """
-        result = '<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0">'
+        result = '<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even">'
         for (head, width) in zip(self.header, self.widths):
             result += '<th class="head" style="width:' + width + '%">' + head + '</th>'
         result += '</tr></thead><tbody valign="top">\n'
