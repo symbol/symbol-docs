@@ -91,19 +91,6 @@
         {% endblock %}
         <div class="col-md-{{ bs_content_width }} content">
             {% block body %}{% endblock %}
-            {% if edit_on_github_url %}
-            <p class="feedback">
-                <hr/>
-                {%- if gitauthor -%}<p class="git-info">
-                    {%- if gitavatar -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
-                    Last updated by
-                    {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}" target="_blank" rel="noopener noreferrer">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
-                    on {{ gitstamp }}.</p>
-                {%- endif %}
-                {% trans %}Did you find what you were looking for?{% endtrans %}
-                <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
-            </p>
-            {% endif %}
         </div>
         {% block sidebar2 %} {{bsidebar2() }} {% endblock %}
     </div>
@@ -111,5 +98,6 @@
 {% endblock %}
 
 {% block footer %}
+{% include "include/footer.html" %}
 {% include "include/algolia.html" %}
 {% endblock %}
