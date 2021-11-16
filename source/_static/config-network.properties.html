@@ -3,9 +3,9 @@ Network configuration settings.<br/>
 <small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v1.0.2.0
 </small>
 
-<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even" style="background-color:#C0C0C0"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>MAINNET</th></tr></thead><tbody valign="top">
+<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>MAINNET</th></tr></thead><tbody valign="top">
 
-<tr style="background-color:#E0E0E0"><td colspan=4><b>network</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>network</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">identifier</span></code></td><td><code class="docutils literal"><span class="pre">NetworkIdentifier</span></code></td><td>private-test</td><td>public</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Network identifier.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">nodeEqualityStrategy</span></code></td><td><code class="docutils literal"><span class="pre">NodeIdentityEqualityStrategy</span></code></td><td>host</td><td>host</td></tr>
@@ -16,7 +16,7 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis generation hash seed.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">epochAdjustment</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>1573430400s</td><td>1615853185s</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis epoch time adjustment.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>chain</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>chain</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">enableVerifiableState</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate state hashes so that state is fully verifiable at each block.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">enableVerifiableReceipts</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
@@ -71,12 +71,12 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the harvest network fee sink account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxTransactionsPerBlock</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>200'000</td><td>6'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of transactions per block.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>fork_heights</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>fork_heights</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">totalVotingBalanceCalculationFix</span></code></td><td><code class="docutils literal"><span class="pre">Height</span></code></td><td>528'000</td><td>528'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Height of fork to fix TotalVotingBalance calculation.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.accountlink</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.accountlink</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">dummy</span></code></td><td></td><td>to trigger plugin load</td><td>to trigger plugin load</td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.aggregate</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.aggregate</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxTransactionsPerAggregate</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>1'000</td><td>100</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of transactions per aggregate.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxCosignaturesPerAggregate</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>15</td><td>25</td></tr>
@@ -87,22 +87,22 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if bonded aggregates should be allowed. <code class="docutils literal"><span class="pre">false</span></code> if bonded aggregates should be rejected.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxBondedTransactionLifetime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>48h</td><td>48h</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum lifetime a bonded transaction can have before it expires.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.lockhash</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.lockhash</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">lockedFundsPerAggregate</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>10'000'000</td><td>10'000'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Amount that has to be locked per aggregate in partial cache.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxHashLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>2d</td><td>2d</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks for which a hash lock can exist.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.locksecret</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.locksecret</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxSecretLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>30d</td><td>365d</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks for which a secret lock can exist.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">minProofSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1</td><td>0</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum size of a proof in bytes.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxProofSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1000</td><td>1024</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size of a proof in bytes.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.metadata</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.metadata</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxValueSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1024</td><td>1024</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum metadata value size.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.mosaic</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.mosaic</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMosaicsPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>10'000</td><td>1'000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of mosaics that an account can own.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMosaicDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>3650d</td><td>3650d</td></tr>
@@ -113,14 +113,14 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the mosaic rental fee sink account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">mosaicRentalFee</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>500000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic rental fee.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.multisig</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.multisig</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMultisigDepth</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>3</td><td>3</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of multisig levels.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxCosignatoriesPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>10</td><td>25</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of cosignatories per account.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxCosignedAccountsPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>5</td><td>25</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of accounts a single account can cosign.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.namespace</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.namespace</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxNameSize</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>64</td><td>64</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum namespace name size.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxChildNamespaces</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>500</td><td>100</td></tr>
@@ -141,13 +141,13 @@ Network configuration settings.<br/>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Root namespace rental fee per block.</small></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">childNamespaceRentalFee</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>100</td><td>100000</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Child namespace rental fee.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.restrictionaccount</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.restrictionaccount</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxAccountRestrictionValues</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>512</td><td>100</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of account restriction values.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.restrictionmosaic</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.restrictionmosaic</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMosaicRestrictionValues</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>20</td><td>20</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of mosaic restriction values.</small></td></tr>
-<tr style="background-color:#E0E0E0"><td colspan=4><b>plugin:catapult.plugins.transfer</b></td><td></td><td></td><td></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.transfer</b></td><td></td><td></td><td></td></tr>
 <tr><td><code class="docutils literal"><span class="pre">maxMessageSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1024</td><td>1024</td></tr>
 <tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum transaction message size.</small></td></tr>
 </tbody></table>
