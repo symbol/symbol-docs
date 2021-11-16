@@ -21,13 +21,13 @@ body {
     font-weight: 300;
     font-family: "ProtipoLight", sans-serif !important;
     color: #CCC;
-    background: #0B0118
-
+    background: #0B0118;
+    display:flex;
+    flex-direction:column;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Industry", sans-serif !important;
     color: #CCC;
-    font-weight: 700;
 }
 h1 {
     margin-top: 0;
@@ -205,6 +205,8 @@ table a:not(.btn), .table a:not(.btn){
 /* Layout*/
 body > .container {
     padding-top: 20px;
+    width: 100%;
+    flex-grow: 1;
 }
 @media screen and (min-width: 768px) {
     body > .container {
@@ -250,8 +252,14 @@ body > .container {
 .content h6:hover .headerlink::before {
     visibility: visible;
 }
-.feedback {
-    margin-top: 40px;
+.feedback-footer {
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+    z-index: 10;
+}
+.feedback-center {
+    text-align: center;
 }
 /* Navbar */
 .navbar-default {
@@ -326,7 +334,6 @@ body > .container {
     padding: 0 5px;
 }
 #social li {
-    float: right;
     padding: 0 8px;
     font-size: 20px;
 }
@@ -376,7 +383,7 @@ body > .container {
 .bs-sidenav ul ul ul ul > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 35px;
+    padding-left: 10px;
     font-size: 90%;
 }
 /* Add a bullet point in front of level 3 nav items */

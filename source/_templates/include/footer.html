@@ -1,0 +1,34 @@
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    {% if edit_on_github_url %}
+        {%- if gitauthor -%}<p class="git-info" style="text-align: right;">
+            {%- if gitavatar -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
+            Last updated by
+            {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}" target="_blank" rel="noopener noreferrer">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
+            on {{ gitstamp }}.</p>
+        {%- endif %}
+    {% endif %}
+    </div>
+    <div class="col-xs-5 feedback-center">
+    {% trans %}Did you find what you were looking for?{% endtrans %}
+    <br/>
+    <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
+    </div>
+    <div class="col-xs-3">
+        {% include "include/social.html" %}
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    {% if edit_on_github_url %}
+        {%- if gitauthor -%}<p class="git-info">
+            {%- if gitavatar -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
+            Last updated by
+            {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}" target="_blank" rel="noopener noreferrer">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
+            on {{ gitstamp }}.</p>
+        {%- endif %}
+    {% endif %}
+    {% trans %}Did you find what you were looking for?{% endtrans %}
+    <br/>
+    <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
+    {% include "include/social.html" %}
+</div>
