@@ -47,6 +47,7 @@ function addBlockCaptionInsideCodeExample() {
 /* Links */
 function addTargetBlankAttributeToExternalLinks() {
     $('a.external').attr("target", "_blank");
+    $('a.external').attr("rel", "noopener nofererrer");
     $('#sidebar a.external').attr("target", "_self");
 
 }
