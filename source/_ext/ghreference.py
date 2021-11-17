@@ -4,7 +4,6 @@
 # This code is licensed under Apache 2.0 (see LICENSE.md for details)
 
 import os
-import requests
 from github import Github
 from docutils.parsers.rst import directives, Directive, nodes
 from distutils.version import LooseVersion
