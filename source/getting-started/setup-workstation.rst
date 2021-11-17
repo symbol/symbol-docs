@@ -209,8 +209,8 @@ Continue: :doc:`Writing your first application <first-application>`.
 
 .. |network-list| raw:: html
 
-   <a href="http://explorer.testnet.symboldev.network/nodes" target="_blank">this list</a>
+   <a href="https://symbol.fyi/nodes" target="_blank">this list</a>
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet.testnet.symboldev.network/" target="_blank">Navigate here</a>
+   <a href="https://testnet.symbol.tools/" target="_blank">Navigate here</a>

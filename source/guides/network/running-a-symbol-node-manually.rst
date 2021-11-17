@@ -74,7 +74,7 @@ The generation of the voting key, though, is a bit more complex than the previou
 
    The maximum voting key duration (End Epoch - Start Epoch) is **360 epochs** or about **6 months** (see ``maxVotingKeyLifetime``).
 
-   You can find out the current epoch by dividing the `current blockchain height <http://explorer.testnet.symboldev.network/>`__ by 1440 and discarding the decimals.
+   You can find out the current epoch by dividing the `current blockchain height <https://symbol.fyi>`__ by 1440 and discarding the decimals.
 
 2. **Create the voting key** (or keys):
 
@@ -539,7 +539,7 @@ Point a browser to the following URLs and check that the returned values are sim
 
   The ``height`` field should match the actual height of the blockchain, but, upon first starting the node, it might take a while to synchronize.
 
-Finally, go to the `Symbol Explorer page <http://explorer.symbolblockchain.io/nodes>`__ and check that your node appears in the list (It refreshes every 30 seconds).
+Finally, go to the `Symbol Explorer page <https://symbol.fyi/nodes>`__ and check that your node appears in the list (It refreshes every 30 seconds).
 
 **********
 Next steps

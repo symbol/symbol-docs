@@ -30,7 +30,7 @@ The main version to keep track of is the **Catapult client version**, since this
 
 - **Finding out your node versions**:
 
-  You can find the versions used by your node in the `Symbol Explorer nodes list <http://explorer.symbolblockchain.io/nodes>`__.
+  You can find the versions used by your node in the `Symbol Explorer nodes list <https://symbol.fyi/nodes>`__.
 
   Additionally, if your node is an :ref:`API node <api-node>`, you can also query it directly:
 

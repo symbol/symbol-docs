@@ -185,7 +185,7 @@ Once the node is running with ``symbol-bootstrap start`` and you have funded its
 
 This creates the required :ref:`vrfkeylinktransaction` transactions and announces them to the network. If it succeeds (it might take some seconds, as the transaction needs to be confirmed) your new node is ready to harvest.
 
-.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the **local node** (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of another node using ``--url`` (use the Symbol Explorer to find the list of current nodes in `testnet <http://explorer.testnet.symboldev.network/nodes>`__ or `mainnet <http://explorer.symbolblockchain.io/nodes>`__).
+.. note:: Without extra parameters, ``symbol-bootstrap link`` tries to send the registration transaction to the **local node** (running on the other terminal) which will forward it to the rest of the network. If your node is not running at this moment, or it is not an API node, you can use the ``--useKnownRestGateways`` parameter, or provide the URL of another node using ``--url`` (use the Symbol Explorer to find the list of current nodes in `testnet <https://testnet.symbol.fyi/nodes>`__ or `mainnet <https://symbol.fyi/nodes>`__).
 
 .. _bootstrap-enable-voting:
 
@@ -274,11 +274,11 @@ Now that your node is up and running, you can take a look at the following guide
 
 .. |blockchain-explorer| raw:: html
 
-   Blockchain Explorer (<a href="http://explorer.symbolblockchain.io/" target="_blank">MAINNET</a> and <a href="http://explorer.testnet.symboldev.network/" target="_blank">TESTNET</a>)
+   Blockchain Explorer (<a href="https://symbol.fyi" target="_blank">MAINNET</a> and <a href="https://testnet.symbol.fyi" target="_blank">TESTNET</a>)
 
 .. |faucet| raw:: html
 
-   <a href="http://faucet.testnet.symboldev.network/" target="_blank">faucet</a>
+   <a href="https://testnet.symbol.tools/" target="_blank">faucet</a>
 
 .. |ssd| raw:: html
 
