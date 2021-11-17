@@ -51,7 +51,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
             return
 
         commit = next(iter(commits))
-        context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y-%m-%d")
+        context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y&#8209;%m&#8209;%d")
 
         user = GHCachedUser(commit.author.name)
         if gh:
