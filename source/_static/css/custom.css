@@ -205,7 +205,7 @@ table a:not(.btn), .table a:not(.btn){
 /* Layout*/
 body > .container {
     padding-top: 20px;
-    width: 100%;
+    max-width: 100%;
     flex-grow: 1;
 }
 @media screen and (min-width: 768px) {
@@ -392,6 +392,8 @@ body > .container {
 }
 .bs-sidenav.affix-bottom, .bs-sidenav.affix {
     width: initial;
+    overflow: auto;
+    height: 100vh;
 }
 .bs-sidenav a:hover, .bs-sidenav a:focus {
     background-color: transparent;
@@ -746,6 +748,14 @@ div.sidebar {
     border-radius: 4px;
     width: 50%;
 }
+@media screen and (max-width:767px) {
+    /* On small screens side info boxes are actually regular boxes */
+    div.sidebar {
+        float: none;
+        width: 100%;
+        margin: 1em 0;
+    }
+}
 .content img {
   background-color: #FFF;
 }
@@ -871,14 +881,13 @@ a .xref {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #00000080;
+  background: #0B0118;
 }
 ::-webkit-scrollbar-thumb {
-  background: #231C32;
-  border-radius: 4px;
+  background: #444;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #655191;
+  background: #888;
 }
 /* Special case for serialization docs headers, which need
  * a font with upper and lower case. */

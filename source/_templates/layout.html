@@ -25,7 +25,7 @@
 
 {% macro bsidebar() %}
 {% if render_sidebar %}
-<div class="col-md-3">
+<div class="col-md-3 hidden-xs hidden-sm">
     <div id="sidebar" class="bs-sidenav" role="complementary">
         {% for sidebartemplate in sidebars %}
         {% include sidebartemplate %}
