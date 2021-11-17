@@ -218,5 +218,3 @@ To help choose the right amount, the `/network/fees/transaction <https://docs.sy
 .. caution:: ``minFeeMultiplier`` refers to **the node** being queried, whereas the rest of properties refer to **the whole network**.
 
 A good rule of thumb is to use the ``medianFeeMultiplier``. This typically provides timely confirmation of transactions without incurring in excessive fees being paid.
-
-`Here is an example query on the MAINNET <http://ngl-dual-104.symbolblockchain.io:3000/network/fees/transaction>`__.

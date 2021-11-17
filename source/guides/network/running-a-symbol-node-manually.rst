@@ -111,7 +111,7 @@ The generation of the voting key, though, is a bit more complex than the previou
 
    **Make sure you always have one voting key registered for the current epoch.**
 
-   You can check your currently registered voting keys using the ``/accounts`` endpoint of the :doc:`REST API <../../api>` (Get Account Information), in the ``supplementalPublicKeys`` section. `Here is an example <http://ngl-dual-601.symbolblockchain.io:3000/accounts/90009F2C2D396A6B788D6DBAB8F075CB20549A50BBA5259D382618FD86F1419A>`__.
+   You can check your currently registered voting keys using the ``/accounts`` endpoint of the :doc:`REST API <../../api>` (Get Account Information), in the ``supplementalPublicKeys`` section.
 
    If you need to renew your keys, create new ones as explained above and then register them as explained in the :ref:`Link the keys <manual-enable-voting>` section below.
 

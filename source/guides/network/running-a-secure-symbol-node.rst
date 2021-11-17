@@ -337,6 +337,8 @@ Setup
 
 - **Create an announcer profile** for ``symbol-cli``. This is only a temporary account used to announce the payloads; it does not require funds:
 
+  For the ``--url`` parameter use the ``restGatewayUrl`` of any of the nodes returned by the `Statistics Service <https://symbol.services/nodes?limit=10>`__ (Or the `Testnet Statistics Service <https://symbol.services/nodes?limit=10>`__).
+
   .. tabs::
 
      .. tab:: MAINNET
@@ -345,7 +347,7 @@ Setup
 
            symbol-cli profile create --profile announcer --default \
               --network MAIN_NET \
-              --url http://ngl-api-001.symbolblockchain.io:3000 
+              --url <NODE_URL> 
 
      .. tab:: TESTNET
 
@@ -353,7 +355,7 @@ Setup
 
            symbol-cli profile create --profile announcer --default \
               --network TEST_NET \
-              --url http://ngl-dual-101.testnet.symboldev.network:3000
+              --url <TESTNET_NODE_URL>
 
   When prompted, enter a password to secure your profile, and select the ``PrivateKey`` import type:
 

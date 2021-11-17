@@ -70,9 +70,7 @@ Running a node
 
 Although not absolutely necessary, it is **recommended** that Exchanges deploy **their own Symbol node** to communicate with the rest of the network. Since each node automatically connects to **several other nodes** on the network, this approach is more robust than accessing the network always through the same public node, which **might become unavailable**.
 
-If you are unable to run your own node, you can connect to the ones managed by **NEM Group** so you know they are backed by a company and offer technical support. These nodes are identified by the word ``ngl`` in their URL, for instance:
-
-- `ngl-dual-104.symbolblockchain.io <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__.
+If you are unable to run your own node, you can choose one from the list provided by the `Statistics Service <https://symbol.services/nodes>`__.
 
 See the :doc:`different guides about deploying Symbol nodes <../network/index>` and make sure you create an :ref:`API node <api-node>`.
 
@@ -144,7 +142,7 @@ Using Finalization
 
 Symbol implements :ref:`Finalization <finalization>`, a process that **guarantees** that blocks are **immutable** and therefore transactions are secure.
 
-To know if a block has been finalized, check the ``latestFinalizedBlock`` property in the `/chain/info <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getChainInfo>`__ endpoint. All blocks with a **height** lower than (or equal to) ``latestFinalizedBlock.height`` are **finalized** and are therefore **immutable**. `See here for a real-time MAINNET example <http://ngl-dual-104.symbolblockchain.io:3000/chain/info>`__.
+To know if a block has been finalized, check the ``latestFinalizedBlock`` property in the `/chain/info <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getChainInfo>`__ endpoint. All blocks with a **height** lower than (or equal to) ``latestFinalizedBlock.height`` are **finalized** and are therefore **immutable**.
 
 **On average**, blocks are finalized after 5 minutes, in the absence of network problems.
 

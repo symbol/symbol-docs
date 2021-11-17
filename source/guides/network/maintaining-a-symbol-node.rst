@@ -34,7 +34,7 @@ The main version to keep track of is the **Catapult client version**, since this
 
   Additionally, if your node is an :ref:`API node <api-node>`, you can also query it directly:
 
-  - **Client version**: ``/node/info`` endpoint, ``version`` property. `See an example <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__.
+  - **Client version**: ``/node/info`` endpoint, ``version`` property.
 
     .. note::
     
@@ -42,7 +42,7 @@ The main version to keep track of is the **Catapult client version**, since this
 
        For example, version **16777472** (decimal) is **01000100h** (hex), which corresponds to version **1.0.1.0**.
 
-  - **REST version**: ``/node/server`` endpoint, ``restVersion`` property. `See an example <http://ngl-dual-104.symbolblockchain.io:3000/node/server>`__.
+  - **REST version**: ``/node/server`` endpoint, ``restVersion`` property.
 
     ``restVersion`` is a version string like **"2.3.6"**, for example.
 

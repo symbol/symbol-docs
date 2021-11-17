@@ -20,7 +20,7 @@ The maximum amount of |networkcurrency| that will ever exist in the network:
 
 .. topic:: Endpoint
 
-   `/network/currency/supply/max <http://ngl-dual-201.symbolblockchain.io:3000/network/currency/supply/max>`__
+   ``/network/currency/supply/max``
 
 In |codename|'s MAINNET this value is always ``8999999999``.
 
@@ -34,7 +34,7 @@ Inflation, through block rewards, slowly increases this number until it reaches 
 
 .. topic:: Endpoint
 
-   `/network/currency/supply/total <http://ngl-dual-201.symbolblockchain.io:3000/network/currency/supply/total>`__
+   ``/network/currency/supply/total``
 
 For example: ``7881002838.303334``.
 
@@ -48,6 +48,6 @@ This is the total supply minus the funds locked for opt-in payouts, reward progr
 
 .. topic:: Endpoint
 
-   `/network/currency/supply/circulating <http://ngl-dual-201.symbolblockchain.io:3000/network/currency/supply/circulating>`__
+   ``/network/currency/supply/circulating``
 
 For example: ``5404143654.714409``.
