@@ -932,6 +932,47 @@ dt:target, span.highlighted {
     background-color: #9773ff;
 }
 
+/* Card menus */
+.content .card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 32px;
+  padding: 0;
+}
+.content .card-list li {
+  border: 2px solid #977BFF;
+  border-radius: 16px;
+  box-shadow: 0 0 8px #977BFF;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+}
+.content .card-list .section {
+  height: 100%;
+}
+.content .card-list img {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  border-bottom: 2px solid #977BFF;
+  background-color: #170A29;
+}
+.content .card-list a {
+  font-family: "Industry";
+  color: #CCC;
+}
+.content .card-list a:hover {
+  color: #977BFF;
+  text-decoration: none;
+}
+.content .card-list p {
+  text-align: center;
+  height: 100%;
+  padding-top: 10px;
+  background-color: black;
+}
 /* GitHub contributors list */
 .ghcontributors {
   display: flex;
