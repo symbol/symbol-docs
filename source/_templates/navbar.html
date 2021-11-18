@@ -1,4 +1,4 @@
-<div class="{{ theme_navbar_class }} navbar-default header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}"
+<div class="hidden-xs hidden-sm {{ theme_navbar_class }} navbar-default header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}"
      id="navbar">
     <div class="container navbar-main">
         <a href="{{ pathto('index') }}" class="navbar-brand">
@@ -11,5 +11,23 @@
         {% include "include/searchbox.html" %}
         {% endwith %}
         {% include "include/language.html" %}
+    </div>
+</div>
+<div class="hidden-md hidden-lg {{ theme_navbar_class }} navbar-default header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}">
+    <div class="container navbar-main">
+        <a href="{{ pathto('index') }}" class="navbar-brand">
+            <img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}" height="48">
+        </a>
+        {% with search_id="desktop" %}
+        {% include "include/searchbox.html" %}
+        {% endwith %}
+        {% include "include/language.html" %}
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ _('Navigation') }} <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc">{{ toctree() }}</ul>
+        </div>
     </div>
 </div>

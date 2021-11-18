@@ -269,7 +269,6 @@ body > .container {
     margin-bottom: 0;
     padding-bottom: 5px;
     position: relative;
-    height: 75px;
 }
 .navbar-default a, .navbar-default a:hover {
     color: #CCC;
@@ -290,7 +289,7 @@ body > .container {
 }
 .navbar-default .navbar-brand {
     margin: 10px 0;
-    padding: 5px;
+    padding: 0;
     width: 100%;
 }
 .navbar-brand > img {
@@ -354,8 +353,8 @@ body > .container {
     font-size: 20px;
 }
 @media screen and (min-width: 768px) {
-    .navbar-default .navbar-brand {
-        padding: 0;
+    .navbar-default {
+        height: 75px;
     }
 }
 .list-inline {
@@ -453,12 +452,14 @@ body > .container {
   left: -16px;
 }
 
+.sidebar-xs {
+    background: black;
+}
 .sidebar-xs .caption-text {
     padding-left: 10px;
 }
 .sidebar-xs .dropdown {
     list-style: none;
-    padding: 10px 0;
 }
 .sidebar-xs .dropdown-menu {
     width: 100%;
@@ -472,6 +473,7 @@ body > .container {
 .sidebar-xs .dropdown-menu > li > a {
     white-space: normal;
     color: #CCC;
+    font-family: "ProtipoLight";
 }
 .sidebar-xs .dropdown-menu .toctree-l1 > a {
     font-weight: bold;
