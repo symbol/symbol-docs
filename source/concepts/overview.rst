@@ -1,6 +1,6 @@
-########
-Concepts
-########
+##########
+Technology
+##########
 
 These are the important concepts behind blockchain technology and the |codename| platform in particular.
 

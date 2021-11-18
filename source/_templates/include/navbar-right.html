@@ -1,17 +1,20 @@
 <ul class="list-inline">
-    <li>
-        <a href="{% if language %}/{{language}}{% endif %}/getting-started" class="{% if 'getting-started' in pagename or 'index' == pagename %}active{% endif %}">{% trans %}Getting Started{% endtrans %}</a>
+    <li class="{% if 'getting-started' in pagename %}active{% endif %}">
+        <a href="{% if language %}/{{language}}{% endif %}/getting-started">{% trans %}Getting Started{% endtrans %}</a>
     </li>
-    <li>
-        <a href="{% if language %}/{{language}}{% endif %}/concepts/overview.html" class="{% if 'concepts' in pagename or 'serialization' in pagename %}active{% endif %}">{% trans %}Features{% endtrans %}</a>
+    <li class="{% if 'vision' in pagename %}active{% endif %}">
+        <a href="{% if language %}/{{language}}{% endif %}/handbook/vision.html">{% trans %}Vision{% endtrans %}</a>
     </li>
-    <li>
-        <a href="{% if language %}/{{language}}{% endif %}/guides/category.html" class="{% if 'guides' in pagename %}active{% endif %}">{% trans %}Guides{% endtrans %}</a>
+    <li class="{% if 'guides' in pagename %}active{% endif %}">
+        <a href="{% if language %}/{{language}}{% endif %}/guides/index.html">{% trans %}Guides{% endtrans %}</a>
     </li>
-    <li>
-        <a href="{% if language %}/{{language}}{% endif %}/references/overview.html" class="{% if 'reference' in pagename or ('/' not in pagename and pagename != 'index') %}active{% endif %}">{% trans %}Tools{% endtrans %}</a>
+    <li class="{% if 'concepts' in pagename %}active{% endif %}">
+        <a href="{% if language %}/{{language}}{% endif %}/concepts/overview.html">{% trans %}Technology{% endtrans %}</a>
     </li>
-    <li>
-        <a href="{% if language %}/{{language}}{% endif %}/contribute/community.html" class="{% if 'contribute' in pagename or'guidelines' in pagename %}active{% endif %}">{% trans %}Help{% endtrans %}</a>
+    <li class="{% if 'contribute' in pagename or'guidelines' in pagename %}active{% endif %}">
+        <a href="{% if language %}/{{language}}{% endif %}/contribute/index.html">{% trans %}Contribute{% endtrans %}</a>
+    </li>
+    <li class="{% if 'handbook' in pagename and 'vision' not in pagename %}active{% endif %}">
+        <a href="{% if language %}/{{language}}{% endif %}/handbook/index.html">{% trans %}Handbook{% endtrans %}</a>
     </li>
 </ul>

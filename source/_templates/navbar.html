@@ -1,45 +1,15 @@
-<div class="{{ theme_navbar_class }} navbar-default gradient {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}"
+<div class="{{ theme_navbar_class }} navbar-default header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}"
      id="navbar">
-    <div class="container navbar-top hidden-xs hidden-sm">
-        <div class="row">
-            <div class="col-lg-8 col-md-7">
-                {% include "include/language.html" %}
-            </div>
-            <div class="col-lg-4 col-md-5">
-                {% with search_id="desktop" %}
-                {% include "include/searchbox.html" %}
-                {% endwith %}
-            </div>
-        </div>
-    </div>
-    <hr/>
     <div class="container navbar-main">
-        <div class="row">
-            <div class="navbar-header col-lg-6 col-md-4 col-xs-6">
-                <a class="navbar-brand" href="{{ pathto('index') }}">
-                    {% block sidebarlogo %}
-                    {% if logo %}<span><img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}"></span>{% endif %}
-                    {% endblock %}
-                </a>
-            </div>
-            <div class="navbar-right col-lg-6 col-md-8 hidden-xs hidden-sm">
-                {% include "include/navbar-right.html" %}
-            </div>
-            <div class="navbar-right col-xs-6 hidden-lg hidden-md">
-                {% with search_id="mobile" %}
-                {% include "include/searchbox.html" %}
-                {% endwith %}
-
-            </div>
+        <a href="{{ pathto('index') }}" class="navbar-brand">
+            <img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}" height="48">
+        </a>
+        <div class="navbar-right">
+            {% include "include/navbar-right.html" %}
         </div>
-        <div class="row">
-            <div class="col-md-12 sidebar-xs visible-xs visible-sm">
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ _('Navigation') }} <b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu globaltoc">{{ toctree() }}</ul>
-                </div>
-            </div>
-        </div>
+        {% with search_id="desktop" %}
+        {% include "include/searchbox.html" %}
+        {% endwith %}
+        {% include "include/language.html" %}
     </div>
 </div>
