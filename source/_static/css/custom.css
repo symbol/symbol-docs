@@ -954,6 +954,7 @@ dt:target, span.highlighted {
   width: 200px;
   height: 150px;
   overflow: hidden;
+  background: black;
 }
 .content .card-list .section {
   height: 100%;
@@ -968,6 +969,7 @@ dt:target, span.highlighted {
 .content .card-list a {
   font-family: "Rajdhani";
   font-size: 2em;
+  font-weight: bold;
   color: #CCC;
 }
 .content .card-list a:hover {
@@ -978,7 +980,9 @@ dt:target, span.highlighted {
   text-align: center;
   height: 100%;
   background-color: black;
-}/* GitHub contributors list */
+}
+
+/* GitHub contributors list */
 .ghcontributors {
   display: flex;
   flex-wrap: wrap;
