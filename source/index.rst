@@ -6,12 +6,12 @@
 
 .. rst-class:: card-list
 
-    - .. card:: getting-started/what-is-symbol.html resources/images/handshake.png Getting Started
-    - .. card:: handbook/vision.html resources/images/symbolheart.png Vision
-    - .. card:: guides/index.html resources/images/wallet-delivery.png Guides
-    - .. card:: concepts/overview.html resources/images/wallet-chest.png Technology
-    - .. card:: contribute/index.html resources/images/XYMCity.png Contribute
-    - .. card:: handbook/index.html resources/images/handbook/welcome.png Syndicate's handbook
+    - .. card:: getting-started/what-is-symbol.html resources/images/handshake.png START
+    - .. card:: handbook/vision.html resources/images/symbolheart.png VISION
+    - .. card:: guides/index.html resources/images/wallet-delivery.png GUIDES
+    - .. card:: concepts/overview.html resources/images/wallet-chest.png TECHNOLOGY
+    - .. card:: contribute/index.html resources/images/XYMCity.png CONTRIBUTE
+    - .. card:: handbook/index.html resources/images/handbook/welcome.png HANDBOOK
 
 .. toctree::
     :hidden:
