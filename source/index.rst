@@ -2,7 +2,7 @@
 
 .. rst-class:: h1centered
 
-    Choose your adventure
+    CHOOSE YOUR ADVENTURE
 
 .. rst-class:: card-list
 
