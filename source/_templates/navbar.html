@@ -18,7 +18,7 @@
         <a href="{{ pathto('index') }}" class="navbar-brand">
             <img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}" height="48">
         </a>
-        {% with search_id="desktop" %}
+        {% with search_id="mobile" %}
         {% include "include/searchbox.html" %}
         {% endwith %}
         {% include "include/language.html" %}
