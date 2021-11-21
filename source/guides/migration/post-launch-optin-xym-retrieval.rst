@@ -30,7 +30,7 @@ Then, on **March 16th, 2021** the **Symbol blockchain was launched**.
 
 After the launch, **all accounts that held at least 2 XEM at the snapshot can still reclaim an equal amount of XYM**, to be transferred to a |codename| account.
 
-This process is called the **opt-in**, and will be **open for 6 years after the launch**.
+This process is called the **opt-in**, and will be **open for some amount of time after the launch**. The exact length of this window is yet to be defined.
 
 This guide explains how to participate in the opt-in.
 
