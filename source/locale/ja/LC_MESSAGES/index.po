@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-22 12:01+0000\n"
 "PO-Revision-Date: 2019-11-25 18:19+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -66,11 +66,17 @@ msgid ""
 ":doc:`Contribute <contribute/index>`: How to contribute to this project."
 msgstr ":doc:`貢献 <contribute/index>`: プロジェクトへ貢献する方法"
 
-#: ../../source/index.rst:23
+#: ../../source/index.rst:20
+msgid ""
+":doc:`Syndicate's handbook <handbook/index>`: Instructions for all pirates "
+"and people interested in the Syndicate."
+msgstr ":doc:`シンジケートハンドブック <handbook/index>`: シンジケートに関心がある、すべての海賊と人々への指示"
+
+#: ../../source/index.rst:24
 msgid ":doc:`Install the Symbol Desktop Wallet <wallets>`"
 msgstr ":doc:`Symbol デスクトップウォレットをインストール <wallets>`"
 
-#: ../../source/index.rst:24
+#: ../../source/index.rst:25
 msgid ""
 ":doc:`Retrieving your XYM after Opt-In <guides/migration/post-optin-xym-"
 "retrieval>`"

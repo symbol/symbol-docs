@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-22 12:01+0000\n"
 "PO-Revision-Date: 2021-04-08 13:35+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -314,6 +314,15 @@ msgstr ""
 "オフラインの構成マシンで **一連のリンクトランザクションを手動で準備** します。これらのトランザクションは ``symbol-cli`` "
 "によって作成され、メインアカウントで署名し、後にアナウンスするためにオンラインマシンへ移動します。"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:199
+msgid ""
+"The following commands all use ``--max-fee 1000000`` which means that **1 "
+"XYM** will be paid for each transaction. Feel free to use a different number"
+" after reading the :doc:`fees documentation <../../concepts/fees>`."
+msgstr ""
+"次のコマンドでは全て、各トランザクションに **1 XYM** を支払うことを意味する ``--max-fee 1000000`` を使用します。 "
+":doc:`f手数料ドキュメント <../../concepts/fees>` を理解しているなら、自由に異なる数字を使用してみてください。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:203
 msgid ""
 "All transactions have a deadline, meaning that they must be announced (and "
@@ -327,23 +336,35 @@ msgid ""
 msgstr "`追跡中 <https://github.com/symbol/symbol-cli/issues/373>`__ の既知の制限"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:210
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:373
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:375
 msgid "Remote key link"
 msgstr "リモートキーリンク"
 
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:212
+msgid "Obtain the :ref:`accountkeylinktransaction` payload."
+msgstr ":ref:`accountkeylinktransaction` ペイロードを取得します。"
+
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:269
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:451
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:453
 msgid "VRF key link"
 msgstr "VRF キーリンク"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:271
+msgid "Obtain the :ref:`vrfkeylinktransaction` payload."
+msgstr ":ref:`vrfkeylinktransaction` ペイロードを取得します。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:273
 msgid "This key is required for harvesting."
 msgstr "この鍵はハーベスティングに必要です。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:293
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:463
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:465
 msgid "Voting key link"
 msgstr "投票キーリンク"
+
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:295
+msgid "Obtain the :ref:`votingkeylinktransaction` payload."
+msgstr ":ref:`votingkeylinktransaction` ペイロードを取得します。"
 
 #: ../../source/guides/network/running-a-secure-symbol-node.rst:297
 msgid "This key is only required for voting nodes."
@@ -370,76 +391,76 @@ msgid ""
 msgstr ""
 ":doc:`using-symbol-bootstrap` ガイドで示されるように **Symbol Bootstrap をインストール** します。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:358
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:360
 msgid ""
 "When prompted, enter a password to secure your profile, and select the "
 "``PrivateKey`` import type:"
 msgstr "プロンプトが表示されたら、プロファイルを保護するためのパスワードを入力して ``PrivateKey`` インポートタイプを選択します。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:368
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:370
 msgid "Announce links"
 msgstr "リンクをアナウンス"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:375
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:377
 msgid "Announce the Remote key link:"
 msgstr "リモートキーリンクのアナウンス:"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:382
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:384
 msgid "Paste the first long text line from ``payloads.txt`` and press Enter:"
 msgstr "``payloads.txt`` から最初の長いテキスト行を貼り付けて、 Enter キーを押下します:"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:443
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:445
 msgid "The most common problems are:"
 msgstr "よく発生する問題:"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:453
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:455
 msgid "Announce the VRF key link:"
 msgstr "VRF キーリンクのアナウンス:"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:460
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:462
 msgid ""
 "Paste the second long text line from ``payloads.txt`` and wait for the "
 "transaction to be accepted."
 msgstr "``payloads.txt`` から 2 つ目の長いテキスト行を貼り付けて、トランザクションが承認されるのを待ちます。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:465
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:467
 msgid "Announce the Voting key link (if yours is a voting node):"
 msgstr "投票キーリンクをアナウンスします (投票ノードの場合):"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:472
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:474
 msgid ""
 "Paste the third long text line from ``payloads.txt`` and wait for the "
 "transaction to be accepted."
 msgstr "``payloads.txt`` から 3 つ目の長いテキスト行を貼り付けて、トランザクションが承認されるのを待ちます。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:475
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:477
 msgid "Start the node"
 msgstr "ノードの開始"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:477
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:479
 msgid ""
 "If all key link transactions were confirmed the node is now configured and "
 "you can finally launch it."
 msgstr "すべてのキーリンクトランザクションが承認されたら、ノードが設定され、最終的には起動することができます。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:479
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:481
 msgid ""
 "**Go to the directory** containing the ``target`` directory copied from the "
 "Configuration machine and **start the node**:"
-msgstr "**ディレクトリに移動** 構成マシンからコピーした ``target`` ディレクトリを含めて、 **ノードを開始* します:"
+msgstr "**ディレクトリに移動** 構成マシンからコピーした ``target`` ディレクトリを含めて、 **ノードを開始** します:"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:485
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:487
 msgid ""
 "No other parameters are required, the configuration is already present in "
 "the ``target`` directory and Symbol Bootstrap will use it."
 msgstr "他のパラメータは必要なく、すでに設定は ``target`` ディレクトリにあり、 Symbol Bootstrap がそれを使用します。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:487
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:489
 msgid ""
 "The node should start and a lot of debug output should appear on the screen."
 msgstr "ノードが起動すると多くのデバッグ出力が画面に表示されます。"
 
-#: ../../source/guides/network/running-a-secure-symbol-node.rst:495
+#: ../../source/guides/network/running-a-secure-symbol-node.rst:497
 msgid ""
 "Your node should now be **up and running** and its main private key has "
 "never left the configuration (offline) machine."
