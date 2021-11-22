@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-22 12:01+0000\n"
 "PO-Revision-Date: 2021-07-01 13:31+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -102,10 +102,10 @@ msgstr "**ノードのバージョンを確認する**:"
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:33
 msgid ""
 "You can find the versions used by your node in the `Symbol Explorer nodes "
-"list <http://explorer.symbolblockchain.io/nodes>`__."
+"list <https://symbol.fyi/nodes>`__."
 msgstr ""
-"ノードが使用しているバージョンは `Symbol エクスプローラーノードリスト "
-"<http://explorer.symbolblockchain.io/nodes>`__ から確認できます。"
+"ノードが使用しているバージョンは `Symbol エクスプローラーノードリスト <https://symbol.fyi/nodes>`__ "
+"から確認できます。"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:35
 msgid ""
@@ -114,12 +114,8 @@ msgid ""
 msgstr "もしくは、 :ref:`API ノード <api-node>` である場合、直接問い合わせることができます:"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:37
-msgid ""
-"**Client version**: ``/node/info`` endpoint, ``version`` property. `See an "
-"example <http://ngl-dual-104.symbolblockchain.io:3000/node/info>`__."
-msgstr ""
-"**クライアントバージョン**: ``/node/info`` エンドポイント ``version`` プロパティ。 `例を参照 <http"
-"://ngl-dual-104.symbolblockchain.io:3000/node/info>`__"
+msgid "**Client version**: ``/node/info`` endpoint, ``version`` property."
+msgstr "**クライアントバージョン**: ``/node/info`` エンドポイント ``version`` プロパティ"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:41
 msgid ""
@@ -139,12 +135,8 @@ msgstr ""
 "に対応します。"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:45
-msgid ""
-"**REST version**: ``/node/server`` endpoint, ``restVersion`` property. `See "
-"an example <http://ngl-dual-104.symbolblockchain.io:3000/node/server>`__."
-msgstr ""
-"**REST バージョン**: ``/node/server`` エンドポイント ``restVersion`` プロパティ。 `例を参照 <http"
-"://ngl-dual-104.symbolblockchain.io:3000/node/server>`__"
+msgid "**REST version**: ``/node/server`` endpoint, ``restVersion`` property."
+msgstr "**REST バージョン**: ``/node/server`` エンドポイント ``restVersion`` プロパティ"
 
 #: ../../source/guides/network/maintaining-a-symbol-node.rst:47
 msgid "``restVersion`` is a version string like **\"2.3.6\"**, for example."
