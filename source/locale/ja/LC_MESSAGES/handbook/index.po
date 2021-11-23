@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 13:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/handbook/index.rst:3
+msgid "The Symbol Handbook"
+msgstr ""
+
+#: ../../source/handbook/index.rst:8
+msgid "Welcome to the Symbol Syndicate's pirate handbook!"
+msgstr ""
+
+#: ../../source/handbook/index.rst:10
+msgid "**Philosophy**"
+msgstr ""
+
+#: ../../source/handbook/index.rst:17
+msgid "**Organization**"
+msgstr ""
+

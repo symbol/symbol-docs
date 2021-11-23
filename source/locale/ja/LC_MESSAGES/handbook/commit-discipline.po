@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 13:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/handbook/commit-discipline.rst:3
+msgid "Commit discipline"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:6
+msgid "Summary"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:8
+msgid ""
+"OK, so you’ve finished your work and you are naturally eager to git push "
+"it and start working on something else, new and exciting. I know the "
+"feeling, we have all been there."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:10
+msgid ""
+"Well, I have news for you: The **truly excellent developer** grits their "
+"teeth and walks the extra mile, spending the time to write a **good "
+"commit message** for all of posterity to see."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:12
+msgid ""
+"Just like a tree is harder **to implement** than a list, but provides "
+"orders of magnitude better **runtime performance**, writing good commit "
+"messages takes **you** more time, but saves time for **everybody else** "
+"reading your code in the future (including your future self)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:14
+msgid ""
+"There is a **net gain** for everybody here. Just consider what happens "
+"when **you** need to review **somebody else**'s code and it has been "
+"tagged with proper git messages. Cool, isn’t it? A game-changer even?"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:16
+msgid ""
+"We strive to be **truly excellent developers** here, so grit your teeth "
+"and spend the time to write a **good commit message** after every "
+"completed job. This guide explains you how to do it."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:20
+msgid ""
+"Proper commit messages are **extremely important** as they simplify "
+"**maintainability**:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:22
+msgid ""
+"They ease code **understanding** and **debugging** by providing the "
+"**reasons** behind each source code line."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:24
+msgid "They allow **automated** CHANGELOG and version generation."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:28
+msgid ""
+"The following commit message **format** and **content** are "
+"**mandatory**, and will be **enforced by server hooks** in the future "
+"(`symbol-infra/issues/17 <https://github.com/symbol/symbol-"
+"infra/issues/17>`__)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:31
+msgid "Commit Message Content"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:33
+msgid "This is the most important bit of this document:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:35
+msgid ""
+"**A good commit message explains the reason behind the change**, this is,"
+" the **why** of the commit."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:37
+msgid ""
+"**What** the commit does, and **how** it does it, is already shown in the"
+" actual commit. The good commit message includes the missing information,"
+" like:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:39
+msgid "**The reason behind the change**: Why was this needed?"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:41
+msgid ""
+"**The need for the change**: How were things working before, what was "
+"wrong with that, and how will things work after this commit?"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:43
+msgid ""
+"**The summary of the change**, when it is too long to be easily "
+"understood by reading the code. Feel free to add bullet lists or diagrams"
+" when required to understand a big code drop."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:45
+msgid ""
+"**Pointers to extra information**: No detail should be omitted. Include "
+"links to every bit of information that helped you produce this commit, so"
+" other developers can retrace your steps if required. This means links to"
+" Jira or GitHub issues, Wikipedia articles or Stack Overflow discussions."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:48
+msgid "Commit Message Format"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:50
+msgid ""
+"Additionally, if the commit message adheres to a strict format, it can "
+"enable some interesting automation."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:52
+msgid ""
+"We have decided to follow the `Conventional Commits "
+"<https://www.conventionalcommits.org/en/v1.0.0/>`__ specification:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:54
+msgid ""
+"The Conventional Commits specification is a lightweight convention on top"
+" of commit messages. It provides an easy set of rules for creating an "
+"explicit commit history; which makes it easier to write automated tools "
+"on top of. This convention dovetails with `SemVer "
+"<http://semver.org/>`__, by describing the features, fixes, and breaking "
+"changes made in commit messages."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:56
+msgid "The benefits are:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:58
+msgid "**Easier communication**, as the nature of changes is clear."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:60
+msgid "CHANGELOGs are **generated automatically**."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:62
+msgid ""
+"Versions are **bumped automatically** based on the types of commits "
+"landed."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:64
+msgid "In summary, all commits must have this format:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+#: ../../source/handbook/commit-discipline.rst:75
+msgid "Type"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:77
+msgid ""
+"Valid types (based on `the Angular convention "
+"<https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md>`__) "
+"are:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "Meaning"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``build``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid ""
+"Changes that affect the build system or external dependencies (example "
+"scopes: gulp, broccoli, npm)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``ci``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid ""
+"Changes to the CI configuration files and scripts (example scopes: "
+"Travis, Circle, BrowserStack, SauceLabs)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``docs``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "Documentation only changes."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``feat``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "A new feature. **This will change the** ``MINOR`` **version**."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``fix``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid ""
+"Patches a bug in the codebase. **This will change the** ``PATCH`` "
+"**version**."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``perf``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "A code change that improves performance."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``refactor``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "No functional changes, just moving code around for maintainability."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``style``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid ""
+"Changes that do not affect the meaning of the code (white-space, "
+"formatting, missing semi-colons, …)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "``test``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:1
+msgid "Adding missing tests or correcting existing ones."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:94
+msgid ""
+"The type can be followed by an exclamation mark ``!`` indicating that "
+"this is an **API BREAKING CHANGE** (see the footer section below)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:97
+msgid "Scope"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:99
+msgid ""
+"A scope may be provided after a commit’s type, to provide additional "
+"contextual information and is contained within parenthesis, e.g., "
+"``feat(parser): add ability to parse arrays``."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:102
+msgid "Footer"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:104
+msgid ""
+"One or more footers may be provided one blank line after the body. Each "
+"footer must consist of a word token, followed by either a ``:<space>`` or"
+" ``<space>#`` separator, followed by a string value (this is inspired by "
+"the `git trailer convention <https://git-scm.com/docs/git-interpret-"
+"trailers>`__)."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:106
+msgid ""
+"``BREAKING CHANGE`` is a special token that **will change the** ``MAJOR``"
+" **version**. This can also be indicated with a ``!`` after the type or "
+"scope."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:108
+msgid "Examples:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:110
+msgid "``Reviewed-by: John Doe <john.doe@nem.software>``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:111
+msgid "``Co-authored-by: John Doe <john.doe@nem.software>``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:112
+msgid "``Fixes #1024``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:113
+msgid ""
+"``BREAKING CHANGE: environment variables now take precedence over config "
+"files``"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:116
+msgid "Description"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:118
+msgid ""
+"It follows the colon and space after the type/scope prefix. The "
+"description is a single-line summary of the code changes, e.g., ``fix: "
+"array parsing issue when multiple spaces were contained in string``."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:121
+msgid "Body"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:123
+msgid ""
+"This goes into the ``<body>`` of the commit message and it should try to "
+"address **all the points** in the ``Commit Message Content`` section "
+"above."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:125
+msgid ""
+"The body can be omitted **only** when the commit is **short**, its "
+"description is **self-explanatory** and links to further information "
+"(like issue numbers, if any) are already given in the **footer**."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:127
+msgid ""
+"**Skipping the body should be a rare case**. A clear example could be "
+"``fix: spelling errors``, but coding typos must definitely have a body: "
+"Even though the fix might be simple, the commit message must explain at "
+"least what the ill effects were."
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:130
+msgid "Examples"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:132
+msgid "Commit message with description and breaking change footer:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:141
+msgid "Commit message with ``!`` to draw attention to breaking change:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:147
+msgid "Commit message with both ``!`` and BREAKING CHANGE footer:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:156
+msgid "Commit message with no body:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:162
+msgid "Commit message with scope:"
+msgstr ""
+
+#: ../../source/handbook/commit-discipline.rst:168
+msgid "Commit message with multi-paragraph body and multiple footers:"
+msgstr ""
+

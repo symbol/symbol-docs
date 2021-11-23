@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 13:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/handbook/git-branching.rst:3
+msgid "Git branching structure"
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:10
+msgid "main branch"
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:12
+msgid ""
+"This branch follows the syndicate's public **release schedule**. "
+"Everything on this branch is **official**, so any commit landing here "
+"must have been validated by a **release manager**."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:14
+msgid ""
+"Official releases are marked either using **git tags** or **release "
+"branches**."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:16
+msgid ""
+"When ready, the `dev` branch is **merged** (without squashing) into the "
+"`main` branch by the release manager."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:19
+msgid "dev branch"
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:21
+msgid ""
+"Commits in this branch have undergone Quality Assurance (QA), they pass "
+"unit tests and code style linting. To ensure all this, only the "
+"**repository maintainers** have commit rights into this branch."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:23
+msgid ""
+"Code lands on this branch via GitHub Pull Requests (PR) from `feature` "
+"branches."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:26
+msgid "feature branches"
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:28
+msgid ""
+"Each branch deals with a **single feature**. They depart from the `dev` "
+"branch and go back to it via a PR, ensuring it is peer reviewed and it "
+"passes QA, unit tests and code style linting."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:30
+msgid ""
+"Commit early / commit often principle. No special commit message format "
+"is enforced in this branch."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:32
+msgid ""
+"Before submitting a PR for merging into `dev`, commits in a feature "
+"branch shall be **rebased** to the current `HEAD` and **squashed** into "
+"one or several **properly formatted commits** (See :doc:`commit-"
+"discipline`))."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:34
+msgid "Feature branches should be deleted after merging them back into `dev`."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:37
+msgid "task branches (optional)"
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:39
+msgid "When features are big enough they can be **divided into tasks**."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:41
+msgid ""
+"`task` branches depart from and, later, merge into their corresponding "
+"`feature` branch after peer review. Commit early / commit often "
+"principle. No special commit message format enforced."
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:44
+msgid "release branches (discussion ongoing)"
+msgstr ""
+
+#: ../../source/handbook/git-branching.rst:46
+msgid ""
+"Fork from `main` branch. Hotfixes are applied to `release` branches by "
+"release managers after peer review."
+msgstr ""
+

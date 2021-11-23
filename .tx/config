@@ -193,6 +193,12 @@ source_file = build/gettext/contribute/index.pot
 source_lang = en
 type = PO
 
+[symboldocs.contribute--authors]
+file_filter = source/locale/<lang>/LC_MESSAGES/contribute/authors.po
+source_file = build/gettext/contribute/authors.pot
+source_lang = en
+type = PO
+
 [symboldocs.contribute--contributing]
 file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
 source_file = build/gettext/contribute/contributing.pot
@@ -892,5 +898,41 @@ type = PO
 [symboldocs.guides--index]
 file_filter = source/locale/<lang>/LC_MESSAGES/guides/index.po
 source_file = build/gettext/guides/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--index]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/index.po
+source_file = build/gettext/handbook/index.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--commit-discipline]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/commit-discipline.po
+source_file = build/gettext/handbook/commit-discipline.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--directory]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/directory.po
+source_file = build/gettext/handbook/directory.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--documenting]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/documenting.po
+source_file = build/gettext/handbook/documenting.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--git-branching]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/git-branching.po
+source_file = build/gettext/handbook/git-branching.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--cpp-coding-guidelines]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/cpp-coding-guidelines.po
+source_file = build/gettext/handbook/cpp-coding-guidelines.pot
 source_lang = en
 type = PO

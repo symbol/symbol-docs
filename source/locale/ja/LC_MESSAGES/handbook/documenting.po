@@ -1,0 +1,438 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 13:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/handbook/documenting.rst:3
+msgid "Contributing documentation"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:5
+msgid ""
+"There are currently 3 sources of documentation for Symbol. Feel free to "
+"jump to the one you are interested in."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:7
+msgid ""
+"`Technical documentation <#technical-documentation>`__: Tool guides, "
+"developer tutorials, SDK reference guides and syndicate handbook."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:8
+msgid ""
+"`Working documentation <#working-documentation>`__: Meeting minutes, "
+"Community logs, stuff that changes often."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:9
+msgid ""
+"`NIS1 documentation <#nis1-documentation>`__: Old NIS1 guides, pending "
+"assimilation into the Symbol technical docs."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:12
+msgid "Technical documentation"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Site**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`docs.symbolplatform.com <https://docs.symbolplatform.com>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Source repo**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`github.com/symbol/symbol-docs <https://github.com/symbol/symbol-docs>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Host**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`GitHub pages <https://github.com/symbol/symbol.github.io>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Engine**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`Sphinx <https://www.sphinx-doc.org>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Format**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`reStructuredText <https://docutils.sourceforge.io/rst.html>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Intended readers**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "The world at large."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Intended writers**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "The Symbol technical writers."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Editing workflow**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid ""
+"Git-based: Check out the source repository, make modifications and submit"
+" pull requests."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Localization**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`Transifex <https://www.transifex.com/nemtech/symboldocs/>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "**Maintainers**"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`Xavi <https://github.com/segfaultxavi>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:30
+msgid "Content"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:32
+msgid "This is the main technical reference. It contains (or will contain):"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:34
+msgid ""
+"**User guides** for the different tools (Wallet, CLI, Explorer, etc.), "
+"intended for non-heavily-technical readers, including screenshots and "
+"step-by-step instructions on how to solve common problems."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:35
+msgid ""
+"**Developer tutorials** with source code examples in different languages,"
+" organized by topics. Ranging from Getting Started to in-depth guides on "
+"specific topics."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:36
+msgid "**Concept definitions** required to understand the Symbol protocol."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:37
+msgid "**Technical reference** guides describing every API and REST endpoint."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:39
+msgid ""
+"Due to the complexity of the technical content, the `Sphinx <https://www"
+".sphinx-doc.org>`__ engine and `reStructuredText "
+"<https://docutils.sourceforge.io/rst.html>`__ is used instead of the "
+"simpler MarkDown format. This enables much more flexibility, so we can "
+"use multi-language (tabbed) code snippets, Python macros which "
+"automatically retrieve content from GitHub or have more formatting "
+"options for complex tables, for example."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:42
+msgid "Editing"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:44
+msgid ""
+"This repository follows the doc-as-code approach, meaning that you treat "
+"the documentation as if it was source code."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:46
+msgid ""
+"To contribute you need to check out the Git repository, make your changes"
+" and submit a `Pull Request <https://docs.github.com/en/github"
+"/collaborating-with-pull-requests>`__ to GitHub. The repository "
+"maintainers will review your contribution, suggest changes if required "
+"and eventually merge it."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:49
+msgid "Testing"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:51
+msgid ""
+"Before submitting a pull request it is a good idea to test your changes "
+"locally, to ensure that everything shows as expected and nothing breaks."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:53
+msgid ""
+"You first need to `Install Sphinx <https://www.sphinx-"
+"doc.org/en/master/usage/installation.html>`__."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:55
+msgid "After that you can trigger a build by running from the repository's root:"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:61
+msgid ""
+"This will monitor your source folder and regenerate the output when "
+"changes are detected. It also instantiates a web server on "
+"``localhost:8000`` for your convenience."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:65
+msgid ""
+"On Windows you have a handy ``make-win.bat`` that does the same thing but"
+" takes care of some Windows shenanigans."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:68
+msgid "Deployment"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:70
+msgid ""
+"The GitHub repository is linked to `Travis <https://travis-"
+"ci.com/github/symbol/symbol-docs>`__, so on every push to the ``main`` "
+"branch a full build is triggered (See ``.travis.yml`` and the ``travis`` "
+"folder for details). This involves several steps besides the generation "
+"of the output documentation:"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:72
+msgid ""
+"**Source snippets validation**: The guides include lots of source code "
+"examples which are actually snippets from complete programs. These "
+"programs must **compile** and pass **lint checks** at all times and "
+"Travis makes sure of this. Right now only the TypeScript programs are "
+"checked."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:73
+msgid ""
+"**Link checking**: All pages are examined to find broken links using "
+"``make linkcheck``. Throttling is enabled to avoid pestering servers too "
+"much and getting ```HTTP 429 Too Many Requests``` errors. Still, "
+"sometimes your build fails because of this. If you detect such error in "
+"the Travis logs just try again."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:74
+msgid ""
+"**Localization**: Text strings are extracted from every page using ``make"
+" gettext`` and uploaded to Transifex (see next section)."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:75
+msgid ""
+"**Publishing**: The built HTML pages are pushed to a different git "
+"repository (`symbol/symbol.github.io "
+"<https://www.github.com/symbol/symbol.github.io>`__) where they are "
+"served via GitHub pages."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:77
+msgid ""
+"Due to this process, pushes to ``main`` normally take up to 5 minutes to "
+"go live."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:80
+msgid "Localization"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:82
+msgid ""
+"Right now almost every page is available in Japanese besides the original"
+" English, but the repository is ready to accept more languages."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:84
+msgid ""
+"`Transifex <https://www.transifex.com/nemtech/symboldocs/>`__ is "
+"integrated in the deployment process, so after every push to ``main`` any"
+" changed strings are uploaded to Transifex where translators can provide "
+"text in their own language. So far this process has been done by the "
+"Symbol community."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:86
+msgid ""
+"When new translations are available the repo maintainer can download them"
+" from Transifex as ``.po`` files and commit them, or translators can "
+"provide the ``.po`` files directly via a Pull Request."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:89
+msgid "Working documentation"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`hackmd.io/team/syndicate <https://hackmd.io/team/syndicate>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "HackMD"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "`Markdown <https://www.markdownguide.org/>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "Syndicate members."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "Edit pages directly on HackMD."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "None"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "Every syndicate member."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:106
+msgid ""
+"This is meant as a scratch pad for collaborative editing, or as a means "
+"of storage for documents that change too often or are too big or numerous"
+" to be in the Handbook."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:108
+msgid "Examples are:"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:110
+msgid ""
+"Documents being worked on (they are live, or waiting approval to go into "
+"the Handbook)"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:111
+msgid "Meeting minutes (there are too many of them)"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:112
+msgid "Test results (they change continuously)"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:114
+msgid ""
+"To keep this area organized all documents should be **tagged**. Please "
+"add this line at the bottom of your document:"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:120
+msgid ""
+"Use any tag you want, but please look at the other documents and try to "
+"be consistent."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:123
+msgid "NIS1 documentation"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "General: Used to be ``docs.nem.io``"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "API: `nemproject.github.io <https://nemproject.github.io/>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid ""
+"General: `github.com/saulgray/nemioDev "
+"<https://github.com/saulgray/nemioDev>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid ""
+"API: `https://github.com/NemProject/NemProject.github.io "
+"<https://github.com/NemProject/NemProject.github.io>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "General: ?"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "API: `GitHub pages <https://github.com/NemProject/NemProject.github.io>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "General: `Grav <https://getgrav.org/>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "API: Static HTML page"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "General: `Markdown <https://www.markdownguide.org/>`__"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "API: HTML"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:1
+msgid "?"
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:145
+msgid ""
+"This documentation is rather old and parts of it are still being figured "
+"out."
+msgstr ""
+
+#: ../../source/handbook/documenting.rst:147
+msgid ""
+"There's an ongoing effort to port it all to `GitHub pages "
+"<https://github.com/NemProject/nem-docs>`__ and `deployed here "
+"<https://nemproject.github.io/nem-docs>`__."
+msgstr ""
+
