@@ -787,3 +787,22 @@ summary::-webkit-details-marker {
 a .xref {
     text-decoration: underline 1px dotted;
 }
+
+/* GitHub contributors list */
+.ghcontributors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+.ghcontributors li {
+  list-style: none;
+  text-align: center;
+}
+.ghcontributors img {
+  width: 128px;
+}
+.ghcontributors a::before {
+  content: '\A';
+  white-space: pre;
+}

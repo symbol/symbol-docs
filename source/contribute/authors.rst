@@ -4,10 +4,15 @@ Authors
 
 We want to recognize the work of the `contributors <https://github.com/symbol/symbol-docs/graphs/contributors>`__ who provided content, opened new `issues <https://github.com/symbol/symbol-docs/issues>`__, and improved the quality and completeness of this documentation.
 
-**Thank you!**
+.. rst-class:: h1centered
+
+   Thank you!
 
 ..  ghcontributors:: symbol/symbol-docs
     :limit: 100
+    :avatars: True
+    :contributions: False
+    :exclude: dependabot[bot]
 
 But the Symbol Documentation has not been written from scratch. It draws a lot from previous NEM documents written by the community and core developers, adapted for this new release:
 
