@@ -45,6 +45,7 @@ extensions = [
     'examplecode',
     'sphinxcontrib.mermaid',
     'sphinxcontrib.viewsource',
+    'sphinxcontrib.ghcontributors',
     'sphinx_tabs.tabs',
     'ablog',
     'edit-on-github',
