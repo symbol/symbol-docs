@@ -68,8 +68,8 @@ pre {
     margin: 5px 0 10px 0;
 }
 
-b {
-    color: #9773ff;
+b, strong {
+    color: #EEE;
 }
 
 /* Colors */
