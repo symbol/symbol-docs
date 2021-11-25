@@ -17,8 +17,8 @@
     :hidden:
 
     getting-started/index
-    guides/index
     concepts/overview
-    references/index
+    guides/index
     contribute/index
     handbook/index
+    references/index

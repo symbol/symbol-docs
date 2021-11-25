@@ -1,6 +1,6 @@
-############
-Contributing
-############
+##########
+Contribute
+##########
 
 |codename| is an |open-source| project:
 
