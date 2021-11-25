@@ -36,7 +36,7 @@ class CosigningAggregateBondedTransactionsAutomatically {
     void example() throws Exception {
 
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+            "NODE_URL")) {
             // replace with recipient address
 
             /* start block 01 */

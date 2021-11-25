@@ -24,7 +24,7 @@ const mosaicIdHex = '71415AC19C818709';
 const mosaicId = new MosaicId(mosaicIdHex);
 
 // replace with node endpoint
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const mosaicHttp = repositoryFactory.createMosaicRepository();
 

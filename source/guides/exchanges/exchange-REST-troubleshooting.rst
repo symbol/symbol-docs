@@ -37,11 +37,11 @@ Use the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi
    
    **Caution**: Does not work when combined with ``address``, only with ``recipientAddress``."
 
-`Here is an example query <http://ngl-dual-101.testnet.symboldev.network:3000/transactions/confirmed?recipientAddress=TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA&type=16724&fromHeight=70000&toHeight=80000&embedded=true>`__:
+Here is an example query to a :term:`NODE_URL`:
 
 .. code-block:: text
 
-   http://ngl-dual-101.testnet.symboldev.network:3000
+   NODE_URL
      /transactions/confirmed
        ?recipientAddress=TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA
        &type=16724
@@ -114,7 +114,7 @@ This is very easy to do because all blocks which include a namespace also includ
 
 **Example using TESTNET:**
 
-- `/transactions/confirmed?height=211972 <http://ngl-dual-101.testnet.symboldev.network:3000/transactions/confirmed?height=211972>`__ retrieves all transactions included in block 211972.
+- ``NODE_URL/transactions/confirmed?height=211972`` retrieves all transactions included in block 211972.
 
   .. code-block:: json
 
@@ -138,9 +138,9 @@ This is very easy to do because all blocks which include a namespace also includ
 
   However, the mosaic ID ``0xE374D0B5E061EE92`` does not exist (``/mosaics/E374D0B5E061EE92`` would return a ``ResourceNotFound`` error). Besides, the highest bit being set indicates this is actually a namespace.
 
-- You could check the **current** alias of this namespace by querying `/namespaces/E374D0B5E061EE92 <http://ngl-dual-101.testnet.symboldev.network:3000/namespaces/E374D0B5E061EE92>`__, but you actually want to know the aliased mosaic ID **at the time the transaction was confirmed**.
+- You could check the **current** alias of this namespace by querying ``/namespaces/E374D0B5E061EE92``, but you actually want to know the aliased mosaic ID **at the time the transaction was confirmed**.
 
-- You do this by checking the block's :ref:`mosaicresolutionstatement` at `statements/resolutions/mosaic?height=211972 <http://ngl-dual-101.testnet.symboldev.network:3000/statements/resolutions/mosaic?height=211972>`__:
+- You do this by checking the block's :ref:`mosaicresolutionstatement` at ``/statements/resolutions/mosaic?height=211972``:
 
   .. code-block:: json
 
@@ -161,7 +161,7 @@ This is very easy to do because all blocks which include a namespace also includ
        "id": "60DEDC83EA7C4338C56C4FB6"
      }
 
-  Here you can see the resolved mosaic ID, ``0x0DDE03C044AF95D4`` which is a valid ID and can be queried with `/mosaics/0DDE03C044AF95D4 <http://ngl-dual-101.testnet.symboldev.network:3000/mosaics/0DDE03C044AF95D4>`__.
+  Here you can see the resolved mosaic ID, ``0x0DDE03C044AF95D4`` which is a valid ID and can be queried with ``/mosaics/0DDE03C044AF95D4``.
 
 ********************
 Sending transactions

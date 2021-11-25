@@ -54,7 +54,7 @@ const validateTransactionInBlock = async (
   return HRoot.toUpperCase() === HRoot0.toUpperCase();
 };
 
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryHttp.createBlockRepository();
 // Define block height

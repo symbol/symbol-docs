@@ -21,13 +21,13 @@ Method #01: Using WebSockets
 ****************************
 
 1. First, we need to create a bidirectional link between our client application and the REST Gateway.
-To do so, open a new :ref:`WebSocket connection <websockets>` connection.
+To do so, open a new :ref:`WebSocket connection <websockets>` connection. Remember to use a suitable :term:`NODE_URL`.
 
 .. code-block:: typescript
 
     import * as WebSocket from 'ws';
 
-    const host = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+    const host = 'NODE_URL';
     const ws = new WebSocket('ws://' + host + '/ws');
 
     ws.on('open', () => {

@@ -38,7 +38,7 @@ class GettingBlockByHeight {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+            "NODE_URL")) {
             final BlockRepository blockRepository = repositoryFactory.createBlockRepository();
 
             // Replace with block height

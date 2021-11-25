@@ -62,7 +62,7 @@ In this case, signing the transaction means to accept moving those mosaics from 
 An account has to follow the next steps to `sign a transaction <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L216>`_:
 
 1. Get the ``signing bytes``, which are all the bytes of the transaction except the size, signature, and signer.
-2. Get the nemesis block ``generation hash``. You can query ``nodeUrl + '/node/info'`` and copy ``meta.networkGenerationHash`` value.
+2. Get the nemesis block ``generation hash``. You can query :term:`NODE_URL` ``/node/info'`` and copy ``meta.networkGenerationHash`` value.
 3. Prepend the nemesis block generation hash to the signing bytes.
 4. Sign the resulting string with the signer's private key. This will give you the transaction ``signature``.
 5. Append the signer's signature and public key to the transaction to obtain the ``payload``.

@@ -34,22 +34,24 @@ Setting up the use case
 
 Create two accounts: one for Alice and another for the certificate with the :ref:`CLI tool <wallet-cli>`.
 
+Enter the :term:`NODE_URL` to use to access the network.
+
 .. code-block:: bash
 
     symbol-cli account generate --save
 
-    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://ngl-dual-101.testnet.symboldev.network:3000/
+    Enter a Symbol Node URL. (Example: http://localhost:3000): <NODE_URL>
     Insert profile name: alice
 
 .. code-block:: bash
 
     symbol-cli account generate --save
 
-    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://ngl-dual-101.testnet.symboldev.network:3000/
+    Enter a Symbol Node URL. (Example: http://localhost:3000): <NODE_URL>
     Insert profile name: certificate
 
 *************************
@@ -89,7 +91,7 @@ Encrypt the message
 
 3. Sign the transaction with Alice's account.
 
-.. note:: To make the transaction only valid for your network, include the network generation hash. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
+.. note:: To make the transaction only valid for your network, include the network generation hash. Open :term:`NODE_URL` ``/node/info`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 

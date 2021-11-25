@@ -25,7 +25,7 @@ const address = symbol_sdk_1.Address.createFromRawAddress(rawAddress);
 /* end block 01 */
 /* start block 02 */
 // replace with node endpoint
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const transactionHttp = repositoryFactory.createTransactionRepository();
 const searchCriteria = {

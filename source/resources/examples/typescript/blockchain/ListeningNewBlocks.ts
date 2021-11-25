@@ -19,7 +19,7 @@
 import { RepositoryFactoryHttp } from 'symbol-sdk';
 
 /* start block 01 */
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const listener = repositoryFactory.createListener();
 

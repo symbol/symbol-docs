@@ -23,7 +23,7 @@ const symbol_sdk_1 = require('symbol-sdk');
 const mosaicIdHex = '71415AC19C818709';
 const mosaicId = new symbol_sdk_1.MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryFactory = new symbol_sdk_1.RepositoryFactoryHttp(nodeUrl);
 const mosaicHttp = repositoryFactory.createMosaicRepository();
 mosaicHttp.getMosaic(mosaicId).subscribe(

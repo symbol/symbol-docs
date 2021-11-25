@@ -32,7 +32,7 @@ const nodeLinkTransaction = symbol_sdk_1.NodeKeyLinkTransaction.create(
 /* end block 02 */
 /* start block 03 */
 // Replace with any node in the network
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 // Replace with networkGenerationHashSeed by querying http://<node-url>:3000/node/info
 const networkGenerationHash =
   '6C1B92391CCB41C96478471C2634C111D9E989DECD66130C0430B5B8D20117CD';

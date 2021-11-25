@@ -101,7 +101,7 @@ If you own more than one mosaic, you can send them together in the same transact
 
 3. Sign the transaction with your account.
 Then, include the network generation hash seed to make the transaction only valid for your network. 
-To retrieve the network generration hash seed, open ``nodeUrl + '/node/info'`` in a new browser tab and copy ``meta.networkGenerationHashSeed`` value.
+To retrieve the network generation hash seed, open :term:`NODE_URL` ``/node/info`` in a new browser tab and copy ``meta.networkGenerationHashSeed`` value.
 
 .. example-code::
 

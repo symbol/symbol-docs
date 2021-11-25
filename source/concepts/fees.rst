@@ -47,7 +47,7 @@ To ensure that the transaction will get included without setting a ``max_fee`` u
 .. note::
     A quick way of retrieving this information is pointing your browser to:
 
-    `<NODE_URL>:3000/network/fees/transaction <http://ngl-dual-101.testnet.symboldev.network:3000/network/fees/transaction>`__
+    :term:`NODE_URL` ``/network/fees/transaction``
 
 For example, the sender could set the transaction max_fee as follows:
 
@@ -98,6 +98,6 @@ If a block did not include any transaction, a value of :ref:`defaultDynamicFeeMu
 .. note::
     The current value of the dynamic fee multiplier can be found in the ``medianFeeMultiplier`` property returned by the :doc:`REST Gateway <../api>`:
 
-    `<NODE_URL>:3000/network/fees/transaction <http://ngl-dual-101.testnet.symboldev.network:3000/network/fees/transaction>`__
+    :term:`NODE_URL` ``/network/fees/transaction``
 
 Continue: :doc:`Receipt <receipt>`.

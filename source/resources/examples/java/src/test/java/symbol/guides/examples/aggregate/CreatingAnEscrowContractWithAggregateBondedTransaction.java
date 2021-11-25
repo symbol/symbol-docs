@@ -49,7 +49,7 @@ class CreatingAnEscrowContractWithAggregateBondedTransaction {
     void example() throws Exception {
 
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+            "NODE_URL")) {
 
             /* start block 01 */
             NetworkType networkType = repositoryFactory.getNetworkType().toFuture().get();

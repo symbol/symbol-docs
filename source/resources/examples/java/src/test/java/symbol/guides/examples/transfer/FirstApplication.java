@@ -45,7 +45,7 @@ class FirstApplication {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+                "NODE_URL")) {
             // replace with mosaic id
             final String mosaicIdHex = "7cdf3b117a3c40cc";
             final MosaicId mosaicId = new MosaicId(mosaicIdHex);

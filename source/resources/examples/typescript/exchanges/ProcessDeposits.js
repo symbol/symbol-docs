@@ -24,7 +24,7 @@ const example = async () => {
   const dbService = new DBServiceImpl_1.DBServiceImpl();
   const config = {
     // Replace with your node URL
-    apiUrl: 'http://ngl-dual-101.testnet.symboldev.network:3000',
+    apiUrl: 'NODE_URL',
     // Use MAIN_NET or TEST_NET
     networkType: symbol_sdk_1.NetworkType.TEST_NET,
     // Replace with value from http://<API-NODE-URL>:3000/network/properties

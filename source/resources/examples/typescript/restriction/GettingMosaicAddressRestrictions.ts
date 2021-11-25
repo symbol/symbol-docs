@@ -31,7 +31,7 @@ const address = Address.createFromRawAddress(rawAddress);
 const mosaicIdHex = '634a8ac3fc2b65b3';
 const mosaicId = new MosaicId(mosaicIdHex);
 // replace with node endpoint
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const restrictionHttp = repositoryFactory.createRestrictionMosaicRepository();
 

@@ -37,7 +37,7 @@ const example = async (): Promise<any> => {
   const publicAccount2 = Account.generateNewAccount(NetworkType.TEST_NET)
     .publicAccount;
   // Get median fee multiplier
-  const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+  const nodeUrl = 'NODE_URL';
   const repositoryHttp = new RepositoryFactoryHttp(nodeUrl);
   const networkHttp = repositoryHttp.createNetworkRepository();
   const medianFeeMultiplier = (

@@ -268,6 +268,11 @@ Glossary
     Node Reputation
       A measure of trust that the Symbol network determines for each specific node. The network's trust for a node increases with each successful interaction, and decreases for each failed attempt of communication.
 
+    NODE_URL
+      The URL of the node you want to use to access the network. All nodes should return the same information so it is not critical which one you use.
+
+      Use the `Statistics Service <https://symbol.services/nodes>`__ (or the `Testnet Statistics Service <https://testnet.symbol.services/nodes?limit=10>`__) to retrieve a list of nodes, choose one and use its ``restGatewayUrl`` as your ``NODE_URL`` (Including the port number).
+
     NSL
       NEM Software Limited.
 

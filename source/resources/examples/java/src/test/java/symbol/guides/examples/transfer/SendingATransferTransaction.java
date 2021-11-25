@@ -45,7 +45,7 @@ class SendingATransferTransaction {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+                "NODE_URL")) {
             // replace with recipient address
             final String rawAddress = "TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ";
             final UnresolvedAddress recipientAddress = Address.createFromRawAddress(rawAddress);

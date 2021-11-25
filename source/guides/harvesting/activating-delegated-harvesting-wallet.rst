@@ -61,11 +61,7 @@ Guide
 
       **This key must be provided by the node owner**. If you have instantiated the node using :doc:`Symbol Bootstrap <../network/running-a-symbol-node>`, you can find this key in the :ref:`addresses.yml <retrieving-node-account>` file.
 
-      A node URL looks like:
-      
-      .. code-block:: none
-      
-         http://ngl-dual-101.testnet.symboldev.network:3000
+      Keep in mind, though, that when delegating harvesting to a non-API node the **Harvesting Status** indicator will not work.
 
 3. **Select a node from the list and click on the "Link all keys" button** (You will probably need to scroll down past the "Keys Info" section).
 

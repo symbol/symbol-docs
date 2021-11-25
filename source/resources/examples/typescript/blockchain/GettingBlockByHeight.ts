@@ -20,7 +20,7 @@ import { RepositoryFactoryHttp, UInt64 } from 'symbol-sdk';
 
 /* start block 01 */
 // replace with node endpoint
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
 const blockHttp = repositoryFactory.createBlockRepository();
 

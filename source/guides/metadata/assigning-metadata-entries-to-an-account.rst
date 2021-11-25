@@ -39,15 +39,15 @@ Prerequisites
 Creating the account
 ********************
 
-1. Create an account for Alice, using the :ref:`CLI tool <wallet-cli>`.
+1. Create an account for Alice, using the :ref:`CLI tool <wallet-cli>`. Remember to use a suitable :term:`NODE_URL`.
 
 .. code-block:: bash
 
     symbol-cli account generate --save
 
-    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MAIN_NET, TEST_NET): TEST_NET
     Do you want to save it? [y/n]: y
-    Enter a Symbol Node URL. (Example: http://localhost:3000): http://ngl-dual-101.testnet.symboldev.network:3000/
+    Enter a Symbol Node URL. (Example: http://localhost:3000): <NODE_URL>
     Insert profile name: alice
 
 *************************

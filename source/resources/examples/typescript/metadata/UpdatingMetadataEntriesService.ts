@@ -54,7 +54,7 @@ const alicePublicAccount = PublicAccount.createFromPublicKey(
   networkType,
 );
 // replace with node endpoint
-const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+const nodeUrl = 'NODE_URL';
 const metadataHttp = new MetadataHttp(nodeUrl);
 const metadataService = new MetadataTransactionService(metadataHttp);
 

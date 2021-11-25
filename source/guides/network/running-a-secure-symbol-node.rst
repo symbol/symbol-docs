@@ -337,7 +337,7 @@ Setup
 
 - **Create an announcer profile** for ``symbol-cli``. This is only a temporary account used to announce the payloads; it does not require funds:
 
-  For the ``--url`` parameter use the ``restGatewayUrl`` of any of the nodes returned by the `Statistics Service <https://symbol.services/nodes?limit=10>`__ (Or the `Testnet Statistics Service <https://symbol.services/nodes?limit=10>`__).
+  Use the ``--url`` parameter to specify the :term:`NODE_URL` to access the network.
 
   .. tabs::
 

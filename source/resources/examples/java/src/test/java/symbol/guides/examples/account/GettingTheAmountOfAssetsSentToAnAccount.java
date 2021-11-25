@@ -42,7 +42,7 @@ class GettingTheAmountOfAssetsSentToAnAccount {
     void gettingTheAmountOfAssetsSentToAnAccount()
         throws ExecutionException, InterruptedException {
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-            "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+            "NODE_URL")) {
 
             /* start block 01 */
             // replace with signer public key

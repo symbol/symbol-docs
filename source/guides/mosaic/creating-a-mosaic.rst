@@ -95,7 +95,7 @@ For instance, we can set it to **1,000,000** mosaic units.
 
 3. Announce both transactions together using an :ref:`aggregate-transaction`.
 Include the network generation hash to make the transaction only valid for your network.
-Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
+Open :term:`NODE_URL` ``/node/info`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 

@@ -44,10 +44,10 @@ If you get an error or the version returned does not match v12.X, visit |node-js
 
     symbol-cli account generate
 
-    Enter network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): TEST_NET
+    Enter network type (MAIN_NET, TEST_NET): TEST_NET
     Do you want to save the account? [y/n]: y
     Select an import type: » PrivateKey
-    Enter Symbol Node URL. (Example: http://localhost:3000): http://ngl-dual-101.testnet.symboldev.network:3000/
+    Enter Symbol Node URL. (Example: http://localhost:3000): <NODE_URL>
     Insert the profile name: testnet
     Do you want to set the account as the default profile? [y/n]: y
 

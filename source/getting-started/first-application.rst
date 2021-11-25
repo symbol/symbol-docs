@@ -106,7 +106,7 @@ If your row after "Balance Information" is empty, follow the :doc:`previous guid
 
 .. code-block:: bash
 
-    symbol-cli account generate --network TEST_NET --save --url http://ngl-dual-101.testnet.symboldev.network:3000 --profile customer
+    symbol-cli account generate --network TEST_NET --save --url <NODE_URL> --profile customer
 
     New Account
 
@@ -216,7 +216,7 @@ Although the transaction is defined, it has not been announced to the network ye
 
 2. Sign the transaction with the **ticket vendor account**, so that the network can verify the authenticity of the transaction.
 
-.. note:: Include the network generation hash to make the transaction only valid for your network. Open ``nodeUrl + '/node/info'`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
+.. note:: Include the network generation hash to make the transaction only valid for your network. Open :term:`NODE_URL` ``/node/info`` in a new browser tab and copy the ``meta.networkGenerationHash`` value.
 
 .. example-code::
 

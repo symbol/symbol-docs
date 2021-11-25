@@ -42,7 +42,7 @@ class GettingMosaicGlobalRestrictions {
         /* start block 01 */
         // replace with node endpoint
         try (final RepositoryFactory repositoryFactory = new RepositoryFactoryVertxImpl(
-                "http://ngl-dual-101.testnet.symboldev.network:3000")) {
+                "NODE_URL")) {
             final RestrictionMosaicRepository restrictionRepository = repositoryFactory
                     .createRestrictionMosaicRepository();
 

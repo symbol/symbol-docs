@@ -27,7 +27,7 @@ import {
 
 const example = async (): Promise<void> => {
   //Network information
-  const nodeUrl = 'http://ngl-dual-101.testnet.symboldev.network:3000';
+  const nodeUrl = 'NODE_URL';
   const repositoryFactory = new RepositoryFactoryHttp(nodeUrl);
   const epochAdjustment = await repositoryFactory
     .getEpochAdjustment()
