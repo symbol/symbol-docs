@@ -1168,3 +1168,8 @@ dt:target, span.highlighted {
     content: '\A';
     white-space: pre;
 }
+
+/* Glossary definitions */
+dl.glossary dt {
+    border-top: 1px solid #231C32;
+}
