@@ -10,8 +10,7 @@ We want to recognize the work of the `contributors <https://github.com/symbol/sy
 
 ..  ghcontributors:: symbol/symbol-docs
     :limit: 100
-    :avatars: True
-    :contributions: False
+    :avatars:
     :exclude: dependabot[bot]
 
 But the Symbol Documentation has not been written from scratch. It draws a lot from previous NEM documents written by the community and core developers, adapted for this new release:
