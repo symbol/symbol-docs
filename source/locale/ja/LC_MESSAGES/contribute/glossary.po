@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 12:01+0000\n"
+"POT-Creation-Date: 2021-11-26 09:18+0000\n"
 "PO-Revision-Date: 2020-12-18 17:38+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -396,23 +396,23 @@ msgstr "ノード拒否"
 msgid "Node Reputation"
 msgstr "ノードレピュテーション"
 
-#: ../../source/contribute/glossary.rst:273
+#: ../../source/contribute/glossary.rst:278
 msgid "Off-chain"
 msgstr "オフチェーン"
 
-#: ../../source/contribute/glossary.rst:282
+#: ../../source/contribute/glossary.rst:287
 msgid "Peer Nodes"
 msgstr "Peer ノード"
 
-#: ../../source/contribute/glossary.rst:303
+#: ../../source/contribute/glossary.rst:308
 msgid "Private Key"
 msgstr "秘密鍵"
 
-#: ../../source/contribute/glossary.rst:306
+#: ../../source/contribute/glossary.rst:311
 msgid "Public Key"
 msgstr "公開鍵"
 
-#: ../../source/contribute/glossary.rst:308
+#: ../../source/contribute/glossary.rst:313
 msgid ""
 "The public identifier of the key pair, which can be disseminated widely. It "
 "is used to prove that a transaction was signed with the paired private key. "
@@ -420,75 +420,75 @@ msgid ""
 msgstr ""
 "広く播種させることのできるキーペアの公開識別子です。対となる秘密鍵でトランザクションが署名されていることを証明します。公開鍵は秘密鍵から暗号的に導出できます。"
 
-#: ../../source/contribute/glossary.rst:309
+#: ../../source/contribute/glossary.rst:314
 msgid "Receipt"
 msgstr "レシート"
 
-#: ../../source/contribute/glossary.rst:312
+#: ../../source/contribute/glossary.rst:317
 msgid "Reference Mosaic"
 msgstr "リファレンスモザイク"
 
-#: ../../source/contribute/glossary.rst:318
+#: ../../source/contribute/glossary.rst:323
 msgid "Rental Fee"
 msgstr "レンタル手数料"
 
-#: ../../source/contribute/glossary.rst:321
+#: ../../source/contribute/glossary.rst:326
 msgid "Rollback"
 msgstr "ロールバック"
 
-#: ../../source/contribute/glossary.rst:323
+#: ../../source/contribute/glossary.rst:328
 msgid ""
 "The act of undoing a :doc:`block(s) <../concepts/block>` that was previously"
 " confirmed."
 msgstr "以前に承認された :doc:`ブロック <../concepts/block>` を元に戻す行為。"
 
-#: ../../source/contribute/glossary.rst:333
+#: ../../source/contribute/glossary.rst:338
 msgid "Secret Lock Transaction"
 msgstr "シークレットロックトランザクション"
 
-#: ../../source/contribute/glossary.rst:336
+#: ../../source/contribute/glossary.rst:341
 msgid "Secret Proof Transaction"
 msgstr "シークレットプルーフトランザクション"
 
-#: ../../source/contribute/glossary.rst:342
+#: ../../source/contribute/glossary.rst:347
 msgid "Spam Throttle"
 msgstr "スパムスロットル"
 
-#: ../../source/contribute/glossary.rst:344
+#: ../../source/contribute/glossary.rst:349
 msgid ""
 "A feature which provides Symbol network protection against being spammed "
 "with lots of unconfirmed transactions."
 msgstr "大量の未確認のトランザクションでスパムされることに対して Symbol ネットワークの保護を提供する機能。"
 
-#: ../../source/contribute/glossary.rst:345
+#: ../../source/contribute/glossary.rst:350
 msgid "Subnamespaces"
 msgstr "サブネームスペース"
 
-#: ../../source/contribute/glossary.rst:351
+#: ../../source/contribute/glossary.rst:356
 msgid "Symbol Extensions"
 msgstr "Symbol 拡張"
 
-#: ../../source/contribute/glossary.rst:359
+#: ../../source/contribute/glossary.rst:364
 msgid ""
 "Security protocol used to encrypting communication between peers on the "
 "Symbol blockchain."
 msgstr "Symbol ブロックチェーン上でピア間の通信を暗号化するために使用されるセキュリティプロトコル。"
 
-#: ../../source/contribute/glossary.rst:366
+#: ../../source/contribute/glossary.rst:371
 msgid "Transaction Plugins"
 msgstr "トランザクションプラグイン"
 
-#: ../../source/contribute/glossary.rst:368
+#: ../../source/contribute/glossary.rst:373
 msgid ""
 "Set of plugins that determine the kinds of transactions the network "
 "supports."
 msgstr "ネットワークがサポートするトランザクション種類を決定するプラグインのセット。"
 
-#: ../../source/contribute/glossary.rst:369
+#: ../../source/contribute/glossary.rst:374
 msgid "Transfer Transaction"
 msgstr "転送トランザクション"
 
-#: ../../source/contribute/glossary.rst:371
+#: ../../source/contribute/glossary.rst:376
 msgid ""
 "The most basic transaction used to send mosaics and messages between two "
 "accounts. Read :doc:`more <../concepts/transfer-transaction>`."
@@ -496,6 +496,6 @@ msgstr ""
 "モザイクとメッセージの送信に使用される最も基本的なトランザクション。 :doc:`詳細 <../concepts/transfer-"
 "transaction>` を参照してください。"
 
-#: ../../source/contribute/glossary.rst:383
+#: ../../source/contribute/glossary.rst:388
 msgid "The native currency of the Symbol blockchain."
 msgstr "Symbol ブロックチェーンの基軸通貨です。"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-26 09:18+0000\n"
 "PO-Revision-Date: 2021-03-02 10:55+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -94,6 +94,17 @@ msgid ""
 msgstr ""
 ":ref:`nodekeylinktransaction` を使用してノードを介してハーベスティングをするために、メインアカウント **M** "
 "をノードにリンクします。"
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:35
+msgid ""
+"Request the node to add the remote account **R** as a harvester using a "
+":ref:`persistentdelegationrequesttransaction`. Conversely, if the node "
+"configuration is accessible, the remote account's private key can be set in "
+"the node configuration."
+msgstr ""
+"ハーベスタとしてリモートアカウント **R** を追加するために "
+":ref:`persistentdelegationrequesttransaction` "
+"を使用して、ノードにリクエストを行います。ノード構成にアクセスできる場合は、リモートアカウントの秘密鍵をノードの構成に設定できます。"
 
 #: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:37
 msgid ""
@@ -187,6 +198,14 @@ msgstr ""
 msgid "Guide"
 msgstr "ガイド"
 
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:63
+msgid ""
+"Create an :ref:`accountkeylinktransaction` to **delegate M's importance to "
+"R**. Sign the transaction with **M** and announce it to the network."
+msgstr ""
+"**M のインポータンスを R へ委譲** するための :ref:`accountkeylinktransaction` を作成します。 **M** "
+"でトランザクションに署名し、ネットワークにアナウンスします。"
+
 #: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:76
 msgid ""
 "Create a :ref:`vrfkeylinktransaction` to **link M to a VRF key**. Sign the "
@@ -194,6 +213,14 @@ msgid ""
 msgstr ""
 "**M を VRF キーへリンク** するための :ref:`vrfkeylinktransaction` を作成します。 **M** "
 "でトランザクションに署名し、ネットワークにアナウンスします。"
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:89
+msgid ""
+"Create a :ref:`nodekeylinktransaction` to **link M to a node's TLS key**. "
+"Sign the NodeKeyLinkTransaction with **M** and announce it to the network."
+msgstr ""
+"**M をノードの TLS キーへリンク** するための :ref:`nodekeylinktransaction` を作成します。 **M** で "
+"NodeKeyLinkTransaction に署名し、ネットワークにアナウンスします。"
 
 #: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:93
 msgid ""
@@ -211,8 +238,8 @@ msgstr ""
 "``nodePublicKey`` フィールドで提供します。"
 
 #: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:95
-msgid "Just point your browser to ``http://<NODE_URL>:3000/node/info``."
-msgstr "ブラウザで ``http://<NODE_URL>:3000/node/info`` を開きます。"
+msgid "Just point your browser to :term:`NODE_URL` ``/node/info``."
+msgstr "ブラウザで :term:`NODE_URL` ``/node/info`` を開きます。"
 
 #: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:108
 msgid ""
@@ -232,6 +259,29 @@ msgid ""
 msgstr ""
 "**ノード所有者** の場合は、フィールドにリモートアカウントの秘密署名鍵を :ref:`node-properties-harvesting-"
 "configuration` の ``harvesterSigningPrivateKey`` 設定するだけです。"
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:112
+msgid ""
+"**Otherwise**, a :ref:`persistentdelegationrequesttransaction` must be used."
+" As the private key will be shared in an **encrypted message**, only the "
+"node will be able to see it. Moreover, **R** does not own any mosaic."
+msgstr ""
+"**それ以外の場合** :ref:`persistentdelegationrequesttransaction` を使用しなければなりません。秘密鍵は"
+" **暗号化メッセージ** で共有されるため、ノードだけが平文を確認できます。さらに **R** はモザイクを保有していません。"
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:114
+msgid ""
+"The harvesting fees will be sent to **M** as it has established a link with "
+"the node through the :ref:`nodekeylinktransaction`."
+msgstr ""
+"ハーベスティング手数料は :ref:`nodekeylinktransaction` を介してノードとリンクを確立しているので、**M** へ送られます"
+
+#: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:116
+msgid ""
+"Sign the :ref:`persistentdelegationrequesttransaction` with **M** and "
+"announce it to the network."
+msgstr ""
+"**M** で :ref:`persistentdelegationrequesttransaction` に署名して、ネットワークへアナウンスします。"
 
 #: ../../source/guides/harvesting/activating-delegated-harvesting-manual.rst:129
 msgid ""
@@ -324,7 +374,7 @@ msgid ""
 "You can retrieve this list using the ``getUnlockedAccount`` `API endpoint "
 "<https://docs.symbolplatform.com/symbol-"
 "openapi/v0.10.6/#operation/getUnlockedAccount>`_ (point your browser to "
-"``http://<NODE_URL>:3000/node/unlockedaccount``) or the `Typescript SDK "
+":term:`NODE_URL` ``/node/unlockedaccount``) or the `Typescript SDK "
 "<https://docs.symbolplatform.com/symbol-sdk-typescript-"
 "javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_"
 " for example). It contains the public keys of all registered delegated "
@@ -332,8 +382,8 @@ msgid ""
 "appear here."
 msgstr ""
 "このリストは ``getUnlockedAccount`` `API エンドポイント <https://docs.symbolplatform.com"
-"/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ (ブラウザで "
-"``http://<NODE_URL>:3000/node/unlockedaccount`` を開きます) または `Typescript SDK "
+"/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ (ブラウザで  "
+":term:`NODE_URL` ``/node/unlockedaccount`` を開きます) または `Typescript SDK "
 "<https://docs.symbolplatform.com/symbol-sdk-typescript-"
 "javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_"
 " for example) を使用して取得できます。これにはノードに登録している、すべてのデリゲートハーベスタ公開鍵が含まれているため "

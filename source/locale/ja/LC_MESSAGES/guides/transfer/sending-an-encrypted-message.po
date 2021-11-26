@@ -5,16 +5,16 @@
 # 
 # Translators:
 # David García <dgarcia360@outlook.com>, 2019
-# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020
+# Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-26 09:18+0000\n"
 "PO-Revision-Date: 2019-09-30 13:40+0000\n"
-"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2020\n"
+"Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,50 +96,55 @@ msgid ""
 msgstr ""
 "新しいアカウントを２つ作成する: Alice と証明書用アカウントを :ref:`CLI ツール <wallet-cli>` を使用して作成します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:57
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:37
+msgid "Enter the :term:`NODE_URL` to use to access the network."
+msgstr "ネットワークへのアクセスに使用する :term:`NODE_URL` を入力します。"
+
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:59
 msgid "Method #01: Using the SDK"
 msgstr "方法 #01: SDK を使用する"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:60
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:62
 msgid "Encrypt the message"
 msgstr "メッセージの暗号化"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:62
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:64
 msgid ""
 "Create an **encrypted message** for the certificate, signing it with Alice's"
 " account."
 msgstr "証明書用の **暗号化メッセージ** を作成して Alice のアカウントで署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:76
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:78
 msgid ""
 "Attach the encrypted message to a **TransferTransaction**, setting the "
 "certificate address as the recipient."
 msgstr "**TransferTransaction** に暗号化メッセージを添付して、受信者には証明書アドレスを設定します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:90
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:92
 msgid "Sign the transaction with Alice's account."
 msgstr "Alice のアカウントでトランザクションに署名します。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:92
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:94
 msgid ""
 "To make the transaction only valid for your network, include the network "
-"generation hash. Open ``nodeUrl + '/node/info'`` in a new browser tab and "
-"copy the ``meta.networkGenerationHash`` value."
+"generation hash. Open :term:`NODE_URL` ``/node/info`` in a new browser tab "
+"and copy the ``meta.networkGenerationHash`` value."
 msgstr ""
-"自分のネットワークでのみ有効なトランザクションを作るには、ネットワークジェネレーションハッシュを含めます。新しいブラウザタブで ``nodeUrl + "
-"'/node/info'`` を開いて ``meta.networkGenerationHash`` の値をコピーします。"
+"自分のネットワークでのみ有効なトランザクションを作るには、ネットワークジェネレーションハッシュを含めます。新しいブラウザタブで "
+":term:`NODE_URL` ``/node/info`` を開いて ``meta.networkGenerationHash`` "
+"の値をコピーします。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:106
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:108
 msgid ""
 "Once signed, :doc:`announce the transaction <../../concepts/transaction>` to"
 " the network."
 msgstr "署名したら :doc:`トランザクションをネットワークへアナウンス <../../concepts/transaction>` できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:121
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:123
 msgid "Decrypt the message"
 msgstr "メッセージの復号"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:123
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:125
 msgid ""
 "After the transaction gets confirmed, fetch it using the transaction hash "
 "output from (3). You can now **decrypt the message** using either the "
@@ -149,7 +154,7 @@ msgstr ""
 "で出力されたトランザクションハッシュを使用してトランザクションを取得します。証明書アカウントまたはアドレスアカウントを使用して **メッセージを復号**"
 " できます。"
 
-#: ../../source/guides/transfer/sending-an-encrypted-message.rst:138
+#: ../../source/guides/transfer/sending-an-encrypted-message.rst:140
 msgid ""
 "If you managed to read the message, try to decrypt it using another "
 "unrelated account to ensure that only the defined participants can read the "

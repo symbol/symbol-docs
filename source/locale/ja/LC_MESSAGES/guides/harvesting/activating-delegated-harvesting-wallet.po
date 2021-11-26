@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-26 09:18+0000\n"
 "PO-Revision-Date: 2021-03-02 10:55+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -152,10 +152,14 @@ msgstr ""
 "node-account>` ファイルにあります。"
 
 #: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:64
-msgid "A node URL looks like:"
-msgstr "このようなノード URL です:"
+msgid ""
+"Keep in mind, though, that when delegating harvesting to a non-API node the "
+"**Harvesting Status** indicator will not work."
+msgstr ""
+"ただし、非 API ノードにハーベスティングをデリゲートする場合は **ハーベスティングステータス** "
+"インジケーターが機能しないことに注意してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:70
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:66
 msgid ""
 "**Select a node from the list and click on the \"Link all keys\" button** "
 "(You will probably need to scroll down past the \"Keys Info\" section)."
@@ -163,23 +167,23 @@ msgstr ""
 "**リストからノードを選択し \"すべてのキーをリンク\" ボタンをクリックします** ( \"キー情報\" "
 "セクションよりも下へスクロールする必要があるでしょう)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:72
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:68
 msgid ""
 "You will be asked to sign an :doc:`../../concepts/aggregate-transaction`:"
 msgstr ":doc:`../../concepts/aggregate-transaction` への署名を求められます:"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:79
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:75
 msgid ""
 "This aggregate transaction registers :ref:`3 different keys <keypair>` to "
 "your account which are needed for harvesting."
 msgstr "このアグリゲートトランザクションはハーベスティングに必要な :ref:`3 種類のキー <keypair>` をアカウントに登録します。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:81
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:103
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:77
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:99
 msgid "**Enter your password and click \"Confirm\"**."
 msgstr "**パスワードを入力して \"Confirm\" をクリックします。**"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:83
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:79
 msgid ""
 "The Desktop Wallet will then **sign the transaction** and **announce it to "
 "the network**. After a little while (shouldn't take longer than 30 seconds),"
@@ -188,13 +192,13 @@ msgstr ""
 "デスクトップウォレットは **トランザクションに署名** を行い **ネットワークにアナウンス** します。しばらく (30 "
 "秒以上かかることはありません) すると画面が更新されます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:90
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:86
 msgid ""
 "You can see that the **Harvesting status** has changed to **🟡 KEYS LINKED** "
 "and the different keys appear in the form."
 msgstr "**ハーベスティングステータス** が **🟡 キーリンク済み** に変更され、各キーがフォームに表示されているでしょう。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:92
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:88
 msgid ""
 "All that is left now is to send a "
 ":ref:`persistentdelegationrequesttransaction` which is the actual request to"
@@ -203,17 +207,17 @@ msgstr ""
 "あとは実際のリクエストである :ref:`persistentdelegationrequesttransaction` "
 "をノードへ送信することだけです。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:94
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:90
 msgid "**Click on the \"Activate\" button**."
 msgstr "**\"有効化\" ボタンをクリック**"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:96
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:92
 msgid ""
 "Your password is needed again to encrypt the persistent delegation message "
 "sent to the node:"
 msgstr "ノードに送信する永続的デリゲートメッセージを暗号化するには、パスワードが再度必要になります。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:105
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:101
 msgid ""
 "Your password is needed one last time to sign and announce the persistent "
 "delegation request (which is a special type of :doc:`transfer "
@@ -222,11 +226,11 @@ msgstr ""
 "永続的デリゲートリクエスト (特別なタイプの :doc:`転送 <../../concepts/transfer-transaction>` "
 "トランザクション) に署名してアナウンスするには、最後にもう一度パスワードが必要です。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:112
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:108
 msgid "**Enter your password and click \"Confirm\"** (again)."
 msgstr "**パスワードを入力して \"確認\" をクリックする** (もう一度)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:114
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:110
 msgid ""
 "Once you receive the confirmation message (shouldn't take longer than 30 "
 "seconds), the **Harvesting status** should change to **🟡 ACTIVATION IN "
@@ -234,7 +238,7 @@ msgid ""
 msgstr ""
 "承認メッセージを受信すると (30秒以上かかることはありません) **ハーベスティングステータス** は **🟡 有効化が進行中** に変わります。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:121
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:117
 msgid ""
 "At this point it is up to the node to accept the request and add your "
 "account as a harvester. When this happens, the **Harvesting status** will "
@@ -243,7 +247,7 @@ msgstr ""
 "この時点で、リクエストを受信して、アカウントをハーベスタとして追加するのはノード次第です。これが発生すると **ハーベスティングステータス** は "
 "**🟢 有効** に変わります。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:128
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:124
 msgid ""
 "Delegated harvesting is now enabled and you should start collecting fees, at"
 " a rate proportional to your node's :ref:`importance score <importance-"
@@ -252,7 +256,7 @@ msgstr ""
 "デリゲートハーベスティングが有効になり、ノードの :ref:`インポータンススコア <importance-calculation>` "
 "に比例した割合で、手数料の徴収を開始します。 (注意事項について、以下の **さいごに** セクションを参照してください)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:132
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:128
 msgid ""
 "When requesting delegation through a "
 ":ref:`persistentdelegationrequesttransaction` instead of directly "
@@ -266,7 +270,7 @@ msgstr ""
 "ノードに依存しています。要求に応じるか、その状態について嘘をつき、誤解を招く **ハーベスティングステータス** "
 "インジケータを提供するかは、完全にノード次第です。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:134
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:130
 msgid ""
 "Therefore, there is no **reliable** way to know if your account has become a"
 " harvester or not besides waiting to see if your account starts receiving "
@@ -275,7 +279,7 @@ msgstr ""
 "したがって、アカウントがハーベスターになったかどうかを知るための **信頼性のある** "
 "方法は、アカウントがハーベスト手数料を受け取り始めるのを待つ以外にはありません。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:136
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:132
 msgid ""
 "You can find more details about this process in the :doc:`manual version of "
 "this guide <activating-delegated-harvesting-manual>`."
@@ -283,11 +287,11 @@ msgstr ""
 "このプロセスの詳細については :doc:`このガイドの手動版 <activating-delegated-harvesting-manual>` "
 "を参照してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:140
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:136
 msgid "Troubleshooting"
 msgstr "トラブルシューティング"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:142
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:138
 msgid ""
 "The **Harvesting status** indicator can help you find out the state of your "
 "account's delegated harvesting:"
@@ -341,11 +345,11 @@ msgid ""
 "arriving, depending on your account's importance."
 msgstr "ハーベスティングは有効です。あなたのアカウントのインポータンスに依存した、ハーベスト済みブロックとそれらの手数料を受け取り始めます。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:157
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:153
 msgid "Final words"
 msgstr "最後に"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:159
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:155
 msgid ""
 "**Accounts with higher importance are selected more often to perform "
 "harvesting**. Even if you successfully register as a delegated harvester "
@@ -356,7 +360,7 @@ msgstr ""
 " :ref:`インポータンススコア <importance-calculation>` "
 "が十分に高くない限りは、ブロックをハーベスティングすることはありません。 (報酬も受け取りません)"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:161
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:157
 msgid ""
 "**Importance score calculation does not happen continuously**. By default, "
 "account importance scores are recalculated every 1440 blocks (about every 12"
@@ -367,7 +371,7 @@ msgstr ""
 "時間ごと) に再計算されます。 :ref:`ネットワークプロパティの設定 <config-network-properties>` ガイドの "
 "``importanceGrouping`` プロパティを参照してください。"
 
-#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:163
+#: ../../source/guides/harvesting/activating-delegated-harvesting-wallet.rst:159
 msgid ""
 "Finally, as explained in the note above, **announcing a Harvesting "
 "Delegation request does not guarantee being added as a delegated "

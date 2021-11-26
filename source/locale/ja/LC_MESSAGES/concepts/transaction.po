@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-11-26 09:18+0000\n"
 "PO-Revision-Date: 2019-02-22 09:05+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -160,11 +160,11 @@ msgstr "サイズ、署名、および署名者以外のトランザクション
 
 #: ../../source/concepts/transaction.rst:65
 msgid ""
-"Get the nemesis block ``generation hash``. You can query ``nodeUrl + "
-"'/node/info'`` and copy ``meta.networkGenerationHash`` value."
+"Get the nemesis block ``generation hash``. You can query :term:`NODE_URL` "
+"``/node/info'`` and copy ``meta.networkGenerationHash`` value."
 msgstr ""
-"ネメシスブロックの ``ジェネレーションハッシュ`` を取得してください。 ``nodeUrl + '/node/info'`` にアクセスして "
-"``meta.networkGenerationHash`` の値をコピーします。"
+"ネメシスブロックの ``generation hash`` を取得してください。 :term:`NODE_URL` ``/node/info'`` "
+"にアクセスして ``meta.networkGenerationHash`` の値をコピーします。"
 
 #: ../../source/concepts/transaction.rst:66
 msgid "Prepend the nemesis block generation hash to the signing bytes."
