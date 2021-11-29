@@ -11,9 +11,9 @@ Aggregate transactions merge multiple transactions into one, allowing **trustles
     :align: center
     :width: 450px
 
-    Example of an AggregateTransaction between two participants
+    Example of an Aggregate Transaction between two participants. Alice transfers Euros and the ticket vendor transfers the tickets **at the same time**. The network guarantees that both transactions succeed or none does.
 
-When all involved :doc:`accounts <../concepts/account>` have cosigned the AggregateTransaction, all the inner transactions are executed at the same time.
+Instead of signing each inner transaction individually, the aggregate transaction gathers all required signatures (called then **cosignatures**). Only when all necessary signatures have been provided the aggregate transaction can be processed, and all inner transactions are executed simultaneously.
 
 |codename|'s :ref:`public network <config-network-properties>` supports aggregate transaction containing up to **100** inner transactions involving up to **25** different cosignatories (as defined by the ``maxTransactionsPerAggregate`` and ``maxCosignaturesPerAggregate`` properties).
 Other aggregate transactions are not allowed as inner transactions.
@@ -24,10 +24,10 @@ Other aggregate transactions are not allowed as inner transactions.
 Aggregate complete
 ******************
 
-An AggregateTransaction is  **complete** when all the required participants have signed it.
+An Aggregate Transaction is  **complete** when it requires signatures from multiple participants and **all of them are available when the transaction is announced**.
 
 The cosigners can sign the transaction without using the blockchain.
-Once it has all the required signatures, one of them can announce it to the network.
+Once it has all the required signatures, any one of them can announce it to the network.
 If the inner transaction setup is valid, and there is no validation error, the transactions will get executed at the same time.
 
 Aggregate complete transactions enable adding more transactions per block by gathering multiple inner transactions.
@@ -38,14 +38,15 @@ Aggregate complete transactions enable adding more transactions per block by gat
 Aggregate bonded
 ****************
 
-An AggregateTransaction is **bonded** when it requires signatures from other participants.
+An Aggregate Transaction is **bonded** when it requires signatures from multiple participants and **NOT all of them are available when the transaction is announced**.
 
-.. note:: Before announcing an **AggregateBondedTransaction**, an account must announce and get confirmed a :ref:`hashlocktransaction` locking ``10`` |networkcurrency|.
+Once an aggregate bonded is announced, it enters the **partial state** and the cosigners whose signatures are still required are **notified through their wallets**.
 
-Once an aggregate bonded is announced, it reaches partial state—where it can live up to ``2 days``—and notifies its status through WebSockets or HTTP API calls.
+When a cosigner signs the transaction and announces its aggregate bonded :ref:`cosignature <cosignature>`, the network checks if all the required signatures are available. If so, the transaction moves to the **unconfirmed state** meaning that it will be **confirmed** and included in the next block if everything is correct.
 
-Every time a cosignatory signs the transaction and announces an aggregate bonded :ref:`cosignature <cosignature>`, the network checks if all the required cosigners have signed.
-When all signatures are acquired, the transaction changes to unconfirmed state until the network includes it in a block.
+Transactions can remain in the partial state for up to **48 hours**: This is the deadline all cosigners have to provide their signatures before the aggregate bonded transaction expires.
+
+.. note:: Before announcing an **Aggregate Bonded Transaction**, an account must announce and get confirmed a :ref:`hashlocktransaction` locking **10 XYM**. This is refunded when the transaction is confirmed and serves as an anti-SPAM mechanism.
 
 .. figure:: ../resources/images/diagrams/aggregate-bonded-transaction-cycle.png
     :width: 900px
