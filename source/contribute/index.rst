@@ -2,7 +2,7 @@
 Contribute
 ##########
 
-|codename| is an |open-source| project:
+|codename| is an open source project:
 
 * See the list of :doc:`authors`.
 * Reach our community joining the official |discord| server.

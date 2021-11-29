@@ -288,10 +288,6 @@ rst_prolog = """
 
    <a href="https://github.com/symbol" target="_blank">GitHub</a>
 
-.. |open-source| raw:: html
-
-   <a href="https://github.com/symbol" target="_blank">open source</a>
-
 .. |symbol-bootstrap| raw:: html
 
    <a href="https://github.com/symbol/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
