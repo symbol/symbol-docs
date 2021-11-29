@@ -128,6 +128,21 @@ These are the properties of ``XYM``:
 
    **Always treat these two IDs as equivalent.**
 
+.. _exchange-aggregate-transactions:
+
+Aggregates
+==========
+
+Symbol has a novel feature called :ref:`aggregate-transaction` which allows bundling multiple inner transactions into a single one.
+
+Therefore, when monitoring incoming **Transfer** transactions you must remember to also look inside all **Aggregate** transactions (Both **Aggregate Complete** and **Aggregate Bonded** transactions). The :ref:`example code given below <exchanges-monitoring>` shows a way of achieving this.
+
+.. caution::
+
+   When Aggregate transactions are **not** monitored, inner transfer transactions **are not detected**, leading to lots of **reports of lost funds**.
+
+   This is specially relevant for :doc:`multi-signature accounts <../../concepts/multisig-account>`, where all transactions are wrapped in an Aggregate.
+
 .. _exchange-avoid-rollbacks:
 
 Avoiding rollbacks
@@ -212,14 +227,18 @@ Users perform deposits by announcing a regular transfer transaction using their 
 
 The code proposed next addresses all these issues by monitoring the blockchain.
 
+.. _exchanges-monitoring:
+
 Monitoring
 ==========
 
 The blockchain is polled periodically and all incoming transactions since last poll are processed in a batch:
 
-1. All transactions added to the blockchain **since** the last check and **up to** the latest finalized block are examined, looking for the ones destined to the Central Exchange Wallet. This can be done efficiently with a single Symbol API call.
+1. All **Transfer** transactions added to the blockchain **since** the last check and **up to** the latest finalized block are examined, looking for the ones destined to the Central Exchange Wallet. This can be done efficiently with a single Symbol API call.
 
-   If Finalization is not desired (see the :ref:`exchange-avoid-rollbacks` section above) you can search up to 20 blocks before the current chain height, for example.
+   - Transfer transactions embedded in **Aggregate Complete** and **Aggregate Bonded** transactions must also be examined (see the :ref:`exchange-aggregate-transactions` section above). This is handled in the example code by the ``embedded: true`` parameter in the `searchConfirmedTransactions <https://docs.symbolplatform.com/symbol-openapi/v1.0.4/#operation/searchConfirmedTransactions>`__ call.
+
+   - If Finalization is not desired (see the :ref:`exchange-avoid-rollbacks` section above) you can search up to 20 blocks before the current chain height, for example.
 
 2. Filter out transactions that:
 
