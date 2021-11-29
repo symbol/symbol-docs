@@ -8,7 +8,7 @@ CLI
     :align: center
     :width: 600px
 
-|cli| is an |open-source| command-line interface to interact with the blockchain.
+|cli| is an Open Source command-line interface to interact with the blockchain. The source code is available at |github|.
 
 ************
 Installation
