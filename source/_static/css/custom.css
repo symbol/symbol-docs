@@ -1115,6 +1115,11 @@ dt:target, span.highlighted {
     height: 150px;
     overflow: hidden;
     background: black;
+    transition: box-shadow 0.25s;
+}
+
+.content .card-list li:hover {
+    box-shadow: 0 0 8px 8px #977BFF;
 }
 
 .content .card-list .section {
