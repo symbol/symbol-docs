@@ -351,7 +351,7 @@ body>.container {
     width: 100%;
 }
 
-.navbar-brand>img {
+.navbar-default .navbar-brand::before {
     display: inline;
 }
 
@@ -1111,15 +1111,16 @@ dt:target, span.highlighted {
     border: 2px solid #977BFF;
     border-radius: 16px;
     box-shadow: 0 0 8px #977BFF;
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     overflow: hidden;
-    background: black;
+    background: #170A29;
     transition: box-shadow 0.25s;
 }
 
 .content .card-list li:hover {
     box-shadow: 0 0 8px 8px #977BFF;
+    background: #977BFF80;
 }
 
 .content .card-list .section {
@@ -1127,11 +1128,11 @@ dt:target, span.highlighted {
 }
 
 .content .card-list img {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 150px;
     object-fit: cover;
     border-bottom: 2px solid #977BFF;
-    background-color: #170A29;
+    background-color: transparent;
 }
 
 .content .card-list a {

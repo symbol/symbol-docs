@@ -180,7 +180,7 @@ html_theme_options = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "resources/images/symbol-logo.svg"
+html_logo = "resources/images/symbol-wordmark.svg"
 
 # Docs Title
 html_title = 'Symbol Documentation'
