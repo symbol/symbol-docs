@@ -6,7 +6,7 @@
 
 .. rst-class:: card-list
 
-    - .. card:: getting-started/what-is-symbol.html resources/images/handshake.png START
+    - .. card:: getting-started/what-is-symbol.html resources/images/start-adventure.png START
     - .. card:: concepts/overview.html resources/images/assembly-line.png TECHNOLOGY
     - .. card:: guides/index.html resources/images/book-stack.png GUIDES
     - .. card:: handbook/vision.html resources/images/symbolheart.png VISION
