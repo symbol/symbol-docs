@@ -2,7 +2,7 @@
 Suggesting documentation changes
 ################################
 
-The |sitename| is an open source project and we love to receive contributions from our community—you!
+|sitename| is an open source project and we love to receive contributions from our community: you!
 There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or
 writing new pieces of documentation which can be incorporated into the docs itself.
 
@@ -51,13 +51,13 @@ If you find yourself wishing for content that does not exist in the |sitename|, 
 Most of the documentation and guides that the |sitename| has today have been added because our users saw the need.
 Open an |issue| on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
 
-If the improvement is not related to documentation, but with a specific project, please check CONTRIBUTING.md in the project repository.
+If the improvement is not related to documentation, but with a specific project, please check ``CONTRIBUTING.md`` in the project repository.
 
 *******************************************
 Contributing code and documentation changes
 *******************************************
 
-To expand and improve the |sitename|, please find or open an |issue| about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
+To expand and improve |sitename|, please find or open an |issue| about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
 
 We enjoy working with contributors to get their pull-requests accepted.
 
@@ -89,13 +89,13 @@ Once your changes and tests are ready to submit for review:
 
 1. Test your changes.
 
-Run ``make livehtml`` and preview your changes.
+   Run ``make livehtml`` and preview your changes.
 
 2. Submit a pull request.
 
-Push your local changes to your forked copy of the repository and |pull-request|. In the pull request, choose a title which sums up the changes that you have made, and in the body provide more details about what your changes do. Also mention the number of the issue where discussion has taken place, eg "Closes #123".
+   Push your local changes to your forked copy of the repository and |pull-request|. In the pull request, choose a title which sums up the changes that you have made, and in the body provide more details about what your changes do. Also mention the number of the issue where discussion has taken place, eg "Closes #123".
 
-Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into symbol-docs.
+   Then sit back and wait. There will probably be a discussion about the pull request and, if any changes are needed, we would love to work with you to get your pull request merged into symbol-docs.
 
 Contributing License Notice
 ===========================
@@ -104,7 +104,7 @@ When you contribute code, you affirm that the contribution is your original work
 
 Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
 
-*CONTRIBUTING.md* is based on `CONTRIBUTING-template.md <https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md>`_ , `elasticsearch/CONTRIBUTING <https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and `spark/CONTRIBUTING <https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_.
+``CONTRIBUTING.md`` is based on `CONTRIBUTING-template.md <https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md>`_ , `elasticsearch/CONTRIBUTING <https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md>`_ and `spark/CONTRIBUTING <https://github.com/apache/spark/blob/master/CONTRIBUTING.md>`_.
 
 .. |issue| raw:: html
 

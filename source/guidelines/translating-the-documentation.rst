@@ -37,30 +37,32 @@ Follow these instructions to download the latest translations from Transifex.
 
 1. Install ``transifex-client``.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-  pip install transifex-client
+      pip install transifex-client
 
 2. Download the latest translated files. Replace ``<lang>`` with your `language code <https://en.wikipedia.org/wiki/ISO_639-1>`_.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-  tx pull --mode onlyreviewed --language <lang>
+      tx pull --mode onlyreviewed --language <lang>
 
 3. Compile the docs for the target language.
 
-**Linux/Mac**
+   .. tabs::
 
-.. code-block:: bash
+      .. tab:: Linux/Mac
 
-  make -e SPHINXOPTS="-D language='<lang>'" livehtml
+         .. code-block:: bash
 
-**Windows**
+            make -e SPHINXOPTS="-D language='<lang>'" livehtml
 
-.. code-block:: bash
+      .. tab:: Windows
 
-  set SPHINXOPTS=-D language=<lang>
-  .\make.bat html
+         .. code-block:: bash
+
+            set SPHINXOPTS=-D language=<lang>
+            make.bat html
 
 Push new literals
 =================
@@ -71,22 +73,24 @@ Follow these instructions to publish updated source literals to Transifex.
 
 1. Generate the literals. For each documentation file, a .po file will be created under ``build/gettext``.
 
-**Linux/Mac**
+   .. tabs::
 
-.. code-block:: bash
+      .. tab:: Linux/Mac
 
-  make gettext
+         .. code-block:: bash
 
-**Windows**
+            make gettext
 
-.. code-block:: bash
+      .. tab:: Windows
 
-  .\make.bat gettext
+         .. code-block:: bash
+
+            make.bat gettext
 
 2. Push the source literals to Transifex.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    tx push --source
+      tx push --source
 
 :doc:`Submit your changes <suggesting-changes>` into the symbol-docs repository.
