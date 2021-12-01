@@ -46,21 +46,21 @@ Installation
 
 1. Clone the ``catbuffer-generators`` repository.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    git clone https://github.com/symbol/catbuffer-generators
+      git clone https://github.com/symbol/catbuffer-generators
 
 2. Install the package requirements.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    pip install -r requirements.txt
+      pip install -r requirements.txt
 
 3. Clone the ``catbuffer-schemas`` repository inside the ``catbuffer-generators`` folder.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    git clone https://github.com/symbol/catbuffer-schemas
+      git clone https://github.com/symbol/catbuffer-schemas
 
 *****
 Usage
@@ -73,12 +73,12 @@ For example, run the following command to generate C++ transaction builders for 
 
 .. code-block:: bash
 
-    python main.py --schema symbol/transfer/transfer.cats --generator cpp_builder
+   python main.py --schema symbol/transfer/transfer.cats --generator cpp_builder
 
 You can also generate code for all the schemas running the following command under the ``catbuffer-generators`` directory:
 
 .. code-block:: bash
 
-    python ../scripts/generate_all.sh cpp_builder
+   python ../scripts/generate_all.sh cpp_builder
 
 The generator creates a new file for every schema under the ``catbuffer/_generated/cpp_builder`` folder.
