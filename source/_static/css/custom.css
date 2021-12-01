@@ -1119,7 +1119,7 @@ dt:target, span.highlighted {
 }
 
 .content .card-list li:hover {
-    box-shadow: 0 0 8px 8px #977BFF;
+    box-shadow: 0 0 8px 8px #977BFF80;
     background: #977BFF80;
 }
 
@@ -1137,7 +1137,8 @@ dt:target, span.highlighted {
 
 .content .card-list a {
     font-family: "Rajdhani";
-    font-size: 2em;
+    font-size: 1.5em;
+    line-height: 2em;
     font-weight: bold;
     color: #CCC;
 }
