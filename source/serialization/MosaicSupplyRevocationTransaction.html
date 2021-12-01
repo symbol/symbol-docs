@@ -1,10 +1,9 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
-    <tr><td class="side-info-icon">&varr;</td><td>Size: 212 bytes = 0xd4</td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/lock_secret/secret_lock.cats#L29">schema</a></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/lock_secret/src/model/SecretLockTransaction.h#L64">catapult model</a></td></tr>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 171 bytes = 0xab</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/mosaic/mosaic_supply_revocation.cats#L13">schema</a></td></tr>
     </table></div>
-<p>Start a token swap between different chains. <br/>Use a <a href="/serialization#secretlocktransaction" title="Start a token swap between different chains.">SecretLockTransaction</a> to transfer mosaics between two accounts. The mosaics sent remain locked until a valid <a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a> unlocks them. <br/>The default expiration date is <strong>365 days</strong> after announcement (See the <code class="docutils literal">maxSecretLockDuration</code> network property). If the lock expires before a valid <a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a> is announced the locked amount goes back to the initiator of the <a href="/serialization#secretlocktransaction" title="Start a token swap between different chains.">SecretLockTransaction</a>. </p>
+<p>Revoke mosaic. </p>
 </td></tr></table>
 
 <div class="big-table6">
@@ -19,7 +18,7 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">TRANSACTION_TYPE</code></div>
    <div><a href="/serialization#transactiontype" title="Enumeration of Transaction types">TransactionType</a></div>
-   <div class="description"><b>const</b> <code class="docutils literal">SECRET_LOCK</code> (<code class="docutils literal">0x4152</code>)<br/></div>
+   <div class="description"><b>const</b> <code class="docutils literal">MOSAIC_SUPPLY_REVOCATION</code> (<code class="docutils literal">0x434d</code>)<br/></div>
    <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a><span style="float:right">128 bytes = 0x80</span></div>
    <div class="indentation-cell-h"></div><div style="grid-column: 2 / span 5;" class="big-table-section"><a href="/serialization#sizeprefixedentity" title="Serialization of an entity that has its size stated as a prefix (header).">SizePrefixedEntity</a><span style="float:right">4 bytes = 0x4</span></div>
    <div class="indentation-cell">&nbsp;</div>
@@ -84,35 +83,17 @@
    <div><code class="docutils literal">deadline</code></div>
    <div><a href="/serialization#timestamp" title="Number of milliseconds elapsed since the creation of the Nemesis block.">Timestamp</a></div>
    <div class="description"><p>transaction deadline </p></div>
-   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#secretlocktransactionbody" title="Shared content between SecretLockTransaction and EmbeddedSecretLockTransaction.">SecretLockTransactionBody</a><span style="float:right">81 bytes = 0x51</span></div>
+   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#mosaicsupplyrevocationtransactionbody" title="Shared content between MosaicSupplyRevocationTransaction and EmbeddedMosaicSupplyRevocationTransaction.">MosaicSupplyRevocationTransactionBody</a><span style="float:right">40 bytes = 0x28</span></div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
-   <div><code class="docutils literal">recipient_address</code></div>
+   <div><code class="docutils literal">source_address</code></div>
    <div><a href="/serialization#unresolvedaddress" title="Either an Address or a NamespaceId.">UnresolvedAddress</a></div>
-   <div class="description"><p><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a> that receives the funds once successfully unlocked by a <a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a>. </p></div>
-   <div class="indentation-cell">&nbsp;</div>
-   <div>&nbsp;</div>
-   <div>&nbsp;</div>
-   <div><code class="docutils literal">secret</code></div>
-   <div><a href="/serialization#hash256" title="A 32-byte (256 bit) hash.">Hash256</a></div>
-   <div class="description"><p>Hashed proof. </p></div>
+   <div class="description"><p><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a> from which tokens should be revoked. </p></div>
    <div class="indentation-cell">&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">mosaic</code></div>
    <div><a href="/serialization#unresolvedmosaic" title="A quantity of a certain mosaic, specified either through a MosaicId or an alias.">UnresolvedMosaic</a></div>
-   <div class="description"><p>Locked mosaics. </p></div>
-   <div class="indentation-cell">&nbsp;</div>
-   <div>&nbsp;</div>
-   <div>&nbsp;</div>
-   <div><code class="docutils literal">duration</code></div>
-   <div><a href="/serialization#blockduration" title="A time lapse, expressed in number of blocks.">BlockDuration</a></div>
-   <div class="description"><p>Number of blocks to wait for the <a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a>. </p></div>
-   <div class="indentation-cell">&nbsp;</div>
-   <div>&nbsp;</div>
-   <div>&nbsp;</div>
-   <div><code class="docutils literal">hash_algorithm</code></div>
-   <div><a href="/serialization#lockhashalgorithm" title="Enumeration of lock hash algorithms.">LockHashAlgorithm</a></div>
-   <div class="description"><p>Algorithm used to hash the proof. </p></div>
+   <div class="description"><p>Revoked mosaic and amount. </p></div>
 </div>

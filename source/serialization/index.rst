@@ -7,6 +7,7 @@ The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repositor
 .. raw:: html
 
    <style>.bs-sidenav ul ul ul > li {display: none;}</style>
+   <div id="serialization">
 
 Basic Types
 ***********
@@ -852,6 +853,22 @@ EmbeddedMosaicSupplyChangeTransaction
 .. raw:: html
    :file: EmbeddedMosaicSupplyChangeTransaction.html
 
+.. _mosaicsupplyrevocationtransaction:
+
+MosaicSupplyRevocationTransaction
+=================================
+
+.. raw:: html
+   :file: MosaicSupplyRevocationTransaction.html
+
+.. _embeddedmosaicsupplyrevocationtransaction:
+
+EmbeddedMosaicSupplyRevocationTransaction
+=========================================
+
+.. raw:: html
+   :file: EmbeddedMosaicSupplyRevocationTransaction.html
+
 .. _multisigaccountmodificationtransaction:
 
 MultisigAccountModificationTransaction
@@ -1210,6 +1227,14 @@ MosaicSupplyChangeTransactionBody
 .. raw:: html
    :file: MosaicSupplyChangeTransactionBody.html
 
+.. _mosaicsupplyrevocationtransactionbody:
+
+MosaicSupplyRevocationTransactionBody
+=====================================
+
+.. raw:: html
+   :file: MosaicSupplyRevocationTransactionBody.html
+
 .. _multisigaccountmodificationtransactionbody:
 
 MultisigAccountModificationTransactionBody
@@ -1290,3 +1315,6 @@ TransferTransactionBody
 .. raw:: html
    :file: TransferTransactionBody.html
 
+.. raw:: html
+
+   </div>

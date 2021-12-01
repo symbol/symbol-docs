@@ -13,7 +13,7 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">size</code></div>
    <div>byte[4]</div>
-   <div class="description"><p>Entity size in bytes. </p></div>
+   <div class="description"><p>Entity size in bytes. <br/>This size includes the header and the full payload of the entity. I.e, the size field matches the size reported in the structure documentation (plus the variable part, if there is any). </p></div>
 </div>
 <details><summary>Included in:</summary><div class="tabulated-list"><div>
 <a href="/serialization#blockheader" title="binary layout for a block header">BlockHeader</a></div><div><a href="/serialization#receipt" title="Receipts provide proof for every state change not retrievable from the block.">Receipt</a></div><div><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a></div><div><a href="/serialization#embeddedtransactionheader" title="binary layout for an embedded transaction header">EmbeddedTransactionHeader</a>
