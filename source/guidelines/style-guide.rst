@@ -15,26 +15,17 @@ Getting started
 
 Before you start your writing process, here are some things to consider:
 
-**1. Determine purpose and use**
+1. Determine purpose and use
 
-Establishing the purpose of your article should be the first step of
-your writing process. Determine what you want the readers to know
-when they finish reading. Defining the objectives will help you
-with each subsequent step in writing.
+   Establishing the purpose of your article should be the first step of your writing process. Determine what you want the readers to know when they finish reading. Defining the objectives will help you with each subsequent step in writing.
 
-**2. Identify the audience and their need**
+2. Identify the audience and their need
 
-Keep in mind that the documentation will be mostly read by curious or
-contributing **developers** and **system integrators**, who we
-should assume to have at least an elementary level of technical
-knowledge. Determine what information, and how much detail, the
-readers need to achieve the purpose of your article.
+   Keep in mind that the documentation will be mostly read by curious or contributing **developers** and **system integrators**, who we should assume to have at least an elementary level of technical knowledge. Determine what information, and how much detail, the readers need to achieve the purpose of your article.
 
-**3. Organize the information**
+3. Organize the information
 
-Once you have determined what information the readers need, organize
-the information in a logical manner for the best flow and
-comprehension.
+   Once you have determined what information the readers need, organize the information in a logical manner for the best flow and comprehension.
 
 You are now ready to begin writing! Visit this :doc:`page <suggesting-changes>` to learn how to download the project and submit documentation.
 
@@ -88,7 +79,7 @@ Tone
 Basic formatting
 ================
 
-Sustaining a uniform format is also essential for consistency.
+Maintaining a uniform format is also essential for consistency.
 
 .. csv-table::
     :header: "Case", "Example"

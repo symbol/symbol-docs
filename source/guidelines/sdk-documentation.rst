@@ -43,9 +43,9 @@ Furthermore, you will be testing manually if the SDK behaves correctly.
 
 1. `Fork <https://help.github.com/articles/fork-a-repo>`_ and clone `symbl-docs repository <https://github.com/symbol/symbol-docs>`__.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    git clone https://github.com/<YOUR_USERNAME>/symbol-docs.git
+      git clone https://github.com/<YOUR_USERNAME>/symbol-docs.git
 
 2. Create a new folder under ``source/resources/examples/`` named as the programming language of your SDK.
 

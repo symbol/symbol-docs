@@ -103,9 +103,9 @@ We use `travis-ci <https://travis-ci.org/>`_, but feel free to use the one that 
 Also, we strive to keep our codebases with a unit test coverage of 80% or higher.
 We use `coveralls <https://coveralls.io/>`_ to monitor test coverage.
 
-*************
-Infrastucture
-*************
+**************
+Infrastructure
+**************
 
 The `OpenAPI Generator <https://openapi-generator.tech/>`_  handles the API and DTOs generation.
 It supports multiple languages, and hopefully, yours is `on the list <https://openapi-generator.tech/docs/generators/>`_.
@@ -116,29 +116,29 @@ These are the steps we followed to generate the Typescript DTOs (data transfer o
 
 2. Install the OpenApi generator CLI.
 
-.. code-block::bash
+   .. code-block:: bash
 
-   npm install @openapitools/openapi-generator-cli@cli-4.1.0 -g
+      npm install @openapitools/openapi-generator-cli@cli-4.1.0 -g
 
 3. Generate the DTOs for the programming language selected.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    openapi-generator generate -i ./openapi3.yml -g typescript-node -o ./symbol-ts-sdk/ && rm -R symbol-ts-sdk/test
+      openapi-generator generate -i ./openapi3.yml -g typescript-node -o ./symbol-ts-sdk/ && rm -R symbol-ts-sdk/test
 
 4. The generated lib is normally published into a central repository (e.g. maven, npm). The SDKs depend on those libraries like any other third party dependency. To automate the deployment of the packages, including the generator for the selected programming language in the `symbol-openapi-generator <https://github.com/symbol/symbol-openapi-generator>`_ project.
 
 5. Drop the generated client classes and implement them using the `Repository pattern <https://martinfowler.com/eaaCatalog/repository.html>`_ returning `Observables <https://en.wikipedia.org/wiki/Observer_pattern>`_ of `ReactiveX <http://reactivex.io/>`_.
 
-.. note:: The SDK for TypeScript currently chooses the ``typescript-node`` template from the OpenAPI Generator, but there are also other templates available to fit for other purposes. The SDK has interfaced out all the Http Repositories so that different implementations can be applied.
+   .. note:: The SDK for TypeScript currently chooses the ``typescript-node`` template from the OpenAPI Generator, but there are also other templates available to fit for other purposes. The SDK has interfaced out all the Http Repositories so that different implementations can be applied.
 
-Example of repositories and implementations:
+   Example of repositories and implementations:
 
-* `CreateTransactionsFromDTO <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_
-* `BlockchainRepository <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockRepository.ts>`_
-* `BlockchainHttp <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockHttp.ts>`_
+   * `CreateTransactionsFromDTO <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/transaction/CreateTransactionFromDTO.ts>`_
+   * `BlockchainRepository <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockRepository.ts>`_
+   * `BlockchainHttp <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockHttp.ts>`_
 
-See the complete list of `repositories and implementations <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure>`_.
+   See the complete list of `repositories and implementations <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure>`_.
 
 6. The **repositories return models instead of DTOs**. You will need to code the models before finishing the API wrapper.
 
@@ -178,25 +178,25 @@ If there is a generator, follow the next steps to generate the builders for all 
 
 1. Clone the catbuffer-generators repository recursively.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   git clone --recursive git@github.com:symbol/catbuffer-generators.git
+      git clone --recursive git@github.com:symbol/catbuffer-generators.git
 
 2. Install the package requirements.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   pip install -r requirements.txt
+      pip install -r requirements.txt
 
 3. Clone the catbuffer-schemas repository inside the ``catbuffer-generators`` folder.
 
 4. Generate code for all the schemas running the following command under the ``catbuffer-generators`` directory, replacing ``cpp_builder`` for the targeted programming language.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   python scripts/generate_all.sh cpp_builder
+      python scripts/generate_all.sh cpp_builder
 
-The previous command creates a new file for every schema under the ``catbuffer/_generated/cpp_builder`` folder.
+   The previous command creates a new file for every schema under the ``catbuffer/_generated/cpp_builder`` folder.
 
 5. Publish the generated code into a central repository (e.g. Maven, NPM) and make the SDK dependant on this library. For every transaction type, use the generated builders to serialize and deserialize transactions.
 
