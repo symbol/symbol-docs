@@ -229,12 +229,6 @@ source_file = build/gettext/getting-started/setup-workstation.pot
 source_lang = en
 type = PO
 
-[symboldocs.getting-started--what-is-symbol]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/what-is-symbol.po
-source_file = build/gettext/getting-started/what-is-symbol.pot
-source_lang = en
-type = PO
-
 [symboldocs.guidelines--generating-transaction-builders]
 file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
 source_file = build/gettext/guidelines/generating-transaction-builders.pot

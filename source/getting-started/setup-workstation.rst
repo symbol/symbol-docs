@@ -12,7 +12,7 @@ This first guide will walk you through a step-by-step installation of the requir
 We will be using the **test network**, which uses the same technology and features of the **main network**.
 The testnet allows developers to experiment with the offered |codename|'s transaction set in a live network without the loss of valuable assets.
 
-.. note:: Not a developer? Download our :doc:`client <../wallets>` to manage XYM and issue transactions.
+.. note:: Not a developer? Download our :doc:`client <../wallets>` to manage ``XYM`` and issue transactions.
 
 .. _setup-creating-a-test-account:
 

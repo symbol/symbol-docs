@@ -16,7 +16,7 @@ Symbol provides access to both public and private blockchains, individually or a
 
 Connect and combine Symbol's built-in features to architect your blockchain solution.
 
-* [What is Symbol?](https://docs.symbolplatform.com/getting-started/what-is-symbol.html)
+* [What is Symbol?](https://docs.symbolplatform.com/getting-started)
 * [Setting up your workstation](https://docs.symbolplatform.com/getting-started/setup-workstation.html)
 * [Built-in features](https://docs.symbolplatform.com/concepts/overview.html)
 * [Protocol](https://docs.symbolplatform.com/concepts/cryptography.html)
