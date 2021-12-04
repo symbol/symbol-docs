@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 12:01+0000\n"
+"POT-Creation-Date: 2021-12-01 15:41+0000\n"
 "PO-Revision-Date: 2021-07-07 15:07+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -206,77 +206,77 @@ msgstr "トークンの供給量は変更できません。"
 msgid "Token can be transferred between arbitrary accounts"
 msgstr "トークンは任意のアカウント間で転送できます。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:134
+#: ../../source/guides/exchanges/exchange-integration.rst:149
 msgid "Avoiding rollbacks"
 msgstr "ロールバックの回避"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:138
+#: ../../source/guides/exchanges/exchange-integration.rst:153
 msgid "There are two ways of dealing with this in Symbol:"
 msgstr "Symbol でこれを処理する方法は2つあります。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:141
+#: ../../source/guides/exchanges/exchange-integration.rst:156
 msgid "Using Finalization"
 msgstr "ファイナライゼーションの使用"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:150
+#: ../../source/guides/exchanges/exchange-integration.rst:165
 msgid "Using a fixed wait"
 msgstr "固定待機の使用"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:164
+#: ../../source/guides/exchanges/exchange-integration.rst:179
 msgid "Deadlines"
 msgstr "期限"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:185
+#: ../../source/guides/exchanges/exchange-integration.rst:200
 msgid "The example code"
 msgstr "例示コード"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:198
+#: ../../source/guides/exchanges/exchange-integration.rst:213
 msgid "Deposits"
 msgstr "預け入れ"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:205
+#: ../../source/guides/exchanges/exchange-integration.rst:220
 msgid "**Fig. 2**: Deposit process."
 msgstr "**図. 2**: 預け入れプロセス"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:213
+#: ../../source/guides/exchanges/exchange-integration.rst:228
 msgid ""
 "The code proposed next addresses all these issues by monitoring the "
 "blockchain."
 msgstr "次に提案されるコードは、ブロックチェーンの監視により、これらすべての問題に対処します。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:216
+#: ../../source/guides/exchanges/exchange-integration.rst:233
 msgid "Monitoring"
 msgstr "モニタリング"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:224
+#: ../../source/guides/exchanges/exchange-integration.rst:243
 msgid "Filter out transactions that:"
 msgstr "次のトランザクションをフィルタリング:"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:226
+#: ../../source/guides/exchanges/exchange-integration.rst:245
 msgid ""
 "Have no message or the message does not correspond to an existing UUID."
 msgstr "メッセージがない、またはメッセージが存在する UUID に対応していない。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:228
+#: ../../source/guides/exchanges/exchange-integration.rst:247
 msgid "Do not contain tokens, or the token is not ``symbol.xym``."
 msgstr "トークンを含んでいない、または ``symbol.xym`` ではないトークン。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:234
+#: ../../source/guides/exchanges/exchange-integration.rst:253
 msgid "The tokens are added to the user's account in the database."
 msgstr "データベース上のユーザアカウントにトークンは追加されました。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:236
+#: ../../source/guides/exchanges/exchange-integration.rst:255
 msgid ""
 "The transaction is marked as processed by adding its hash to the database"
 msgstr "トランザクションは、そのハッシュをデータベースに追加することにより、処理済みとしてマークされます。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:238
+#: ../../source/guides/exchanges/exchange-integration.rst:257
 msgid ""
 "Store the last height that has been processed and wait for the next polling "
 "period."
 msgstr "処理済みの最終ブロック高を保存し、次のポーリング期間まで待ちます。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:240
+#: ../../source/guides/exchanges/exchange-integration.rst:259
 msgid ""
 "The code snippet, using `Symbol's TypeScript SDK "
 "<https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/1.0.0/>`__"
@@ -285,73 +285,73 @@ msgstr ""
 "`Symbol's TypeScript SDK <https://docs.symbolplatform.com/symbol-sdk-"
 "typescript-javascript/1.0.0/>`__ を使用したコードスニペット:"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:264
+#: ../../source/guides/exchanges/exchange-integration.rst:283
 msgid ""
 ":doc:`Transfer Transaction reference <../../concepts/transfer-transaction>`."
 msgstr ":doc:`転送トランザクションリファレンス <../../concepts/transfer-transaction>`."
 
-#: ../../source/guides/exchanges/exchange-integration.rst:265
+#: ../../source/guides/exchanges/exchange-integration.rst:284
 msgid ":doc:`Mosaic (token) reference <../../concepts/mosaic>`."
 msgstr ":doc:`モザイク (トークン) リファレンス <../../concepts/mosaic>`"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:266
+#: ../../source/guides/exchanges/exchange-integration.rst:285
 msgid ":doc:`Symbol API reference <../../api>`."
 msgstr ":doc:`Symbol API リファレンス <../../api>`"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:267
+#: ../../source/guides/exchanges/exchange-integration.rst:286
 msgid ":ref:`WebSockets reference <websockets>`."
 msgstr ":ref:`WebSockets リファレンス <websockets>`"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:272
+#: ../../source/guides/exchanges/exchange-integration.rst:291
 msgid "Withdrawals"
 msgstr "引き出し"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:279
+#: ../../source/guides/exchanges/exchange-integration.rst:298
 msgid "**Fig. 3**: Withdrawal process."
 msgstr "**Fig. 3**: 引き出しプロセス"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:288
+#: ../../source/guides/exchanges/exchange-integration.rst:307
 msgid "Announcing"
 msgstr "アナウンス"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:292
+#: ../../source/guides/exchanges/exchange-integration.rst:311
 msgid "Configuration is stored in the ``ExchangeSymbolConfig`` object."
 msgstr "設定は ``ExchangeSymbolConfig`` オブジェクトに保存されます。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:293
+#: ../../source/guides/exchanges/exchange-integration.rst:312
 msgid ""
 "A number of repositories are instantiated via the ``RepositoryFactoryHttp`` "
 "class."
 msgstr "多くのリポジトリは ``RepositoryFactoryHttp`` クラスを介してインスタンス化されます。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:298
+#: ../../source/guides/exchanges/exchange-integration.rst:317
 msgid ""
 "The actual transaction is created using ``TransferTransaction.create``."
 msgstr "実際のトランザクションは ``TransferTransaction.create`` を使用して作成します。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:299
+#: ../../source/guides/exchanges/exchange-integration.rst:318
 msgid "The transaction is signed."
 msgstr "トランザクションは署名済みです。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:325
+#: ../../source/guides/exchanges/exchange-integration.rst:344
 msgid "Finalization"
 msgstr "ファイナライゼーション"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:331
+#: ../../source/guides/exchanges/exchange-integration.rst:350
 msgid ""
 "This snippet can be run in the same loop as the deposits monitor "
 ":ref:`described above <exchange-deposits>`."
 msgstr "このスニペットは :ref:`上記で述べた <exchange-deposits>` 同じループで実行します。"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:347
+#: ../../source/guides/exchanges/exchange-integration.rst:366
 msgid ":doc:`Transaction life-cycle <../../concepts/transaction>`."
 msgstr ":doc:`トランザクションのライフサイクル <../../concepts/transaction>`"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:348
+#: ../../source/guides/exchanges/exchange-integration.rst:367
 msgid ":doc:`Fees reference <../../concepts/fees>`."
 msgstr ":doc:`手数料リファレンス <../../concepts/fees>`"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:349
+#: ../../source/guides/exchanges/exchange-integration.rst:368
 msgid ""
 ":doc:`How to announce a transfer transaction programmatically "
 "<../transfer/sending-a-transfer-transaction>`."
@@ -359,10 +359,10 @@ msgstr ""
 ":doc:`プログラム的に転送トランザクションをアナウンスする方法 <../transfer/sending-a-transfer-"
 "transaction>`"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:352
+#: ../../source/guides/exchanges/exchange-integration.rst:371
 msgid "Further information"
 msgstr "さらに詳しい情報"
 
-#: ../../source/guides/exchanges/exchange-integration.rst:354
+#: ../../source/guides/exchanges/exchange-integration.rst:373
 msgid "Read the following pages for more information:"
 msgstr "より詳しい情報は次のページを参照してください:"

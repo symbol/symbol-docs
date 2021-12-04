@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-12-01 15:41+0000\n"
 "PO-Revision-Date: 2020-12-18 17:40+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -39,15 +39,15 @@ msgstr ""
 "generators <https://github.com/symbol/catbuffer-generators>`_ "
 "プロジェクトと組み合わせると、開発者は特定のプログラミング言語用のビルダークラスを生成できます。"
 
-#: ../../source/serialization/index.rst:12
+#: ../../source/serialization/index.rst:13
 msgid "Basic Types"
 msgstr "基本タイプ"
 
-#: ../../source/serialization/index.rst:98
+#: ../../source/serialization/index.rst:99
 msgid "Enumerations"
 msgstr "列挙型"
 
-#: ../../source/serialization/index.rst:1018
+#: ../../source/serialization/index.rst:1035
 msgid ""
 "These are structures only meant to be included inside other structures. "
 "Their description is already present in the containing structures above and "

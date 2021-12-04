@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symbol-docs 0.22.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-30 22:34+0000\n"
+"POT-Creation-Date: 2021-12-01 15:41+0000\n"
 "PO-Revision-Date: 2019-02-22 09:06+0000\n"
 "Last-Translator: Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
@@ -44,10 +44,10 @@ msgstr ""
 
 #: ../../source/getting-started/setup-workstation.rst:15
 msgid ""
-"Not a developer? Download our :doc:`client <../wallets>` to manage XYM and "
-"issue transactions."
+"Not a developer? Download our :doc:`client <../wallets>` to manage ``XYM`` "
+"and issue transactions."
 msgstr ""
-"開発者ではないですか？ XYM を管理したり、トランザクションを発信するには :doc:`クライアント <../wallets>` "
+"開発者ではないですか？ ``XYM`` を管理したり、トランザクションを発信するには :doc:`クライアント <../wallets>` "
 "をダウンロードしてください。"
 
 #: ../../source/getting-started/setup-workstation.rst:21
