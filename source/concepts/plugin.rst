@@ -1,8 +1,8 @@
-################
-Extending Symbol
-################
+######
+Plugin
+######
 
-|codename| comes with improved extensibility through its plugin-based architecture.
+|codename| comes with improved extensibility through its **plugin-based architecture**.
 
 A **plugin** is a self-contained group of functions that can be added to the |codename|'s protocol to extend its capabilities.
 The plugin approach allows developers to introduce different ways to alter the chain's state via transactions without modifying the core engine or disrupting other features.

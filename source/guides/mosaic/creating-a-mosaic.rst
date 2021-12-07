@@ -52,7 +52,7 @@ Method #02: Using the SDK
 
 1. Open a new file and define a :ref:`mosaicdefinitiontransaction`.
 This transaction defines the mosaic properties your mosaic will have.
-You can read :doc:`"Mosaic Properties" <../../concepts/mosaic>` to decide how do you want to configure your mosaic.
+You can read :ref:`Mosaic Properties <configurable-mosaic-properties>` to decide how do you want to configure your mosaic.
 
 .. example-code::
 
