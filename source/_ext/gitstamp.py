@@ -54,7 +54,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y&#8209;%m&#8209;%d")
 
         user = GHCachedUser(commit.author.name)
-        if gh:
+        if 'gh' in globals():
             # Look in cache first to avoid spamming GitHub
             if commit.author.email in gh_user_cache:
                 user = gh_user_cache[commit.author.email]
