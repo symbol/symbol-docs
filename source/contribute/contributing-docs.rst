@@ -27,7 +27,7 @@ Select whether you want to report an error or make a proposal:
 It really does not matter much which one you choose, they are all called **issues** by GitHub.
 
 Give your issue a **title**, write as much **detail** as you can about it, and click on ``Submit new issue``. That's all!
-
+ 
 .. figure:: /resources/images/screenshots/github-new-issue.png
    :align: center
    :class: with-shadow
