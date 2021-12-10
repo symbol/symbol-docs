@@ -1,39 +1,16 @@
-##########
-Guidelines
-##########
+#######################
+Contributing Guidelines
+#######################
 
-First off, thank you for considering contributing to |codename|!
-Follow these guidelines for contributing to |codename| projects, achieving the best quality with the less effort.
+Follow these guidelines when contributing to |codename| projects to achieve the best quality with the least effort.
 
-.. note:: If you want to contribute to an existent project, read as well the ``CONTRIBUTING.md`` file that you will find at the root-level folder of the project.
+****
+Code
+****
 
-.. toctree::
-    :hidden:
-
-    ../guidelines/writing-a-schema
-    ../guidelines/sdk-development
-    ../guidelines/sdk-documentation
-    ../guidelines/generating-transaction-builders
-    ../guidelines/style-guide
-    ../guidelines/suggesting-changes
-    ../guidelines/writing-a-guide
-    ../guidelines/translating-the-documentation
-
-******
-Client
-******
-
-* `Notes for developers <https://github.com/symbol/catapult-client/blob/main/docs/README.md>`_
 * :doc:`Writing a transaction schema <../guidelines/writing-a-schema>`
-
-***
-SDK
-***
-
-* :doc:`Summary <../sdk>`
-* :doc:`Developing an SDK <../guidelines/sdk-development>`
-* :doc:`Documenting an SDK <../guidelines/sdk-documentation>`
 * :doc:`Generating transaction builders <../guidelines/generating-transaction-builders>`
+* :doc:`Developing an SDK <../guidelines/sdk-development>`
 
 *************
 Documentation
@@ -43,3 +20,16 @@ Documentation
 * :doc:`Suggesting changes <../guidelines/suggesting-changes>`
 * :doc:`Writing a guide <../guidelines/writing-a-guide>`
 * :doc:`Translating the documentation <../guidelines/translating-the-documentation>`
+* :doc:`Documenting an SDK <../guidelines/sdk-documentation>`
+
+.. toctree::
+    :hidden:
+
+    ../guidelines/writing-a-schema
+    ../guidelines/generating-transaction-builders
+    ../guidelines/sdk-development
+    ../guidelines/style-guide
+    ../guidelines/suggesting-changes
+    ../guidelines/writing-a-guide
+    ../guidelines/translating-the-documentation
+    ../guidelines/sdk-documentation

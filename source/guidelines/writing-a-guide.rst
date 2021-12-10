@@ -2,17 +2,17 @@
 Writing a guide
 ###############
 
-|sitename| guides help other developers to get started on Symbol's technology, giving step-by-step instructions on how to use the tools, integrate with other technologies, and combine the built-in features to architect solutions.
+|sitename| guides help other developers to get started on |codename|'s technology, giving step-by-step instructions on how to use the tools, integrate with other technologies, and combine the built-in features to architect solutions.
 
 ***************
 Before starting
 ***************
 
 If you are looking for inspiration to write the guide, you can browse the `symbol-docs repository open issues <https://github.com/symbol/symbol-docs/issues>`_ to find some ideas pending to be written.
-We also encourage you to join our |discord| server and introduced yourself!
+We also encourage you to join the |discord| server and introduce yourself in the ``#docs-general`` channel!
 
-To collaborate with one of the existing issues, express it in a comment to avoid duplicated efforts.
-If there is no issue yet, create a new one introducing the content you want to publish.
+To start working on one of the existing issues, state your intention in a comment to avoid duplicated efforts.
+If there is no issue yet, create a new one (See :ref:`contribute-suggestion`) and then start working on it.
 
 *****************
 Writing the guide
@@ -48,12 +48,6 @@ Writing the guide
 
    .. code-block:: text
 
-      .. post:: 18 Aug, 2018
-          :category: <category>
-          :excerpt: 1
-          :nocomments:
-          :author: <your_name_or_username>
-
       #####
       Title
       #####
@@ -78,7 +72,7 @@ Writing the guide
       Getting into some code
       **********************
 
-      Present the code and step-by-step explanation.
+      Present the code and step-by-step explanations.
 
       ************
       What's next?
@@ -105,4 +99,5 @@ Writing the guide
       make livehtml
 
 8. Push your changes and create a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_.
-The repository maintainers will proofread and edit the content to follow the :doc:`documentation style guide <style-guide>`.
+
+   Don't worry if you don't get everything right on the first try. The repository maintainers will proofread and edit the content to follow the :doc:`documentation style guide <style-guide>`.
