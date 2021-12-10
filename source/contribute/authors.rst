@@ -1,6 +1,6 @@
-#######
-Authors
-#######
+#####################
+Documentation Authors
+#####################
 
 We want to recognize the work of the `contributors <https://github.com/symbol/symbol-docs/graphs/contributors>`__ who provided content, opened new `issues <https://github.com/symbol/symbol-docs/issues>`__, and improved the quality and completeness of this documentation.
 

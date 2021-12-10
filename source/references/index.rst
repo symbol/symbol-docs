@@ -15,3 +15,4 @@ Usage guides for |codename|'s tools and SDKs.
     ../wallets
     ../compatibility
     ../serialization/index
+    ../contribute/glossary
