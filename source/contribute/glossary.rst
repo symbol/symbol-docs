@@ -378,6 +378,9 @@ Glossary
     USP
       Unique Selling Proposition or Unique Selling Point. A characteristic of a product that can be used in advertising to differentiate it from its competitors.
 
+    VPS
+      Virtual Private Server. A virtual machine typically hosted on a Data Center which you can access remotely and treat as if it was your own physical machine.
+
     VRF
       VRF stands for verifiable random function. All potential harvesting accounts must link to a second public key by announcing a :ref:`vrfkeylinktransaction`. The key linked is then used to randomize block production and leader/participant selection.
 
