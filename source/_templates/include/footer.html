@@ -10,9 +10,11 @@
     {% endif %}
     </div>
     <div class="col-xs-5 feedback-center">
-    {% trans %}Did you find what you were looking for?{% endtrans %}
-    <br/>
-    <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
+        <p>
+            {% trans %}Did you find what you were looking for?{% endtrans %}
+            <br/>
+            <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
+        </p>
     </div>
     <div class="col-xs-3">
         {% include "include/social.html" %}
@@ -27,8 +29,10 @@
             on {{ gitstamp }}.</p>
         {%- endif %}
     {% endif %}
-    {% trans %}Did you find what you were looking for?{% endtrans %}
-    <br/>
-    <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
+    <p>
+        {% trans %}Did you find what you were looking for?{% endtrans %}
+        <br/>
+        <a href="{{feedback_on_github_url}}" target="_blank" rel="noopener noreferrer">{% trans %}Give us your feedback.{% endtrans %}</a>
+    </p>
     {% include "include/social.html" %}
 </div>
