@@ -158,6 +158,19 @@ table a:not(.btn), .table a:not(.btn) {
     text-decoration: none;
 }
 
+.big-table-colspan {
+    /* A big RST table neededing tweaking */
+    word-break: normal;
+}
+
+.big-table-colspan tbody .row-odd td {
+    border-top: 0;
+}
+
+.big-table-colspan td:empty {
+    padding: 0;
+}
+
 .big-table3 {
     /* Tables with lots of content in 3 columns */
     font-size: small;
