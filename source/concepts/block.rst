@@ -121,9 +121,9 @@ Related transactions
 
     0x4143; :ref:`votingkeylinktransaction`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Block

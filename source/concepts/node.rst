@@ -154,9 +154,9 @@ Each REST gateway connects to one API instance to send new transactions requests
 
   <a href=" https://en.wikipedia.org/wiki/Sybil_attack" target="_blank">Sybil attacks</a>
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Network

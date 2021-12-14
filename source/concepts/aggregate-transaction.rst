@@ -113,9 +113,9 @@ Related transactions
     --; :ref:`Cosignature <cosignature>`; Cosign an AggregateBondedTransaction.
     0x4148; :ref:`hashlocktransaction`;  Lock a deposit needed to announce aggregate bonded transactions.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Aggregate Transaction

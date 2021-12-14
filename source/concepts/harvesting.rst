@@ -138,9 +138,9 @@ Related transactions
     0x424C; :ref:`nodekeylinktransaction`; Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.
     0x4154; :ref:`PersistentDelegationRequestTransaction <persistentdelegationrequesttransaction>`; Request a node to add an account as a harvester. This is actually a :ref:`TransferTransaction <transfertransaction>` with a special message type.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Harvesting

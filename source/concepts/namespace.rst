@@ -149,9 +149,9 @@ Related transactions
     0x424E; :ref:`addressaliastransaction`; Attach a namespace name to an account.
     0x434E; :ref:`mosaicaliastransaction`; Attach a namespace name to a mosaic.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Namespace

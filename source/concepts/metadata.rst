@@ -84,9 +84,10 @@ Related transactions
     0x4244; :ref:`mosaicmetadatatransaction`; Associate a key-value state to a mosaic.
     0x4344; :ref:`namespacemetadatatransaction`; Associate a key-value state to a namespace.
 
-******
-Guides
-******
+**************
+Related guides
+**************
+
 .. postlist::
     :category: Metadata
     :date: %A, %B %d, %Y

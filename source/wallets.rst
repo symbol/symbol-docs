@@ -27,8 +27,8 @@ Installation
 
 3. **Create a new account** by following this :doc:`step-by-step guide <guides/account/creating-an-account>`.
 
-Guides
-======
+Related guides
+==============
 
 .. postlist::
     :tags: wallet

@@ -125,9 +125,9 @@ Related transactions
     0x4152; :ref:`secretlocktransaction`; Transaction to start a token swap between different chains.
     0x4252; :ref:`secretprooftransaction`; transaction to conclude a token swap between different chains.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Cross-Chain Swaps

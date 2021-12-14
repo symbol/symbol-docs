@@ -56,9 +56,9 @@ Related transactions
 
     0x4154; :ref:`transfertransaction`; Send mosaics and messages between two accounts.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Transfer Transaction

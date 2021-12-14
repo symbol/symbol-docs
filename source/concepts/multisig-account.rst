@@ -134,9 +134,9 @@ Related transactions
 
     0x4155; :ref:`multisigaccountmodificationtransaction`; Create or modify a multisig contract.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Multisig Account

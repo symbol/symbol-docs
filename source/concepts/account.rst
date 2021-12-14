@@ -69,9 +69,9 @@ HD Wallets
 
 An HD Wallet, or Hierarchical Deterministic Wallet, enables the generation of multiple accounts from a single binary seed. See the :ref:`hdwallets-and-mnemonics` concept page.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Account

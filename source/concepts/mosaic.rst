@@ -137,9 +137,9 @@ Related transactions
     0x424D; :ref:`mosaicsupplychangetransaction`; Change the mosaic total supply.
     0x434D; :ref:`mosaicsupplyrevocationtransaction`; Reclaim transferred mosaics.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Mosaic

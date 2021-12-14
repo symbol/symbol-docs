@@ -76,9 +76,9 @@ Recorded receipts
     0x2252; LockSecret_Completed; :ref:`balancechangereceipt`; The secretlock recipient, mosaic id and amount locked. It is recorded when a secretlock is proved.
     0x2352; LockSecret_Expired; :ref:`balancechangereceipt`; The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a secretlock expires.
 
-******
-Guides
-******
+**************
+Related guides
+**************
 
 .. postlist::
     :category: Receipt
