@@ -1046,7 +1046,13 @@ summary::-webkit-details-marker {
 
 /* Underline for Glossary terms */
 a .xref {
+    color: #CCC;
     text-decoration: underline 1px dotted;
+}
+
+a .xref:hover {
+    color: #27c5f3;
+    cursor: help;
 }
 
 /* Scrollbars */

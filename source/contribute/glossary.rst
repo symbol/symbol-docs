@@ -38,7 +38,7 @@ Glossary
       Anti-Money Laundering.
 
     Andromeda
-      The codename for a workflow product by :term:`NEM` that enables users to visually architect and deploy dApps.
+      The codename for a workflow product by :term:`NEM` that enables users to visually architect and deploy :term:`dApps <dApp>`.
 
     APAC
       Asia and Pacific region.
@@ -91,6 +91,9 @@ Glossary
     DAO
       Decentralized Autonomous Organization.
 
+    dApp
+      Decentralized Application. An application that runs on a blockchain instead of a single computer. The term is slightly abused so, in a more general sense, it also means any application which makes use of a blockchain.
+
     DDH
       Decisional Diffie-Hellman.
 
@@ -100,8 +103,8 @@ Glossary
     Deadline
       A time window for a transaction to be accepted before it reaches its expiration. The transaction is eliminated when the deadline is reached and all the nodes reject the transaction. Read :ref:`more <transaction-definition>`.
 
-    Defi
-      Decentralized Finance.
+    DeFi
+      Decentralized Finance, as opposed to Traditional Finance (TradFi).
 
     Delegated Harvesting
       A method of harvesting that allows users to receive rewards without having to run a node locally by delegating their importance scores to a brand new proxy account. Read :ref:`more <delegated-harvesting>`.
