@@ -3,6 +3,8 @@
     :excerpt: 1
     :nocomments:
 
+    How to use this handy node deployment tool.
+
 ######################
 Using Symbol Bootstrap
 ######################

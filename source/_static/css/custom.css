@@ -857,27 +857,9 @@ div [role="tablist"] {
     border: none;
 }
 
-/* Guides */
-.postlist li {
-    text-indent: 0 !important;
-}
-
-.postlist li p:nth-child(1) a {
-    font-size: 16px;
-    font-weight: bold;
+/* Remove the style that ABlog hardcodes into the pages */
+.postlist li p a {
     font-style: normal;
-}
-
-.postlist li p:nth-child(2) a {
-    color: #22292F;
-}
-
-ul.postlist-style-circle {
-    list-style-type: none !important;
-}
-
-ul.postlist-style-circle .first {
-    display: inline;
 }
 
 /* Print rules */

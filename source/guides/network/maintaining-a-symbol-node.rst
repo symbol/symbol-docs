@@ -3,6 +3,8 @@
     :excerpt: 1
     :nocomments:
 
+    How to keep your Symbol node up and running healthily.
+
 ##################
 Maintaining a Node
 ##################

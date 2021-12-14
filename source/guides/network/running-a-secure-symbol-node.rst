@@ -3,6 +3,8 @@
     :excerpt: 1
     :nocomments:
 
+    How to run a Symbol node with added security.
+
 #####################
 Running a secure node
 #####################

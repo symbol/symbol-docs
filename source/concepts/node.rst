@@ -165,4 +165,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
