@@ -98,7 +98,7 @@ Retrieving the node account
 
 The node you just created has an associated |codename| account which you can use to interact with the node. For instance, you need this account to provide funds to the node so it can emit transactions.
 
-The account's keys and addresses can be retrieved from a text file in the ``target`` folder named ``target/addresses.yml``. 
+The account's keys and addresses can be retrieved from a text file in the ``target`` folder named ``target/addresses.yml``.
 
 This file has `YAML <https://en.wikipedia.org/wiki/YAML>`__ format and looks like this:
 

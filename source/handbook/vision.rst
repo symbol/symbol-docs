@@ -13,7 +13,7 @@ Vision: Symbol²
     Version 1.0
 
 .. sidebar:: Available languages
-  
+
     .. toctree::
         :maxdepth: 1
 
@@ -92,7 +92,7 @@ In parallel to delegated harvesting, there is another concept that can be applie
 
 In **Symbol**, quadratic funding is able to solve a key challenge we have in the financing of projects: how do you determine which project would benefit the most *individuals*? It achieves this by enabling individuals to ‘buy for their vote’ on what projects should be funded next and amplifies donations with a matching syndicate dedicated to the funding of public goods. There are diminishing returns for additional votes, which helps decentralize power away from venture capital firms, large whales and central power brokers. In summary, the number of individual contributions matters more than the total amount funded by an individual.
 
-We think syndicates are a powerful form of self-organization that are successful because they incentivize participants to put collective successes above their own, while enforcing a commitment to the same principles that made blockchain successful: disruption, decentralization and transparency. Paired with quadratic funding, we think syndicates empower a vibrant, self-organizing community of contributors and collaborators that are all aligned in a common mission: **Symbol**.  
+We think syndicates are a powerful form of self-organization that are successful because they incentivize participants to put collective successes above their own, while enforcing a commitment to the same principles that made blockchain successful: disruption, decentralization and transparency. Paired with quadratic funding, we think syndicates empower a vibrant, self-organizing community of contributors and collaborators that are all aligned in a common mission: **Symbol**.
 
 The Space Pirate’s Code
 ***********************

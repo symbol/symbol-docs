@@ -4,7 +4,7 @@ Consensus
 
 The consensus algorithm is the dynamic method through which nodes in a blockchain system **reach an agreement** and **make decisions**.
 
-|codename| utilizes an innovative mechanism called the **Proof-of-Stake Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) consensus. 
+|codename| utilizes an innovative mechanism called the **Proof-of-Stake Plus** (PoS+), a modified version of the popular **Proof-of-Stake** (|pos|) consensus.
 
 In a basic **PoS** consensus algorithm, the formation of a new block in the blockchain is stochastically assigned to a node based on a combination of factors **related exclusively to the node owner's wealth**.
 
@@ -38,7 +38,7 @@ The network calculates first the following **partial scores** for all high-value
   An absolute activity score (:math:`A'`) is calculated first:
 
   .. math::
-  
+
      A' = \frac{10000}{Balance}(0.8T+0.2N)
 
   And the actual activity score (:math:`A`) is calculated by dividing :math:`A'` by the sum of the absolute activity scores of all high value accounts.

@@ -347,7 +347,7 @@ Setup
 
            symbol-cli profile create --profile announcer --default \
               --network MAIN_NET \
-              --url <NODE_URL> 
+              --url <NODE_URL>
 
      .. tab:: TESTNET
 

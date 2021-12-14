@@ -21,7 +21,7 @@ Prerequisites
 Method #01: Using the SDK
 *************************
 
-Open a new file and call the ``getAccountInfo`` function from the ``AccountHttp`` repository. 
+Open a new file and call the ``getAccountInfo`` function from the ``AccountHttp`` repository.
 Pass your account's address as a parameter.
 
 .. example-code::

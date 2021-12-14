@@ -103,7 +103,7 @@ Method #01: Using the Desktop Wallet
       :width: 100%
       :class: with-shadow
       :target: /_images/desktop-create-account-8.png
-   
+
 *************************
 Method #02: Using the SDK
 *************************

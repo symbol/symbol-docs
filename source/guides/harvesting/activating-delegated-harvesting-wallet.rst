@@ -50,7 +50,7 @@ Guide
    Note that the **Harvesting status** is **🔴 INACTIVE**.
 
 2. **Click on the "Node Url" box** to see a list of nodes currently connected to the network:
-   
+
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-1.png
       :align: center
       :class: with-rounded-shadow
@@ -72,7 +72,7 @@ Guide
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-2.png
 
-   This aggregate transaction registers :ref:`3 different keys <keypair>` to your account which are needed for harvesting. 
+   This aggregate transaction registers :ref:`3 different keys <keypair>` to your account which are needed for harvesting.
 
 4. **Enter your password and click "Confirm"**.
 

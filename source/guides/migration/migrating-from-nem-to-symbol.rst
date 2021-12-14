@@ -16,7 +16,7 @@ This document will help you **upgrade your application**'s previous NIS1 feature
 .. csv-table:: Feature comparison between NIS1 and Symbol
    :header: "NEM NIS1", "Symbol"
    :delim: ;
-    
+
    **Built-in features**;
    Mosaics; Mosaics
    Namespaces; Namespaces
@@ -106,7 +106,7 @@ Transaction fees
 ****************
 
 |codename| transaction fees are dynamic and decided by the network participants.
-Each transaction **effective fee** is calculated by multiplying a **fee multiplier** by the **transaction size**. 
+Each transaction **effective fee** is calculated by multiplying a **fee multiplier** by the **transaction size**.
 The fee multiplier is attached in the block where the transaction gets confirmed, and it is defined by the node owner harvesting the block.
 
 During the transaction definition, the sender limits the maximum fee authorized to include the transaction in a block.

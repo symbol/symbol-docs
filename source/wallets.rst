@@ -20,7 +20,7 @@ Installation
 ============
 
 1. **Download** the |desktop-wallet| installer from the `releases section <https://github.com/symbol/desktop-wallet/releases>`_.
-   
+
    The executable file for your operating system is in the **Assets** section.
 
 2. **Run** the installer and follow the installation instructions.

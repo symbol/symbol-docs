@@ -14,7 +14,7 @@ Guides
 
     - :doc:`network/creating-a-private-test-net`
 
-The guides are further divided into the following **topics**. 
+The guides are further divided into the following **topics**.
 To see the guides grouped by **tags** instead, see the `complete guides catalog <https://docs.symbolplatform.com/guides/category.html>`__.
 
 .. rst-class:: h3

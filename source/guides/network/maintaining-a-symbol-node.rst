@@ -37,7 +37,7 @@ The main version to keep track of is the **Catapult client version**, since this
   - **Client version**: ``/node/info`` endpoint, ``version`` property.
 
     .. note::
-    
+
        The ``version`` is encoded as a single 4-byte integer, where the Most-Significant Byte encodes the Major version, and the rest of bytes are the Minor, the Micro and the Patch version.
 
        For example, version **16777472** (decimal) is **01000100h** (hex), which corresponds to version **1.0.1.0**.

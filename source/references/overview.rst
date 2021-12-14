@@ -36,8 +36,8 @@ The package ``catapult-rest`` REST Combines HTTP and WebSockets to perform read 
 Software Development Kit (SDK)
 ==============================
 
-The primary software development tool to create Symbol components, such as additional tools, libraries, or applications. 
-It enables developers to focus on their product rather than on the specific API details due to its higher abstraction. 
+The primary software development tool to create Symbol components, such as additional tools, libraries, or applications.
+It enables developers to focus on their product rather than on the specific API details due to its higher abstraction.
 
 :doc:`Read more ...<../sdk>`.
 
@@ -55,7 +55,7 @@ The open-source command-line interface to interact with the Symbol blockchain.
 .. raw:: html
 
     <hr>
-    
+
 *********************
 System Administration
 *********************

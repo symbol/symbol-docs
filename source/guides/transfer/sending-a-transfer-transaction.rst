@@ -100,7 +100,7 @@ If you own more than one mosaic, you can send them together in the same transact
         :end-before: /* end block 01 */
 
 3. Sign the transaction with your account.
-Then, include the network generation hash seed to make the transaction only valid for your network. 
+Then, include the network generation hash seed to make the transaction only valid for your network.
 To retrieve the network generation hash seed, open :term:`NODE_URL` ``/node/info`` in a new browser tab and copy ``meta.networkGenerationHashSeed`` value.
 
 .. example-code::
@@ -149,7 +149,7 @@ Method #03: Using the CLI
 
 Open a terminal window and run the following command to transfer 10 XYM from your default account.
 
-Remember to replace ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` with the recipient address you want to send mosaics too 
+Remember to replace ``TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ`` with the recipient address you want to send mosaics too
 and ``@symbol.xym::10000000`` with the desired absolute amount.
 
 Optionally, you can set a custom message with the option ``--message``.

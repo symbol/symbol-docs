@@ -28,7 +28,7 @@ Method #01: Using the Desktop Wallet
     :width: 800px
 
 2. Click on the edit icon (represented by a pen) on the right side of the mosaic that you desire to edit. Click "**modify supply**".
-Note: 
+Note:
 
 .. figure:: ../../resources/images/screenshots/modify-mosaic-supply-2.gif
     :align: center

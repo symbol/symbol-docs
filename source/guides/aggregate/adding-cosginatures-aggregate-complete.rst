@@ -14,7 +14,7 @@ This can be useful for when you are keeping your private keys in an offline devi
 Furthermore, it also allows users to avoid unnecessarily locking their funds in :ref:`aggregate bonded transactions <aggregate-bonded>`.
 
 ********
-Use case 
+Use case
 ********
 
 .. figure:: ../../resources/images/examples/aggregate-escrow-1.png
@@ -105,7 +105,7 @@ Step 2: Add the second cosignature
       :end-before: /* end block 03 */
 
 
-2. Bob runs the code snippet in the terminal and obtains the transaction signature and the parent hash. 
+2. Bob runs the code snippet in the terminal and obtains the transaction signature and the parent hash.
 Finally, he shares the information back with Alice.
 
 ***************************************************

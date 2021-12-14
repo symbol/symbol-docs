@@ -71,7 +71,7 @@ For each extra call, increase the ``pageNumber`` by one unit.
 
     const searchCriteria = {group: TransactionGroup.Confirmed, address, pageNumber: 2, pageSize: 100};
 
-4. Since the transaction collection might grow while paginating, it's advised to set the first transaction you want to start pagination. 
+4. Since the transaction collection might grow while paginating, it's advised to set the first transaction you want to start pagination.
 Set an ``offset`` value with the first transaction internal identifier.
 
 .. code-block:: typescript

@@ -30,7 +30,7 @@ Method #01: Using the Desktop Wallet
     :align: center
     :width: 800px
 
-3. Determine the properties of the mosaic you desire to create. 
+3. Determine the properties of the mosaic you desire to create.
 You can read :doc:`"Mosaic Properties" <../../concepts/mosaic>` to decide how do you want to configure your mosaic.
 Click "**Send**".
 

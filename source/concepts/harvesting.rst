@@ -44,7 +44,7 @@ Network operators can define a **network fee sink account** that will receive a 
 
 Additionally, each node can set a **beneficiary account** to share a percentage (up to 25%) of the harvesting rewards. The node operators can use this feature to create incentive structures for their node supporters.
 
-The sharing ratios for the beneficiary and network sink accounts are :ref:`configurable per network <config-network-properties>`. 
+The sharing ratios for the beneficiary and network sink accounts are :ref:`configurable per network <config-network-properties>`.
 
 .. figure:: ../resources/images/diagrams/network-sink-beneficiary.png
     :align: center

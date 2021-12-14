@@ -27,14 +27,14 @@ Use the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi
 
    ``type``; integer; Retrieve only transactions of this type. The code for :ref:`transfertransaction` is 16724 (0x4154).
    ``recipientAddress``; string; "The address **receiving** the transaction. Compare with ``address`` which returns all transactions involving the given address (as sender, recipient or cosigner).
-   
+
    This might either be a Base32 :ref:`address` or a :doc:`../../concepts/namespace`. If the bit 0 of byte 0 is not set (e.g. 0x90) then it is an address, otherwise (e.g. 0x91) it represents a namespace id which starts at byte 1."
    ``fromHeight``; string; The starting block height to search for.
    ``toHeight``; string; The ending block height to search for.
    ``embedded``; boolean; "Use ``true`` to automatically search inside aggregate transactions. The data returned by a standalone transaction and an embedded transaction (one inside an aggregate) is slightly different (Check the next section).
 
    Use ``false`` to manually search for aggregate transactions (e.g. types 0x4141 and 0x4241) and parse them.
-   
+
    **Caution**: Does not work when combined with ``address``, only with ``recipientAddress``."
 
 Here is an example query to a :term:`NODE_URL`:

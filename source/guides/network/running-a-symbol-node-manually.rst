@@ -188,7 +188,7 @@ You can edit these files manually (Take a look at `these templates <https://gith
    - Copy ``settings/nemesis/seed`` to ``_build/seed`` (Omit the ``nemesis`` part).
 
 5. **Edit config-user.properties**.
-   
+
    - Go back to the ``_build`` directory.
    - Edit ``resources/config-user.properties`` so that it points to the right places:
 
@@ -270,7 +270,7 @@ You will use the :doc:`symbol-cli <../../cli>` tool for this. **Install** ``symb
 All transactions will be sent from (and the :doc:`../../concepts/fees` paid by) your **main** account, so you need to tell ``symbol-cli`` about it by creating a **profile**.
 
 .. note::
-   
+
    This profile will contain your **main account's private key** in **encrypted** form. A password will be requested every time it is accessed.
 
    The profile is stored in ``~/symbol-cli.config.json``. You can remove this file once you are done using symbol-cli.
@@ -422,7 +422,7 @@ Run the broker
    .. code-block:: ini
 
       [database]
-  
+
       databaseUri = mongodb://127.0.0.1:27017
       databaseName = catapult
 
@@ -461,7 +461,7 @@ Build and run the REST gateway
 8. **Configure** the REST gateway:
 
    All configuration is stored in the ``resources/rest.json`` file.
-   
+
    **Edit this file** to make sure that the following properties point to the right files:
 
    .. csv-table::

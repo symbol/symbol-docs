@@ -61,7 +61,7 @@ For example, the sender could set the transaction max_fee as follows:
         :language: typescript
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
-    
+
     .. viewsource:: ../resources/examples/typescript/transfer/DefiningMaxFee.js
         :language: javascript
         :start-after: /* start block 01 */
@@ -77,7 +77,7 @@ To determine an :doc:`aggregate bonded transaction <aggregate-transaction>` size
         :language: typescript
         :start-after: /* start block 02 */
         :end-before: /* end block 02 */
-    
+
     .. viewsource:: ../resources/examples/typescript/transfer/DefiningMaxFee.js
         :language: javascript
         :start-after: /* start block 02 */

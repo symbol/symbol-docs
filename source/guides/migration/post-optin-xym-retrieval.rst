@@ -137,7 +137,7 @@ Take a look at the rest of the :doc:`guides <../index>` to learn what you can do
    It is **recommended** that you **move** your funds from the opted-in account to the other one you imported in step 6 above (called a **Seed** account, because it was obtained from a seed Symbol mnemonic).
 
    Accounts opted-in from the **NEM Wallet** are special and **cannot be derived from the mnemonic**. Therefore, in the future, if you used a Wallet **other than the Symbol Desktop Wallet** to recover your account from the mnemonic, it **might not recover your opted-in account**.
-   
+
    It will recover all other seed accounts, though, and hence the recommendation to move your funds and use only seed accounts.
 
 ***************

@@ -75,7 +75,7 @@ As an example:
             voting:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
                 publicKey: 921ED0839EA3C8590CA1D6562DDD3BFEDA44CCE05DD82DF8C79DED2A3F816A1B
-                address: TA77BJJJMRXR2OLJKZNUFTRMLHLQ4T2PPHZRX5I                
+                address: TA77BJJJMRXR2OLJKZNUFTRMLHLQ4T2PPHZRX5I
             ssl:
                 privateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
                 publicKey: 3d68cdaa4e48a14bd875d4ca18e044522be5f602e8c4f37c1c65eafdfaa19110

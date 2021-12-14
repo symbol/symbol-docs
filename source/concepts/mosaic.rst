@@ -113,7 +113,7 @@ The :doc:`REST Gateway <../api>` provides an endpoint to get an estimation of ho
         :language: typescript
         :start-after: /* start block 01 */
         :end-before: /* end block 01 */
-    
+
     .. viewsource:: ../resources/examples/typescript/mosaic/GettingMosaicRentalFee.js
         :language: javascript
         :start-after: /* start block 01 */

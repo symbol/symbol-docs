@@ -11,7 +11,7 @@ A cross-chain swap enables trading tokens across different blockchains without u
     Cross-chain swap between public and private network
 
 |codename| follows the **Hashed TimeLock Contract** (HTLC) protocol to create a trustless environment for the decentralized exchange of assets.
-The protocol guarantees that if all participants agree, the swap will take place. 
+The protocol guarantees that if all participants agree, the swap will take place.
 On the contrary, each participant should receive their locked funds back if some of them decide not to conclude the process.
 
 HTLC uses *hashlocks* and *timelocks* to reduce the counterparty risk.

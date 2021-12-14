@@ -14,7 +14,7 @@ Cosign :ref:`aggregate <aggregate-bonded>` transactions pending to be signed.
 Prerequisites
 *************
 
-This guide assumes that you have received an aggregate transaction. 
+This guide assumes that you have received an aggregate transaction.
 You can follow the guide :doc:`creating an escrow contract<creating-an-escrow-contract-with-aggregate-bonded-transaction>` to announce an aggregate transaction.
 
 ************************************
@@ -96,7 +96,7 @@ If you want to cosign a transaction involving a multisig account, you should be 
 
 4. Retrieve the complete transaction object from the node using the ``TransactionHttp`` repository.
 At this point, you might want to do some extra checks, like verifying the contents of the transaction.
-If everything looks ok, cosign the transaction with the signer account.  
+If everything looks ok, cosign the transaction with the signer account.
 Finally, announce the cosignature to network with ``transactionHttp.announceAggregateBondedCosignature``.
 
 .. example-code::
