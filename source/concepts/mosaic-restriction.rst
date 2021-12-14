@@ -125,7 +125,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4151; :ref:`mosaicglobalrestrictiontransaction`; Set global rules to transfer a restrictable mosaic.
     0x4251; :ref:`mosaicaddressrestrictiontransaction`; Set address specific rules to transfer a restrictable mosaic.
 
@@ -140,5 +140,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Multisig Accounts <multisig-account>`.

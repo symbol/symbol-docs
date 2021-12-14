@@ -39,4 +39,3 @@ The `network configuration <https://github.com/symbol/catapult-client/blob/main/
     initialCurrencyAtomicUnits = 8'999'999'998'000'000
     maxMosaicAtomicUnits = 9'000'000'000'000'000
 
-Continue: :doc:`Node <node>`.

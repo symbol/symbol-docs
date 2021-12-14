@@ -80,5 +80,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Mosaics <mosaic>`.

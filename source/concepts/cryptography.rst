@@ -101,4 +101,3 @@ However, they are **equivalent to private keys** so it is critical that they are
 
 See the `NIP-6 <https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ document for technical details on |codename|'s mechanism to create HD Wallets.
 
-Continue: :doc:`Block <block>`.

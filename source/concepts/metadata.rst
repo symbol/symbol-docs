@@ -79,7 +79,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4144; :ref:`accountmetadatatransaction`; Associate a key-value state to an account.
     0x4244; :ref:`mosaicmetadatatransaction`; Associate a key-value state to a mosaic.
     0x4344; :ref:`namespacemetadatatransaction`; Associate a key-value state to a namespace.
@@ -94,5 +94,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Transfer Transaction <transfer-transaction>`.

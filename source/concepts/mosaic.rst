@@ -132,7 +132,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 15 45 40
     :delim: ;
-    
+
     0x414D; :ref:`mosaicdefinitiontransaction`; Create a new mosaic.
     0x424D; :ref:`mosaicsupplychangetransaction`; Change the mosaic total supply.
     0x434D; :ref:`mosaicsupplyrevocationtransaction`; Reclaim transferred mosaics.
@@ -148,5 +148,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Namespaces <namespace>`.

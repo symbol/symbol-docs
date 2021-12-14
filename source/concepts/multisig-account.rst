@@ -131,7 +131,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4155; :ref:`multisigaccountmodificationtransaction`; Create or modify a multisig contract.
 
 ******
@@ -145,5 +145,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Cross-Chain Swaps <cross-chain-swaps>`.

@@ -107,5 +107,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Mosaic Restrictions <mosaic-restriction>`.

@@ -118,7 +118,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4143; :ref:`votingkeylinktransaction`; Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.
 
 ******
@@ -133,4 +133,3 @@ Guides
     :excerpts:
     :sort:
 
-Continue: :doc:`Transaction <transaction>`.

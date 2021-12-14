@@ -191,8 +191,6 @@ If none of the languages fits your project, you can always query the blockchain 
 
         4. Execute ``gradle build`` and ``gradle run`` to run your program.
 
-Continue: :doc:`Writing your first application <first-application>`.
-
 .. _ts-node: https://www.npmjs.com/package/ts-node
 
 .. _gradle: https://gradle.org/install/

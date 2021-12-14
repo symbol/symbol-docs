@@ -107,7 +107,7 @@ Related transactions
     :header:  "Id",  "Type", "Description"
     :widths: 20 30 50
     :delim: ;
-    
+
     0x4141; :ref:`aggregatecompletetransaction`; Send transactions in batches to different accounts.
     0x4241; :ref:`aggregatebondedtransaction`; Propose an arrangement of transactions between different accounts.
     --; :ref:`Cosignature <cosignature>`; Cosign an AggregateBondedTransaction.
@@ -124,5 +124,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Account Restrictions <account-restriction>`.

@@ -77,5 +77,3 @@ Repeat 4. for every item in the MerkleProof list.
     :language: typescript
     :start-after:  /* start block 01 */
     :end-before: /* end block 01 */
-
-Continue: :doc:`Consensus Algorithm <consensus-algorithm>`.

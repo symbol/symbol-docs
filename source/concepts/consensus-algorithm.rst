@@ -78,8 +78,6 @@ Private networks can **customize the consensus algorithm** by changing the follo
     ``minHarvesterBalance``; 10000; Minimum balance required to be eligible for harvesting.
     ``importanceActivityPercentage``; 0.05; Contribution of the activity score (:math:`\gamma`). When it is 0, PoS+ consensus behaves like conventional PoS.
 
-Continue: :doc:`Harvesting <harvesting>`.
-
 .. |pos| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">PoS</a>

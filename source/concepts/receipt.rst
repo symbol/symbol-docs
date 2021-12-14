@@ -87,5 +87,3 @@ Guides
     :list-style: circle
     :excerpts:
     :sort:
-
-Continue: :doc:`Data validation <data-validation>`.

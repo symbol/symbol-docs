@@ -100,4 +100,3 @@ If a block did not include any transaction, a value of :ref:`defaultDynamicFeeMu
 
     :term:`NODE_URL` ``/network/fees/transaction``
 
-Continue: :doc:`Receipt <receipt>`.
