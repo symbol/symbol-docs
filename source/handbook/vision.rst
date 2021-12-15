@@ -12,7 +12,11 @@ Vision: Symbol²
 
     Version 1.0
 
+Preface
+*******
+
 .. sidebar:: Available languages
+    :class: tight-fit
 
     .. toctree::
         :maxdepth: 1
@@ -24,9 +28,6 @@ Vision: Symbol²
         Português <pt/vision>
         Русский <ru/vision>
         中文 <zh/vision>
-
-Preface
-*******
 
 Before we begin, it’s important to define an anchor. While a purpose or a mission can change with the captain or the tides, an anchor is what keeps us grounded. In times of turmoil, frustration, or uncertainty one can always return to their anchor to realign them as to why they’re here.
 

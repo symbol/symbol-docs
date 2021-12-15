@@ -899,6 +899,10 @@ div.sidebar {
     width: 50%;
 }
 
+div.sidebar.tight-fit {
+    width: fit-content;
+}
+
 @media screen and (max-width:767px) {
 
     /* On small screens side info boxes are actually regular boxes */
@@ -907,6 +911,11 @@ div.sidebar {
         width: 100%;
         margin: 1em 0;
     }
+
+    div.sidebar.tight-fit {
+        width: 100%;
+    }
+
 }
 
 .content img {
