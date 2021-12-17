@@ -98,7 +98,7 @@ Delegated harvesting
 
 It is then said that the account **delegates harvesting** to the node, but the account is still considered the harvester.
 
-Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistentdelegationrequesttransaction>` instead. Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
+Delegated harvesting is enabled similarly to :ref:`remote harvesting <remote-harvesting>` but, since the account has no access to the node's configuration, it announces a :ref:`PersistentDelegationRequest transaction <persistentdelegationrequesttransaction>` instead (This can be done effortlessly from the :ref:`Wallet <wallet-desktop>`). Upon receiving the request, **the node may or may not grant it**, depending on its configuration and the rest of requests received.
 
 As with :ref:`remote harvesting <remote-harvesting>` a proxy remote account is used so the main account's private key is never put at risk.
 

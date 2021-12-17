@@ -37,6 +37,15 @@ Do you know how to have a PC or :term:`VPS` plugged to the Internet and running 
 
 The :doc:`network guides <../guides/network/index>` explain how to create and maintain your own Symbol node.
 
+💰 Do you hold more than 10'000 XYM?
+************************************
+
+**Don't let them gather dust** and become a :ref:`delegated harvester <delegated-harvesting>`!
+
+Your balance can help a node harvest more blocks, **strengthening the Symbol network** (and you will earn some profits in the process). No funds locking, vesting or spending required!
+
+See the :doc:`harvesting guides <../guides/harvesting/index>` for instructions on how to activate delegated harvesting.
+
 🤔 Not sure what you can do?
 **********************************
 
