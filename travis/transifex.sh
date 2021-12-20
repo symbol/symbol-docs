@@ -13,7 +13,7 @@ token =" > ~/.transifexrc
 }
 
 tx_push() {
-    tx push -s
+    tx push --source --parallel
 }
 
 tx_install
