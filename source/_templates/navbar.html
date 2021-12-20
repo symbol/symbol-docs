@@ -16,7 +16,7 @@
 <div class="hidden-md hidden-lg {{ theme_navbar_class }} navbar-default header {% if theme_navbar_fixed_top|tobool -%} navbar-fixed-top{%- endif -%}">
     <div class="container navbar-main">
         <a href="{{ pathto('index') }}" class="navbar-brand">
-            <img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}" height="48">
+            <img alt="Symbol logo" src="{{ pathto('_static/' + logo, 1) }}" width="173" height="48">
         </a>
         {% with search_id="mobile" %}
         {% include "include/searchbox.html" %}

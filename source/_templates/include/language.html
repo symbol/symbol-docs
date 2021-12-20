@@ -1,9 +1,9 @@
 <div class="language-selector">
     {% if language|trim("'") == 'ja' %}
-        <a href="/{{ pagename }}.html"><img src="/_static/images/white-globe.png" width="24px" title="International version"/></a>
-        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" title="Japanese version"/>
+        <a href="/{{ pagename }}.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
     {% else %}
-        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" title="International version"/>
-        <a href="/ja/{{ pagename }}.html"><img src="/_static/images/japanese-icon.png" width="24px" title="Japanese version"/></a>
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/{{ pagename }}.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
     {% endif %}
 </div>
