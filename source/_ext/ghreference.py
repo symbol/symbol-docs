@@ -21,9 +21,9 @@ class GitHubReference(Directive):
         '.nojekyll',
         'template',
         'openapi3.yml',
-        'postman.json', 
+        'postman.json',
         'symbol-openapi-vertx-client',
-        'symbol-openapi-okhttp-gson-client', 
+        'symbol-openapi-okhttp-gson-client',
         'symbol-openapi-jersey2-client'
     ]
     docs_url = 'https://docs.symbolplatform.com/'
@@ -48,7 +48,7 @@ class GitHubReference(Directive):
                 else:
                     uri = self.docs_url + self.arguments[0].split('/')[1] + '/' + line.path
                     version = line.path.split('/')[-1]
-                
+
                 if count == 1:
                     version += ' (next)'
                 if count == 2:
