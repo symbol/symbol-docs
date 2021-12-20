@@ -354,6 +354,7 @@ linkcheck_ignore = [
     r'https://hackmd.io/.*', # You need to login to access some of the pages
     r'https://arxiv.org/.*', # Sometimes returns 403 on Travis (rate limit?)
     r'https://www.researchgate.net/.*', # Started returning 403 on Travis
+    r'http://www.gnu.org/.*', # Temporarily? down.
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 
