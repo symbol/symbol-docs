@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Build docs"
+echo "travis_fold:start:Build docs"
 make alldocs
+echo "travis_fold:end:Build docs"
+echo "travis_fold:start:Link check"
 make linkcheck
+echo "travis_fold:end:Link check"
 cp CNAME build/html
 
 echo "Moving to build folder"
