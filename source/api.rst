@@ -10,14 +10,14 @@ REST Gateway
 Http requests
 *************
 
-The REST Gateway uses the port ``3000`` and accepts both HTTP **GET**, **PUT** and **POST** requests.
+The REST Gateway uses port **3000** for HTTP and port **3001** for HTTPS, and it accepts **GET**, **PUT** and **POST** requests.
 
-Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the form:
+Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the format:
 
-    http://localhost:3000/<path-to-API-request>
+    ``http://localhost:3000/<path-to-API-request>``
 
-Conversely, HTTP PUT and POST requests have the same structure but use JSON structures in the request body.
-This kind of request cannot usually be executed from within the browser unless you use a plugin which enables you to do it.
+PUT and POST requests have the same query format but use JSON structures in the request body.
+This kind of request cannot usually be executed from within the browser unless you use an extension.
 
 Endpoints
 =========
@@ -40,33 +40,35 @@ Symbol uses conventional HTTP response codes to indicate the success or failure 
 
 .. csv-table:: HTTP Status Code Summary
     :header: "Error Code", "Response", "Description"
+    :widths: 15 35 50
     :delim: ;
 
-    200; OK; Everything worked as expected.
-    202; Accepted; The request has been accepted, but the processing has not been completed.
-    400; InvalidContent;  The provided argument was not of an acceptable type of input.
-    404; ResourceNotFound; The requested resource does not exist.
-    409; InvalidArgument; The required arguments were missing or unacceptable for the request.
-    500; InternalServiceError; An error occurred within the REST Gateway.
-    503; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway.
+    ``200``; OK; Everything worked as expected.
+    ``202``; Accepted; The request has been accepted, but the processing has not been completed.
+    ``400``; InvalidContent;  The provided argument was not an acceptable input.
+    ``404``; ResourceNotFound; The requested resource does not exist.
+    ``409``; InvalidArgument; The required arguments were missing or unacceptable for the request.
+    ``500``; InternalServiceError; An error occurred within the REST Gateway.
+    ``503``; ServiceUnavailable; Either API node or database service is unavailable or unreachable from the REST Gateway. Check the ``/node/health`` endpoint.
 
 Pagination
 ==========
 
 When a query returns more than one result, the REST Gateway paginates the responses by default.
-The query parameters can be customized to advance through the pages and filter the contents returned.
+The query parameters can be customized to advance through the pages and filter the returned content.
 
 Each pageable endpoint defines its own set of filters.
 However, the following table shows the query params present in every searchable endpoint:
 
 .. csv-table::
     :header: "Query Parameter", "Type", "Description", "Default"
+    :widths: 18 25 45 12
     :delim: ;
 
     ``pageSize``; integer ``[10..100]``; Selects the number of entries to return. Example: ``http://localhost:3000/blocks?pageSize=100`` returns 100 entries per ``page``; ``10``
     ``pageNumber``; integer ``>=1``; Filters by page number. Example: ``http://localhost:3000/blocks?page=2`` returns page 2; ``1``
-    ``offset``; string; Identifies the entry at which to start pagination. Example: ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03``.;
-    ``order``; string; Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the requests does not specify ``orderBy``, REST returns the collection ordered by id. Example: ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.; "desc"
+    ``offset``; string (id); Identifies the entry at which to start pagination. Example: ``http://localhost:3000/blocks?id=EE94FD819A1B30D6C5D1C03``.;
+    ``order``; string ``{asc, desc}``; Sorts the responses in ascending or descending order based on the collection property set on the parameter ``orderBy``. If the request does not specify ``orderBy``, REST returns the collection ordered by id. Example: ``http://localhost:3000/blocks?order=asc`` returns the block entries in ascending order.; ``desc``
     ``orderBy``; string; Chooses the parameter to sort by. By default, all the collections are sortable by id, but the collection could define additional properties.
 
 Multiple query parameters can be combined in the same call.
@@ -102,7 +104,7 @@ When an event occurs in a channel, the REST Gateway sends a notification to ever
 
 WebSocket URIs share the same host and port as the HTTP requests URIs, but use the ``ws://`` protocol:
 
-	ws://localhost:3000/ws
+	``ws://localhost:3000/ws``
 
 * Guide: :doc:`Subscribing to WebSockets channels <guides/blockchain/listening-new-blocks>`
 
