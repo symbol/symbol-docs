@@ -74,11 +74,17 @@ Run the following command and open the provided URL in a browser.
 
 ### Updating translations
 
-Generate the `.pot` files with `make gettext`.
+1. Generate the `.pot` files with `make gettext`.
 
-Update the Japanese `.po` files with `sphinx-intl update  -p build/gettext -l ja`
+2. Update the Japanese `.po` files with `sphinx-intl update  -p build/gettext -l ja`
 
-Commit and push the changes in the `source/locale` folder. Travis will send the changes to Transifex.
+3. Make sure that all files to be sent to Transifex are present in the `.tx/config` index with:
+
+   `sphinx-intl update-txconfig-resources --pot-dir build/gettext`
+
+   Commit any changes detected (beware of pages which do not use Transifex for translation like `handbook/vision.rst`).
+
+4. Commit and push the changes in the `source/locale` folder. Travis will send the changes to Transifex.
 
 ### Submitting your changes
 
