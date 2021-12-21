@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Build docs..." && echo -en "travis_fold:start:Build.AllDocs\\r"
-make alldocs
-echo -en "travis_fold:end:Build.AllDocs\\r"
-
-echo "Link Check..." && echo -en "travis_fold:start:Link.Check\\r"
-# make linkcheck
-echo -en "travis_fold:end:Link.Check\\r"
-
 #  The $SKIP_RELEASE_PUBLISH env variable can avoid republishing if the release process fails.
 if [ "$SKIP_RELEASE_PUBLISH" = "true" ]; then
    echo "Skipping publishing of docs"
