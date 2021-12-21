@@ -344,7 +344,7 @@ linkcheck_ignore = [
     r'http://localhost',
     r'https://localhost',
     r'https://my-symbol-node.com',
-    r'https://docs.symbolplatform.com/symbol-openapi/[^/]*/#', # Dynamic page
+    r'https://symbol.github.io/symbol-openapi/[^/]*/#', # Dynamic page
     r'.*\.ts', r'.*\.js', r'.*\.java', r'.*\.cats', # Too many of them, GitHub complains
     r'https://nemplatform.com/.*#', r'https://forum.nem.io', # DDoS protection delays serving the real page
     r'https://twitter.com/', # Returns 400 Client Error: Bad Request for url

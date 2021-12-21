@@ -157,7 +157,7 @@ Using Finalization
 
 Symbol implements :ref:`Finalization <finalization>`, a process that **guarantees** that blocks are **immutable** and therefore transactions are secure.
 
-To know if a block has been finalized, check the ``latestFinalizedBlock`` property in the `/chain/info <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getChainInfo>`__ endpoint. All blocks with a **height** lower than (or equal to) ``latestFinalizedBlock.height`` are **finalized** and are therefore **immutable**.
+To know if a block has been finalized, check the ``latestFinalizedBlock`` property in the `/chain/info <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getChainInfo>`__ endpoint. All blocks with a **height** lower than (or equal to) ``latestFinalizedBlock.height`` are **finalized** and are therefore **immutable**.
 
 **On average**, blocks are finalized after 5 minutes, in the absence of network problems.
 
@@ -236,7 +236,7 @@ The blockchain is polled periodically and all incoming transactions since last p
 
 1. All **Transfer** transactions added to the blockchain **since** the last check and **up to** the latest finalized block are examined, looking for the ones destined to the Central Exchange Wallet. This can be done efficiently with a single Symbol API call.
 
-   - Transfer transactions embedded in **Aggregate Complete** and **Aggregate Bonded** transactions must also be examined (see the :ref:`exchange-aggregate-transactions` section above). This is handled in the example code by the ``embedded: true`` parameter in the `searchConfirmedTransactions <https://docs.symbolplatform.com/symbol-openapi/v1.0.4/#operation/searchConfirmedTransactions>`__ call.
+   - Transfer transactions embedded in **Aggregate Complete** and **Aggregate Bonded** transactions must also be examined (see the :ref:`exchange-aggregate-transactions` section above). This is handled in the example code by the ``embedded: true`` parameter in the `searchConfirmedTransactions <https://symbol.github.io/symbol-openapi/v1.0.4/#operation/searchConfirmedTransactions>`__ call.
 
    - If Finalization is not desired (see the :ref:`exchange-avoid-rollbacks` section above) you can search up to 20 blocks before the current chain height, for example.
 
@@ -256,7 +256,7 @@ The blockchain is polled periodically and all incoming transactions since last p
 
 4. Store the last height that has been processed and wait for the next polling period.
 
-The code snippet, using `Symbol's TypeScript SDK <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/1.0.0/>`__ is this:
+The code snippet, using `Symbol's TypeScript SDK <https://symbol.github.io/symbol-sdk-typescript-javascript/1.0.0/>`__ is this:
 
 .. example-code::
 

@@ -90,7 +90,7 @@ Guide
 
    .. note::
 
-      The node's public TLS key is typically provided by the node owner. However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) running a version of the :doc:`REST Gateway <../../api>` higher than **2.2.0** offer this information through the ``nodePublicKey`` field of the ``node/info`` `REST endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_.
+      The node's public TLS key is typically provided by the node owner. However, **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) running a version of the :doc:`REST Gateway <../../api>` higher than **2.2.0** offer this information through the ``nodePublicKey`` field of the ``node/info`` `REST endpoint <https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getNodeInfo>`_.
 
       Just point your browser to :term:`NODE_URL` ``/node/info``.
 
@@ -150,7 +150,7 @@ Therefore, there is no **reliable** way to know if your account has become a har
 
 That said, nodes configured to act as **Dual** nodes (being both :ref:`Peer <peer-node>` and :ref:`API <api-node>` nodes) can be queried for their current list of delegated harvesters. To reiterate, this information comes from the node and is not backed up by the blockchain, so take it with a grain of salt.
 
-You can retrieve this list using the ``getUnlockedAccount`` `API endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ (point your browser to :term:`NODE_URL` ``/node/unlockedaccount``) or the `Typescript SDK <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_ for example). It contains the public keys of all registered delegated harvesters in the node, so your **remote account (R)** public key should appear here.
+You can retrieve this list using the ``getUnlockedAccount`` `API endpoint <https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getUnlockedAccount>`_ (point your browser to :term:`NODE_URL` ``/node/unlockedaccount``) or the `Typescript SDK <https://symbol.github.io/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount>`_ for example). It contains the public keys of all registered delegated harvesters in the node, so your **remote account (R)** public key should appear here.
 
 By default a node can have up to 5 delegated harvesters (harvesting slots) and excess requests can be priorized as the node sees fit. This can be configured on the node through the ``maxUnlockedAccounts`` and ``delegatePrioritizationPolicy`` :ref:`node-properties-harvesting-configuration`.
 

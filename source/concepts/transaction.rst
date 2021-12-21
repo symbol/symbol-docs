@@ -80,7 +80,7 @@ Announcing a transaction
 ************************
 
 Signed transactions are ready to be announced to the network.
-You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://docs.symbolplatform.com/symbol-openapi/v0.11.3/#operation/announceTransaction>`_.
+You can either use the SDK ``TransactionHttp`` service or append the payload to the request of the `transaction endpoint <https://symbol.github.io/symbol-openapi/v0.11.3/#operation/announceTransaction>`_.
 
 .. example-code::
 

@@ -66,7 +66,7 @@ The architecture of the TS SDK is inspired by |nem-library| from NIS1.
 
 * Reference: :doc:`REST Gateway <../../api>`
 
-* Reference: `REST API contract <https://docs.symbolplatform.com/symbol-openapi/v0.11.3/>`_
+* Reference: `REST API contract <https://symbol.github.io/symbol-openapi/v0.11.3/>`_
 
 *******************
 Accounts management
@@ -193,7 +193,7 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 .. |ts-js-sdk-docs| raw:: html
 
-   <a href="https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/" target="_blank">documentation</a>
+   <a href="https://symbol.github.io/symbol-sdk-typescript-javascript/" target="_blank">documentation</a>
 
 .. |nem-library| raw:: html
 

@@ -59,10 +59,10 @@ In this example, we will retrieve all account-related transactions with at least
         :start-after:  /* start block 02 */
         :end-before: /* end block 02 */
 
-.. note: Find all the possible `SearchCriteria options <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values in the SDK reference. If ``address`` filter is not set, all transactions present in the network are returned.
+.. note: Find all the possible `SearchCriteria options <https://symbol.github.io/symbol-sdk-typescript-javascript/0.20.3/interfaces/_infrastructure_searchcriteria_transactionsearchcriteria_.transactionsearchcriteria.html>`_ values in the SDK reference. If ``address`` filter is not set, all transactions present in the network are returned.
 
 3. The API returns pages with up to 100 transactions.
-The `page object <https://docs.symbolplatform.com/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
+The `page object <https://symbol.github.io/symbol-sdk-typescript-javascript/0.20.3/classes/_infrastructure_page_.page.html>`_ contains meta information about the total amount of transactions and pages available.
 
 To get more transactions, you will have to make further requests iteratively.
 For each extra call, increase the ``pageNumber`` by one unit.

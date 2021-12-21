@@ -18,7 +18,7 @@ Receiving transactions
 Filtering (by block height and more)
 ====================================
 
-Use the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint to retrieve any group of confirmed transactions. Among other filtering options, the following parameters are typically useful for narrowing down searches:
+Use the `/transactions/confirmed <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint to retrieve any group of confirmed transactions. Among other filtering options, the following parameters are typically useful for narrowing down searches:
 
 .. csv-table::
    :header: "Parameter", "Type", "Effect"
@@ -60,7 +60,7 @@ Parsing of embedded transactions
 
 .. note:: You can always **receive** embedded transactions, even if you never **create** any yourself. Make sure you understand how to parse them!
 
-As shown in the `/transactions/confirmed <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint documentation, a successfull query returns **a data array** including transactions and metadata (this array is **paginated** so pay attention to the ``pageSize`` and ``pageNumber`` parameters and return values). Each one of the returned transactions can match a different schema depending on the transaction's type, so the ``type`` field of each transaction must be checked.
+As shown in the `/transactions/confirmed <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions>`__ endpoint documentation, a successfull query returns **a data array** including transactions and metadata (this array is **paginated** so pay attention to the ``pageSize`` and ``pageNumber`` parameters and return values). Each one of the returned transactions can match a different schema depending on the transaction's type, so the ``type`` field of each transaction must be checked.
 
 Moreover, the metadata content is also different when the transaction is embedded inside an :ref:`aggregate-transaction`.
 
@@ -91,7 +91,7 @@ These are the main differences to keep in mind:
    ``maxFee``; Maximum fee to pay for the transaction; \-
    ``deadline``; Number of blocks before the transaction expires; \-
 
-The above 4 fields are missing from the embedded transaction because they belong to the containing aggregate transaction. To access them recover first the aggregate transaction using the `/transactions/confirmed/{transactionId} <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getConfirmedTransaction>`__ endpoint and ``aggregateHash`` as Id.
+The above 4 fields are missing from the embedded transaction because they belong to the containing aggregate transaction. To access them recover first the aggregate transaction using the `/transactions/confirmed/{transactionId} <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getConfirmedTransaction>`__ endpoint and ``aggregateHash`` as Id.
 
 If you are not interested in any of the fields listed above you can safely treat regular and embedded transfer transactions the same way, since they share the rest of properties.
 
@@ -110,7 +110,7 @@ The most common example is ``symbol.xym`` (Namespace ID ``0xE74B99BA41F4AFEE``) 
 
 Therefore, **to correctly resolve a namespace found in a transaction, the block height that included the transaction must be taken into account**.
 
-This is very easy to do because all blocks which include a namespace also include either a :ref:`mosaicresolutionstatement` or an :ref:`addressresolutionstatement` containing the resolved namespace. Just use the `/statements/resolutions/mosaic <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchMosaicResolutionStatements>`__ and `/statements/resolutions/address <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/searchAddressResolutionStatements>`__ endpoints to retrieve all statements for a given block, and then locate the unresolved namespace ID you are interested in.
+This is very easy to do because all blocks which include a namespace also include either a :ref:`mosaicresolutionstatement` or an :ref:`addressresolutionstatement` containing the resolved namespace. Just use the `/statements/resolutions/mosaic <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchMosaicResolutionStatements>`__ and `/statements/resolutions/address <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchAddressResolutionStatements>`__ endpoints to retrieve all statements for a given block, and then locate the unresolved namespace ID you are interested in.
 
 **Example using TESTNET:**
 
@@ -167,7 +167,7 @@ This is very easy to do because all blocks which include a namespace also includ
 Sending transactions
 ********************
 
-Transactions are announced to the network through the `/transactions <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/announceTransaction>`__ endpoint which accepts an hexadecimal string representing the transaction's payload. The process to build this payload is explained fairly extensively in the :ref:`transaction-definition` guide.
+Transactions are announced to the network through the `/transactions <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/announceTransaction>`__ endpoint which accepts an hexadecimal string representing the transaction's payload. The process to build this payload is explained fairly extensively in the :ref:`transaction-definition` guide.
 
 The following sections aim at clarifying the points which have been deemed the most confusing by users of the API.
 
@@ -180,7 +180,7 @@ Users are free to use any deadline they want for their transactions, between **n
 
 Deadlines are given in **milliseconds since the creation of the nemesis block**.
 
-The moment when the :ref:`nemesis block <block-creation>` was created can be found in the ``network.epochAdjustment`` property of the `/network/properties <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getNetworkProperties>`__ endpoint. This is the **number of seconds** elapsed since the `UNIX epoch <https://en.wikipedia.org/wiki/Unix_time>`__ and **it is always 1615853185 for MAINNET**.
+The moment when the :ref:`nemesis block <block-creation>` was created can be found in the ``network.epochAdjustment`` property of the `/network/properties <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getNetworkProperties>`__ endpoint. This is the **number of seconds** elapsed since the `UNIX epoch <https://en.wikipedia.org/wiki/Unix_time>`__ and **it is always 1615853185 for MAINNET**.
 
 In other words, you need to substract the **epoch adjustment** from a Unix time to obtain a deadline. Therefore, a **deadline 2h into the future**, which is the default deadline provided by the SDK, can be calculated as:
 
@@ -202,7 +202,7 @@ Moreover, **nodes** can define a **minimum fee** below which transactions are ju
 
 As a consequence, choosing the right maximum fee for a transaction is very important: Too low a number and the transaction will not be confirmed by any node and will eventually expire. Too high maximum fees, though, will incur in unnecessary expenses.
 
-To help choose the right amount, the `/network/fees/transaction <https://docs.symbolplatform.com/symbol-openapi/v1.0.1/#operation/getTransactionFees>`__ endpoint provides some statistics regarding the effective fees paid by the last 60 blocks. The returned data is:
+To help choose the right amount, the `/network/fees/transaction <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getTransactionFees>`__ endpoint provides some statistics regarding the effective fees paid by the last 60 blocks. The returned data is:
 
 .. csv-table::
    :header: "Property", "Meaning"

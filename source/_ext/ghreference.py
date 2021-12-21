@@ -26,7 +26,7 @@ class GitHubReference(Directive):
         'symbol-openapi-okhttp-gson-client',
         'symbol-openapi-jersey2-client'
     ]
-    docs_url = 'https://docs.symbolplatform.com/'
+    docs_url = 'https://symbol.github.io/'
 
     def run(self):
         node_list = nodes.bullet_list()
