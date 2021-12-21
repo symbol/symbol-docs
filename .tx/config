@@ -930,3 +930,15 @@ file_filter = source/locale/<lang>/LC_MESSAGES/handbook/cpp-coding-guidelines.po
 source_file = build/gettext/handbook/cpp-coding-guidelines.pot
 source_lang = en
 type = PO
+
+[symboldocs.guides--blockchain--global-mosaic-supply]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/global-mosaic-supply.po
+source_file = build/gettext/guides/blockchain/global-mosaic-supply.pot
+source_lang = en
+type = PO
+
+[symboldocs.guides--migration--post-launch-optin-xym-retrieval]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/post-launch-optin-xym-retrieval.po
+source_file = build/gettext/guides/migration/post-launch-optin-xym-retrieval.pot
+source_lang = en
+type = PO
