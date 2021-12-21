@@ -13,8 +13,6 @@ before_install:
   - cd $TRAVIS_BUILD_DIR
 install:
   - pip install -r requirements.txt
-script:
-  - make gettext
 deploy:
   - provider: script
     skip_cleanup: true
