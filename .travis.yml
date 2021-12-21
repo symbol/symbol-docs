@@ -16,10 +16,7 @@ before_install:
 install:
   - pip install -r requirements.txt
 script:
-  - echo "travis_fold:start:make.alldocs"
-  - make alldocs
-  - echo "travis_fold:end:make.alldocs"
-  #- make linkcheck
+  - make gettext
 deploy:
   - provider: script
     script: bash travis/transifex.sh

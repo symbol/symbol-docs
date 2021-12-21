@@ -13,7 +13,6 @@ token =" > ~/.transifexrc
 }
 
 tx_push() {
-    make gettext
     tx push --source --parallel
 }
 
