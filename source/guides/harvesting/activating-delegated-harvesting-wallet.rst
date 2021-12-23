@@ -14,9 +14,9 @@ Share your account's importance securely with a node and get rewarded.
 Introduction
 ************
 
-:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to **receive rewards** from creating new blocks **without running a node**. At the same time, it allows nodes to benefit from an account's (possibly higher) :ref:`importance score <importance-calculation>`.
+:ref:`Delegated harvesting <delegated-harvesting>` enables accounts to **receive rewards** from creating new blocks **without running a node**. At the same time, it allows nodes to benefit from such an account's (possibly higher) :ref:`importance score <importance-calculation>`.
 
-.. note:: Node owners have access to the node's configuration so it's more convenient for them to use :ref:`Remote harvesting <remote-harvesting>` instead.
+This guide is therefore addressed at users **not running a Symbol node**. Node owners have access to the node's configuration so it's more convenient for them to use :ref:`Remote harvesting <remote-harvesting>` instead of delegating.
 
 As explained in the :doc:`manual version of this guide <activating-delegated-harvesting-manual>` there are a number of steps required to enable delegated harvesting, involving different accounts and several transactions. It is thus **much more convenient** to use |codename|'s :ref:`Desktop Wallet <wallet-desktop>` as shown in this guide.
 
@@ -36,6 +36,10 @@ Before you can activate delegated harvesting using the Desktop Wallet, you need 
 
   - An :ref:`importance score <importance-calculation>` greater than zero. Keep in mind that this score is calculated every 12h.
 
+.. note:: Activating Delegated harvesting requires **sending transactions** and paying the required **transaction fees**.
+
+   You can enable, disable and switch nodes multiple times, but be warned that each action will incur in a (small) transaction fee.
+
 *****
 Guide
 *****
@@ -47,7 +51,9 @@ Guide
       :class: with-shadow
       :target: /_images/delegated-harvesting-wallet-0.png
 
-   Note that the **Harvesting status** is **🔴 INACTIVE**.
+   Note that the **Harvesting status** is 🔴 **INACTIVE**.
+
+.. _harvest_wallet_step_2:
 
 2. **Click on the "Node Url" box** to see a list of nodes currently connected to the network:
 
@@ -63,7 +69,7 @@ Guide
 
       Keep in mind, though, that when delegating harvesting to a non-API node the **Harvesting Status** indicator will not work.
 
-3. **Select a node from the list and click on the "Link all keys" button** (You will probably need to scroll down past the "Keys Info" section).
+3. **Select a node from the list and click on the "Link all keys" button**.
 
    You will be asked to sign an :doc:`../../concepts/aggregate-transaction`:
 
@@ -83,9 +89,11 @@ Guide
       :class: with-shadow
       :target: /_images/delegated-harvesting-wallet-3.png
 
-   You can see that the **Harvesting status** has changed to **🟡 KEYS LINKED** and the different keys appear in the form.
+   You can see that the **Harvesting status** has changed to 🟡 **KEYS LINKED** and the different keys appear in the form.
 
    All that is left now is to send a :ref:`persistentdelegationrequesttransaction` which is the actual request to the node.
+
+.. _harvest_wallet_step_5:
 
 5. **Click on the "Activate" button**.
 
@@ -107,14 +115,14 @@ Guide
 
 7. **Enter your password and click "Confirm"** (again).
 
-   Once you receive the confirmation message (shouldn't take longer than 30 seconds), the **Harvesting status** should change to **🟡 ACTIVATION IN PROGRESS**:
+   Once you receive the confirmation message (shouldn't take longer than 30 seconds), the **Harvesting status** should change to 🟡 **ACTIVATION IN PROGRESS**:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-6.png
       :align: center
       :class: with-rounded-shadow
       :target: /_images/delegated-harvesting-wallet-6.png
 
-   At this point it is up to the node to accept the request and add your account as a harvester. When this happens, the **Harvesting status** will change to **🟢 ACTIVE**:
+   At this point it is up to the node to accept the request and add your account as a harvester. When this happens, the **Harvesting status** will change to 🟢 **ACTIVE**:
 
    .. image:: /resources/images/screenshots/delegated-harvesting-wallet-7.png
       :align: center
@@ -142,11 +150,21 @@ The **Harvesting status** indicator can help you find out the state of your acco
    :widths: 30, 70
    :delim: ;
 
-   🔴 INACTIVE; Some keys are missing. Go to step 2.
-   🟡 KEYS LINKED; Keys are present but the harvesting delegation request has not been sent. Go to step 5.
+   🔴 INACTIVE; Some keys are missing. :ref:`Go to step 2 <harvest_wallet_step_2>`.
+   🟡 KEYS LINKED; Keys are present but the harvesting delegation request has not been sent. :ref:`Go to step 5 <harvest_wallet_step_5>`.
    🟡 IN PROGRESS; The harvesting delegation request has been sent but the node has not acknowledged it yet. It might take a few minutes, or it might never happen. There is not much you can do at this point, except trying a different node.
    🟢 ACTIVE; Harvesting is enabled. Harvested blocks and their fees should start arriving, depending on your account's importance.
+   🔴 FAILED; Activation did not succeed **or could not be verified**. It is recommended to select a different node and :ref:`start over from step 2 <harvest_wallet_step_2>`.
 
+.. topic:: The FAILED status
+
+   This status can be due to **a number of reasons** and there is not much to do to fix it besides changing to a different node or wait a bit.
+
+   These are some of the reasons:
+
+   - The node **refused** to add the delegated harvester: maybe all its slots are full.
+   - The node **could not be contacted** to verify the activation: maybe it is offline, it is not an API node or you lost internet connectivity. Delegated harvesting might actually be ACTIVE in this case and the indicator can change at a later time.
+   - When the node is not an API node that can be directly contacted, the `Statistics Service <https://symbol.services/nodes>`__ is used to verify the activation. Maybe this service **has not discovered the node yet** but will do in the future.
 
 ***********
 Final words
