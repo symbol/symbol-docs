@@ -164,7 +164,7 @@ The **Harvesting status** indicator can help you find out the state of your acco
 
    - The node **refused** to add the delegated harvester: maybe all its slots are full.
    - The node **could not be contacted** to verify the activation: maybe it is offline, it is not an API node or you lost internet connectivity. Delegated harvesting might actually be ACTIVE in this case and the indicator can change at a later time.
-   - When the node is not an API node that can be directly contacted, the `Statistics Service <https://symbol.services/nodes>`__ is used to verify the activation. Maybe this service **has not discovered the node yet** but will do in the future.
+   - When checking the harvesting status from different devices the `Statistics Service <https://symbol.services/nodes>`__ is used to retrieve the URL of the node. Maybe this service **has not discovered the node yet** but will do in the future.
 
 ***********
 Final words
