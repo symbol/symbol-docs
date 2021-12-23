@@ -254,13 +254,6 @@ The SDKs need to be adopted by other developers.
 As the main developer, no one knows better than you how the SDK works.
 Consider helping others and spread the usage of the SDK by providing :doc:`the following documentation <sdk-documentation>`.
 
-******************************
-Publishing the SDK as official
-******************************
-
-To make an SDK officially supported, submit it as a `NIP <https://github.com/symbol/NIP/blob/main/NIPs/nip-0001.md>`_.
-The reason behind the |codename| Improvement Proposal is to ensure that the new libraries are reviewed, tested, and shared among |codename| developers.
-
 Recommended Licenses
 ====================
 

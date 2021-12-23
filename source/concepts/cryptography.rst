@@ -98,6 +98,3 @@ HD-Wallets and Mnemonics
 A **Mnemonic Phrase** is human-friendly representation for a private key, composed of **24 random English words**. Mnemonic phrases are sometimes used instead of private keys as they are **easier for humans to remember and write down**.
 
 However, they are **equivalent to private keys** so it is critical that they are kept secret at all times. Even more so in the |codename| :ref:`wallet-desktop`, where **the mnemonic phrase encodes the seed account's key**.
-
-See the `NIP-6 <https://github.com/symbol/NIP/blob/main/NIPs/nip-0006.md>`_ document for technical details on |codename|'s mechanism to create HD Wallets.
-
