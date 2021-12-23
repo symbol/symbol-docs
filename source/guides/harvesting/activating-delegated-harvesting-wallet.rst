@@ -154,17 +154,17 @@ The **Harvesting status** indicator can help you find out the state of your acco
    🟡 KEYS LINKED; Keys are present but the harvesting delegation request has not been sent. :ref:`Go to step 5 <harvest_wallet_step_5>`.
    🟡 IN PROGRESS; The harvesting delegation request has been sent but the node has not acknowledged it yet. It might take a few minutes, or it might never happen. There is not much you can do at this point, except trying a different node.
    🟢 ACTIVE; Harvesting is enabled. Harvested blocks and their fees should start arriving, depending on your account's importance.
-   🔴 FAILED; Activation did not succeed **or could not be verified**. It is recommended to select a different node and :ref:`start over from step 2 <harvest_wallet_step_2>`.
+   🔴 FAILED; Activation did not succeed **or could not be verified**. Wait a bit or select a different node :ref:`in step 2 <harvest_wallet_step_2>`. See the note below for more details.
 
 .. topic:: The FAILED status
 
-   This status can be due to **a number of reasons** and there is not much to do to fix it besides changing to a different node or wait a bit.
+   **A number of reasons** can lead to this status and it is not easy for the Wallet to know the real cause. Selecting a different node is typically the quickest fix, although contacting the node operator or waiting a bit might also work.
 
-   These are some of the reasons:
+   These are some of the causes behind this status:
 
    - The node **refused** to add the delegated harvester: maybe all its slots are full.
-   - The node **could not be contacted** to verify the activation: maybe it is offline, it is not an API node or you lost internet connectivity. Delegated harvesting might actually be ACTIVE in this case and the indicator can change at a later time.
    - When checking the harvesting status from different devices the `Statistics Service <https://symbol.services/nodes>`__ is used to retrieve the URL of the node. Maybe this service **has not discovered the node yet** but will do in the future.
+   - The node **could not be contacted** to verify the activation: maybe it is offline, it is not an API node or you lost internet connectivity. Delegated harvesting might actually be ACTIVE in this case and the indicator can change at a later time.
 
 ***********
 Final words
