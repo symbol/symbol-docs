@@ -1102,6 +1102,19 @@ hr {
     border-top: 1px solid #9773FF80;
 }
 
+.table-double-rows tbody .row-even td {
+    border-top: none;
+}
+
+.table-double-rows tbody tr td:empty {
+    padding: 0;
+}
+
+.docs-repo-table {
+    background-color: #170A29;
+    border: 1px solid #9773FF80;
+}
+
 /* Footnotes */
 dt:target, span.highlighted {
     background-color: #9773ff;

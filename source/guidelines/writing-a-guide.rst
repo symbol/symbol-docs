@@ -101,3 +101,5 @@ Writing the guide
 8. Push your changes and create a `pull-request <https://help.github.com/articles/creating-a-pull-request/>`_.
 
    Don't worry if you don't get everything right on the first try. The repository maintainers will proofread and edit the content to follow the :doc:`documentation style guide <style-guide>`.
+
+For more information about the ``symbol-docs`` repository continue reading the :doc:`../handbook/documenting` guide.
