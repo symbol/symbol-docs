@@ -204,7 +204,9 @@ Steps that only need to be done once (``config`` and ``compose``) will not be re
 Providing HTTPS access
 **********************
 
-:ref:`API nodes <api-node>` created using the ``api`` or ``dual`` assemblies accept HTTP commands through port 3000. HTTPS access can be enabled too in two different ways.
+:ref:`API nodes <api-node>` created using the ``api`` or ``dual`` assemblies accept HTTP commands through port 3000. HTTPS access can also be enabled, as described in the next two sections.
+
+.. note:: The certificates used below will **only** be used for HTTPS communication with the REST API, **not** as :ref:`node certificates <manual-node-certificates>` for inter-node communication.
 
 ========================
 Use your own certificate

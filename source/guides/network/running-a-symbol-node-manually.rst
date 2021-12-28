@@ -139,6 +139,8 @@ You can edit these files manually (Take a look at `these templates <https://gith
 
         python3 -m pip install -r requirements.txt
 
+.. _manual-node-certificates:
+
 2. **Create certificates**.
 
    - Create a folder named ``certificates`` and move into it.
