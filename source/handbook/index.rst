@@ -25,7 +25,8 @@ It is still work-in-progress and is roughly divided into the following categorie
     :maxdepth: 1
 
     directory
-    commit-discipline
+    contribution-guidelines
     git-branching
-    cpp-coding-guidelines
+    commit-discipline
+    all-coding-guidelines
     documenting

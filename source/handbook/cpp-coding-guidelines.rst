@@ -1,81 +1,241 @@
 #####################
-C++ coding guidelines
+C++ Coding Guidelines
 #####################
+
+Best Practices
+**************
+
+1. **NEVER** include ``using namespace`` statements in header files.
+2. **NEVER** include a using statement for the standard namespace (``std``). Instead, always qualify all types from it.
+3. **USE** a constexpr expression instead of a MACRO whenever possible.
+4. **USE** ``pragma once`` instead of header guards.
+5. **USE** ``enum class`` instead of ``enum`` whenever possible.
+6. **ALWAYS** declare variables as close to first usage as possible - this isn't C!
+7. **ALWAYS** pass non-trivial parameters by reference.
+8. **PREFER** a composite return value (e.g. ``pair``, POD ``struct``) to multiple out parameters.
+9. **PREFER** ``auto`` whenever possible, but use as many type modifiers (``const``, ``volatile``, ``&``, ``*``) as possible.
+10. **AVOID** `volatile` unless there is a very strong justification (there usually isn't).
+11. **ALWAYS** use ``using`` statements instead of ``typedef`` for aliases.
+12. **USE** function qualifiers (``override``, ``final``, ``const``) liberally.
+13. **PREFER** an enumeration to multiple booleans.
+14. **USE** anonymous namespaces liberally in cpp files and export the minimum number of names from each compilation object.
+15. **NEVER** use static free functions.
+
+Numeric Types
+-------------
+
+1. **USE** ``size_t`` whenever dealing with data sizes.
+2. **USE** types defined in **stdint.h** (``uint8_t``, ``uint16_t``, ``uint32_t``, etc.)
+3. **AVOID** using signed types unless it's really necessary and reasonable.
+4. **AVOID** using floating point arithmetic, especially in any part of consensus.
+
+File / Directory Layout
+***********************
+
+If a cpp/h file contains a single class, the file should be named after the class and be UpperCamelCase.
+If a cpp/h file contains utility functions, the file should be given a descriptive name and be UpperCamelCase.
+
+We expect parallel source and test directory hierarchies.
+For example,
+
+::
+
+    root
+    - parser  # package name, directory containing source code
+      Parser.h/cpp  # contains class Parser
+      - ast
+        - Ast.h/cpp  # contains various exports
+
+    - tests  # directory containing tests for source code
+      - ParserTests.cpp  # unit tests for parser/Parser.h/cpp
+      - ast
+        - AstTests.cpp  # unit tests for parser/ast/Ast.h/cpp
 
 Naming
 ******
 
-Naming is somewhat based on `Java Naming Convention <http://www.oracle.com/technetwork/java/codeconventions-135099.html>`__, the difference is in constants, mainly due to C Preprocessor.
+1. Static and free functions should be UpperCamelCase
 
-1. Filenames: should match name of a class or namespace
+2. Member function names should be lowerCamelCase
 
-   ``NodeEndpoint.h`` - if there are more classes in file, filename should match the most important
+3. Constants (global or local) should be Upper_Camel_Case.
 
-2. Name of: structs, classes, enums (all non-basic types)
+4. #defines should be TITLE_CASE
 
-   ``MyEnum``, ``NodeEndpoint`` - should be nouns
+5. Local variables and function parameters should be lowerCamelCase
 
-3. Static and free function names
+6. Struct members should be UpperCamelCase
 
-   'DoSomething' - should contain verb
 
-4. Member function names
+Prefixes
+--------
 
-   ``bootKey`` - for accessors and modifiers (no get or set prefix)
+1. Prefix class instance members with ``m_``
 
-   ``doSomething`` - for other functions should contain verb
+2. Prefix class static members with ``s_``
 
-5. Global, local and class member
+3. Prefix globals with ``g_``
 
-   **constants**, enum fields ``State_Data_Continue`` - words capitalized, delimited with an underline '_'
+4. Prefix all pointers (both smart and raw) with ``p``
 
-6. Macros, #defines
+5. Never prefix anything with a single underscore (``_``).
 
-   ``INVALID_SIZE_T``, ``MAX_ULONGLONG`` - word in upper-case, delimited with underline '_'
 
-7. Variables, fields - same as methods
+Arrays
+-------
 
-   ``bytesSend``, ``headlessCamelCase``
+If you pass size of an array somewhere, always give the size variable a name, that suggests what it actually is:
 
-8. Prefix class members/fields with an ``m_`` (I actually haven't been following that rule for a long time, but it makes reviewing the code much faster - especially when looking at commits, not within an IDE)
+1. So if you actually expect **number of elements**, use name with ``Count`` postfix [e.g. ``nodeCount``]
 
-9. Prefix pointers with a "p" both smart and raw
-
-10. Struct fields should be UpperCamelCase
-
-11. Do not start any variables/function/method names with an underscore
-
-12. If you pass size of an array somewhere, always give the size variable a name, that suggest what it's actually is:
-
-    1. So if you actually expect **number of elements**, use name like ``size_t foobarCount`` (eventually ``foobarLength``)
-
-    2. If you want number of **bytes** use ``size_t foobarSize``
+2. If you want number of **bytes** use name like ``size_t nameSize``
 
 Includes
 ********
 
 1. Always use "/" in includes and NEVER "\\", (C standard WG14/N1256 point 6.4.7, C++ standard ISO/IEC 14882:2003 point 2.8, C++ standard ISO/IEC 14882:2011 (from working draft N3225) point 2.9)
 
-2. Number of include files in header file should be minimal, that is: **ONLY**, that what's actually needed in ``.h``
+2. Try to include the minimal number of files required for a successful build. Corollary: don't include anything you don't need.
 
-   What's needed in ``.cpp`` file should only be included in ``.cpp``.
+3. Order includes from most specific to most general.
 
-3. Order of includes (top-down)
+Style
+*****
 
-   1. OWN (local ones)
+Classes, Methods and Members
+----------------------------
 
-   2. Project common
+Recommended class order:
 
-   3. Shared/common ``<core/...>``
+1. Private constants (as they are usually used early)
 
-   4. System/STL
+2. Public constants
 
-Nice link for further reading: http://www.topology.org/linux/include.html
+3. Methods
 
-if/for
-******
+   1. Constructors
 
-* Do not use such a construct when ``for`` doesn't have a body
+   2. Instance methods
+
+   3. Static methods
+
+4. Fields
+
+   1. Public members (should probably be used only for POD types)
+
+   2. Protected members
+
+   3. Private members
+
+Use an access modifier (``public:``, ``private:``) for each section even if the modifier is redundant.
+
+Special Names
+-------------
+
+* Blockchain not BlockChain
+
+* Filename not FileName
+
+* Filesystem not FileSystem
+
+* NotEmpty not NonEmpty
+
+* Nonzero not NonZero or Notzero or NotZero
+
+* Roundtrip not RoundTrip
+
+* SubCache not Subcache
+
+* ThreadPool not Threadpool
+
+* Timestamp not TimeStamp
+
+* ``Configuration`` for class names
+
+* ``config`` for variable names
+
+Indentation
+-----------
+
+single indent for block opening
+
+.. code-block:: c++
+
+    for (auto&& pEntity : entities) {
+        singleEntityVector[0] = pEntity;
+        auto result = dispatcher.dispatch(m_config.ValidationPolicy, singleEntityVector);
+        m_config.pObserver->notify(*pEntity, observerContext);
+    }
+
+continuations use **double** indent
+
+.. code-block:: c++
+
+    CATAPULT_LOG(debug) << "comparing chain scores: " << localScore << " (local) vs "
+            << remoteScore << " (remote)";
+    return pState
+            && pState->ImportanceInfo.Importance > Importance(0)
+            && pState->Balances.get(Xem_Id) >= minHarvestingBalance;
+
+initializer list, and ctors/function/method arguments, have **double** indent
+
+.. code-block:: c++
+
+    // mind the double indent for method arguments
+    thread::future<std::unique_ptr<model::Block>> BlockAt(
+            Height height,
+            const io::BlockStorageView& storage) {
+        if (Height(0) == height || storage.chainHeight() < height) {
+            auto exception = CreateHeightException("unable to get block at height", height);
+            return thread::make_exceptional_future<std::unique_ptr<model::Block>>(exception);
+        }
+
+        return thread::make_ready_future(storage.loadBlock(height));
+    }
+
+Bracing
+-------
+
+empty body, short
+
+.. code-block:: c++
+
+    Foo() : m_value(0)
+    {}
+
+empty body, long
+
+.. code-block:: c++
+
+    // two indents
+    Foo(very arguments, much wow)
+            : m_value(0)
+            , m_xman(professor)
+    {}
+
+body, short
+
+.. code-block:: c++
+
+    Foo() : m_value(0) {
+        // body
+    }
+
+body, long
+
+.. code-block:: c++
+
+    // two indents
+    Foo(very arguments, much wow)
+            : m_value(0)
+            , m_xman(professor) {
+        // body
+    }
+
+Empty Statements
+----------------
+
+* Do not use such a construct when ``for`` doesn't have a body
 
   .. code-block:: c++
 
@@ -85,205 +245,7 @@ if/for
 
   .. code-block:: c++
 
-     for (a; b; c) {}
+     for (a; b; c)
+     {}
 
-This leaves clear intention of what you had in mind.
-
-Operators
-*********
-
-* In case of operators please put additional space before and after them. This makes code much more readable.
-
-  This should be always used in case of ``=``, ``==``, ``!=``, ``&&``, ``||``. So this one's ok:
-
-  .. code-block:: c++
-
-     for (size_t j = 0; j < foo.size() - x * 4; ++j)
-
-  While this one is not:
-
-  .. code-block:: c++
-
-     for (size_t j=0; j<foo.size()-x*4; ++j)
-
-Spaces
-******
-
-* Always put a space after semicolon ';' in for, that is ok:
-
-  .. code-block:: c++
-
-     for (size_t j = 0; j < foo.size() - 1; ++j)
-
-  This one's not:
-
-  .. code-block:: c++
-
-     for (size_t j = 0;j < sections.size();++j)
-
-* Always put a space after coma ',' in function args, like:
-
-  .. code-block:: c++
-
-     outputAsciiString(buffer, something, elsewhere);
-
-  Not:
-
-  .. code-block:: c++
-
-     outputAsciiString(buffer,something,elsewhere);
-
-* Do NOT leave whitespaces at line-endings (here's a regex for "Quick Replace" in visual studio: ``[ ]+$``)
-
-Types
-*****
-
-* ``size_t`` should be used whenever dealing with data size (in many cases ``auto`` is fine too):
-
-  * The result of ``sizeof()`` is ``size_t``
-
-  * Difference between pointer types is always ``size_t``
-
-  * Index of an element in an array should be of ``size_t`` type
-
-  * The result of ``strlen()`` should usually be ``size_t``
-
-  * Most STL containers uses ``size_t`` as default size, count, length and index type
-
-* Please use types defined in **stdint.h** (``uint8_t``, ``uint16_t``, ``uint32_t``, etc.)
-
-Disputable:
-
-* Please avoid using **signed** types and **signed** math unless it's really necessary and reasonable.
-
-Classes, Methods and Members
-****************************
-
-* Classes should be named using ``CamelCase`` (first letter capital)
-
-* Class order (disputable):
-
-  1. Private constants (as they are usually used early)
-
-  2. Public constants
-
-  3. Methods (if possible public, protected, private)
-
-  4. Fields
-
-     1. Public members (should probably be used only for POD types)
-
-     2. Protected members
-
-     3. Private members
-
-Arguments
-*********
-
-* Avoid passing arguments as pointers (reference is always preferred) unless it's really intended and needed.
-
-* Use ``const`` references or ``const`` types when possible.
-
-Special Names
-*************
-
-* BlockChain not Blockchain
-
-* Timestamp not TimeStamp
-
-* Filesystem not FileSystem
-
-* ``configuration`` for class names
-
-* ``config`` for variable names
-
-Style
-*****
-
-Indents
--------
-
-1. Single indent for block opening
-
-2. Continuations use double indent
-
-3. Initializer list, and ctors/function/method arguments, have **double** indent
-
-Example 1.
-
-.. code-block:: c++
-
-   for (auto&& pEntity : entities) {
-       singleEntityVector[0] = pEntity;
-       auto result = dispatcher.dispatch(m_config.ValidationPolicy, singleEntityVector);
-       m_config.pObserver->notify(*pEntity, observerContext);
-   }
-
-Example 2.
-
-.. code-block:: c++
-
-   CATAPULT_LOG(debug) << "comparing chain scores: " << localScore << " (local) vs "
-       << remoteScore << " (remote)";
-   return pState
-       && pState->ImportanceInfo.Importance > Importance(0)
-       && pState->Balances.get(Xem_Id) >= minHarvestingBalance;
-
-
-Example 3.
-
-
-.. code-block:: c++
-
-   // mind the double indent for method arguments
-   static thread::future<std::unique_ptr<model::Block>> BlockAt(
-           Height height,
-           const io::BlockStorageView& storage) {
-       if (Height(0) == height || storage.chainHeight() < height) {
-           auto exception = CreateHeightException("unable to get block at height", height);
-           return thread::make_exceptional_future<std::unique_ptr<model::Block>>(exception);
-       }
-
-       return thread::make_ready_future(storage.loadBlock(height));
-   }
-
-
-Bracing style
--------------
-
-empty body, short
-
-.. code-block:: c++
-
-   Foo() : m_value(0)
-   {}
-
-empty body, long
-
-.. code-block:: c++
-
-   // two indents
-   Foo(very arguments, much wow)
-           : m_value(0)
-           , m_xman(professor)
-   {}
-
-body, short
-
-.. code-block:: c++
-
-   Foo() : m_value(0) {
-       // body
-   }
-
-body, long
-
-.. code-block:: c++
-
-   // two indents
-   Foo(very arguments, much wow)
-           : m_value(0)
-           , m_xman(professor) {
-       // body
-   }
-
+  This leaves clear intention of what you had in mind.
