@@ -49,7 +49,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         commits = g.iter_commits('--all', max_count=1, paths="%s.rst" % fullpagename)
         # Splits on newline to get the first (highest commits) contributor, then handles whitespace, then gets info
         try:
-            most_commits, _most_user = ''
+            most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
 
         # Parses all of 'first_name last_name <email>', 'first_name middle_name last_name <email>', and 'name <email>' correctly
             most_user_name = ' '.join(_most_user.split(' ')[:-1])
