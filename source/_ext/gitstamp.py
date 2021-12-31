@@ -55,7 +55,8 @@ def page_context_handler(app, pagename, templatename, context, doctree):
             most_user_name = ' '.join(_most_user.split(' ')[:-1])
             most_user_email = _most_user.split(' ')[-1][1:-1]
         except Exception:
-            raise Exception(f"git shortlog: {g.git.shortlog('-sne', '--', ('%s.rst' % fullpagename)).split('\n')[0]}")
+            print(g.git.shortlog('-sne', '--', ('%s.rst' % fullpagename)).split('\n')[0])
+            raise Exception(g.git.shortlog('-sne', '--', ('%s.rst' % fullpagename)).split('\n')[0])
     
         if not commits:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
