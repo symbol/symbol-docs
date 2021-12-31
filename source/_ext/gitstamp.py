@@ -48,12 +48,14 @@ def page_context_handler(app, pagename, templatename, context, doctree):
     try:
         commits = g.iter_commits('--all', max_count=1, paths="%s.rst" % fullpagename)
         # Splits on newline to get the first (highest commits) contributor, then handles whitespace, then gets info
-        most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
-        # Parses all of 'first_name last_name <email>', 'first_name middle_name last_name <email>', and 'name <email>' correctly
-        most_user_name = ' '.join(_most_user.split(' ')[:-1])
-        most_user_email = _most_user.split(' ')[-1][1:-1]
+        try:
+            most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
 
-        raise Exception(f'{most_commits} {_most_user} {most_user_name} {most_user_email}')
+        # Parses all of 'first_name last_name <email>', 'first_name middle_name last_name <email>', and 'name <email>' correctly
+            most_user_name = ' '.join(_most_user.split(' ')[:-1])
+            most_user_email = _most_user.split(' ')[-1][1:-1]
+        except Exception:
+            raise Exception(f"git shortlog: {g.git.shortlog('-sne', '--', ('%s.rst' % fullpagename)).split('\n')[0]}")
     
         if not commits:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
