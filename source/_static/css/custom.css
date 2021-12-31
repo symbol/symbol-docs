@@ -951,6 +951,10 @@ img.no-background {
     background-color: transparent;
 }
 
+.highlight .gh {
+    color: #27c5f3;
+}
+
 .warning {
     border-left: 6px solid red;
     background-color: 251B34;

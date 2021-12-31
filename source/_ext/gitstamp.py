@@ -15,6 +15,8 @@ import datetime
 from sphinx import errors
 from github import Github
 
+from sys import version_info
+print(version_info)
 # Gets the datestamp of the latest commit on the given file
 # Converts the datestamp into something more readable
 # Skips files whose datestamp we can't parse.
@@ -46,10 +48,17 @@ def page_context_handler(app, pagename, templatename, context, doctree):
     try:
         commits = g.iter_commits('--all', max_count=1, paths="%s.rst" % fullpagename)
         # Splits on newline to get the first (highest commits) contributor, then handles whitespace, then gets info
-        most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
+        try:
+            most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
+
         # Parses all of 'first_name last_name <email>', 'first_name middle_name last_name <email>', and 'name <email>' correctly
-        most_user_name, most_user_email = ' '.join(_most_user.split(' ')[:-1]), _most_user.split(' ')[-1][1:-1]
-        
+            most_user_name = ' '.join(_most_user.split(' ')[:-1])
+            most_user_email = _most_user.split(' ')[-1][1:-1]
+        except ValueError:
+            most_user_email = ''
+            most_user_name = ''
+            most_commits = ''
+    
         if not commits:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
             # Ideally want to check their source - lib/imapoptions, etc, but
@@ -58,7 +67,6 @@ def page_context_handler(app, pagename, templatename, context, doctree):
 
         commit = next(iter(commits))
         context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y&#8209;%m&#8209;%d")
-        #raise Exception(f'{commit.author.email} \n {most_user_name, most_user_email}')
 
         last_user = GHCachedUser(commit.author.name)
         main_user = GHCachedUser(most_user_name)
@@ -84,7 +92,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
                         last_user.avatar_url = gh_commit.author.avatar_url
 
                 gh_user_cache[commit.author.email] = last_user
-            # Repeat above for most user
+            # Repeat above for main_user
             if most_user_email in gh_user_cache:
                 main_user = gh_user_cache[most_user_email]
             else:
