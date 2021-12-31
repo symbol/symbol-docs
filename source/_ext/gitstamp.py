@@ -15,6 +15,8 @@ import datetime
 from sphinx import errors
 from github import Github
 
+from sys import version_info
+print(version_info)
 # Gets the datestamp of the latest commit on the given file
 # Converts the datestamp into something more readable
 # Skips files whose datestamp we can't parse.
@@ -48,8 +50,11 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         # Splits on newline to get the first (highest commits) contributor, then handles whitespace, then gets info
         most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
         # Parses all of 'first_name last_name <email>', 'first_name middle_name last_name <email>', and 'name <email>' correctly
-        most_user_name, most_user_email = ' '.join(_most_user.split(' ')[:-1]), _most_user.split(' ')[-1][1:-1]
-        
+        most_user_name = ' '.join(_most_user.split(' ')[:-1])
+        most_user_email = _most_user.split(' ')[-1][1:-1]
+
+        raise Exception(f'{most_commits} {_most_user} {most_user_name} {most_user_email}')
+    
         if not commits:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
             # Ideally want to check their source - lib/imapoptions, etc, but
