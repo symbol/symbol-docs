@@ -58,7 +58,6 @@ def page_context_handler(app, pagename, templatename, context, doctree):
 
         commit = next(iter(commits))
         context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y&#8209;%m&#8209;%d")
-        #raise Exception(f'{commit.author.email} \n {most_user_name, most_user_email}')
 
         last_user = GHCachedUser(commit.author.name)
         main_user = GHCachedUser(most_user_name)
@@ -84,7 +83,7 @@ def page_context_handler(app, pagename, templatename, context, doctree):
                         last_user.avatar_url = gh_commit.author.avatar_url
 
                 gh_user_cache[commit.author.email] = last_user
-            # Repeat above for most user
+            # Repeat above for main_user
             if most_user_email in gh_user_cache:
                 main_user = gh_user_cache[most_user_email]
             else:
