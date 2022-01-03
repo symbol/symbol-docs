@@ -8,7 +8,7 @@ Therefore, you will need to read both the RST and `Sphinx <https://www.sphinx-do
 
 It is extremely helpful to use an IDE that supports reStructuredText, like `Visual Studio Code <https://code.visualstudio.com/>`__ with an `RST extension <https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext>`__, for example.
 
-.. note:: Pay attention to Sphinx's log output when building! Any warning you see there is worth investigating.
+.. caution:: Pay attention to Sphinx's log output when building! Any warning you see there is worth investigating.
 
 Basic formatting
 ================
@@ -26,8 +26,11 @@ Basic formatting
      Main Title
      ##########
 
-     First Section
-     =============
+     Header level 2
+     **************
+
+     Header level 3
+     ==============
 
      Normal text.
 
