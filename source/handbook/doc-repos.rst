@@ -18,7 +18,7 @@ Technical documentation
 
     **Site** ; `docs.symbolplatform.com <https://docs.symbolplatform.com>`__
     **Source repo** ; `github.com/symbol/symbol-docs <https://github.com/symbol/symbol-docs>`__
-    **Host** ; `GitHub pages <https://github.com/symbol/symbol.github.io>`__
+    **Host** ; `GitHub pages <https://github.com/symbol/symbol-docs/tree/gh-pages>`__
     **Engine** ; `Sphinx <https://www.sphinx-doc.org>`__
     **Format** ; `reStructuredText <https://docutils.sourceforge.io/rst.html>`__
     **Intended readers** ; The world at large.
