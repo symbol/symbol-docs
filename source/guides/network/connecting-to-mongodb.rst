@@ -120,3 +120,13 @@ For other advanced queries, check the `Robo3T <https://studio3t.com/knowledge-ba
 .. |Robo3T| raw:: html
 
    <a href="https://robomongo.org">Robo 3T</a>
+
+
+****************
+Troubleshooting connection issues
+****************
+If you are trying to extend functionality on an existing node via a change to the custom yml file, note that newly added configuration may not propogate on an existing node, even when bootstrap is restarted. If you encounter the error "Network is unreachable. Reason: network error while attempting to run command 'isMaster' on host 'localhost:27017'" in Robo 3T, try editing target/docker/docker-compose.yml and adding the following lines to the db section:
+        ports:
+            - '27017:27017'
+
+This achieves the same outcome as adding '- openPort: true' to the custom yml, but applies it directly to the docker file rather than relying on bootstrap to pass it through.
