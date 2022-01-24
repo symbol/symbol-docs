@@ -42,7 +42,14 @@ And then use this file when configuring ``symbol-bootstrap``, for example:
 
     symbol-bootstrap start -p testnet -a dual -c custom_parameters.yml
 
-This will make the database's TCP port ``27017`` accessible from the host so be careful, and only use this feature **for development purposes**.
+Previously configured nodes may need to be stopped and restarted with the --upgrade -d argument in order to process the updated custom yml file:
+
+.. code-block:: bash
+
+    symbol-bootstrap stop    
+    symbol-bootstrap start -p testnet -a dual -c custom_parameters.yml --upgrade -d 
+
+This will make the database's TCP port ``27017`` accessible from the host and it will be extremely vulnerable if this port is publicly exposed, so be careful. Only use this feature **for development purposes**. 
 
 ***************
 Install Robo 3T
