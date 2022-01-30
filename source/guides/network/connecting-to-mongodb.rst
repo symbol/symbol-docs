@@ -42,7 +42,7 @@ And then use this file when configuring ``symbol-bootstrap``, for example:
 
     symbol-bootstrap start -p testnet -a dual -c custom_parameters.yml
 
-Previously configured nodes may need to be stopped and restarted with the --upgrade -d argument in order to process the updated custom yml file:
+Previously configured nodes may need to be stopped and restarted with the ``--upgrade -d`` argument in order to process the updated custom yml file:
 
 .. code-block:: bash
 
