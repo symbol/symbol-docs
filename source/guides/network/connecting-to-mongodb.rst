@@ -49,7 +49,7 @@ Previously configured nodes may need to be stopped and restarted with the ``--up
     symbol-bootstrap stop    
     symbol-bootstrap start -p testnet -a dual -c custom_parameters.yml --upgrade
 
-This will make the database's TCP port ``27017`` accessible from the host and it will be extremely vulnerable if this port is publicly exposed, so be careful. Only use this feature **for development purposes**. 
+.. warning:: This will make the database accessible from the host's TCP port ``27017`` and it will be extremely vulnerable if this port is publicly exposed, so please be careful. This feature is only recommended **for development purposes**. 
 
 ***************
 Install Robo 3T
