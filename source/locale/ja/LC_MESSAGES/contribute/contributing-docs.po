@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 09:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/contribute/contributing-docs.rst:3
+msgid "Contribute Documentation"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:5
+msgid ""
+"There are several ways in which you can help the documentation effort, "
+"depending on how much involvement you want to have."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:7
+msgid "Just passing by? :ref:`Make a casual suggestion <contribute-suggestion>`."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:8
+msgid "Saw something not quite right? :ref:`Review the text <contribute-review>`."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:9
+msgid ""
+"Would you like to see a page in your language? :doc:`Provide a "
+"translation <../guidelines/translating-the-documentation>`."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:10
+msgid ""
+"Didn't find what you were looking for? :doc:`Write a new guide "
+"<../guidelines/writing-a-guide>`."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:15
+msgid "Making suggestions"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:17
+msgid ""
+"You don't have to write anything if you don't want to. **Reporting "
+"mistakes or inaccurate information** is also very valuable!"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:19
+msgid ""
+"At the bottom of every page (including this one) there is a link to "
+"`submit your feedback <https://github.com/symbol/symbol-"
+"docs/issues/new/choose>`__. This link will take you to **GitHub**'s issue"
+" reporting page. GitHub is the repository where all |codename| "
+"documentation is stored and you need to have an **account** to access it "
+"(creating one is easy and free)."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:21
+msgid "Select whether you want to report an error or make a proposal:"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:27
+msgid ""
+"It really does not matter much which one you choose, they are all called "
+"**issues** by GitHub."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:29
+msgid ""
+"Give your issue a **title**, write as much **detail** as you can about "
+"it, and click on ``Submit new issue``. That's all!"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:35
+msgid ""
+"We will take care of properly labelling, categorizing and prioritizing "
+"the issue. There is nothing else you need to do, except maybe answer "
+"questions if there are any. You can go back to your issue at any time and"
+" follow its evolution."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:40
+msgid "Reviewing and Proofreading"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:42
+msgid ""
+"There is also a mechanism in place in case you want to **edit a page "
+"directly** and **suggest your own text**, be it a sentence, a paragraph "
+"or a whole section."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:44
+msgid ""
+"At the top of the right column of every article (only visible on "
+"horizontal screens) there is a link to `Improve this page "
+"<https://github.com/symbol/symbol-docs/edit/main/source/contribute"
+"/contributing-docs.rst>`__. This link will open the article directly in "
+"the GitHub editor:"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:50
+msgid ""
+"Edit as much or as little as you want. Pages are written using "
+"`ReStructuredText "
+"<https://docutils.sourceforge.io/docs/user/rst/quickstart.html>`__, an "
+"easy-to-read plain-text markup language. If you are not familiar with it,"
+" don't worry: any mistakes will be caught up in the review process."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:52
+msgid ""
+"There is a **Preview** button, but it does not work with ReStructuredText"
+" so it is not very helpful."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:54
+msgid ""
+"When you are done editing scroll down to the bottom of the page: it is "
+"time to **commit your changes** and **start a pull request**."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:60
+msgid "What this means is:"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:62
+msgid ""
+"You need to give your changes a **short title**, a **description** and "
+"**sign** them with your email. In this way, the whole world will know "
+"your contribution!"
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:63
+msgid ""
+"Your changes are not accepted automatically, they need to be **reviewed**"
+" in a process called **pull request**."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:65
+msgid ""
+"When you click on ``Commit changes``, they are stored in a **branch**. "
+"The branch name proposed by GitHub (``username-patch-1``) is typically "
+"good enough."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:67
+msgid ""
+"A **Pull request** is the process of requesting that your changes are "
+"\"pulled\" from your branch and included in the public pages. To do so, "
+"just click on the ``Create pull request`` button in the next screen."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:69
+msgid ""
+"That's it! Your pull request is given a number (like `#733 "
+"<https://github.com/symbol/symbol-docs/pull/733>`__) which you can use to"
+" follow its progress."
+msgstr ""
+
+#: ../../source/contribute/contributing-docs.rst:71
+msgid ""
+"The repository maintainers (some of :doc:`these guys <authors>`) will be "
+"notified, review your changes and either accept them or propose further "
+"modifications. You will be notified of every step through your email."
+msgstr ""
+
