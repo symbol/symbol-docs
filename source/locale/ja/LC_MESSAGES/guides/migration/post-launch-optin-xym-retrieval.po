@@ -1,0 +1,410 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 09:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:8
+msgid "Retrieving your XYM from a post-launch opt-in"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:10
+msgid ""
+"This guide explains how to enroll in the opt-in process once |codename| "
+"has launched (this is, after March 12, 2021)."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:12
+msgid ""
+"If you opted-in before the launch and you are looking to retrieve your "
+"new |codename| currency, read the :doc:`post-optin-xym-retrieval` guide "
+"instead."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:16
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:18
+msgid ""
+"**NEM NIS1 is the original blockchain** offering from NEM, created by the"
+" community, and has been running since 2015."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:20
+msgid ""
+"**Symbol is the next-generation blockchain** from NEM, rewritten from "
+"scratch, and launched in March, 2021."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:22
+msgid ""
+"To quickstart |codename|'s adoption, an **opt-in** process was "
+"established which awarded **one XYM** in the new |codename| blockchain "
+"**for every XEM** (NIS1's native currency) held in the NIS1 blockchain."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:25
+msgid "The opt-in Process"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:27
+msgid ""
+"On **March 12th, 2021** the **NIS1 Snapshot** took place: When the NIS1 "
+"blockchain reached block height 3'105'500 a picture was taken of all "
+"accounts and their assets."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:29
+msgid "Then, on **March 16th, 2021** the **Symbol blockchain was launched**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:31
+msgid ""
+"After the launch, **all accounts that held at least 2 XEM at the snapshot"
+" can still reclaim an equal amount of XYM**, to be transferred to a "
+"|codename| account."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:33
+msgid ""
+"This process is called the **opt-in**, and will be **open for some amount"
+" of time after the launch**. The exact length of this window is yet to be"
+" defined."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:35
+msgid "This guide explains how to participate in the opt-in."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:39
+msgid "Guide"
+msgstr ""
+
+msgid "Multisignature accounts"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:43
+msgid ""
+"If the account you want to opt-in is a multisig account make sure you "
+"read the :ref:`Notes on multisig accounts <post-launch-optin-multisig>`."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:45
+msgid ""
+"The opt-in process is conducted entirely from within the `NEM Wallet "
+"<https://nemplatform.com/wallets/#desktop>`__, but first, you need to "
+"retrieve the **public key** of the |codename| account where you want to "
+"receive the XYM:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:47
+msgid ""
+"**Download and install** the :doc:`Symbol Desktop Wallet <../../wallets>`"
+" for your platform, if you don't already have it."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:49
+msgid ""
+"Please note that this is different from the NEM Wallet used to interact "
+"with the NIS1 blockchain."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:51
+msgid ""
+"**Create the Symbol account** where you would like to receive the assets,"
+" if you don't already have one."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:53
+msgid ""
+"Read the :doc:`../account/creating-an-account` guide to know how to do "
+"this."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:55
+msgid ""
+"**Find your account's public key** in the ``Accounts`` tab. You will need"
+" it later."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:63
+msgid ""
+"Use the **copy** button to the right of the key (do not try to select and"
+" copy the key's text directly as it is too long and it is truncated)."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:65
+msgid ""
+"Now that you know where do you want your XYM transferred, you can start "
+"the opt-in process:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:67
+msgid ""
+"**Download and install** the `NEM Wallet "
+"<https://nemplatform.com/wallets/#desktop>`__ for your platform, if you "
+"don't already have it."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:69
+msgid ""
+"Make sure you have installed **at least version 2.6.0**, so the post-"
+"launch opt-in module is present."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:77
+msgid "**Log in to the account** containing XEM at the snapshot."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:87
+msgid ""
+"If your NIS1 account is held in a wallet other than the NEM Wallet, you "
+"will need to **import** it into the NEM Wallet."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:89
+msgid ""
+"First, you need to **retrieve the account's private key** from the "
+"wallet. The procedure depends on the wallet but here are instructions for"
+" a few popular ones: `Atomic Wallet "
+"<https://support.atomicwallet.io/article/19-how-to-view-your-private-"
+"keys-backup-phrase>`__, `Exodus <https://support.exodus.com/article/86"
+"-how-can-i-view-my-private-keys>`__, `Coinomi "
+"<https://coinomi.freshdesk.com/support/solutions/articles/29000009717"
+"-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys->`__, "
+"`Magnum <https://davecube-com.medium.com/how-to-extract-the-private-key-"
+"from-your-magnum-wallet-95453dccacd4>`__."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:95
+msgid "Then, you need to **import the private key into the NEM Wallet**:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:97
+msgid "Click on ``SIGN UP`` in top right corner."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:98
+msgid "Click on the ``Private key wallet`` button and then on ``Ready``."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:99
+msgid "Choose the ``Mainnet`` network and click on ``Next``."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:100
+msgid "Give your new wallet a **name** and a **password** to protect it."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:101
+msgid ""
+"Enter the account's **private key** that you retrieved from your other "
+"wallet. Your NEM address will be presented."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:102
+msgid "Read carefully the **security notices** and finish the import process."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:103
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:111
+msgid ""
+"Back to the LOGIN screen, select the new wallet, enter its password and "
+"click on ``Sign In``."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:107
+msgid ""
+"If you keep your NIS1 account in a .wlt file you will need to **import** "
+"it into the NEM Wallet too:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:109
+msgid "In the LOGIN screen, click on the ``Import Wallet`` yellow button."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:110
+msgid ""
+"**Select the wallet file** (the one with .wlt extension) and finish the "
+"import process."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:113
+msgid ""
+"Once you are logged in to your NIS1 account, **click on the Symbol opt-in"
+" module** in the ``Services`` tab:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:121
+msgid "**Click on the READY** button:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:129
+msgid ""
+"**Select the account you want to opt-in**. If you only have one account "
+"in the wallet, there will only be one option."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:137
+msgid ""
+"The screen shows a summary of the process and highlights any problems, if"
+" there are any."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:139
+msgid ""
+"Remember that the **Amount to claim** is the amount present in the "
+"account **at the snapshot**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:141
+msgid "If everything is right, click on **START OPT-IN**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:143
+msgid ""
+"**Enter your Symbol account's public key**. This is the public key your "
+"copied in Step 3 above."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:151
+msgid ""
+"Once you enter a valid public key, more details will appear. Check that "
+"the **Symbol account's address** corresponds to the desired account and "
+"click on **NEXT**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:153
+msgid "**Final verification and acceptance**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:161
+msgid "Do one last check of the destination |codename| account and balance."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:162
+msgid "Accept the ``terms and conditions`` and the ``privacy policy``."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:163
+msgid ""
+"The opt-in process involves registering a transaction on the NIS1 "
+"blockchain. This has a fee, shown on this summary screen."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:164
+msgid "Enter your NEM Wallet password to confirm the process."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:165
+msgid "Click on **SEND**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:167
+msgid ""
+"If the opt-in is successfull you will be taken to the initial Summary "
+"screen where you can see the status of the process:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:175
+msgid ""
+"Since it can take more than a week for the XYM to be transferred, you can"
+" come back to this screen to check on the opt-in status."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:181
+msgid ""
+"When opting-in :doc:`multi-signature accounts (multisig) <../../concepts"
+"/multisig-account>` a few points need to be taken into account:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:183
+msgid ""
+"The multisig account **cannot opt-in for itself**, it needs to be opted-"
+"in by ALL of its cosigners:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:185
+msgid ""
+"The opt-in process **must be initiated by one of the cosigners**, "
+"selecting the multisig account as the account to opt-in, and entering the"
+" Symbol account's public key."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:186
+msgid ""
+"The rest of the cosigners **must opt-in the multisig account too**, but "
+"they won't be required to enter the Symbol account."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:188
+msgid ""
+"For clarity, the wallet shows which cosigners have already opted-in the "
+"multisig account and which ones are missing:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:196
+msgid ""
+"The Symbol account that will receive the opted-in XYM **must be a "
+"multisig account** too, with the **same amount of cosigners**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:200
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:202
+msgid ""
+"This is a short list of items to check should you encounter any problem "
+"when opting-in your accounts."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:204
+msgid ""
+"Check that the **balance on your NIS1 account** was at least **2 XEM** at"
+" the time of the snapshot."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:206
+msgid ""
+"Check that the NIS1 account has not already opted-in **pre-launch** "
+"(Following the :doc:`post-optin-xym-retrieval` guide)."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:208
+msgid "Check that the NIS1 account has not already opted-in **post-launch**."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:210
+msgid ""
+"Check that the destination Symbol account is **not** a :ref:`remote-"
+"harvesting` account."
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:212
+msgid "The **NEM Helpdesk** can help you if everything else fails:"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:214
+msgid "`NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__"
+msgstr ""
+
+#: ../../source/guides/migration/post-launch-optin-xym-retrieval.rst:215
+msgid "Send an email to support@nem.group"
+msgstr ""
+

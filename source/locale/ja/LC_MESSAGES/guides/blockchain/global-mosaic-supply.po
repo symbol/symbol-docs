@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 09:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:9
+msgid "Retrieving the global mosaic supply"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:11
+msgid ""
+"Different values regarding the total supply of |networkcurrency| are "
+"available in real-time, through REST endpoints on any |codename| API "
+"node. Click on each endpoint below for an example."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:13
+msgid ""
+"The return value of the following endpoints is always a decimal number in"
+" **plaintext**, using a period ``.`` as the decimal separator."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:17
+msgid "Maximum supply"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:19
+msgid ""
+"The maximum amount of |networkcurrency| that will ever exist in the "
+"network:"
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:23
+msgid "``/network/currency/supply/max``"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:25
+msgid "In |codename|'s MAINNET this value is always ``8999999999``."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:29
+msgid "Total supply"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:31
+msgid "The total amount of |networkcurrency| that exist right now."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:33
+msgid ""
+"Inflation, through block rewards, slowly increases this number until it "
+"reaches the maximum supply."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:37
+msgid "``/network/currency/supply/total``"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:39
+msgid "For example: ``7881002838.303334``."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:43
+msgid "Circulating supply"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:45
+msgid ""
+"The amount of |networkcurrency| currently in the market and in the "
+"general public's hands."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:47
+msgid ""
+"This is the total supply minus the funds locked for opt-in payouts, "
+"reward programs, etc."
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:51
+msgid "``/network/currency/supply/circulating``"
+msgstr ""
+
+#: ../../source/guides/blockchain/global-mosaic-supply.rst:53
+msgid "For example: ``5404143654.714409``."
+msgstr ""
+
