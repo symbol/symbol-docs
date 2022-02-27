@@ -110,13 +110,13 @@ def what_build_am_i(app):
         global gh
         global gh_repo
         global gh_user_cache
-        token = os.getenv('GITHUB_TOKEN')
+        token = os.getenv('GITHUB_ACCESS_TOKEN')
         if token:
             gh = Github(token)
             gh_repo = gh.get_repo('symbol/symbol-docs')
             gh_user_cache = {}
         else:
-            raise errors.ExtensionError("Missing GITHUB_TOKEN environment variable.")
+            raise errors.ExtensionError("Missing GITHUB_ACCESS_TOKEN environment variable.")
     except Exception as e:
         print(e)
         print("gitstamp extension enabled, but GitHub link failed. No GH links will be generated.")
