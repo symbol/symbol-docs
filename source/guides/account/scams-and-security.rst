@@ -24,7 +24,7 @@ Sweeping with Aggregate Bonded Transactions
 
 **What is an Aggregate Bonded transaction?**
 
-Aggregate Bonded transactions can include a variety of elements such as multiple signers, messages, and transfers. New Symbol users may not be familiar with the complex nature of Aggregate Bonded transactions, and must take great care to fully understand the full scope of any transactions they are asked to sign.  For more information see [[LINK TO https://docs.symbol.dev/concepts/aggregate-transaction.html]]
+Aggregate Bonded transactions can include a variety of elements such as multiple signers, messages, and transfers. New Symbol users may not be familiar with the complex nature of Aggregate Bonded transactions, and must take great care to fully understand the full scope of any transactions they are asked to sign. For more information see :doc:`Aggregate Transaction <../../concepts/aggregate-transaction>`
 
 
 **What is sweeping?**
