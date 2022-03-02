@@ -31,7 +31,7 @@ class GitHubReference(Directive):
     def run(self):
         node_list = nodes.bullet_list()
 
-        token = os.getenv('GITHUB_TOKEN')
+        token = os.getenv('GITHUB_ACCESS_TOKEN')
         if token:
             g = Github(token)
             repo = g.get_repo(self.arguments[0])
