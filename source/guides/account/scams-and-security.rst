@@ -22,18 +22,21 @@ Key Points
 Sweeping with Aggregate Bonded Transactions
 *******************************************
 
-**What is an Aggregate Bonded transaction?**
+What is an Aggregate Bonded transaction?
+========================================
 
 Aggregate Bonded transactions can include a variety of elements such as multiple signers, messages, and transfers. New Symbol users may not be familiar with the complex nature of Aggregate Bonded transactions, and must take great care to fully understand the full scope of any transactions they are asked to sign. For more information see :doc:`Aggregate Transaction <../../concepts/aggregate-transaction>`
 
 
-**What is sweeping?**
+What is sweeping?
+=================
 
 Sweeping involves a malicious script that monitors certain types of transactions, then initiates a malicious Aggregate Bonded transaction disguised to appear related to the targeted transaction (i.e. by including a relevant message), but which also include a transfer of XYM or other mosaics to the bad actor's wallet. Signing these transactions can completely empty a user's wallet, so please make sure you carefully review before signing any transactions that you did not initiate.
 
 It may not be immediately apparent that you've been hacked by a sweeper. If you assumed that the transaction you signed was part of a process you were completing, you may also assume that your balance has been reduced by a stuck transaction, pending activation of delegated harvesting, or that your balance was transferred to a delegated harvesting address linked to your account.
 
-A sweeping attack might go something like this:
+What could a sweeping attack look like?
+========================================
 
 - You begin Delegated Harvesting activation by propagating the 'Link all keys' transaction to the network
 - The bad actor's script detects this transaction and sends you an Aggregate Bonded transaction. This transaction might include a message related to harvesting such as "Delegated-№234567" as well as a transfer of XYM to an address controlled by the bad actor. 
@@ -45,11 +48,13 @@ A sweeping attack might go something like this:
 Spoofing 
 ********
 
-**What is spoofing?**
+What is spoofing?
+==================
 
 Spoofing involves hiding or disguising identity to enable malicious activity, literally spoofing the identity of the malicious party to make it believable and appear trustworthy. 
 
-**What could a spoofing attack look like?**
+What could a spoofing attack look like?
+========================================
 
 A spoofing hack will target private key or  mnemonic phrase (also known as your secret recovery phrase or seed phrase), as this can be used to restore your wallet and will provide a hacker with access to your private keys and the wallet's contents. Symbol wallets are a non-custodial , meaning you are responsible for keeping your private keys and mnemonic phrase secure.
 
@@ -62,7 +67,8 @@ A spoofing attack might go something like this:
 
 This scenario is just an example, and similar events could play out across any social media platform, messaging service, forum, or otherwise on which you share information publicly. 
 
-**How can I protect myself from spoofing attacks?**
+How can I protect myself from spoofing attacks?
+================================================
 
 The Symbol Syndicate will never directly message you for customer support, and will never ask for your private key or mnemonic phrase. Anyone asking you for contact information, your secret recovery phrase or details of your support issue outside of the Discord helpdesk channel is a potential scammer and should be ignored and/or reported.
 Be vigilant. If it looks like it might be a scam, it probably is. Always be observant and keep a lookout for suspicious, telltale signs. These could include:
@@ -80,10 +86,14 @@ Most importantly, **never share your private keys and mnemonic phrase** regardle
 Clipboard hacking
 *****************
 
-**What is clipboard hacking?**
+What is clipboard hacking?
+===========================
+
 Symbol addresses are not easily memorized nor typed manually, so many users leverage their device's clipboard to copy and paste a recipient's Symbol address. Clipboard hacking involves malware that intercepts the contents of your clipboard and replaces an address you've copied with an address belonging to the hacker.  When you go to send a transaction and paste the address from your clipboard, the hacker's address is pasted instead of the one you initially copied. 
 
-**How can I protect myself?**
+How can I protect myself?
+===========================
+
 The only way reliable way to be safe is to triple-check addresses before you confirm any transaction. A robust and up-to-date anti-malware software is strongly recommended, as it should identify most potential clipboard hacking malware programs, notify you, and quarantine them before they can affect your crypto activity. 
 
 
