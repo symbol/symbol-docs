@@ -33,7 +33,7 @@ What is sweeping?
 
 Sweeping involves a malicious script that monitors certain types of transactions, then initiates a malicious Aggregate Bonded transaction disguised to appear related to the targeted transaction (i.e. by including a relevant message), but which also include a transfer of XYM or other mosaics to the bad actor's wallet. Signing these transactions can completely empty a user's wallet, so please make sure you carefully review before signing any transactions that you did not initiate.
 
-It may not be immediately apparent that you've been hacked by a sweeper. If you assumed that the transaction you signed was part of a process you were completing, you may also assume that your balance has been reduced by a stuck transaction, pending activation of delegated harvesting, or that your balance was transferred to a delegated harvesting address linked to your account.
+It may not be immediately apparent that you've been hacked. The sweeper's goal is that you assume that the transaction you signed was part of a process you were completing, and you may also assume that your balance has been reduced by a stuck transaction, pending activation of delegated harvesting, or that your balance was transferred to a delegated harvesting address linked to your account.
 
 What could a sweeping attack look like?
 ========================================
