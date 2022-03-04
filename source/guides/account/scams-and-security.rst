@@ -12,7 +12,7 @@ Common Hacks and Scams
 Key Points
 ***********
 
-- **Be extremely cautious signing transactions when activating delegated harvesting**. A Sweeping scam has actively targeted users in the process of activating delegated harvesting, so make sure to carefully review any transactions you are prompted to sign and diligently check for any included asset transfers to unfamiliar addresses. Never sign a transactions that you do not completely understand.
+- **Be extremely cautious signing transactions when activating delegated harvesting**. A Sweeping scam has actively targeted users in the process of activating delegated harvesting, so make sure to carefully review any transactions you are prompted to sign and diligently check for any included asset transfers to unfamiliar addresses. Never sign a transaction that you do not completely understand.
 - **Never share your private key or mnemonic phrase** (also known as your secret recovery phrase or seed phrase) with anyone, and never enter them on any website or potentially malicious wallet. Anyone with your private key or mnemonic phrase has full and unrestrained access to the contents of your wallet.  
 - **The Symbol Syndicate will never directly message you for customer support** and will never ask for your private key or mnemonic phrase. 
 - **Blockchain transactions are irreversible**; it is not feasible to undo a transaction or retrieve your funds once they are sent to a malicious address. 
