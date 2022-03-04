@@ -38,7 +38,7 @@ It may not be immediately apparent that you've been hacked. The sweeper's goal i
 What could a sweeping attack look like?
 ========================================
 
-- You begin Delegated Harvesting activation by propagating the 'Link all keys' transaction to the network
+- You begin Delegated Harvesting activation by propagating the 'Link all keys' transaction to the network.
 - The bad actor's script detects this transaction and sends you an Aggregate Bonded transaction. This transaction might include a message related to harvesting such as "Delegated-№234567" as well as a transfer of XYM to an address controlled by the bad actor. 
 - Your wallet sees the Aggregate Bonded transaction included in a subsequent block and prompts you with the option to review and sign it.
 - You choose to sign the transaction, and your XYM balance is reduced by the transaction amount (typically all or nearly all of your XYM).
