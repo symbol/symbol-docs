@@ -56,7 +56,7 @@ Spoofing involves hiding or disguising identity to enable malicious activity, li
 What could a spoofing attack look like?
 ========================================
 
-A spoofing hack will target private key or  mnemonic phrase (also known as your secret recovery phrase or seed phrase), as this can be used to restore your wallet and will provide a hacker with access to your private keys and the wallet's contents. Symbol wallets are a non-custodial , meaning you are responsible for keeping your private keys and mnemonic phrase secure.
+A spoofing hack will target private key or mnemonic phrase (also known as your secret recovery phrase or seed phrase), as this can be used to restore your wallet and will provide a hacker with access to your private keys and the wallet's contents. Symbol wallets are a non-custodial, meaning you are responsible for keeping your private keys and mnemonic phrase secure.
 
 A spoofing attack might go something like this:
 
