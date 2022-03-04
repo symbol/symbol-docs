@@ -60,7 +60,7 @@ A spoofing hack will target private key or  mnemonic phrase (also known as your 
 
 A spoofing attack might go something like this:
 
-- You ask a question on Twitter or in the XYMCity Discord server
+- You ask a question on Twitter or in the XYMCity Discord server.
 - A malicious account identifies you as a target due to your request for support and sends you a DM. The account will be configured to resemble an official support resource and could include a relevant logo, a convincing username, and a professional sounding dialogue. 
 - The bad actor will rely on your belief that they are an official support resource, and try to convince you to provide your private key or mnemonic phrase key to resolve your problem. This could also involve directing you to a website that requests these details. 
 - If successful, the bad actor can gain full access to your address and transfer your assets to an address of their choosing.
