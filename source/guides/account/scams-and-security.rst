@@ -75,8 +75,8 @@ Be vigilant. If it looks like it might be a scam, it probably is. Always be obse
 
 - Requesting personal information, including anything from your name, the value of your wallet's holdings, or even your private key, which you should never, ever give to anyone. 
 - Unofficial-looking Twitter handles using underscores, doubled-up letters, and numbers to mimic official accounts. 
-- Official-looking Discord 'about me' details or handles (i.e. SUPPORT_TEAM)
-- Providing links to websites purported to 'validate your wallet' or assist with troubleshooting (excepting known-good sources such as the official Symbol documentation or articles written by Syndicate members)
+- Official-looking Discord 'about me' details or handles (i.e. SUPPORT_TEAM).
+- Providing links to websites purported to 'validate your wallet' or assist with troubleshooting (excepting known-good sources such as the official Symbol documentation or articles written by Syndicate members).
 - Requests to reach out for support, get in touch, or send a DM. 
 
 Most importantly, **never share your private keys and mnemonic phrase** regardless of how convincing a person/entity may be.
