@@ -8,6 +8,8 @@
 Common Hacks and Scams
 ######################
 
+It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security if your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet's security.
+
 ***********
 Key Points
 ***********
@@ -22,11 +24,10 @@ Key Points
 Sweeping with Aggregate Bonded Transactions
 *******************************************
 
-What is an Aggregate Bonded transaction?
+What is an Aggregate transaction?
 ========================================
 
-Aggregate Bonded transactions can include a variety of elements such as multiple signers, messages, and transfers. New Symbol users may not be familiar with the complex nature of Aggregate Bonded transactions, and must take great care to fully understand the full scope of any transactions they are asked to sign. For more information see :doc:`Aggregate Transaction <../../concepts/aggregate-transaction>`
-
+Aggregate transactions can include a variety of elements such as multiple signers, messages, and transfers. New Symbol users may not be familiar with the complex nature of Aggregate Bonded transactions, and must take great care to fully understand the full scope of any transactions they are asked to sign. For more information see :doc:`Aggregate Transaction <../../concepts/aggregate-transaction>`
 
 What is sweeping?
 =================
@@ -43,6 +44,13 @@ What could a sweeping attack look like?
 - Your wallet sees the Aggregate Bonded transaction included in a subsequent block and prompts you with the option to review and sign it.
 - You choose to sign the transaction, and your XYM balance is reduced by the transaction amount (typically all or nearly all of your XYM).
 
+Every Symbol wallet is different; some may not permit users to sign aggregate transactions, others may hide bonded aggregate transactions originating from addresses outside a predefined whietlist (i.e. your contacts), and others may prompt for users for their signature without revealing the full contents of what you are signing. Reviewing aggregate transactions using the `Symbol Explorer <https://testnet.symbol.fyi/nodes>`__ before signing them can provide additional security and peace of mind. Below is an example of a  malicous aggregate transaction that contains a message to a trusted address in the first transaction and an asset transfer to the scammer's address in the second transaction.
+
+   .. figure:: ../../resources/images/screenshots/Aggregate-transaction.png
+      :align: center
+      :width: 75%
+      :class: with-shadow
+      :target: /_images/Aggregate-transaction.png
 
 ********
 Spoofing 
