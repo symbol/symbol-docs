@@ -46,11 +46,11 @@ What could a sweeping attack look like?
 
 Every Symbol wallet is different; some may not permit users to sign aggregate transactions, others may hide aggregate transactions originating from addresses outside a predefined whitelist (i.e. their contacts), and others may prompt users for their signature without revealing the full contents of what they are signing. Reviewing aggregate transactions using the `Symbol Explorer <https://testnet.symbol.fyi/nodes>`__ before signing them can provide additional security and peace of mind. Below is an example of a malicious aggregate transaction that contains a message to a trusted address in the first transaction and an asset transfer to the scammer's address in the second transaction.
 
-   .. figure:: ../../resources/images/screenshots/Aggregate-transaction.png
-      :align: center
-      :width: 75%
-      :class: with-shadow
-      :target: /_images/Aggregate-transaction.png
+.. figure:: ../../resources/images/screenshots/Aggregate-transaction.png
+   :align: center
+   :width: 75%
+   :class: with-shadow
+   :target: /_images/Aggregate-transaction.png
 
 ********
 Spoofing 
