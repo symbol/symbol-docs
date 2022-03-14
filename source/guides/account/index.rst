@@ -11,3 +11,4 @@ Guides related to :doc:`account <../../concepts/account>` handling.
     getting-account-information
     getting-the-amount-of-assets-sent-to-an-account
     reading-transactions-from-an-account
+    scams-and-security
