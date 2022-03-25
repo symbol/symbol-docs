@@ -95,9 +95,9 @@ Node configuration is done through a **YAML configuration file** which specifies
     :delim: ;
     :widths: 20, 80
 
-    ``mainnet``; A **single node** that connects to the current public **main** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/network.yml>`__).
-    ``bootstrap``; **Autonomous network** with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/network.yml>`__). This is the default preset.
-    ``testnet``; A **single node** that connects to the current public **test** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
+    ``mainnet``; A **single node** that connects to the current public **main** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/mainnet/network.yml>`__).
+    ``bootstrap``; **Autonomous network** with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/bootstrap/network.yml>`__). This is the default preset.
+    ``testnet``; A **single node** that connects to the current public **test** network. Nemesis block is copied over. Requires an ``assembly``, as shown below (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/testnet/network.yml>`__).
 
 Presets can be further customized by indicating an **assembly** (or flavor) which provides additional parameters. Specify the assembly with the ``‑‑assembly`` or ``‑a`` parameters.
 
@@ -106,14 +106,12 @@ Presets can be further customized by indicating an **assembly** (or flavor) whic
     :delim: ;
     :widths: 20, 20, 60
 
-    ``mainnet``; ``peer``; The node is a :ref:`peer-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-peer.yml>`__).
-    ``mainnet``; ``api``; The node is an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-api.yml>`__).
-    ``mainnet``; ``dual``; The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/mainnet/assembly-dual.yml>`__).
-    ``bootstrap``; ``light``; It's a **lighter version** of ``bootstrap`` with 1 mongo database, 1 dual peer and 1 rest gateway. Great for faster light e2e automatic testing. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/assembly-light.yml>`__).
-    ``bootstrap``; ``full``; It's the default ``bootstrap`` preset plus 1 wallet, 1 explorer and 1 faucet. Great for demonstration purposes. Nemesis block is generated (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/bootstrap/assembly-full.yml>`__).
-    ``testnet``; ``peer``; The node is a :ref:`peer-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-peer.yml>`__).
-    ``testnet``; ``api``; The node runs is an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-api.yml>`__).
-    ``testnet``; ``dual``; The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration file <https://github.com/symbol/symbol-bootstrap/blob/main/presets/testnet/assembly-dual.yml>`__).
+    ``mainnet``; ``peer``; The node is a :ref:`peer-node` (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-peer.yml>`__).
+    ``mainnet``; ``api``; The node is an :ref:`api-node` (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-api.yml>`__).
+    ``mainnet``; ``dual``; The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-dual.yml>`__).
+    ``testnet``; ``peer``; The node is a :ref:`peer-node` (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-peer.yml>`__).
+    ``testnet``; ``api``; The node runs is an :ref:`api-node` (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-api.yml>`__).
+    ``testnet``; ``dual``; The node is both a :ref:`peer-node` and an :ref:`api-node` (`configuration file <https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-dual.yml>`__).
 
 ==============
 Custom presets
@@ -131,7 +129,7 @@ Specify a custom preset file with the ``‑‑customPreset`` or ``‑c`` paramet
 The ``config`` command
 **********************
 
-Before building the node or network a full configuration file has to be created by using the `symbol-bootstrap config <https://github.com/symbol/symbol-bootstrap/blob/main/docs/config.md>`_ command:
+Before building the node or network a full configuration file has to be created by using the `symbol-bootstrap config <https://github.com/fboucquez/symbol-bootstrap/blob/main/docs/config.md>`_ command:
 
 .. code-block:: bash
 
@@ -270,7 +268,7 @@ You need to own the domain ``awesomenode.mycompany.net`` and it needs to resolve
 Next steps
 **********
 
-- Read the `complete list <https://github.com/symbol/symbol-bootstrap/blob/main/README.md#user-content-commands>`_ of ``symbol-bootstrap`` commands.
+- Read the `complete list <https://github.com/fboucquez/symbol-bootstrap/blob/main/README.md>`_ of ``symbol-bootstrap`` commands.
 
 - Go ahead and create a node following the :doc:`running-a-symbol-node` guide.
 

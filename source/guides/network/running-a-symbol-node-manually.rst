@@ -22,7 +22,7 @@ Build a Peer node
 Build the client
 ================
 
-Follow the `Catapult client <https://github.com/symbol/catapult-client>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/catapult-client/blob/main/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/catapult-client/blob/main/docs/BUILD-conan.md>`__.
+Follow the `Catapult client <https://github.com/symbol/catapult-client>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-conan.md>`__.
 
 Generate keys
 =============
@@ -120,7 +120,7 @@ Configuration
 
 |codename| is **highly customizable** and this means there are a lot of parameters that can be adjusted to suit your node's needs. Some of these parameters are **network-related** and must match the rest of nodes in the network (for example ``currencyMosaicId``) whereas some others are **node-related** and you can set freely (for example ``friendlyName``).
 
-You can edit these files manually (Take a look at `these templates <https://github.com/symbol/catapult-client/tree/main/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/symbol/symbol-node-configurator>`__ as shown next.
+You can edit these files manually (Take a look at `these templates <https://github.com/symbol/symbol/tree/main/client/catapult/resources>`__ to know how they look) but it is more convenient to use the `Symbol Node Configurator tool <https://github.com/symbol/symbol-node-configurator>`__ as shown next.
 
 **The Configuration step can be performed on an offline machine for added security.**
 
@@ -408,7 +408,7 @@ Run the database
 
 3. **Build indices** to optimize database accesses.
 
-   The ``catapult-client`` repository you cloned to build the client in the first step contains `a folder with mongo scripts <https://github.com/symbol/catapult-client/blob/main/scripts/mongo>`__. Run this one:
+   The ``catapult-client`` repository you cloned to build the client in the first step contains `a folder with mongo scripts <https://github.com/symbol/symbol/blob/main/client/catapult/scripts/mongo>`__. Run this one:
 
    .. code-block:: bash
 

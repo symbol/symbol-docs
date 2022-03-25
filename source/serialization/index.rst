@@ -2,7 +2,9 @@
 Serialization
 #############
 
-The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.
+The `catbuffer schemas <https://github.com/symbol/symbol/tree/dev/catbuffer/schemas>`_ repository defines how the different Symbol
+entities type should be serialized (for example, Transactions). In combination with the catbuffer generators project, developers can
+generate builder classes for a given set of programming languages.
 
 .. raw:: html
 

@@ -290,7 +290,7 @@ rst_prolog = """
 
 .. |symbol-bootstrap| raw:: html
 
-   <a href="https://github.com/symbol/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
+   <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>
 
 .. |techref| raw:: html
 
@@ -354,6 +354,7 @@ linkcheck_ignore = [
     r'https://hackmd.io/.*', # You need to login to access some of the pages
     r'https://arxiv.org/.*', # Sometimes returns 403 on Travis (rate limit?)
     r'https://www.researchgate.net/.*', # Started returning 403 on Travis
+    r'https://symbolblog.com/.*', # Returning 403
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 
@@ -375,8 +376,8 @@ def viewsource_resolve_link(file_path, language=None):
 
 # -- Custom extlinks -----------------------------------------------------
 
-extlinks = {'schema': ('https://github.com/symbol/catbuffer-schemas/blob/main/symbol/%s', 'file '),
-            'properties': ('https://github.com/symbol/catapult-client/blob/main/resources/%s', 'file ')}
+extlinks = {'schema': ('https://github.com/symbol/blob/main/catbuffer/schemas/symbol/%s', 'file '),
+            'properties': ('https://github.com/symbol/symbol/blob/main/client/catapult/resources/%s', 'file ')}
 
 # -- Custom Pygments lexers ----------------------------------------------
 

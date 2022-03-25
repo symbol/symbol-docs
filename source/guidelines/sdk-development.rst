@@ -167,12 +167,12 @@ Particular decisions we considered:
 Transaction Serialization
 =========================
 
-The `catbuffer-schemas library <https://github.com/symbol/catbuffer-schemas>`_ defines the protocol to serialize and deserialize |codename| entities.
+The `catbuffer-schemas library <https://github.com/symbol/symbol/tree/dev/catbuffer/schemas>`_ defines the protocol to serialize and deserialize |codename| entities.
 
-In combination with the `catbuffer-generators project <https://github.com/symbol/catbuffer-generators/tree/main/generators>`_, developers can generate builder classes for a given set of programming languages.
+In combination with the catbuffer generators project, developers can generate builder classes for a given set of programming languages.
 For example, the |sdk| uses the generated code to operate with the entities in binary form.
 
-.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/symbol/catbuffer-generators/tree/main/generators/typescript>`_ for TypeScript.
+.. note:: If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the `generator <https://github.com/symbol/symbol/tree/dev/sdk/javascript/generator>`_ for TypeScript.
 
 If there is a generator, follow the next steps to generate the builders for all the existent entities:
 

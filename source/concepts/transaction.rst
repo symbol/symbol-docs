@@ -36,7 +36,7 @@ All transactions should define a deadline and a max_fee:
 
 * ``max_fee``: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. :doc:`The next documentation <fees>` shows you how to set the optimal max_fee value.
 
-.. note:: The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how each transaction type should be serialized. In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.
+.. note:: The `catbuffer schemas <https://github.com/symbol/symbol/tree/main/catbuffer/schemas>`_ repository defines how each transaction type should be serialized. In combination with the catbuffer generators, developers can generate builder classes for a given set of programming languages.
 
 We recommend using the :doc:`SDK <../sdk>` to define new transactions.
 

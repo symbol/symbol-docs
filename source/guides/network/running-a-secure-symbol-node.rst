@@ -134,7 +134,7 @@ Preset
    -
      mainPrivateKey: ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 
-You can read more about these properties in the `security mode section <https://github.com/symbol/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
+You can read more about these properties in the `security mode section <https://github.com/fboucquez/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode>`__ in Symbol Bootstrap's documentation.
 
 If you have customizations to make, like enabling :ref:`voting <finalization>`, you can provide them too:
 

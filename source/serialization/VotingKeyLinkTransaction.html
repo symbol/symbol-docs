@@ -1,8 +1,8 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
     <tr><td class="side-info-icon">&varr;</td><td>Size: 172 bytes = 0xac</td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/coresystem/voting_key_link.cats#L30">schema</a></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/coresystem/src/model/VotingKeyLinkTransaction.h#L58">catapult model</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/coresystem/voting_key_link.cats#L30">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/plugins/coresystem/src/model/VotingKeyLinkTransaction.h#L58">catapult model</a></td></tr>
     </table></div>
 <p>Link an account with a BLS public key required for finalization voting. <br/>This transaction is required for node operators wanting to vote for <a href="/concepts/block.html#finalization">finalization</a>. <br/>Announce a <a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key required for finalization voting.">VotingKeyLinkTransaction</a> to associate a voting key with an account during a fixed period. An account can be linked to up to <strong>3</strong> different voting keys at the same time. <br/>The recommended production setting is to always have at least <strong>2</strong> linked keys with different <code class="docutils literal">endPoint</code> values to ensure a key is registered after the first one expires. <br/>See more details in <a href="/guides/network/running-a-symbol-node-manually.html#manual-voting-key-renewal">the manual node setup guide</a>. </p>
 </td></tr></table>
