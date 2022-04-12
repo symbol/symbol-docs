@@ -355,6 +355,9 @@ linkcheck_ignore = [
     r'https://arxiv.org/.*', # Sometimes returns 403 on Travis (rate limit?)
     r'https://www.researchgate.net/.*', # Started returning 403 on Travis
     r'https://symbolblog.com/.*', # Returning 403
+    r'https://docs.github.com/.*', # GitHub is now returning 403
+    r'https://help.github.com/.*', # GitHub is now returning 403
+    r'https://github.com/fboucquez/symbol-bootstrap#command-topics', # Returning Anchor 'command-topics' not found
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 

@@ -268,7 +268,7 @@ You need to own the domain ``awesomenode.mycompany.net`` and it needs to resolve
 Next steps
 **********
 
-- Read the `complete list <https://github.com/fboucquez/symbol-bootstrap/blob/main/README.md>`_ of ``symbol-bootstrap`` commands.
+- Read the `complete list <https://github.com/fboucquez/symbol-bootstrap#command-topics>`_ of ``symbol-bootstrap`` commands.
 
 - Go ahead and create a node following the :doc:`running-a-symbol-node` guide.
 
