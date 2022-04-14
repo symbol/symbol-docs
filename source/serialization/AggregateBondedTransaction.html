@@ -1,8 +1,8 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
     <tr><td class="side-info-icon">&varr;</td><td>Size: 171+ bytes = 0xab+ <i>(variable)</i></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/aggregate/aggregate.cats#L48">schema</a></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/aggregate/src/model/AggregateTransaction.h#L57">catapult model</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/aggregate/aggregate.cats#L48">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/plugins/txes/aggregate/src/model/AggregateTransaction.h#L57">catapult model</a></td></tr>
     </table></div>
 <p>Propose an arrangement of transactions between different accounts. <br/>Use this transaction when not all required signatures are available when the transaction is created. <br/>Missing signatures must be provided using a <a href="/serialization#cosignature" title="Cosignature attached to an AggregateCompleteTransaction or AggregateBondedTransaction.">Cosignature</a> or <a href="/serialization#detachedcosignature" title="Cosignature detached from an AggregateCompleteTransaction or AggregateBondedTransaction.">DetachedCosignature</a>. <br/>To prevent spam attacks, before trying to announce this transaction a <a href="/serialization#hashlocktransaction" title="Lock a deposit needed to announce an AggregateBondedTransaction.">HashLockTransaction</a> must be successfully announced and confirmed. </p>
 </td></tr></table>
