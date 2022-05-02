@@ -22,7 +22,7 @@ Build a Peer node
 Build the client
 ================
 
-Follow the `Catapult client <https://github.com/symbol/catapult-client>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-conan.md>`__.
+Follow the `Catapult client <https://github.com/symbol/symbol/tree/dev/client/catapult>`__ instructions to **build** its binaries, either `manually <https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-manual.md>`__ or using `Conan <https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-conan.md>`__.
 
 Generate keys
 =============
@@ -448,17 +448,15 @@ Build and run the REST gateway
    .. code-block:: bash
 
       cd ..
-      git clone https://github.com/symbol/catapult-rest.git
-      cd catapult-rest
-      npm install -g yarn
-      ./yarn_setup.sh
+      git clone https://github.com/symbol/symbol
+      cd symbol/client/rest
+
 
 7. **Build** the REST gateway:
 
    .. code-block:: bash
 
-      cd rest
-      yarn build
+      npm install
 
 8. **Configure** the REST gateway:
 
