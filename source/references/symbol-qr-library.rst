@@ -6,5 +6,5 @@ Symbol QR Library Reference
 Versions
 ********
 
-.. ghreference:: symbol/symbol-qr-library
+.. ghreference:: symbol/qr-library
     :folder:

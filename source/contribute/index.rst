@@ -11,7 +11,7 @@ There are plenty of things you can do to help improve |codename|!
 
 |codename| is **Open Source**. Visit the |github| repositories and check if there is any project where you want to contribute.
 
-There is the C++ `Catapult client <https://github.com/symbol/catapult-client>`__ but also Typescript tools like the `Wallets <https://github.com/symbol/desktop-wallet>`__, the `Explorer <https://github.com/symbol/symbol-explorer>`__, `Bootstrap <https://github.com/fboucquez/symbol-bootstrap>`__ and many more. Each repository's ``README`` and ``CONTRIBUTING`` files will tell you how to submit your code!
+There is the C++ `Catapult client <https://github.com/symbol/symbol/tree/dev/client/catapult>`__ but also Typescript tools like the `Wallets <https://github.com/symbol/desktop-wallet>`__, the `Explorer <https://github.com/symbol/symbol-explorer>`__, `Bootstrap <https://github.com/fboucquez/symbol-bootstrap>`__ and many more. Each repository's ``README`` and ``CONTRIBUTING`` files will tell you how to submit your code!
 
 👨‍🏫 Can you write?
 ********************

@@ -27,7 +27,6 @@ APIs
 - `OpenAPI CHANGELOG <https://github.com/symbol/symbol-openapi/blob/main/CHANGELOG.md>`_
 - `REST CHANGELOG <https://github.com/symbol/symbol/blob/main/client/rest/CHANGELOG.md>`_
 - `SDK TS CHANGELOG <https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/CHANGELOG.md>`_
-- `SDK Java CHANGELOG <https://github.com/symbol/symbol-sdk-java/blob/main/CHANGELOG.md>`_
 
 *****
 Tools

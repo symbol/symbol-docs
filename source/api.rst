@@ -300,4 +300,4 @@ Each returned message contains an error message and a transaction hash.
 
 .. |catapult-rest| raw:: html
 
-   <a href="https://github.com/symbol/catapult-rest" target="_blank">Catapult REST</a>
+   <a href="https://github.com/symbol/symbol/tree/dev/client/rest" target="_blank">Catapult REST</a>

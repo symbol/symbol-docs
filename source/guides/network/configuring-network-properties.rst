@@ -33,4 +33,4 @@ Inflation configuration
 
 .. |catapult-client| raw:: html
 
-   <a href="https://github.com/symbol/catapult-client" target="_blank">catapult-client</a>
+   <a href="https://github.com/symbol/symbol/tree/dev/client/catapult" target="_blank">catapult-client</a>
