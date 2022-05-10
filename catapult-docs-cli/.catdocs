@@ -1,0 +1,168 @@
+{
+    "serverPath": "./catapult-server/",
+    "restPath": "./catapult-rest/",
+    "properties": [{
+            "title": "config-database.properties",
+            "text": "Database configuration settings.",
+            "source": "resources/config-database.properties",
+            "descriptions": [
+                "extensions/mongo/src/DatabaseConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-extensions-broker.properties",
+            "text": "",
+            "source": "resources/config-extensions-broker.properties",
+            "descriptions": []
+        },
+        {
+            "title": "config-extensions-recovery.properties",
+            "text": "",
+            "source": "resources/config-extensions-recovery.properties",
+            "descriptions": []
+        },
+        {
+            "title": "config-extensions-server.properties",
+            "text": "",
+            "source": "resources/config-extensions-server.properties",
+            "descriptions": []
+        },
+        {
+            "title": "config-harvesting.properties",
+            "text": "Harvesting configuration settings.",
+            "source": "resources/config-harvesting.properties",
+            "descriptions": [
+                "extensions/harvesting/src/HarvestingConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-inflation.properties",
+            "text": "Inflation configuration settings.",
+            "source": "resources/config-inflation.properties",
+            "descriptions": []
+        },
+        {
+            "title": "config-logging-broker.properties",
+            "text": "Logging configuration settings.",
+            "source": "resources/config-logging-recovery.properties",
+            "descriptions": [
+                "src/catapult/config/LoggingConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-logging-recovery.properties",
+            "text": "Logging configuration settings.",
+            "source": "resources/config-logging-recovery.properties",
+            "descriptions": [
+                "src/catapult/config/LoggingConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-logging-server.properties",
+            "text": "Logging configuration settings.",
+            "source": "resources/config-logging-server.properties",
+            "descriptions": [
+                "src/catapult/config/LoggingConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-messaging.properties",
+            "text": "Messaging configuration settings.",
+            "source": "resources/config-messaging.properties",
+            "descriptions": [
+                "extensions/zeromq/src/MessagingConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-network.properties",
+            "text": "Network configuration settings.",
+            "source": "resources/config-network.properties",
+            "descriptions": [
+                "src/catapult/model/NetworkInfo.h",
+                "src/catapult/model/BlockChainConfiguration.h",
+                "plugins/txes/aggregate/src/config/AggregateConfiguration.h",
+                "plugins/txes/lock_hash/src/config/HashLockConfiguration.h",
+                "plugins/txes/lock_secret/src/config/SecretLockConfiguration.h",
+                "plugins/txes/metadata/src/config/MetadataConfiguration.h",
+                "plugins/txes/mosaic/src/config/MosaicConfiguration.h",
+                "plugins/txes/multisig/src/config/MultisigConfiguration.h",
+                "plugins/txes/namespace/src/config/NamespaceConfiguration.h",
+                "plugins/txes/restriction_account/src/config/AccountRestrictionConfiguration.h",
+                "plugins/txes/restriction_mosaic/src/config/MosaicRestrictionConfiguration.h",
+                "plugins/txes/transfer/src/config/TransferConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-networkheight.properties",
+            "text": "Network height configuration settings.",
+            "source": "resources/config-networkheight.properties",
+            "descriptions": [
+                "extensions/networkheight/src/NetworkHeightConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-node.properties",
+            "text": "Node configuration settings.",
+            "source": "resources/config-node.properties",
+            "descriptions": [
+                "src/catapult/config/NodeConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-pt.properties",
+            "text": "Partial transactions configuration settings.",
+            "source": "resources/config-pt.properties",
+            "descriptions": [
+                "extensions/partialtransaction/src/PtConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-task.properties",
+            "text": "Tasks configuration settings.",
+            "source": "resources/config-task.properties",
+            "descriptions": [
+                "extensions/sync/src/TasksConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-timesync.properties",
+            "text": "Time synchronization configuration settings.",
+            "source": "resources/config-timesync.properties",
+            "descriptions": [
+                "extensions/timesync/src/TimeSynchronizationConfiguration.h"
+            ]
+        },
+        {
+            "title": "config-user.properties",
+            "text": "User configuration settings.",
+            "source": "resources/config-user.properties",
+            "descriptions": [
+                "src/catapult/config/UserConfiguration.h"
+            ]
+        }
+    ],
+    "status-errors": [{
+        "title": "Status Errors",
+        "text": "This section describes the error messages that can be returned via status channel after announcing a transaction.",
+        "source": "/catapult-sdk/src/model/status.js",
+        "descriptions": [
+            "plugins/services/hashcache/src/validators/Results.h",
+            "plugins/services/signature/src/validators/Results.h",
+            "plugins/coresystem/src/validators/Results.h",
+            "plugins/txes/account_link/src/validators/Results.h",
+            "plugins/txes/aggregate/src/validators/Results.h",
+            "plugins/txes/lock_hash/src/validators/Results.h",
+            "plugins/txes/lock_secret/src/validators/Results.h",
+            "plugins/txes/metadata/src/validators/Results.h",
+            "plugins/txes/mosaic/src/validators/Results.h",
+            "plugins/txes/multisig/src/validators/Results.h",
+            "plugins/txes/namespace/src/validators/Results.h",
+            "plugins/txes/restriction_account/src/validators/Results.h",
+            "plugins/txes/restriction_mosaic/src/validators/Results.h",
+            "plugins/txes/transfer/src/validators/Results.h",
+            "src/catapult/chain/ChainResults.h",
+            "src/catapult/consumers/ConsumerResults.h",
+            "src/catapult/extensions/Results.h"
+        ]
+    }]
+}
