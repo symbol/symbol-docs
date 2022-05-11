@@ -49,8 +49,10 @@ Symbol is an [open-source](https://github.com/symbol) project.
 Discover how our [community](https://github.com/symbol/community/) is organized, and get started participating:
 
 * Reach our community joining the official [Discord](https://discord.com/invite/xymcity).
-* Check the [contributing guidelines](https://docs.symbolplatform.com/guidelines/suggesting-changes.html) to propose changes.
-* Follow the development updates on [Twitter](https://twitter.com/NEMofficial).
+* Check the [contributing guidelines](https://docs.symbol.dev/guidelines/suggesting-changes.html) to propose changes.
+* Follow the development updates on Twitter.
+  * [Symbol Official account](https://twitter.com/thesymbolchain)
+  * [The Symbol Syndicate](https://twitter.com/SymbolSyndicate)
 * Explore our [GitHub](https://github.com/symbol) repositories.
 
 ## License
