@@ -1,0 +1,34 @@
+version: 2
+updates:
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+      day: sunday
+    target-branch: main
+    labels: [dependencies]
+    commit-message:
+      prefix: '[dependency]'
+
+  - package-ecosystem: npm
+    directory: /source/resources/examples/typescript
+    schedule:
+      interval: weekly
+      day: sunday
+    target-branch: main
+    labels: [dependencies]
+    versioning-strategy: increase
+    commit-message:
+      prefix: '[dependency]'
+
+  - package-ecosystem: gradle
+    directory: /source/resources/examples/java
+    schedule:
+      interval: weekly
+      day: sunday
+    target-branch: main
+    labels: [dependencies]
+    commit-message:
+      prefix: '[dependency]'
+
