@@ -31,4 +31,3 @@ updates:
     labels: [dependencies]
     commit-message:
       prefix: '[dependency]'
-
