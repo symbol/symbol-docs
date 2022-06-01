@@ -8,7 +8,7 @@
     "js-sha3": "^0.7.0",
     "merkletreejs": "^0.1.11",
     "rxjs": "^6.6.3",
-    "rxjs-compat": "^6.6.3",
+    "rxjs-compat": "^6.6.7",
     "symbol-sdk": "1.0.0",
     "typescript": "^3.8.3",
     "utf8": "^3.0.0"
