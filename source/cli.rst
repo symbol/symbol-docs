@@ -58,9 +58,7 @@ If you do not have a private key to create a profile, you can generate a new acc
 Commands
 ********
 
-These are the available commands for Symbol CLI separated by version.
+Symbol CLI is deprecated. These are the available commands for the latest `Symbol CLI <https://github.com/symbol/symbol-docs/blob/main/source/_static/retired/symbol-cli/1.0.2.md>`__.
 
 Find out which CLI version do you have installed by running ``symbol-cli`` from the command line.
 
-.. ghreference:: symbol/symbol-cli
-    :folder:
