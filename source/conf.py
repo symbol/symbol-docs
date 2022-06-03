@@ -115,6 +115,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = 'bootstrap'
+html_permalinks_icon = ''
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
