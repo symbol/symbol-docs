@@ -2,7 +2,7 @@ ablog==0.10.19
 alabaster==0.7.8
 Babel==2.9.1
 imagesize==0.7.1
-Jinja2==2.11.3
+Jinja2==3.1.2
 MarkupSafe==0.23
 PyGithub==1.46
 Pygments==2.12.0
