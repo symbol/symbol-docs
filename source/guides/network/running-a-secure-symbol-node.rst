@@ -206,8 +206,6 @@ The following commands all use ``--max-fee 1000000`` which means that **1 XYM** 
 
    There is currently a limitation in ``symbol-cli`` which sets this deadline to **2 hours** after transaction creation, for all non-multisig transactions.
 
-   This is a known limitation which is `being tracked <https://github.com/symbol/symbol-cli/issues/373>`__.
-
 Remote key link
 ---------------
 
