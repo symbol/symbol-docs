@@ -14,7 +14,7 @@ Sphinx==5.0.2
 sphinx-autobuild==2021.3.14
 sphinx_bootstrap_theme==0.8.1
 sphinx-intl==2.0.1
-sphinx_tabs==3.4.0
+sphinx_tabs==3.4.1
 sphinxcontrib-viewsource==0.1.4
 sphinxcontrib.mermaid==0.7.1
 sphinxcontrib.ghcontributors==0.2.3
