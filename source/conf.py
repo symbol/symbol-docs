@@ -295,7 +295,7 @@ rst_prolog = """
 
 .. |techref| raw:: html
 
-   <a href="https://docs.symbol.dev/symbol-technicalref/main.pdf" target="_blank">Technical Reference</a>
+   <a href="https://symbol.github.io/symbol-technicalref/main.pdf" target="_blank">Technical Reference</a>
 """
 
 # -- Options for Epub output ----------------------------------------------
