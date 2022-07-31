@@ -1,0 +1,559 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-present, NEM
+# This file is distributed under the same license as the symbol-docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+# Translators:
+# Radio  <rsb03616@nifty.com>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: symbol-docs 0.22.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-26 11:12-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Radio  <rsb03616@nifty.com>, 2022\n"
+"Language-Team: Japanese (https://www.transifex.com/nemtech/teams/95744/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/guides/account/scams-and-security.rst:9
+msgid "Common Hacks and Scams"
+msgstr "よくあるハッキングやスキャムについて"
+
+#: ../../source/guides/account/scams-and-security.rst:11
+msgid ""
+"It should come as no surprise that cryptocurrency users are targeted by a"
+" wide variety of scammers, hackers, and thieves. While some attempts may "
+"come in familiar forms such as impersonation or misinformation, the "
+"digital nature of cryptocurrencies opens the door to a number of novel "
+"approaches. This page is intended to help you ensure the security of your"
+" assets by explaining a number of common scams and security "
+"considerations. This list is by no means comprehensive, and you are "
+"strongly encouraged to research the topic further for the sake of your "
+"wallet's security."
+msgstr ""
+"暗号通貨の利用者がさまざまな詐欺師やハッカー、窃盗を試みるものに狙われていることは驚くに"
+"値しません。なりすましや虚偽情報など、古典的な手口もありますが、デジタルネイチャーである"
+"暗号通貨には、新しい手口も多くみられます。このページでは、一般的な詐欺やセキュリティに関"
+"する注意点を説明し、ユーザーの資産の安全確保の一助になることを目的としています。なお、この"
+"リストは包括的なものではありませんので、あなたのウォレットの安全性を高めるためにも、この"
+"トピックについてさらに調べることを強く推奨します。"
+
+#: ../../source/guides/account/scams-and-security.rst:15
+msgid "Key Points"
+msgstr "キーポイント"
+
+#: ../../source/guides/account/scams-and-security.rst:17
+msgid ""
+"**Be extremely cautious signing transactions when activating delegated "
+"harvesting**. A Sweeping scam has actively targeted users in the process "
+"of activating delegated harvesting, so make sure to carefully review any "
+"transactions you are prompted to sign and diligently check for any "
+"included asset transfers to unfamiliar addresses. Never sign a "
+"transaction that you do not completely understand."
+msgstr ""
+"**委任ハーベスト設定の際には、トランザクションへの署名に十分注意してください。**"
+"掠め取り詐欺（アグボン詐欺）は、委任ハーベストを有効化しようとしているユーザーを狙っています。"
+"ですから、署名を促されたトランザクションの内容をよく見て、見知らぬアドレスへの資産の転送が仕組"
+"まれていないかどうかを慎重に確認してください。完全に内容を理解していないトランザクションには、 "
+"決して署名をしないでください。"
+
+#: ../../source/guides/account/scams-and-security.rst:18
+msgid ""
+"**Never share your private key or mnemonic phrase** (also known as your "
+"secret recovery phrase or seed phrase) with anyone, and never enter them "
+"on any website or potentially malicious wallet. Anyone with your private "
+"key or mnemonic phrase has full and unrestrained access to the contents "
+"of your wallet."
+msgstr ""
+"**秘密鍵やニーモニックは、決して誰にも教えず、** (秘密の復元フレーズやシードフレーズとも"
+"呼ばれます)いかなるウェブサイトや信頼できるか確証のないウォレットには入力しないでください。"
+"あなたの秘密鍵やニーモニックを知る人は、あなたのウォレットの中身に完全かつ自由にアクセス"
+"することができるからです。"
+
+#: ../../source/guides/account/scams-and-security.rst:19
+msgid ""
+"**The Symbol Syndicate will never directly message you for customer "
+"support** and will never ask for your private key or mnemonic phrase."
+msgstr ""
+"**Symbolシンジケートは、カスタマーサポートのために直接メッセージを送ることはありません。**"
+"また、秘密鍵やニーモニックを聞く事も決してありません。"
+
+#: ../../source/guides/account/scams-and-security.rst:20
+msgid ""
+"**Blockchain transactions are irreversible**; it is not feasible to undo "
+"a transaction or retrieve your funds once they are sent to a malicious "
+"address."
+msgstr ""
+"**ブロックチェーンのトランザクションは不可逆です。**つまり、一度悪意のあるアドレスに"
+"送られたトランザクションを元に戻したり、資金を回収したりすることは不可能です。"
+
+#: ../../source/guides/account/scams-and-security.rst:21
+msgid ""
+"**Ensure any backups of your private keys or mnemonic phrases are stored "
+"safely and offline** in order to ensure that no one is able to access "
+"them and compromise your accounts."
+msgstr ""
+"**秘密鍵やニーモニックフレーズのバックアップは、安全にオフラインで保管してください。**"
+"そしてあなた以外の誰もアクセスできないようにし、アカウントを危険にさらすことがないように"
+"してください。"
+
+#: ../../source/guides/account/scams-and-security.rst:25
+msgid "Sweeping with Aggregate Bonded Transactions"
+msgstr "アグリゲートボンデッドトランザクションを悪用した掠め取り詐欺（アグボン詐欺）"
+
+#: ../../source/guides/account/scams-and-security.rst:28
+msgid "What is an Aggregate transaction?"
+msgstr "アグリゲートトランザクションとは？"
+
+#: ../../source/guides/account/scams-and-security.rst:30
+msgid ""
+"Aggregate transactions can include a variety of elements such as multiple"
+" signers, messages, and transfers. New Symbol users may not be familiar "
+"with the complex nature of Aggregate Bonded transactions, and must take "
+"great care to fully understand the full scope of any transactions they "
+"are asked to sign. For more information see :doc:`Aggregate Transaction "
+"<../../concepts/aggregate-transaction>`"
+msgstr ""
+"アグリゲートトランザクションは、複数の署名者、メッセージ、送金などといったさまざまな"
+"トランザクションを内包することができます。新しくSymbolを使い始める人は、複雑なトラ"
+"ンザクションを含むアグリゲートボンデッドトランザクションに不慣れなこともありますので、"
+"署名を促されるようなトランザクションについては、その内容を十分に理解するように、最新"
+"の注意を払う必要があります。詳細についてはこちらをご覧ください :doc:`Aggregate Transaction "
+"<../../concepts/aggregate-transaction>`"
+
+#: ../../source/guides/account/scams-and-security.rst:33
+msgid "What is sweeping?"
+msgstr "掠め取り詐欺（アグボン詐欺）とは？"
+
+#: ../../source/guides/account/scams-and-security.rst:35
+msgid ""
+"Sweeping involves a malicious script that monitors certain types of "
+"transactions, then initiates a malicious Aggregate Bonded transaction "
+"disguised to appear related to the targeted transaction (i.e. by "
+"including a relevant message), but which also include a transfer of XYM "
+"or other mosaics to the bad actor's wallet. Signing these transactions "
+"can completely empty a user's wallet, so please make sure you carefully "
+"review before signing any transactions that you did not initiate."
+msgstr ""
+"掠め取り詐欺（アグボン詐欺）では、悪意あるスクリプトが特定の種類のトランザクションを"
+"監視し、標的となるトランザクションに関連しているように見せかけ、（関連するメーセージ"
+"を含むなど）XYMやその他のモザイクを掠め取り、悪意を持った者のウォレットに転送させる、"
+"悪質なアグリゲートボンデッドトランザクションに署名させようとします。これらのトランザ"
+"クションに署名してしまうと、ユーザーのウォレットから資産が全て転送されてしまう可能性"
+"があるため、自分以外の誰かから送られたトランザクションに署名する前に、慎重に内容を確認"
+"するようにしてください。"
+
+#: ../../source/guides/account/scams-and-security.rst:37
+msgid ""
+"It may not be immediately apparent that you've been hacked. The sweeper's"
+" goal is that you assume that the transaction you signed was part of a "
+"process you were completing, and you may also assume that your balance "
+"has been reduced by a stuck transaction, pending activation of delegated "
+"harvesting, or that your balance was transferred to a delegated "
+"harvesting address linked to your account."
+msgstr ""
+"ハッキングされたことはすぐにはわからないかもしれません。掠め取り犯（アグボン詐欺師）"
+"の狙いは、あなたが署名したトランザクションは、あなたが意図したものと思い込ませること"
+"だったり、残高が減少したのは、ハーベストの手順で残高が減少しているとか、委任した"
+"アカウントへ転送されるものだと誤認させることだったりします。"
+
+#: ../../source/guides/account/scams-and-security.rst:40
+msgid "What could a sweeping attack look like?"
+msgstr "掠め取り詐欺（アグボン詐欺）の実態は？"
+
+#: ../../source/guides/account/scams-and-security.rst:42
+msgid ""
+"You begin Delegated Harvesting activation by propagating the 'Link all "
+"keys' transaction to the network."
+msgstr ""
+"委任ハーベストの有効化は、「全ての鍵をリンクする」トランザクションをネットワークに公開"
+"することから始まります。"
+
+#: ../../source/guides/account/scams-and-security.rst:43
+msgid ""
+"The bad actor's script detects this transaction and sends you an "
+"Aggregate Bonded transaction. This transaction might include a message "
+"related to harvesting such as \"Delegated-№234567\" as well as a transfer"
+" of XYM to an address controlled by the bad actor."
+msgstr ""
+"悪意あるスクリプトはこのトランザクションを検知し、アグリゲートボンデッドトランザクション"
+"を送りつけます。このトランザクションには、 \"Delegated-№234567\" のような、委任ハー"
+"ベストに関連があるかのようなメッセージと、悪意ある者のアドレスへXYMを送金させる内容が"
+"含まれていることが見受けられます。"
+
+#: ../../source/guides/account/scams-and-security.rst:44
+msgid ""
+"Your wallet sees the Aggregate Bonded transaction included in a "
+"subsequent block and prompts you with the option to review and sign it."
+msgstr ""
+"あなたのウォレットには、署名をすると実行されるアグリゲートボンデッドのトランザクション"
+"内容が表示され、その内容を確認し、署名をする選択肢が示されます。"
+
+#: ../../source/guides/account/scams-and-security.rst:45
+msgid ""
+"You choose to sign the transaction, and your XYM balance is reduced by "
+"the transaction amount (typically all or nearly all of your XYM)."
+msgstr ""
+"トランザクションへの署名を選択し、署名をしてしまうと、あなたのウォレット残高"
+"（通常全て、もしくはほとんどの残高）が減少します。"
+
+#: ../../source/guides/account/scams-and-security.rst:47
+msgid ""
+"Every Symbol wallet is different; some may not permit users to sign "
+"aggregate transactions, others may hide aggregate transactions "
+"originating from addresses outside a predefined whitelist (i.e. their "
+"contacts), and others may prompt users for their signature without "
+"revealing the full contents of what they are signing. Reviewing aggregate"
+" transactions using the `Symbol Explorer "
+"<https://testnet.symbol.fyi/nodes>`__ before signing them can provide "
+"additional security and peace of mind. Below is an example of a malicious"
+" aggregate transaction that contains a message to a trusted address in "
+"the first transaction and an asset transfer to the scammer's address in "
+"the second transaction."
+msgstr ""
+"Symbolウォレットはそれぞれ異なります。あるウォレットは、アグリゲートトランザクション"
+"への署名ができないようになっていたり、あらかじめホワイトリストとして登録したアドレス"
+"以外からのアグリゲートトランザクションを見えないようにしたり、または、トランザクション"
+"内容を全て確認する前に署名ができてしまう場合もあります。署名をする前に `Symbol Explorer "
+"<https://testnet.symbol.fyi/nodes>`__ でそのトランザクションの内容を確認すること"
+"で、より安全性は高まります。以下の画像は、最初のトランザクションにはメッセージが含まれて"
+"おり、次に実行されるトランザクションには詐欺師のアドレスへの資産の転送が含まれている、"
+"悪意あるアグリゲートトランザクションの一例です。"
+
+#: ../../source/guides/account/scams-and-security.rst:57
+msgid "Spoofing"
+msgstr "なりすまし"
+
+#: ../../source/guides/account/scams-and-security.rst:60
+msgid "What is spoofing?"
+msgstr "なりすましとは？"
+
+#: ../../source/guides/account/scams-and-security.rst:62
+msgid ""
+"Spoofing involves hiding or disguising identity to enable malicious "
+"activity, literally spoofing the identity of the malicious party to make "
+"it believable and appear trustworthy."
+msgstr ""
+"なりすましとは、悪意ある行為を行うために身元を隠したり、偽ることで、その当事者の"
+"身元を偽り、信じ込ませ、信頼できる相手だと見せかけることです。"
+
+#: ../../source/guides/account/scams-and-security.rst:65
+msgid "What could a spoofing attack look like?"
+msgstr "なりすまし攻撃の実態は？"
+
+#: ../../source/guides/account/scams-and-security.rst:67
+msgid ""
+"A spoofing hack will target private key or mnemonic phrase (also known as"
+" your secret recovery phrase or seed phrase), as this can be used to "
+"restore your wallet and will provide a hacker with access to your private"
+" keys and the wallet's contents. Symbol wallets are a non-custodial, "
+"meaning you are responsible for keeping your private keys and mnemonic "
+"phrase secure."
+msgstr ""
+"なりすましによるハッキングは、秘密鍵やニーモニック（秘密の復元フレーズやシードフレーズ"
+"とも呼ばれます）を標的にします。これはウォレットの復元に使用できるものであり、ハッカー"
+"はそれを利用してあなたのウォレットにアクセスしようと企みます。Symbolウォレットは"
+"ノンカストディアルウォレット（利用者だけが秘密鍵を所有し管理するウォレット）です。"
+"つまり、秘密鍵とニーモニックフレーズを安全に保管する責任はあなたにあります。"
+
+#: ../../source/guides/account/scams-and-security.rst:69
+msgid "A spoofing attack might go something like this:"
+msgstr "なりすまし攻撃はこのように行われます"
+
+#: ../../source/guides/account/scams-and-security.rst:71
+msgid "You ask a question on Twitter or in the XYMCity Discord server."
+msgstr "あなたがTwitterやXYMCityのディスコードで何か質問をしたとします。"
+
+#: ../../source/guides/account/scams-and-security.rst:72
+msgid ""
+"A malicious account identifies you as a target due to your request for "
+"support and sends you a DM. The account will be configured to resemble an"
+" official support resource and could include a relevant logo, a "
+"convincing username, and a professional sounding dialogue."
+msgstr ""
+"悪意ある者は、あなたがサポートを必要としていることから標的として狙いを定め、あなたにDM"
+"します。この悪意ある者は、ロゴマークやそれらしいユーザー名、信頼できそうな印象の単語を"
+"使い、公式を名乗り、なりすまします。"
+
+#: ../../source/guides/account/scams-and-security.rst:73
+msgid ""
+"The bad actor will rely on your belief that they are an official support "
+"resource, and try to convince you to provide your private key or mnemonic"
+" phrase key to resolve your problem. This could also involve directing "
+"you to a website that requests these details."
+msgstr ""
+"悪意ある者は、公式のサポートであると思い込ませ、あなたの疑問や問題を解決するために必要だと"
+"誤認させ、秘密鍵やニーモニックを教えるように持ちかけます。また、これらを入力させるウェブサ"
+"イトへ誘導する事もあります。"
+
+#: ../../source/guides/account/scams-and-security.rst:74
+msgid ""
+"If successful, the bad actor can gain full access to your address and "
+"transfer your assets to an address of their choosing."
+msgstr ""
+"この悪意ある者が詐取に成功すると、あなたのアドレスに自由に侵入することができるので、"
+"悪意ある者はあなたの資産をどのアドレスへでも送信することができます。"
+
+#: ../../source/guides/account/scams-and-security.rst:76
+msgid ""
+"This scenario is just an example, and similar events could play out "
+"across any social media platform, messaging service, forum, or otherwise "
+"on which you share information publicly."
+msgstr ""
+"この手口はほんの一例であり、このようなことは、ソーシャルメディア、メッセージサービス、"
+"フォーラムなど、あなたが情報を公開する至る所で発生する可能性があります。"
+
+#: ../../source/guides/account/scams-and-security.rst:79
+msgid "How can I protect myself from spoofing attacks?"
+msgstr "どのようになりすまし攻撃から身を守るのか？"
+
+#: ../../source/guides/account/scams-and-security.rst:81
+msgid ""
+"The Symbol Syndicate will never directly message you for customer "
+"support, and will never ask for your private key or mnemonic phrase. "
+"Anyone asking you for contact information, your secret recovery phrase or"
+" details of your support issue outside of the Discord helpdesk channel is"
+" a potential scammer and should be ignored and/or reported. Be vigilant. "
+"If it looks like it might be a scam, it probably is. Always be observant "
+"and keep a lookout for suspicious, telltale signs. These could include:"
+msgstr ""
+"Symbolシンジケートは、カスタマーサポートのために直接メッセージを送ることはありません。"
+"また、秘密鍵やニーモニックを聞く事も決してありません。Discordのヘルプデスク窓口以外から"
+"の連絡や、連絡先や秘密鍵、リカバリフレーズ、サポートの詳細について訪ねる者は詐欺師である"
+"可能性がありますので無視をするか報告してください。常に用心してください。少しでも疑わしい"
+"場合は、ほぼ詐欺でしょう。常に注意深く、疑わしい兆候には用心してください。詐欺には次の"
+"ような例があります"
+
+#: ../../source/guides/account/scams-and-security.rst:84
+msgid ""
+"Requesting personal information, including anything from your name, the "
+"value of your wallet's holdings, or even your private key, which you "
+"should never, ever give to anyone."
+msgstr ""
+"個人情報の要求。名前、ウォレット残高、秘密鍵など、誰にも教えてはいけない情報を聞き"
+"出そうとする。"
+
+#: ../../source/guides/account/scams-and-security.rst:85
+msgid ""
+"Unofficial-looking Twitter handles using underscores, doubled-up letters,"
+" and numbers to mimic official accounts."
+msgstr ""
+"アンダースコアや紛らわしい綴り、数字を利用して公式を模したTwitterハンドル名。"
+
+#: ../../source/guides/account/scams-and-security.rst:86
+msgid ""
+"Official-looking Discord 'about me' details or handles (i.e. "
+"SUPPORT_TEAM)."
+msgstr ""
+"公式と紛らわしいDiscordの自己紹介やハンドル名(例. SUPPORT_TEAM)."
+
+#: ../../source/guides/account/scams-and-security.rst:87
+msgid ""
+"Providing links to websites purported to 'validate your wallet' or assist"
+" with troubleshooting (excepting known-good sources such as the official "
+"Symbol documentation or articles written by Syndicate members)."
+msgstr ""
+"ウォレットの検証やトラブルシューティングと見せかけたウェブサイトリンクへの誘導"
+"(Symbolの公式文書やシンジケートのメンバーが執筆した記事など、既知の良い情報源は除く)."
+
+#: ../../source/guides/account/scams-and-security.rst:88
+msgid "Requests to reach out for support, get in touch, or send a DM."
+msgstr "サポートやお問合せといった連絡、もしくはDMの送信"
+
+#: ../../source/guides/account/scams-and-security.rst:90
+msgid ""
+"Most importantly, **never share your private keys and mnemonic phrase** "
+"regardless of how convincing a person/entity may be."
+msgstr ""
+"最も重要なことは、どんなに説得力があっても、 **秘密鍵とニーモニックフレーズを決して"
+"教えないことです。** "
+
+#: ../../source/guides/account/scams-and-security.rst:95
+msgid "Clipboard hacking"
+msgstr "クリップボードハッキング"
+
+#: ../../source/guides/account/scams-and-security.rst:98
+msgid "What is clipboard hacking?"
+msgstr "クリップボードハッキングとは？"
+
+#: ../../source/guides/account/scams-and-security.rst:100
+msgid ""
+"Symbol addresses are not easily memorized nor typed manually, so many "
+"users leverage their device's clipboard to copy and paste a recipient's "
+"Symbol address. Clipboard hacking involves malware that intercepts the "
+"contents of your clipboard and replaces an address you've copied with an "
+"address belonging to the hacker.  When you go to send a transaction and "
+"paste the address from your clipboard, the hacker's address is pasted "
+"instead of the one you initially copied."
+msgstr ""
+"Symbolのアドレスは簡単に暗記したり、手入力することが大変なため、ユーザーの多くは、"
+"デバイスのクリップボードを活用して受信者のSymbolアドレスをコピー＆ペーストしています。"
+"クリップボードハッキングには、クリップボードにコピーした内容を傍受し、そのコピーした"
+"アドレスをハッカーが所有するアドレスに置き換えるマルウェアが含まれます。送信しようと"
+"クリップボードからアドレスをペーストすると、最初にコピーしたアドレスではなく、ハッカー"
+"のアドレスがペーストされてしまいます。"
+
+#: ../../source/guides/account/scams-and-security.rst:103
+msgid "How can I protect myself?"
+msgstr "身を守るには？"
+
+#: ../../source/guides/account/scams-and-security.rst:105
+msgid ""
+"The only way reliable way to be safe is to triple-check addresses before "
+"you confirm any transaction. A robust and up-to-date anti-malware "
+"software is strongly recommended, as it should identify most potential "
+"clipboard hacking malware programs, notify you, and quarantine them "
+"before they can affect your crypto activity."
+msgstr ""
+"唯一の安全性を確保する方法は、トランザクションを承認、送信する前にアドレスを3回チェックする"
+"ことです。また、マルウェア対策ソフトは、潜在的なクリップボードハッキングマルウェアプログラム"
+"のほとんどを識別して通知し、暗号通貨の利用に影響を与える前に隔離してくれるので、堅牢で最新の"
+"マルウェア対策ソフトを利用することを強くお勧めします。"
+
+#: ../../source/guides/account/scams-and-security.rst:110
+msgid "Compromised Backup"
+msgstr "バックアップの漏洩"
+
+#: ../../source/guides/account/scams-and-security.rst:112
+msgid ""
+"Keep in mind that any copies of your private keys or mnemonic phrase can "
+"also grant someone access to your accounts. Ensure that these cannot be "
+"accessed by a hack, theft, or compromised cloud storage account."
+msgstr ""
+"秘密鍵やニーモニックフレーズのコピーも、あなたのアカウントへのアクセスを許してしまう"
+"可能性があることに留意してください。ハッキング、盗難、クラウドストレージアカウント"
+"の漏洩によって、アカウントにアクセスできなくなってしまう事もあります。"
+
+#~ msgid ""
+#~ "**Be extremely cautious signing transactions"
+#~ " when activating delegated harvesting**. A"
+#~ " Sweeping scam has actively targeted "
+#~ "users in the process of activating "
+#~ "delegated harvesting, so make sure to"
+#~ " carefully review any transactions you "
+#~ "are prompted to sign and diligently "
+#~ "check for any included asset transfers"
+#~ " to unfamiliar addresses. Never sign "
+#~ "a transactions that you do not "
+#~ "completely understand."
+#~ msgstr ""
+
+#~ msgid "**What is an Aggregate Bonded transaction?**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Aggregate Bonded transactions can include "
+#~ "a variety of elements such as "
+#~ "multiple signers, messages, and transfers. "
+#~ "New Symbol users may not be "
+#~ "familiar with the complex nature of "
+#~ "Aggregate Bonded transactions, and must "
+#~ "take great care to fully understand "
+#~ "the full scope of any transactions "
+#~ "they are asked to sign. For more"
+#~ " information see :doc:`Aggregate Transaction "
+#~ "<../../concepts/aggregate-transaction>`"
+#~ msgstr ""
+
+#~ msgid "**What is sweeping?**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It may not be immediately apparent "
+#~ "that you've been hacked by a "
+#~ "sweeper. If you assumed that the "
+#~ "transaction you signed was part of "
+#~ "a process you were completing, you "
+#~ "may also assume that your balance "
+#~ "has been reduced by a stuck "
+#~ "transaction, pending activation of delegated"
+#~ " harvesting, or that your balance was"
+#~ " transferred to a delegated harvesting "
+#~ "address linked to your account."
+#~ msgstr ""
+
+#~ msgid "A sweeping attack might go something like this:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You begin Delegated Harvesting activation "
+#~ "by propagating the 'Link all keys' "
+#~ "transaction to the network"
+#~ msgstr ""
+
+#~ msgid "**What is spoofing?**"
+#~ msgstr ""
+
+#~ msgid "**What could a spoofing attack look like?**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A spoofing hack will target private "
+#~ "key or  mnemonic phrase (also known "
+#~ "as your secret recovery phrase or "
+#~ "seed phrase), as this can be used"
+#~ " to restore your wallet and will "
+#~ "provide a hacker with access to "
+#~ "your private keys and the wallet's "
+#~ "contents. Symbol wallets are a non-"
+#~ "custodial , meaning you are responsible"
+#~ " for keeping your private keys and"
+#~ " mnemonic phrase secure."
+#~ msgstr ""
+
+#~ msgid "You ask a question on Twitter or in the XYMCity Discord server"
+#~ msgstr ""
+
+#~ msgid "**How can I protect myself from spoofing attacks?**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Official-looking Discord 'about me' "
+#~ "details or handles (i.e. SUPPORT_TEAM)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Providing links to websites purported to"
+#~ " 'validate your wallet' or assist "
+#~ "with troubleshooting (excepting known-good "
+#~ "sources such as the official Symbol "
+#~ "documentation or articles written by "
+#~ "Syndicate members)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**What is clipboard hacking?** Symbol "
+#~ "addresses are not easily memorized nor"
+#~ " typed manually, so many users "
+#~ "leverage their device's clipboard to "
+#~ "copy and paste a recipient's Symbol "
+#~ "address. Clipboard hacking involves malware"
+#~ " that intercepts the contents of your"
+#~ " clipboard and replaces an address "
+#~ "you've copied with an address belonging"
+#~ " to the hacker.  When you go to"
+#~ " send a transaction and paste the "
+#~ "address from your clipboard, the "
+#~ "hacker's address is pasted instead of"
+#~ " the one you initially copied."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**How can I protect myself?** The "
+#~ "only way reliable way to be safe"
+#~ " is to triple-check addresses before"
+#~ " you confirm any transaction. A "
+#~ "robust and up-to-date anti-malware"
+#~ " software is strongly recommended, as "
+#~ "it should identify most potential "
+#~ "clipboard hacking malware programs, notify "
+#~ "you, and quarantine them before they "
+#~ "can affect your crypto activity."
+#~ msgstr ""
+
