@@ -9,7 +9,7 @@
     "merkletreejs": "^0.2.32",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.7",
-    "symbol-sdk": "1.0.0",
+    "symbol-sdk": "2.0.1",
     "typescript": "^4.7.4",
     "utf8": "^3.0.0"
   },
