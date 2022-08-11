@@ -1,8 +1,8 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
     <tr><td class="side-info-icon">&varr;</td><td>Size: 167+ bytes = 0xa7+ <i>(variable)</i></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/symbol/metadata/account_metadata.cats#L28">schema</a></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/catapult-client/blob/main/plugins/txes/metadata/src/model/AccountMetadataTransaction.h#L38">catapult model</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/metadata/account_metadata.cats#L28">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/plugins/txes/metadata/src/model/AccountMetadataTransaction.h#L38">catapult model</a></td></tr>
     </table></div>
 <p>Associate a key-value state (<a href="/concepts/metadata.html">metadata</a>) to an <strong>account</strong>. <br/><br/><b>Note:</b> This transaction must <strong>always</strong> be wrapped in an AggregateTransaction so that a cosignature from <code class="docutils literal">target_address</code> can be provided. Without this cosignature the transaction is invalid. <br/>Compare to <a href="/serialization#mosaicmetadatatransaction" title="Associate a key-value state (metadata) to a mosaic.">MosaicMetadataTransaction</a> and <a href="/serialization#namespacemetadatatransaction" title="Associate a key-value state (metadata) to a namespace.">NamespaceMetadataTransaction</a>. </p>
 </td></tr></table>

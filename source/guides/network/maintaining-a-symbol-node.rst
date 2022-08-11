@@ -103,7 +103,7 @@ If you followed the :doc:`running-a-symbol-node-manually` guide, you need to reb
 In summary, you need to:
 
 - Stop the running Catapult client with ``Ctrl+C``.
-- Update the Catapult client source repository with the latest version and build it again following the `Catapult client <https://github.com/symbol/catapult-client/tree/main/docs>`__ instructions.
+- Update the Catapult client source repository with the latest version and build it again following the `Catapult client <https://github.com/symbol/symbol/tree/main/client/catapult/docs>`__ instructions.
 - Restart the client from the same folder it was initially launched. Data and configuration files will be reused.
 
 .. note::

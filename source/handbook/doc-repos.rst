@@ -16,7 +16,7 @@ Technical documentation
     :widths: 30 70
     :class: docs-repo-table
 
-    **Site** ; `docs.symbolplatform.com <https://docs.symbolplatform.com>`__
+    **Site** ; `docs.symbol.dev <https://docs.symbol.dev>`__
     **Source repo** ; `github.com/symbol/symbol-docs <https://github.com/symbol/symbol-docs>`__
     **Host** ; `GitHub pages <https://github.com/symbol/symbol-docs/tree/gh-pages>`__
     **Engine** ; `Sphinx <https://www.sphinx-doc.org>`__

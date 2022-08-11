@@ -1,0 +1,11 @@
+*.pyc
+dist/
+build/
+venv/
+catapult-server/
+catapult-rest/
+*.egg-info/
+.tox/
+.coverage
+.idea
+test.txt

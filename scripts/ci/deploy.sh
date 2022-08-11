@@ -2,12 +2,6 @@
 
 set -ex
 
-echo "Building docs..."
-make alldocs
-
-echo "Linking Check..."
-make linkcheck
-
 echo "Publishing..."
 git remote add github "https://${GITHUB_ACCESS_TOKEN}@github.com/symbol/symbol-docs.git" > /dev/null 2>&1
 
