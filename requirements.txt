@@ -1,4 +1,4 @@
-ablog==0.10.28
+ablog==0.10.29
 alabaster==0.7.12
 Babel==2.10.3
 imagesize==1.4.1
