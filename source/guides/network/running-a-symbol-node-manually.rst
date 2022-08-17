@@ -510,7 +510,7 @@ If the REST gateway is working correctly, you can now make queries at port 3000.
 
 Point a browser to the following URLs and check that the returned values are similar to the expected ones:
 
-* `http://localhost:3000/node/info <http://localhost:3000/node/info>`__: Services status.
+* `http://localhost:3000/node/health <http://localhost:3000/node/health>`__: Services status.
 
   .. code-block:: json
 
