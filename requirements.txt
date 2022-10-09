@@ -18,6 +18,6 @@ sphinx_tabs==3.4.1
 sphinxcontrib-viewsource==0.1.4
 sphinxcontrib.mermaid==0.7.1
 sphinxcontrib.ghcontributors==0.2.3
-m2r2==0.3.2
+m2r2==0.3.3
 GitPython==3.1.28
 mistune==2.0.4
