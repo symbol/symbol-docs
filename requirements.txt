@@ -6,7 +6,7 @@ Jinja2==3.1.2
 MarkupSafe==2.1.1
 PyGithub==1.56
 Pygments==2.13.0
-pytz==2022.5
+pytz==2022.6
 six==1.16.0
 snowballstemmer==2.2.0
 docutils==0.19
