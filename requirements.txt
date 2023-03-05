@@ -1,6 +1,6 @@
 ablog==0.10.33.post1
 alabaster==0.7.13
-Babel==2.11.0
+Babel==2.12.1
 imagesize==1.4.1
 Jinja2==3.1.2
 MarkupSafe==2.1.2
