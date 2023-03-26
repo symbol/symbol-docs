@@ -182,7 +182,7 @@ Deadlines are given in **milliseconds since the creation of the nemesis block**.
 
 The moment when the :ref:`nemesis block <block-creation>` was created can be found in the ``network.epochAdjustment`` property of the `/network/properties <https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getNetworkProperties>`__ endpoint. This is the **number of seconds** elapsed since the `UNIX epoch <https://en.wikipedia.org/wiki/Unix_time>`__ and **it is always 1615853185 for MAINNET**.
 
-In other words, you need to substract the **epoch adjustment** from a Unix time to obtain a deadline. Therefore, a **deadline 2h into the future**, which is the default deadline provided by the SDK, can be calculated as:
+In other words, you need to subtract the **epoch adjustment** from a Unix time to obtain a deadline. Therefore, a **deadline 2h into the future**, which is the default deadline provided by the SDK, can be calculated as:
 
 .. code-block:: typescript
 
