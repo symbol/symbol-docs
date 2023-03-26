@@ -11,4 +11,5 @@ Guides related to :doc:`account <../../concepts/account>` handling.
     getting-account-information
     getting-the-amount-of-assets-sent-to-an-account
     reading-transactions-from-an-account
+    how-to-use-ledger-hardware-wallet
     scams-and-security
