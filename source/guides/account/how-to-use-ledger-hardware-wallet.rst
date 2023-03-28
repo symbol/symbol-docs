@@ -295,3 +295,13 @@ Ledger device integration supports all features available via Symbol Wallet, e.g
 - Add metadata to account/mosaic/namespace
 
 - Add/Remove account restrictions
+
+***************
+Contact Support
+***************
+
+For technical support, you may reach us at:
+
+- Discord: https://discord.com/invite/xymcity
+
+- Telegram: @nemhelpdesk
