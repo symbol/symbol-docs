@@ -28,7 +28,7 @@ Prerequisites
   - `Ledger S device update <https://support.ledger.com/hc/en-us/articles/360002731113>`_
   - `Ledger X device update <https://support.ledger.com/hc/en-us/articles/360013349800>`_
 
-- `Ledger Live <https://www.ledger.com/ledger-live>`_ application is installed. Click `here <https://support.ledgerwallet.com/hc/en-us/articles/360006395233-Take-your-first-steps>`_ for instructions on how to get started.
+- `Ledger Live <https://www.ledger.com/ledger-live>`_ application is installed. Click `here <https://www.ledger.com/start-your-crypto-journey>`_ for instructions on how to get started.
 
 - `Symbol Wallet for Desktop <https://github.com/nemgrouplimited/symbol-desktop-wallet/releases/latest>`_ is installed.
 
