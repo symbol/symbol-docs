@@ -346,7 +346,7 @@ Glossary
       A type of transaction through which the recipient of a SecretLockTransaction provides proof and unlocks the mosaics. Read :ref:`secretlocktransaction`.
 
     Sharding
-      An Ethereum scaling solution. `Sharding <https://ethereum.org/en/eth2/shard-chains/>`__.
+      An Ethereum scaling solution. `Sharding <https://ethereum.org/en/developers/docs/scaling/#sharding>`__.
 
     Spam Throttle
       A feature which provides Symbol network protection against being spammed with lots of unconfirmed transactions.
