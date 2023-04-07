@@ -25,7 +25,7 @@ repositories {
 }
 
 ext {
-    junitVersion = "5.9.1"
+    junitVersion = "5.9.2"
 }
 
 dependencies {
@@ -33,7 +33,7 @@ dependencies {
     compile "io.nem:symbol-sdk-vertx-client:${project.version}"
 
     // Tests
-    testCompile 'org.slf4j:slf4j-simple:2.0.2'
+    testCompile 'org.slf4j:slf4j-simple:2.0.7'
     testCompile "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testCompile "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
