@@ -852,3 +852,9 @@ file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing-docs.po
 source_file = build/gettext/contribute/contributing-docs.pot
 source_lang = en
 type = PO
+
+[symboldocs.guides--account--scams-and-security]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/scams-and-security.po
+source_file = build/gettext/guides/account/scams-and-security.pot
+source_lang = en
+type = PO
