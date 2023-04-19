@@ -51,4 +51,4 @@ Furthermore, you will be testing manually if the SDK behaves correctly.
 
 3. Adapt every `TypeScript snippet <https://github.com/symbol/symbol-docs/tree/main/source/resources/examples/typescript>`__ using the new SDK.
 
-4. Push the changes and `create a pull request <https://services.github.com/on-demand/intro-to-github/es/crear-pull-request>`__.
+4. Push the changes and `create a pull request <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request>`__.

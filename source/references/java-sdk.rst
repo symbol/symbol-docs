@@ -2,9 +2,4 @@
 Java SDK Reference
 ##################
 
-********
-Versions
-********
-
-.. ghreference:: symbol/sdk-java
-    :folder: javadoc
+Java SDK is deprecated.  Latest release is `here </_static/retired/javadoc/1.0.1/index.html>`__.

@@ -201,7 +201,7 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 .. |catapult-schemas| raw:: html
 
-   <a href="https://github.com/symbol/catbuffer-schemas/tree/main/symbol/" target="_blank">Serialization schemas</a>
+   <a href="https://github.com/symbol/symbol/tree/main/catbuffer/schemas/symbol/" target="_blank">Serialization schemas</a>
 
 .. |stack-overflow| raw:: html
 
@@ -209,4 +209,4 @@ Then, the minimum number of cosignatories defined in the multisignature will hav
 
 .. |under-development| raw:: html
 
-   <a href="https://github.com/symbol/catapult-client/milestones/" target="_blank">under development</a>
+   <a href="https://github.com/symbol/symbol/milestones/" target="_blank">under development</a>

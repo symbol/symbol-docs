@@ -20,5 +20,3 @@ But the Symbol Documentation has not been written from scratch. It draws a lot f
 * `NEM NIS API Reference <https://nemproject.github.io/>`__
 * `NEM Knowledge base <https://nemproject.github.io/nem-docs>`__
 * `NEM Developer guide by rb2nem <https://rb2nem.github.io/nem-dev-guide>`__
-* `NEM Blog articles <https://nem.ghost.io/>`__
-* `NEM Medium articles <https://medium.com/nemofficial>`__

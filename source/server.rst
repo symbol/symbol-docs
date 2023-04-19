@@ -43,9 +43,9 @@ Instructions on how to launch a secure and production-ready private chain will b
 
 .. |catapult-client| raw:: html
 
-   <a href="https://github.com/symbol/catapult-client" target="_blank">catapult-client</a>
+   <a href="https://github.com/symbol/symbol/tree/dev/client/catapult" target="_blank">catapult-client</a>
 
 .. |instructions| raw:: html
 
-   <a href="https://github.com/symbol/catapult-client/blob/main/docs/README.md" target="_blank">instructions</a>
+   <a href="https://github.com/symbol/symbol/blob/main/client/catapult/docs/README.md" target="_blank">instructions</a>
 

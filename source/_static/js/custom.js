@@ -35,6 +35,7 @@ function highlightSidebarLinksOnScroll(){
 }
 
 $(document).ready(function () {
+    $('html').attr('data-theme','dark');
     addBlockCaptionInsideCodeExample();
     addTargetBlankAttributeToExternalLinks();
     highlightSidebarLinksOnScroll();

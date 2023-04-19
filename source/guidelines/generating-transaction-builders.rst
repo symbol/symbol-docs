@@ -8,7 +8,7 @@ Learn how to generate transaction builders for your target SDK language.
 Background
 **********
 
-The `catbuffer library <https://github.com/symbol/catbuffer-generators>`_ defines the protocol to serialize and deserialize |codename| entities.
+The `catbuffer library <https://github.com/symbol/symbol/tree/main/catbuffer>`_ defines the protocol to serialize and deserialize |codename| entities.
 The library comes with code generators for different languages.
 SDKs and applications use the generated code to interact with REST transaction endpoint.
 
@@ -37,7 +37,7 @@ These endpoints allow the addition of new functionality to the client-side witho
 Applications can embed the generated code without managing dependencies, which is particularly desirable in highly-secure environments.
 Besides, sharing a common codebase enables the addition of new features with less effort.
 
-The `schemas <https://github.com/symbol/catbuffer-schemas/tree/main/symbol>`_ define the entities' data structure.
+The `schemas <https://github.com/symbol/symbol/tree/main/catbuffer/schemas/symbol>`_ define the entities' data structure.
 The library generates the leanest code necessary to serialize and deserialize defined entities.
 
 ************
@@ -60,7 +60,7 @@ Installation
 
    .. code-block:: bash
 
-      git clone https://github.com/symbol/catbuffer-schemas
+      git clone https://github.com/symbol/symbol/tree/main/catbuffer/schemas
 
 *****
 Usage

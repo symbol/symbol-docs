@@ -64,11 +64,3 @@ msgstr ""
 msgid "`NEM Developer guide by rb2nem <https://rb2nem.github.io/nem-dev-guide>`__"
 msgstr ""
 
-#: ../../source/contribute/authors.rst:24
-msgid "`NEM Blog articles <https://nem.ghost.io/>`__"
-msgstr ""
-
-#: ../../source/contribute/authors.rst:25
-msgid "`NEM Medium articles <https://medium.com/nemofficial>`__"
-msgstr ""
-

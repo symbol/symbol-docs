@@ -25,7 +25,7 @@ We strive to be **truly excellent developers** here, so grit your teeth and spen
 
 .. caution::
 
-    The following commit message **format** and **content** are **mandatory**, and will be **enforced by server hooks** in the future (`symbol-infra/issues/17 <https://github.com/symbol/symbol-infra/issues/17>`__).
+    The following commit message **format** and **content** are **mandatory**, and will be **enforced by server hooks**.
 
 Commit Message Content
 **********************

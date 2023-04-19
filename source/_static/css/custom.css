@@ -825,18 +825,14 @@ div [role="tablist"] {
 }
 
 /* Search box */
-#search-box {
-    width: 300px;
+.search-box {
+    width: 250px;
     float: left;
     display: block;
-    margin: 20px;
+    margin: 40px;
 }
 
-#search-box .algolia-autocomplete {
-    width: 100%;
-}
-
-#search-box .algolia-autocomplete input, #search-box .search {
+.search-box .DocSearch-Button {
     width: 100%;
     padding: 5px 10px;
     font-size: 12px;
@@ -847,27 +843,12 @@ div [role="tablist"] {
     background-color: transparent;
 }
 
-#search-box .algolia-autocomplete input:focus {
-    transition: 0.4s ease;
+.DocSearch-Hit-content-wrapper {
+    overflow-y: hidden;
 }
 
-#search-box .algolia-autocomplete input:focus::-webkit-input-placeholder {
-    transition: opacity 0.4s ease;
-    opacity: 0;
-}
-
-#search-box .algolia-autocomplete input:focus::-moz-placeholder {
-    transition: opacity 0.4s ease;
-    opacity: 0;
-}
-
-#search-box .algolia-autocomplete .ds-dropdown-menu {
-    min-width: 100px;
-    width: 200%;
-}
-
-#search-box .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
-    border: none;
+.DocSearch-Modal {
+    margin-top: 140px !important;
 }
 
 /* Remove the style that ABlog hardcodes into the pages */
