@@ -104,7 +104,7 @@ Step 3: Launch the Symbol Wallet
   :class: with-shadow
   :target: /_images/ledger-guide-5.png
 
-5. To confirm profile creation accept the Terms and click the **Next** to continue. Note that all transactions must be confirmed via your Ledger device NOT with your password.
+6. To confirm profile creation accept the Terms and click the **Next** to continue. Note that all transactions must be confirmed via your Ledger device NOT with your password.
 
 .. figure:: ../../resources/images/screenshots/ledger-guide-6.png
   :align: center
@@ -216,13 +216,15 @@ How to send XYM
   :class: with-shadow
   :target: /_images/ledger-guide-16.png
 
-* Message
+* Message Type
 
 .. figure:: ../../resources/images/screenshots/ledger-guide-17.png
   :align: center
   :width: 100%
   :class: with-shadow
   :target: /_images/ledger-guide-17.png
+
+* Message Text
 
 .. figure:: ../../resources/images/screenshots/ledger-guide-18.png
   :align: center
