@@ -858,3 +858,58 @@ file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/scams-and-security
 source_file = build/gettext/guides/account/scams-and-security.pot
 source_lang = en
 type = PO
+
+[symboldocs._static--retired--symbol-cli--1_0_2]
+file_filter = source/locale/<lang>/LC_MESSAGES/_static/retired/symbol-cli/1.0.2.po
+source_file = build/gettext/_static/retired/symbol-cli/1.0.2.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--all-coding-guidelines]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/all-coding-guidelines.po
+source_file = build/gettext/handbook/all-coding-guidelines.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--contribution-guidelines]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/contribution-guidelines.po
+source_file = build/gettext/handbook/contribution-guidelines.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--doc-common-tasks]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-common-tasks.po
+source_file = build/gettext/handbook/doc-common-tasks.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--doc-repos]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-repos.po
+source_file = build/gettext/handbook/doc-repos.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--doc-sphinx-primer]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-sphinx-primer.po
+source_file = build/gettext/handbook/doc-sphinx-primer.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--doc-workflow]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-workflow.po
+source_file = build/gettext/handbook/doc-workflow.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--javascript-coding-guidelines]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/javascript-coding-guidelines.po
+source_file = build/gettext/handbook/javascript-coding-guidelines.pot
+source_lang = en
+type = PO
+
+[symboldocs.handbook--python-coding-guidelines]
+file_filter = source/locale/<lang>/LC_MESSAGES/handbook/python-coding-guidelines.po
+source_file = build/gettext/handbook/python-coding-guidelines.pot
+source_lang = en
+type = PO
+
