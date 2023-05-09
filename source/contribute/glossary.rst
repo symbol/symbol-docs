@@ -188,7 +188,7 @@ Glossary
       Intellectual Property.
 
     IRS
-      Internal Revenue Service. Who you pay your taxes to if you live in the US.
+      Internal Revenue Service. Who you pay your taxes to if you live in the US or are an American citizen.
 
     IVC
       Incrementally Verifiable Computations.

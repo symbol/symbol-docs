@@ -6,15 +6,15 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "js-sha3": "^0.8.0",
-    "merkletreejs": "^0.3.9",
+    "merkletreejs": "^0.3.10",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.7",
     "symbol-sdk": "1.0.0",
-    "typescript": "^5.0.3",
+    "typescript": "^5.0.4",
     "utf8": "^3.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
+    "@types/node": "^20.1.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",

@@ -29,3 +29,6 @@ These are the important concepts behind blockchain technology and the |codename|
     reward-programs
     transaction
     transfer-transaction
+
+
+Further technical detail on the |codename| platform can be found in the |techref|.

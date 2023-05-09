@@ -38,7 +38,7 @@ From within the ``_build`` directory you created in the previous section, run:
 
 .. code-block:: bash
 
-   ./bin/catapult.tools.addressgen --count 3 --network public
+   ./bin/catapult.tools.addressgen --count 3 --network mainnet
 
 This will output 3 :ref:`key pairs <keypair>` similar to this one:
 
