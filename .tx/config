@@ -913,3 +913,8 @@ source_file = build/gettext/handbook/python-coding-guidelines.pot
 source_lang = en
 type = PO
 
+[symboldocs.guides--account--how-to-use-ledger-hardware-wallet]
+file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/how-to-use-ledger-hardware-wallet.po
+source_file = build/gettext/guides/account/how-to-use-ledger-hardware-wallet.pot
+source_lang = en
+type = PO
