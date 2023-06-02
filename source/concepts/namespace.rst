@@ -73,7 +73,7 @@ On the internet, a domain can have a sub-domain.
     Organizing assets with namespaces
 
 In the :ref:`public network <config-network-properties>` namespaces can have up to **3** levels, i.e., a namespace and two levels of subnamespace domains.
-Each root namespace can have up to **256** subnamespaces.
+Each root namespace can have up to **100** subnamespaces.
 
 A subnamespace does not have a duration by its own; it inherits the duration from its parent namespace.
 

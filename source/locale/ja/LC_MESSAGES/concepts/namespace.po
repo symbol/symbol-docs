@@ -2,10 +2,10 @@
 # Copyright (C) 2018-present, NEM
 # This file is distributed under the same license as the symbol-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Yoshiyuki Ieyama <yukku0423+github@gmail.com>, 2021
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -178,10 +178,10 @@ msgstr "ネームスペースでアセットを整理する"
 msgid ""
 "In the :ref:`public network <config-network-properties>`, namespaces can "
 "have up to ``3`` levels—a namespace and its two levels of subnamespace "
-"domains. Each root namespace can have up to ``256`` subnamespaces."
+"domains. Each root namespace can have up to ``100`` subnamespaces."
 msgstr ""
 ":ref:`パブリックネットワーク <config-network-properties>` では、ネームスペースは ``3`` "
-"階層まで持つことができます—ネームスペースと2階層のサブネームスペースドメインです。各ルートネームスペースは ``256`` "
+"階層まで持つことができます—ネームスペースと2階層のサブネームスペースドメインです。各ルートネームスペースは ``100`` "
 "サブネームスペースまで持つことができます。"
 
 #: ../../source/concepts/namespace.rst:76
