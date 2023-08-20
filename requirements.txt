@@ -10,7 +10,7 @@ pytz==2023.3
 six==1.16.0
 snowballstemmer==2.2.0
 docutils==0.18
-Sphinx==7.1.2
+Sphinx==7.2.2
 sphinx-autobuild==2021.3.14
 sphinx_bootstrap_theme==0.8.1
 sphinx-intl==2.0.1
