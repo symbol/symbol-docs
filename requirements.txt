@@ -20,4 +20,4 @@ sphinxcontrib.mermaid==0.9.2
 sphinxcontrib.ghcontributors==0.2.3
 m2r2==0.3.3.post2
 GitPython==3.1.37
-mistune==3.0.1
+mistune==3.0.2
