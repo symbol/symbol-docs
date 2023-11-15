@@ -1,6 +1,6 @@
 # Symbol Documentation
 
-[![Build Status](https://travis-ci.com/symbol/symbol-docs.svg?branch=main)](https://travis-ci.com/symbol/symbol-docs)
+[![Build Status](https://jenkins.symboldev.com/job/Symbol/job/Docs/job/symbol-docs/job/main/badge/icon)](https://jenkins.symboldev.com/job/Symbol/job/Docs/job/symbol-docs/job/main/)
 
 Browse the documentation to start integrating blockchain technology into your project.
 

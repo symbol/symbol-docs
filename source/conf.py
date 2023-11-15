@@ -356,6 +356,7 @@ linkcheck_ignore = [
     r'https://www.researchgate.net/*', # 403 Client Error
     r'https://support.ledger.com/*', # 403 Client Error
     r'https://par.nsf.gov/*', # unsafe legacy renegotiation disabled
+    r'https://github.com/*', #  Anchor not found
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 

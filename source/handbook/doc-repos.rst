@@ -71,7 +71,9 @@ This generates all HTML files in the ``build/html`` folder, including all assets
 Deployment
 ----------
 
-The GitHub repository is linked to `Travis <https://travis-ci.com/github/symbol/symbol-docs>`__, so on every push to the ``main`` branch a full build is triggered (See ``.travis.yml`` and the ``travis`` folder for details). This involves several steps besides the generation of the output documentation:
+The GitHub repository is linked to `Jenkins <https://jenkins.symboldev.com/job/Symbol/job/Docs/job/symbol-docs>`__, so on every push to the
+``main`` branch a full build is triggered (See ``Jenkinsfile``). This involves several steps besides
+the generation of the output documentation:
 
 - **Source snippets validation**: The guides include lots of source code examples which are actually snippets from complete programs. These programs must **compile** and pass **lint checks** at all times and Travis makes sure of this. Right now only the TypeScript programs are checked.
 - **Link checking**: All pages are examined to find broken links using ``make linkcheck``.

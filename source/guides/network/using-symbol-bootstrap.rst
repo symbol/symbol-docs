@@ -262,7 +262,7 @@ You need to own the domain ``awesomenode.mycompany.net`` and it needs to resolve
 
 .. note::
 
-   This option has been heavily inspired by `this great blog <https://nemlog.nem.social/blog/58808>`__. Symbol Bootstrap simply bundles this solution, streamlining the process.
+   This option has been heavily inspired by the community and Symbol Bootstrap simply bundles this solution, streamlining the process.
 
 **********
 Next steps
