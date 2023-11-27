@@ -28,6 +28,7 @@ Preface
         Português <pt/vision>
         Русский <ru/vision>
         中文 <zh/vision>
+        한국어 <ko/vision>
 
 Before we begin, it’s important to define an anchor. While a purpose or a mission can change with the captain or the tides, an anchor is what keeps us grounded. In times of turmoil, frustration, or uncertainty one can always return to their anchor to realign them as to why they’re here.
 
