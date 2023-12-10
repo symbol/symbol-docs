@@ -22,7 +22,7 @@
     "eslint-plugin-prettier": "^3.4.1",
     "prettier": "^3.1.1",
     "prettier-plugin-organize-imports": "^3.2.4",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.2"
   },
   "scripts": {
     "prettier": "prettier --write .",
