@@ -15,6 +15,8 @@ import datetime
 from sphinx import errors
 from github import Github
 
+from sys import version_info
+print(version_info)
 # Gets the datestamp of the latest commit on the given file
 # Converts the datestamp into something more readable
 # Skips files whose datestamp we can't parse.
@@ -28,6 +30,7 @@ class GHCachedUser:
     def __init__(self, name):
         self.name = name
         self.login = None
+        self.commits = None
         self.avatar_url = "/_static/images/user-placeholder.png"
 
 def page_context_handler(app, pagename, templatename, context, doctree):
@@ -44,6 +47,18 @@ def page_context_handler(app, pagename, templatename, context, doctree):
 
     try:
         commits = g.iter_commits('--all', max_count=1, paths="%s.rst" % fullpagename)
+        # Splits on newline to get the first (highest commits) contributor, then handles whitespace, then gets info
+        try:
+            most_commits, _most_user = g.git.shortlog('-sne', '--', ("%s.rst" % fullpagename)).split('\n')[0].strip().split('\t')
+
+        # Parses all of 'first_name last_name <email>', 'first_name middle_name last_name <email>', and 'name <email>' correctly
+            most_user_name = ' '.join(_most_user.split(' ')[:-1])
+            most_user_email = _most_user.split(' ')[-1][1:-1]
+        except ValueError:
+            most_user_email = ''
+            most_user_name = ''
+            most_commits = ''
+    
         if not commits:
             # Don't datestamp generated rst's (e.g. imapd.conf.rst)
             # Ideally want to check their source - lib/imapoptions, etc, but
@@ -53,31 +68,49 @@ def page_context_handler(app, pagename, templatename, context, doctree):
         commit = next(iter(commits))
         context['gitstamp'] = datetime.datetime.fromtimestamp(commit.authored_date).strftime("%Y&#8209;%m&#8209;%d")
 
-        user = GHCachedUser(commit.author.name)
+        last_user = GHCachedUser(commit.author.name)
+        main_user = GHCachedUser(most_user_name)
+        main_user.commits = most_commits
         if 'gh' in globals():
             # Look in cache first to avoid spamming GitHub
             if commit.author.email in gh_user_cache:
-                user = gh_user_cache[commit.author.email]
+                last_user = gh_user_cache[commit.author.email]
             else:
                 # Search GitHub and retrieve first user with matching email (if any)
                 gh_users = gh.search_users(commit.author.email)
                 if gh_users.totalCount:
                     gh_user = next(iter(gh_users))
-                    user.name = gh_user.name
-                    user.login = gh_user.login
-                    user.avatar_url = gh_user.avatar_url
+                    last_user.name = gh_user.name
+                    last_user.login = gh_user.login
+                    last_user.avatar_url = gh_user.avatar_url
                 else:
                     # Try searching the commit hash instead
                     gh_commit = gh_repo.get_commit(commit.hexsha)
                     if gh_commit:
-                        user.name = gh_commit.author.name
-                        user.login = gh_commit.author.login
-                        user.avatar_url = gh_commit.author.avatar_url
+                        last_user.name = gh_commit.author.name
+                        last_user.login = gh_commit.author.login
+                        last_user.avatar_url = gh_commit.author.avatar_url
 
-                gh_user_cache[commit.author.email] = user
-        context['gitauthor'] = user.name
-        context['gitlogin'] = user.login
-        context['gitavatar'] = user.avatar_url
+                gh_user_cache[commit.author.email] = last_user
+            # Repeat above for main_user
+            if most_user_email in gh_user_cache:
+                main_user = gh_user_cache[most_user_email]
+            else:
+                gh_users = gh.search_users(most_user_email)
+                if gh_users.totalCount:
+                    gh_user = next(iter(gh_users))
+                    main_user.name = gh_user.name
+                    main_user.login = gh_user.login
+                    main_user.avatar_url = gh_user.avatar_url
+
+        context['gitLastAuthor'] = last_user.name
+        context['gitLastLogin'] = last_user.login
+        context['gitLastAvatar'] = last_user.avatar_url
+        context['gitMainAuthor'] = main_user.name
+        context['gitMainLogin'] = main_user.login
+        context['gitMainAvatar'] = main_user.avatar_url
+        context['gitMainCommits'] = main_user.commits
+
 
     except git.exc.GitCommandError:
         # File doesn't exist or something else went wrong.

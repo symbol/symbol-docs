@@ -1,13 +1,23 @@
 <div class="feedback-footer row hidden-sm hidden-xs">
     <div class="col-xs-4">
     {% if edit_on_github_url %}
-        {%- if gitauthor -%}<p class="git-info" style="text-align: right;">
-            {%- if gitavatar -%}<img src="{{ gitavatar }}" class="git-info-image">{%- endif -%}
+        {%- if gitLastAuthor -%}<p class="git-info" style="text-align: right;">
+            {%- if gitLastAvatar -%}<img src="{{ gitLastAvatar }}" class="git-info-image">{%- endif -%}
             Last updated by
-            {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}" target="_blank" rel="noopener noreferrer">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
+            {%- if gitLastLogin %} <a href="https://github.com/{{ gitLastLogin }}" target="_blank" rel="noopener noreferrer">{{ gitLastAuthor }}</a>{% else %} {{ gitLastAuthor }}{%- endif %}
             on {{ gitstamp }}.</p>
         {%- endif %}
     {% endif %}
+    </div>
+    <div class="col-xs-4">
+        {% if edit_on_github_url %}
+            {%- if gitMainAuthor -%}<p class="git-info" style="text-align: right;">
+                {%- if gitMainAvatar -%}<img src="{{ gitMainAvatar }}" class="git-info-image">{%- endif -%}
+                Main contributor
+                {%- if gitMainLogin %} <a href="https://github.com/{{ gitMainLogin }}" target="_blank" rel="noopener noreferrer">{{ gitMainAuthor }}</a>{% else %} {{ gitMainAuthor }}{%- endif %}
+                with {{ gitMainCommits }} commit(s).</p>
+            {%- endif %}
+        {% endif %}
     </div>
     <div class="col-xs-5 feedback-center">
         <p>
@@ -22,12 +32,18 @@
 </div>
 <div class="feedback-footer hidden-lg hidden-md feedback-center">
     {% if edit_on_github_url %}
-        {%- if gitauthor -%}<p class="git-info">
-            {%- if gitavatar -%}<img src="{{ gitavatar }}" class="git-info-image" width="32" height="32">{%- endif -%}
+        {%- if gitLastAuthor -%}<p class="git-info">
+            {%- if gitLastAvatar -%}<img src="{{ gitLastAvatar }}" class="git-info-image" width="32" height="32">{%- endif -%}
             Last updated by
-            {%- if gitlogin %} <a href="https://github.com/{{ gitlogin }}" target="_blank" rel="noopener noreferrer">{{ gitauthor }}</a>{% else %} {{ gitauthor }}{%- endif %}
+            {%- if gitLastLogin %} <a href="https://github.com/{{ gitLastLogin }}" target="_blank" rel="noopener noreferrer">{{ gitLastAuthor }}</a>{% else %} {{ gitLastAuthor }}{%- endif %}
             on {{ gitstamp }}.</p>
         {%- endif %}
+        {%- if gitMainAuthor -%}<p class="git-info">
+            {%- if gitMainAvatar -%}<img src="{{ gitMainAvatar }}" class="git-info-image" width="32" height="32">{%- endif -%}
+            Main contributor
+            {%- if gitMainLogin %} <a href="https://github.com/{{ gitMainLogin }}" target="_blank" rel="noopener noreferrer">{{ gitMainAuthor }}</a>{% else %} {{ gitMainAuthor }}{%- endif %}
+            with {{ gitMainCommits }} commit(s).</p>
+        {%- endif %} 
     {% endif %}
     <p>
         {% trans %}Did you find what you were looking for?{% endtrans %}
