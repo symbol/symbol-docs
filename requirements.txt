@@ -11,7 +11,7 @@ six==1.16.0
 snowballstemmer==2.2.0
 docutils==0.21.1
 Sphinx==7.2.6
-sphinx-autobuild==2024.2.4
+sphinx-autobuild==2024.4.13
 sphinx_bootstrap_theme==0.8.1
 sphinx-intl==2.0.1
 sphinx_tabs==3.4.1
