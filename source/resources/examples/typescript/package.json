@@ -6,7 +6,7 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "js-sha3": "^0.9.3",
-    "merkletreejs": "^0.3.11",
+    "merkletreejs": "^0.4.0",
     "rxjs": "^7.8.1",
     "rxjs-compat": "^6.6.7",
     "symbol-sdk": "3.2.2",
