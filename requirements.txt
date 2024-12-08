@@ -7,7 +7,7 @@ MarkupSafe==3.0.2
 PyGithub==2.5.0
 Pygments==2.18.0
 pytz==2024.2
-six==1.16.0
+six==1.17.0
 snowballstemmer==2.2.0
 docutils==0.21.2
 Sphinx==8.1.3
