@@ -1,920 +1,1227 @@
 [main]
 host = https://www.transifex.com
 
-[symboldocs.index]
-file_filter = source/locale/<lang>/LC_MESSAGES/index.po
-source_file = build/gettext/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.api]
-file_filter = source/locale/<lang>/LC_MESSAGES/api.po
-source_file = build/gettext/api.pot
-source_lang = en
-type = PO
-
-[symboldocs.cli]
-file_filter = source/locale/<lang>/LC_MESSAGES/cli.po
-source_file = build/gettext/cli.pot
-source_lang = en
-type = PO
-
-[symboldocs.compatibility]
-file_filter = source/locale/<lang>/LC_MESSAGES/compatibility.po
-source_file = build/gettext/compatibility.pot
-source_lang = en
-type = PO
-
-[symboldocs.sdk]
-file_filter = source/locale/<lang>/LC_MESSAGES/sdk.po
-source_file = build/gettext/sdk.pot
-source_lang = en
-type = PO
-
-[symboldocs.server]
-file_filter = source/locale/<lang>/LC_MESSAGES/server.po
-source_file = build/gettext/server.pot
-source_lang = en
-type = PO
-
-[symboldocs.wallets]
-file_filter = source/locale/<lang>/LC_MESSAGES/wallets.po
-source_file = build/gettext/wallets.pot
-source_lang = en
-type = PO
-
-[symboldocs.sphinx]
-file_filter = source/locale/<lang>/LC_MESSAGES/sphinx.po
-source_file = build/gettext/sphinx.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--account]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account.po
-source_file = build/gettext/concepts/account.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--aggregate-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/aggregate-transaction.po
-source_file = build/gettext/concepts/aggregate-transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--block]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/block.po
-source_file = build/gettext/concepts/block.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--consensus-algorithm]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/consensus-algorithm.po
-source_file = build/gettext/concepts/consensus-algorithm.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--cross-chain-swaps]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cross-chain-swaps.po
-source_file = build/gettext/concepts/cross-chain-swaps.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--cryptography]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/cryptography.po
-source_file = build/gettext/concepts/cryptography.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--data-validation]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/data-validation.po
-source_file = build/gettext/concepts/data-validation.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--fees]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
-source_file = build/gettext/concepts/fees.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--harvesting]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/harvesting.po
-source_file = build/gettext/concepts/harvesting.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--inflation]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/inflation.po
-source_file = build/gettext/concepts/inflation.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--metadata]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/metadata.po
-source_file = build/gettext/concepts/metadata.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--mosaic]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic.po
-source_file = build/gettext/concepts/mosaic.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--multisig-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/multisig-account.po
-source_file = build/gettext/concepts/multisig-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--namespace]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/namespace.po
-source_file = build/gettext/concepts/namespace.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--node]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/node.po
-source_file = build/gettext/concepts/node.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--overview]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/overview.po
-source_file = build/gettext/concepts/overview.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--plugin]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/plugin.po
-source_file = build/gettext/concepts/plugin.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--receipt]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
-source_file = build/gettext/concepts/receipt.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--reward-programs]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/reward-programs.po
-source_file = build/gettext/concepts/reward-programs.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transaction.po
-source_file = build/gettext/concepts/transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--account-restriction]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/account-restriction.po
-source_file = build/gettext/concepts/account-restriction.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--mosaic-restriction]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/mosaic-restriction.po
-source_file = build/gettext/concepts/mosaic-restriction.pot
-source_lang = en
-type = PO
-
-[symboldocs.concepts--transfer-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/concepts/transfer-transaction.po
-source_file = build/gettext/concepts/transfer-transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.contribute--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/index.po
-source_file = build/gettext/contribute/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.contribute--authors]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/authors.po
-source_file = build/gettext/contribute/authors.pot
-source_lang = en
-type = PO
-
-[symboldocs.contribute--contributing]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
-source_file = build/gettext/contribute/contributing.pot
-source_lang = en
-type = PO
-
-[symboldocs.contribute--glossary]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/glossary.po
-source_file = build/gettext/contribute/glossary.pot
-source_lang = en
-type = PO
-
-[symboldocs.getting-started--indexe]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/index.po
-source_file = build/gettext/getting-started/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.getting-started--first-application]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/first-application.po
-source_file = build/gettext/getting-started/first-application.pot
-source_lang = en
-type = PO
-
-[symboldocs.getting-started--setup-workstation]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/setup-workstation.po
-source_file = build/gettext/getting-started/setup-workstation.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--generating-transaction-builders]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
-source_file = build/gettext/guidelines/generating-transaction-builders.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--sdk-development]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-development.po
-source_file = build/gettext/guidelines/sdk-development.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--sdk-documentation]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-documentation.po
-source_file = build/gettext/guidelines/sdk-documentation.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--style-guide]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/style-guide.po
-source_file = build/gettext/guidelines/style-guide.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--suggesting-changes]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/suggesting-changes.po
-source_file = build/gettext/guidelines/suggesting-changes.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--translating-the-documentation]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/translating-the-documentation.po
-source_file = build/gettext/guidelines/translating-the-documentation.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--writing-a-guide]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-guide.po
-source_file = build/gettext/guidelines/writing-a-guide.pot
-source_lang = en
-type = PO
-
-[symboldocs.guidelines--writing-a-schema]
-file_filter = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-schema.po
-source_file = build/gettext/guidelines/writing-a-schema.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/index.po
-source_file = build/gettext/guides/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/index.po
-source_file = build/gettext/guides/account/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--getting-account-information]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-account-information.po
-source_file = build/gettext/guides/account/getting-account-information.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--getting-the-amount-of-assets-sent-to-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/getting-the-amount-of-assets-sent-to-an-account.po
-source_file = build/gettext/guides/account/getting-the-amount-of-assets-sent-to-an-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--creating-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/creating-an-account.po
-source_file = build/gettext/guides/account/creating-an-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--reading-transactions-from-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/reading-transactions-from-an-account.po
-source_file = build/gettext/guides/account/reading-transactions-from-an-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/index.po
-source_file = build/gettext/guides/aggregate/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--adding-cosginatures-aggregate-complete]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/adding-cosginatures-aggregate-complete.po
-source_file = build/gettext/guides/aggregate/adding-cosginatures-aggregate-complete.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--creating-an-escrow-contract-with-aggregate-bonded-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.po
-source_file = build/gettext/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--sending-a-multisig-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/sending-a-multisig-transaction.po
-source_file = build/gettext/guides/aggregate/sending-a-multisig-transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--sending-multiple-transactions-together-with-aggregate-complete-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.po
-source_file = build/gettext/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--signing-announced-aggregate-bonded-transactions-automatically]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.po
-source_file = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--aggregate--signing-announced-aggregate-bonded-transactions]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/aggregate/signing-announced-aggregate-bonded-transactions.po
-source_file = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-transactions.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--blockchain--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/index.po
-source_file = build/gettext/guides/blockchain/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
-source_file = build/gettext/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--blockchain--getting-block-by-height]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-block-by-height.po
-source_file = build/gettext/guides/blockchain/getting-block-by-height.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--blockchain--listening-new-blocks]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/listening-new-blocks.po
-source_file = build/gettext/guides/blockchain/listening-new-blocks.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--harvesting--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/index.po
-source_file = build/gettext/guides/harvesting/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--harvesting--activating-remote-harvesting]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-remote-harvesting.po
-source_file = build/gettext/guides/harvesting/activating-remote-harvesting.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--harvesting--activating-delegated-harvesting-manual]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting-manual.po
-source_file = build/gettext/guides/harvesting/activating-delegated-harvesting-manual.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--harvesting--activating-delegated-harvesting-wallet]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting-wallet.po
-source_file = build/gettext/guides/harvesting/activating-delegated-harvesting-wallet.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/index.po
-source_file = build/gettext/guides/metadata/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--assigning-metadata-entries-to-a-mosaic]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
-source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-mosaic.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--assigning-metadata-entries-to-a-namespace]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-namespace.po
-source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-a-namespace.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--assigning-metadata-entries-to-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-an-account.po
-source_file = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--getting-metadata-entries-attached-to-a-mosaic]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.po
-source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--getting-metadata-entries-attached-to-a-namespace]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-namespace.po
-source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-namespace.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--getting-metadata-entries-attached-to-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-an-account.po
-source_file = build/gettext/guides/metadata/getting-metadata-entries-attached-to-an-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--metadata--updating-metadata-entries]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/metadata/updating-metadata-entries.po
-source_file = build/gettext/guides/metadata/updating-metadata-entries.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--migration--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/index.po
-source_file = build/gettext/guides/migration/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--migration--migrating-from-nem-to-symbol]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nem-to-symbol.po
-source_file = build/gettext/guides/migration/migrating-from-nem-to-symbol.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--migration--post-optin-xym-retrieval]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/post-optin-xym-retrieval.po
-source_file = build/gettext/guides/migration/post-optin-xym-retrieval.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--monitor--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/index.po
-source_file = build/gettext/guides/monitor/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--monitor--turning-the-asynchronous-transaction-announcement-into-synchronous]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.po
-source_file = build/gettext/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--mosaic--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/index.po
-source_file = build/gettext/guides/mosaic/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--mosaic--creating-a-mosaic]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/creating-a-mosaic.po
-source_file = build/gettext/guides/mosaic/creating-a-mosaic.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--mosaic--getting-mosaic-information]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/getting-mosaic-information.po
-source_file = build/gettext/guides/mosaic/getting-mosaic-information.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--mosaic--modifying-mosaic-supply]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/mosaic/modifying-mosaic-supply.po
-source_file = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--multisig--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/index.po
-source_file = build/gettext/guides/multisig/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--multisig--adding-a-new-signer-to-a-multisig-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/adding-a-new-signer-to-a-multisig-account.po
-source_file = build/gettext/guides/multisig/adding-a-new-signer-to-a-multisig-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--multisig--creating-a-multisig-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/creating-a-multisig-account.po
-source_file = build/gettext/guides/multisig/creating-a-multisig-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--multisig--creating-a-multi-level-multisig-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/creating-a-multi-level-multisig-account.po
-source_file = build/gettext/guides/multisig/creating-a-multi-level-multisig-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--multisig--modifying-a-multisig-account-min-approval]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/modifying-a-multisig-account-min-approval.po
-source_file = build/gettext/guides/multisig/modifying-a-multisig-account-min-approval.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--multisig--removing-a-signer-from-a-multisig-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/multisig/removing-a-signer-from-a-multisig-account.po
-source_file = build/gettext/guides/multisig/removing-a-signer-from-a-multisig-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/index.po
-source_file = build/gettext/guides/namespace/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--registering-a-namespace]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-namespace.po
-source_file = build/gettext/guides/namespace/registering-a-namespace.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--registering-a-subnamespace]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-subnamespace.po
-source_file = build/gettext/guides/namespace/registering-a-subnamespace.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--extending-a-namespace-registration-period]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/extending-a-namespace-registration-period.po
-source_file = build/gettext/guides/namespace/extending-a-namespace-registration-period.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--getting-namespace-information]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/getting-namespace-information.po
-source_file = build/gettext/guides/namespace/getting-namespace-information.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--link-a-namespace-to-a-mosaic]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-a-mosaic.po
-source_file = build/gettext/guides/namespace/link-a-namespace-to-a-mosaic.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--namespace--link-a-namespace-to-an-address]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-an-address.po
-source_file = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/index.po
-source_file = build/gettext/guides/network/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--using-symbol-bootstrap]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/using-symbol-bootstrap.po
-source_file = build/gettext/guides/network/using-symbol-bootstrap.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--configuring-network-properties]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-network-properties.po
-source_file = build/gettext/guides/network/configuring-network-properties.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--configuring-node-properties]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-node-properties.po
-source_file = build/gettext/guides/network/configuring-node-properties.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--connecting-to-mongodb]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/connecting-to-mongodb.po
-source_file = build/gettext/guides/network/connecting-to-mongodb.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--creating-a-private-test-net]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/creating-a-private-test-net.po
-source_file = build/gettext/guides/network/creating-a-private-test-net.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--running-a-symbol-node]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-symbol-node.po
-source_file = build/gettext/guides/network/running-a-symbol-node.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--running-a-symbol-node-manually]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-symbol-node-manually.po
-source_file = build/gettext/guides/network/running-a-symbol-node-manually.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--running-a-secure-symbol-node]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-secure-symbol-node.po
-source_file = build/gettext/guides/network/running-a-secure-symbol-node.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--non-custodial-node-setup]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/non-custodial-node-setup.po
-source_file = build/gettext/guides/network/non-custodial-node-setup.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--network--maintaining-a-symbol-node]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/network/maintaining-a-symbol-node.po
-source_file = build/gettext/guides/network/maintaining-a-symbol-node.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/index.po
-source_file = build/gettext/guides/restriction/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--preventing-spam-attacks-with-account-restrictions]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
-source_file = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--getting-account-restrictions-attached-to-an-address]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-account-restrictions-attached-to-an-address.po
-source_file = build/gettext/guides/restriction/getting-account-restrictions-attached-to-an-address.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--delegating-mosaic-restrictions-to-a-third-party]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.po
-source_file = build/gettext/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--restricting-mosaics-transfers]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/restricting-mosaics-transfers.po
-source_file = build/gettext/guides/restriction/restricting-mosaics-transfers.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--secretlock--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/secretlock/index.po
-source_file = build/gettext/guides/secretlock/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--secretlock--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.po
-source_file = build/gettext/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--transfer--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/index.po
-source_file = build/gettext/guides/transfer/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--transfer--sending-a-transfer-transaction]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-a-transfer-transaction.po
-source_file = build/gettext/guides/transfer/sending-a-transfer-transaction.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--transfer--sending-an-encrypted-message]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-an-encrypted-message.po
-source_file = build/gettext/guides/transfer/sending-an-encrypted-message.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--getting-mosaic-global-restrictions-attached-to-a-mosaic]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.po
-source_file = build/gettext/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.po
-source_file = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--exchanges--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/exchanges/index.po
-source_file = build/gettext/guides/exchanges/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--exchanges--exchange-integration]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/exchanges/exchange-integration.po
-source_file = build/gettext/guides/exchanges/exchange-integration.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--exchanges--exchange-REST-troubleshooting]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/exchanges/exchange-REST-troubleshooting.po
-source_file = build/gettext/guides/exchanges/exchange-REST-troubleshooting.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/index.po
-source_file = build/gettext/references/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--overview]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/overview.po
-source_file = build/gettext/references/overview.pot
-source_lang = en
-type = PO
-
-[symboldocs.serialization--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/serialization/index.po
-source_file = build/gettext/serialization/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--typescript-sdk]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/typescript-sdk.po
-source_file = build/gettext/references/typescript-sdk.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--symbol-uri-scheme]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/symbol-uri-scheme.po
-source_file = build/gettext/references/symbol-uri-scheme.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--symbol-hd-wallets]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/symbol-hd-wallets.po
-source_file = build/gettext/references/symbol-hd-wallets.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--symbol-qr-library]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/symbol-qr-library.po
-source_file = build/gettext/references/symbol-qr-library.pot
-source_lang = en
-type = PO
-
-[symboldocs.references--java-sdk]
-file_filter = source/locale/<lang>/LC_MESSAGES/references/java-sdk.po
-source_file = build/gettext/references/java-sdk.pot
-source_lang = en
-type = PO
-
-[symboldocs.getting-started--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/getting-started/index.po
-source_file = build/gettext/getting-started/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/index.po
-source_file = build/gettext/guides/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--index]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/index.po
-source_file = build/gettext/handbook/index.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--commit-discipline]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/commit-discipline.po
-source_file = build/gettext/handbook/commit-discipline.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--directory]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/directory.po
-source_file = build/gettext/handbook/directory.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--documenting]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/documenting.po
-source_file = build/gettext/handbook/documenting.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--git-branching]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/git-branching.po
-source_file = build/gettext/handbook/git-branching.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--cpp-coding-guidelines]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/cpp-coding-guidelines.po
-source_file = build/gettext/handbook/cpp-coding-guidelines.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--blockchain--global-mosaic-supply]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/blockchain/global-mosaic-supply.po
-source_file = build/gettext/guides/blockchain/global-mosaic-supply.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--migration--post-launch-optin-xym-retrieval]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/migration/post-launch-optin-xym-retrieval.po
-source_file = build/gettext/guides/migration/post-launch-optin-xym-retrieval.pot
-source_lang = en
-type = PO
-
-[symboldocs.contribute--contributing-docs]
-file_filter = source/locale/<lang>/LC_MESSAGES/contribute/contributing-docs.po
-source_file = build/gettext/contribute/contributing-docs.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--scams-and-security]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/scams-and-security.po
-source_file = build/gettext/guides/account/scams-and-security.pot
-source_lang = en
-type = PO
-
-[symboldocs._static--retired--symbol-cli--1_0_2]
-file_filter = source/locale/<lang>/LC_MESSAGES/_static/retired/symbol-cli/1.0.2.po
-source_file = build/gettext/_static/retired/symbol-cli/1.0.2.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--all-coding-guidelines]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/all-coding-guidelines.po
-source_file = build/gettext/handbook/all-coding-guidelines.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--contribution-guidelines]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/contribution-guidelines.po
-source_file = build/gettext/handbook/contribution-guidelines.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--doc-common-tasks]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-common-tasks.po
-source_file = build/gettext/handbook/doc-common-tasks.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--doc-repos]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-repos.po
-source_file = build/gettext/handbook/doc-repos.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--doc-sphinx-primer]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-sphinx-primer.po
-source_file = build/gettext/handbook/doc-sphinx-primer.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--doc-workflow]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/doc-workflow.po
-source_file = build/gettext/handbook/doc-workflow.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--javascript-coding-guidelines]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/javascript-coding-guidelines.po
-source_file = build/gettext/handbook/javascript-coding-guidelines.pot
-source_lang = en
-type = PO
-
-[symboldocs.handbook--python-coding-guidelines]
-file_filter = source/locale/<lang>/LC_MESSAGES/handbook/python-coding-guidelines.po
-source_file = build/gettext/handbook/python-coding-guidelines.pot
-source_lang = en
-type = PO
-
-[symboldocs.guides--account--how-to-use-ledger-hardware-wallet]
-file_filter = source/locale/<lang>/LC_MESSAGES/guides/account/how-to-use-ledger-hardware-wallet.po
-source_file = build/gettext/guides/account/how-to-use-ledger-hardware-wallet.pot
-source_lang = en
-type = PO
+[o:nemtech:p:symboldocs:r:_static--retired--symbol-cli--1_0_2]
+file_filter            = source/locale/<lang>/LC_MESSAGES/_static/retired/symbol-cli/1.0.2.po
+source_file            = build/gettext/_static/retired/symbol-cli/1.0.2.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:api]
+file_filter            = source/locale/<lang>/LC_MESSAGES/api.po
+source_file            = build/gettext/api.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:cli]
+file_filter            = source/locale/<lang>/LC_MESSAGES/cli.po
+source_file            = build/gettext/cli.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:compatibility]
+file_filter            = source/locale/<lang>/LC_MESSAGES/compatibility.po
+source_file            = build/gettext/compatibility.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/account.po
+source_file            = build/gettext/concepts/account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--account-restriction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/account-restriction.po
+source_file            = build/gettext/concepts/account-restriction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--aggregate-transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/aggregate-transaction.po
+source_file            = build/gettext/concepts/aggregate-transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--block]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/block.po
+source_file            = build/gettext/concepts/block.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--consensus-algorithm]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/consensus-algorithm.po
+source_file            = build/gettext/concepts/consensus-algorithm.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--cross-chain-swaps]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/cross-chain-swaps.po
+source_file            = build/gettext/concepts/cross-chain-swaps.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--cryptography]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/cryptography.po
+source_file            = build/gettext/concepts/cryptography.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--data-validation]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/data-validation.po
+source_file            = build/gettext/concepts/data-validation.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--fees]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/fees.po
+source_file            = build/gettext/concepts/fees.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--harvesting]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/harvesting.po
+source_file            = build/gettext/concepts/harvesting.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--inflation]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/inflation.po
+source_file            = build/gettext/concepts/inflation.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--metadata]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/metadata.po
+source_file            = build/gettext/concepts/metadata.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--mosaic]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/mosaic.po
+source_file            = build/gettext/concepts/mosaic.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--mosaic-restriction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/mosaic-restriction.po
+source_file            = build/gettext/concepts/mosaic-restriction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--multisig-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/multisig-account.po
+source_file            = build/gettext/concepts/multisig-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--namespace]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/namespace.po
+source_file            = build/gettext/concepts/namespace.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--node]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/node.po
+source_file            = build/gettext/concepts/node.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--overview]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/overview.po
+source_file            = build/gettext/concepts/overview.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--plugin]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/plugin.po
+source_file            = build/gettext/concepts/plugin.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--receipt]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/receipt.po
+source_file            = build/gettext/concepts/receipt.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--reward-programs]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/reward-programs.po
+source_file            = build/gettext/concepts/reward-programs.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/transaction.po
+source_file            = build/gettext/concepts/transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:concepts--transfer-transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/concepts/transfer-transaction.po
+source_file            = build/gettext/concepts/transfer-transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:contribute--authors]
+file_filter            = source/locale/<lang>/LC_MESSAGES/contribute/authors.po
+source_file            = build/gettext/contribute/authors.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:contribute--contributing]
+file_filter            = source/locale/<lang>/LC_MESSAGES/contribute/contributing.po
+source_file            = build/gettext/contribute/contributing.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:contribute--contributing-docs]
+file_filter            = source/locale/<lang>/LC_MESSAGES/contribute/contributing-docs.po
+source_file            = build/gettext/contribute/contributing-docs.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:contribute--glossary]
+file_filter            = source/locale/<lang>/LC_MESSAGES/contribute/glossary.po
+source_file            = build/gettext/contribute/glossary.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:contribute--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/contribute/index.po
+source_file            = build/gettext/contribute/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:getting-started--first-application]
+file_filter            = source/locale/<lang>/LC_MESSAGES/getting-started/first-application.po
+source_file            = build/gettext/getting-started/first-application.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:getting-started--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/getting-started/index.po
+source_file            = build/gettext/getting-started/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:getting-started--indexe]
+file_filter            = source/locale/<lang>/LC_MESSAGES/getting-started/index.po
+source_file            = build/gettext/getting-started/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:getting-started--setup-workstation]
+file_filter            = source/locale/<lang>/LC_MESSAGES/getting-started/setup-workstation.po
+source_file            = build/gettext/getting-started/setup-workstation.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--generating-transaction-builders]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/generating-transaction-builders.po
+source_file            = build/gettext/guidelines/generating-transaction-builders.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--sdk-development]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-development.po
+source_file            = build/gettext/guidelines/sdk-development.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--sdk-documentation]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/sdk-documentation.po
+source_file            = build/gettext/guidelines/sdk-documentation.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--style-guide]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/style-guide.po
+source_file            = build/gettext/guidelines/style-guide.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--suggesting-changes]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/suggesting-changes.po
+source_file            = build/gettext/guidelines/suggesting-changes.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--translating-the-documentation]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/translating-the-documentation.po
+source_file            = build/gettext/guidelines/translating-the-documentation.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--writing-a-guide]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-guide.po
+source_file            = build/gettext/guidelines/writing-a-guide.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guidelines--writing-a-schema]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guidelines/writing-a-schema.po
+source_file            = build/gettext/guidelines/writing-a-schema.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/index.po
+source_file            = build/gettext/guides/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--creating-an-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/creating-an-account.po
+source_file            = build/gettext/guides/account/creating-an-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--getting-account-information]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/getting-account-information.po
+source_file            = build/gettext/guides/account/getting-account-information.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--getting-the-amount-of-assets-sent-to-an-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/getting-the-amount-of-assets-sent-to-an-account.po
+source_file            = build/gettext/guides/account/getting-the-amount-of-assets-sent-to-an-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--how-to-use-ledger-hardware-wallet]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/how-to-use-ledger-hardware-wallet.po
+source_file            = build/gettext/guides/account/how-to-use-ledger-hardware-wallet.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/index.po
+source_file            = build/gettext/guides/account/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--reading-transactions-from-an-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/reading-transactions-from-an-account.po
+source_file            = build/gettext/guides/account/reading-transactions-from-an-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--account--scams-and-security]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/account/scams-and-security.po
+source_file            = build/gettext/guides/account/scams-and-security.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--adding-cosginatures-aggregate-complete]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/adding-cosginatures-aggregate-complete.po
+source_file            = build/gettext/guides/aggregate/adding-cosginatures-aggregate-complete.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--creating-an-escrow-contract-with-aggregate-bonded-transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.po
+source_file            = build/gettext/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/index.po
+source_file            = build/gettext/guides/aggregate/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--sending-a-multisig-transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/sending-a-multisig-transaction.po
+source_file            = build/gettext/guides/aggregate/sending-a-multisig-transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--sending-multiple-transactions-together-with-aggregate-complete-transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.po
+source_file            = build/gettext/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--signing-announced-aggregate-bonded-transactions]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/signing-announced-aggregate-bonded-transactions.po
+source_file            = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-transactions.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--aggregate--signing-announced-aggregate-bonded-transactions-automatically]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.po
+source_file            = build/gettext/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--blockchain--getting-block-by-height]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-block-by-height.po
+source_file            = build/gettext/guides/blockchain/getting-block-by-height.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--blockchain--getting-the-mosaic-identifier-behind-a-namespace-with-receipts]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.po
+source_file            = build/gettext/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--blockchain--global-mosaic-supply]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/blockchain/global-mosaic-supply.po
+source_file            = build/gettext/guides/blockchain/global-mosaic-supply.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--blockchain--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/blockchain/index.po
+source_file            = build/gettext/guides/blockchain/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--blockchain--listening-new-blocks]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/blockchain/listening-new-blocks.po
+source_file            = build/gettext/guides/blockchain/listening-new-blocks.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--exchanges--exchange-REST-troubleshooting]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/exchanges/exchange-REST-troubleshooting.po
+source_file            = build/gettext/guides/exchanges/exchange-REST-troubleshooting.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--exchanges--exchange-integration]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/exchanges/exchange-integration.po
+source_file            = build/gettext/guides/exchanges/exchange-integration.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--exchanges--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/exchanges/index.po
+source_file            = build/gettext/guides/exchanges/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--harvesting--activating-delegated-harvesting-manual]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting-manual.po
+source_file            = build/gettext/guides/harvesting/activating-delegated-harvesting-manual.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--harvesting--activating-delegated-harvesting-wallet]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-delegated-harvesting-wallet.po
+source_file            = build/gettext/guides/harvesting/activating-delegated-harvesting-wallet.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--harvesting--activating-remote-harvesting]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/harvesting/activating-remote-harvesting.po
+source_file            = build/gettext/guides/harvesting/activating-remote-harvesting.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--harvesting--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/harvesting/index.po
+source_file            = build/gettext/guides/harvesting/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/index.po
+source_file            = build/gettext/guides/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--assigning-metadata-entries-to-a-mosaic]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-mosaic.po
+source_file            = build/gettext/guides/metadata/assigning-metadata-entries-to-a-mosaic.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--assigning-metadata-entries-to-a-namespace]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-a-namespace.po
+source_file            = build/gettext/guides/metadata/assigning-metadata-entries-to-a-namespace.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--assigning-metadata-entries-to-an-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/assigning-metadata-entries-to-an-account.po
+source_file            = build/gettext/guides/metadata/assigning-metadata-entries-to-an-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--getting-metadata-entries-attached-to-a-mosaic]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.po
+source_file            = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--getting-metadata-entries-attached-to-a-namespace]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-a-namespace.po
+source_file            = build/gettext/guides/metadata/getting-metadata-entries-attached-to-a-namespace.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--getting-metadata-entries-attached-to-an-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/getting-metadata-entries-attached-to-an-account.po
+source_file            = build/gettext/guides/metadata/getting-metadata-entries-attached-to-an-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/index.po
+source_file            = build/gettext/guides/metadata/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--metadata--updating-metadata-entries]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/metadata/updating-metadata-entries.po
+source_file            = build/gettext/guides/metadata/updating-metadata-entries.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--migration--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/migration/index.po
+source_file            = build/gettext/guides/migration/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--migration--migrating-from-nem-to-symbol]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/migration/migrating-from-nem-to-symbol.po
+source_file            = build/gettext/guides/migration/migrating-from-nem-to-symbol.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--migration--post-launch-optin-xym-retrieval]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/migration/post-launch-optin-xym-retrieval.po
+source_file            = build/gettext/guides/migration/post-launch-optin-xym-retrieval.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--migration--post-optin-xym-retrieval]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/migration/post-optin-xym-retrieval.po
+source_file            = build/gettext/guides/migration/post-optin-xym-retrieval.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--monitor--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/monitor/index.po
+source_file            = build/gettext/guides/monitor/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--monitor--turning-the-asynchronous-transaction-announcement-into-synchronous]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.po
+source_file            = build/gettext/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--mosaic--creating-a-mosaic]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/mosaic/creating-a-mosaic.po
+source_file            = build/gettext/guides/mosaic/creating-a-mosaic.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--mosaic--getting-mosaic-information]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/mosaic/getting-mosaic-information.po
+source_file            = build/gettext/guides/mosaic/getting-mosaic-information.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--mosaic--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/mosaic/index.po
+source_file            = build/gettext/guides/mosaic/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--mosaic--modifying-mosaic-supply]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/mosaic/modifying-mosaic-supply.po
+source_file            = build/gettext/guides/mosaic/modifying-mosaic-supply.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--multisig--adding-a-new-signer-to-a-multisig-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/multisig/adding-a-new-signer-to-a-multisig-account.po
+source_file            = build/gettext/guides/multisig/adding-a-new-signer-to-a-multisig-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--multisig--creating-a-multi-level-multisig-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/multisig/creating-a-multi-level-multisig-account.po
+source_file            = build/gettext/guides/multisig/creating-a-multi-level-multisig-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--multisig--creating-a-multisig-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/multisig/creating-a-multisig-account.po
+source_file            = build/gettext/guides/multisig/creating-a-multisig-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--multisig--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/multisig/index.po
+source_file            = build/gettext/guides/multisig/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--multisig--modifying-a-multisig-account-min-approval]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/multisig/modifying-a-multisig-account-min-approval.po
+source_file            = build/gettext/guides/multisig/modifying-a-multisig-account-min-approval.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--multisig--removing-a-signer-from-a-multisig-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/multisig/removing-a-signer-from-a-multisig-account.po
+source_file            = build/gettext/guides/multisig/removing-a-signer-from-a-multisig-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--extending-a-namespace-registration-period]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/extending-a-namespace-registration-period.po
+source_file            = build/gettext/guides/namespace/extending-a-namespace-registration-period.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--getting-namespace-information]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/getting-namespace-information.po
+source_file            = build/gettext/guides/namespace/getting-namespace-information.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/index.po
+source_file            = build/gettext/guides/namespace/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--link-a-namespace-to-a-mosaic]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-a-mosaic.po
+source_file            = build/gettext/guides/namespace/link-a-namespace-to-a-mosaic.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--link-a-namespace-to-an-address]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/link-a-namespace-to-an-address.po
+source_file            = build/gettext/guides/namespace/link-a-namespace-to-an-address.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--registering-a-namespace]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-namespace.po
+source_file            = build/gettext/guides/namespace/registering-a-namespace.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--namespace--registering-a-subnamespace]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/namespace/registering-a-subnamespace.po
+source_file            = build/gettext/guides/namespace/registering-a-subnamespace.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--configuring-network-properties]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-network-properties.po
+source_file            = build/gettext/guides/network/configuring-network-properties.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--configuring-node-properties]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/configuring-node-properties.po
+source_file            = build/gettext/guides/network/configuring-node-properties.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--connecting-to-mongodb]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/connecting-to-mongodb.po
+source_file            = build/gettext/guides/network/connecting-to-mongodb.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--creating-a-private-test-net]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/creating-a-private-test-net.po
+source_file            = build/gettext/guides/network/creating-a-private-test-net.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/index.po
+source_file            = build/gettext/guides/network/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--maintaining-a-symbol-node]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/maintaining-a-symbol-node.po
+source_file            = build/gettext/guides/network/maintaining-a-symbol-node.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--non-custodial-node-setup]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/non-custodial-node-setup.po
+source_file            = build/gettext/guides/network/non-custodial-node-setup.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--running-a-secure-symbol-node]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-secure-symbol-node.po
+source_file            = build/gettext/guides/network/running-a-secure-symbol-node.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--running-a-symbol-node]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-symbol-node.po
+source_file            = build/gettext/guides/network/running-a-symbol-node.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--running-a-symbol-node-manually]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/running-a-symbol-node-manually.po
+source_file            = build/gettext/guides/network/running-a-symbol-node-manually.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--network--using-symbol-bootstrap]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/network/using-symbol-bootstrap.po
+source_file            = build/gettext/guides/network/using-symbol-bootstrap.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--delegating-mosaic-restrictions-to-a-third-party]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.po
+source_file            = build/gettext/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--getting-account-restrictions-attached-to-an-address]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-account-restrictions-attached-to-an-address.po
+source_file            = build/gettext/guides/restriction/getting-account-restrictions-attached-to-an-address.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--getting-mosaic-address-restrictions-attached-to-an-account]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.po
+source_file            = build/gettext/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--getting-mosaic-global-restrictions-attached-to-a-mosaic]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.po
+source_file            = build/gettext/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/index.po
+source_file            = build/gettext/guides/restriction/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--preventing-spam-attacks-with-account-restrictions]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/preventing-spam-attacks-with-account-restrictions.po
+source_file            = build/gettext/guides/restriction/preventing-spam-attacks-with-account-restrictions.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--restriction--restricting-mosaics-transfers]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/restriction/restricting-mosaics-transfers.po
+source_file            = build/gettext/guides/restriction/restricting-mosaics-transfers.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--secretlock--atomic-cross-chain-swap-between-NEM-public-and-private-chain]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.po
+source_file            = build/gettext/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--secretlock--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/secretlock/index.po
+source_file            = build/gettext/guides/secretlock/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--transfer--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/transfer/index.po
+source_file            = build/gettext/guides/transfer/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--transfer--sending-a-transfer-transaction]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-a-transfer-transaction.po
+source_file            = build/gettext/guides/transfer/sending-a-transfer-transaction.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:guides--transfer--sending-an-encrypted-message]
+file_filter            = source/locale/<lang>/LC_MESSAGES/guides/transfer/sending-an-encrypted-message.po
+source_file            = build/gettext/guides/transfer/sending-an-encrypted-message.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--all-coding-guidelines]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/all-coding-guidelines.po
+source_file            = build/gettext/handbook/all-coding-guidelines.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--commit-discipline]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/commit-discipline.po
+source_file            = build/gettext/handbook/commit-discipline.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--contribution-guidelines]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/contribution-guidelines.po
+source_file            = build/gettext/handbook/contribution-guidelines.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--cpp-coding-guidelines]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/cpp-coding-guidelines.po
+source_file            = build/gettext/handbook/cpp-coding-guidelines.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--directory]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/directory.po
+source_file            = build/gettext/handbook/directory.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--doc-common-tasks]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/doc-common-tasks.po
+source_file            = build/gettext/handbook/doc-common-tasks.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--doc-repos]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/doc-repos.po
+source_file            = build/gettext/handbook/doc-repos.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--doc-sphinx-primer]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/doc-sphinx-primer.po
+source_file            = build/gettext/handbook/doc-sphinx-primer.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--doc-workflow]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/doc-workflow.po
+source_file            = build/gettext/handbook/doc-workflow.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--documenting]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/documenting.po
+source_file            = build/gettext/handbook/documenting.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--git-branching]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/git-branching.po
+source_file            = build/gettext/handbook/git-branching.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/index.po
+source_file            = build/gettext/handbook/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--javascript-coding-guidelines]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/javascript-coding-guidelines.po
+source_file            = build/gettext/handbook/javascript-coding-guidelines.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:handbook--python-coding-guidelines]
+file_filter            = source/locale/<lang>/LC_MESSAGES/handbook/python-coding-guidelines.po
+source_file            = build/gettext/handbook/python-coding-guidelines.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/index.po
+source_file            = build/gettext/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/index.po
+source_file            = build/gettext/references/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--java-sdk]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/java-sdk.po
+source_file            = build/gettext/references/java-sdk.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--overview]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/overview.po
+source_file            = build/gettext/references/overview.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--symbol-hd-wallets]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/symbol-hd-wallets.po
+source_file            = build/gettext/references/symbol-hd-wallets.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--symbol-qr-library]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/symbol-qr-library.po
+source_file            = build/gettext/references/symbol-qr-library.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--symbol-uri-scheme]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/symbol-uri-scheme.po
+source_file            = build/gettext/references/symbol-uri-scheme.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:references--typescript-sdk]
+file_filter            = source/locale/<lang>/LC_MESSAGES/references/typescript-sdk.po
+source_file            = build/gettext/references/typescript-sdk.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:sdk]
+file_filter            = source/locale/<lang>/LC_MESSAGES/sdk.po
+source_file            = build/gettext/sdk.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:serialization--index]
+file_filter            = source/locale/<lang>/LC_MESSAGES/serialization/index.po
+source_file            = build/gettext/serialization/index.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:server]
+file_filter            = source/locale/<lang>/LC_MESSAGES/server.po
+source_file            = build/gettext/server.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:sphinx]
+file_filter            = source/locale/<lang>/LC_MESSAGES/sphinx.po
+source_file            = build/gettext/sphinx.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+
+[o:nemtech:p:symboldocs:r:wallets]
+file_filter            = source/locale/<lang>/LC_MESSAGES/wallets.po
+source_file            = build/gettext/wallets.pot
+source_lang            = en
+type                   = PO
+replace_edited_strings = false
+keep_translations      = false
+

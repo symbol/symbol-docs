@@ -2,14 +2,13 @@
 
 set -ex
 
-python -m pip install transifex-client
+curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
 
 echo "[https://www.transifex.com]
-hostname = https://www.transifex.com
-username = ${TRANSIFEX_USER}
-password = ${TRANSIFEX_PASSWORD}
+rest_hostname = https://rest.api.transifex.com
+token = ${TRANSIFEX_TOKEN}
 " > ~/.transifexrc
 
 echo "Publishing to Transifex..."
-tx push --source --parallel
+./tx push --source
 echo "Finish pushing to Transifex"
