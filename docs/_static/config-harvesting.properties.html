@@ -1,0 +1,22 @@
+<!-- File generated using catapult-docs-cli -->
+Harvesting configuration settings.<br/>
+<small>From <code class="docutils literal"><span class="pre">resources/config-harvesting.properties</span></code> v1.0.2.0
+</small>
+
+<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>MAINNET</th></tr></thead><tbody valign="top">
+
+<tr><td colspan=4><b>harvesting</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvesterSigningPrivateKey</span></code></td><td><code class="docutils literal"><span class="pre">string</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Harvester signing private key. Used only when harvesting is enabled.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvesterVrfPrivateKey</span></code></td><td><code class="docutils literal"><span class="pre">string</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Harvester VRF private key. Used only when harvesting is enabled.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableAutoHarvesting</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Enables harvesting using configured harvester keys when <code class="docutils literal"><span class="pre">true</span></code>.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxUnlockedAccounts</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>5</td><td>10</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of unlocked accounts, i.e., the maximum number of delegated harvesting accounts.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">delegatePrioritizationPolicy</span></code></td><td><code class="docutils literal"><span class="pre">harvesting::DelegatePrioritizationPolicy</span></code></td><td>Importance</td><td>Importance</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Prioritization policy used to keep accounts once the maximum number of delegated harvesting accounts is reached. Possible values are <code class="docutils literal"><span class="pre">Age</span></code> and <code class="docutils literal"><span class="pre">Importance</span></code>.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">beneficiaryAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the account receiving part of the harvested fee.</small></td></tr>
+</tbody></table>
+

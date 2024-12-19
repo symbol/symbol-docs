@@ -1,0 +1,1190 @@
+/* General */
+@font-face {
+    font-family: "ProtipoLight";
+    src: url("../fonts/Protipo-Light.otf");
+}
+
+@font-face {
+    font-family: "Carbon";
+    src: url("../fonts/Carbon-Regular.otf");
+}
+
+@font-face {
+    font-family: "Rajdhani";
+    src: url("../fonts/Rajdhani-Medium.ttf");
+}
+
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    padding-top: 0;
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "ProtipoLight", sans-serif !important;
+    color: #CCC;
+    background: #0B0118;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Rajdhani", sans-serif !important;
+    color: #CCC;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #9773ff;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+    color: #B32AF9;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #B32AF9;
+}
+
+h4 {
+    color: #B32AF9;
+}
+
+a, a:hover {
+    color: #27c5f3;
+}
+
+pre {
+    margin: 5px 0 10px 0;
+}
+
+b, strong {
+    color: #EEE;
+}
+
+/* Colors */
+.header {
+    background: black;
+}
+
+/* Button */
+.btn-default {
+    background-color: transparent;
+    padding: 4px 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    width: auto;
+    border-radius: 4px;
+    border: 1px solid #5200c6 !important;
+    color: #5200c6;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:active:focus {
+    background-color: transparent;
+    color: #5200c6;
+    border: 1px solid #5200c6;
+}
+
+/* Blockquote */
+blockquote {
+    font-size: 16px;
+}
+
+/* Input */
+input.form-control {
+    padding: 0;
+    height: auto;
+    border: 0;
+    box-shadow: none;
+}
+
+input.form-control:focus {
+    border: 0;
+    box-shadow: none;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff !important;
+}
+
+/* Alert */
+.alert {
+    margin: 20px 0;
+    padding: 5px 1.5rem !important;
+    background: #251B34;
+    color: #CCC;
+    border-left: 6px solid #27C5F3;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.alert .admonition-title {
+    color: #27C5F3;
+}
+
+/* Label */
+.label {
+    border-radius: 4px;
+}
+
+/* Tables */
+table {
+    word-break: break-word;
+}
+
+table a:not(.btn), .table a:not(.btn) {
+    text-decoration: none;
+}
+
+.big-table-colspan {
+    /* A big RST table neededing tweaking */
+    word-break: normal;
+}
+
+.big-table-colspan tbody .row-odd td {
+    border-top: 0;
+}
+
+.big-table-colspan td:empty {
+    padding: 0;
+}
+
+.big-table3 {
+    /* Tables with lots of content in 3 columns */
+    font-size: small;
+    word-break: normal;
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+    margin-top: 20px;
+}
+
+.big-table6 {
+    /* Tables with lots of content in 6 columns*/
+    font-size: small;
+    word-break: normal;
+    display: grid;
+    grid-template-columns: 10px 10px 10px min-content min-content auto;
+    margin-top: 20px;
+}
+
+/* divs inside big-table are actually cells */
+.big-table3 div, .big-table6 div {
+    padding-left: 10px;
+    vertical-align: top;
+    border-top: 1px solid #231C32;
+}
+
+/* Section titles inside big-table */
+.big-table-section {
+    opacity: 40%;
+}
+
+/* Small, empty cell, just to show the vertical guide line.
+   The -h version is for header lines. */
+.indentation-cell, .indentation-cell-h {
+    border-right: 3px solid #231C32;
+    border-top: 0 !important;
+}
+
+/* For small screens */
+@media (max-width: 600px) {
+    .big-table3 {
+        grid-template-columns: auto auto;
+        margin-top: 20px;
+    }
+
+    .big-table6 {
+        grid-template-columns: 10px 10px 10px auto auto;
+        margin-top: 20px;
+    }
+
+    /* The description column moves to the next row, and spans two columns */
+    .big-table3 .description {
+        grid-column: 1 / span 2;
+        border-top: 0;
+    }
+
+    /* The description column moves to the next row, and spans three columns */
+    .big-table6 .description {
+        grid-column: 4 / span 3;
+        border-top: 0;
+    }
+
+    /* There's an extra row (the description) but we have no extra indentation cells,
+     therefore, make the existing ones one row taller. */
+    .indentation-cell {
+        border-right: 3px solid #231C32;
+        border-top: 0 !important;
+        grid-row: span 2;
+    }
+}
+
+/* Lists which should group in columns if possible */
+.tabulated-list {
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
+    margin-left: 20px;
+}
+
+/* Layout*/
+body>.container {
+    padding-top: 20px;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+    body>.container {
+        padding: 20px 0;
+    }
+}
+
+.visible {
+    display: block !important;
+}
+
+/* Content */
+.content {
+    line-height: 1.55;
+    padding-bottom: 50px;
+}
+
+.content a {
+    color: #27c5f3;
+}
+
+.content ul {
+    list-style: disc;
+}
+
+.content ul.simple li {
+    padding-bottom: 5px;
+}
+
+.content ol {
+    padding: 0 15px 0 15px;
+    margin-bottom: 10.5px;
+}
+
+.content .headerlink {
+    visibility: hidden !important;
+    color: #27c5f3;
+}
+
+.content .headerlink::before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.content h1:hover .headerlink::before,
+.content h2:hover .headerlink::before,
+.content h3:hover .headerlink::before,
+.content h4:hover .headerlink::before,
+.content h5:hover .headerlink::before,
+.content h6:hover .headerlink::before {
+    visibility: visible;
+}
+
+.feedback-footer {
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+    z-index: 10;
+}
+
+.feedback-center {
+    text-align: center;
+}
+
+/* Navbar */
+.navbar-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-default {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.navbar-default a, .navbar-default a:hover {
+    color: #CCC;
+    text-decoration: none;
+    font-family: "Rajdhani";
+}
+
+.navbar-default a::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.navbar-default .navbar-top {
+    padding: 10px 0;
+}
+
+.navbar-default hr {
+    margin: 0 !important;
+}
+
+.navbar-default .navbar-brand {
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar-default .navbar-brand::before {
+    display: inline;
+}
+
+.navbar-default .navbar-right {
+    margin: 0;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.navbar-default .navbar-right .active {
+    border-bottom: 6px solid #9773FF;
+    background: linear-gradient(0deg, #9773FF80 0%, black 100%);
+}
+
+.navbar-default .navbar-right a {
+    font-family: Carbon, sans-serif;
+}
+
+.navbar-default::after {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.language-selector {
+    white-space: nowrap;
+    min-width: 48px;
+}
+
+.language-icon-selected {
+    box-shadow: 0px 0px 4px 4px #9773FF;
+    border-radius: 12px;
+}
+
+#social li {
+    padding: 0 8px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-default {
+        height: 75px;
+    }
+}
+
+.list-inline {
+    margin: 0;
+    height: 100%;
+}
+
+.list-inline li {
+    height: 100%;
+}
+
+/* Sidebar */
+.bs-sidenav {
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 0;
+    word-break: break-word;
+    text-shadow: none;
+    z-index: 9;
+    list-style: none;
+    font-size: 95%;
+}
+
+.bs-sidenav ul {
+    padding: 0;
+}
+
+.bs-sidenav li {
+    list-style: none;
+}
+
+.bs-sidenav ul>li>a {
+    display: block;
+    color: #CCC;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.bs-sidenav ul>li>a.current, .bs-sidenav ul>li>a:hover {
+    text-decoration: none;
+    color: #9773ff;
+}
+
+.bs-sidenav ul ul>li>a {
+    padding: 3px;
+    margin-left: 20px;
+}
+
+.bs-sidenav ul ul ul>li>a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 30px;
+}
+
+.bs-sidenav ul ul ul ul>li>a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    font-size: 90%;
+}
+
+/* Add a bullet point in front of level 3 nav items */
+.bs-sidenav ul ul ul ul>li>a:before {
+    content: "\2022  ";
+}
+
+.bs-sidenav.affix-bottom, .bs-sidenav.affix {
+    width: initial;
+    overflow: auto;
+    height: 100vh;
+}
+
+.bs-sidenav a:hover, .bs-sidenav a:focus {
+    background-color: transparent;
+    border: 0;
+}
+
+#sidebar .toctree-l1>a {
+    padding-left: 0;
+    padding-bottom: 5px;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+}
+
+#sidebar .toctree-l2>a {
+    position: relative;
+}
+
+#sidebar .toctree-l3>a {
+    font-size: 90%;
+    position: relative;
+}
+
+#sidebar .caption, .sidebar-xs .caption {
+    padding: 10px 30px 5px 0;
+    margin: 0;
+}
+
+#sidebar .caption-text, .sidebar-xs .caption-text {
+    font-weight: bold;
+    color: #FFF;
+}
+
+#sidebar .toctree-l1>a.current::before,
+#sidebar .toctree-l2>a.current::before,
+#sidebar .toctree-l3>a.current::before {
+    content: "\25B6";
+    position: absolute;
+    left: -16px;
+}
+
+.sidebar-xs {
+    background: black;
+}
+
+.sidebar-xs .caption-text {
+    padding-left: 10px;
+}
+
+.sidebar-xs .dropdown {
+    list-style: none;
+}
+
+.sidebar-xs .dropdown-menu {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    max-height: 70vh;
+    overflow: auto;
+    background-color: #231C32;
+    box-shadow: 6px 6px 6px #000;
+}
+
+.sidebar-xs .dropdown-menu>li>a {
+    white-space: normal;
+    color: #CCC;
+    font-family: "ProtipoLight";
+}
+
+.sidebar-xs .dropdown-menu .toctree-l1>a {
+    font-weight: bold;
+}
+
+.sidebar-xs .dropdown-menu .toctree-l2>a {
+    padding-left: 20px;
+}
+
+.sidebar-xs .dropdown-menu .toctree-l3>a {
+    padding-left: 30px;
+    font-size: 90%
+}
+
+.sidebar-xs .dropdown-menu .current>a {
+    color: #B32AF9;
+}
+
+.sidebar-xs .dropdown a {
+    padding-left: 10px;
+}
+
+.sidebar-xs .dropdown a:hover {
+    background-color: transparent;
+    color: #B32AF9;
+}
+
+.sidebar-xs a.dropdown-toggle:hover {
+    color: #fff;
+}
+
+.caret {
+    color: #fff;
+}
+
+#sidebar .version {
+    margin-top: 10px;
+}
+
+.bs-sidenav.secondary {
+    width: inherit;
+    padding: 0;
+    display: none;
+}
+
+.bs-sidenav.secondary .nav-header {
+    display: none;
+}
+
+.bs-sidenav.secondary .title {
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+}
+
+.bs-sidenav.secondary .edit-github {
+    padding: 10px 20px;
+}
+
+.bs-sidenav.secondary .edit-github a {
+    color: #777;
+}
+
+@media screen and (min-width: 992px) {
+    #sidebar {
+        width: 230px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #sidebar {
+        width: 250px;
+    }
+
+    #sidebar .sidebar-md {
+        max-height: 100vh;
+    }
+
+    .bs-sidenav.secondary {
+        width: 210px;
+        display: block;
+    }
+}
+
+/* Figure */
+div.figure {
+    margin-top: 20px;
+}
+
+div.figure .caption {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Tabs */
+.docutils.literal {
+    background-color: #FFFFFF20;
+    color: #2498C0;
+    border-radius: 4px;
+}
+
+.sphinx-tabs {
+    margin: 20px 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.sphinx-tabs .ui.sphinx-menu, .sphinx-tabs .ui.segment {
+    font-size: 16px;
+}
+
+.sphinx-tabs .tabular.menu .item {
+    max-width: 100%;
+    margin: 0;
+    width: auto;
+}
+
+.sphinx-tabs .tabular.menu .item .container {
+    width: auto;
+}
+
+.sphinx-tabs .sphinx-menu {
+    padding: 0;
+}
+
+.sphinx-tabs .sphinx-menu a.item {
+    color: #5200c6 !important;
+}
+
+.sphinx-tabs .sphinx-menu a.active.item, .sphinx-tab {
+    border-color: #5200c6 !important;
+}
+
+div .sphinx-tabs-panel {
+    background-color: #251B34;
+    border: none;
+    padding: 8px;
+    border-top-right-radius: 4px;
+}
+
+div .sphinx-tabs-tab {
+    border: 1px solid #251B34;
+    border-bottom: none;
+    padding: 8px;
+    color: #5200c6;
+}
+
+div .sphinx-tabs-tab[aria-selected="true"] {
+    background-color: #251B34;
+    border: 1px solid #251B34;
+    color: #D1C9F3;
+}
+
+div [role="tablist"] {
+    border-bottom: none;
+}
+
+.highlight>pre {
+    color: #2498C0;
+    background-color: #170A29;
+    border-radius: 4px;
+    padding: 12px;
+    border: 0;
+}
+
+.sphinx-tabs pre {
+    background-color: #150f1e;
+}
+
+.example-code {
+    padding: 0;
+    max-width: 100%;
+    display: none;
+    margin-top: 20px;
+}
+
+.example-code pre {
+    margin-top: 0;
+    border-radius: 0 5px 5px 5px;
+}
+
+.example-selector {
+    padding: 5px 0 0 0 !important;
+    height: 100% !important;
+    margin-bottom: 0 !important;
+}
+
+.example-selector li::before {
+    content: " " !important;
+}
+
+.example-selector>li {
+    color: #9773FF !important;
+    background-color: transparent !important;
+    float: none !important;
+    display: inline-block !important;
+    font-weight: normal !important;
+    margin: 0 2px 0 0 !important;
+    padding: 0 10px !important;
+    border: 1px solid #251B34;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.example-selector>li.selected {
+    background-color: #170A29 !important;
+    color: #B32AF9 !important;
+}
+
+.example-code .code-block-caption {
+    top: -28px;
+    right: 5px;
+    position: relative;
+    text-align: right;
+    height: 0;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.literal-block-wrapper {
+    padding: 0 !important;
+}
+
+.code-block-caption .headerlink {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .ui.tabular.menu .item {
+        padding: 0;
+    }
+}
+
+/* Math */
+.math {
+    margin: 20px 0;
+}
+
+/* Mermaid */
+.mermaid svg {
+    max-width: 100% !important;
+    overflow: visible;
+}
+
+.mermaid .edgeLabel {
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.mermaid .note,
+.mermaid rect,
+.mermaid .actor {
+    stroke: #ff00ff !important;
+    fill: #fff !important;
+}
+
+.mermaid line,
+.mermaid .path,
+.mermaid .messageLine0 {
+    stroke: #ff00ff !important;
+}
+
+.mermaid text.actor tspan {
+    fill: #333;
+    stroke: none;
+}
+
+/* Search box */
+.search-box {
+    width: 250px;
+    float: left;
+    display: block;
+    margin: 40px;
+}
+
+.search-box .DocSearch-Button {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: 1px solid #CCC;
+    color: #CCC;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+}
+
+.DocSearch-Hit-content-wrapper {
+    overflow-y: hidden;
+}
+
+.DocSearch-Modal {
+    margin-top: 140px !important;
+}
+
+/* Remove the style that ABlog hardcodes into the pages */
+.postlist li p a {
+    font-style: normal;
+}
+
+/* Print rules */
+@media print {
+    .bs-sidenav, footer {
+        display: none !important;
+    }
+}
+
+.h1centered {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #B32AF9;
+    text-align: center;
+    font-family: "Rajdhani", sans-serif !important;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+div.sidebar {
+    background-color: #231C32;
+    border: 0px;
+    border-radius: 4px;
+    width: 50%;
+}
+
+div.sidebar.tight-fit {
+    width: fit-content;
+}
+
+@media screen and (max-width:767px) {
+
+    /* On small screens side info boxes are actually regular boxes */
+    div.sidebar {
+        float: none;
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    div.sidebar.tight-fit {
+        width: 100%;
+    }
+
+}
+
+.content img {
+    background-color: #FFF;
+}
+
+img.with-shadow {
+    border: 1px lightgray;
+    box-shadow: 1px 1px 5px lightgray;
+}
+
+img.with-rounded-shadow {
+    border: 1px lightgray;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px lightgray;
+}
+
+img.align-right {
+    margin-bottom: 16px;
+}
+
+img.no-background {
+    background: transparent;
+}
+
+.right-align {
+    text-align: right;
+}
+
+/* Override Pygment's default background color for some values which I don't like
+ * until I know how to do it properly (works for JSON and TypeScript). */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .se {
+    background-color: transparent;
+}
+
+.highlight .gh {
+    color: #27c5f3;
+}
+
+.warning {
+    border-left: 6px solid red;
+    background-color: 251B34;
+    text-align: center;
+}
+
+.caution {
+    border-left: 6px solid orange;
+    background-color: #251B34;
+}
+
+.caution .admonition-title {
+    color: orange;
+}
+
+/* Topics, similar to Notes but with custom titles.
+ * Copied from .alert */
+div.topic {
+    margin: 20px 0;
+    padding: 5px 1.5rem !important;
+    background: #251B34;
+    color: #CCC;
+    border: 0px;
+    border-left: 6px solid #00c8ff;
+    border-radius: 0px 4px 4px 0px;
+}
+
+div.topic .topic-title {
+    color: #00c8ff;
+}
+
+.sidebar-title {
+    color: #B32AF9;
+}
+
+.git-info {
+    color: #CCCCCC80;
+    font-size: small;
+}
+
+.git-info a {
+    color: #27C5F380;
+    font-size: small;
+    font-weight: bold;
+}
+
+.git-info-image {
+    height: 32px;
+    margin-right: 10px;
+}
+
+.side-info {
+    float: right;
+    background-color: #251B34;
+    border-radius: 4px;
+    padding: 7px;
+    margin-left: 10px;
+    font-size: small;
+    white-space: nowrap;
+}
+
+.side-info-icon {
+    text-align: center;
+    font-size: large;
+    color: #9773ff;
+    line-height: normal;
+    padding-right: 7px;
+}
+
+/* Animated Details */
+summary {
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+summary:before {
+    content: '';
+    border-width: .7rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
+details[open]>summary:before {
+    transform: rotate(90deg);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Default text alignment for tables */
+.align-default {
+    text-align: left;
+}
+
+/* Underline for Glossary terms */
+a .xref {
+    color: #CCC;
+    text-decoration: underline 1px solid #27c5f380;
+}
+
+a .xref:hover {
+    color: #27c5f3;
+    cursor: help;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0118;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Special case for serialization docs headers, which need
+ * a font with upper and lower case. */
+#serialization h3 {
+    font-family: 'ProtipoLight' !important;
+}
+
+/* Dividers */
+hr {
+    border-top: 1px solid #9773FF;
+}
+
+.table thead tr th {
+    border-bottom: 1px solid #9773FF !important;
+    color: #B32AF9;
+}
+
+.table tbody tr td {
+    border-top: 1px solid #9773FF80;
+}
+
+.table-double-rows tbody .row-even td {
+    border-top: none;
+}
+
+.table-double-rows tbody tr td:empty {
+    padding: 0;
+}
+
+.docs-repo-table {
+    background-color: #170A29;
+    border: 1px solid #9773FF80;
+}
+
+/* Footnotes */
+dt:target, span.highlighted {
+    background-color: #9773ff;
+}
+
+/* Card menus */
+.content .card-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 32px;
+    padding: 0;
+}
+
+.content .card-list li {
+    border: 2px solid #977BFF;
+    border-radius: 16px;
+    box-shadow: 0 0 8px #977BFF;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    background: #170A29;
+    transition: box-shadow 0.25s;
+}
+
+.content .card-list li:hover {
+    box-shadow: 0 0 8px 8px #977BFF80;
+    background: #977BFF80;
+}
+
+.content .card-list .section {
+    height: 100%;
+}
+
+.content .card-list img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #977BFF;
+    background-color: transparent;
+}
+
+.content .card-list a {
+    font-family: "Rajdhani";
+    font-size: 1.5em;
+    line-height: 2em;
+    font-weight: bold;
+    color: #CCC;
+}
+
+.content .card-list a:hover {
+    color: #977BFF;
+    text-decoration: none;
+}
+
+.content .card-list p {
+    text-align: center;
+    height: 100%;
+    background-color: black;
+}
+
+/* GitHub contributors list */
+.ghcontributors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.ghcontributors li {
+    list-style: none;
+    text-align: center;
+}
+
+.ghcontributors img {
+    width: 128px;
+}
+
+.ghcontributors a::before {
+    content: '\A';
+    white-space: pre;
+}
+
+/* Glossary definitions */
+dl.glossary dt {
+    border-top: 1px solid #231C32;
+}
