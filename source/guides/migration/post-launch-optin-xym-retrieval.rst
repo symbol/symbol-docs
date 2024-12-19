@@ -88,7 +88,7 @@ Now that you know where do you want your XYM transferred, you can start the opt-
 
    First, you need to **retrieve the account's private key** from the wallet. The procedure depends on the wallet but here are instructions for a few popular ones:
    `Atomic Wallet <https://support.atomicwallet.io/article/19-how-to-view-your-private-keys-backup-phrase>`__,
-   `Exodus <https://support.exodus.com/article/86-how-can-i-view-my-private-keys>`__,
+   `Exodus <https://www.exodus.com/support/en/articles/8598615-how-do-i-view-my-private-keys>`__,
    `Coinomi <https://coinomi.freshdesk.com/support/solutions/articles/29000009717-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys->`__,
    `Magnum <https://davecube-com.medium.com/how-to-extract-the-private-key-from-your-magnum-wallet-95453dccacd4>`__.
 
