@@ -3,7 +3,7 @@
 set -ex
 
 echo "Publishing..."
-git remote add github "https://${GITHUB_ACCESS_TOKEN}@github.com/symbol/symbol-docs.git" > /dev/null 2>&1
+git remote add github "https://github.com/symbol/symbol-docs.git" > /dev/null 2>&1
 
 echo "Creating gh-pages branch"
 git checkout -b gh-pages
