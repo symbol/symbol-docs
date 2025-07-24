@@ -71,7 +71,7 @@ This generates all HTML files in the ``build/html`` folder, including all assets
 Deployment
 ----------
 
-The GitHub repository is linked to `Jenkins <https://jenkins.symboldev.com/job/Symbol/job/Docs/job/symbol-docs>`__, so on every push to the
+The GitHub repository is linked to `Jenkins <https://jenkins.symbolsyndicate.us/job/Symbol/job/Docs/job/symbol-docs>`__, so on every push to the
 ``main`` branch a full build is triggered (See ``Jenkinsfile``). This involves several steps besides
 the generation of the output documentation:
 
