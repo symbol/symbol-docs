@@ -150,10 +150,6 @@ This is a short list of items to check should you encounter any problem when rec
 
 - Check that you are using the **correct Symbol mnemonic**. Did you do several attempts at opting-in and obtained different mnemonics?
 
-- Check that your NIS1 account was successfully opted-in by looking up its address in the `opt-in Report <http://report.experimental.symboldev.network/ok1.html>`__.
-
-  If your account is not on the list, check the other tabs to find the reason.
-
 - The **NEM Helpdesk** can help you if everything else fails:
 
   - `NEM's Telegram Help Desk <https://t.me/nemhelpdesk>`__
