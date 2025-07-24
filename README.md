@@ -1,6 +1,6 @@
 # Symbol Documentation
 
-[![Build Status](https://jenkins.symboldev.com/job/Symbol/job/Docs/job/symbol-docs/job/main/badge/icon)](https://jenkins.symboldev.com/job/Symbol/job/Docs/job/symbol-docs/job/main/)
+[![Build Status](https://jenkins.symbolsyndicate.us/job/Symbol/job/Docs/job/symbol-docs/job/main/badge/icon)](https://jenkins.symbolsyndicate.us/job/Symbol/job/Docs/job/symbol-docs/job/main/)
 
 Browse the documentation to start integrating blockchain technology into your project.
 
