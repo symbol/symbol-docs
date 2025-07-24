@@ -48,7 +48,7 @@ Surf Symbol's reference documentation to learn more about our APIs, SDKs, CLIs, 
 Symbol is an [open-source](https://github.com/symbol) project.
 Discover how our [community](https://github.com/symbol/community/) is organized, and get started participating:
 
-* Reach our community joining the official [Discord](https://discord.com/invite/xymcity).
+* Reach our community joining the official [Discord](https://discord.gg/J38KwW5ZuG).
 * Check the [contributing guidelines](https://docs.symbol.dev/guidelines/suggesting-changes.html) to propose changes.
 * Follow the development updates on Twitter.
   * [Symbol Official account](https://twitter.com/thesymbolchain)

@@ -275,7 +275,7 @@ rst_prolog = """
 .. |desktop-wallet| replace:: Symbol Desktop Wallet
 .. |discord| raw:: html
 
-   <a href="https://discord.com/invite/xymcity" target="_blank">Discord</a>
+   <a href="https://discord.gg/J38KwW5ZuG" target="_blank">Discord</a>
 
 .. |nem| raw:: html
 

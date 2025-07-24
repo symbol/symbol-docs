@@ -302,6 +302,6 @@ Contact Support
 
 For technical support, you may reach us at:
 
-- Discord: https://discord.com/invite/xymcity
+- Discord: https://discord.gg/J38KwW5ZuG
 
 - Telegram: @nemhelpdesk
