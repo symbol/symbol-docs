@@ -24,7 +24,7 @@ Technical documentation
     **Intended readers** ; The world at large.
     **Intended writers** ; The Symbol technical writers.
     **Editing workflow** ; Git-based: Check out the source repository, make modifications, check results by building the pages locally and submit pull requests.
-    **Localization** ; `Transifex <https://www.transifex.com/nemtech/symboldocs/>`__
+    **Localization** ; `Transifex <https://app.transifex.com/nemtech/symboldocs/>`__
     **Maintainers** ; `Xavi <https://github.com/segfaultxavi>`__
 
 Content
@@ -91,7 +91,7 @@ Localization
 
 Right now almost every page is available in Japanese besides the original English, but the repository is ready to accept more languages.
 
-`Transifex <https://www.transifex.com/nemtech/symboldocs/>`__ is integrated in the deployment process, so after every push to ``main`` Travis extracts and sends all strings (``.pot`` files) to Transifex, which detects any new or updated text and notifies the translators.
+`Transifex <https://app.transifex.com/nemtech/symboldocs/>`__ is integrated in the deployment process, so after every push to ``main`` Travis extracts and sends all strings (``.pot`` files) to Transifex, which detects any new or updated text and notifies the translators.
 
 Translators can log in to Transifex and provide the translations there. Developers can then download the updated text (``.po`` files) and commit them to the source repository.
 

@@ -14,9 +14,9 @@ If you are planning on helping, make sure to join the |discord| server and enter
 Getting started for translators
 *******************************
 
-1. Create a new Transifex account `here <https://www.transifex.com/signup/?join_project=symboldocs>`_.
+1. Create a new Transifex account `here <https://app.transifex.com/signup/?join_project=symboldocs>`_.
 
-2. Join the `symbol-docs team <https://www.transifex.com/nemtech/symboldocs/>`_. Click on **Help Translate "symbol-docs"** button on the right side of the header, selecting the language you want to contribute.
+2. Join the `symbol-docs team <https://app.transifex.com/nemtech/symboldocs/>`_. Click on **Help Translate "symbol-docs"** button on the right side of the header, selecting the language you want to contribute.
 
 3. Wait until the translation coordinator approves your request. Once accepted you will receive an email. At this moment, you will be able to start translating the docs.
 
