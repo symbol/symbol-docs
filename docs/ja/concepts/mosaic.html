@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>モザイク &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="モザイク制限" href="mosaic-restriction.html" />
+    <link rel="prev" title="メタデータ" href="metadata.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/mosaic.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/mosaic.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="mosaic">
+<h1>モザイク<a class="headerlink" href="#mosaic" title="この見出しへのパーマリンク"></a></h1>
+<p>Mosaics are <strong>fixed assets</strong> that represent a set of multiple identical things that do not change.</p>
+<p>A mosaic can be what is conventionally called <strong>a token</strong>, but it can also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or other currencies, for example.</p>
+<p>Mosaic specialization is achieved through its properties, which are set during <a class="reference internal" href="../guides/mosaic/creating-a-mosaic.html"><span class="doc">mosaic creation</span></a>.</p>
+<p>Once created, each mosaic has a unique identifier represented as a 64-bit unsigned integer. For example, Symbol's native currency, <strong>XYM</strong>, has the mosaic ID <code class="docutils literal notranslate"><span class="pre">0x6BED913FA20223F8</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>If you create a mosaic which should be used by other users, it is very convenient to use a <a class="reference internal" href="namespace.html"><span class="doc">ネームスペース</span></a> to alias the mosaic ID to a human-readable string. XYM use the <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> alias, for example.</p>
+</div>
+<section id="mosaic-properties">
+<span id="configurable-mosaic-properties"></span><h2>Mosaic Properties<a class="headerlink" href="#mosaic-properties" title="この見出しへのパーマリンク"></a></h2>
+<section id="divisibility">
+<h3>可分性<a class="headerlink" href="#divisibility" title="この見出しへのパーマリンク"></a></h3>
+<p>Determines the number of <strong>decimal places</strong> to which the mosaic can be divided. A divisibility of <strong>3</strong> means that the smallest fraction a mosaic can be divided into is <strong>0.001</strong>.</p>
+<p>When decimals are used units are called <strong>relative</strong>, and when no decimals are used units are called <strong>absolute</strong>. I.e., with a divisibility of 3, <strong>1</strong> absolute unit corresponds to <strong>0.001</strong> relative units. To convert from relative to absolute units multiply by 10<sup>divisibility</sup>.</p>
+<p>Divisibility must be in the <strong>0</strong> to <strong>6</strong> range (included).</p>
+</section>
+<section id="initial-supply">
+<h3>初期供給量<a class="headerlink" href="#initial-supply" title="この見出しへのパーマリンク"></a></h3>
+<p>Indicates the amount of mosaics initially in circulation, in <strong>absolute units</strong>.</p>
+<p>This amount can be later changed by a <a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a> if the <strong>Supply mutable</strong> flag (see below) of the mosaic is set to true.</p>
+<p>The total supply must be in the <strong>0</strong> to <strong>9,000,000,000,000,000</strong> range in absolute units.</p>
+</section>
+<section id="duration">
+<h3>期間<a class="headerlink" href="#duration" title="この見出しへのパーマリンク"></a></h3>
+<p>Specifies the number of confirmed blocks the mosaic is rented for.</p>
+<p><strong>Expiring mosaics</strong> are allowed to lie in Symbol's public network up to <strong>3650</strong> days (10 years), being this maximum parameter <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">editable per network</span></a>.</p>
+<p><strong>Non-expiring mosaics</strong> can be created by setting this property to <strong>0</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Mosaic duration cannot be extended after its creation. Before creating one, consider if your use case requires the mosaic to expire or not. Note that this behavior is different for <a class="reference internal" href="namespace.html"><span class="doc">Namespaces</span></a>.</p>
+</div>
+<p>次の式を使用して、日数をおよそのブロック数に変換します:</p>
+<div class="math notranslate nohighlight">
+\[duration ≈ \frac{numberOfDays * 86400}{blockGenerationTargetTimeInSeconds}\]</div>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">blockGenerationTargetTimeInSeconds</span></code> is <strong>30</strong> seconds.</p>
+</section>
+<section id="supply-mutable">
+<h3>供給可変性<a class="headerlink" href="#supply-mutable" title="この見出しへのパーマリンク"></a></h3>
+<p>true の場合、モザイクの供給量は後から変更できます。モザイク作成者は <a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a> を使用して、モザイクの総供給量を再定義できます。トランザクションはモザイクの供給量を <code class="docutils literal notranslate"><span class="pre">delta</span></code> 単位で増減します。</p>
+<p>モザイクの供給を減らすにはモザイク作成者アカウントが少なくとも <code class="docutils literal notranslate"><span class="pre">delta</span></code> 単位を所有している必要があります。供給量可変プロパティが有効になっていても、モザイク作成者が他のアカウントの残高からモザイクを削除できるわけではありません。</p>
+<p>If Supply mutable set to false, the mosaic supply cannot be changed.
+However, if the mosaic creator owns all the mosaic supply, this is modifiable even if the mosaic is defined as not mutable.</p>
+</section>
+<section id="transferable">
+<h3>転送可能性<a class="headerlink" href="#transferable" title="この見出しへのパーマリンク"></a></h3>
+<figure class="align-center" id="id1">
+<img alt="../_images/mosaic-transferable.png" src="../_images/mosaic-transferable.png" style="width: 400px;" />
+<figcaption>
+<p><span class="caption-text">転送不可モザイクの例</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>If set to true, the mosaic can be transferred between arbitrary accounts.
+Otherwise, the mosaic can only be transferred to or from the mosaic creator.</p>
+</section>
+<section id="restrictable">
+<h3>制限可能性<a class="headerlink" href="#restrictable" title="この見出しへのパーマリンク"></a></h3>
+<figure class="align-center" id="id2">
+<img alt="../_images/mosaic-restriction-delegated.png" src="../_images/mosaic-restriction-delegated.png" style="width: 400px;" />
+<figcaption>
+<p><span class="caption-text">モザイク制限の例</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>true の場合、モザイク作成者は <a class="reference internal" href="mosaic-restriction.html"><span class="doc">制限</span></a> を設定できます。</p>
+</section>
+<section id="revokable">
+<h3>Revokable<a class="headerlink" href="#revokable" title="この見出しへのパーマリンク"></a></h3>
+<p>Mosaics can be revoked (i.e., <strong>reclaimed</strong>) by the mosaic creator when this flag is set to true.</p>
+</section>
+</section>
+<section id="creation-fee">
+<span id="mosaic-rental-fee"></span><h2>作成手数料<a class="headerlink" href="#creation-fee" title="この見出しへのパーマリンク"></a></h2>
+<p>An account willing to create a mosaic has to pay a rental fee in addition to the <a class="reference internal" href="fees.html"><span class="doc">transaction fee</span></a>.
+Both fees will be deducted from the account's balance after the announcement of a valid <a class="reference internal" href="../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransaction</span></a>.</p>
+<p><a class="reference internal" href="../api.html"><span class="doc">REST ゲートウェイ</span></a> はモザイクの作成に必要なネットワーク通貨の概算を取得するためのエンドポイントを提供します。</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/GettingMosaicRentalFee.ts">View Code</a></span><a class="headerlink" href="#id3" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="p">.</span><span class="nx">createNetworkRepository</span><span class="p">();</span>
+<span class="nx">networkHttp</span><span class="p">.</span><span class="nx">getRentalFees</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">rentalFees</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rentalFees</span><span class="p">.</span><span class="nx">effectiveMosaicRentalFee</span><span class="p">.</span><span class="nx">compact</span><span class="p">());</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/GettingMosaicRentalFee.js">View Code</a></span><a class="headerlink" href="#id4" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="p">.</span><span class="nx">createNetworkRepository</span><span class="p">();</span>
+<span class="nx">networkHttp</span><span class="p">.</span><span class="nx">getRentalFees</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">rentalFees</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rentalFees</span><span class="p">.</span><span class="nx">effectiveMosaicRentalFee</span><span class="p">.</span><span class="nx">compact</span><span class="p">());</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, creating a mosaic in Symbol's public network has an initial cost of <strong>0.5</strong> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> (<a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">configurable per network</span></a> by the <code class="docutils literal notranslate"><span class="pre">mosaicRentalFee</span></code> property).
+However, <strong>the network dynamically adjusts the mosaic rental fee</strong> over time.</p>
+<p>有効レンタル料金を計算するために、ネットワークは構成で設定されたデフォルト値にネットワークの <a class="reference internal" href="fees.html#fees-dynamic-multiplier"><span class="std std-ref">動的手数料乗数</span></a> を掛けます。</p>
+</section>
+<section id="related-transactions">
+<h2>関連トランザクション<a class="headerlink" href="#related-transactions" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 45%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x414D</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransaction</span></a></p></td>
+<td><p>新しいモザイクの作成</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x424D</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a></p></td>
+<td><p>モザイクの合計供給量を変更します。</p></td>
+</tr>
+<tr class="row-even"><td><p>0x434D</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicsupplyrevocationtransaction"><span class="std std-ref">MosaicSupplyRevocationTransaction</span></a></p></td>
+<td><p>Reclaim transferred mosaics.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/mosaic/creating-a-mosaic.html">モザイクの作成</a></p>
+<p class="ablog-post-excerpt">モザイクを使用した資産のトークン化</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/mosaic/modifying-mosaic-supply.html">モザイク供給量の変更</a></p>
+<p class="ablog-post-excerpt">&quot;<strong>Supply Mutable</strong>&quot; プロパティを使用してモザイクを作成した場合、トークンを増やすか、総供給量を減らすことができます。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/mosaic/getting-mosaic-information.html">モザイクの情報を取得する</a></p>
+<p class="ablog-post-excerpt">モザイク識別子による所有権、可分性、期間、フラグの取得</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/mosaic.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">モザイク</a><ul>
+<li><a class="reference internal" href="#mosaic-properties">Mosaic Properties</a><ul>
+<li><a class="reference internal" href="#divisibility">可分性</a></li>
+<li><a class="reference internal" href="#initial-supply">初期供給量</a></li>
+<li><a class="reference internal" href="#duration">期間</a></li>
+<li><a class="reference internal" href="#supply-mutable">供給可変性</a></li>
+<li><a class="reference internal" href="#transferable">転送可能性</a></li>
+<li><a class="reference internal" href="#restrictable">制限可能性</a></li>
+<li><a class="reference internal" href="#revokable">Revokable</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creation-fee">作成手数料</a></li>
+<li><a class="reference internal" href="#related-transactions">関連トランザクション</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

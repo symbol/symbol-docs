@@ -1,0 +1,1217 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>交換所の統合 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="交換所に関する REST API トラブルシューティング" href="exchange-REST-troubleshooting.html" />
+    <link rel="prev" title="交換" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/exchanges/exchange-integration.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/exchanges/exchange-integration.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">交換</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">交換所の統合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exchange-REST-troubleshooting.html">交換所に関する REST API トラブルシューティング</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">交換</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">交換所の統合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exchange-REST-troubleshooting.html">交換所に関する REST API トラブルシューティング</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="integrating-with-an-exchange">
+<h1>交換所の統合<a class="headerlink" href="#integrating-with-an-exchange" title="この見出しへのパーマリンク"></a></h1>
+<p>これは <code class="docutils literal notranslate"><span class="pre">XYM</span></code> トークンを <strong>交換所プラットフォーム</strong> への統合を通じて <strong>開発者をガイドする</strong> ことを目的とした資料です。アカウントの設定、預け入れ資産の監視、引き出しの作成方法に関する推奨事項と、すぐに利用できるコード例を含みます。</p>
+<p>共有しているコード例は <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript">Symbol SDK TypeScript版</a> ですが、他の <a class="reference internal" href="../../sdk.html"><span class="doc">有効な SDK</span></a> にも、それらが同じ設計原則を共有しているため、移植することができます。必要なプログラミング言語で SDK がサポートされていない場合は <a class="reference internal" href="../../api.html"><span class="doc">REST API</span></a> を介して、直接接続して統合できる可能性があります。</p>
+<section id="integration-overview">
+<h2>統合の概要<a class="headerlink" href="#integration-overview" title="この見出しへのパーマリンク"></a></h2>
+<p>交換所を設計する方法はたくさんあります。このガイドは <strong>中央ウォレットアプローチ</strong> に基づいた、交換所での <code class="docutils literal notranslate"><span class="pre">XYM</span></code> の入出金をサポートする方法に基づいています。</p>
+<p>このデザインは他のデザインと比べると、特に推奨はできません。ただし、その <strong>簡素なアーキテクチャ</strong> は、交換所との統合に関する Symbol の一連の機能の優れたショーケースといえます。別のアプローチでは、例えば、ユーザーごとに異なるウォレットを使用するなどです。</p>
+<figure class="align-center" id="id1">
+<a class="reference external image-reference" href="/_images/exchange-integration-overview.png"><img alt="../../_images/exchange-integration-overview.png" src="../../_images/exchange-integration-overview.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>図. 1</strong>: 中央ウォレットアプローチの一般的な設計。</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>次に、このアーキテクチャの主なコンポーネントについて説明します。</p>
+<section id="components">
+<h3>コンポーネント<a class="headerlink" href="#components" title="この見出しへのパーマリンク"></a></h3>
+<section id="central-wallet">
+<h4>中央ウォレット<a class="headerlink" href="#central-wallet" title="この見出しへのパーマリンク"></a></h4>
+<p>交換所はすべてのユーザーの入出金を扱う Symbol アカウントを所有します。このアカウントのキーはオンラインマシン上に存在する必要があるため、これは一般に <strong>ホット</strong> ウォレットとも呼ばれます。このアカウントは攻撃に最も晒されるアカウントであるため、日常の使用 (引き出しと預け入れ) に必要な量の XYM しかもちません。</p>
+</section>
+<section id="cold-wallet">
+<h4>コールドウォレット<a class="headerlink" href="#cold-wallet" title="この見出しへのパーマリンク"></a></h4>
+<p>Cold wallet(s) hold a certain threshold for the pool of XYM. These accounts should be created and remain in a setup with no internet connection. Transactions issued from cold wallets must be signed offline and announced to the network using another device. It is advisable as well that cold wallets are set up with <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">multisig accounts</span></a>.</p>
+</section>
+<section id="unique-user-id">
+<h4>一意なユーザ ID<a class="headerlink" href="#unique-user-id" title="この見出しへのパーマリンク"></a></h4>
+<p>In the proposed architecture, each user is identified by a Unique User IDentifier (UUID) on the exchange's database. A user will deposit to the central wallet with their UUID attached as the <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">message</span></a> of the transaction (called sometimes the <strong>memo</strong>). The UUID is only shown in the user's dashboard during the deposit confirmation.</p>
+<p>One of the drawbacks of this design is that many users are not used to having a message attached to their transactions. If they forget to attach the UUID or attach a wrong UUID, it will lead to receiving lots of support tickets concerning &quot;lost funds&quot;.</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>Symbol の <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">転送トランザクション</span></a> は 1023 バイトまでのメッセージを添付することができますが、 <a class="reference internal" href="../../sdk.html"><span class="doc">Symbol SDK</span></a> は <strong>先頭バイトを特別な処理のために</strong> 使用します。</p>
+<p>This can be a source of confusion because the receiver of a transaction does not know if the message was generated by the Symbol SDK or otherwise (for example accessing the <a class="reference internal" href="../../api.html"><span class="doc">REST gateway</span></a>), so it does not know if the first byte must be treated specially or not.</p>
+<p>To avoid any issue, the following measures <strong>must always be enforced</strong>:</p>
+<ul class="simple">
+<li><p><strong>Always</strong> start messages with a byte in the 32 to 128 range (this is the standard ASCII printable range).</p></li>
+<li><p><strong>Always</strong> ignore any received initial byte outside the 32 to 128 range.</p></li>
+</ul>
+<p>Follow these rules, regardless of whether you use the Symbol SDK or not to generate and parse transfer transactions.</p>
+</div>
+</section>
+<section id="exchange-server">
+<h4>交換所サーバ<a class="headerlink" href="#exchange-server" title="この見出しへのパーマリンク"></a></h4>
+<p>This machine is constantly listening for user's withdraw requests, and monitors the blockchain to detect user deposits into the Exchange Central Wallet. As explained in the rest of this document, it maintains the database updated and announces any required transaction.</p>
+</section>
+<section id="exchange-database">
+<h4>交換所データベース<a class="headerlink" href="#exchange-database" title="この見出しへのパーマリンク"></a></h4>
+<p>All the user's funds are merged together in the Exchange's wallets. This database keeps track of the amount of tokens each individual user holds. It also records all processed transactions, for record-keeping and to avoid processing the same transaction more than once.</p>
+</section>
+</section>
+<section id="running-a-node">
+<h3>ノードの立ち上げ<a class="headerlink" href="#running-a-node" title="この見出しへのパーマリンク"></a></h3>
+<p>Although not absolutely necessary, it is <strong>recommended</strong> that Exchanges deploy <strong>their own Symbol node</strong> to communicate with the rest of the network. Since each node automatically connects to <strong>several other nodes</strong> on the network, this approach is more robust than accessing the network always through the same public node, which <strong>might become unavailable</strong>.</p>
+<p>If you are unable to run your own node, you can choose one from the list provided by the <a class="reference external" href="https://symbol.services/nodes">Statistics Service</a>.</p>
+<p>See the <a class="reference internal" href="../network/index.html"><span class="doc">different guides about deploying Symbol nodes</span></a> and make sure you create an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a>.</p>
+</section>
+<section id="accounts-setup">
+<h3>アカウントのセットアップ<a class="headerlink" href="#accounts-setup" title="この見出しへのパーマリンク"></a></h3>
+<p>Exchanges can create the central and cold wallets by <a class="reference internal" href="../../wallets.html"><span class="doc">downloading the official Symbol Desktop Wallet</span></a> for <strong>Windows</strong>, <strong>Linux</strong> or <strong>Mac</strong>.</p>
+<p>Every wallet has assigned an <a class="reference internal" href="../../concepts/account.html"><span class="doc">account</span></a> (a deposit box that holds tokens, which can only be transferred with the appropriate private key).</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>The <strong>private key must be kept secret at all times</strong> and must not be shared. Losing the private key means losing access to an account's funds, so make sure it is <strong>securely backed up</strong>.</p>
+</div>
+<p>It is advisable to turn central and cold wallets into <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">multisig accounts</span></a> to add <strong>two-factor authentication</strong>. The cosignatories of the multisig account become the account managers, so no transaction can be announced from the multisig account without the cosignatories' approval. Symbol's current implementation of multisig is <strong>“M-of-N”</strong> meaning that <em>M</em> out of the total <em>N</em> cosignatories of an account need to approve a transaction for it to be announced.</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>Multisig accounts are a <strong>powerful</strong> yet <strong>dangerous</strong> tool. If access to some cosignatory account is lost and the minimum approval is not reached (the <em>M</em> above), access to the multisig account can be permanently lost. <strong>Always configure multisig accounts with caution</strong>.</p>
+</div>
+<p>To strengthen security, <a class="reference internal" href="../../concepts/account-restriction.html"><span class="doc">extra account restrictions</span></a> can be added to the Exchange's accounts, like blocking announcing or receiving transactions given a series of rules.</p>
+<aside class="topic">
+<p class="topic-title">Related links</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../wallets.html"><span class="doc">Symbol クライアントのダウンロード</span></a></p></li>
+<li><p><a class="reference internal" href="../account/creating-an-account.html"><span class="doc">新しいアカウントの作る方法</span></a></p></li>
+<li><p><a class="reference internal" href="../multisig/creating-a-multisig-account.html"><span class="doc">アカウントをマルチシグアカウントに変換する方法</span></a></p></li>
+<li><p><a class="reference internal" href="../restriction/preventing-spam-attacks-with-account-restrictions.html"><span class="doc">How to set account restrictions</span></a>.</p></li>
+</ul>
+</aside>
+</section>
+<section id="the-xym-token">
+<h3>XYM トークン<a class="headerlink" href="#the-xym-token" title="この見出しへのパーマリンク"></a></h3>
+<p>The native currency of the Symbol network is named <code class="docutils literal notranslate"><span class="pre">XYM</span></code>. The token is used to pay for transactions and service <a class="reference internal" href="../../concepts/fees.html"><span class="doc">fees</span></a>, which are used as well to provide an incentive for those <a class="reference internal" href="../../concepts/harvesting.html"><span class="doc">participants</span></a> who secure the network and run the infrastructure.</p>
+<p>Tokens can be divided up to <code class="docutils literal notranslate"><span class="pre">divisibility</span></code> decimal places. Amounts given without decimals are called <strong>absolute</strong>, whereas when decimals are used amounts are called <strong>relative</strong>. For example, when divisibility is 6, 1 relative token corresponds to 1'000'000 absolute tokens, and the smallest token is 0.000001 relative units. The smallest absolute unit is always 1, regardless of the divisibility.</p>
+<p>これらは <code class="docutils literal notranslate"><span class="pre">XYM</span></code> のプロパティです:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 25%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>プロパティ</p></th>
+<th class="head"><p>値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x6BED913FA20223F8</span></code></p></td>
+<td><p>トークン識別子</p></td>
+</tr>
+<tr class="row-odd"><td><p>エイリアス</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code></p></td>
+<td><p>トークンの親しみやすい名前</p></td>
+</tr>
+<tr class="row-even"><td><p>初期供給量</p></td>
+<td><p>7'842'928'625 (relative)</p></td>
+<td><p>流通しているトークンユニットの初期供給量</p></td>
+</tr>
+<tr class="row-odd"><td><p>最大供給量</p></td>
+<td><p>8'999'999'999 (relative)</p></td>
+<td><p>Maximum amount of token units in circulation after <a class="reference internal" href="../../concepts/inflation.html"><span class="doc">inflation</span></a> is applied</p></td>
+</tr>
+<tr class="row-even"><td><p>Divisibility</p></td>
+<td><p>6</p></td>
+<td><p>This means that the smallest fraction of the token is 0.000001 (relative).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Duration</p></td>
+<td><p>0</p></td>
+<td><p>トークンは失効しません</p></td>
+</tr>
+<tr class="row-even"><td><p>Supply mutable</p></td>
+<td><p>False</p></td>
+<td><p>トークンの供給量は変更できません。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Transferable</p></td>
+<td><p>True</p></td>
+<td><p>トークンは任意のアカウント間で転送できます。</p></td>
+</tr>
+<tr class="row-even"><td><p>Restrictable</p></td>
+<td><p>False</p></td>
+<td><p>Token creator cannot restrict which accounts can transact with the mosaic</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">XYM</span></code> token can be referred to through its <strong>native token ID</strong> or its <strong>friendlier alias</strong> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>, which has an ID on itself.</p>
+<p>On MAINNET, these IDs are <code class="docutils literal notranslate"><span class="pre">0x6BED913FA20223F8</span></code> (mosaic ID) and <code class="docutils literal notranslate"><span class="pre">0xE74B99BA41F4AFEE</span></code> (alias ID).</p>
+<p><strong>Always treat these two IDs as equivalent.</strong></p>
+</div>
+</section>
+<section id="aggregates">
+<span id="exchange-aggregate-transactions"></span><h3>Aggregates<a class="headerlink" href="#aggregates" title="この見出しへのパーマリンク"></a></h3>
+<p>Symbol has a novel feature called <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">アグリゲートトランザクション</span></a> which allows bundling multiple inner transactions into a single one.</p>
+<p>Therefore, when monitoring incoming <strong>Transfer</strong> transactions you must remember to also look inside all <strong>Aggregate</strong> transactions (Both <strong>Aggregate Complete</strong> and <strong>Aggregate Bonded</strong> transactions). The <a class="reference internal" href="#exchanges-monitoring"><span class="std std-ref">example code given below</span></a> shows a way of achieving this.</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>When Aggregate transactions are <strong>not</strong> monitored, inner transfer transactions <strong>are not detected</strong>, leading to lots of <strong>reports of lost funds</strong>.</p>
+<p>This is specially relevant for <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">multi-signature accounts</span></a>, where all transactions are wrapped in an Aggregate.</p>
+</div>
+</section>
+<section id="avoiding-rollbacks">
+<span id="exchange-avoid-rollbacks"></span><h3>ロールバックの回避<a class="headerlink" href="#avoiding-rollbacks" title="この見出しへのパーマリンク"></a></h3>
+<p>This is a <strong>classic conflict</strong> in blockchain technology: On one hand, if transactions are accepted too quickly, they might need to be <strong>reverted</strong> later on in the event of a <a class="reference internal" href="../../concepts/block.html#rollbacks"><span class="std std-ref">network fork</span></a>. On the other hand, waiting for too long is <strong>inconvenient</strong> for users.</p>
+<p>Symbol でこれを処理する方法は2つあります。</p>
+<section id="using-finalization">
+<h4>ファイナライゼーションの使用<a class="headerlink" href="#using-finalization" title="この見出しへのパーマリンク"></a></h4>
+<p>Symbol implements <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">Finalization</span></a>, a process that <strong>guarantees</strong> that blocks are <strong>immutable</strong> and therefore transactions are secure.</p>
+<p>To know if a block has been finalized, check the <code class="docutils literal notranslate"><span class="pre">latestFinalizedBlock</span></code> property in the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getChainInfo">/chain/info</a> endpoint. All blocks with a <strong>height</strong> lower than (or equal to) <code class="docutils literal notranslate"><span class="pre">latestFinalizedBlock.height</span></code> are <strong>finalized</strong> and are therefore <strong>immutable</strong>.</p>
+<p><strong>On average</strong>, blocks are finalized after 5 minutes, in the absence of network problems.</p>
+</section>
+<section id="using-a-fixed-wait">
+<h4>固定待機の使用<a class="headerlink" href="#using-a-fixed-wait" title="この見出しへのパーマリンク"></a></h4>
+<p>To have faster response times, one must ignore finalization and <strong>accept the risk</strong> that comes with this: <strong>Unfinalized blocks have a probability of being reverted</strong>, which decreases over time but is never zero until the block is finalized.</p>
+<p>The procedure, which is common in blockchains which do not support finalization, is to <strong>wait for a few blocks</strong> to be validated (added to the blockchain) before accepting a transaction.</p>
+<p>The amount of blocks to wait for depends on the risk one wants to accept. The recommendation for Symbol is <strong>20 blocks</strong> (about 10 minutes, regardless of network conditions, because Finalization will almost always happen during this time).</p>
+<aside class="topic">
+<p class="topic-title">In summary</p>
+<ul class="simple">
+<li><p>Waiting for a <strong>fixed amount</strong> of blocks leads to consistent confirmation times, but has the risk that confirmed transactions might be <strong>reverted</strong>.</p></li>
+<li><p>Waiting for <strong>finalization</strong> has variable confirmation times (5 minutes on average) but has <strong>zero rollback risk</strong>.</p></li>
+</ul>
+</aside>
+</section>
+<section id="deadlines">
+<h4>期限<a class="headerlink" href="#deadlines" title="この見出しへのパーマリンク"></a></h4>
+<p>An added problem caused by rollbacks is that <strong>transactions might expire</strong> in the process of resolving a network fork.</p>
+<p>A bit of context is required here. Transactions are not allowed to remain unconfirmed in the network forever, as this would pose a significant strain on the network's resources. Instead, <strong>all transactions have a deadline</strong>, and are automatically disposed of when the deadline arrives.</p>
+<p>Users are free to use any deadline they want for their transactions, between now and 6h into the future (48h for <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">アグリゲートボンド</span></a> transactions).</p>
+<p>Transactions which are about to expire are delicate because, even if they get confirmed and are added to the blockchain, <strong>a rollback could send them back to the unconfirmed state</strong> and their deadline could expire before they are confirmed again.</p>
+<aside class="topic">
+<p class="topic-title">Therefore, it is recommended that:</p>
+<ul>
+<li><p>Incoming transactions with a deadline <strong>less than 1h into the future</strong> are rejected with a warning message, for example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Transaction</span> <span class="pre">is</span> <span class="pre">too</span> <span class="pre">close</span> <span class="pre">to</span> <span class="pre">expiration</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">safely</span> <span class="pre">accepted.</span></code></p>
+</li>
+<li><p>Exchanges avoid using transactions with short lifespans.</p></li>
+<li><p>Exchanges actively encourage their customers to avoid using transactions with short lifespans.</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="the-example-code">
+<h3>例示コード<a class="headerlink" href="#the-example-code" title="この見出しへのパーマリンク"></a></h3>
+<p>This guide shows snippets of code to exemplify the different processes. All snippets are based on the same program that <a class="reference external" href="https://github.com/symbol/symbol-docs/tree/main/source/resources/examples/typescript/exchanges">can be found here</a>. A few notes on this example program:</p>
+<ul class="simple">
+<li><p>It uses a fake <code class="docutils literal notranslate"><span class="pre">DBService</span></code> object that simulates the Exchange database. Calls to this object should obviously be replaced by the actual Exchange infrastructure in production code. For simplicity these calls are synchronous but they could be made asynchronously too.</p></li>
+<li><p>No error handling is performed at all. Use mechanisms like <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">{}</span> <span class="pre">catch</span></code> where appropriate in production code.</p></li>
+<li><p>Finally, besides the snippets shown in the guide, the complete program also contains auxiliary code (like polling loops) in order to make it runnable and self-sufficient. This auxiliary code is not meant to be used as an inspiration at all, it is just there for convenience.</p></li>
+</ul>
+</section>
+</section>
+<section id="deposits">
+<span id="exchange-deposits"></span><h2>預け入れ<a class="headerlink" href="#deposits" title="この見出しへのパーマリンク"></a></h2>
+<figure class="align-center" id="id2">
+<a class="reference external image-reference" href="/_images/exchange-integration-deposit.png"><img alt="../../_images/exchange-integration-deposit.png" src="../../_images/exchange-integration-deposit.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>図. 2</strong>: 預け入れプロセス</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>Users perform deposits by announcing a regular transfer transaction using their wallet, moving the funds from their account directly to the Exchange Central Wallet. Since the transfer is handled entirely by the blockchain, the funds will be added to the Exchange Central Wallet without the Exchange's mediation, and this poses some problems:</p>
+<ul class="simple">
+<li><p>The <strong>intended recipient</strong> of the transaction must be determined. This is done by attaching the user's UUID as the transaction's message.</p></li>
+<li><p>The fact that a transaction has happened must be timely detected to update the user's account on the Exchange.</p></li>
+<li><p>Transactions must be <strong>finalized</strong> to be 100% sure that they will not be <a class="reference internal" href="../../concepts/block.html#rollbacks"><span class="std std-ref">rolled back</span></a>.</p></li>
+</ul>
+<p>次に提案されるコードは、ブロックチェーンの監視により、これらすべての問題に対処します。</p>
+<section id="monitoring">
+<span id="exchanges-monitoring"></span><h3>モニタリング<a class="headerlink" href="#monitoring" title="この見出しへのパーマリンク"></a></h3>
+<p>The blockchain is polled periodically and all incoming transactions since last poll are processed in a batch:</p>
+<ol class="arabic simple">
+<li><p>All <strong>Transfer</strong> transactions added to the blockchain <strong>since</strong> the last check and <strong>up to</strong> the latest finalized block are examined, looking for the ones destined to the Central Exchange Wallet. This can be done efficiently with a single Symbol API call.</p>
+<ul class="simple">
+<li><p>Transfer transactions embedded in <strong>Aggregate Complete</strong> and <strong>Aggregate Bonded</strong> transactions must also be examined (see the <a class="reference internal" href="#exchange-aggregate-transactions"><span class="std std-ref">Aggregates</span></a> section above). This is handled in the example code by the <code class="docutils literal notranslate"><span class="pre">embedded:</span> <span class="pre">true</span></code> parameter in the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.4/#operation/searchConfirmedTransactions">searchConfirmedTransactions</a> call.</p></li>
+<li><p>If Finalization is not desired (see the <a class="reference internal" href="#exchange-avoid-rollbacks"><span class="std std-ref">ロールバックの回避</span></a> section above) you can search up to 20 blocks before the current chain height, for example.</p></li>
+</ul>
+</li>
+<li><p>次のトランザクションをフィルタリング:</p>
+<ol class="loweralpha simple">
+<li><p>メッセージがない、またはメッセージが存在する UUID に対応していない。</p></li>
+<li><p>トークンを含んでいない、または <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> ではないトークン。</p></li>
+<li><p>Have already been processed (as a security measure).</p></li>
+</ol>
+</li>
+<li><p>The remaining transactions are then processed:</p>
+<ol class="loweralpha simple">
+<li><p>データベース上のユーザアカウントにトークンは追加されました。</p></li>
+<li><p>トランザクションは、そのハッシュをデータベースに追加することにより、処理済みとしてマークされます。</p></li>
+</ol>
+</li>
+<li><p>処理済みの最終ブロック高を保存し、次のポーリング期間まで待ちます。</p></li>
+</ol>
+<p>The code snippet, using <a class="reference external" href="https://symbol.github.io/symbol-sdk-typescript-javascript/1.0.0/">Symbol's TypeScript SDK</a> is this:</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/exchanges/ProcessDeposits.ts">View Code</a></span><a class="headerlink" href="#id3" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Mocks a database service</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dbService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DBServiceImpl</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="kt">ExchangeSymbolConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Replace with your node URL</span>
+<span class="w">    </span><span class="nx">apiUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Use MAIN_NET or TEST_NET</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="o">:</span><span class="w"> </span><span class="kt">NetworkType.TEST_NET</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with value from http://&lt;API-NODE-URL&gt;:3000/network/properties</span>
+<span class="w">    </span><span class="nx">networkGenerationHashSeed</span><span class="o">:</span>
+<span class="w">      </span><span class="s1">&#39;3B5E1FA6445653C971A50687E75E6D09FB30481055E3990C84B25E9222DC1155&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with the account central address</span>
+<span class="w">    </span><span class="nx">centralAccountAddress</span><span class="o">:</span><span class="w"> </span><span class="kt">Address.createFromRawAddress</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="c1">// Use 6BED913FA20223F8 for MAIN_NET or 091F837E059AE13C for TEST_NET</span>
+<span class="w">    </span><span class="nx">tokenId</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;091F837E059AE13C&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenAlias</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;symbol.xym&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenDivisibility</span><span class="o">:</span><span class="w"> </span><span class="kt">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">requiredConfirmations</span><span class="o">:</span><span class="w"> </span><span class="kt">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">useFinalization</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">apiUrl</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">chainHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createChainRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionPaginationStreamer</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Get current chain height and latest finalized block</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="kt">currentHeight</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">latestFinalizedBlock</span><span class="o">:</span><span class="w"> </span><span class="kt">finalizationBlock</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">chainHttp</span><span class="p">.</span><span class="nx">getChainInfo</span><span class="p">().</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">maxHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">useFinalization</span>
+<span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="nx">finalizationBlock.height</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="kt">currentHeight.subtract</span><span class="p">(</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">requiredConfirmations</span><span class="p">));</span>
+
+<span class="w">  </span><span class="c1">// 1. Look for confirmed transactions destined to the central account address,</span>
+<span class="w">  </span><span class="c1">// in the desired block height range.</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="kt">TransactionGroup.Confirmed</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="o">:</span><span class="w"> </span><span class="kt">config.centralAccountAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">embedded</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">order</span><span class="o">:</span><span class="w"> </span><span class="kt">Order.Asc</span><span class="p">,</span>
+<span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">TransactionType</span><span class="p">.</span><span class="nx">TRANSFER</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">fromHeight</span><span class="o">:</span><span class="w"> </span><span class="kt">dbService.getLastProcessedHeight</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">toHeight</span><span class="o">:</span><span class="w"> </span><span class="kt">maxHeight</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TransactionSearchCriteria</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">toArray</span><span class="p">()</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// 2. Exclude invalid transactions</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">[]).</span><span class="nx">filter</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">index</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">AggregateTransactionInfo</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">transactionInfo.aggregateHash</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="kt">transactionInfo.hash</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="c1">// 2.a</span>
+<span class="w">      </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">existsUser</span><span class="p">(</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="c1">// 2.b</span>
+<span class="w">      </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">toHex</span><span class="p">()</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenId</span><span class="p">.</span><span class="nx">toHex</span><span class="p">()</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">toHex</span><span class="p">()</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenAlias</span><span class="p">.</span><span class="nx">toHex</span><span class="p">())</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="c1">// 2.c</span>
+<span class="w">      </span><span class="o">!</span><span class="nx">dbService</span><span class="p">.</span><span class="nx">existsTransaction</span><span class="p">(</span><span class="nx">transactionHash</span><span class="p">,</span><span class="w"> </span><span class="nx">transactionIndex</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// 3. Record the valid deposits in the exchange database</span>
+<span class="w">  </span><span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">AggregateTransactionInfo</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">transactionInfo.aggregateHash</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="kt">transactionInfo.hash</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">index</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">amount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="p">.</span><span class="nx">compact</span><span class="p">()</span><span class="w"> </span><span class="o">/</span>
+<span class="w">      </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenDivisibility</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">recordDeposit</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">payload</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">amount</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">transactionHash</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">transactionIndex</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// 4. Store the last height that has been processed</span>
+<span class="w">  </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">setLastProcessedHeight</span><span class="p">(</span><span class="nx">maxHeight</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/exchanges/ProcessDeposits.js">View Code</a></span><a class="headerlink" href="#id4" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Mocks a database service</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dbService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DBServiceImpl_1</span><span class="p">.</span><span class="nx">DBServiceImpl</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Replace with your node URL</span>
+<span class="w">    </span><span class="nx">apiUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Use MAIN_NET or TEST_NET</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with value from http://&lt;API-NODE-URL&gt;:3000/network/properties</span>
+<span class="w">    </span><span class="nx">networkGenerationHashSeed</span><span class="o">:</span>
+<span class="w">      </span><span class="s1">&#39;3B5E1FA6445653C971A50687E75E6D09FB30481055E3990C84B25E9222DC1155&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with the account central address</span>
+<span class="w">    </span><span class="nx">centralAccountAddress</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="c1">// Use 6BED913FA20223F8 for MAIN_NET or 091F837E059AE13C for TEST_NET</span>
+<span class="w">    </span><span class="nx">tokenId</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;091F837E059AE13C&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenAlias</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;symbol.xym&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenDivisibility</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">requiredConfirmations</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">useFinalization</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">apiUrl</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">chainHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createChainRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionPaginationStreamer</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Get current chain height and latest finalized block</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="nx">currentHeight</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">latestFinalizedBlock</span><span class="o">:</span><span class="w"> </span><span class="nx">finalizationBlock</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">chainHttp</span><span class="p">.</span><span class="nx">getChainInfo</span><span class="p">().</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">maxHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">useFinalization</span>
+<span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="nx">finalizationBlock</span><span class="p">.</span><span class="nx">height</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="nx">currentHeight</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">requiredConfirmations</span><span class="p">),</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// 1. Look for confirmed transactions destined to the central account address,</span>
+<span class="w">  </span><span class="c1">// in the desired block height range.</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionGroup</span><span class="p">.</span><span class="nx">Confirmed</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="o">:</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">centralAccountAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">embedded</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">order</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Order</span><span class="p">.</span><span class="nx">Asc</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionType</span><span class="p">.</span><span class="nx">TRANSFER</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">fromHeight</span><span class="o">:</span><span class="w"> </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">getLastProcessedHeight</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">toHeight</span><span class="o">:</span><span class="w"> </span><span class="nx">maxHeight</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">toArray</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// 2. Exclude invalid transactions</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_a</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">index</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransactionInfo</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">aggregateHash</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">hash</span><span class="p">)</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_a</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">_a</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="c1">// 2.a</span>
+<span class="w">      </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">existsUser</span><span class="p">(</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="c1">// 2.b</span>
+<span class="w">      </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">toHex</span><span class="p">()</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenId</span><span class="p">.</span><span class="nx">toHex</span><span class="p">()</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">toHex</span><span class="p">()</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenAlias</span><span class="p">.</span><span class="nx">toHex</span><span class="p">())</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="c1">// 2.c</span>
+<span class="w">      </span><span class="o">!</span><span class="nx">dbService</span><span class="p">.</span><span class="nx">existsTransaction</span><span class="p">(</span><span class="nx">transactionHash</span><span class="p">,</span><span class="w"> </span><span class="nx">transactionIndex</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="c1">// 3. Record the valid deposits in the exchange database</span>
+<span class="w">  </span><span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_a</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransactionInfo</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">aggregateHash</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">hash</span><span class="p">)</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_a</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">_a</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">index</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">amount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="p">.</span><span class="nx">compact</span><span class="p">()</span><span class="w"> </span><span class="o">/</span>
+<span class="w">      </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenDivisibility</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">recordDeposit</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">payload</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">amount</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">transactionHash</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">transactionIndex</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="c1">// 4. Store the last height that has been processed</span>
+<span class="w">  </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">setLastProcessedHeight</span><span class="p">(</span><span class="nx">maxHeight</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>All configuration data is held in the <code class="docutils literal notranslate"><span class="pre">ExchangeSymbolConfig</span></code> object including the selection of the finalization mechanism.</p>
+<p>The above code snippet should be called <strong>in a loop</strong> every minute, for example, and it will process <strong>all new valid transactions</strong> that have already been finalized (or that have waited enough blocks, depending on the chosen method).</p>
+<p>However, <strong>transactions will not be reported immediately</strong>, and this might be annoying for users. Using <a class="reference internal" href="../../api.html#websockets"><span class="std std-ref">WebSockets</span></a> transactions can be monitored in real-time and a notification can be shown to the user as soon as a transaction is <strong>confirmed</strong> on the network (or even as soon as it is <strong>announced</strong> on the network).</p>
+<p>These transactions, though, should be clearly marked as <strong>pending</strong> and <strong>not acted upon</strong> until verified by the above code, to <a class="reference internal" href="#exchange-avoid-rollbacks"><span class="std std-ref">avoid rollbacks</span></a>.</p>
+<aside class="topic">
+<p class="topic-title">Related links</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">転送トランザクションリファレンス</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">モザイク (トークン) リファレンス</span></a></p></li>
+<li><p><a class="reference internal" href="../../api.html"><span class="doc">Symbol API リファレンス</span></a></p></li>
+<li><p><a class="reference internal" href="../../api.html#websockets"><span class="std std-ref">WebSockets リファレンス</span></a></p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="withdrawals">
+<span id="exchange-withdrawals"></span><h2>引き出し<a class="headerlink" href="#withdrawals" title="この見出しへのパーマリンク"></a></h2>
+<figure class="align-center" id="id5">
+<a class="reference external image-reference" href="/_images/exchange-integration-withdrawal.png"><img alt="../../_images/exchange-integration-withdrawal.png" src="../../_images/exchange-integration-withdrawal.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Fig. 3</strong>: 引き出しプロセス</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>Users send withdrawal requests to the Exchange Server, via a web page or mobile app, for example. If the database indicates that the user has enough funds to perform the withdrawal, a <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">transfer transaction</span></a> is announced from the Exchange Central Wallet to the Symbol address indicated in the request.</p>
+<p>Announcing the transaction has a <a class="reference internal" href="../../concepts/fees.html"><span class="doc">fee</span></a>, which is paid by the Exchange Central Wallet but can be deduced from the user's account. Regardless of the token being transferred, fees are always paid in XYM tokens.</p>
+<p>The withdrawal process requires two steps: First the transaction transferring the funds is <strong>announced</strong> and confirmed (added to the blockchain). Afterwards, the exchange needs to wait for the transaction to be <strong>finalized</strong>, as explained in the <a class="reference internal" href="#exchange-avoid-rollbacks"><span class="std std-ref">ロールバックの回避</span></a> section above.</p>
+<section id="announcing">
+<h3>アナウンス<a class="headerlink" href="#announcing" title="この見出しへのパーマリンク"></a></h3>
+<p>The withdrawal transaction is just a regular Symbol <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">transfer transaction</span></a>. The code looks long because it contains a lot of repeated boilerplate, to make it self-contained:</p>
+<ul class="simple">
+<li><p>設定は <code class="docutils literal notranslate"><span class="pre">ExchangeSymbolConfig</span></code> オブジェクトに保存されます。</p></li>
+<li><p>多くのリポジトリは <code class="docutils literal notranslate"><span class="pre">RepositoryFactoryHttp</span></code> クラスを介してインスタンス化されます。</p></li>
+<li><p>The withdrawal details are retrieved from environment variables in this example.</p></li>
+</ul>
+<p>Then:</p>
+<ol class="arabic simple">
+<li><p>実際のトランザクションは <code class="docutils literal notranslate"><span class="pre">TransferTransaction.create</span></code> を使用して作成します。</p></li>
+<li><p>トランザクションは署名済みです。</p></li>
+<li><p>The signed transaction is announced using the <code class="docutils literal notranslate"><span class="pre">TransactionService</span></code> to simplify waiting for its confirmation.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/exchanges/SendWithdrawal.ts">View Code</a></span><a class="headerlink" href="#id6" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Mocks a database service</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dbService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DBServiceImpl</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Exchange configuration</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="kt">ExchangeSymbolConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Replace with your node URL</span>
+<span class="w">    </span><span class="nx">apiUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Use MAIN_NET or TEST_NET</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="o">:</span><span class="w"> </span><span class="kt">NetworkType.TEST_NET</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with value from http://&lt;API-NODE-URL&gt;:3000/network/properties</span>
+<span class="w">    </span><span class="nx">networkGenerationHashSeed</span><span class="o">:</span>
+<span class="w">      </span><span class="s1">&#39;3B5E1FA6445653C971A50687E75E6D09FB30481055E3990C84B25E9222DC1155&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with the account central address</span>
+<span class="w">    </span><span class="nx">centralAccountAddress</span><span class="o">:</span><span class="w"> </span><span class="kt">Address.createFromRawAddress</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="c1">// Use 6BED913FA20223F8 for MAIN_NET or 091F837E059AE13C for TEST_NET</span>
+<span class="w">    </span><span class="nx">tokenId</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;091F837E059AE13C&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenAlias</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;symbol.xym&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenDivisibility</span><span class="o">:</span><span class="w"> </span><span class="kt">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">requiredConfirmations</span><span class="o">:</span><span class="w"> </span><span class="kt">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">useFinalization</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="c1">// Repositories</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">apiUrl</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">chainHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createChainRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionService</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createReceiptRepository</span><span class="p">(),</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionPaginationStreamer</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Replace with exchange account private key</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">exchangeAccountPrivateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PRIVATE_KEY</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">exchangeAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">exchangeAccountPrivateKey</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Replace with destination address from user&#39;s request</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">userRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">RECIPIENT_ADDRESS</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">userAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">userRawAddress</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Replace with the source UUID from user&#39;s request</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">UUID</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Replace with amount of tokens to transfer from user&#39;s request</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">relativeAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AMOUNT</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kt">string</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Check that the user has enough funds</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">dbService</span><span class="p">.</span><span class="nx">getUserAmount</span><span class="p">(</span><span class="nx">uuid</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenId</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">relativeAmount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;User &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">uuid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; does not have enough funds.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// 1. Create withdrawal transaction</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">absoluteAmount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="nx">relativeAmount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenDivisibility</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenId</span><span class="p">,</span><span class="w"> </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">absoluteAmount</span><span class="p">));</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">epochAdjustment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">repositoryFactory</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">getEpochAdjustment</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">withdrawalTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">userAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">token</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">EmptyMessage</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">200000</span><span class="p">),</span><span class="w"> </span><span class="c1">// Fixed max fee of 0.2 XYM</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 2. Sign transaction</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">exchangeAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">withdrawalTransaction</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">networkGenerationHashSeed</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 3. Announce transaction and wait for confirmation</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Announcing transaction&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionService</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">,</span><span class="w"> </span><span class="nx">listener</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">&#39;Transaction confirmed at height&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="o">?</span><span class="p">.</span><span class="nx">height</span><span class="p">.</span><span class="nx">compact</span><span class="p">()</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/exchanges/SendWithdrawal.js">View Code</a></span><a class="headerlink" href="#id7" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Mocks a database service</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dbService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DBServiceImpl_1</span><span class="p">.</span><span class="nx">DBServiceImpl</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// Exchange configuration</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Replace with your node URL</span>
+<span class="w">    </span><span class="nx">apiUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Use MAIN_NET or TEST_NET</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with value from http://&lt;API-NODE-URL&gt;:3000/network/properties</span>
+<span class="w">    </span><span class="nx">networkGenerationHashSeed</span><span class="o">:</span>
+<span class="w">      </span><span class="s1">&#39;3B5E1FA6445653C971A50687E75E6D09FB30481055E3990C84B25E9222DC1155&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Replace with the account central address</span>
+<span class="w">    </span><span class="nx">centralAccountAddress</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="c1">// Use 6BED913FA20223F8 for MAIN_NET or 091F837E059AE13C for TEST_NET</span>
+<span class="w">    </span><span class="nx">tokenId</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;091F837E059AE13C&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenAlias</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;symbol.xym&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">tokenDivisibility</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">requiredConfirmations</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">useFinalization</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="c1">// Repositories</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">apiUrl</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">chainHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createChainRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionService</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createReceiptRepository</span><span class="p">(),</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionPaginationStreamer</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Replace with exchange account private key</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">exchangeAccountPrivateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PRIVATE_KEY</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">exchangeAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">exchangeAccountPrivateKey</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Replace with destination address from user&#39;s request</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">userRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">RECIPIENT_ADDRESS</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">userAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">userRawAddress</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Replace with the source UUID from user&#39;s request</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">UUID</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Replace with amount of tokens to transfer from user&#39;s request</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">relativeAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AMOUNT</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Check that the user has enough funds</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">dbService</span><span class="p">.</span><span class="nx">getUserAmount</span><span class="p">(</span><span class="nx">uuid</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenId</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">relativeAmount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;User &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">uuid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; does not have enough funds.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// 1. Create withdrawal transaction</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">absoluteAmount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="nx">relativeAmount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenDivisibility</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenId</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">absoluteAmount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">epochAdjustment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">repositoryFactory</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">getEpochAdjustment</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">withdrawalTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">userAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">token</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">EmptyMessage</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">200000</span><span class="p">),</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// 2. Sign transaction</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">exchangeAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">withdrawalTransaction</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">networkGenerationHashSeed</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// 3. Announce transaction and wait for confirmation</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Announcing transaction&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionService</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">,</span><span class="w"> </span><span class="nx">listener</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">&#39;Transaction confirmed at height&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">_b</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">_a</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">_a</span><span class="p">.</span><span class="nx">height</span><span class="p">.</span><span class="nx">compact</span><span class="p">())</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_b</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">      </span><span class="o">?</span><span class="w"> </span><span class="nx">_b</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="topic">
+<p class="topic-title">Multi-signature accounts</p>
+<p>When the Exchange Central Wallet is a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">multi-signature account</span></a> announcing the transaction is slightly more complex, as it involves the central wallet and its cosignatories. See the following resources:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../aggregate/sending-a-multisig-transaction.html"><span class="doc">マルチシグトランザクションの送信</span></a>.</p></li>
+<li><p><a class="reference internal" href="../aggregate/signing-announced-aggregate-bonded-transactions.html"><span class="doc">アグリゲートボンデッドトランザクションの連署</span></a>.</p></li>
+<li><p><a class="reference internal" href="../aggregate/signing-announced-aggregate-bonded-transactions-automatically.html"><span class="doc">自動的なアグリゲートボンデッドトランザクションの署名</span></a>.</p></li>
+</ul>
+</aside>
+<p>Once the transaction is confirmed, the next step is to wait for it to be <strong>finalized</strong> to make sure it cannot be reverted. Until then, it should be marked as <strong>pending</strong> and <strong>not acted upon</strong>.</p>
+</section>
+<section id="finalization">
+<h3>ファイナライゼーション<a class="headerlink" href="#finalization" title="この見出しへのパーマリンク"></a></h3>
+<p>Waiting for finalization is performed in a manner very similar to how incoming deposits are monitored (see <a class="reference internal" href="#exchange-deposits"><span class="std std-ref">預け入れ</span></a> above): The blockchain is polled periodically and all transactions since the last check are processed in a batch, looking for outgoing transfers which have already been finalized.</p>
+<p>The following code snippet should be run in a loop every minute, for example, and it will search for finalized withdrawal operations from the Exchange and record them in the Exchange's database.</p>
+<p>このスニペットは <a class="reference internal" href="#exchange-deposits"><span class="std std-ref">上記で述べた</span></a> 同じループで実行します。</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/exchanges/SendWithdrawal.ts">View Code</a></span><a class="headerlink" href="#id8" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">// Get current chain height and latest finalized block</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="kt">currentHeight</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">latestFinalizedBlock</span><span class="o">:</span><span class="w"> </span><span class="kt">finalizationBlock</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">chainHttp</span><span class="p">.</span><span class="nx">getChainInfo</span><span class="p">().</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">maxHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">useFinalization</span>
+<span class="w">      </span><span class="o">?</span><span class="w"> </span><span class="nx">finalizationBlock.height</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="kt">currentHeight.subtract</span><span class="p">(</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">requiredConfirmations</span><span class="p">));</span>
+
+<span class="w">    </span><span class="c1">// Bail out if there have been no new (final) transactions since last check</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">lastProcessedHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">getLastProcessedHeight</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lastProcessedHeight</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">maxHeight</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Look for confirmed transactions signed by the central account address,</span>
+<span class="w">    </span><span class="c1">// in the desired block height range.</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="kt">TransactionGroup.Confirmed</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">signerPublicKey</span><span class="o">:</span><span class="w"> </span><span class="kt">exchangeAccount.publicKey</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">embedded</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">order</span><span class="o">:</span><span class="w"> </span><span class="kt">Order.Asc</span><span class="p">,</span>
+<span class="w">      </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">TransactionType</span><span class="p">.</span><span class="nx">TRANSFER</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">fromHeight</span><span class="o">:</span><span class="w"> </span><span class="kt">lastProcessedHeight.add</span><span class="p">(</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">toHeight</span><span class="o">:</span><span class="w"> </span><span class="kt">maxHeight</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TransactionSearchCriteria</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">toArray</span><span class="p">()</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;Processing&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">[]).</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">      </span><span class="s1">&#39;entries from height&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">searchCriteria</span><span class="p">.</span><span class="nx">fromHeight</span><span class="o">?</span><span class="p">.</span><span class="nx">compact</span><span class="p">(),</span>
+<span class="w">      </span><span class="s1">&#39;to&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">searchCriteria</span><span class="p">.</span><span class="nx">toHeight</span><span class="o">?</span><span class="p">.</span><span class="nx">compact</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Record the valid withdrawals in the exchange database</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">[]).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">AggregateTransactionInfo</span>
+<span class="w">          </span><span class="o">?</span><span class="w"> </span><span class="nx">transactionInfo.aggregateHash</span>
+<span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="kt">transactionInfo.hash</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">amount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="p">.</span><span class="nx">compact</span><span class="p">()</span><span class="w"> </span><span class="o">/</span>
+<span class="w">        </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenDivisibility</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">recordWithdrawal</span><span class="p">(</span><span class="nx">uuid</span><span class="p">,</span><span class="w"> </span><span class="nx">amount</span><span class="p">,</span><span class="w"> </span><span class="nx">transactionHash</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Store the last height that has been processed</span>
+<span class="w">    </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">setLastProcessedHeight</span><span class="p">(</span><span class="nx">maxHeight</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/exchanges/SendWithdrawal.js">View Code</a></span><a class="headerlink" href="#id9" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">// Get current chain height and latest finalized block</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="nx">currentHeight</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">latestFinalizedBlock</span><span class="o">:</span><span class="w"> </span><span class="nx">finalizationBlock</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">chainHttp</span><span class="p">.</span><span class="nx">getChainInfo</span><span class="p">().</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">maxHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">useFinalization</span>
+<span class="w">      </span><span class="o">?</span><span class="w"> </span><span class="nx">finalizationBlock</span><span class="p">.</span><span class="nx">height</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="nx">currentHeight</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">requiredConfirmations</span><span class="p">),</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Bail out if there have been no new (final) transactions since last check</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">lastProcessedHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">getLastProcessedHeight</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lastProcessedHeight</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">maxHeight</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Look for confirmed transactions signed by the central account address,</span>
+<span class="w">    </span><span class="c1">// in the desired block height range.</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionGroup</span><span class="p">.</span><span class="nx">Confirmed</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">signerPublicKey</span><span class="o">:</span><span class="w"> </span><span class="nx">exchangeAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">embedded</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">order</span><span class="o">:</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Order</span><span class="p">.</span><span class="nx">Asc</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionType</span><span class="p">.</span><span class="nx">TRANSFER</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">fromHeight</span><span class="o">:</span><span class="w"> </span><span class="nx">lastProcessedHeight</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">toHeight</span><span class="o">:</span><span class="w"> </span><span class="nx">maxHeight</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionPaginationStreamer</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">toArray</span><span class="p">())</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;Processing&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">      </span><span class="s1">&#39;entries from height&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="p">.</span><span class="nx">fromHeight</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">_a</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">_a</span><span class="p">.</span><span class="nx">compact</span><span class="p">(),</span>
+<span class="w">      </span><span class="s1">&#39;to&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="p">.</span><span class="nx">toHeight</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">_b</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">_b</span><span class="p">.</span><span class="nx">compact</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Record the valid withdrawals in the exchange database</span>
+<span class="w">    </span><span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">_a</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">transactionInfo</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">transactionInfo</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="nx">transactionInfo</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransactionInfo</span>
+<span class="w">          </span><span class="o">?</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">aggregateHash</span>
+<span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transactionInfo</span><span class="p">.</span><span class="nx">hash</span><span class="p">)</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_a</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">          </span><span class="o">?</span><span class="w"> </span><span class="nx">_a</span>
+<span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">amount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="p">.</span><span class="nx">compact</span><span class="p">()</span><span class="w"> </span><span class="o">/</span>
+<span class="w">        </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">tokenDivisibility</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">recordWithdrawal</span><span class="p">(</span><span class="nx">uuid</span><span class="p">,</span><span class="w"> </span><span class="nx">amount</span><span class="p">,</span><span class="w"> </span><span class="nx">transactionHash</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="c1">// Store the last height that has been processed</span>
+<span class="w">    </span><span class="nx">dbService</span><span class="p">.</span><span class="nx">setLastProcessedHeight</span><span class="p">(</span><span class="nx">maxHeight</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="topic">
+<p class="topic-title">Related links</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../concepts/transaction.html"><span class="doc">トランザクションのライフサイクル</span></a></p></li>
+<li><p><a class="reference internal" href="../../concepts/fees.html"><span class="doc">手数料リファレンス</span></a></p></li>
+<li><p><a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">プログラム的に転送トランザクションをアナウンスする方法</span></a></p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="further-information">
+<h2>さらに詳しい情報<a class="headerlink" href="#further-information" title="この見出しへのパーマリンク"></a></h2>
+<p>より詳しい情報は次のページを参照してください:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../blockchain/global-mosaic-supply.html"><span class="doc">Retrieving the global mosaic supply</span></a>.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;21</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/exchanges/exchange-integration.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">交換所の統合</a><ul>
+<li><a class="reference internal" href="#integration-overview">統合の概要</a><ul>
+<li><a class="reference internal" href="#components">コンポーネント</a><ul>
+<li><a class="reference internal" href="#central-wallet">中央ウォレット</a></li>
+<li><a class="reference internal" href="#cold-wallet">コールドウォレット</a></li>
+<li><a class="reference internal" href="#unique-user-id">一意なユーザ ID</a></li>
+<li><a class="reference internal" href="#exchange-server">交換所サーバ</a></li>
+<li><a class="reference internal" href="#exchange-database">交換所データベース</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-a-node">ノードの立ち上げ</a></li>
+<li><a class="reference internal" href="#accounts-setup">アカウントのセットアップ</a></li>
+<li><a class="reference internal" href="#the-xym-token">XYM トークン</a></li>
+<li><a class="reference internal" href="#aggregates">Aggregates</a></li>
+<li><a class="reference internal" href="#avoiding-rollbacks">ロールバックの回避</a><ul>
+<li><a class="reference internal" href="#using-finalization">ファイナライゼーションの使用</a></li>
+<li><a class="reference internal" href="#using-a-fixed-wait">固定待機の使用</a></li>
+<li><a class="reference internal" href="#deadlines">期限</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-example-code">例示コード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deposits">預け入れ</a><ul>
+<li><a class="reference internal" href="#monitoring">モニタリング</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#withdrawals">引き出し</a><ul>
+<li><a class="reference internal" href="#announcing">アナウンス</a></li>
+<li><a class="reference internal" href="#finalization">ファイナライゼーション</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#further-information">さらに詳しい情報</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;21.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;21.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

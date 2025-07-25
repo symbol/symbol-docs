@@ -1,0 +1,154 @@
+<!-- File generated using catapult-docs-cli -->
+Network configuration settings.<br/>
+<small>From <code class="docutils literal"><span class="pre">resources/config-network.properties</span></code> v1.0.2.0
+</small>
+
+<table class="docutils" style="width:100%; table-layout:fixed;"><thead valign="bottom"><tr class="row-even"><th class="head" style="width:35%">Property</th><th class="head" style="width:35%">Type</th><th class="head" style="width:15%">Default value<br/>PRIVATE</th><th class="head" style="width:15%">Default value<br/>MAINNET</th></tr></thead><tbody valign="top">
+
+<tr><td colspan=4><b>network</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">identifier</span></code></td><td><code class="docutils literal"><span class="pre">NetworkIdentifier</span></code></td><td>private-test</td><td>public</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Network identifier.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">nodeEqualityStrategy</span></code></td><td><code class="docutils literal"><span class="pre">NodeIdentityEqualityStrategy</span></code></td><td>host</td><td>host</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Node equality strategy.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">nemesisSignerPublicKey</span></code></td><td><code class="docutils literal"><span class="pre">Key</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis public key.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">generationHashSeed</span></code></td><td><code class="docutils literal"><span class="pre">catapult::GenerationHashSeed</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis generation hash seed.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">epochAdjustment</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>1573430400s</td><td>1615853185s</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Nemesis epoch time adjustment.</small></td></tr>
+<tr><td colspan=4><b>chain</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableVerifiableState</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate state hashes so that state is fully verifiable at each block.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableVerifiableReceipts</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if block chain should calculate receipts so that state changes are fully verifiable at each block.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">currencyMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used as primary chain currency.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestingMosaicId</span></code></td><td><code class="docutils literal"><span class="pre">MosaicId</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic id used to provide harvesting ability.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">blockGenerationTargetTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>30s</td><td>30s</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Targeted time between blocks.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">blockTimeSmoothingFactor</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>3000</td><td>3000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Smoothing factor in thousandths. If this value is non-zero, the network will be biased in favor of evenly spaced blocks. <br/><b>Note</b>: A higher value makes the network more biased. <br/><b>Note</b>: This can lower security because it will increase the influence of time relative to importance.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">importanceGrouping</span></code></td><td><code class="docutils literal"><span class="pre">uint64_t</span></code></td><td>39</td><td>720</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Number of blocks that should be treated as a group for importance purposes. <br/><b>Note</b>: Importances will only be calculated at blocks that are multiples of this grouping number.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">importanceActivityPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>5</td><td>5</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of importance resulting from fee generation and beneficiary usage.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxRollbackBlocks</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>40</td><td>0</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks that can be rolled back.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxDifficultyBlocks</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>60</td><td>60</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks to use in a difficulty calculation.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">defaultDynamicFeeMultiplier</span></code></td><td><code class="docutils literal"><span class="pre">BlockFeeMultiplier</span></code></td><td>10'000</td><td>100</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Default multiplier to use for dynamic fees.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxTransactionLifetime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>24h</td><td>6h</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum lifetime a transaction can have before it expires.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxBlockFutureTime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>500ms</td><td>300ms</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum future time of a block that can be accepted.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">initialCurrencyAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>8'999'999'998'000'000</td><td>7'842'928'625'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Initial currency atomic units available in the network.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMosaicAtomicUnits</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>9'000'000'000'000'000</td><td>8'999'999'999'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum atomic units (total-supply * 10 ^ divisibility) of a mosaic allowed in the network.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">totalChainImportance</span></code></td><td><code class="docutils literal"><span class="pre">Importance</span></code></td><td>17'000'000</td><td>7'842'928'625'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Total whole importance units available in the network.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minHarvesterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>10'000'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxHarvesterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>4'000'000</td><td>50'000'000'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of harvesting mosaic atomic units needed for an account to be eligible for harvesting.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minVoterBalance</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>50'000</td><td>3'000'000'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of harvesting mosaic atomic units needed for an account to be eligible for voting.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">votingSetGrouping</span></code></td><td><code class="docutils literal"><span class="pre">uint64_t</span></code></td><td>78</td><td>1440</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Number of blocks that should be treated as a group for voting set purposes. <br/><b>Note</b>: Voting sets will only be calculated at blocks that are multiples of this grouping number.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxVotingKeysPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>3</td><td>3</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of voting keys that can be registered at once per account.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minVotingKeyLifetime</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>72</td><td>112</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum number of finalization rounds for which voting key can be registered.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxVotingKeyLifetime</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>26280</td><td>360</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of finalization rounds for which voting key can be registered.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestBeneficiaryPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>10</td><td>25</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of the harvested fee that is collected by the beneficiary account.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestNetworkPercentage</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>5</td><td>5</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Percentage of the harvested fee that is collected by the network.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">harvestNetworkFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the harvest network fee sink account.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxTransactionsPerBlock</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>200'000</td><td>6'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of transactions per block.</small></td></tr>
+<tr><td colspan=4><b>fork_heights</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">totalVotingBalanceCalculationFix</span></code></td><td><code class="docutils literal"><span class="pre">Height</span></code></td><td>528'000</td><td>528'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Height of fork to fix TotalVotingBalance calculation.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.accountlink</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">dummy</span></code></td><td></td><td>to trigger plugin load</td><td>to trigger plugin load</td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.aggregate</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxTransactionsPerAggregate</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>1'000</td><td>100</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of transactions per aggregate.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxCosignaturesPerAggregate</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>15</td><td>25</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of cosignatures per aggregate.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableStrictCosignatureCheck</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>false</td><td>false</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if cosignatures must exactly match component signers. <code class="docutils literal"><span class="pre">false</span></code> if cosignatures should be validated externally.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">enableBondedAggregateSupport</span></code></td><td><code class="docutils literal"><span class="pre">bool</span></code></td><td>true</td><td>true</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small><code class="docutils literal"><span class="pre">true</span></code> if bonded aggregates should be allowed. <code class="docutils literal"><span class="pre">false</span></code> if bonded aggregates should be rejected.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxBondedTransactionLifetime</span></code></td><td><code class="docutils literal"><span class="pre">utils::TimeSpan</span></code></td><td>48h</td><td>48h</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum lifetime a bonded transaction can have before it expires.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.lockhash</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">lockedFundsPerAggregate</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>10'000'000</td><td>10'000'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Amount that has to be locked per aggregate in partial cache.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxHashLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>2d</td><td>2d</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks for which a hash lock can exist.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.locksecret</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxSecretLockDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>30d</td><td>365d</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of blocks for which a secret lock can exist.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minProofSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1</td><td>0</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum size of a proof in bytes.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxProofSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1000</td><td>1024</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum size of a proof in bytes.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.metadata</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxValueSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1024</td><td>1024</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum metadata value size.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.mosaic</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMosaicsPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>10'000</td><td>1'000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of mosaics that an account can own.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMosaicDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>3650d</td><td>3650d</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum mosaic duration.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMosaicDivisibility</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>6</td><td>6</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum mosaic divisibility.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">mosaicRentalFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the mosaic rental fee sink account.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">mosaicRentalFee</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>500</td><td>500000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Mosaic rental fee.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.multisig</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMultisigDepth</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>3</td><td>3</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of multisig levels.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxCosignatoriesPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>10</td><td>25</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of cosignatories per account.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxCosignedAccountsPerAccount</span></code></td><td><code class="docutils literal"><span class="pre">uint32_t</span></code></td><td>5</td><td>25</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of accounts a single account can cosign.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.namespace</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxNameSize</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>64</td><td>64</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum namespace name size.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxChildNamespaces</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>500</td><td>100</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of children for a root namespace.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxNamespaceDepth</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>3</td><td>3</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum namespace depth.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">minNamespaceDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>1m</td><td>30d</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Minimum namespace duration.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxNamespaceDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>365d</td><td>1825d</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum namespace duration.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">namespaceGracePeriodDuration</span></code></td><td><code class="docutils literal"><span class="pre">utils::BlockSpan</span></code></td><td>2m</td><td>30d</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Grace period during which time only the previous owner can renew an expired namespace.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">reservedRootNamespaceNames</span></code></td><td><code class="docutils literal"><span class="pre">unordered_set<string></span></code></td><td>xem, nem, user, account, org, com, biz, net, edu, mil, gov, info</td><td>symbol, symbl, xym, xem, nem, user, account, org, com, biz, net, edu, mil, gov, info</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Reserved root namespaces that cannot be claimed.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">namespaceRentalFeeSinkAddress</span></code></td><td><code class="docutils literal"><span class="pre">Address</span></code></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Address of the namespace rental fee sink account.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">rootNamespaceRentalFeePerBlock</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>1</td><td>2</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Root namespace rental fee per block.</small></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">childNamespaceRentalFee</span></code></td><td><code class="docutils literal"><span class="pre">Amount</span></code></td><td>100</td><td>100000</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Child namespace rental fee.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.restrictionaccount</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxAccountRestrictionValues</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>512</td><td>100</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of account restriction values.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.restrictionmosaic</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMosaicRestrictionValues</span></code></td><td><code class="docutils literal"><span class="pre">uint8_t</span></code></td><td>20</td><td>20</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum number of mosaic restriction values.</small></td></tr>
+<tr><td colspan=4><b>plugin:catapult.plugins.transfer</b></td><td></td><td></td><td></td></tr>
+<tr><td><code class="docutils literal"><span class="pre">maxMessageSize</span></code></td><td><code class="docutils literal"><span class="pre">uint16_t</span></code></td><td>1024</td><td>1024</td></tr>
+<tr><td colspan="4" style="border-top: none; padding-left:32px"><small>Maximum transaction message size.</small></td></tr>
+</tbody></table>
+

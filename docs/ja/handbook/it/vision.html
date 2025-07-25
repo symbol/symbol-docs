@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Vision: Symbol² &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Vision: Symbol²" href="../ja/vision.html" />
+    <link rel="prev" title="Vision: Symbol²" href="../id/vision.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="active">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/it/vision.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/it/vision.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../vision.html">Vision: Symbol²</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../es/vision.html">Español</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../id/vision.html">Bahasa Indonesia</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Italiano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ja/vision.html">日本語</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pt/vision.html">Português</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ru/vision.html">Русский</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../zh/vision.html">中文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ko/vision.html">한국어</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../vision.html">Vision: Symbol²</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../es/vision.html">Español</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../id/vision.html">Bahasa Indonesia</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Italiano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ja/vision.html">日本語</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pt/vision.html">Português</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ru/vision.html">Русский</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../zh/vision.html">中文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ko/vision.html">한국어</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="vision-symbol2">
+<h1>Vision: Symbol²<a class="headerlink" href="#vision-symbol2" title="この見出しへのパーマリンク"></a></h1>
+<p class="h1centered">Riflessioni dei Pirati Spaziali</p>
+<figure class="align-center" id="id21">
+<img alt="../../_images/ship cover blank.png" src="../../_images/ship cover blank.png" style="width: 600px;" />
+<figcaption>
+<p><span class="caption-text">Versione 1.0</span><a class="headerlink" href="#id21" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<section id="prefazione">
+<h2>Prefazione<a class="headerlink" href="#prefazione" title="この見出しへのパーマリンク"></a></h2>
+<p>Prima di iniziare definiamo quale sarà la nostra ancora. Gli scopi e le missioni possono cambiare al cambiare dei capitani e delle maree ma l’ancora è quella che ci tiene saldi. Nei momenti di difficoltà, di frustrazione, di incertezza puoi sempre tornare alla tua ancora per metterli nella giusta prospettiva o per ricordarti del perché siamo qui.</p>
+<p>La nostra ancora è, e sempre sarà, <strong>Symbol</strong>. Così come i progetti ci hanno preceduto (ed i tanti che seguiranno), noi crediamo che la blockchain sia la tecnologia più adatta ad alimentare una <em>nuova economia</em> - e <strong>Symbol</strong> è il nostro contributo a questo scopo. Come protocollo, è caratterizzato da un algoritmo di consenso che cerca di premiare gli <em>utenti</em> della chain piuttosto che chi accumula ricchezza. Come sistema è caratterizzato da un’architettura che consente di estenderne le funzionalità tramite lo sviluppo di plugin, e non tramite lo sviluppo di codici operativi in una macchina virtuale deterministica <a class="footnote-reference brackets" href="#id11" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Per quanto semplici, queste due caratteristiche aiutano a definire la nostra filosofia di progetto - che è utente-centrica e orientata ai servizi. Noi crediamo che la blockchain sia una tecnologia che pone l’uomo al centro, e tutto quello che facciamo con <strong>Symbol</strong> deve seguire questo principio.</p>
+<p>Questo documento non è concepito per essere un whitepaper; un lightpaper; un documento di business e nemmeno un manifesto. La tecnologia orientata all’uomo è definita dai suoi <em>utenti</em>, in fondo, e noi intendiamo definire, progettare e sviluppare <strong>Symbol</strong> proprio insieme alla sua comunità. Quindi, pensa a questo documento come ad una Stella Polare che useremo per navigare - perché mentre l’ancora ci può tenere saldi, sono le stelle che ci guideranno nel raggiungere nuove terre.</p>
+<p>~GHJ</p>
+</section>
+<section id="il-futuro-di-symbol-e-nis1">
+<h2>Il futuro di Symbol e NIS1<a class="headerlink" href="#il-futuro-di-symbol-e-nis1" title="この見出しへのパーマリンク"></a></h2>
+<p>Alla base di ogni protocollo di successo c’è una rivoluzione, può essere una rivoluzione nell’infrastruttura dei pagamenti (Bitcoin); una rivoluzione nel cloud computing (Ethereum); una rivoluzione nello storage distribuito (Arweave); o una rivoluzione nelle reti wireless (Helium). <strong>Symbol</strong> cerca di rivoluzionare le <em>economie</em> - sia esistenti, che emergenti - fornendo un mercato efficiente per le operazioni che consenta agli utenti di definire e scambiare <em>valore</em> sotto forma di token digitali.</p>
+<p>Questi mercati sono rappresentati da piccole, specifiche chain (subChain) che sono ancorate ad un livello di consenso (mainChain) attraverso la registrazione di roll-up, in parte, basati su zero-knowledge proof. Ogni subChain è caratterizzata dal proprio utility token (un mosaico) che viene dato come ricompensa ai nodi che producono nuovi blocchi (harvester di blocchi). Questi utility token possono essere messi in staking (il nodo può fungere da liquidity provider) o scambiati con beni e servizi (attraverso applicazioni decentralizzate o exchange decentralizzati).</p>
+<p>Il liquidity provider è un nuovo tipo di servizio che un nodo può fornire, accettando lo scambio di un mosaico per un altro (coppia di token). Se un nodo sceglie di fungere da liquidity provider, deve mantenere un ammontare di <em>almeno</em> un token di una subChain oltre agli XYM. Un liquidity provider efficiente manterrà un assortimento di diversi token e coppie. Così facendo, un nodo può consentire le richieste di swap (un nuovo tipo di transazione) che definisce delle fee aggiuntive.</p>
+<p>Affinché le transazioni possano essere finalizzate nel <em>settlement layer</em>, è richiesto l’utility token della mainChain (XYM). Tutti i nodi di ogni subChain devono possedere degli XYM per poter prendere parte al processo di roll-up (e quindi ricevere una parte delle ricompense per la creazione dei blocchi). I nodi possono scegliere di specializzarsi in un sottoinsieme specifico di transazioni (ad esempio le validity proof o le stablecoin). Altri potrebbero invece delegare ad un consorzio - un cluster gestito di nodi che vengono allocati ad un insieme di subChain sulla base dell’utilizzo corrente della rete.</p>
+<p>Una delle prime subChain di cui è previsto il lancio su <strong>Symbol</strong> sarà NIS1 ed il suo token nativo XEM. Con NIS1 verranno introdotti due concetti - <em>royalty</em> e <em>tasse</em>. Derivati dalla <em>levy</em> di NIS1, le royalty prevedono che una data percentuale di un token sia pagata ad un account ogni volta che avviene uno scambio; le tasse sono un importo fisso che viene pagato ad ogni scambio. Entrambi i tipi di transazioni saranno definiti in XEM ma potranno essere scambiati per XYM (o per il token di un’altra subChain) grazie ad un liquidity provider.</p>
+<p>L’affermazione della creator economy ha determinato l'aumento dell’uso della blockchain per lo scambio di altri tipi di beni oltre ai semplici identificativi crittografici. In particolare, gli NTF ed i collezionabili digitali hanno dato la possibilità agli artisti di utilizzare modelli di vendita diretta ai fan. Ciononostante, l’immagazzinamento dei dati resta oggi un problema in molte chain in quanto i contenuti vengono raramente salvati <em>on-chain</em>. Lo standard più comunemente utilizzato in Ethereum, “ERC-721”, non pone restrizioni riguardo dove il creatore debba immagazzinare i dati (cioè il file audio, l’immagine o il video). Nonostante l’affermazione del <em>permaweb</em> <a class="footnote-reference brackets" href="#id12" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> e dei servizi di storage decentralizzati <a class="footnote-reference brackets" href="#id13" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>, abbiano fornito una soluzione appropriata al problema della permanenza dei dati, la separazione del dato dal token stesso causa una debole garanzia di proprietà introducendo il rischio che diversi token facciano riferimento allo stesso dato o che il dato immagazzinato venga modificato senza permesso.</p>
+<p>Una soluzione a questo problema può essere una serie di subChain dedicate all’immagazzinamento dei contenuti, in cui i mosaici sono una rappresentazione di un dato file. I potenziali acquirenti e le dApp possono generare prove di validità per un determinato contenuto che ne dimostrino sia l’autenticità che la provenienza. Una volta effettuato l’acquisto, una prova di validità ed un token potranno consentire di decifrare l’effettivo dato. Una soluzione più semplice potrebbero essere subChains dedicate che facciano da ponte verso fornitori decentralizzati di storage, consentendo ai nodi di fungere a fornitori di storage dedicati e di essere remunerati per questo servizio. La persistenza del dato viene quindi a dipendere dal funzionamento della chain, piuttosto che da servizi eterogenei.</p>
+<p>Mentre il progetto ibrido iniziale di <strong>Symbol</strong> vedeva l’interazione di chain pubbliche e private attraverso scambi atomici, l’introduzione delle subChain fornisce una soluzione più elegante al problema della persistenza dei dati e di reti dedicate a specifici contenuti. Il potenziale nascosto della blockchain pubblica è uno stato condiviso globale di cui ogni utente è amministratore <a class="footnote-reference brackets" href="#id14" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>, ma le limitazioni pratiche sia fisiche che tecnologiche rendono questo obiettivo difficile per una singola blockchain pubblica. Dando la possibilità agli operatori di fornire servizi diversi sulla base della richiesta del mercato e delle caratteristiche di ogni nodo, il throughput della rete diventa additivo invece che dipendere dal singolo componente del sistema.</p>
+<p>Il futuro di <strong>Symbol</strong> lo vede come un crocevia di livelli intercambiabili al centro di un universo di chain su misura senza vincoli di scalabilità globale. Le subChain sono il primo passo in questa direzione.</p>
+</section>
+<section id="la-struttura-del-sistema-e-le-corporazioni">
+<h2>La struttura del sistema e le corporazioni<a class="headerlink" href="#la-struttura-del-sistema-e-le-corporazioni" title="この見出しへのパーマリンク"></a></h2>
+<p>Nella teoria aziendale, l’innovazione dirompente è definita come un'innovazione che crea un nuovo mercato e una rete di valori e alla fine, sostituisce le aziende, i prodotti e le alleanze leader di mercato consolidati <a class="footnote-reference brackets" href="#id15" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. Queste innovazioni tendono ad essere prodotte da piccoli gruppi di individui auto-organizzati <a class="footnote-reference brackets" href="#id16" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>, piuttosto che da grandi gruppi o corporazioni esistenti. Il processo di rottura con il passato richiede più tempo rispetto all'approccio convenzionale, ed il rischio di fallimento è maggiore. Tuttavia, in caso di successo, una volta implementate queste tecnologie tendono a diffondersi più velocemente e ad avere un impatto maggiore di altre.</p>
+<p>È risaputo che le strutture centralizzate sono spesso in contrasto con lo sviluppo di sistemi decentralizzati. L'introduzione di Bitcoin è stata una risposta diretta ad i sistematici fallimenti di un'autorità centralizzata, e da allora la distribuzione del potere è rimasta un obiettivo di progettazione di tutte le reti blockchain fino ad oggi.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Il volano dell'ecosistema</p>
+<figure class="align-center">
+<img alt="../../_images/Symbol Venn Diagram 1.png" src="../../_images/Symbol Venn Diagram 1.png" style="width: 600px;" />
+</figure>
+</aside>
+<p>Indipendentemente da ciò, la centralizzazione si verifica naturalmente dopo un periodo di tempo <a class="footnote-reference brackets" href="#id17" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>, sia come conseguenza della specializzazione che come conseguenza dell’economia di scala.</p>
+<p>Questo si è dimostrato vero sia per il proof-of-work (attraverso le mining pool, concentrazione di hashrate ed hardware specializzati) che per il proof-of-stake (attraverso la concentrazione di ricchezza e concentrazione dei validatori nell’infrastruttura).</p>
+<p>Pertanto, la resilienza della blockchain deriva in gran parte dalla garanzia che le parti dell'ecosistema siano incentivate nella collaborazione, piuttosto che nello scontro.
+Questa è la base della teoria dei giochi e la sua padronanza è la chiave per il successo della progettazione di sistemi.</p>
+<p>In <strong>Symbol</strong>, collaboriamo creando di <em>corporazione</em>. Tradizionalmente, una corporazione è un gruppo auto-organizzato di individui, o di società che lavorano insieme per raggiungere un missione comune. Le corporazioni non sono un concetto nuovo nel mondo delle criptovalute: organizzazioni non profit come la Ethereum Foundation e la Tezos Foundation, possono essere informalmente classificate come corporazioni, o anche come organizzazioni autonome decentralizzate (DAO), o come gruppi di lavoro o ancora, come gruppi di ricerca informali.
+Flashbots <a class="footnote-reference brackets" href="#id18" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> - l'organizzazione di ricerca e sviluppo che si concentra sul valore estraibile dai minatori (MEV - miner-extractable value) nella DeFi - ricalca il gruppo di hacker pirati, una corporazione informale, basata sulla cooperazione tra pirati. Si possono anche osservare corporazioni esterne alle criptovalute: Valve, una società multimiliardaria di hardware ed intrattenimento, segue un modello non gerarchico (&quot;Flatland&quot;) con nessun middle management o leadership formale. <a class="footnote-reference brackets" href="#id19" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p>
+<p>Oggi, possiamo osservare tre tipi di corporazioni formatesi naturalmente: corporazione infrastrutturale (nodi e loro operatori umani); corporazione del protocollo (sviluppatori e architetti di sistema); ed utenti (dApp e individui). Le corporazioni, sono ampiamente incentivate a mettere il successo collettivo al di sopra dei propri desideri individuali:</p>
+<ul class="simple">
+<li><p>I nodi dipendono da sviluppatori e architetti di sistema per progettare, sviluppare e distribuire nuove funzionalità in-chain; e dApp per innovare ed attrarre nuovi utenti (e quindi, generare commissioni di rete);</p></li>
+<li><p>Gli sviluppatori, fanno affidamento sui nodi per mantenere attivo un sano consenso di rete attraverso aggiornamenti di sistema; e sulle dApp, per creare prodotti innovativi che monetizzano la chain pubblica e gli usi della tecnologia stessa.</p></li>
+<li><p>Le dApp dipendono dagli sviluppatori per realizzare nuove funzionalità che consentano loro di costruire prodotti innovativi per attirare i clienti; e dai nodi, per fornire l’importante scopo a livello infrastrutturale per mantenere stabile la rete.</p></li>
+</ul>
+<p>Al centro di tutto ciò c'è l'ambasciatore, la voce della corporazione. Gli ambasciatori sono rapidamente identificati dalle loro capacità di comunicazione e relazione. Essi, lavorano per realizzare il coordinamento della community e difendono le idee delle stesse , le quali vengono rappresentate dagli ambasciatori stessi. Essi sono spesso traduttori, scrittori ed educatori - in alcuni protocolli, sono &quot;rappresentanti dell'ecosistema&quot;; in altri, &quot;coordinatori di rete&quot;. In <strong>Symbol</strong>, gli ambasciatori possono essere sia eletti che finanziati attraverso il “delegated harvesting”. Se, in qualsiasi momento, le community sentono che i loro ambasciatori eletti non stanno funzionando,le community stesse, possono delegare ad un nuovo ambasciatore.</p>
+<p>Parallelamente al delegated harvesting, c'è un altro concetto che può essere applicato al sistema a grande scala: il finanziamento quadratico.
+Proposto per la prima volta in Liberal Radicalism da Buterin, Hitzing e Weyl <a class="footnote-reference brackets" href="#id20" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>, il finanziamento quadratico cerca di applicare il concetto di voto quadratico al finanziamento dei beni pubblici.</p>
+<p>In economia, un bene pubblico è definito come un bene non escludibile e che non genera rivalità nel consumo.</p>
+<p>Non escludibile significa che un individuo non può esserne escluso dall'uso; la mancanza di rivalità significa che l'uso da parte di un individuo non riduce la disponibilità del bene per gli altri.</p>
+<p>Alcuni esempi comunemente citati di beni pubblici sono il software open source (come protocolli blockchain; Internet; o sistemi operativi); le informazioni gratuite (come newsletter; podcast; o documentazione tecnica); e servizi gratuiti (come la televisione pubblica e la radio).</p>
+<aside class="sidebar">
+<p class="sidebar-title">Quadratic funding</p>
+<figure class="align-center">
+<img alt="../../_images/Syndicate Matching dark.png" src="../../_images/Syndicate Matching dark.png" style="width: 600px;" />
+</figure>
+</aside>
+<p>In <strong>Symbol</strong>, il finanziamento quadratico è in grado di risolvere una sfida chiave che abbiamo nel finanziamento di progetti: come si fa determinare da quale progetto trarrebbe beneficio il maggior numero di individui? Il finanziamento quadratico, permette di raggiungere questo obiettivo, consentendo agli individui di comprare ‘tramite il loro voto' quale sia il prossimo progetto ad essere finanziato e permette di amplificare le donazioni tramite una corporazione dedicata al finanziamento dei beni pubblici. Il peso di ciascuno decresce all’aumentare del numero di voti, il che aiuta a decentralizzare il potere allontanandolo da società di capitali di rischio, da grandi balene e da intermediari del potere centrale. in sintesi, il numero dei contributi individuali conta più dell'importo finanziato da un individuo.</p>
+<p>Pensiamo che le corporazioni siano una potente forma di auto-organizzazione che hanno successo perché incentivano i partecipanti a mettere i successi collettivi al di sopra dei propri, applicando al tempo stesso un impegno per gli stessi principi che hanno reso la blockchain di successo: rivoluzione, decentralizzazione e trasparenza. Insieme ai finanziamenti quadratici, pensiamo che le corporazioni possano dare vita ad una comunità vibrante e auto-organizzata di contributori e collaboratori tutti allineati in una missione comune: <strong>Symbol</strong>.</p>
+</section>
+<section id="il-codice-del-pirata-spaziale">
+<h2>Il codice del pirata spaziale<a class="headerlink" href="#il-codice-del-pirata-spaziale" title="この見出しへのパーマリンク"></a></h2>
+<p>Anche nel sistema più illegale c'era un accordo di base per garantirne il funzionamento. C'è un onore tra i ladri. I pirati, nonostante fossero dei furfanti, sono riusciti a trovare un modo per ridurre i conflitti tra loro massimizzando i profitti. Usavano un sistema democratico di elezione ed un codice, che stabiliva le regole di funzionamento prima di ogni viaggio: la divisione del bottino; la divisione del lavoro; e la divisione delle responsabilità.
+Loro stabilivano le attività proibite e le relative punizioni; le norme per la sicurezza della nave e le norme di sicurezza per l'equipaggio; includendo incentivi e bonus per i membri produttivi.</p>
+<p>Prima di salpare, i pirati scrivevano i loro articoli mentre eleggevano un capitano ed un quartiermastro. Il capitano non era un capo ed era al servizio del piacere dell'equipaggio - in qualsiasi momento poteva essere sostituito da un voto di maggioranza o da un ammutinamento. Ci si aspettava che i capitani, nel complesso, fossero leader audaci e decisi che guidassero l'equipaggio su chi e cosa saccheggiare; come sfuggire alle autorità o affrontare un attacco. I quartiermastri rappresentavano gli interessi dell'equipaggio: mantenevano l'ordine; risolvevano i conflitti tra i membri dell'equipaggio; e determinavano la quantità di cibo e bevande distribuiti a ciascun membro dell'equipaggio. Tutti gli uomini prestavano il consenso a questi articoli e partecipavano all’elezione dei loro capi. Se un uomo non era d'accordo né con il contratto, né con l'equipaggio, era libero di andarsene di propria spontanea volontà.</p>
+<p>Nonostante non avessero un ente governativo per imporre o sostenere in altro modo accordi di cooperazione tra loro, i pirati sono riusciti a mantenere un'armonia comune quanto le loro controparti legali. Ciò era in parte dovuto alla loro trasparenza in tutte le cose, dal bottino che raccoglievano alla distribuzione della ricchezza; in parte a causa del loro equipaggio, che ha messo i successi collettivi della nave al di sopra delle proprie esigenze; e in parte a causa del loro impegno per l'uguaglianza e il cameratismo, perché una nave valeva solo quanto la somma delle sue parti. Riteniamo che un membro della corporazione dedicato a <strong>Symbol</strong> dovrebbe seguire una struttura vagamente ispirata alla cultura dei pirati, ma definita da una struttura aziendale non gerarchica.</p>
+<p>Questi che seguono, sono alcuni dei punti dell’accordo che proponiamo: il giuramento che prestiamo prima di intraprendere il prossimo viaggio di <strong>Symbol</strong>. Sebbene qualsiasi articolo richieda il consenso e, soprattutto, l'approvazione dell'equipaggio, riteniamo che sia utile stabilire alcune linee guida generali.</p>
+<ul class="simple">
+<li><p>Crediamo nella <strong>trasparenza</strong>. La trasparenza crea fiducia; ci ritiene responsabili; e ci consente di portare avanti il ​​nostro ecosistema. Operiamo in piena vista, assicurando che la nostra comunità abbia piena visibilità del nostro lavoro e che il nostro team possa imparare dai propri errori. Condividiamo le informazioni in modo aperto, ampio e deliberato sulle cose che abbiamo appreso; errori che abbiamo commesso; idee a cui abbiamo pensato e su cui stiamo lavorando. Quasi ogni documento è completamente aperto a chiunque possa leggerlo e commentarlo; ogni decisione strategica; ogni analisi; ogni test di prodotto o funzionalità. Utilizziamo strumenti che si allineano con i nostri valori (Git, Discord) e consentono all'ecosistema di lavorare al nostro fianco.</p></li>
+<li><p>Crediamo nella <strong>libertà finanziaria</strong>. Operiamo con un approccio alla compensazione basato su formule immediatamente visibili a tutti. Abbiniamo stipendi competitivi e equivalenti al mercato con un generoso pacchetto di benefit. Riteniamo che ogni membro dovrebbe avere un proprio tornaconto in ciò che stiamo costruendo, motivo per cui includiamo un programma di maturazione di token in tutti i pacchetti retributivi.</p></li>
+<li><p>Siamo una <strong>squadra di campioni</strong>. Non siamo una famiglia, scegliamo i nostri giocatori. Abbiamo grandi aspettative per prestazioni e risultati. Se qualcuno non sta alzando la media, lo aiutiamo affiancandolo e facendolo crescere. Abbiamo una cultura del lavoro intensa, e spesso caotica, ci troviamo regolarmente al di fuori delle nostre zone di comfort, il che ci consente di crescere, sia come individui che come team. Ci aspettiamo che il nostro team si guadagni il posto sulla nave e che lo mantenga.</p></li>
+<li><p>Cerchiamo <strong>rockstar</strong>. Adottiamo misure straordinarie per assicurarci di avere i migliori talenti in ogni posizione. Preferiamo le persone che sono &quot;a forma di T&quot;: generalisti (altamente qualificati in un'ampia gamma di argomenti) ma anche esperti (tra i migliori nel loro campo all'interno di una disciplina ristretta). Lavoriamo solo al fianco di persone più capaci di noi, non di meno. Crediamo che il talento sia il fattore più importante del nostro successo e ci aspettiamo che l'intero equipaggio si assuma la responsabilità di aumentare la media del team. Prestazioni insignificanti vengono concluse con un generoso trattamento di fine rapporto.</p></li>
+<li><p>Siamo <strong>concentrati</strong>. La missione di <strong>Symbol</strong> è rivoluzionare i mercati e creare pari opportunità. Siamo una squadra incentrata sullo sviluppo e sull’ingegneria, prima di tutto: se la tua esperienza non è nella scrittura di codice, allora ogni briciola di energia che hai, deve essere impiegata nella comprensione della tecnologia alla base dei nostri sistemi.</p></li>
+</ul>
+<p>In ogni occasione, serviamo <strong>Symbol</strong>, prima di tutto.</p>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Griffin Ichiba Hotchkiss, Andrei Maiboroda, and Paul Wackerow, “ETHEREUM VIRTUAL MACHINE (EVM)”, accessed June 7, 2021, <a class="reference external" href="https://ethereum.org/en/developers/docs/evm/">https://ethereum.org/en/developers/docs/evm/</a></p>
+</aside>
+<aside class="footnote brackets" id="id12" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>&quot;Store Data, Permanently&quot;, Arweave home page, 2020, <a class="reference external" href="https://www.arweave.org/">https://www.arweave.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="id13" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>David Vorick et al., &quot;Decentralized Internet for a Free Future&quot;, Home page, Skynet, 2021, <a class="reference external" href="https://siasky.net/">https://siasky.net/</a></p>
+</aside>
+<aside class="footnote brackets" id="id14" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Balaji S. Srinivasan, &quot;Yes, You May Need a Blockchain&quot;, Blog post, Balaji S. Srinivasan, May 14, 2019, <a class="reference external" href="https://balajis.com/yes-you-may-need-a-blockchain/">https://balajis.com/yes-you-may-need-a-blockchain/</a></p>
+</aside>
+<aside class="footnote brackets" id="id15" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Clayton M. Christensen, Michael E. Raynor, and Rory McDonald, &quot;What Is Disruptive Innovation?&quot;, <em>Harvard Business Review</em>, December 2015, <a class="reference external" href="https://hbr.org/2015/12/what-is-disruptive-innovation">https://hbr.org/2015/12/what-is-disruptive-innovation</a></p>
+</aside>
+<aside class="footnote brackets" id="id16" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>Lingfei Wu, Wang Dashun, and James A. Evans, &quot;Large Teams Develop and Small Teams Disrupt Science and Technology&quot;, <em>Nature</em> 566 (2019): 378–2, <a class="reference external" href="https://par.nsf.gov/servlets/purl/10109889">https://par.nsf.gov/servlets/purl/10109889</a></p>
+</aside>
+<aside class="footnote brackets" id="id17" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<p>Aaron Shaw and Benjamin Mako Hill, &quot;Laboratories of Oligarchy? How the Iron Law Extends to Peer Production&quot;, <em>Arxiv</em>, 2014, <a class="reference external" href="https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf">https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf</a></p>
+</aside>
+<aside class="footnote brackets" id="id18" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
+<p>Flashbots, software repository, github.com/flashbots, 2021, <a class="reference external" href="https://github.com/flashbots/pm">https://github.com/flashbots/pm</a></p>
+</aside>
+<aside class="footnote brackets" id="id19" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<p>Phanish Puranam and Dorthe Døjbak Håkonsson, &quot;Valve’s Way&quot;, <em>Journal of Organization Design</em> 4, no. 2 (June 2015): 2–, <a class="reference external" href="https://www.researchgate.net/publication/282395703_Valve%27s_Way">https://www.researchgate.net/publication/282395703_Valve%27s_Way</a></p>
+</aside>
+<aside class="footnote brackets" id="id20" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<p>Vitalik Buterin, Zoë Hitzig, and E. Glen Weyl, &quot;Liberal Radicalism: A Flexible Design for Philanthropic Matching Funds&quot;, <em>Available at SSRN 3243656</em>, 2018, <a class="reference external" href="https://www.gwern.net/docs/economics/2018-buterin.pdf">https://www.gwern.net/docs/economics/2018-buterin.pdf</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;11&#8209;11</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/handbook/it/vision.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Vision: Symbol²</a><ul>
+<li><a class="reference internal" href="#prefazione">Prefazione</a></li>
+<li><a class="reference internal" href="#il-futuro-di-symbol-e-nis1">Il futuro di Symbol e NIS1</a></li>
+<li><a class="reference internal" href="#la-struttura-del-sistema-e-le-corporazioni">La struttura del sistema e le corporazioni</a></li>
+<li><a class="reference internal" href="#il-codice-del-pirata-spaziale">Il codice del pirata spaziale</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;11&#8209;11.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;11&#8209;11.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

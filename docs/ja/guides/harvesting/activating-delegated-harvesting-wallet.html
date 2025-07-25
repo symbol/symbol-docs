@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>デリゲートハーベスティングをデスクトップウォレットで有効化 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="デリゲートハーベスティングを手動で有効化" href="activating-delegated-harvesting-manual.html" />
+    <link rel="prev" title="ハーベスティング" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/harvesting/activating-delegated-harvesting-wallet.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/harvesting/activating-delegated-harvesting-wallet.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ハーベスティング</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">デリゲートハーベスティングをデスクトップウォレットで有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-manual.html">デリゲートハーベスティングを手動で有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">リモートハーベスティングの有効化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ハーベスティング</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">デリゲートハーベスティングをデスクトップウォレットで有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-manual.html">デリゲートハーベスティングを手動で有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">リモートハーベスティングの有効化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="activating-delegated-harvesting-using-the-desktop-wallet">
+<h1>デリゲートハーベスティングをデスクトップウォレットで有効化<a class="headerlink" href="#activating-delegated-harvesting-using-the-desktop-wallet" title="この見出しへのパーマリンク"></a></h1>
+<p>あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。</p>
+<section id="introduction">
+<h2>紹介<a class="headerlink" href="#introduction" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="../../concepts/harvesting.html#delegated-harvesting"><span class="std std-ref">Delegated harvesting</span></a> enables accounts to <strong>receive rewards</strong> from creating new blocks <strong>without running a node</strong>. At the same time, it allows nodes to benefit from such an account's (possibly higher) <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a>.</p>
+<p>This guide is therefore addressed at users <strong>not running a Symbol node</strong>. Node owners have access to the node's configuration so it's more convenient for them to use <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a> instead of delegating.</p>
+<p><a class="reference internal" href="activating-delegated-harvesting-manual.html"><span class="doc">このガイドの手動バージョン</span></a> が説明しているように、デリゲートハーベスティングを有効にするために必要なステップがいくつかあり、さまざまなアカウントといくつかのトランザクションを必要とします。したがって、このガイドに示されているように Symbol の <a class="reference internal" href="../../wallets.html#wallet-desktop"><span class="std std-ref">デスクトップウォレット</span></a> を使用する方が <strong>はるかに便利</strong> です。</p>
+<p>このプロセスでは <strong>目的のノードを選択</strong> して <strong>ハーベスティングリクエストを送信</strong> するだけで済みます。</p>
+</section>
+<section id="prerequisites">
+<h2>前提条件<a class="headerlink" href="#prerequisites" title="この見出しへのパーマリンク"></a></h2>
+<p>デスクトップウォレットでデリゲートハーベスティングを有効にするには、次のアイテムが必要です:</p>
+<ul class="simple">
+<li><p><strong>デスクトップウォレット</strong> をアップデートしてください。最新版は <a class="reference external" href="https://github.com/symbol/symbol-desktop-wallet/releases">リリースページ</a> からダウンロードできます。</p></li>
+<li><p>ハーベスト手数料を受け取る <strong>アカウント</strong> 。次を満たします:</p>
+<ul>
+<li><p><a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">適格</span></a> となるためには、最低でも <strong>10,000</strong> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> 以上と支払うトランザクション手数料が必要です。</p></li>
+<li><p><a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポ―タンススコア</span></a> が 0 より大きい。このスコアは 12 時間ごとに計算されることに注意してください。</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Activating Delegated harvesting requires <strong>sending transactions</strong> and paying the required <strong>transaction fees</strong>.</p>
+<p>You can enable, disable and switch nodes multiple times, but be warned that each action will incur in a (small) transaction fee.</p>
+</div>
+</section>
+<section id="guide">
+<h2>ガイド<a class="headerlink" href="#guide" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic">
+<li><p><strong>左側のメニューでハーベスティングオプションを選択します</strong> 。ハーベスティング画面が表示されます:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-0.png"><img alt="../../_images/delegated-harvesting-wallet-0.png" class="with-shadow align-center" src="../../_images/delegated-harvesting-wallet-0.png" /></a>
+<p>Note that the <strong>Harvesting status</strong> is 🔴 <strong>INACTIVE</strong>.</p>
+</li>
+</ol>
+<ol class="arabic" id="harvest-wallet-step-2" start="2">
+<li><p><strong>ノード URL ボックス</strong> をクリックして、現在ネットワークに接続されているノードのリストを表示します:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-1.png"><img alt="../../_images/delegated-harvesting-wallet-1.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-1.png" /></a>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> と <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> の <strong>両方</strong> として機能するノードだけがリストに表示されますが、入力欄に <strong>手動でURL</strong> を入れることで、Peer ノードからのハーベスティングをリクエストできます。この場合、ノードの <strong>トランスポート公開鍵</strong> も提供する必要があります。</p>
+<p><strong>このキーはノード所有者が提供する必要があります</strong> 。 <a class="reference internal" href="../network/running-a-symbol-node.html"><span class="doc">Symbol Bootstrap</span></a> を使用してノードをインスタンス化した場合、このキーは <a class="reference internal" href="../network/running-a-symbol-node.html#retrieving-node-account"><span class="std std-ref">addresses.yml</span></a> ファイルにあります。</p>
+<p>ただし、非 API ノードにハーベスティングをデリゲートする場合は <strong>ハーベスティングステータス</strong> インジケーターが機能しないことに注意してください。</p>
+</div>
+</li>
+<li><p><strong>Select a node from the list and click on the &quot;Link all keys&quot; button</strong>.</p>
+<p><a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">アグリゲートトランザクション</span></a> への署名を求められます:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-2.png"><img alt="../../_images/delegated-harvesting-wallet-2.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-2.png" /></a>
+<p>このアグリゲートトランザクションはハーベスティングに必要な <a class="reference internal" href="../../concepts/cryptography.html#keypair"><span class="std std-ref">3 種類のキー</span></a> をアカウントに登録します。</p>
+</li>
+<li><p><strong>パスワードを入力して &quot;Confirm&quot; をクリックします。</strong></p>
+<p>デスクトップウォレットは <strong>トランザクションに署名</strong> を行い <strong>ネットワークにアナウンス</strong> します。しばらく (30 秒以上かかることはありません) すると画面が更新されます。</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-3.png"><img alt="../../_images/delegated-harvesting-wallet-3.png" class="with-shadow align-center" src="../../_images/delegated-harvesting-wallet-3.png" /></a>
+<p>You can see that the <strong>Harvesting status</strong> has changed to 🟡 <strong>KEYS LINKED</strong> and the different keys appear in the form.</p>
+<p>あとは実際のリクエストである <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> をノードへ送信することだけです。</p>
+</li>
+</ol>
+<ol class="arabic" id="harvest-wallet-step-5" start="5">
+<li><p><strong>&quot;有効化&quot; ボタンをクリック</strong></p>
+<p>ノードに送信する永続的デリゲートメッセージを暗号化するには、パスワードが再度必要になります。</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-4.png"><img alt="../../_images/delegated-harvesting-wallet-4.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-4.png" /></a>
+</li>
+<li><p><strong>パスワードを入力して &quot;Confirm&quot; をクリックします。</strong></p>
+<p>永続的デリゲートリクエスト (特別なタイプの <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">転送</span></a> トランザクション) に署名してアナウンスするには、最後にもう一度パスワードが必要です。</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-5.png"><img alt="../../_images/delegated-harvesting-wallet-5.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-5.png" /></a>
+</li>
+<li><p><strong>パスワードを入力して &quot;確認&quot; をクリックする</strong> (もう一度)</p>
+<p>Once you receive the confirmation message (shouldn't take longer than 30 seconds), the <strong>Harvesting status</strong> should change to 🟡 <strong>ACTIVATION IN PROGRESS</strong>:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-6.png"><img alt="../../_images/delegated-harvesting-wallet-6.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-6.png" /></a>
+<p>At this point it is up to the node to accept the request and add your account as a harvester. When this happens, the <strong>Harvesting status</strong> will change to 🟢 <strong>ACTIVE</strong>:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-7.png"><img alt="../../_images/delegated-harvesting-wallet-7.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-7.png" /></a>
+<p>デリゲートハーベスティングが有効になり、ノードの <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポータンススコア</span></a> に比例した割合で、手数料の徴収を開始します。 (注意事項について、以下の <strong>さいごに</strong> セクションを参照してください)</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ノードを構成するのではなく <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> を介して委任をリクエストする場合、ノードがデリゲートハーベスティングを有効にしているかどうかは、 <strong>ネットワークではなく</strong> ノードに依存しています。要求に応じるか、その状態について嘘をつき、誤解を招く <strong>ハーベスティングステータス</strong> インジケータを提供するかは、完全にノード次第です。</p>
+<p>したがって、アカウントがハーベスターになったかどうかを知るための <strong>信頼性のある</strong> 方法は、アカウントがハーベスト手数料を受け取り始めるのを待つ以外にはありません。</p>
+<p>このプロセスの詳細については <a class="reference internal" href="activating-delegated-harvesting-manual.html"><span class="doc">このガイドの手動版</span></a> を参照してください。</p>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>トラブルシューティング<a class="headerlink" href="#troubleshooting" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>ハーベスティングステータス</strong> インジケータはアカウントのデリゲートハーベスティングの状態を確認するのに役立ちます。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ステータス</p></th>
+<th class="head"><p>意味</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🔴 無効</p></td>
+<td><p>Some keys are missing. <a class="reference internal" href="#harvest-wallet-step-2"><span class="std std-ref">Go to step 2</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟡 キーのリンク済み</p></td>
+<td><p>Keys are present but the harvesting delegation request has not been sent. <a class="reference internal" href="#harvest-wallet-step-5"><span class="std std-ref">Go to step 5</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>🟡 進行中</p></td>
+<td><p>ハーベスティングデリゲートリクエストは送信されましたが、ノードはまだそれを確認していません。数分かかる場合もあれば、決して起こらない場合もあります。この時点でできることは、別のノードを試す以外にありません。</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟢 有効</p></td>
+<td><p>ハーベスティングは有効です。あなたのアカウントのインポータンスに依存した、ハーベスト済みブロックとそれらの手数料を受け取り始めます。</p></td>
+</tr>
+<tr class="row-even"><td><p>🔴 FAILED</p></td>
+<td><p>Activation did not succeed <strong>or could not be verified</strong>. Wait a bit or select a different node <a class="reference internal" href="#harvest-wallet-step-2"><span class="std std-ref">in step 2</span></a>. See the note below for more details.</p></td>
+</tr>
+</tbody>
+</table>
+<aside class="topic">
+<p class="topic-title">The FAILED status</p>
+<p><strong>A number of reasons</strong> can lead to this status and it is not easy for the Wallet to know the real cause. Selecting a different node is typically the quickest fix, although contacting the node operator or waiting a bit might also work.</p>
+<p>These are some of the causes behind this status:</p>
+<ul class="simple">
+<li><p>The node <strong>refused</strong> to add the delegated harvester: maybe all its slots are full.</p></li>
+<li><p>When checking the harvesting status from different devices the <a class="reference external" href="https://symbol.services/nodes">Statistics Service</a> is used to retrieve the URL of the node. Maybe this service <strong>has not discovered the node yet</strong> but will do in the future.</p></li>
+<li><p>The node <strong>could not be contacted</strong> to verify the activation: maybe it is offline, it is not an API node or you lost internet connectivity. Delegated harvesting might actually be ACTIVE in this case and the indicator can change at a later time.</p></li>
+</ul>
+</aside>
+</section>
+<section id="final-words">
+<h2>最後に<a class="headerlink" href="#final-words" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p><strong>インポータンスの高いアカウントは、ハーベスティングを実行するためにより頻繁に選択されます</strong>。デリゲートハーベスタとして、正常にノードに登録している場合でも、 <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポータンススコア</span></a> が十分に高くない限りは、ブロックをハーベスティングすることはありません。 (報酬も受け取りません)</p></li>
+<li><p><strong>インポータンススコアの計算は継続的に行われません</strong>。デフォルトでは、アカウントインポータンススコアは、1440 ブロックごと (約 12 時間ごと) に再計算されます。 <a class="reference internal" href="../network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワークプロパティの設定</span></a> ガイドの <code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code> プロパティを参照してください。</p></li>
+<li><p>最後に、上記で説明したように <strong>Harvesting Delegation リクエストをアナウンスしても、デリゲートハーベスタとして追加されるとは限りません</strong>。ノードは自由に要求に応じたり、そのステータスについて嘘をつく場合があります。</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;23</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/harvesting/activating-delegated-harvesting-wallet.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">デリゲートハーベスティングをデスクトップウォレットで有効化</a><ul>
+<li><a class="reference internal" href="#introduction">紹介</a></li>
+<li><a class="reference internal" href="#prerequisites">前提条件</a></li>
+<li><a class="reference internal" href="#guide">ガイド</a></li>
+<li><a class="reference internal" href="#troubleshooting">トラブルシューティング</a></li>
+<li><a class="reference internal" href="#final-words">最後に</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;23.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;23.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

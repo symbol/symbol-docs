@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>マルチシグアカウント &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="ネームスペース" href="namespace.html" />
+    <link rel="prev" title="モザイク制限" href="mosaic-restriction.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/multisig-account.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/multisig-account.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="multisig-account">
+<h1>マルチシグアカウント<a class="headerlink" href="#multisig-account" title="この見出しへのパーマリンク"></a></h1>
+<p>マルチシグ <a class="reference internal" href="account.html"><span class="doc">アカウント</span></a> はアクション/転送を実行するために追加の署名を必要とします。</p>
+<section id="cosignatories">
+<h2>連署者<a class="headerlink" href="#cosignatories" title="この見出しへのパーマリンク"></a></h2>
+<p>Symbol <a class="reference internal" href="account.html"><span class="doc">アカウント</span></a> は <a class="reference internal" href="../guides/multisig/creating-a-multisig-account.html"><span class="doc">マルチシグに変換する</span></a> ことができます。マルチシグの連署者 - 他のアカウント - はこのアカウントのマネージャとなります。</p>
+<p>この瞬間からマルチシグアカウントはそれ自信からトランザクションをアナウンスできなくなります。連署者のうち 1 人がマルチシグに関係した <a class="reference internal" href="aggregate-transaction.html"><span class="doc">アグリゲートトランザクション</span></a> でラップしたトランザクションを提案する必要があります。</p>
+<p>このトランザクションをブロックに記録するには、他の連署者の同意が必要です。</p>
+</section>
+<section id="minimum-approval-and-removal">
+<h2>最小承認数と削除数<a class="headerlink" href="#minimum-approval-and-removal" title="この見出しへのパーマリンク"></a></h2>
+<p>常にすべての連署者にマルチシグに関係するトランザクションへの連署をさせる必要はありません。 Symbol は連署者の同意の最小数の設定が可能です。大抵のニーズに合わせてこれらのプロパティを <a class="reference internal" href="../guides/multisig/modifying-a-multisig-account-min-approval.html#guide-modify-a-multisig-account-min-approval"><span class="std std-ref">編集</span></a> することができます。</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/multisig-2-of-3.png" src="../_images/multisig-2-of-3.png" style="width: 350px;" />
+<figcaption>
+<p><span class="caption-text">2-of-3 マルチシグアカウント</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>Symbol における現在のマルチシグ実装は <em>&quot;M-of-N&quot;</em> で、マルチシグアカウントの M はアナウンスに必要な連署者数、N は合計連署者数です。これは M が N 以下の数字を取り得ることを意味します。例えば 1-of-4, 2-of-2, 4-of-9, 9-of-10 などです。</p>
+<p>同様に、連署者は定義された状態を満たす場合に <a class="reference internal" href="../guides/multisig/adding-a-new-signer-to-a-multisig-account.html#guide-modify-a-multisig-account-add-new-cosignatory"><span class="std std-ref">マルチシグへの参加に他のアカウントを招待</span></a>  または  <a class="reference internal" href="../guides/multisig/removing-a-signer-from-a-multisig-account.html#guide-modify-a-multisig-account-removing-a-cosignatory"><span class="std std-ref">参加者に除名の提案</span></a> をすることができます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>マルチシグアカウントは強力なツールですが、このツールの使用は慎重に行ってください。連署者がキーを紛失し、最小数の承認が得られなくなった場合、マルチシグアカウントが保有する資産へのアクセスが永久に不可能になります。この状況を回避するには <code class="docutils literal notranslate"><span class="pre">最小限の削除数</span></code> パラメータを適切に設定してください。</p>
+</div>
+</section>
+<section id="constraints">
+<h2>制約<a class="headerlink" href="#constraints" title="この見出しへのパーマリンク"></a></h2>
+<p>パブリックネットワークはマルチシグアカウントに次の制約を定義します。値は <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワークごとに設定可能</span></a> です。</p>
+<ul class="simple">
+<li><p>マルチシグアカウントは <code class="docutils literal notranslate"><span class="pre">25</span></code> 連署者までを設定可能です。</p></li>
+<li><p>アカウントは <code class="docutils literal notranslate"><span class="pre">25</span></code> マルチシグアカウントまでの連署者として設定可能です。</p></li>
+<li><p>マルチシグアカウントは <code class="docutils literal notranslate"><span class="pre">3</span></code> 階層まで、他のマルチシグアカウントの連署者になることができます。マルチレベルマルチシグアカウントはマルチシグトランザクションに “AND/OR“ ロジックを追加します。</p></li>
+<li><p><a class="reference internal" href="../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">Multisig modification transactions</span></a> は <a class="reference internal" href="aggregate-transaction.html"><span class="doc">アグリゲートトランザクション</span></a> でラップされる必要があります。マルチシグに追加される新しい連署者はアグリゲートに署名することでオプトインしなければなりません。</p></li>
+</ul>
+</section>
+<section id="examples">
+<h2>例<a class="headerlink" href="#examples" title="この見出しへのパーマリンク"></a></h2>
+<p>マルチシグアカウントには幅広い便利なアプリケーションがあります。一般的な使用例のいくつかを見てみましょう。</p>
+<section id="shared-accounts">
+<h3>共有アカウント<a class="headerlink" href="#shared-accounts" title="この見出しへのパーマリンク"></a></h3>
+<p>いくつかの家族は地元の切手収集家共同体のメンバーであり、切手を購入するために共有アカウントを使用しています。</p>
+<p>購入するべき古い切手と適切な価格のすべてに合意するために、彼らはマルチシグアカウントを使用します。この方法では、正当なトランザクションとしてブロックチェーンに取り込まれる前に、共同体の全員がトランザクションに同意することが必要です。</p>
+</section>
+<section id="multi-factor-authorization">
+<h3>複数要素認証<a class="headerlink" href="#multi-factor-authorization" title="この見出しへのパーマリンク"></a></h3>
+<p>Alice は彼女の資産が決して損なわれないようにしたいと考えています。したがって、彼女は彼女の資産でマルチシグアカウントを設定し、マルチシグアカウントを制御するために2要素認証の形態として、2つのアカウント(署名者アカウント)を設定しました。</p>
+<p>彼女の署名者アカウントは両方ともトランザクションを承認する必要があり、この署名者アカウントは異なるパスワードを持つ、異なるコンピュータに配置されます。これは悪意のあるハッカーやウィルスが自分のアカウントのうち1つを侵害したとしても、彼女の資金はまだ安全に保たれます。</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/multisig-multifactor-auth.png" src="../_images/multisig-multifactor-auth.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">マルチシグアカウントを使用した複数要素認証</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="assets-ownership">
+<h3>アセットの所有権<a class="headerlink" href="#assets-ownership" title="この見出しへのパーマリンク"></a></h3>
+<p>マルチシグアカウントを使用して資産の所有権を表すことができます。</p>
+<p>企業は製品ごとに 1-of-1 マルチシグアカウントを作成し、連署者として自分自身を追加します。会社が Alice へ製品を販売するとき、彼女が署名者として追加されることで所有者となり、同じ取引の中で会社の所有権が取り除かれます。</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/multisig-asset-ownership.png" src="../_images/multisig-asset-ownership.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">アカウントの譲渡</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="manufacturing-and-supply-chains">
+<h3>製造業とサプライチェーン<a class="headerlink" href="#manufacturing-and-supply-chains" title="この見出しへのパーマリンク"></a></h3>
+<p>これは製造者が医薬製品を発送する事例です。</p>
+<p>この製品は、ブロックチェーン記録が示す製造日時、安全検査、正しい温度で出荷されたかを示したときだけに、品質認可 <a class="reference internal" href="mosaic.html"><span class="doc">モザイク</span></a> を受取ります。</p>
+<p>出荷コンテナ内のセンサーが温度を5分ごとにレポートし、日次レポートとしてまとめます。</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/mlma-supply-chain.png" src="../_images/mlma-supply-chain.png" style="width: 750px;" />
+<figcaption>
+<p><span class="caption-text">製造業とサプライチェーン</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="fraud-detection">
+<h3>不正検知<a class="headerlink" href="#fraud-detection" title="この見出しへのパーマリンク"></a></h3>
+<p>この例では、高いセキュリティアカウントの扱いをいかに簡単にできるかを紹介します。</p>
+<p>トランザクションはハードウェアウォレットまたは電話と不正検知 AI によってのみ承認されます。MLMA はプロトコルレベルで様々なセキュリティ設定に適用でき、ビジネスを維持して顧客をハッキングから守ります。</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/mlma-fraud-detection.png" src="../_images/mlma-fraud-detection.png" style="width: 550px;" />
+<figcaption>
+<p><span class="caption-text">不正検知</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="related-transactions">
+<h2>関連トランザクション<a class="headerlink" href="#related-transactions" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x4155</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a></p></td>
+<td><p>マルチシグコントラクトの作成と変更</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/creating-a-multisig-account.html">マルチシグアカウントの作成</a></p>
+<p class="ablog-post-excerpt">このガイドでは、共同アカウントを設定する方法について説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/removing-a-signer-from-a-multisig-account.html">マルチシグアカウントからの署名者の削除</a></p>
+<p class="ablog-post-excerpt">このガイドでは、マルチシグアカウントから署名者を削除する方法を説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/adding-a-new-signer-to-a-multisig-account.html">マルチシグアカウントに新しい署名者の追加</a></p>
+<p class="ablog-post-excerpt">このガイドでは、マルチシグアカウントに新しい署名者を追加する方法を説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/modifying-a-multisig-account-min-approval.html">マルチシグアカウントの最小承認の変更</a></p>
+<p class="ablog-post-excerpt">このガイドでは、マルチシグトランザクションを実行するために必要な署名の最小数を増減する方法について説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/creating-a-multi-level-multisig-account.html">マルチレベルマルチシグアカウントの作成</a></p>
+<p class="ablog-post-excerpt">このガイドでは、複数のマルチシグアカウントを接続して、高度なチェーン上の承認ロジックを実現する方法について説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/aggregate/sending-a-multisig-transaction.html">マルチシグトランザクションの送信</a></p>
+<p class="ablog-post-excerpt">このガイドでは、マルチシグアカウントからトランザクションを発行する方法を説明します。</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/multisig-account.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">マルチシグアカウント</a><ul>
+<li><a class="reference internal" href="#cosignatories">連署者</a></li>
+<li><a class="reference internal" href="#minimum-approval-and-removal">最小承認数と削除数</a></li>
+<li><a class="reference internal" href="#constraints">制約</a></li>
+<li><a class="reference internal" href="#examples">例</a><ul>
+<li><a class="reference internal" href="#shared-accounts">共有アカウント</a></li>
+<li><a class="reference internal" href="#multi-factor-authorization">複数要素認証</a></li>
+<li><a class="reference internal" href="#assets-ownership">アセットの所有権</a></li>
+<li><a class="reference internal" href="#manufacturing-and-supply-chains">製造業とサプライチェーン</a></li>
+<li><a class="reference internal" href="#fraud-detection">不正検知</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#related-transactions">関連トランザクション</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

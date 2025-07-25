@@ -1,0 +1,898 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Running a node manually &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Running a secure node" href="running-a-secure-symbol-node.html" />
+    <link rel="prev" title="Running a node" href="running-a-symbol-node.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/running-a-symbol-node-manually.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/running-a-symbol-node-manually.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="running-a-node-manually">
+<h1>Running a node manually<a class="headerlink" href="#running-a-node-manually" title="Permalink to this heading"></a></h1>
+<p>This guide walks you through the process of setting up a node to join Symbol’s network <strong>without</strong> using Symbol Bootstrap.</p>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> is a very handy tool that allows the <strong>quick deployment</strong> of Symbol nodes. However, it relies on <a class="reference external" href="http://docker.com">Docker</a> and <a class="reference external" href="http://nodejs.org">node.js</a> technology which might not be available (or allowed) in all scenarios. <strong>This guide takes the longer route</strong> and explains how to setup a Symbol node <strong>manually</strong>. If you would like to use Symbol Bootstrap use <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">this guide</span></a> instead.</p>
+<p>The following section explains how to build a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer node</span></a> and the next one expands the node to convert it into an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following instructions have only been verified to work on <strong>Linux</strong>.</p>
+</div>
+<section id="build-a-peer-node">
+<h2>Build a Peer node<a class="headerlink" href="#build-a-peer-node" title="Permalink to this heading"></a></h2>
+<section id="build-the-client">
+<h3>Build the client<a class="headerlink" href="#build-the-client" title="Permalink to this heading"></a></h3>
+<p>Follow the <a class="reference external" href="https://github.com/symbol/symbol/tree/dev/client/catapult">Catapult client</a> instructions to <strong>build</strong> its binaries, either <a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-manual.md">manually</a> or using <a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/docs/BUILD-conan.md">Conan</a>.</p>
+</section>
+<section id="generate-keys">
+<h3>Generate keys<a class="headerlink" href="#generate-keys" title="Permalink to this heading"></a></h3>
+<p>A Symbol node requires a number of <a class="reference internal" href="../../concepts/cryptography.html#symbol-keys"><span class="std std-ref">keys</span></a> to function properly. These keys are generally <strong>randomly generated</strong> so you need to create a few ones to be used in the following steps.</p>
+<p><strong>This step can be performed on an offline machine for added security.</strong></p>
+<section id="main-remote-and-vrf">
+<h4>Main, Remote and VRF<a class="headerlink" href="#main-remote-and-vrf" title="Permalink to this heading"></a></h4>
+<p>From within the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory you created in the previous section, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./bin/catapult.tools.addressgen<span class="w"> </span>--count<span class="w"> </span><span class="m">3</span><span class="w"> </span>--network<span class="w"> </span>mainnet
+</pre></div>
+</div>
+<p>This will output 3 <a class="reference internal" href="../../concepts/cryptography.html#keypair"><span class="std std-ref">key pairs</span></a> similar to this one:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>address (public): NDPPBHSMLVEU75DNUMFX6GWPTGB6PP6AFQU7WSY
+   address decoded: 68DEF09E4C5D494FF46DA30B7F1ACF9983E7BFC02C29FB4B
+      public key: 1E886BA00B4F85DBC0B31DBB78DADFAA29945DF7290DB7A4243D94864483C627
+      private key: 3DDDC333029BC8ACDB460435BBC71041D460B911725B03D6F93805521AAD60CB
+</pre></div>
+</div>
+<p>Each block is a key pair (there is one block shown above) composed of a <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">key</span></code>, a <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">key</span></code> and an <code class="docutils literal notranslate"><span class="pre">address</span></code>.</p>
+<p><strong>Copy all of them to a temporary text file</strong> for later use and label the key pairs <strong>Main</strong>, <strong>Remote</strong> and <strong>VRF</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you <strong>already have</strong> any of these keys, you can use them instead of the randomly-generated ones.</p>
+<p>The most relevant scenario is when using a <strong>main account opted-in from a NIS1 account</strong>. In this case you can directly use the key obtained in the opt-in process as your <strong>Main</strong> key instead of the randomly-generated one.</p>
+</div>
+</section>
+<section id="voting">
+<h4>Voting<a class="headerlink" href="#voting" title="Permalink to this heading"></a></h4>
+<p>If your node is to be a <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">voting node</span></a> it must have linked a voting key for the period in which you intend to vote. This is interesting as voting nodes receive <a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">voting rewards</span></a>.</p>
+<p>The generation of the voting key, though, is a bit more complex than the previous ones:</p>
+<ol class="arabic simple">
+<li><p>Still from within the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory <strong>create another directory</strong> called <code class="docutils literal notranslate"><span class="pre">votingkeys</span></code>.</p></li>
+</ol>
+<aside class="sidebar">
+<p class="sidebar-title">Epochs</p>
+<p><a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">Voting</span></a> occurs once every epoch. One voting epoch lasts <strong>1440 blocks</strong> or about <strong>12h</strong> (see <code class="docutils literal notranslate"><span class="pre">votingSetGrouping</span></code> in the <a class="reference internal" href="configuring-network-properties.html#config-network-properties"><span class="std std-ref">network properties</span></a>).</p>
+<p>The maximum voting key duration (End Epoch - Start Epoch) is <strong>360 epochs</strong> or about <strong>6 months</strong> (see <code class="docutils literal notranslate"><span class="pre">maxVotingKeyLifetime</span></code>).</p>
+<p>You can find out the current epoch by dividing the <a class="reference external" href="https://symbol.fyi">current blockchain height</a> by 1440 and discarding the decimals.</p>
+</aside>
+<ol class="arabic" start="2">
+<li><p><strong>Create the voting key</strong> (or keys):</p>
+<p>Voting keys are different from the other keys in that they have a <strong>period of validity</strong>, for example. They are only valid from a <strong>Start Epoch</strong> to an <strong>End Epoch</strong> (see side box).</p>
+<p>Nodes are only eligible as voters if they are linked to a <strong>valid voting key</strong> for the current blockchain epoch, so <strong>remember to renew your voting key periodically.</strong></p>
+<p>To help you with that task, you can have <strong>up to 3 linked voting keys</strong>, with different periods, so you can easily renew one key while there’s still another one active (you will need to <strong>unlink</strong> an older key to be able to link more than 3 keys).</p>
+<p>A voting key is created using <code class="docutils literal notranslate"><span class="pre">catapult.tools.votingkey</span></code> and providing its <strong>period of validity</strong> (note you do not use <code class="docutils literal notranslate"><span class="pre">catapult.tools.addressgen</span></code> as before):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bin/catapult.tools.votingkey<span class="w"> </span>--output<span class="w"> </span>votingkeys/private_key_tree1.dat<span class="w"> </span><span class="se">\</span>
+<span class="w">                             </span>--startEpoch<span class="w"> </span><span class="m">100</span><span class="w"> </span>--endEpoch<span class="w"> </span><span class="m">460</span>
+</pre></div>
+</div>
+<p>This creates a file named <code class="docutils literal notranslate"><span class="pre">votingkeys/private_key_tree1.dat</span></code> and <strong>prints the voting key on the terminal</strong>. As your voting keys expire and you create new ones, <strong>increase the number</strong> on the file name.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>generating 361 keys, this might take a while
+votingkeys\private_key_tree1.dat generated
+verifying generated file
+ saved voting public key: ****************
+loaded voting public key: ****************
+</pre></div>
+</div>
+<p>Copy the voting key public key into the temporary text file where you keep the rest of the keys, label it <strong>Voting</strong> and save it for later.</p>
+</li>
+</ol>
+<aside class="topic" id="manual-voting-key-renewal">
+<p class="topic-title">Voting key renewal</p>
+<p>If all your registered voting keys expire your node will not be eligible as a voter and its account will not receive any <a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">voting rewards</span></a>.</p>
+<p><strong>Make sure you always have one voting key registered for the current epoch.</strong></p>
+<p>You can check your currently registered voting keys using the <code class="docutils literal notranslate"><span class="pre">/accounts</span></code> endpoint of the <a class="reference internal" href="../../api.html"><span class="doc">REST API</span></a> (Get Account Information), in the <code class="docutils literal notranslate"><span class="pre">supplementalPublicKeys</span></code> section.</p>
+<p>If you need to renew your keys, create new ones as explained above and then register them as explained in the <a class="reference internal" href="#manual-enable-voting"><span class="std std-ref">Link the keys</span></a> section below.</p>
+</aside>
+</section>
+</section>
+<section id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h3>
+<p>Symbol is <strong>highly customizable</strong> and this means there are a lot of parameters that can be adjusted to suit your node’s needs. Some of these parameters are <strong>network-related</strong> and must match the rest of nodes in the network (for example <code class="docutils literal notranslate"><span class="pre">currencyMosaicId</span></code>) whereas some others are <strong>node-related</strong> and you can set freely (for example <code class="docutils literal notranslate"><span class="pre">friendlyName</span></code>).</p>
+<p>You can edit these files manually (Take a look at <a class="reference external" href="https://github.com/symbol/symbol/tree/main/client/catapult/resources">these templates</a> to know how they look) but it is more convenient to use the <a class="reference external" href="https://github.com/symbol/symbol-node-configurator">Symbol Node Configurator tool</a> as shown next.</p>
+<p><strong>The Configuration step can be performed on an offline machine for added security.</strong></p>
+<ol class="arabic" start="0">
+<li><p><strong>Prerequisites</strong>.</p>
+<ul class="simple">
+<li><p>Install <a class="reference external" href="https://www.python.org/downloads/">Python 3</a>.</p></li>
+<li><p>Install <a class="reference external" href="https://wiki.openssl.org/index.php/Binaries">OpenSSL</a> (for example running <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">openssl</span></code> on Linux).</p></li>
+</ul>
+</li>
+<li><p><strong>Install symbol-node-configurator</strong>.</p>
+<ul>
+<li><p>Download and extract <a class="reference external" href="https://github.com/symbol/symbol-node-configurator/archive/refs/heads/main.zip">symbol-node-configurator.zip</a>. Alternatively, clone the <a class="reference external" href="https://github.com/symbol/symbol-node-configurator">GitHub repository</a> if you know how to use Git.</p></li>
+<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">symbol-node-configurator</span></code> directory and install the tool’s requirements by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<ol class="arabic" id="manual-node-certificates" start="2">
+<li><p><strong>Create certificates</strong>.</p>
+<ul class="simple">
+<li><p>Create a folder named <code class="docutils literal notranslate"><span class="pre">certificates</span></code> and move into it.</p></li>
+<li><p>Create a text file named <code class="docutils literal notranslate"><span class="pre">private.main.txt</span></code> and put the <strong>Main account private key</strong> inside.</p></li>
+<li><p>Download and run this <a class="reference external" href="/_static/bash/cert-generate.sh">certificate generation script</a>.</p></li>
+<li><p>Delete <code class="docutils literal notranslate"><span class="pre">private.main.txt</span></code>.</p></li>
+<li><p>Get back to the parent folder.</p></li>
+</ul>
+<p>You should now have at least the following files in the <code class="docutils literal notranslate"><span class="pre">certificates</span></code> folder: <code class="docutils literal notranslate"><span class="pre">ca.pubkey.pem</span></code>, <code class="docutils literal notranslate"><span class="pre">ca.crt.pem</span></code>, <code class="docutils literal notranslate"><span class="pre">node.full.crt.pem</span></code>, <code class="docutils literal notranslate"><span class="pre">node.crt.pem</span></code> and <code class="docutils literal notranslate"><span class="pre">node.key.pem</span></code>.</p>
+</li>
+<li><p><strong>Create harvester and VRF key files</strong>.</p>
+<ul class="simple">
+<li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">private.harvesting.txt</span></code> and put the <strong>Remote private key</strong> inside.</p></li>
+<li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">private.vrf.txt</span></code> and put the <strong>VRF private key</strong> inside.</p></li>
+</ul>
+</li>
+<li><p><strong>Run the configurator tool</strong>.</p>
+<p>The node configurator tool is called <code class="docutils literal notranslate"><span class="pre">generator.py</span></code> and it accepts a number of parameters depending on the kind of node you want:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--mode</span></code></p></td>
+<td><p>(Mandatory) Type of node. Accepted values are <code class="docutils literal notranslate"><span class="pre">api</span></code>, <code class="docutils literal notranslate"><span class="pre">peer</span></code> and <code class="docutils literal notranslate"><span class="pre">dual</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--harvesting</span></code></p></td>
+<td><p>(Optional) To create a harvesting node. The <strong>Remote</strong> key will automatically be used so that <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a> is enabled by default.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--voting</span></code></p></td>
+<td><p>(Optional) To create a voting node. If you enable this copy the <code class="docutils literal notranslate"><span class="pre">private_key_tree1.dat</span></code> file you created above into this directory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--output</span></code></p></td>
+<td><p>(Optional) Folder where resulting configuration will be stored.</p></td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>python3 generator.py --mode dual --harvesting --voting --output settings
+  i     | extracting nemesis seed
+  i     | preparing base settings
+  i     | turning on harvesting
+  i     | turning on voting
+  i     | extracting mongo scripts
+  i     | copying certificates
+  i     | moving private_key_tree1.dat
+</pre></div>
+</div>
+<p>This command will produce all the required <strong>node configuration</strong> files in the <code class="docutils literal notranslate"><span class="pre">settings</span></code> directory and you need to copy them to <code class="docutils literal notranslate"><span class="pre">_build</span></code>, in the machine where your node will run:</p>
+<ul class="simple">
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">settings/resources</span></code> to <code class="docutils literal notranslate"><span class="pre">_build/resources</span></code>.</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">settings/certificates</span></code> to <code class="docutils literal notranslate"><span class="pre">_build/certificates</span></code>.</p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">settings/nemesis/seed</span></code> to <code class="docutils literal notranslate"><span class="pre">_build/seed</span></code> (Omit the <code class="docutils literal notranslate"><span class="pre">nemesis</span></code> part).</p></li>
+</ul>
+</li>
+<li><p><strong>Edit config-user.properties</strong>.</p>
+<ul>
+<li><p>Go back to the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory.</p></li>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">resources/config-user.properties</span></code> so that it points to the right places:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[storage]</span>
+
+<span class="na">seedDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">../seed</span>
+<span class="na">certificateDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">../certificates</span>
+<span class="na">dataDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">../data</span>
+<span class="na">pluginsDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">../lib</span>
+<span class="na">votingKeysDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">../votingkeys</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Edit config-node.properties</strong>.</p>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">resources/config-node.properties</span></code> to customize the node. Learn more about the available properties in the <a class="reference internal" href="configuring-node-properties.html"><span class="doc">Node properties</span></a> guide.</p>
+<p>The most common ones are in the <code class="docutils literal notranslate"><span class="pre">[localnode]</span></code> section:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">host</span></code></p></td>
+<td><p>IP address or domain name of your node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">friendlyName</span></code></p></td>
+<td><p>Name of your node for display purposes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">version</span></code></p></td>
+<td><p>Version of catapult-client used by your node. Leave empty to use the current one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">roles</span></code></p></td>
+<td><p>A comma-separated list of the following values: <code class="docutils literal notranslate"><span class="pre">Peer</span></code>, <code class="docutils literal notranslate"><span class="pre">Api</span></code>, <code class="docutils literal notranslate"><span class="pre">Voting</span></code>, <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>, <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[localnode]</span>
+<span class="na">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&lt;YOUR_NODE_IP&gt;</span>
+<span class="na">friendlyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">myPeerNode</span>
+<span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1.0.0.0</span>
+<span class="na">roles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">IPv4,Peer</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="run-the-client">
+<h3>Run the client<a class="headerlink" href="#run-the-client" title="Permalink to this heading"></a></h3>
+<p>Create one last folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>data
+</pre></div>
+</div>
+<p>And finally fire up the client!</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>bin
+./catapult.server
+</pre></div>
+</div>
+<p>You should see a lot of debug output while the node starts synchronizing with the rest of the network:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>... peer returned 42 blocks (heights 2 - 43)
+</pre></div>
+</div>
+<p>The node can be stopped by pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> and restarted simply by running <code class="docutils literal notranslate"><span class="pre">catapult.server</span></code> again.</p>
+<p>If you see no error messages, your client is up and running and you can continue with this guide.</p>
+</section>
+<section id="link-the-keys">
+<h3>Link the keys<a class="headerlink" href="#link-the-keys" title="Permalink to this heading"></a></h3>
+<p>The client is now running but it will not be able <strong>harvest</strong> because a number of <a class="reference internal" href="../../concepts/cryptography.html#symbol-keys"><span class="std std-ref">keys</span></a> need to be <strong>linked</strong> to it. These links are created through <strong>transactions announced to the network</strong>.</p>
+<p><strong>These transactions can be announced from ANY machine</strong>. In particular, this can be done from a machine other than the one running your node so your main account’s private key is never stored on the node.</p>
+<p>You will use the <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> tool for this. <strong>Install</strong> <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>symbol-cli
+</pre></div>
+</div>
+<p>All transactions will be sent from (and the <a class="reference internal" href="../../concepts/fees.html"><span class="doc">Fees</span></a> paid by) your <strong>main</strong> account, so you need to tell <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> about it by creating a <strong>profile</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This profile will contain your <strong>main account’s private key</strong> in <strong>encrypted</strong> form. A password will be requested every time it is accessed.</p>
+<p>The profile is stored in <code class="docutils literal notranslate"><span class="pre">~/symbol-cli.config.json</span></code>. You can remove this file once you are done using symbol-cli.</p>
+</div>
+<p>Your node’s API server is not running yet (this will be done later) so you cannot use it to announce transactions. Fortunately, you have a <strong>list of available API nodes</strong> in the network in <code class="docutils literal notranslate"><span class="pre">../resources/peers-api.json</span></code>.</p>
+<ul class="simple">
+<li><p>Open this file and pick any of the hosts listed in the lines starting with <code class="docutils literal notranslate"><span class="pre">&quot;host&quot;:</span></code>. You will use this in the next command instead of <code class="docutils literal notranslate"><span class="pre">HOST</span></code>.</p></li>
+</ul>
+<p>Run:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>$ symbol-cli profile import --network MAIN_NET --url http://HOST:3000 --default
+<span class="gi">✔ </span>Enter a profile name: ... Main
+<span class="gi">✔ </span>Enter your wallet password: ... *********
+<span class="gi">✔ </span>Select an import type: › PrivateKey
+<span class="gi">✔ </span>Enter your account private key: ... ********************************
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Enter a name for your profile (for example, <code class="docutils literal notranslate"><span class="pre">Main</span></code>).</p></li>
+<li><p>Enter a password to protect the profile.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">PrivateKey</span></code> as the import type.</p></li>
+<li><p>Enter your <strong>Main</strong> private key.</p></li>
+</ul>
+<p>The profile information is stored (encrypted) in <code class="docutils literal notranslate"><span class="pre">~/symbol-cli.config.json</span></code> and <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> is now ready to use.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the key links created in the next subsections can be <strong>undone</strong> at any time by announcing an equivalent <strong>unlink</strong> transaction (<code class="docutils literal notranslate"><span class="pre">--action</span> <span class="pre">Unlink</span></code>). Therefore you can always mend any mistake or change your node configuration (Each transaction has a <a class="reference internal" href="../../concepts/fees.html"><span class="doc">fee</span></a>, though).</p>
+</div>
+<section id="remote-key">
+<h4>Remote key<a class="headerlink" href="#remote-key" title="Permalink to this heading"></a></h4>
+<p>You configured the node to sign created blocks using the <strong>Remote</strong> key, but the harvesting fees should go to your <strong>Main</strong> account. This is accomplished by announcing an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a>:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction accountkeylink --sync --action Link \
+           --max-fee 1000000 --mode normal
+<span class="gi">✔ </span>Enter your wallet password: ... *********
+<span class="gi">✔ </span>Enter the public key of the remote account:  ********************************
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Enter your profile password.</p></li>
+<li><p>Enter your <strong>Remote public</strong> key.</p></li>
+</ul>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>...
+<span class="gi">✔ </span>Do you want to announce this transaction? ... yes
+<span class="gi">SUCCESS </span>Transaction announced
+<span class="gi">SUCCESS </span>Transaction confirmed
+</pre></div>
+</div>
+</section>
+<section id="vrf-key">
+<h4>VRF key<a class="headerlink" href="#vrf-key" title="Permalink to this heading"></a></h4>
+<p>In order to be <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">eligible for harvesting</span></a> an account must have linked a VRF key. This is accomplished by announcing a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a>:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction vrfkeylink --sync --action Link \
+                       --max-fee 1000000 --mode normal
+<span class="gi">✔ </span>Enter your wallet password: ... *********
+<span class="gi">✔ </span>Enter the public key to link: ... ********************************
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Enter your <strong>VRF public</strong> key.</p></li>
+</ul>
+</section>
+<section id="voting-key">
+<span id="manual-enable-voting"></span><h4>Voting key<a class="headerlink" href="#voting-key" title="Permalink to this heading"></a></h4>
+<p>If your node is to be a <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">voting node</span></a> it must link the voting key you generated above. The link is accomplished by announcing a <a class="reference internal" href="../../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a>:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction votingkeylink --sync --action Link \
+            --max-fee 1000000 --mode normal
+<span class="gi">✔ </span>Enter your wallet password: ... *********
+<span class="gi">✔ </span>Enter the public key of the voting key account:  ****************
+<span class="gi">✔ </span>Enter the start point: ... 100
+<span class="gi">✔ </span>Enter the end point: ... 460
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Enter your profile password.</p></li>
+<li><p>Enter the <strong>voting public key</strong> you obtained previously.</p></li>
+<li><p>Enter the Start and End epochs you used when creating the voting key.</p></li>
+</ul>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>...
+<span class="gi">✔ </span>Do you want to announce this transaction? ... yes
+<span class="gi">SUCCESS </span>Transaction announced
+<span class="gi">SUCCESS </span>Transaction confirmed
+</pre></div>
+</div>
+<p>When the next epoch starts, if it is inside the Start and End epochs of one of your registered keys, your node should participate in the <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">finalization process</span></a> and collect <a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">voting rewards</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every epoch, more than <strong>67%</strong> of all eligible voting nodes need to cast their votes or <strong>finalization stalls</strong>.</p>
+<p>Therefore, <strong>if you are planning to take your node offline</strong> for a long time it is important that you <strong>unlink your voting keys</strong> for that period so that finalization is not affected.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="build-an-api-node">
+<h2>Build an API node<a class="headerlink" href="#build-an-api-node" title="Permalink to this heading"></a></h2>
+<p>Once you have the Catapult client running, you can add <strong>extra services</strong> to turn it into an API node:</p>
+<figure class="align-center">
+<img alt="../../_images/rest-detail.png" src="../../_images/rest-detail.png" />
+</figure>
+<p>As shown in the diagram above, besides the <strong>Catapult client</strong> you will also need:</p>
+<ul class="simple">
+<li><p>A <strong>Database</strong> holding the REST data.</p></li>
+<li><p>A <strong>Catapult Broker</strong> serializing accesses to the database.</p></li>
+<li><p>A <strong>REST gateway</strong> accepting requests and turning them into Catapult client commands or database queries.</p></li>
+</ul>
+<p>The following sections explain how to install each service. You will need all of them.</p>
+<p>Move to the <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder created while building the client and create any additional folders requested in the next steps inside <code class="docutils literal notranslate"><span class="pre">_build</span></code>.</p>
+<section id="run-the-database">
+<h3>Run the database<a class="headerlink" href="#run-the-database" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Install</strong> <a class="reference external" href="http://mongodb.com">MongoDB</a> (at least version 4.4).</p>
+<p>It is recommended to follow the <a class="reference external" href="https://docs.mongodb.com/manual/administration/install-community/">program’s own installation instructions</a>, and NOT install from your distro’s packages.</p>
+</li>
+<li><p>Create a directory to store the data files and <strong>run the database</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>dbfiles
+mongod<span class="w"> </span>--dbpath<span class="o">=</span>dbfiles<span class="w"> </span>--wiredTigerCacheSizeGB<span class="w"> </span><span class="m">2</span><span class="w"> </span>--bind_ip<span class="w"> </span><span class="m">127</span>.0.0.1
+</pre></div>
+</div>
+<p>Keep <code class="docutils literal notranslate"><span class="pre">mongod</span></code> running for as long as your node runs.</p>
+</li>
+<li><p><strong>Build indices</strong> to optimize database accesses.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">catapult-client</span></code> repository you cloned to build the client in the first step contains <a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/scripts/mongo">a folder with mongo scripts</a>. Run this one:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mongo<span class="w"> </span><span class="m">127</span>.0.0.1/catapult<span class="w"> </span>&lt;<span class="w"> </span>../scripts/mongo/mongoDbPrepare.js
+</pre></div>
+</div>
+<p>Without this step database performance will be unacceptably slow.</p>
+</li>
+</ol>
+</section>
+<section id="run-the-broker">
+<h3>Run the broker<a class="headerlink" href="#run-the-broker" title="Permalink to this heading"></a></h3>
+<ol class="arabic" start="4">
+<li><p><strong>Edit</strong> <code class="docutils literal notranslate"><span class="pre">resources/config-database.properties</span></code> and point <code class="docutils literal notranslate"><span class="pre">databaseUri</span></code> to <code class="docutils literal notranslate"><span class="pre">127.0.0.1:27017</span></code>:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[database]</span>
+
+<span class="na">databaseUri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mongodb://127.0.0.1:27017</span>
+<span class="na">databaseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">catapult</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the broker</strong>:</p>
+<p>Move into the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./catapult.broker<span class="w"> </span>..
+</pre></div>
+</div>
+<p>Keep the broker running for as long as your node runs.</p>
+</li>
+</ol>
+</section>
+<section id="build-and-run-the-rest-gateway">
+<h3>Build and run the REST gateway<a class="headerlink" href="#build-and-run-the-rest-gateway" title="Permalink to this heading"></a></h3>
+<ol class="arabic" start="6">
+<li><p><strong>Clone</strong> the <code class="docutils literal notranslate"><span class="pre">catapult-rest</span></code> repository and <strong>install its dependencies</strong>:</p>
+<p>(Going back to the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory first)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>..
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/symbol/symbol
+<span class="nb">cd</span><span class="w"> </span>symbol/client/rest
+</pre></div>
+</div>
+</li>
+<li><p><strong>Build</strong> the REST gateway:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install
+</pre></div>
+</div>
+</li>
+<li><p><strong>Configure</strong> the REST gateway:</p>
+<p>All configuration is stored in the <code class="docutils literal notranslate"><span class="pre">resources/rest.json</span></code> file.</p>
+<p><strong>Edit this file</strong> to make sure that the following properties point to the right files:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 35%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>File</p></th>
+<th class="head"><p>Default location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tlsClientCertificatePath</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">node.crt.pem</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">_build/certificate/</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tlsClientKeyPath</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">node.key.pem</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">_build/certificate/</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tlsCaCertificatePath</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ca.crt.pem</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">_build/certificate/</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">networkPropertyFilePath</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">config-network.properties</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">_build/resources/</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nodePropertyFilePath</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">config-node.properties</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">_build/resources/</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Use absolute paths</strong>. For example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7900</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;tlsClientCertificatePath&quot;</span><span class="p">:</span>
+<span class="w">         </span><span class="s2">&quot;/home/symbol/catapult-client/_build/certificate/node.crt.pem&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;tlsClientKeyPath&quot;</span><span class="p">:</span>
+<span class="w">         </span><span class="s2">&quot;/home/symbol/catapult-client/_build/certificate/node.key.pem&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;tlsCaCertificatePath&quot;</span><span class="p">:</span>
+<span class="w">         </span><span class="s2">&quot;/home/symbol/catapult-client/_build/certificate/ca.crt.pem&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;networkPropertyFilePath&quot;</span><span class="p">:</span>
+<span class="w">         </span><span class="s2">&quot;/home/symbol/catapult-client/_build/resources/config-network.properties&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;nodePropertyFilePath&quot;</span><span class="p">:</span>
+<span class="w">         </span><span class="s2">&quot;/home/symbol/catapult-client/_build/resources/config-node.properties&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the REST gateway</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node<span class="w"> </span>_build/index.js<span class="w"> </span>resources/rest.json
+</pre></div>
+</div>
+<p>Keep the REST gateway running for as long as your node runs.</p>
+</li>
+</ol>
+</section>
+<section id="verification">
+<h3>Verification<a class="headerlink" href="#verification" title="Permalink to this heading"></a></h3>
+<p>If the REST gateway is working correctly, you can now make queries at port 3000. If the Catapult client, Broker and MongoDB are working correctly, the values returned by REST will be correctly synchronized with the rest of the blockchain.</p>
+<p>Point a browser to the following URLs and check that the returned values are similar to the expected ones:</p>
+<ul>
+<li><p><a class="reference external" href="http://localhost:3000/node/health">http://localhost:3000/node/health</a>: Services status.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;status&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;apiNode&quot;</span><span class="p">:</span><span class="s2">&quot;up&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;db&quot;</span><span class="p">:</span><span class="s2">&quot;up&quot;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference external" href="http://localhost:3000/chain/info">http://localhost:3000/chain/info</a>: Node’s connection to the network.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;scoreHigh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;scoreLow&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11485261672816562840&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;161138&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;latestFinalizedBlock&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;finalizationEpoch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">224</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;finalizationPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;160560&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;52D3B01920C695B9194FABD869804E4D2A18D9B5509E47B2C70B0E6C3E275E33&quot;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">height</span></code> field should match the actual height of the blockchain, but, upon first starting the node, it might take a while to synchronize.</p>
+</li>
+</ul>
+<p>Finally, go to the <a class="reference external" href="https://symbol.fyi/nodes">Symbol Explorer page</a> and check that your node appears in the list (It refreshes every 30 seconds).</p>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<p>Now that your node is up and running, you can take a look at the following guides:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="maintaining-a-symbol-node.html"><span class="doc">Maintaining a Node</span></a></p></li>
+<li><p><a class="reference internal" href="../category.html" title="Categories"><span class="xref std std-ref">Categorized list of Symbol guides</span></a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2023&#8209;04&#8209;07</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/running-a-symbol-node-manually.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Running a node manually</a><ul>
+<li><a class="reference internal" href="#build-a-peer-node">Build a Peer node</a><ul>
+<li><a class="reference internal" href="#build-the-client">Build the client</a></li>
+<li><a class="reference internal" href="#generate-keys">Generate keys</a><ul>
+<li><a class="reference internal" href="#main-remote-and-vrf">Main, Remote and VRF</a></li>
+<li><a class="reference internal" href="#voting">Voting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#run-the-client">Run the client</a></li>
+<li><a class="reference internal" href="#link-the-keys">Link the keys</a><ul>
+<li><a class="reference internal" href="#remote-key">Remote key</a></li>
+<li><a class="reference internal" href="#vrf-key">VRF key</a></li>
+<li><a class="reference internal" href="#voting-key">Voting key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#build-an-api-node">Build an API node</a><ul>
+<li><a class="reference internal" href="#run-the-database">Run the database</a></li>
+<li><a class="reference internal" href="#run-the-broker">Run the broker</a></li>
+<li><a class="reference internal" href="#build-and-run-the-rest-gateway">Build and run the REST gateway</a></li>
+<li><a class="reference internal" href="#verification">Verification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Node &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plugin" href="plugin.html" />
+    <link rel="prev" title="Namespace" href="namespace.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/node.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/node.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="node">
+<h1>Node<a class="headerlink" href="#node" title="Permalink to this heading"></a></h1>
+<p>Symbol blockchain platform is built from a <strong>network of nodes</strong>.
+These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged on the blockchain ledger.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/four-layer-architecture.png" src="../_images/four-layer-architecture.png" style="width: 550px;" />
+<figcaption>
+<p><span class="caption-text">Symbol’s Performance Advantage: A Four-Layered Architecture</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <strong>four-layered architecture</strong> allows developers to update any of these tiers without disrupting the others, which improves security.</p>
+<section id="peer-node">
+<span id="id1"></span><h2>Peer node<a class="headerlink" href="#peer-node" title="Permalink to this heading"></a></h2>
+<p><strong>Repository:</strong> <a href="https://github.com/symbol/symbol/tree/dev/client/catapult" target="_blank">Catapult Client</a></p>
+<figure class="align-center" id="id5">
+<img alt="../_images/peer-detail.png" src="../_images/peer-detail.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">Peer node communication</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The peer nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity.
+The role of the node is to <a class="reference internal" href="transaction.html#transaction-validation"><span class="std std-ref">verify transactions</span></a> and <a class="reference internal" href="block.html"><span class="doc">blocks</span></a>, run the consensus algorithm, create new blocks, and propagate the changes through the network.</p>
+<p>The API nodes push new transactions to the P2P network, where they are <a class="reference internal" href="harvesting.html"><span class="doc">included in a block</span></a> or discarded.
+After the block is processed, the node saves:</p>
+<ul class="simple">
+<li><p>The binary of each block as a flat-file on disk.</p></li>
+<li><p>The updated chain state in memory or RocksDB (configurable).</p></li>
+</ul>
+<section id="rocksdb">
+<h3>RocksDB<a class="headerlink" href="#rocksdb" title="Permalink to this heading"></a></h3>
+<p>Peer nodes store the chain state in <a href=" https://en.wikipedia.org/wiki/RocksDB" target="_blank">RocksDB</a>.
+The data structures cached are serialized and stored as values to corresponding keys.
+For example, a column in this database maps the public keys to addresses.
+Another one, the account state entries as the values to corresponding address keys.</p>
+<p>Storing the state in memory is faster than using RocksDB.
+However, storing state information in RocksDB demands less memory of the network nodes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Persisting the state in RocksDB is convenient in networks with a large number of accounts.</p>
+</div>
+</section>
+<section id="node-reputation">
+<h3>Node reputation<a class="headerlink" href="#node-reputation" title="Permalink to this heading"></a></h3>
+<p>Public networks enable anyone to run a node.
+Some of these nodes could share invalid information or try to disturb the network.</p>
+<p>To reduce miscommunication attempts, the nodes keep track of the results of preceding communications.
+Every node with P2P capabilities keeps a success and a failure counter for every other peer node that it has interacted with.</p>
+<p>Nodes update the counters accordingly after processing the data requested.
+If a node successfully connects to a remote peer, it first increments the success counter towards the remote peer.
+If the communication attempt fails, the node increments the remote peer’s failure counter.
+Likewise, the node updates the peer counters accordingly after processing data shared.</p>
+<p>Extrapolating from these scores, the node assigns a weight between 500 and 10000 to every peer reached.</p>
+<p>The probability of selecting a remote node to read data from depends linearly on its weight.
+Every four rounds of node selections, the criteria changes to prevent <a href=" https://en.wikipedia.org/wiki/Sybil_attack" target="_blank">Sybil attacks</a>.</p>
+</section>
+</section>
+<section id="api-node">
+<span id="id2"></span><h2>API node<a class="headerlink" href="#api-node" title="Permalink to this heading"></a></h2>
+<p><strong>Repository:</strong> <a href="https://github.com/symbol/symbol/tree/dev/client/catapult" target="_blank">Catapult Client</a></p>
+<figure class="align-center" id="id6">
+<img alt="../_images/api-detail.png" src="../_images/api-detail.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">Peer + API (Dual) node communication</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The primary responsibility of an API node is to store the data in a readable form in MongoDB.
+The catapult-client software allows configuring standalone API nodes or with Peer capabilities (Dual).</p>
+<p>Instead of writing the data directly into MongoDB, the nodes write it into a file-based queue called <code class="docutils literal notranslate"><span class="pre">spool</span></code>.
+A broker service consumes the data from the spool and updates MongoDB accordingly.
+Once a block is processed, the broker service notifies the changes to catapult-rest instances using ZMQ.</p>
+<p>API nodes are also responsible for collecting the cosignatures of <a class="reference internal" href="aggregate-transaction.html"><span class="doc">aggregated bonded transactions</span></a>, which are only processed once they are complete.</p>
+<section id="mongodb">
+<h3>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this heading"></a></h3>
+<p><a href="https://es.wikipedia.org/wiki/MongoDB" target="_blank">MongoDB</a> stores blocks, transactions, and chain states for high query performance.</p>
+<p>The broker service updates the linked MongoDB instance when:</p>
+<ul class="simple">
+<li><p>A new block / a bunch of blocks finish processing.</p></li>
+<li><p>New unconfirmed transactions complete processing.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MongoDB should not be accessed externally.</p>
+</div>
+</section>
+<section id="zmq">
+<h3>ZMQ<a class="headerlink" href="#zmq" title="Permalink to this heading"></a></h3>
+<p><a href=" https://en.wikipedia.org/wiki/ZeroMQ" target="_blank">ZeroMQ</a> is an asynchronous messaging library, which enables real-time subscriptions.
+It transports notifications from the API node to the ZMQ endpoint, where Catapult REST listens.
+It is an alternative to REST WebSockets, aimed to be used when performance is critical.</p>
+</section>
+</section>
+<section id="rest-gateway">
+<span id="id3"></span><h2>REST gateway<a class="headerlink" href="#rest-gateway" title="Permalink to this heading"></a></h2>
+<p><strong>Repository:</strong> <a href="https://github.com/symbol/symbol/tree/dev/client/rest" target="_blank">Catapult REST</a></p>
+<figure class="align-center" id="id7">
+<img alt="../_images/rest-detail.png" src="../_images/rest-detail.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">REST gateway communication</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The REST gateways handle <a class="reference internal" href="../api.html"><span class="doc">JSON API</span></a> client requests.
+The gateway reads from MongoDB, formats the response, and returns it to the client.
+This component is also responsible for returning events to the client using <a class="reference internal" href="../api.html#websockets"><span class="std std-ref">WebSockets</span></a>.</p>
+<p>Each REST gateway connects to one API instance to send new transactions requests triggered from the client-side and receive updates in real-time using sockets.</p>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="Permalink to this heading"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/creating-a-private-test-net.html">Private test networks</a></p>
+<p class="ablog-post-excerpt">This guide will walk you through the process of setting up your own private network using Symbol.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/running-a-symbol-node.html">Running a node</a></p>
+<p class="ablog-post-excerpt">This guide walks you through the process of setting up a node to join Symbol’s <strong>public network</strong>.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/configuring-network-properties.html">Network properties</a></p>
+<p class="ablog-post-excerpt">There is a large number of network-related settings that can be customized in Symbol.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/configuring-node-properties.html">Node properties</a></p>
+<p class="ablog-post-excerpt">There is a large number of node-related settings that can be customized in Symbol.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/connecting-to-mongodb.html">How to connect to MongoDB</a></p>
+<p class="ablog-post-excerpt">Learn how to access your API node’s MongoDB instance.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/using-symbol-bootstrap.html">Using Symbol Bootstrap</a></p>
+<p class="ablog-post-excerpt">How to use this handy node deployment tool.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/running-a-symbol-node-manually.html">Running a node manually</a></p>
+<p class="ablog-post-excerpt">This guide walks you through the process of setting up a node to join Symbol’s network <strong>without</strong> using Symbol Bootstrap.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/running-a-secure-symbol-node.html">Running a secure node</a></p>
+<p class="ablog-post-excerpt">How to run a Symbol node with added security.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/non-custodial-node-setup.html">Non-custodial node setup</a></p>
+<p class="ablog-post-excerpt">How to <strong>relinquish control of a node’s main account to an external account</strong>, so that the external account’s private key is never required in the node setup process.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/maintaining-a-symbol-node.html">Maintaining a Node</a></p>
+<p class="ablog-post-excerpt">How to keep your Symbol node up and running healthily.</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;05&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/node.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Node</a><ul>
+<li><a class="reference internal" href="#peer-node">Peer node</a><ul>
+<li><a class="reference internal" href="#rocksdb">RocksDB</a></li>
+<li><a class="reference internal" href="#node-reputation">Node reputation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api-node">API node</a><ul>
+<li><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li><a class="reference internal" href="#zmq">ZMQ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rest-gateway">REST gateway</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

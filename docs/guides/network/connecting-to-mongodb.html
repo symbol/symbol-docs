@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>How to connect to MongoDB &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Mosaic restrictions" href="../restriction/index.html" />
+    <link rel="prev" title="Network properties" href="configuring-network-properties.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/connecting-to-mongodb.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/connecting-to-mongodb.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="how-to-connect-to-mongodb">
+<h1>How to connect to MongoDB<a class="headerlink" href="#how-to-connect-to-mongodb" title="Permalink to this heading"></a></h1>
+<p>Learn how to access your API node’s MongoDB instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This is an advanced feature</strong></p>
+<p>The <a class="reference internal" href="../../api.html"><span class="doc">REST Gateway</span></a> offers a broad range of endpoints so that you don’t have to connect to an API node’s internal database directly.</p>
+<p>However, if you are developing new plugins for Symbol, or analyzing extensive blockchain data, you might need to connect directly to MongoDB <strong>for debugging purposes</strong>.</p>
+</div>
+<p>By the end of this guide, you will be connected to your API node database instance and doing some basic queries.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Have an <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">API or Dual node running</span></a> inside Docker <strong>with an open port to the database</strong> (See next section).</p></li>
+</ul>
+</section>
+<section id="open-the-database-port">
+<h2>Open the database port<a class="headerlink" href="#open-the-database-port" title="Permalink to this heading"></a></h2>
+<p>In the <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">Running a node</span></a> guide you have used <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> to instantiate and run the necessary node services (catapult-client, API endpoints, databases, etc). For security reasons, all these services run inside Docker containers and, except the public endpoints, they are isolated from the exterior.</p>
+<p>This means that the MongoDB database that API nodes use to cache the state of the blockchain is <strong>inaccessible by default</strong>. To forward its internal port to the host you need to give <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> a <a class="reference internal" href="using-symbol-bootstrap.html#symbol-bootstrap-presets"><span class="std std-ref">custom preset file</span></a> containing the following lines:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">databases</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">openPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>And then use this file when configuring <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code>, for example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>start<span class="w"> </span>-p<span class="w"> </span>testnet<span class="w"> </span>-a<span class="w"> </span>dual<span class="w"> </span>-c<span class="w"> </span>custom_parameters.yml
+</pre></div>
+</div>
+<p>Previously configured nodes may need to be stopped and restarted with the <code class="docutils literal notranslate"><span class="pre">--upgrade</span></code> argument in order to process the updated custom yml file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>stop
+symbol-bootstrap<span class="w"> </span>start<span class="w"> </span>-p<span class="w"> </span>testnet<span class="w"> </span>-a<span class="w"> </span>dual<span class="w"> </span>-c<span class="w"> </span>custom_parameters.yml<span class="w"> </span>--upgrade
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will make the database accessible from the host’s TCP port <code class="docutils literal notranslate"><span class="pre">27017</span></code> and it will be extremely vulnerable if this port is publicly exposed, so please be careful. This feature is only recommended <strong>for development purposes</strong>.</p>
+</div>
+</section>
+<section id="install-robo-3t">
+<h2>Install Robo 3T<a class="headerlink" href="#install-robo-3t" title="Permalink to this heading"></a></h2>
+<p>For this tutorial, we are going to use <a href="https://robomongo.org">Robo 3T</a> (formerly RoboMongo), a cross-platform MongoDB management tool, to interact with the database.</p>
+<ol class="arabic simple">
+<li><p>Download Robo 3T <a class="reference external" href="https://robomongo.org/download">here</a>.</p></li>
+<li><p>Open the installer and follow the installation instructions.</p></li>
+</ol>
+<p>In case of doubt, follow the <a class="reference external" href="https://studio3t.com/knowledge-base/articles/installation/">official installation docs</a>.</p>
+</section>
+<section id="create-a-new-connection">
+<h2>Create a new connection<a class="headerlink" href="#create-a-new-connection" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Launch Robo 3T and click on the <strong>“Create”</strong> link to add a new connection.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/robo3t-open.png" src="../../_images/robo3t-open.png" />
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Enter the following details under the <strong>“Connection”</strong> tab:</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/robo3t-connection.png" src="../../_images/robo3t-connection.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>Type</strong>: Direct Connection</p></li>
+<li><p><strong>Name</strong>: my-node</p></li>
+<li><p><strong>Address</strong>: localhost</p></li>
+<li><p><strong>Port</strong>: 27017</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>If the node is running locally, click <strong>“Connect”</strong> and move to the next section <a class="reference internal" href="#querying-mongodb"><span class="std std-ref">Querying MongoDB</span></a>.</p></li>
+<li><p>Otherwise, if you are running the node in a <strong>virtual private server</strong> (VPS), create a tunnel first between your computer and the server.</p></li>
+</ol>
+<p>Go to the <strong>SSH tab</strong> and add the server’s details:</p>
+<figure class="align-center">
+<img alt="../../_images/robo3t-tunnel.png" src="../../_images/robo3t-tunnel.png" style="width: 700px;" />
+</figure>
+<p>Replace the <strong>SSH Address</strong>, <strong>username</strong>, and <strong>authentication</strong> method.</p>
+<ol class="arabic simple" start="5">
+<li><p>After you click “Connect”, you should see the MongoDB collections under the database named <strong>“catapult”</strong>.</p></li>
+</ol>
+</section>
+<section id="querying-mongodb">
+<span id="id1"></span><h2>Querying MongoDB<a class="headerlink" href="#querying-mongodb" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only use this method to read from the database. Do not alter any document directly on MongoDB.</p>
+</div>
+<ol class="arabic simple">
+<li><p>On the left sidebar, open the collection you want to query.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/robo3t-collection.png" src="../../_images/robo3t-collection.png" style="width: 700px;" />
+</figure>
+<p>2. In most cases, you may want to filter a set of entries by one of its attributes.
+To filter, for example, a given transaction type, write a query with the following format on Robo 3T shell:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.getCollection<span class="o">(</span><span class="s1">&#39;transactions&#39;</span><span class="o">)</span>.find<span class="o">(</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;transaction.type&quot;</span>:<span class="w"> </span><span class="m">16724</span><span class="o">})</span>
+</pre></div>
+</div>
+<p>For other advanced queries, check the <a class="reference external" href="https://studio3t.com/knowledge-base/articles/query-mongodb/">Robo3T</a> docs.</p>
+<ol class="arabic simple" start="3">
+<li><p>Click on the <strong>“Play”</strong> button to execute the query.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/robo3t-query.png" src="../../_images/robo3t-query.png" style="width: 700px;" />
+</figure>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;06&#8209;07</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/connecting-to-mongodb.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">How to connect to MongoDB</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#open-the-database-port">Open the database port</a></li>
+<li><a class="reference internal" href="#install-robo-3t">Install Robo 3T</a></li>
+<li><a class="reference internal" href="#create-a-new-connection">Create a new connection</a></li>
+<li><a class="reference internal" href="#querying-mongodb">Querying MongoDB</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/14351392?v=4" class="git-info-image">Last updated by <a href="https://github.com/orisdorch" target="_blank" rel="noopener noreferrer">OrisDorch</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/14351392?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/orisdorch" target="_blank" rel="noopener noreferrer">OrisDorch</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>暗号理論 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="データバリデーション" href="data-validation.html" />
+    <link rel="prev" title="クロスチェーンスワップ" href="cross-chain-swaps.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/cryptography.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/cryptography.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="cryptography">
+<h1>暗号理論<a class="headerlink" href="#cryptography" title="この見出しへのパーマリンク"></a></h1>
+<p>Symbol はデータの整合性を検証し、署名者の身元を認証するために <a class="reference external" href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">楕円曲線暗号</a> を使用します。</p>
+<section id="key-pair">
+<span id="keypair"></span><h2>キーペア<a class="headerlink" href="#key-pair" title="この見出しへのパーマリンク"></a></h2>
+<p>楕円曲線暗号は <strong>キーペア</strong> に基づきます:  秘密鍵に対応する公開鍵。特に Symbol はデジタル署名アルゴリズム <a class="reference external" href="https://ed25519.cr.yp.to">Ed25519</a> とハッシュアルゴリズム <strong>SHA-512</strong> と一緒に <a class="reference external" href="https://en.wikipedia.org/wiki/Twisted_Edwards_curve">Twisted Edwards curve</a> を使用します:</p>
+<ul class="simple">
+<li><p><strong>秘密鍵</strong>: <a class="reference internal" href="../serialization/index.html#verifiableentity"><span class="std std-ref">エンティティ</span></a> に署名するために使用する、所有者が知っているランダムな 256-bit (32 byte) 整数</p></li>
+<li><p><strong>公開鍵</strong>: 秘密鍵から導出される 256-bit (32 byte) の整数値。広く普及させることのできるキーペアの公開識別子です。対となる秘密鍵でエンティティが署名されていることの証明に使用します。</p></li>
+</ul>
+<p>公開鍵は秘密鍵から取得できますが <strong>その逆はできません</strong> 。</p>
+<section id="codename-keys">
+<span id="symbol-keys"></span><h3>Symbol キー<a class="headerlink" href="#codename-keys" title="この見出しへのパーマリンク"></a></h3>
+<p>キーペアは Symbol のさまざまな場所で <strong>さまざまな目的</strong> に使用されます。これはキーの使用目的の要約です:</p>
+<ul class="simple">
+<li><p><strong>Main</strong>: このキーペアは資産やモザイク、ネームスペースを保有する <strong>通常</strong> <a class="reference internal" href="account.html"><span class="doc">アカウント</span></a> を管理します。</p></li>
+<li><p><strong>Remote</strong>: このキーペアは <a class="reference internal" href="harvesting.html#remote-harvesting"><span class="std std-ref">リモートハーベスティング</span></a> において <strong>リモートアカウント</strong> を管理します。</p></li>
+<li><p><strong>VRF</strong>: <a class="reference internal" href="harvesting.html#account-eligibility"><span class="std std-ref">ハーベスティング</span></a> で要求されます。</p></li>
+<li><p><strong>Voting</strong>: <a class="reference internal" href="block.html#finalization"><span class="std std-ref">ファイナライゼーション</span></a> プロセスに参加するノードに必要です。</p></li>
+<li><p><strong>Transport</strong>: このキーペアは <a class="reference external" href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> を介した、安全な転送のためにノードが使用します。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>経験則から、キーペアの <strong>秘密鍵</strong> は常に秘密にしなければなりません。しかしながら <strong>秘密鍵が盗まれるのはどれほど悪いことでしょう？</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Severity</p></th>
+<th class="head"><p>Impact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Main</strong></p></td>
+<td><p>🔴 高</p></td>
+<td><p>資産は別のアカウントへ送信される場合があります。</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Remote</strong></p></td>
+<td><p>🟠 中</p></td>
+<td><p>アカウントやノードには無害です。別のリモートアカウントをリンクすることで簡単に元に戻すことができます。攻撃者が多数のリモートキーを取得すると、多くのハーベスティング力が得られ、ブロックチェーンに追加されるブロックに影響を与える可能性があります。</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>VRF</strong></p></td>
+<td><p>🟡 低</p></td>
+<td><p>ハーベスティングに使用する鍵がなくても害はありません。</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Voting</strong></p></td>
+<td><p>🟠 中</p></td>
+<td><p>アカウントやノードには無害です。別の投票アカウントをリンクすることで簡単に元に戻すことができます。攻撃者がネットワークの投票キーの 50 ％以上を取得すると、ブロックのファイナライズに影響を与える可能性があります。</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Transport</strong></p></td>
+<td><p>🟡 低</p></td>
+<td><p>攻撃者はハーベスティングの委任をノードから盗むことができますが、それ以外に害はありません。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="signature">
+<h2>署名<a class="headerlink" href="#signature" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>すべてのトランザクションは秘密鍵を使用して署名され</strong> 512 bit (64 byte) の <strong>署名</strong> を生成します。</p>
+<p>プロトコルは通常のワークフローの一部として、一致する公開鍵を使用して署名を <strong>検証</strong> します。これによりエンティティの署名者の信頼性が保証されます。</p>
+</section>
+<section id="address">
+<span id="id1"></span><h2>アドレス<a class="headerlink" href="#address" title="この見出しへのパーマリンク"></a></h2>
+<p>Symbol 公開鍵は <strong>より短い形式</strong> である <strong>アドレス</strong> として共有できます。</p>
+<p>前 <strong>24-byte</strong> <strong>Raw アドレス</strong> が構成されています:</p>
+<ul class="simple">
+<li><p>network-id バイト</p></li>
+<li><p>アカウントの公開鍵の 160-bit (20 byte) ハッシュ</p></li>
+<li><p>アドレスのミスタイプを素早く確認するための 3-byte のチェックサム</p></li>
+</ul>
+<p>しかし、Raw アドレスはバイナリ配列のため、普段使いには不便なので、通常は <cite>Base32 エンコード済み &lt;https://en.wikipedia.org/wiki/Base32&gt;</cite> __ を <strong>エンコード済みアドレス</strong> または単に <strong>アドレス</strong> と呼ばれる <strong>39 文字</strong> のテキストへ変換します。</p>
+<p>最後に、読みやすくするために、6 文字ごとにハイフンを追加して <strong>きれいなアドレス</strong> へ整形します。</p>
+<p>例:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 65%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Raw アドレス</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x78,0xD0,0x44,0xED,0xC3,0xDC,0x8B,0x86...</span></code></p></td>
+<td><p>24 バイト</p></td>
+</tr>
+<tr class="row-even"><td><p>アドレス</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PDIEJ3OD3SFYNZCQUSEWKY4NRRZUI5LMJPSVLPQ</span></code></p></td>
+<td><p>39 文字</p></td>
+</tr>
+<tr class="row-odd"><td><p>整形アドレス</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PDIEJ3-OD3SFY-NZCQUS-EWKY4N-RRZUI5-LMJPSV-LPQ</span></code></p></td>
+<td><p>45 文字</p></td>
+</tr>
+</tbody>
+</table>
+<p>ブロックチェーンと疎通せずにアドレスを作ることができます。実際、ブロックチェーンはあるトランザクションにおいて、初めて現れたアドレスと公開鍵だけを追跡しています。</p>
+</section>
+<section id="hd-wallets-and-mnemonics">
+<span id="hdwallets-and-mnemonics"></span><h2>HD-Wallets とニーモニック<a class="headerlink" href="#hd-wallets-and-mnemonics" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>階層的決定論的ウォレット</strong> (略して HD ウォレット) は、単一のシードアカウントから <strong>一連のアカウントを導出</strong> できます。これにより単一の <a class="reference internal" href="#keypair"><span class="std std-ref">キーペア</span></a> を使用してアカウントのグループを処理できるようになり、管理が大幅に簡素化されます。</p>
+<ul class="simple">
+<li><p>一つの鍵だけを守る</p></li>
+<li><p>複数のアカウントを 1 つの QR コードまたは <strong>ニーモニック語群</strong> に保存できます。</p></li>
+</ul>
+<p><strong>ニーモニック語群</strong> は秘密鍵をヒューマンフレンドリーな <strong>24 のランダムな英単語</strong> 表現です。ニーモニックフレーズは <strong>人間にとって覚えやすく、書き留めやすい</strong> ため、秘密鍵の代わりに使用されることがあります。</p>
+<p>ただし、これらは <strong>秘密鍵</strong> と同等なので、常に秘密にしておかなければなりません。 Symbol では、さらにそうですが <a class="reference internal" href="../wallets.html#wallet-desktop"><span class="std std-ref">デスクトップウォレット</span></a> <strong>ニーモニックフレーズはシードアカウントのキーをエンコードします</strong> 。</p>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;23</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/cryptography.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">暗号理論</a><ul>
+<li><a class="reference internal" href="#key-pair">キーペア</a><ul>
+<li><a class="reference internal" href="#codename-keys">Symbol キー</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#signature">署名</a></li>
+<li><a class="reference internal" href="#address">アドレス</a></li>
+<li><a class="reference internal" href="#hd-wallets-and-mnemonics">HD-Wallets とニーモニック</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;23.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;23.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

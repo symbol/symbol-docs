@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>モザイクにメタデータを割り当てる &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ネームスペースにメタデータを割り当てる" href="assigning-metadata-entries-to-a-namespace.html" />
+    <link rel="prev" title="メタデータ" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/metadata/assigning-metadata-entries-to-a-mosaic.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/metadata/assigning-metadata-entries-to-a-mosaic.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メタデータ</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">モザイクにメタデータを割り当てる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-a-namespace.html">ネームスペースにメタデータを割り当てる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-an-account.html">アカウントにメタデータを割り当てる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-mosaic.html">モザイクにアタッチされたメタデータエントリを取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-namespace.html">ネームスペースにアタッチされたメタデータエントリを取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-an-account.html">アカウントにアタッチされたメタデータエントリを取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="updating-metadata-entries.html">メタデータエントリの更新</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">メタデータ</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">モザイクにメタデータを割り当てる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-a-namespace.html">ネームスペースにメタデータを割り当てる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-an-account.html">アカウントにメタデータを割り当てる</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-mosaic.html">モザイクにアタッチされたメタデータエントリを取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-namespace.html">ネームスペースにアタッチされたメタデータエントリを取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-an-account.html">アカウントにアタッチされたメタデータエントリを取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="updating-metadata-entries.html">メタデータエントリの更新</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="assigning-metadata-to-a-mosaic">
+<h1>モザイクにメタデータを割り当てる<a class="headerlink" href="#assigning-metadata-to-a-mosaic" title="この見出しへのパーマリンク"></a></h1>
+<p>モザイクにカスタムデータを追加</p>
+<section id="use-case">
+<h2>ユースケース<a class="headerlink" href="#use-case" title="この見出しへのパーマリンク"></a></h2>
+<p>Symbol の機能であるメタデータは <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">モザイク</span></a> に関する情報をアタッチするために使用できます。たとえば、正式名称、ティッカー、ISINなどの小さな情報はオンチェーン上の <a class="reference internal" href="../../concepts/metadata.html"><span class="doc">メタデータ</span></a> に割り当て、一方で目論見書や投資家との契約のような大きな情報はオフチェーンで保管されます。</p>
+<p>このチュートリアルでは、関連するデータをモザイクに追加するプログラムを実装します。会社はコード <code class="docutils literal notranslate"><span class="pre">US0000000000</span></code> を受け取ると <code class="docutils literal notranslate"><span class="pre">cc.shares</span></code> という名前のモザイクを作成して、会社の株式を表現するのだと想像してください。投資家間で株式を分配する前に ComfyClothingCompany は ISIN コードと正式名称を株式定義に添付したいと考えています。</p>
+<figure class="align-center">
+<img alt="../../_images/metadata-mosaic.png" src="../../_images/metadata-mosaic.png" style="width: 550px;" />
+</figure>
+</section>
+<section id="prerequisites">
+<h2>前提条件<a class="headerlink" href="#prerequisites" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">入門セクション</span></a> を完了している</p></li>
+<li><p>新しい <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">アカウント</span></a> を作成します。</p></li>
+<li><p>アカウントに手数料の支払いとモザイクの作成とネームスペースの登録に十分な <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> を入金してください。</p></li>
+</ul>
+</section>
+<section id="creating-the-shares">
+<h2>株式の作成<a class="headerlink" href="#creating-the-shares" title="この見出しへのパーマリンク"></a></h2>
+<p>1. Create a mosaic to represent the shares.
+The mosaic we are creating will have the properties <code class="docutils literal notranslate"><span class="pre">supplyMutable</span></code>, <code class="docutils literal notranslate"><span class="pre">transferable</span></code>, <code class="docutils literal notranslate"><span class="pre">restrictable</span></code>, <code class="docutils literal notranslate"><span class="pre">non-expiring</span></code>, and we will be able to operate with up to 2 decimal places.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>mosaic<span class="w"> </span>--sync
+
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>an<span class="w"> </span>non-expiring<span class="w"> </span>mosaic?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Enter<span class="w"> </span>mosaic<span class="w"> </span>divisibility:<span class="w"> </span><span class="m">2</span>
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>mosaic<span class="w"> </span>to<span class="w"> </span>have<span class="w"> </span>supply<span class="w"> </span>mutable?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>mosaic<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>transferable?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>mosaic<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>restrictable?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Enter<span class="w"> </span>max_fee<span class="w"> </span><span class="o">(</span>absolute<span class="w"> </span>amount<span class="o">)</span>:<span class="w"> </span><span class="m">0</span>
+Enter<span class="w"> </span>amount<span class="w"> </span>of<span class="w"> </span>tokens:<span class="w"> </span><span class="m">100</span>
+The<span class="w"> </span>new<span class="w"> </span>mosaic<span class="w"> </span>id<span class="w"> </span>is:<span class="w">  </span>2C08D5EDB652AA79
+Transaction<span class="w"> </span>confirmed.
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>ネットワークでモザイクを簡単に識別できるようにするには、ネームスペース <code class="docutils literal notranslate"><span class="pre">cc</span></code> とサブネームスペース <code class="docutils literal notranslate"><span class="pre">cc.shares</span></code> を作成します。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>namespace<span class="w"> </span>--sync
+
+Enter<span class="w"> </span>namespace<span class="w"> </span>name:<span class="w"> </span>cc
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>root<span class="w"> </span>namespace?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Enter<span class="w"> </span>the<span class="w"> </span>namespace<span class="w"> </span>rental<span class="w"> </span>duration:<span class="w"> </span><span class="m">172800</span>
+Enter<span class="w"> </span>max_fee<span class="w"> </span><span class="o">(</span>absolute<span class="w"> </span>amount<span class="o">)</span>:<span class="w"> </span><span class="m">0</span>
+Transaction<span class="w"> </span>confirmed.
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>namespace<span class="w"> </span>--sync
+
+Enter<span class="w"> </span>namespace<span class="w"> </span>name:<span class="w"> </span>shares
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>root<span class="w"> </span>namespace?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>n
+Enter<span class="w"> </span>the<span class="w"> </span>parent<span class="w"> </span>namespace<span class="w"> </span>name:<span class="w"> </span>cc
+Enter<span class="w"> </span>max_fee<span class="w"> </span><span class="o">(</span>absolute<span class="w"> </span>amount<span class="o">)</span>:<span class="w"> </span><span class="m">0</span>
+Transaction<span class="w"> </span>confirmed.
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>サブネームスペース <code class="docutils literal notranslate"><span class="pre">cc.shares</span></code> を最初のステップで作成した <code class="docutils literal notranslate"><span class="pre">mosaicId</span></code> にリンクします。</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>mosaicalias<span class="w"> </span>--sync
+
+Enter<span class="w"> </span>namespace<span class="w"> </span>name:<span class="w"> </span>cc.shares
+Enter<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>action<span class="w"> </span><span class="o">(</span><span class="m">1</span>:<span class="w"> </span>Link,<span class="w"> </span><span class="m">0</span>:<span class="w"> </span>Unlink<span class="o">)</span>:<span class="w"> </span><span class="m">1</span>
+Enter<span class="w"> </span>mosaic<span class="w"> </span><span class="k">in</span><span class="w"> </span>hexadecimal<span class="w"> </span>format:<span class="w"> </span>2C08D5EDB652AA79
+Enter<span class="w"> </span>max_fee<span class="w"> </span><span class="o">(</span>absolute<span class="w"> </span>amount<span class="o">)</span>:<span class="w"> </span><span class="m">0</span>
+Transaction<span class="w"> </span>confirmed.
+</pre></div>
+</div>
+</section>
+<section id="method-01-using-the-sdk">
+<h2>方法 #01: SDK を使用する<a class="headerlink" href="#method-01-using-the-sdk" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cc.shares</span></code> を作成したので 2 つの <code class="docutils literal notranslate"><span class="pre">MosaicMetatadaTransaction</span></code> を定義して <strong>ISIN</strong> と <strong>正式名称</strong> をモザイクに追加します。</p></li>
+</ol>
+<ol class="upperalpha simple">
+<li><p>Key: <code class="docutils literal notranslate"><span class="pre">ISIN</span></code>, Value: <code class="docutils literal notranslate"><span class="pre">US00000000</span></code>.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts">View Code</a></span><a class="headerlink" href="#id1" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with company private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">companyPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;cc.shares&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">isin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;US00000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isinMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicMetadataTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;ISIN&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isin</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isin</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js">View Code</a></span><a class="headerlink" href="#id2" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with company private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">companyPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;cc.shares&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;US00000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isinMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicMetadataTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;ISIN&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isin</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isin</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="upperalpha simple" start="2">
+<li><p>Key: <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, Value: <code class="docutils literal notranslate"><span class="pre">ComfyClothingCompany</span></code>.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts">View Code</a></span><a class="headerlink" href="#id3" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ComfyClothingCompany&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nameMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicMetadataTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;NAME&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">name</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js">View Code</a></span><a class="headerlink" href="#id4" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ComfyClothingCompany&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nameMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicMetadataTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;NAME&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">name</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. All metadata is attached only with the consent of the mosaic creator through Aggregate Transactions.
+Wrap the <strong>metadata transactions</strong> inside an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-complete"><span class="std std-ref">AggregateCompleteTransaction</span></a> and sign the aggregate with the company's account.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts">View Code</a></span><a class="headerlink" href="#id5" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createComplete</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">isinMetadataTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">nameMetadataTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js">View Code</a></span><a class="headerlink" href="#id6" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createComplete</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">isinMetadataTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">nameMetadataTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>この例では、トランザクションに署名するアカウントがモザイク作成者です。そのため、アグリゲートはコンプリートとして定義できます。別のアカウントがモザイク所有者の場合は <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">アグリゲートボンデッド</span></a> を設定し、モザイク作成者は <a class="reference internal" href="../aggregate/signing-announced-aggregate-bonded-transactions.html"><span class="doc">トランザクションに署名</span></a> することでメタデータの要求にオプトインします。</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>AggregateTransaction</strong> に署名してアナウンスします。</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.ts">View Code</a></span><a class="headerlink" href="#id7" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAMosaic.js">View Code</a></span><a class="headerlink" href="#id8" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">companyAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>トランザクションが承認されたら、 <a class="reference internal" href="getting-metadata-entries-attached-to-a-mosaic.html"><span class="doc">モザイクのメタデータエントリー一覧の取得</span></a> してください。</p></li>
+</ol>
+</section>
+<section id="method-02-using-the-cli">
+<h2>方法 #02: CLI を使用する<a class="headerlink" href="#method-02-using-the-cli" title="この見出しへのパーマリンク"></a></h2>
+<p>ターミナルウィンドウを開き、次のコマンドを実行します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">TCM6YD-BC3BW2-ZYXOXC-HHIRDV-MEZUIP-BRISYI-TPQ</span></code> をモザイクの所有アドレスに、 <code class="docutils literal notranslate"><span class="pre">2C08D5EDB652AA79</span></code> を目的のモザイク ID に置き換えてください。次に、メタデータとして添付したい <code class="docutils literal notranslate"><span class="pre">BC2FC3ACFF58FF89</span></code> をキーに、 <code class="docutils literal notranslate"><span class="pre">US00000000</span></code> を値に変更してください。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>文字列 (例 <code class="docutils literal notranslate"><span class="pre">ISIN</span></code>) を UInt64 キー (<code class="docutils literal notranslate"><span class="pre">2C08D5EDB652AA79</span></code>) に変換するには、コマンド <code class="docutils literal notranslate"><span class="pre">symbol-cli</span> <span class="pre">converter</span> <span class="pre">stringtokey</span></code> を使用することもできます。</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/metadata/AssigningMetadataToAMosaic.sh">View Code</a></span><a class="headerlink" href="#id9" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>mosaicmetadata<span class="w"> </span>--target-address<span class="w"> </span>TCM6YD-BC3BW2-ZYXOXC-HHIRDV-MEZUIP-BRISYI-TPQ<span class="w"> </span>--mosaic-id<span class="w"> </span>2C08D5EDB652AA79<span class="w"> </span>--key<span class="w"> </span>BC2FC3ACFF58FF89<span class="w"> </span>--value<span class="w"> </span>US00000000
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2020&#8209;11&#8209;19</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/metadata/assigning-metadata-entries-to-a-mosaic.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">モザイクにメタデータを割り当てる</a><ul>
+<li><a class="reference internal" href="#use-case">ユースケース</a></li>
+<li><a class="reference internal" href="#prerequisites">前提条件</a></li>
+<li><a class="reference internal" href="#creating-the-shares">株式の作成</a></li>
+<li><a class="reference internal" href="#method-01-using-the-sdk">方法 #01: SDK を使用する</a></li>
+<li><a class="reference internal" href="#method-02-using-the-cli">方法 #02: CLI を使用する</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2020&#8209;11&#8209;19.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2020&#8209;11&#8209;19.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

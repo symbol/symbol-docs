@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Non-custodial node setup &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Private test networks" href="creating-a-private-test-net.html" />
+    <link rel="prev" title="Maintaining a Node" href="maintaining-a-symbol-node.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/non-custodial-node-setup.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/non-custodial-node-setup.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="non-custodial-node-setup">
+<h1>Non-custodial node setup<a class="headerlink" href="#non-custodial-node-setup" title="Permalink to this heading"></a></h1>
+<p>How to <strong>relinquish control of a node’s main account to an external account</strong>, so that the external account’s private key is never required in the node setup process.</p>
+<p>This is useful, for example, for service providers (also known as <em>staking</em> service providers or <em>hosting</em> service providers) that work in a <strong>non-custodial</strong> manner. This is, <strong>customers</strong> hire the <strong>service provider</strong> to setup nodes for them and have any node rewards sent to their main accounts, without ever sending their account keys to the service provider.</p>
+<p>This guide is intended for the service provider setting up a node on behalf of their customer.</p>
+<p>There are <strong>many mechanisms</strong> to achieve this in Symbol. This page explains the <strong>simplest one</strong>, assuming that the customer is not tech-savvy (and therefore prefers not to use command-line tools like <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code>), and that <strong>the customer’s key are not allowed on an online machine</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The process is even simpler if the customer’s key are allowed to be online.</p>
+<p>A guide will soon be added to this page describing this scenario.</p>
+</div>
+<p><strong>In summary</strong>, once the node is completely setup, full control of the node’s <strong>main account</strong> will be transferred to the customer account (called <strong>external account</strong>) by turning main into a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">Multisig Account</span></a>:</p>
+<ul class="simple">
+<li><p>The service provider will prepare a transaction for offline signing and send it to the customer.</p></li>
+<li><p>The customer signs the transaction using their Wallet from an offline machine, and returns the signature.</p></li>
+<li><p>The service provider announces the transaction.</p></li>
+</ul>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<p>On the <strong>Node</strong> machine:</p>
+<ul class="simple">
+<li><p><strong>Have a running Symbol node</strong>, set up using the <a class="reference internal" href="running-a-secure-symbol-node.html"><span class="doc">Running a secure node</span></a> guide.</p></li>
+</ul>
+<p>On the <strong>Configuration</strong> machine:</p>
+<ul>
+<li><p><strong>Have symbol-cli installed</strong>. This has already been installed in the <a class="reference internal" href="running-a-secure-symbol-node.html"><span class="doc">Running a secure node</span></a> guide.</p></li>
+<li><p><strong>Have a symbol-cli profile for the node’s main account</strong>. This too has already been done in the guide.</p>
+<p>Make sure the correct profile is the default one (use <code class="docutils literal notranslate"><span class="pre">symbol-cli</span> <span class="pre">profile</span> <span class="pre">setdefault</span></code> or add the <code class="docutils literal notranslate"><span class="pre">--profile</span></code> parameter to all commands below).</p>
+</li>
+</ul>
+<p>On the <strong>Customer</strong>’s machine:</p>
+<ul class="simple">
+<li><p><strong>Have the</strong> <a class="reference internal" href="../../wallets.html#wallet-desktop"><span class="std std-ref">Symbol Desktop Wallet</span></a> <strong>installed</strong> and configured with the customer’s account (<strong>external account</strong>).</p></li>
+</ul>
+</section>
+<section id="prepare-the-transaction">
+<h2>Prepare the transaction<a class="headerlink" href="#prepare-the-transaction" title="Permalink to this heading"></a></h2>
+<p>So far, the node’s main account is a regular account. A <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> will be announced that will turn it into a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">Multisig Account</span></a> with a single cosignatory: the <strong>external account</strong>.</p>
+<p>This means that <strong>any operation</strong> on the main account will <strong>require the signature</strong> of the external account.</p>
+<p>This transaction will be prepared by the service provider using <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> and sent to the customer for signing.</p>
+<p>Notes on this transaction:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">--max-fee</span> <span class="pre">1000000</span></code> parameter means that <strong>1 XYM</strong> will be paid for the transaction. Feel free to use a different number after reading the <a class="reference internal" href="../../concepts/fees.html"><span class="doc">fees documentation</span></a>.</p></li>
+<li><p>The default transaction deadline in <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> is <strong>2 hours</strong>. Use the <code class="docutils literal notranslate"><span class="pre">--deadline</span></code> parameter if you need more time to get the customer’s signature.</p></li>
+</ul>
+<p>Run this from <strong>the configuration machine</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>multisigmodification<span class="w"> </span>--max-fee<span class="w"> </span><span class="m">1000000</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--mode<span class="w"> </span>normal<span class="w"> </span>--min-removal-delta<span class="w"> </span><span class="m">1</span><span class="w"> </span>--min-approval-delta<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--action<span class="w"> </span>Add<span class="w"> </span>--aggregate-type<span class="w"> </span>AGGREGATE_COMPLETE<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--cosignatory-addresses<span class="w"> </span>●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+</pre></div>
+</div>
+<p>Use the <strong>external account address</strong> as cosignatory and do <strong>not</strong> announce the transaction:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span><span class="gi">✔ </span>Enter your wallet password: … *********
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                               AGGREGATE_COMPLETE                                                │
+├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
+│ Max fee:                                     │ 1,000,000                                                        │
+├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ Network type:                                │ TEST_NET                                                         │
+├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ Deadline:                                    │ 2021-03-27 14:51:01.099                                          │
+├──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┤
+│                            Inner transaction 1 of 1 - MULTISIG_ACCOUNT_MODIFICATION                             │
+├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
+│ [Inner tx. 1 of 1] Min approval delta:       │ 1                                                                │
+├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ [Inner tx. 1 of 1] Min removal delta:        │ 1                                                                │
+├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ [Inner tx. 1 of 1] Address addition (1 / 1): │ TAJ3DW-DCRWBU-V6CXBQ-TNAAKH-UPRPQ6-I2QW7V-7JA                    │
+├──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┤
+│                                                Signature details                                                │
+├──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────┤
+│ Payload:                                     │ F800000000000000FAE63B1603A8FA30BF5F8A7E5C7906349AAA89591BD20651 │
+│                                              │ 013704F4E03894206D6543339716A8E4391E53873F8F43BEC10D9706F74764C7 │
+│                                              │ 940C07A756F4950ACC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
+│                                              │ B902600CB7DA1033000000000198414140420F0000000000EB39311C0A000000 │
+│                                              │ 5B8F6FEBA2C4D0C7E1C084DA1E828B68C46EE7EE247811BE3DBDCE913E40E027 │
+│                                              │ 50000000000000005000000000000000CC6D13D64FB9BF69B72846C3FE99127D │
+│                                              │ 48C3293F473D528FB902600CB7DA103300000000019855410101010000000000 │
+│                                              │ 9813B1D8628D834AF8570C26D00147A3E2F8791A85BF5FA4                 │
+├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ Hash:                                        │ 13241107ACC87B4F7B047C335856326D86AC0F4FF2C0F52CCA1D7FC4E6491CB8 │
+├──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ Signer:                                      │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
+└──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────┘
+<span class="gi">✔ </span>Do you want to announce this transaction? … no
+</pre></div>
+</div>
+<p>Select all the text in the <code class="docutils literal notranslate"><span class="pre">Payload</span></code> box and paste it into a new text file named <code class="docutils literal notranslate"><span class="pre">payload.txt</span></code>. <strong>Remove all spaces and other decorations</strong> to obtain a single line <strong>containing only</strong> numbers and uppercase letters:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>F800000000000000FAE63B1603A8FA30BF5F8A7E5C7906349AAA89591BD20651013704F4E03894206D6543339716A8E4391E53873F8F43BEC10D9706F74764C7940C07A756F4950ACC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033000000000198414140420F0000000000EB39311C0A0000005B8F6FEBA2C4D0C7E1C084DA1E828B68C46EE7EE247811BE3DBDCE913E40E02750000000000000005000000000000000CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033000000000198554101010100000000009813B1D8628D834AF8570C26D00147A3E2F8791A85BF5FA4
+</pre></div>
+</div>
+<p>This payload <strong>cannot be announced</strong> without a <strong>signature from the external account</strong>, since it has been added as a cosignatory.</p>
+</section>
+<section id="send-payload-to-customer">
+<h2>Send payload to customer<a class="headerlink" href="#send-payload-to-customer" title="Permalink to this heading"></a></h2>
+<p>Send <code class="docutils literal notranslate"><span class="pre">payload.txt</span></code> to the customer, as a plain text file.</p>
+</section>
+<section id="sign-the-transaction">
+<h2>Sign the transaction<a class="headerlink" href="#sign-the-transaction" title="Permalink to this heading"></a></h2>
+<p>The customer uses their <a class="reference internal" href="../../wallets.html#wallet-desktop"><span class="std std-ref">Symbol Desktop Wallet</span></a> to create a signature for the received payload:</p>
+<ul>
+<li><p>Open the Desktop Wallet and click on <code class="docutils literal notranslate"><span class="pre">Go</span> <span class="pre">to</span> <span class="pre">offline</span> <span class="pre">transactions</span></code> on the top right corner.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Cosign</span> <span class="pre">transaction</span></code> tab.</p></li>
+<li><p>Paste the full payload into the big box labeled <code class="docutils literal notranslate"><span class="pre">Paste</span> <span class="pre">the</span> <span class="pre">transaction</span> <span class="pre">payload</span></code>.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">payload</span></code>.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">name</span></code> and the <strong>external</strong> account (in the <code class="docutils literal notranslate"><span class="pre">From:</span></code> box).</p></li>
+<li><p>Enter the wallet’s <code class="docutils literal notranslate"><span class="pre">Password</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Confirm</span></code>.</p></li>
+<li><p>A QR code and a long line of text will be obtained, looking similar to this one:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;parentHash&quot;</span><span class="p">:</span><span class="s2">&quot;13241107ACC87B4F7B047C335856326D86AC0F4FF2C0F52CCA1D7FC4E6491CB8&quot;</span><span class="p">,</span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="s2">&quot;1D8FD3A815C45B9FFCCD48FF9DE24FAD172D373E889D25F3005FDAA0F87DB70AB9ABD2ECB79E467577FCE49B760729706247B24479CB32A88A4A1C1974D4220A&quot;</span><span class="p">,</span><span class="nt">&quot;signerPublicKey&quot;</span><span class="p">:</span><span class="s2">&quot;7F71566C57A8E5B03EADBA28E4CA057428DDB37C766604B2827BC2D79BB195B8&quot;</span><span class="p">,</span><span class="nt">&quot;version&quot;</span><span class="p">:{</span><span class="nt">&quot;lower&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;higher&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Copy the whole line of text (for example by triple-clicking on it) and paste it into a new text file named <code class="docutils literal notranslate"><span class="pre">signature.txt</span></code>.</p></li>
+</ul>
+</section>
+<section id="send-signature-to-service-provider">
+<h2>Send signature to service provider<a class="headerlink" href="#send-signature-to-service-provider" title="Permalink to this heading"></a></h2>
+<p>Send <code class="docutils literal notranslate"><span class="pre">signature.txt</span></code> back to the service provider, as a plain text file.</p>
+</section>
+<section id="announce-transaction">
+<h2>Announce transaction<a class="headerlink" href="#announce-transaction" title="Permalink to this heading"></a></h2>
+<p>Announce the multisig modification transaction from <strong>any online machine</strong> that has installed <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> and has an <strong>announcer profile</strong> (as explained in <a class="reference internal" href="running-a-secure-symbol-node.html"><span class="doc">Running a secure node</span></a>):</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction payload --sync --announce --profile C
+<span class="k">? </span>Enter the transaction payload: F8000000000...
+<span class="gi">SUCCESS </span>Transaction loaded:
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      AGGREGATE_COMPLETE                                      │
+├──────────────────────────────────────────────┬───────────────────────────────────────────────┤
+│ Max fee:                                     │ 1,000,000                                     │
+├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ Network type:                                │ TEST_NET                                      │
+├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ Deadline:                                    │ 2021-03-27 14:51:01.099                       │
+├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ Signer:                                      │ TBGPYD-CO35V2-AMOYEJ-LEM44H-372M3I-6RWVFY-QCY │
+├──────────────────────────────────────────────┴───────────────────────────────────────────────┤
+│                   Inner transaction 1 of 1 - MULTISIG_ACCOUNT_MODIFICATION                   │
+├──────────────────────────────────────────────┬───────────────────────────────────────────────┤
+│ [Inner tx. 1 of 1] Min approval delta:       │ 1                                             │
+├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ [Inner tx. 1 of 1] Min removal delta:        │ 1                                             │
+├──────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ [Inner tx. 1 of 1] Address addition (1 / 1): │ TAJ3DW-DCRWBU-V6CXBQ-TNAAKH-UPRPQ6-I2QW7V-7JA │
+└──────────────────────────────────────────────┴───────────────────────────────────────────────┘
+<span class="k">? </span>Cosignature JSON array in square brackets (Enter to skip): [{&quot;parentHash&quot;...
+</pre></div>
+</div>
+<ul>
+<li><p>When prompted for the transaction payload, paste the contents of <code class="docutils literal notranslate"><span class="pre">payload.txt</span></code> (the long line of hexadecimal characters).</p></li>
+<li><p>When prompted for the cosignature, paste the contents of <code class="docutils literal notranslate"><span class="pre">signature.txt</span></code> (the long line of JSON text that the customer sent back), <strong>BUT ENCLOSE IT IN SQUARE BRACKETS</strong>.</p>
+<p>This is, the cosignature should start with <code class="docutils literal notranslate"><span class="pre">[</span></code> and end with <code class="docutils literal notranslate"><span class="pre">]</span></code>.</p>
+</li>
+</ul>
+<p>After a few seconds you should get:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>...
+<span class="gi">SUCCESS </span>Transaction announced
+<span class="gi">SUCCESS </span>Transaction confirmed
+</pre></div>
+</div>
+<p>From this point onwards, no operation can be performed on the node’s <strong>main</strong> account without authorization from the <strong>external</strong> account, which is controlled by the customer.</p>
+<p>The customer can perform operations on the <strong>main</strong> account using the <a class="reference internal" href="../../wallets.html#wallet-desktop"><span class="std std-ref">Symbol Desktop Wallet</span></a> and its <strong>multisig</strong> facilities.</p>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;10&#8209;29</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/non-custodial-node-setup.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Non-custodial node setup</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#prepare-the-transaction">Prepare the transaction</a></li>
+<li><a class="reference internal" href="#send-payload-to-customer">Send payload to customer</a></li>
+<li><a class="reference internal" href="#sign-the-transaction">Sign the transaction</a></li>
+<li><a class="reference internal" href="#send-signature-to-service-provider">Send signature to service provider</a></li>
+<li><a class="reference internal" href="#announce-transaction">Announce transaction</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;29.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;29.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

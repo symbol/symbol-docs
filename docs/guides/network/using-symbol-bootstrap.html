@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Using Symbol Bootstrap &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Running a node" href="running-a-symbol-node.html" />
+    <link rel="prev" title="Network" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/using-symbol-bootstrap.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/using-symbol-bootstrap.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <p>How to use this handy node deployment tool.</p>
+<section id="using-symbol-bootstrap">
+<h1>Using Symbol Bootstrap<a class="headerlink" href="#using-symbol-bootstrap" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
+<p class="sidebar-title">Quick Installation</p>
+<p>On Linux systems using <code class="docutils literal notranslate"><span class="pre">apt</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>docker<span class="w"> </span>docker-compose
+node<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>If the obtained node version is high enough (see <a class="reference internal" href="#symbol-bootstrap-requirements"><span class="std std-ref">Requirements</span></a>), then you can install Symbol Bootstrap:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>symbol-bootstrap
+</pre></div>
+</div>
+</aside>
+<p>This guide explains the concepts behind <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>, a program that allows quickly configuring and running Symbol nodes on multiple operating systems (Windows, Linux and Mac).</p>
+<p>It can also deploy several nodes at once to quickly create a test network.</p>
+<p>After reading this you will be able to better understand the <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">Running a node</span></a> and <a class="reference internal" href="creating-a-private-test-net.html"><span class="doc">Private test networks</span></a> guides.</p>
+<p><strong>This program replaces the previous tools</strong> <code class="docutils literal notranslate"><span class="pre">catapult-service-bootstrap</span></code> <strong>and</strong> <code class="docutils literal notranslate"><span class="pre">symbol-testnet-bootstrap</span></code>.</p>
+<section id="requirements">
+<span id="symbol-bootstrap-requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<section id="environment">
+<h3>Environment<a class="headerlink" href="#environment" title="Permalink to this heading"></a></h3>
+<p>The setup scripts are automated using <strong>Docker</strong>. To run a node or test network, you will need to have installed the following tools:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nodejs.org/en/download">node.js</a> version 12 or higher (<strong>It is recommended that you install node.js using</strong> <a class="reference external" href="https://github.com/nvm-sh/nvm">nvm</a>)</p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/install/">docker</a></p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/compose/install/">docker-compose</a></p></li>
+</ul>
+</section>
+<section id="ports">
+<h3>Ports<a class="headerlink" href="#ports" title="Permalink to this heading"></a></h3>
+<p>Make sure that the client’s host is accessible from the internet and that <strong>the following ports are open and available</strong>:</p>
+<ul class="simple">
+<li><p>Port <code class="docutils literal notranslate"><span class="pre">7900</span></code> is used by catapult-client to communicate between nodes.</p></li>
+<li><p>Port <code class="docutils literal notranslate"><span class="pre">3000</span></code> is used by the REST Gateway to expose the endpoints to interact with the node.</p></li>
+<li><p>Port <code class="docutils literal notranslate"><span class="pre">3001</span></code> is used by the REST Gateway in HTTPS mode.</p></li>
+</ul>
+</section>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> is provided as an installable tool, there is no need to clone a repository and build it. Just run this from a terminal or command prompt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>symbol-bootstrap
+</pre></div>
+</div>
+<aside class="topic">
+<p class="topic-title">Notes:</p>
+<ul>
+<li><p>You can run the above command again to install a newer version of <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> every time one becomes available.</p>
+<p>Remember to stop <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> before upgrading and then start it again afterwards, as shown below.</p>
+</li>
+<li><p>If you get permission errors read nodejs’s guide to <a class="reference external" href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally">Resolving EACCES permissions errors when installing packages globally</a>.</p></li>
+</ul>
+</aside>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
+<section id="presets">
+<span id="symbol-bootstrap-presets"></span><h3>Presets<a class="headerlink" href="#presets" title="Permalink to this heading"></a></h3>
+<p>Node configuration is done through a <strong>YAML configuration file</strong> which specifies every possible network parameter. Since the complete file can be several hundred lines long, a number of <strong>presets</strong> are available to simplify its handling. Specify the preset with the <code class="docutils literal notranslate"><span class="pre">‑‑preset</span></code> or <code class="docutils literal notranslate"><span class="pre">‑p</span></code> parameters.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Preset</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p>A <strong>single node</strong> that connects to the current public <strong>main</strong> network. Nemesis block is copied over. Requires an <code class="docutils literal notranslate"><span class="pre">assembly</span></code>, as shown below (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/mainnet/network.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bootstrap</span></code></p></td>
+<td><p><strong>Autonomous network</strong> with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/bootstrap/network.yml">configuration file</a>). This is the default preset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p>A <strong>single node</strong> that connects to the current public <strong>test</strong> network. Nemesis block is copied over. Requires an <code class="docutils literal notranslate"><span class="pre">assembly</span></code>, as shown below (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/testnet/network.yml">configuration file</a>).</p></td>
+</tr>
+</tbody>
+</table>
+<p>Presets can be further customized by indicating an <strong>assembly</strong> (or flavor) which provides additional parameters. Specify the assembly with the <code class="docutils literal notranslate"><span class="pre">‑‑assembly</span></code> or <code class="docutils literal notranslate"><span class="pre">‑a</span></code> parameters.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Preset</p></th>
+<th class="head"><p>Available assemblies</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">peer</span></code></p></td>
+<td><p>The node is a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer node</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-peer.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">api</span></code></p></td>
+<td><p>The node is an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-api.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dual</span></code></p></td>
+<td><p>The node is both a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer node</span></a> and an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-dual.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">peer</span></code></p></td>
+<td><p>The node is a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer node</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-peer.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">api</span></code></p></td>
+<td><p>The node runs is an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-api.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dual</span></code></p></td>
+<td><p>The node is both a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer node</span></a> and an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-dual.yml">configuration file</a>).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="custom-presets">
+<h3>Custom presets<a class="headerlink" href="#custom-presets" title="Permalink to this heading"></a></h3>
+<p>Furthermore, if additional configuration is required, a <strong>custom preset file</strong> can be provided. Any value in this file overrides the default values set by the preset or the assembly so it can be combined on top of them. All properties in the <a class="reference internal" href="configuring-network-properties.html"><span class="doc">Network properties</span></a> or <a class="reference internal" href="configuring-node-properties.html"><span class="doc">Node properties</span></a> guides can be set through this file, for example.</p>
+<p>Specify a custom preset file with the <code class="docutils literal notranslate"><span class="pre">‑‑customPreset</span></code> or <code class="docutils literal notranslate"><span class="pre">‑c</span></code> parameters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you ever change your custom preset file once your node is already running you will need to upgrade the node as explained in the <a class="reference internal" href="maintaining-a-symbol-node.html#update-bootstrap-nodes"><span class="std std-ref">Update nodes created with Bootstrap</span></a> guide.</p>
+</div>
+</section>
+</section>
+<section id="the-config-command">
+<h2>The <code class="docutils literal notranslate"><span class="pre">config</span></code> command<a class="headerlink" href="#the-config-command" title="Permalink to this heading"></a></h2>
+<p>Before building the node or network a full configuration file has to be created by using the <a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/docs/config.md">symbol-bootstrap config</a> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>&lt;preset&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;assembly&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;custom_parameters_file.yml&gt;
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>bootstrap
+symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>peer
+symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>dual
+symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>dual<span class="w"> </span>-c<span class="w"> </span>custom_parameters.yml
+</pre></div>
+</div>
+<p>This will create a folder, called <code class="docutils literal notranslate"><span class="pre">target</span></code> by default (it can be changed with the <code class="docutils literal notranslate"><span class="pre">‑‑target</span></code> or <code class="docutils literal notranslate"><span class="pre">‑t</span></code> parameters), containing among other things the generated complete configuration file (<code class="docutils literal notranslate"><span class="pre">target/preset.yml</span></code>) ready to be used to build the node or network.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Linux, if you get the error <code class="docutils literal notranslate"><span class="pre">Permission</span> <span class="pre">denied</span> <span class="pre">while</span> <span class="pre">trying</span> <span class="pre">to</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">Docker</span> <span class="pre">daemon</span> <span class="pre">socket</span></code> it means that your user does not belong to the <code class="docutils literal notranslate"><span class="pre">docker</span></code> group. Add it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>addgroup<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>docker
+</pre></div>
+</div>
+</div>
+</section>
+<section id="the-compose-command">
+<h2>The <code class="docutils literal notranslate"><span class="pre">compose</span></code> command<a class="headerlink" href="#the-compose-command" title="Permalink to this heading"></a></h2>
+<p>This command prepares the necessary Docker files based on the provided configuration:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>compose
+</pre></div>
+</div>
+<p>Just like the config step, this only needs to be run once.</p>
+</section>
+<section id="the-run-command">
+<h2>The <code class="docutils literal notranslate"><span class="pre">run</span></code> command<a class="headerlink" href="#the-run-command" title="Permalink to this heading"></a></h2>
+<p>Finally, execute this command to start the necessary Docker instances and boot your node or network:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>run
+</pre></div>
+</div>
+<p>Stop the process by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To run the Docker containers in the background of your terminal, you can run the service in detached mode using the <code class="docutils literal notranslate"><span class="pre">‑‑detached</span></code> or <code class="docutils literal notranslate"><span class="pre">‑d</span></code> parameters.</p>
+<p>You then have to stop them with <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">stop</span></code>.</p>
+</div>
+</section>
+<section id="the-all-in-one-start-command">
+<span id="symbol-bootstrap-all-in-one"></span><h2>The all-in-one <code class="docutils literal notranslate"><span class="pre">start</span></code> command<a class="headerlink" href="#the-all-in-one-start-command" title="Permalink to this heading"></a></h2>
+<p>The above three commands (<code class="docutils literal notranslate"><span class="pre">config</span></code>, <code class="docutils literal notranslate"><span class="pre">compose</span></code> and <code class="docutils literal notranslate"><span class="pre">run</span></code>) can be merged into one:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>start<span class="w"> </span>-p<span class="w"> </span>&lt;preset&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;assembly&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;custom_parameters_file.yml&gt;
+</pre></div>
+</div>
+<p>That’s right, a Symbol node (or test network with many nodes) can be instantiated and booted with a single command!</p>
+<p>Steps that only need to be done once (<code class="docutils literal notranslate"><span class="pre">config</span></code> and <code class="docutils literal notranslate"><span class="pre">compose</span></code>) will not be repeated, so you can use this command every time.</p>
+</section>
+<section id="providing-https-access">
+<h2>Providing HTTPS access<a class="headerlink" href="#providing-https-access" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API nodes</span></a> created using the <code class="docutils literal notranslate"><span class="pre">api</span></code> or <code class="docutils literal notranslate"><span class="pre">dual</span></code> assemblies accept HTTP commands through port 3000. HTTPS access can also be enabled, as described in the next two sections.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The certificates used below will <strong>only</strong> be used for HTTPS communication with the REST API, <strong>not</strong> as <a class="reference internal" href="running-a-symbol-node-manually.html#manual-node-certificates"><span class="std std-ref">node certificates</span></a> for inter-node communication.</p>
+</div>
+<section id="use-your-own-certificate">
+<h3>Use your own certificate<a class="headerlink" href="#use-your-own-certificate" title="Permalink to this heading"></a></h3>
+<p>If you already have an SSL for your host you can pass it onto Symbol Bootstrap inside a custom preset file.</p>
+<p>In order for the custom preset file to be self-contained, though, your certificate’s <strong>Key</strong> and <strong>Crt</strong> files must be converted to a <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> string and copied into the preset file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>restSsl.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span>
+cat<span class="w"> </span>restSsl.crt<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span>
+</pre></div>
+</div>
+<p>Copy the output of these commands into the preset file, in a section like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">friendlyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Node</span><span class="w"> </span><span class="c1"># Use anything you want here</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesomenode.mycompany.net</span><span class="w"> </span><span class="c1"># Use your node&#39;s host name</span>
+<span class="nt">gateways</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">restProtocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPS</span>
+<span class="w">  </span><span class="nt">openPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3001</span>
+<span class="w">  </span><span class="nt">restSSLCertificateBase64</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">LS0tLS1CRUdJTiBDRVJUSUZ...Base64...==</span>
+<span class="w">  </span><span class="nt">restSSLKeyBase64</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">LS0tLS1CRUdJTiBSU0EgUFJ...Base64...=</span>
+</pre></div>
+</div>
+<p>The provided certificate needs to be valid for the hostname <code class="docutils literal notranslate"><span class="pre">awesomenode.mycompany.net</span></code>. The domain needs to resolve the IP address of your node.</p>
+<p>When the certificates eventually expire you need to update the custom preset file and then upgrade the node as explained in the <a class="reference internal" href="maintaining-a-symbol-node.html#update-bootstrap-nodes"><span class="std std-ref">Update nodes created with Bootstrap</span></a> guide.</p>
+<p>This option only leaves HTTPS port 3001 open, not HTTP 3000. <strong>Remember to open port 3001 in your firewall or security group</strong>. Port 3000 can be closed as it is not used anymore.</p>
+</section>
+<section id="automatic-let-s-encrypt-certificate">
+<h3>Automatic Let’s Encrypt certificate<a class="headerlink" href="#automatic-let-s-encrypt-certificate" title="Permalink to this heading"></a></h3>
+<p>Bootstrap can also take care of obtaining the necessary SSL certificates through the public and free <a class="reference external" href="https://letsencrypt.org/">Let’s Encrypt</a> service.</p>
+<p>To enable it, just opt-in by adding an <code class="docutils literal notranslate"><span class="pre">httpsProxies</span></code> section to your custom preset file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">friendlyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Node</span><span class="w"> </span><span class="c1"># Use anything you want here</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesomenode.mycompany.net</span><span class="w"> </span><span class="c1"># Use your node&#39;s host name</span>
+<span class="nt">httpsProxies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">excludeDockerService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<p>You need to own the domain <code class="docutils literal notranslate"><span class="pre">awesomenode.mycompany.net</span></code> and it needs to resolve the IP address of your node. The Let’s Encrypt service will handle the certificate creation and renewals for you.</p>
+<p><strong>Remember to open ports 3001 and 80 in your firewall or security group</strong>. Port 3000 may or may not be closed. <a class="reference external" href="https://letsencrypt.org/docs/challenge-types/#http-01-challenge">Port 80 is needed by Let’s Encrypt</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option has been heavily inspired by the community and Symbol Bootstrap simply bundles this solution, streamlining the process.</p>
+</div>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Read the <a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap#user-content-command-topics">complete list</a> of <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> commands.</p></li>
+<li><p>Go ahead and create a node following the <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">Running a node</span></a> guide.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2023&#8209;11&#8209;15</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/using-symbol-bootstrap.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Using Symbol Bootstrap</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li><a class="reference internal" href="#environment">Environment</a></li>
+<li><a class="reference internal" href="#ports">Ports</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#presets">Presets</a></li>
+<li><a class="reference internal" href="#custom-presets">Custom presets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-config-command">The <code class="docutils literal notranslate"><span class="pre">config</span></code> command</a></li>
+<li><a class="reference internal" href="#the-compose-command">The <code class="docutils literal notranslate"><span class="pre">compose</span></code> command</a></li>
+<li><a class="reference internal" href="#the-run-command">The <code class="docutils literal notranslate"><span class="pre">run</span></code> command</a></li>
+<li><a class="reference internal" href="#the-all-in-one-start-command">The all-in-one <code class="docutils literal notranslate"><span class="pre">start</span></code> command</a></li>
+<li><a class="reference internal" href="#providing-https-access">Providing HTTPS access</a><ul>
+<li><a class="reference internal" href="#use-your-own-certificate">Use your own certificate</a></li>
+<li><a class="reference internal" href="#automatic-let-s-encrypt-certificate">Automatic Let’s Encrypt certificate</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2023&#8209;11&#8209;15.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2023&#8209;11&#8209;15.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

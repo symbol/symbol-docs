@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Updating metadata entries &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Migration from NIS1" href="../migration/index.html" />
+    <link rel="prev" title="Getting metadata entries attached to an account" href="getting-metadata-entries-attached-to-an-account.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/metadata/updating-metadata-entries.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/metadata/updating-metadata-entries.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Metadata</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-a-mosaic.html">Assigning metadata to a mosaic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-a-namespace.html">Assigning metadata to a namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-an-account.html">Assigning metadata to an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-mosaic.html">Getting metadata entries attached to a mosaic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-namespace.html">Getting metadata entries attached to a namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-an-account.html">Getting metadata entries attached to an account</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Updating metadata entries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Metadata</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-a-mosaic.html">Assigning metadata to a mosaic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-a-namespace.html">Assigning metadata to a namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assigning-metadata-entries-to-an-account.html">Assigning metadata to an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-mosaic.html">Getting metadata entries attached to a mosaic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-a-namespace.html">Getting metadata entries attached to a namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-metadata-entries-attached-to-an-account.html">Getting metadata entries attached to an account</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Updating metadata entries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="updating-metadata-entries">
+<h1>Updating metadata entries<a class="headerlink" href="#updating-metadata-entries" title="Permalink to this heading"></a></h1>
+<p>Update any existent metadata entry.</p>
+<section id="use-case">
+<h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../concepts/metadata.html"><span class="doc">Metadata</span></a>  transactions are stored on the blockchain.
+Once a transaction is included in a block—and the block receives enough confirmations—it is not possible to modify the record without invalidating the whole chain.</p>
+<p>What we can do to update a metadata entry is to announce a second metadata transaction. This action will record a new transaction while keeping the history immutable.
+However, how can we retrieve the latest metadata value assigned to an asset without querying the whole chain? Symbol makes this possible by keeping a copy of the <strong>newest value</strong> assigned to a metadata entry as a <strong>state</strong>.</p>
+<p>This guide shows you how to <strong>update a metadata entry</strong> attached to an account.
+However, you could follow a similar approach to update namespace and mosaic metadata entries.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete the <a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">getting started section</span></a>.</p></li>
+<li><p>Complete <a class="reference internal" href="assigning-metadata-entries-to-an-account.html"><span class="doc">assigning metadata entries to an account</span></a> guide.</p></li>
+</ul>
+</section>
+<section id="method-01-using-the-sdk">
+<h2>Method #01: Using the SDK<a class="headerlink" href="#method-01-using-the-sdk" title="Permalink to this heading"></a></h2>
+<p>Bob—the notary from the <a class="reference internal" href="assigning-metadata-entries-to-an-account.html"><span class="doc">assigning metadata entries to an account guide</span></a>— is requested to remove Alice’s account <code class="docutils literal notranslate"><span class="pre">CERT</span></code> metadata entry because the certificate has expired.</p>
+<figure class="align-center">
+<img alt="../../_images/metadata-update.png" src="../../_images/metadata-update.png" style="width: 450px;" />
+</figure>
+<p>1. Define a new <strong>AccountMetadataTransaction</strong> setting Alice’s account as the metadata target.
+To indicate that the certificate has expired, Bob decides to add the new value <code class="docutils literal notranslate"><span class="pre">000000</span></code> to the metadata entry with key <code class="docutils literal notranslate"><span class="pre">CERT</span></code>.
+However, you need to pass an extra parameter that was not necessary when assigning a metadata entry for the first time.</p>
+<p>By definition, <a class="reference internal" href="../../concepts/block.html#rollbacks"><span class="std std-ref">blockchains can rollback</span></a> up to a certain pre-established depth to resolve forks.
+In case that the state needs to be reverted, you need to indicate the difference of size between the <code class="docutils literal notranslate"><span class="pre">previousValue</span></code> assigned to the metadata entry and the <code class="docutils literal notranslate"><span class="pre">newValue</span></code> .</p>
+<p>A) Retrieve the previous metadata value and calculate the difference of size with the newest value.
+Then, return the AccountMetadataTransaction object.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/UpdatingMetadataEntriesRetrievePreviousValue.ts">View Code</a></span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with bob private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">bobPrivateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with alice public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">alicePublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">metadataHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createMetadataRepository</span><span class="p">();</span>
+
+<span class="c1">// replace with key and new value</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;CERT&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">newValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">newValueBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Convert</span><span class="p">.</span><span class="nx">utf8ToUint8</span><span class="p">(</span><span class="nx">newValue</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">targetAddress</span><span class="o">:</span><span class="w"> </span><span class="kt">alicePublicAccount.address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">scopedMetadataKey</span><span class="o">:</span><span class="w"> </span><span class="kt">key.toString</span><span class="p">(),</span>
+<span class="w">  </span><span class="nx">sourceAddress</span><span class="o">:</span><span class="w"> </span><span class="kt">bobAccount.address</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">accountMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">metadataHttp</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">metadata</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">currentValueBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Convert</span><span class="p">.</span><span class="nx">utf8ToUint8</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">metadata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">metadataEntry</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">of</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">AccountMetadataTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">alicePublicAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">key</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">newValueBytes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">currentValueBytes</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Convert</span><span class="p">.</span><span class="nx">decodeHex</span><span class="p">(</span><span class="nx">Convert</span><span class="p">.</span><span class="nx">xor</span><span class="p">(</span><span class="nx">currentValueBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">newValueBytes</span><span class="p">)),</span>
+<span class="w">        </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">}),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/UpdatingMetadataEntriesRetrievePreviousValue.js">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with bob private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">bobPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with alice public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">alicePublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">metadataHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createMetadataRepository</span><span class="p">();</span>
+<span class="c1">// replace with key and new value</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;CERT&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">newValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">newValueBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Convert</span><span class="p">.</span><span class="nx">utf8ToUint8</span><span class="p">(</span><span class="nx">newValue</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">searchCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">targetAddress</span><span class="o">:</span><span class="w"> </span><span class="nx">alicePublicAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">scopedMetadataKey</span><span class="o">:</span><span class="w"> </span><span class="nx">key</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span>
+<span class="w">  </span><span class="nx">sourceAddress</span><span class="o">:</span><span class="w"> </span><span class="nx">bobAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">accountMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">metadataHttp</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">metadata</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">currentValueBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Convert</span><span class="p">.</span><span class="nx">utf8ToUint8</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">metadata</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">metadataEntry</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">rxjs_1</span><span class="p">.</span><span class="k">of</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AccountMetadataTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">alicePublicAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">key</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">newValueBytes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">currentValueBytes</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Convert</span><span class="p">.</span><span class="nx">decodeHex</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Convert</span><span class="p">.</span><span class="nx">xor</span><span class="p">(</span><span class="nx">currentValueBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">newValueBytes</span><span class="p">),</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">        </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">}),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>B)  You can achieve the same result with less effort using the <code class="docutils literal notranslate"><span class="pre">MetadataService</span></code>.
+Behind the scenes, the Symbol SDK handles the complexity of updating metadata entries.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with bob private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">bobPrivateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with alice public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">alicePublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">metadataHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MetadataHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">metadataService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MetadataTransactionService</span><span class="p">(</span><span class="nx">metadataHttp</span><span class="p">);</span>
+
+<span class="c1">// replace with key and new value</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;CERT&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">newValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;000000&#39;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">accountMetadataTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">metadataService</span><span class="p">.</span><span class="nx">createAccountMetadataTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">alicePublicAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">newValue</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">bobAccount</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. To avoid spamming the account with invalid metadata, all metadata is attached only with the consent of the account owner through Aggregate Transactions.
+Thus, Alice will have to <strong>opt-in</strong> if she wants the metadata to be updated. Wrap the <strong>AccountMetadataTransaction</strong> inside an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">AggregateBondedTransaction</span></a> and sign the transaction using Bob’s account.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedAggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">accountMetadataTransaction</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createBonded</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">      </span><span class="p">[</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">bobAccount</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)],</span>
+<span class="w">      </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">      </span><span class="p">[],</span>
+<span class="w">      </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bobAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">of</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>3. Before sending an aggregate transaction to the network, Bob has to lock 10 <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>.
+Define a new <a class="reference internal" href="../../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a> and sign it with Bob’s account, locking the amount of <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> required to announce the aggregate transaction.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">SignedAggregateHashLock</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">readonly</span><span class="w"> </span><span class="nx">aggregate</span><span class="o">:</span><span class="w"> </span><span class="kt">SignedTransaction</span><span class="p">;</span>
+<span class="w">  </span><span class="k">readonly</span><span class="w"> </span><span class="nx">hashLock</span><span class="o">:</span><span class="w"> </span><span class="kt">SignedTransaction</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// replace with symbol.xym id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkCurrencyMosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">);</span>
+<span class="c1">// replace with network currency divisibility</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkCurrencyDivisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedAggregateHashLock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">signedAggregateTransaction</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">signedAggregateTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">hashLockTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">HashLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">      </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">networkCurrencyMosaicId</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">networkCurrencyDivisibility</span><span class="p">)),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">480</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">signedAggregateTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bobAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">hashLockTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedAggregateHashLock</span><span class="o">:</span><span class="w"> </span><span class="kt">SignedAggregateHashLock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">aggregate</span><span class="o">:</span><span class="w"> </span><span class="kt">signedAggregateTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">hashLock</span><span class="o">:</span><span class="w"> </span><span class="kt">signedTransaction</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">&#39;Aggregate Transaction Hash:&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">signedAggregateTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;HashLock Transaction Hash:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">of</span><span class="p">(</span><span class="nx">signedAggregateHashLock</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bob will receive the locked funds back if Alice cosigns the aggregate during the next <code class="docutils literal notranslate"><span class="pre">480</span></code> blocks.</p>
+</div>
+<p>4. Announce the <strong>HashLockTransaction</strong>.
+Monitor the network until the transaction gets confirmed, and then announce the <strong>AggregateTransaction</strong> containing the AccountMetadataTransaction.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/UpdatingMetadataEntriesService.ts">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">receiptHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createReceiptRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionService</span><span class="p">(</span><span class="nx">transactionHttp</span><span class="p">,</span><span class="w"> </span><span class="nx">receiptHttp</span><span class="p">);</span>
+
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">signedAggregateHashLock</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">signedAggregateHashLock</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">transactionService</span><span class="p">.</span><span class="nx">announceHashLockAggregateBonded</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">signedAggregateHashLock</span><span class="p">.</span><span class="nx">hashLock</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">signedAggregateHashLock</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">listener</span><span class="p">,</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Transaction confirmed&#39;</span><span class="p">),</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">      </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Once the transaction gets confirmed, cosign the hash obtained in the third step using Alice’s profile.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>cosign<span class="w"> </span>--hash<span class="w"> </span>&lt;transaction-hash&gt;<span class="w"> </span>--profile<span class="w"> </span>alice
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Retrieve the metadata entries assigned to Alice’s account following <a class="reference internal" href="getting-metadata-entries-attached-to-an-account.html"><span class="doc">the next guide</span></a>.</p></li>
+</ol>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;10&#8209;06</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/metadata/updating-metadata-entries.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Updating metadata entries</a><ul>
+<li><a class="reference internal" href="#use-case">Use case</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#method-01-using-the-sdk">Method #01: Using the SDK</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;06.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;06.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

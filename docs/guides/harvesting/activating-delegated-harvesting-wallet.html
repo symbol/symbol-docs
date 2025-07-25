@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Activating delegated harvesting using the Desktop Wallet &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Activating delegated harvesting manually" href="activating-delegated-harvesting-manual.html" />
+    <link rel="prev" title="Harvesting" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/harvesting/activating-delegated-harvesting-wallet.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/harvesting/activating-delegated-harvesting-wallet.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Harvesting</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Activating delegated harvesting using the Desktop Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-manual.html">Activating delegated harvesting manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">Activating remote harvesting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Harvesting</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Activating delegated harvesting using the Desktop Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-manual.html">Activating delegated harvesting manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">Activating remote harvesting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="activating-delegated-harvesting-using-the-desktop-wallet">
+<h1>Activating delegated harvesting using the Desktop Wallet<a class="headerlink" href="#activating-delegated-harvesting-using-the-desktop-wallet" title="Permalink to this heading"></a></h1>
+<p>Share your account’s importance securely with a node and get rewarded.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../concepts/harvesting.html#delegated-harvesting"><span class="std std-ref">Delegated harvesting</span></a> enables accounts to <strong>receive rewards</strong> from creating new blocks <strong>without running a node</strong>. At the same time, it allows nodes to benefit from such an account’s (possibly higher) <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a>.</p>
+<p>This guide is therefore addressed at users <strong>not running a Symbol node</strong>. Node owners have access to the node’s configuration so it’s more convenient for them to use <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a> instead of delegating.</p>
+<p>As explained in the <a class="reference internal" href="activating-delegated-harvesting-manual.html"><span class="doc">manual version of this guide</span></a> there are a number of steps required to enable delegated harvesting, involving different accounts and several transactions. It is thus <strong>much more convenient</strong> to use Symbol’s <a class="reference internal" href="../../wallets.html#wallet-desktop"><span class="std std-ref">Desktop Wallet</span></a> as shown in this guide.</p>
+<p>The process requires little more than <strong>selecting the desired node</strong> and <strong>sending a harvesting request</strong>.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<p>Before you can activate delegated harvesting using the Desktop Wallet, you need the following items:</p>
+<ul class="simple">
+<li><p>An up-to-date <strong>Desktop Wallet</strong>. Download the latest version from <a class="reference external" href="https://github.com/symbol/symbol-desktop-wallet/releases">the releases page</a>.</p></li>
+<li><p>An <strong>account</strong> that will receive the harvesting fees. It must have:</p>
+<ul>
+<li><p>At least <strong>10,000</strong> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to be <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">eligible</span></a> and then some more to pay for transaction fees.</p></li>
+<li><p>An <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> greater than zero. Keep in mind that this score is calculated every 12h.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Activating Delegated harvesting requires <strong>sending transactions</strong> and paying the required <strong>transaction fees</strong>.</p>
+<p>You can enable, disable and switch nodes multiple times, but be warned that each action will incur in a (small) transaction fee.</p>
+</div>
+</section>
+<section id="guide">
+<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Select the Harvesting option in the menu on the left</strong>. You should see the Harvesting screen:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-0.png"><img alt="../../_images/delegated-harvesting-wallet-0.png" class="with-shadow align-center" src="../../_images/delegated-harvesting-wallet-0.png" /></a>
+<p>Note that the <strong>Harvesting status</strong> is 🔴 <strong>INACTIVE</strong>.</p>
+</li>
+</ol>
+<ol class="arabic" id="harvest-wallet-step-2" start="2">
+<li><p><strong>Click on the “Node Url” box</strong> to see a list of nodes currently connected to the network:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-1.png"><img alt="../../_images/delegated-harvesting-wallet-1.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-1.png" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only nodes which act <strong>both</strong> as <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> and <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> nodes are shown on this list, but you can still request harvesting from pure Peer nodes by <strong>manually writing their URL</strong> in the box. In this case, though, you will also need to provide the node’s <strong>transport public key</strong>.</p>
+<p><strong>This key must be provided by the node owner</strong>. If you have instantiated the node using <a class="reference internal" href="../network/running-a-symbol-node.html"><span class="doc">Symbol Bootstrap</span></a>, you can find this key in the <a class="reference internal" href="../network/running-a-symbol-node.html#retrieving-node-account"><span class="std std-ref">addresses.yml</span></a> file.</p>
+<p>Keep in mind, though, that when delegating harvesting to a non-API node the <strong>Harvesting Status</strong> indicator will not work.</p>
+</div>
+</li>
+<li><p><strong>Select a node from the list and click on the “Link all keys” button</strong>.</p>
+<p>You will be asked to sign an <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">Aggregate Transaction</span></a>:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-2.png"><img alt="../../_images/delegated-harvesting-wallet-2.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-2.png" /></a>
+<p>This aggregate transaction registers <a class="reference internal" href="../../concepts/cryptography.html#keypair"><span class="std std-ref">3 different keys</span></a> to your account which are needed for harvesting.</p>
+</li>
+<li><p><strong>Enter your password and click “Confirm”</strong>.</p>
+<p>The Desktop Wallet will then <strong>sign the transaction</strong> and <strong>announce it to the network</strong>. After a little while (shouldn’t take longer than 30 seconds), the screen should update:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-3.png"><img alt="../../_images/delegated-harvesting-wallet-3.png" class="with-shadow align-center" src="../../_images/delegated-harvesting-wallet-3.png" /></a>
+<p>You can see that the <strong>Harvesting status</strong> has changed to 🟡 <strong>KEYS LINKED</strong> and the different keys appear in the form.</p>
+<p>All that is left now is to send a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> which is the actual request to the node.</p>
+</li>
+</ol>
+<ol class="arabic" id="harvest-wallet-step-5" start="5">
+<li><p><strong>Click on the “Activate” button</strong>.</p>
+<p>Your password is needed again to encrypt the persistent delegation message sent to the node:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-4.png"><img alt="../../_images/delegated-harvesting-wallet-4.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-4.png" /></a>
+</li>
+<li><p><strong>Enter your password and click “Confirm”</strong>.</p>
+<p>Your password is needed one last time to sign and announce the persistent delegation request (which is a special type of <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">transfer</span></a> transaction):</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-5.png"><img alt="../../_images/delegated-harvesting-wallet-5.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-5.png" /></a>
+</li>
+<li><p><strong>Enter your password and click “Confirm”</strong> (again).</p>
+<p>Once you receive the confirmation message (shouldn’t take longer than 30 seconds), the <strong>Harvesting status</strong> should change to 🟡 <strong>ACTIVATION IN PROGRESS</strong>:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-6.png"><img alt="../../_images/delegated-harvesting-wallet-6.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-6.png" /></a>
+<p>At this point it is up to the node to accept the request and add your account as a harvester. When this happens, the <strong>Harvesting status</strong> will change to 🟢 <strong>ACTIVE</strong>:</p>
+<a class="reference external image-reference" href="/_images/delegated-harvesting-wallet-7.png"><img alt="../../_images/delegated-harvesting-wallet-7.png" class="with-rounded-shadow align-center" src="../../_images/delegated-harvesting-wallet-7.png" /></a>
+<p>Delegated harvesting is now enabled and you should start collecting fees, at a rate proportional to your node’s <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> (See the <strong>Final words</strong> section below for some remarks).</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When requesting delegation through a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and <strong>not on the network</strong>. It is entirely up to the node to comply with the request or even to lie about its state and provide a misleading <strong>Harvesting status</strong> indicator.</p>
+<p>Therefore, there is no <strong>reliable</strong> way to know if your account has become a harvester or not besides waiting to see if your account starts receiving harvesting fees.</p>
+<p>You can find more details about this process in the <a class="reference internal" href="activating-delegated-harvesting-manual.html"><span class="doc">manual version of this guide</span></a>.</p>
+</div>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h2>
+<p>The <strong>Harvesting status</strong> indicator can help you find out the state of your account’s delegated harvesting:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Status</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🔴 INACTIVE</p></td>
+<td><p>Some keys are missing. <a class="reference internal" href="#harvest-wallet-step-2"><span class="std std-ref">Go to step 2</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟡 KEYS LINKED</p></td>
+<td><p>Keys are present but the harvesting delegation request has not been sent. <a class="reference internal" href="#harvest-wallet-step-5"><span class="std std-ref">Go to step 5</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>🟡 IN PROGRESS</p></td>
+<td><p>The harvesting delegation request has been sent but the node has not acknowledged it yet. It might take a few minutes, or it might never happen. There is not much you can do at this point, except trying a different node.</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟢 ACTIVE</p></td>
+<td><p>Harvesting is enabled. Harvested blocks and their fees should start arriving, depending on your account’s importance.</p></td>
+</tr>
+<tr class="row-even"><td><p>🔴 FAILED</p></td>
+<td><p>Activation did not succeed <strong>or could not be verified</strong>. Wait a bit or select a different node <a class="reference internal" href="#harvest-wallet-step-2"><span class="std std-ref">in step 2</span></a>. See the note below for more details.</p></td>
+</tr>
+</tbody>
+</table>
+<aside class="topic">
+<p class="topic-title">The FAILED status</p>
+<p><strong>A number of reasons</strong> can lead to this status and it is not easy for the Wallet to know the real cause. Selecting a different node is typically the quickest fix, although contacting the node operator or waiting a bit might also work.</p>
+<p>These are some of the causes behind this status:</p>
+<ul class="simple">
+<li><p>The node <strong>refused</strong> to add the delegated harvester: maybe all its slots are full.</p></li>
+<li><p>When checking the harvesting status from different devices the <a class="reference external" href="https://symbol.services/nodes">Statistics Service</a> is used to retrieve the URL of the node. Maybe this service <strong>has not discovered the node yet</strong> but will do in the future.</p></li>
+<li><p>The node <strong>could not be contacted</strong> to verify the activation: maybe it is offline, it is not an API node or you lost internet connectivity. Delegated harvesting might actually be ACTIVE in this case and the indicator can change at a later time.</p></li>
+</ul>
+</aside>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Accounts with higher importance are selected more often to perform harvesting</strong>. Even if you successfully register as a delegated harvester with a node, you will not harvest any block (nor receive any fees) unless your <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> is high enough.</p></li>
+<li><p><strong>Importance score calculation does not happen continuously</strong>. By default, account importance scores are recalculated every 1440 blocks (about every 12 hours). See the <code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code> property in the <a class="reference internal" href="../network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">Configuring network properties</span></a> guide.</p></li>
+<li><p>Finally, as explained in the note above, <strong>announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester</strong>. Nodes are free to comply with the request or even to lie about its status.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;23</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/harvesting/activating-delegated-harvesting-wallet.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Activating delegated harvesting using the Desktop Wallet</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#guide">Guide</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#final-words">Final words</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;23.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;23.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

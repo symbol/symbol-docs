@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Common Hacks and Scams &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="アグリゲートトランザクション" href="../aggregate/index.html" />
+    <link rel="prev" title="How to use your Ledger device with Symbol Wallet" href="how-to-use-ledger-hardware-wallet.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/account/scams-and-security.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/account/scams-and-security.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">アカウント</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="creating-an-account.html">アカウントの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-information.html">アカウントの情報を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-the-amount-of-assets-sent-to-an-account.html">アカウントへ送信したアセットの総量の取得</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reading-transactions-from-an-account.html">トランザクションをアカウントから読み込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use-ledger-hardware-wallet.html">How to use your Ledger device with Symbol Wallet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Common Hacks and Scams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">アカウント</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="creating-an-account.html">アカウントの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-information.html">アカウントの情報を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-the-amount-of-assets-sent-to-an-account.html">アカウントへ送信したアセットの総量の取得</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reading-transactions-from-an-account.html">トランザクションをアカウントから読み込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use-ledger-hardware-wallet.html">How to use your Ledger device with Symbol Wallet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Common Hacks and Scams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="common-hacks-and-scams">
+<h1>Common Hacks and Scams<a class="headerlink" href="#common-hacks-and-scams" title="この見出しへのパーマリンク"></a></h1>
+<p>It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security of your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet's security.</p>
+<section id="key-points">
+<h2>Key Points<a class="headerlink" href="#key-points" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p><strong>Be extremely cautious signing transactions when activating delegated harvesting</strong>. A Sweeping scam has actively targeted users in the process of activating delegated harvesting, so make sure to carefully review any transactions you are prompted to sign and diligently check for any included asset transfers to unfamiliar addresses. Never sign a transaction that you do not completely understand.</p></li>
+<li><p><strong>Never share your private key or mnemonic phrase</strong> (also known as your secret recovery phrase or seed phrase) with anyone, and never enter them on any website or potentially malicious wallet. Anyone with your private key or mnemonic phrase has full and unrestrained access to the contents of your wallet.</p></li>
+<li><p><strong>The Symbol Syndicate will never directly message you for customer support</strong> and will never ask for your private key or mnemonic phrase.</p></li>
+<li><p><strong>Blockchain transactions are irreversible</strong>; it is not feasible to undo a transaction or retrieve your funds once they are sent to a malicious address.</p></li>
+<li><p><strong>Ensure any backups of your private keys or mnemonic phrases are stored safely and offline</strong> in order to ensure that no one is able to access them and compromise your accounts.</p></li>
+</ul>
+</section>
+<section id="sweeping-with-aggregate-bonded-transactions">
+<h2>Sweeping with Aggregate Bonded Transactions<a class="headerlink" href="#sweeping-with-aggregate-bonded-transactions" title="この見出しへのパーマリンク"></a></h2>
+<section id="what-is-an-aggregate-transaction">
+<h3>What is an Aggregate transaction?<a class="headerlink" href="#what-is-an-aggregate-transaction" title="この見出しへのパーマリンク"></a></h3>
+<p>Aggregate transactions can include a variety of elements such as multiple signers, messages, and transfers. New Symbol users may not be familiar with the complex nature of Aggregate Bonded transactions, and must take great care to fully understand the full scope of any transactions they are asked to sign. For more information see <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">Aggregate Transaction</span></a></p>
+</section>
+<section id="what-is-sweeping">
+<h3>What is sweeping?<a class="headerlink" href="#what-is-sweeping" title="この見出しへのパーマリンク"></a></h3>
+<p>Sweeping involves a malicious script that monitors certain types of transactions, then initiates a malicious Aggregate Bonded transaction disguised to appear related to the targeted transaction (i.e. by including a relevant message), but which also include a transfer of XYM or other mosaics to the bad actor's wallet. Signing these transactions can completely empty a user's wallet, so please make sure you carefully review before signing any transactions that you did not initiate.</p>
+<p>It may not be immediately apparent that you've been hacked. The sweeper's goal is that you assume that the transaction you signed was part of a process you were completing, and you may also assume that your balance has been reduced by a stuck transaction, pending activation of delegated harvesting, or that your balance was transferred to a delegated harvesting address linked to your account.</p>
+</section>
+<section id="what-could-a-sweeping-attack-look-like">
+<h3>What could a sweeping attack look like?<a class="headerlink" href="#what-could-a-sweeping-attack-look-like" title="この見出しへのパーマリンク"></a></h3>
+<ul class="simple">
+<li><p>You begin Delegated Harvesting activation by propagating the 'Link all keys' transaction to the network.</p></li>
+<li><p>The bad actor's script detects this transaction and sends you an Aggregate Bonded transaction. This transaction might include a message related to harvesting such as &quot;Delegated-№234567&quot; as well as a transfer of XYM to an address controlled by the bad actor.</p></li>
+<li><p>Your wallet sees the Aggregate Bonded transaction included in a subsequent block and prompts you with the option to review and sign it.</p></li>
+<li><p>You choose to sign the transaction, and your XYM balance is reduced by the transaction amount (typically all or nearly all of your XYM).</p></li>
+</ul>
+<p>Every Symbol wallet is different; some may not permit users to sign aggregate transactions, others may hide aggregate transactions originating from addresses outside a predefined whitelist (i.e. their contacts), and others may prompt users for their signature without revealing the full contents of what they are signing. Reviewing aggregate transactions using the <a class="reference external" href="https://testnet.symbol.fyi/nodes">Symbol Explorer</a> before signing them can provide additional security and peace of mind. Below is an example of a malicious aggregate transaction that contains a message to a trusted address in the first transaction and an asset transfer to the scammer's address in the second transaction.</p>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/Aggregate-transaction.png"><img alt="../../_images/Aggregate-transaction.png" class="with-shadow" src="../../_images/Aggregate-transaction.png" style="width: 75%;" /></a>
+</figure>
+</section>
+</section>
+<section id="spoofing">
+<h2>Spoofing<a class="headerlink" href="#spoofing" title="この見出しへのパーマリンク"></a></h2>
+<section id="what-is-spoofing">
+<h3>What is spoofing?<a class="headerlink" href="#what-is-spoofing" title="この見出しへのパーマリンク"></a></h3>
+<p>Spoofing involves hiding or disguising identity to enable malicious activity, literally spoofing the identity of the malicious party to make it believable and appear trustworthy.</p>
+</section>
+<section id="what-could-a-spoofing-attack-look-like">
+<h3>What could a spoofing attack look like?<a class="headerlink" href="#what-could-a-spoofing-attack-look-like" title="この見出しへのパーマリンク"></a></h3>
+<p>A spoofing hack will target private key or mnemonic phrase (also known as your secret recovery phrase or seed phrase), as this can be used to restore your wallet and will provide a hacker with access to your private keys and the wallet's contents. Symbol wallets are a non-custodial, meaning you are responsible for keeping your private keys and mnemonic phrase secure.</p>
+<p>A spoofing attack might go something like this:</p>
+<ul class="simple">
+<li><p>You ask a question on Twitter or in the XYMCity Discord server.</p></li>
+<li><p>A malicious account identifies you as a target due to your request for support and sends you a DM. The account will be configured to resemble an official support resource and could include a relevant logo, a convincing username, and a professional sounding dialogue.</p></li>
+<li><p>The bad actor will rely on your belief that they are an official support resource, and try to convince you to provide your private key or mnemonic phrase key to resolve your problem. This could also involve directing you to a website that requests these details.</p></li>
+<li><p>If successful, the bad actor can gain full access to your address and transfer your assets to an address of their choosing.</p></li>
+</ul>
+<p>This scenario is just an example, and similar events could play out across any social media platform, messaging service, forum, or otherwise on which you share information publicly.</p>
+</section>
+<section id="how-can-i-protect-myself-from-spoofing-attacks">
+<h3>How can I protect myself from spoofing attacks?<a class="headerlink" href="#how-can-i-protect-myself-from-spoofing-attacks" title="この見出しへのパーマリンク"></a></h3>
+<p>The Symbol Syndicate will never directly message you for customer support, and will never ask for your private key or mnemonic phrase. Anyone asking you for contact information, your secret recovery phrase or details of your support issue outside of the Discord helpdesk channel is a potential scammer and should be ignored and/or reported.
+Be vigilant. If it looks like it might be a scam, it probably is. Always be observant and keep a lookout for suspicious, telltale signs. These could include:</p>
+<ul class="simple">
+<li><p>Requesting personal information, including anything from your name, the value of your wallet's holdings, or even your private key, which you should never, ever give to anyone.</p></li>
+<li><p>Unofficial-looking Twitter handles using underscores, doubled-up letters, and numbers to mimic official accounts.</p></li>
+<li><p>Official-looking Discord 'about me' details or handles (i.e. SUPPORT_TEAM).</p></li>
+<li><p>Providing links to websites purported to 'validate your wallet' or assist with troubleshooting (excepting known-good sources such as the official Symbol documentation or articles written by Syndicate members).</p></li>
+<li><p>Requests to reach out for support, get in touch, or send a DM.</p></li>
+</ul>
+<p>Most importantly, <strong>never share your private keys and mnemonic phrase</strong> regardless of how convincing a person/entity may be.</p>
+</section>
+</section>
+<section id="clipboard-hacking">
+<h2>Clipboard hacking<a class="headerlink" href="#clipboard-hacking" title="この見出しへのパーマリンク"></a></h2>
+<section id="what-is-clipboard-hacking">
+<h3>What is clipboard hacking?<a class="headerlink" href="#what-is-clipboard-hacking" title="この見出しへのパーマリンク"></a></h3>
+<p>Symbol addresses are not easily memorized nor typed manually, so many users leverage their device's clipboard to copy and paste a recipient's Symbol address. Clipboard hacking involves malware that intercepts the contents of your clipboard and replaces an address you've copied with an address belonging to the hacker.  When you go to send a transaction and paste the address from your clipboard, the hacker's address is pasted instead of the one you initially copied.</p>
+</section>
+<section id="how-can-i-protect-myself">
+<h3>How can I protect myself?<a class="headerlink" href="#how-can-i-protect-myself" title="この見出しへのパーマリンク"></a></h3>
+<p>The only way reliable way to be safe is to triple-check addresses before you confirm any transaction. A robust and up-to-date anti-malware software is strongly recommended, as it should identify most potential clipboard hacking malware programs, notify you, and quarantine them before they can affect your crypto activity.</p>
+</section>
+</section>
+<section id="compromised-backup">
+<h2>Compromised Backup<a class="headerlink" href="#compromised-backup" title="この見出しへのパーマリンク"></a></h2>
+<p>Keep in mind that any copies of your private keys or mnemonic phrase can also grant someone access to your accounts. Ensure that these cannot be accessed by a hack, theft, or compromised cloud storage account.</p>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;03&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/account/scams-and-security.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Common Hacks and Scams</a><ul>
+<li><a class="reference internal" href="#key-points">Key Points</a></li>
+<li><a class="reference internal" href="#sweeping-with-aggregate-bonded-transactions">Sweeping with Aggregate Bonded Transactions</a><ul>
+<li><a class="reference internal" href="#what-is-an-aggregate-transaction">What is an Aggregate transaction?</a></li>
+<li><a class="reference internal" href="#what-is-sweeping">What is sweeping?</a></li>
+<li><a class="reference internal" href="#what-could-a-sweeping-attack-look-like">What could a sweeping attack look like?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#spoofing">Spoofing</a><ul>
+<li><a class="reference internal" href="#what-is-spoofing">What is spoofing?</a></li>
+<li><a class="reference internal" href="#what-could-a-spoofing-attack-look-like">What could a spoofing attack look like?</a></li>
+<li><a class="reference internal" href="#how-can-i-protect-myself-from-spoofing-attacks">How can I protect myself from spoofing attacks?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clipboard-hacking">Clipboard hacking</a><ul>
+<li><a class="reference internal" href="#what-is-clipboard-hacking">What is clipboard hacking?</a></li>
+<li><a class="reference internal" href="#how-can-i-protect-myself">How can I protect myself?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compromised-backup">Compromised Backup</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/14351392?v=4" class="git-info-image">Last updated by <a href="https://github.com/orisdorch" target="_blank" rel="noopener noreferrer">OrisDorch</a>
+            on 2022&#8209;03&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/14351392?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/orisdorch" target="_blank" rel="noopener noreferrer">OrisDorch</a>
+            on 2022&#8209;03&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

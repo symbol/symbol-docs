@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts tagged SDK &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Posts tagged SDK"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/tag/sdk.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/tag/sdk.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+            
+<h1>SDK guides</h1>
+
+
+
+<div class="section">
+    <h2><a href="../../getting-started/setup-workstation.html">Setting up your workstation</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This first guide will walk you through a step-by-step installation of the required tools to <strong>start developing applications</strong> on Symbol.</p>
+</div>
+
+    <p><a href="../../getting-started/setup-workstation.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../account/creating-an-account.html">Creating an account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Create a new Symbol account to start sending and receiving transactions.</p>
+</div>
+
+    <p><a href="../account/creating-an-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../account/getting-account-information.html">Getting the account information</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the public key and balance of an account.</p>
+</div>
+
+    <p><a href="../account/getting-account-information.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../transfer/sending-a-transfer-transaction.html">Sending mosaics and messages between two accounts</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Define, sign, and announce a transfer transaction.</p>
+</div>
+
+    <p><a href="../transfer/sending-a-transfer-transaction.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.html">Sending multiple transactions together</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Send transactions to different accounts at the same time, using aggregate transactions.</p>
+</div>
+
+    <p><a href="../aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.html">Creating an escrow contract</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Learn about aggregate bonded transactions creating an escrow contract.</p>
+</div>
+
+    <p><a href="../aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../aggregate/signing-announced-aggregate-bonded-transactions-automatically.html">Cosigning aggregate bonded transactions automatically</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Create a bot to cosign automatically transactions that require your account’s signature.</p>
+</div>
+
+    <p><a href="../aggregate/signing-announced-aggregate-bonded-transactions-automatically.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../mosaic/creating-a-mosaic.html">Creating a mosaic</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Tokenize an asset using mosaics.</p>
+</div>
+
+    <p><a href="../mosaic/creating-a-mosaic.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../multisig/creating-a-multisig-account.html">Creating a multisig account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to setup a joint account.</p>
+</div>
+
+    <p><a href="../multisig/creating-a-multisig-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../blockchain/getting-block-by-height.html">Getting a block by height</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the block information given a height.</p>
+</div>
+
+    <p><a href="../blockchain/getting-block-by-height.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../namespace/registering-a-namespace.html">Registering a namespace</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Create a unique name to identify your assets.</p>
+</div>
+
+    <p><a href="../namespace/registering-a-namespace.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../multisig/adding-a-new-signer-to-a-multisig-account.html">Adding a new signer to a multisig account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to add a new cosignatory to a multisig account.</p>
+</div>
+
+    <p><a href="../multisig/adding-a-new-signer-to-a-multisig-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../multisig/modifying-a-multisig-account-min-approval.html">Modifying a multisig account min approval</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to increase and decrease the minimum number of signatures needed to execute a multisig transaction.</p>
+</div>
+
+    <p><a href="../multisig/modifying-a-multisig-account-min-approval.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../multisig/removing-a-signer-from-a-multisig-account.html">Removing a signer from a multisig account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to remove a cosignatory from a multisig account.</p>
+</div>
+
+    <p><a href="../multisig/removing-a-signer-from-a-multisig-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../aggregate/signing-announced-aggregate-bonded-transactions.html">Cosigning aggregate bonded transactions</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Cosign <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">aggregate</span></a> transactions pending to be signed.</p>
+</div>
+
+    <p><a href="../aggregate/signing-announced-aggregate-bonded-transactions.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../multisig/creating-a-multi-level-multisig-account.html">Creating a multi-level multisig account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to connect multiple multisig accounts to achieve advanced on-chain authorization logic.</p>
+</div>
+
+    <p><a href="../multisig/creating-a-multi-level-multisig-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../namespace/registering-a-subnamespace.html">Creating a subnamespace</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Once you have a registered root <a class="reference internal" href="../../concepts/namespace.html"><span class="doc">namespace</span></a>, you can create up to <code class="docutils literal notranslate"><span class="pre">3</span></code> levels of subnamespaces to organize your assets.</p>
+</div>
+
+    <p><a href="../namespace/registering-a-subnamespace.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../account/getting-the-amount-of-assets-sent-to-an-account.html">Getting the amount of assets sent to an account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Check the number of asset units you have sent to an account.</p>
+</div>
+
+    <p><a href="../account/getting-the-amount-of-assets-sent-to-an-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../blockchain/listening-new-blocks.html">Listening to new blocks</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get notified when a new block is included.</p>
+</div>
+
+    <p><a href="../blockchain/listening-new-blocks.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../mosaic/modifying-mosaic-supply.html">Modifying the mosaic supply</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>If a mosaic was created with the “<strong>Supply Mutable</strong>” property, you can make more tokens or reduce the total supply.</p>
+</div>
+
+    <p><a href="../mosaic/modifying-mosaic-supply.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../account/reading-transactions-from-an-account.html">Reading transactions from an account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the complete list of transactions involving an account.</p>
+</div>
+
+    <p><a href="../account/reading-transactions-from-an-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html">Turning the asynchronous transaction announcement into synchronous</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Handy snippet to announce a transaction and wait until this is confirmed.</p>
+</div>
+
+    <p><a href="../monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../aggregate/sending-a-multisig-transaction.html">Sending a multisig transaction</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to issue transactions from a multisig account.</p>
+</div>
+
+    <p><a href="../aggregate/sending-a-multisig-transaction.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../namespace/link-a-namespace-to-a-mosaic.html">Linking a namespace to a mosaic</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Alias an mosaic with a namespace so that others can reference it in a more friendly way when issuing transactions.</p>
+</div>
+
+    <p><a href="../namespace/link-a-namespace-to-a-mosaic.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../namespace/link-a-namespace-to-an-address.html">Linking a namespace to an address</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Alias an address with a namespace so that others can reference the account in a more friendly way when issuing transactions.</p>
+</div>
+
+    <p><a href="../namespace/link-a-namespace-to-an-address.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../mosaic/getting-mosaic-information.html">Getting the mosaic information</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the ownership, divisibility, duration, and flags for a given mosaic identifier.</p>
+</div>
+
+    <p><a href="../mosaic/getting-mosaic-information.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../namespace/getting-namespace-information.html">Getting the namespace information</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the ownership and duration for a given namespace identifier.</p>
+</div>
+
+    <p><a href="../namespace/getting-namespace-information.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../restriction/preventing-spam-attacks-with-account-restrictions.html">Preventing spam attacks with account restrictions</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Learn how to add and remove account restrictions.</p>
+</div>
+
+    <p><a href="../restriction/preventing-spam-attacks-with-account-restrictions.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../namespace/extending-a-namespace-registration-period.html">Extending a namespace registration period</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide shows you how to extend the rental period of a namespace.</p>
+</div>
+
+    <p><a href="../namespace/extending-a-namespace-registration-period.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html">Getting the asset identifier behind a namespace with receipts</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the resolution for a given alias and transaction using receipts.</p>
+</div>
+
+    <p><a href="../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../restriction/restricting-mosaics-transfers.html">Restricting mosaic transfers</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Limit how accounts can transact with Mosaic Restrictions.</p>
+</div>
+
+    <p><a href="../restriction/restricting-mosaics-transfers.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../restriction/delegating-mosaic-restrictions-to-a-third-party.html">Delegating mosaic restrictions to a third party</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Allow another account to add restrictions to your mosaics.</p>
+</div>
+
+    <p><a href="../restriction/delegating-mosaic-restrictions-to-a-third-party.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/assigning-metadata-entries-to-an-account.html">Assigning metadata to an account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Add custom data to an account.</p>
+</div>
+
+    <p><a href="../metadata/assigning-metadata-entries-to-an-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/assigning-metadata-entries-to-a-mosaic.html">Assigning metadata to a mosaic</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Add custom data to a mosaic.</p>
+</div>
+
+    <p><a href="../metadata/assigning-metadata-entries-to-a-mosaic.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/assigning-metadata-entries-to-a-namespace.html">Assigning metadata to a namespace</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Add custom data to a namespace.</p>
+</div>
+
+    <p><a href="../metadata/assigning-metadata-entries-to-a-namespace.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/getting-metadata-entries-attached-to-an-account.html">Getting metadata entries attached to an account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the list of metadata entries attached to an account.</p>
+</div>
+
+    <p><a href="../metadata/getting-metadata-entries-attached-to-an-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.html">Getting mosaic global restrictions attached to a mosaic</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the list of mosaic global restrictions.</p>
+</div>
+
+    <p><a href="../restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/getting-metadata-entries-attached-to-a-mosaic.html">Getting metadata entries attached to a mosaic</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the list of metadata entries attached to an mosaic.</p>
+</div>
+
+    <p><a href="../metadata/getting-metadata-entries-attached-to-a-mosaic.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/getting-metadata-entries-attached-to-a-namespace.html">Getting metadata entries attached to a namespace</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the list of metadata entries attached to an namespace.</p>
+</div>
+
+    <p><a href="../metadata/getting-metadata-entries-attached-to-a-namespace.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../restriction/getting-mosaic-address-restrictions-attached-to-an-account.html">Getting mosaic address restrictions attached to an account</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the list of mosaic address restrictions.</p>
+</div>
+
+    <p><a href="../restriction/getting-mosaic-address-restrictions-attached-to-an-account.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../metadata/updating-metadata-entries.html">Updating metadata entries</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Update any existent metadata entry.</p>
+</div>
+
+    <p><a href="../metadata/updating-metadata-entries.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../restriction/getting-account-restrictions-attached-to-an-address.html">Getting the account restrictions attached to an address</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Get the list of account’s restrictions.</p>
+</div>
+
+    <p><a href="../restriction/getting-account-restrictions-attached-to-an-address.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../aggregate/adding-cosginatures-aggregate-complete.html">Adding cosignatures to aggregate complete trasactions</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>This guide will show you how to add cosignatures to an aggregate complete transaction without using the partial cache.</p>
+</div>
+
+    <p><a href="../aggregate/adding-cosginatures-aggregate-complete.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../harvesting/activating-delegated-harvesting-manual.html">Activating delegated harvesting manually</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Share your account’s importance securely with a node and get rewarded.</p>
+</div>
+
+    <p><a href="../harvesting/activating-delegated-harvesting-manual.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../harvesting/activating-delegated-harvesting-wallet.html">Activating delegated harvesting using the Desktop Wallet</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Share your account’s importance securely with a node and get rewarded.</p>
+</div>
+
+    <p><a href="../harvesting/activating-delegated-harvesting-wallet.html">Read more ...</a></p>
+    <hr>
+</div>
+
+<div class="section">
+    <h2><a href="../harvesting/activating-remote-harvesting.html">Activating remote harvesting</a></h2>
+    <div class="ablog-post-excerpt docutils container">
+<p>Harvest new blocks through a proxy account for added security.</p>
+</div>
+
+    <p><a href="../harvesting/activating-remote-harvesting.html">Read more ...</a></p>
+    <hr>
+</div>
+
+
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github">
+    <a href="" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ノード &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Plugin" href="plugin.html" />
+    <link rel="prev" title="ネームスペース" href="namespace.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/node.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/node.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="node">
+<h1>ノード<a class="headerlink" href="#node" title="この見出しへのパーマリンク"></a></h1>
+<p>Symbol ブロックチェーンプラットフォームは <strong>ノードのネットワーク</strong> によって構築されています。これらのノードはスマートアセットのトランザクションを実行、検索し、速やかにブロックチェーン台帳へ記録する、強力で、安定した、安全なプラットフォームを提供します。</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/four-layer-architecture.png" src="../_images/four-layer-architecture.png" style="width: 550px;" />
+<figcaption>
+<p><span class="caption-text">Symbol のパフォーマンス優位性: 4層アーキテクチャ</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p><strong>4層アーキテクチャ</strong> により、開発者に他の層への影響を避けたアップデートを可能にし、セキュリティを向上させることができます。</p>
+<section id="peer-node">
+<span id="id1"></span><h2>Peer ノード<a class="headerlink" href="#peer-node" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>リポジトリ:</strong> <a href="https://github.com/symbol/symbol/tree/dev/client/catapult" target="_blank">Catapult Client</a></p>
+<figure class="align-center" id="id5">
+<img alt="../_images/peer-detail.png" src="../_images/peer-detail.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">Peer ノードコミュニケーション</span><a class="headerlink" href="#id5" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>Peer ノードは、単一のエンティティを排除してもシャットダウンできない、堅牢なネットワークであるブロックチェーンのバックボーンを構成します。ノードの役割は <a class="reference internal" href="transaction.html#transaction-validation"><span class="std std-ref">トランザクション</span></a> と <a class="reference internal" href="block.html"><span class="doc">ブロック</span></a> を検証すること、コンセンサスアルゴリズムの実行、新しいブロックの生成、ネットワークへの変更の伝播を実行することです。</p>
+<p>API ノードが新しいトランザクションを P2P ネットワークにプッシュすると、それらは <a class="reference internal" href="harvesting.html"><span class="doc">ブロックに含まれる</span></a> かまたは廃棄されます。ノードはブロックが処理された後にそれを保存します:</p>
+<ul class="simple">
+<li><p>各ブロックのバイナリはフラットなファイルとしてディスクに記録されます。</p></li>
+<li><p>更新されたチェーンの状態はメモリまたは RocksDB にあります。(設定可能)</p></li>
+</ul>
+<section id="rocksdb">
+<h3>RocksDB<a class="headerlink" href="#rocksdb" title="この見出しへのパーマリンク"></a></h3>
+<p>Peer ノードは <a href=" https://en.wikipedia.org/wiki/RocksDB" target="_blank">RocksDB</a> へチェーンの状態を保存します。このキャッシュされたデータ構造はシリアライズされ、対応するキーに値として保存されます。例えば、データベース上のある列は公開鍵をアドレスにマップします。他には、対応するアドレスをキーの値とした、アカウント状態のエントリです。</p>
+<p>RocksDB を使用するよりも状態をメモリに保存しておくことのほうがより高速になります。しかし状態の情報を RocksDB に保存しておくことで、ネットワークのノードが必要とするメモリを少なくできます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>RocksDB 上の状態を保持することは、大量のアカウントが存在するネットワークにおいて都合が良いです。</p>
+</div>
+</section>
+<section id="node-reputation">
+<h3>ノードレピュテーション<a class="headerlink" href="#node-reputation" title="この見出しへのパーマリンク"></a></h3>
+<p>パブリックネットワークでは誰でもノードを実行できます。これらのノードの中には無効な情報を共有したり、ネットワークを妨害しようとするものがあります。</p>
+<p>誤解の機会を減らすために、ノードは先行する通信の結果を追跡します。P2P 機能を持つすべてのノードはそれが対話した他のすべての Peer ノードについて成功および失敗カウンタを保持します。</p>
+<p>ノードは要求されたデータの処理をした後に、それに応じてカウンタを更新します。ノードがリモートピアへの接続に成功すると、最初にリモートピアに対しての成功カウンタをインクリメントします。通信の試行が失敗した場合、ノードはリモートピアの失敗カウンタを増やします。同様にノードは共有データの処理後にピアカウンタを適宜更新します。</p>
+<p>これらのスコアから推定して、ノードは到達したすべてのピアに500〜10000の重みを割り当てます。</p>
+<p>データを読み取るリモートノードを選択する確率はその重みに比例します。4回のノード選択ごとに条件が変更され <a href=" https://en.wikipedia.org/wiki/Sybil_attack" target="_blank">Sybil attacks</a> が防止されます。</p>
+</section>
+</section>
+<section id="api-node">
+<span id="id2"></span><h2>API ノード<a class="headerlink" href="#api-node" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>リポジトリ:</strong> <a href="https://github.com/symbol/symbol/tree/dev/client/catapult" target="_blank">Catapult Client</a></p>
+<figure class="align-center" id="id6">
+<img alt="../_images/api-detail.png" src="../_images/api-detail.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">Peer + API (Dual) ノードコミュニケーション</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>API ノードの主な役割は、データを MongoDB に読み取り可能な形式で保存することです。 catapult-client ソフトウェアを使用すると、スタンドアロン API ノードまたは Peer 機能 (Dual) を構成できます。</p>
+<p>データを MongoDB に直接書き込む代わりに、ノードはそれを <code class="docutils literal notranslate"><span class="pre">spool</span></code> と呼ばれるファイルベースのキューに書き込みます。ブローカーサービスはスプールからのデータを消費し、それに応じて MongoDB を更新します。ブロックが処理されると、ブローカーサービスは ZMQ を使用して Catapult REST インスタンスへの変更を通知します。</p>
+<p>API ノードは <a class="reference internal" href="aggregate-transaction.html"><span class="doc">アグリゲートボンドトランザクション</span></a> の連署名を集める役割も果たし、それが完成したときにだけ処理されます。</p>
+<section id="mongodb">
+<h3>MongoDB<a class="headerlink" href="#mongodb" title="この見出しへのパーマリンク"></a></h3>
+<p><a href="https://es.wikipedia.org/wiki/MongoDB" target="_blank">MongoDB</a> はブロック、トランザクションとチェーン状態をハイパフォーマンスの実現のために保存します。</p>
+<p>次の場合にブローカーサービスはリンクした MongoDB を更新します:</p>
+<ul class="simple">
+<li><p>新しいブロック/ブロックの束の処理が終了します。</p></li>
+<li><p>新しい未承認トランザクションの処理を完了します。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>MongoDB は外部からアクセスされるべきではありません。</p>
+</div>
+</section>
+<section id="zmq">
+<h3>ZMQ<a class="headerlink" href="#zmq" title="この見出しへのパーマリンク"></a></h3>
+<p><a href=" https://en.wikipedia.org/wiki/ZeroMQ" target="_blank">ZeroMQ</a> はリアルタイムの購読を可能にする非同期メッセージングライブラリです。API ノードから ZMQ エンドポイントに通知を転送し、それを Catapult REST が購読します。これは REST WebSocket に代わるもので、パフォーマンスが重要な場合に使用することを目的としています。</p>
+</section>
+</section>
+<section id="rest-gateway">
+<span id="id3"></span><h2>REST ゲートウェイ<a class="headerlink" href="#rest-gateway" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>リポジトリ:</strong> <a href="https://github.com/symbol/symbol/tree/dev/client/rest" target="_blank">Catapult REST</a></p>
+<figure class="align-center" id="id7">
+<img alt="../_images/rest-detail.png" src="../_images/rest-detail.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">REST ゲートウェイコミュニケーション</span><a class="headerlink" href="#id7" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>Catapult REST ゲートウェイは <a class="reference internal" href="../api.html"><span class="doc">JSON API</span></a> クライアントリクエストを処理します。ゲートウェイは MongoDB から読み取り、レスポンスをフォーマットして、それをクライアントに返却します。このコンポーネントは <a class="reference internal" href="../api.html#websockets"><span class="std std-ref">WebSockets</span></a> でクライアントにイベントを返却する役割も果たします。</p>
+<p>各 REST ゲートウェイは1つの API インスタンスに接続して、クライアントサイドからトリガーされた新しいトランザクション要求を送信し、ソケットを使用してリアルタイムで更新を受信します。</p>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/creating-a-private-test-net.html">プライベートテストネットワーク</a></p>
+<p class="ablog-post-excerpt">このガイドでは、 Symbol を使用して、独自のプライベートネットワークをセットアップする手順を説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/running-a-symbol-node.html">ノードの立ち上げ</a></p>
+<p class="ablog-post-excerpt">このガイドでは Symbol の <strong>パブリックネットワーク</strong> へ参加するために、ノードをセットアップする方法を説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/configuring-network-properties.html">ネットワークプロパティ</a></p>
+<p class="ablog-post-excerpt">Symbol には多数のカスタマイズ可能なネットワーク関連の設定があります。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/configuring-node-properties.html">ノードプロパティ</a></p>
+<p class="ablog-post-excerpt">Symbol には多数のカスタマイズ可能なノード関連の設定があります。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/connecting-to-mongodb.html">MongoDB への接続方法</a></p>
+<p class="ablog-post-excerpt">あなたの API ノードの MongoDB インスタンスへ接続する方法の学習</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/using-symbol-bootstrap.html">Symbol Bootstrap の使用</a></p>
+<p class="ablog-post-excerpt">How to use this handy node deployment tool.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></p>
+<p class="ablog-post-excerpt">このガイドでは Symbol Bootstrap を <strong>使用せず</strong> に Symbol のネットワークへ参加するために、ノードをセットアップする方法を説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></p>
+<p class="ablog-post-excerpt">How to run a Symbol node with added security.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></p>
+<p class="ablog-post-excerpt">How to <strong>relinquish control of a node's main account to an external account</strong>, so that the external account's private key is never required in the node setup process.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/maintaining-a-symbol-node.html">ノードの維持管理</a></p>
+<p class="ablog-post-excerpt">How to keep your Symbol node up and running healthily.</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;05&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/node.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ノード</a><ul>
+<li><a class="reference internal" href="#peer-node">Peer ノード</a><ul>
+<li><a class="reference internal" href="#rocksdb">RocksDB</a></li>
+<li><a class="reference internal" href="#node-reputation">ノードレピュテーション</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api-node">API ノード</a><ul>
+<li><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li><a class="reference internal" href="#zmq">ZMQ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rest-gateway">REST ゲートウェイ</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

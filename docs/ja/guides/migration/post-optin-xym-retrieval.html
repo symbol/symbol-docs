@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ロンチ前のオプトインから XYM を取得する &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Retrieving your XYM from a post-launch opt-in" href="post-launch-optin-xym-retrieval.html" />
+    <link rel="prev" title="NIS1 からのマイグレーション" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/migration/post-optin-xym-retrieval.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/migration/post-optin-xym-retrieval.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">NIS1 からのマイグレーション</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ロンチ前のオプトインから XYM を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="migrating-from-nem-to-symbol.html">NIS1 から Symbol へのマイグレーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">NIS1 からのマイグレーション</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ロンチ前のオプトインから XYM を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="migrating-from-nem-to-symbol.html">NIS1 から Symbol へのマイグレーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="retrieving-your-xym-from-a-pre-launch-opt-in">
+<h1>ロンチ前のオプトインから XYM を取得する<a class="headerlink" href="#retrieving-your-xym-from-a-pre-launch-opt-in" title="この見出しへのパーマリンク"></a></h1>
+<p>このガイドでは、 Symbol <strong>ロンチ前</strong> (2021年3月12日) のオプトインプロセスに登録した場合に、あなたにへ授与された <strong>XYM</strong> (Symbol の基軸通貨) へのアクセス方法を説明します。</p>
+<p>それを見過ごしていた場合は <a class="reference internal" href="post-launch-optin-xym-retrieval.html"><span class="doc">Retrieving your XYM from a post-launch opt-in</span></a> ガイドに従って、オプトインすることもできます。</p>
+<section id="introduction">
+<h2>紹介<a class="headerlink" href="#introduction" title="この見出しへのパーマリンク"></a></h2>
+<p><strong>NEM NIS1 はコミュニティによって作成された NEM のオリジナルブロックチェーン</strong> オファリングであり、2015 年から稼働を続けています。</p>
+<p><strong>Symbol は NEM の次世代ブロックチェーン</strong> であり、ゼロから書き直され、2021 年 3 月にローンチされました。</p>
+<p>To quickstart Symbol's adoption, an <strong>opt-in</strong> process was established which awarded <strong>one XYM</strong> in the new Symbol blockchain <strong>for every XEM</strong> (NIS1's native currency) held in the NIS1 blockchain.</p>
+<section id="the-pre-launch-opt-in-process">
+<h3>ロンチ前オプトインプロセス<a class="headerlink" href="#the-pre-launch-opt-in-process" title="この見出しへのパーマリンク"></a></h3>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-0.png"><img alt="../../_images/retrieving-optin-xym-0.png" class="with-shadow align-right" src="../../_images/retrieving-optin-xym-0.png" style="width: 50%;" /></a>
+<ul class="simple">
+<li><p>First off, XEM holders wishing to participate in the opt-in process had to <strong>enroll</strong> using any of the NEM Wallets. For example, using the Desktop <a class="reference external" href="https://nemplatform.com/wallets/#desktop">NEM Wallet</a>.</p></li>
+</ul>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-1.png"><img alt="../../_images/retrieving-optin-xym-1.png" class="with-shadow align-right" src="../../_images/retrieving-optin-xym-1.png" style="width: 50%;" /></a>
+<ul>
+<li><p>In return, the user received a <strong>Symbol Mnemonic</strong>, a 24-word phrase which encoded a Symbol account for the future Symbol blockchain.</p>
+<p>これは Symbol ニーモニックを含む <strong>NEM Wallet</strong> が作成した例です。</p>
+</li>
+<li><p>Then, on <strong>March 12th, 2021</strong> the <strong>NIS1 Snapshot</strong> took place: When the NIS1 blockchain reached block height 3'105'500 a picture was taken of all accounts and their assets.</p></li>
+<li><p>Finally, on <strong>March 16th, 2021</strong> the <strong>Symbol blockchain was launched</strong> and all opted-in accounts were automatically created:</p>
+<p><strong>For every opted-in NIS1 account that held at least 100 XEM at the snapshot, a Symbol account was created holding that same amount of XYM.</strong></p>
+</li>
+</ul>
+<p>このガイドでは、この新しい Symbol アカウントとそのアセットにアクセスする方法について説明します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>If you did not opt-in before the new Symbol blockchain launched, you can still opt-in <strong>post-launch</strong> by following the <a class="reference internal" href="post-launch-optin-xym-retrieval.html"><span class="doc">Retrieving your XYM from a post-launch opt-in</span></a> guide.</p>
+</div>
+</section>
+</section>
+<section id="guide">
+<h2>ガイド<a class="headerlink" href="#guide" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic">
+<li><p>あなたのプラットフォーム向けの <a class="reference internal" href="../../wallets.html"><span class="doc">Symbol Desktop Wallet</span></a> を <strong>ダウンロードしてインストール</strong> します。</p>
+<p>これは NIS1 ブロックチェーンとの疎通に使用される NEM ウォレットとは異なることに注意してください。</p>
+</li>
+<li><p>ウォレットを開いて <code class="docutils literal notranslate"><span class="pre">新しいプロファイルを作成?</span></code> をクリックします:</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-2.png"><img alt="../../_images/retrieving-optin-xym-2.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-2.png" style="width: 50%;" /></a>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">mnemonic</span></code> をクリックします:</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-3.png"><img alt="../../_images/retrieving-optin-xym-3.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-3.png" style="width: 50%;" /></a>
+</li>
+<li><p>いくつかのプロファイルデータを入力します。プロファイルには複数の Symbol アカウントを含めることができ、それらを整理するのに役立ちます。</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-4.png"><img alt="../../_images/retrieving-optin-xym-4.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-4.png" style="width: 50%;" /></a>
+<ul class="simple">
+<li><p>個人的な使用目的でプロファイルに <strong>名前</strong> を付けます。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mainnet</span></code> <strong>ネットワークタイプ</strong> を選択します。</p></li>
+<li><p>プロファイルを保護するために <strong>パスワード</strong> を入力して確認します。</p></li>
+<li><p>パスワードを忘れた場合に備えて <strong>ヒント</strong> を入力して忘れないようにしてください。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">次へ</span></code> をクリックします。</p></li>
+</ul>
+</li>
+<li><p><strong>オプトイン</strong> (前セクションを参照) の際に取得した <strong>Symbol ニーモニック</strong> のすべての単語を書き込みます:</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-5.png"><img alt="../../_images/retrieving-optin-xym-5.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-5.png" style="width: 50%;" /></a>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">次へ</span></code> をクリックします。</p></li>
+</ul>
+</li>
+<li><p>On the <strong>Selected Accounts</strong> screen, you will be presented with the list of accounts that can be derived from the mnemonic, including the one that you opted-in and its balance.</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-6.png"><img alt="../../_images/retrieving-optin-xym-6.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-6.png" style="width: 50%;" /></a>
+<ul class="simple">
+<li><p>オプトイン済みのアカウントを選択します。</p></li>
+<li><p>少なくとも一つ、別の (オプトインされていない) アカウントを選択します。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">次へ</span></code> をクリックします。</p></li>
+</ul>
+</li>
+<li><p><strong>利用規約</strong> に同意して <code class="docutils literal notranslate"><span class="pre">完了</span></code> をクリックします:</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-7.png"><img alt="../../_images/retrieving-optin-xym-7.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-7.png" style="width: 50%;" /></a>
+</li>
+<li><p>ウォレットのメイン画面が表示され、オプトインした残高が表示されます:</p>
+<a class="reference external image-reference" href="/_images/retrieving-optin-xym-8.png"><img alt="../../_images/retrieving-optin-xym-8.png" class="with-shadow align-center" src="../../_images/retrieving-optin-xym-8.png" style="width: 50%;" /></a>
+</li>
+</ol>
+<p><strong>Your imported accounts are now ready to use</strong>. In the <code class="docutils literal notranslate"><span class="pre">Accounts</span></code> tab you can see all of them and give them more meaningful names if you want.</p>
+<p>Take a look at the rest of the <a class="reference internal" href="../index.html"><span class="doc">guides</span></a> to learn what you can do with these accounts. For example, <a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">２つのアカウント間でモザイクとメッセージを送信</span></a>.</p>
+<aside class="topic">
+<p class="topic-title">始める前に</p>
+<p>It is <strong>recommended</strong> that you <strong>move</strong> your funds from the opted-in account to the other one you imported in step 6 above (called a <strong>Seed</strong> account, because it was obtained from a seed Symbol mnemonic).</p>
+<p>Accounts opted-in from the <strong>NEM Wallet</strong> are special and <strong>cannot be derived from the mnemonic</strong>. Therefore, in the future, if you used a Wallet <strong>other than the Symbol Desktop Wallet</strong> to recover your account from the mnemonic, it <strong>might not recover your opted-in account</strong>.</p>
+<p>ただし、他のすべてのシードアカウントが復元されるため、資産を移動してシードアカウントのみを使用することを推奨します。</p>
+</aside>
+</section>
+<section id="troubleshooting">
+<h2>トラブルシューティング<a class="headerlink" href="#troubleshooting" title="この見出しへのパーマリンク"></a></h2>
+<p>オプトインしたアカウントを復元する際に問題が発生した場合、確認する項目リストです。</p>
+<ul class="simple">
+<li><p>スナップショット時点で <strong>NIS1 アカウントの残高</strong> が少なくとも <strong>100 XEM</strong> であったことを確認してください。</p></li>
+<li><p>Check that you are using the <strong>correct Symbol mnemonic</strong>. Did you do several attempts at opting-in and obtained different mnemonics?</p></li>
+<li><p><strong>NEM ヘルプデスク</strong> は他のすべてが失敗した場合に役立ちます:</p>
+<ul>
+<li><p><a class="reference external" href="https://t.me/nemhelpdesk">NEM Telegram ヘルプデスク</a></p></li>
+<li><p>メールは <a class="reference external" href="mailto:support&#37;&#52;&#48;nem&#46;group">support<span>&#64;</span>nem<span>&#46;</span>group</a> に送信してください</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2025&#8209;07&#8209;24</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/migration/post-optin-xym-retrieval.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ロンチ前のオプトインから XYM を取得する</a><ul>
+<li><a class="reference internal" href="#introduction">紹介</a><ul>
+<li><a class="reference internal" href="#the-pre-launch-opt-in-process">ロンチ前オプトインプロセス</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#guide">ガイド</a></li>
+<li><a class="reference internal" href="#troubleshooting">トラブルシューティング</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2025&#8209;07&#8209;24.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2025&#8209;07&#8209;24.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>
