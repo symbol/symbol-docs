@@ -70,9 +70,14 @@ def page_context_handler(app, pagename, templatename, context, doctree):
                     # Try searching the commit hash instead
                     gh_commit = gh_repo.get_commit(commit.hexsha)
                     if gh_commit:
-                        user.name = gh_commit.author.name
-                        user.login = gh_commit.author.login
-                        user.avatar_url = gh_commit.author.avatar_url
+                        try:
+                            user.name = gh_commit.author.name
+                            user.login = gh_commit.author.login
+                            user.avatar_url = gh_commit.author.avatar_url
+                        except:
+                            user.name = '<unknown>'
+                            user.login = '<unknown>'
+                            user.avatar_url = None
 
                 gh_user_cache[commit.author.email] = user
         context['gitauthor'] = user.name
