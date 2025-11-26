@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Account Restriction &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Aggregate Transaction" href="aggregate-transaction.html" />
+    <link rel="prev" title="Account" href="account.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/account-restriction.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/account-restriction.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="account-restriction">
+<h1>Account Restriction<a class="headerlink" href="#account-restriction" title="Permalink to this heading"></a></h1>
+<p><a class="reference internal" href="account.html"><span class="doc">Accounts</span></a> may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.</p>
+<p>The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific <a class="reference internal" href="../serialization/index.html#accountaddressrestrictiontransaction"><span class="std std-ref">AccountAddressRestrictionTransaction</span></a>.</p>
+<p>Symbol’s public network enables accounts to define up to <code class="docutils literal notranslate"><span class="pre">512</span></code> restrictions per account and restriction type, being this parameter <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">configurable per network</span></a>.</p>
+<section id="address-restriction">
+<h2>Address restriction<a class="headerlink" href="#address-restriction" title="Permalink to this heading"></a></h2>
+<p>An account can decide to <strong>only receive</strong> transactions from a list of allowed <strong>addresses</strong>.
+Alternatively, the account can define a list of blocked addresses.</p>
+<p>Restricting <strong>incoming transactions</strong> is useful when the account will be only receiving transactions from known addresses, or when the account wants to block transactions coming from unknown senders.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/account-restrictions-address.png" src="../_images/account-restrictions-address.png" style="width: 450px;" />
+<figcaption>
+<p><span class="caption-text">Address restriction diagram</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Allow and block restrictions are mutually exclusive. In other words, an account can only configure a block or an allow list per type of restriction.</p>
+</div>
+<p>By default, when there are no restrictions set, all the accounts in the network can announce transactions to the unrestricted account.</p>
+<p>Additionally, an account can decide to apply address restrictions to the <strong>outgoing transactions</strong>, limiting the accounts allowed that are valid recipients.</p>
+</section>
+<section id="mosaic-restriction">
+<h2>Mosaic restriction<a class="headerlink" href="#mosaic-restriction" title="Permalink to this heading"></a></h2>
+<p>Similar to address restrictions, an account can configure a restriction to permit <strong>incoming</strong> transactions only if all the <a class="reference internal" href="mosaic.html"><span class="doc">mosaics</span></a> attached are allowed.
+On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.</p>
+<p>Account mosaic restrictions are generally used to <strong>prevent accounts being tagged with mosaics</strong> not associated with their activity.</p>
+</section>
+<section id="operation-restriction">
+<h2>Operation restriction<a class="headerlink" href="#operation-restriction" title="Permalink to this heading"></a></h2>
+<p>An account can allow/block announcing <strong>outgoing</strong> transactions with a determined <a class="reference internal" href="transaction.html#transaction-types"><span class="std std-ref">operation type</span></a>.
+By doing so, the account increases its security, preventing the announcement by mistake of undesired transactions.</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Restriction types allowed</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Restriction</p></th>
+<th class="head"><p>Incoming Transactions</p></th>
+<th class="head"><p>Outgoing Transactions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Address Restriction</p></td>
+<td><p>✔️</p></td>
+<td><p>✔️</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaic Restriction</p></td>
+<td><p>✔️</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p>Operation Restriction</p></td>
+<td><p>❌</p></td>
+<td><p>✔️</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<section id="blocking-spam-transactions">
+<h3>Blocking spam transactions<a class="headerlink" href="#blocking-spam-transactions" title="Permalink to this heading"></a></h3>
+<p>A pharmaceutical company is using the public chain to certify the quality of their products.</p>
+<p>When the quality verification process concludes, an operator sends a <a class="reference internal" href="mosaic.html"><span class="doc">quality seal</span></a> to the product account.</p>
+<p>The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/account-restrictions-spam.png" src="../_images/account-restrictions-spam.png" style="width: 550px;" />
+<figcaption>
+<p><span class="caption-text">Blocking spam transactions</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The company opts to configure their product accounts restrictions, enabling only to receive transactions containing <code class="docutils literal notranslate"><span class="pre">pharmaceutical.quality.seal</span></code> mosaics.</p>
+</section>
+<section id="enhancing-the-account-security">
+<h3>Enhancing the account security<a class="headerlink" href="#enhancing-the-account-security" title="Permalink to this heading"></a></h3>
+<p>Lately, Alice is only using her main account to cosign aggregate transactions where she is a cosignatory for the <a class="reference internal" href="multisig-account.html"><span class="doc">multisig</span></a> account.</p>
+<p>As a temporary security measure, Alice opts to disable announcing transfer transactions from her main account.
+Doing so, Alice double-checks that the funds held in the main account are not going to be transferred by mistake.</p>
+</section>
+</section>
+<section id="related-transactions">
+<h2>Related transactions<a class="headerlink" href="#related-transactions" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x4150</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountaddressrestrictiontransaction"><span class="std std-ref">AccountAddressRestrictionTransaction</span></a></p></td>
+<td><p>Allow or block incoming and outgoing transactions for a given a set of addresses.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x4250</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountmosaicrestrictiontransaction"><span class="std std-ref">AccountMosaicRestrictionTransaction</span></a></p></td>
+<td><p>Allow or block incoming transactions containing a given set of mosaics.</p></td>
+</tr>
+<tr class="row-even"><td><p>0x4350</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountoperationrestrictiontransaction"><span class="std std-ref">AccountOperationRestrictionTransaction</span></a></p></td>
+<td><p>Allow or block outgoing transactions by transaction type.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="Permalink to this heading"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/restriction/preventing-spam-attacks-with-account-restrictions.html">Preventing spam attacks with account restrictions</a></p>
+<p class="ablog-post-excerpt">Learn how to add and remove account restrictions.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/restriction/getting-account-restrictions-attached-to-an-address.html">Getting the account restrictions attached to an address</a></p>
+<p class="ablog-post-excerpt">Get the list of account’s restrictions.</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/account-restriction.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Account Restriction</a><ul>
+<li><a class="reference internal" href="#address-restriction">Address restriction</a></li>
+<li><a class="reference internal" href="#mosaic-restriction">Mosaic restriction</a></li>
+<li><a class="reference internal" href="#operation-restriction">Operation restriction</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#blocking-spam-transactions">Blocking spam transactions</a></li>
+<li><a class="reference internal" href="#enhancing-the-account-security">Enhancing the account security</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#related-transactions">Related transactions</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

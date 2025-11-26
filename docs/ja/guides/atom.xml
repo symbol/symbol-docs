@@ -1,0 +1,866 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <id>/</id>
+  <title>Blog</title>
+  <updated>2025-11-26T09:19:45.170058+00:00</updated>
+  <link href="/"/>
+  <link href="/guides/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
+  <entry>
+    <id>/getting-started/setup-workstation.html</id>
+    <title>ワークステーションのセットアップ</title>
+    <updated>2018-08-01T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;最初のガイドでは Symbol &lt;strong&gt;アプリケーションの開発を始める&lt;/strong&gt; ために必要なツールのインストールをステップバイステップに進めていきます。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/getting-started/setup-workstation.html"/>
+    <summary>最初のガイドでは Symbol アプリケーションの開発を始める ために必要なツールのインストールをステップバイステップに進めていきます。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/creating-an-account.html</id>
+    <title>アカウントの作成</title>
+    <updated>2018-08-02T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;トランザクションの送信と受信をするために、新しい Symbol アカウントを作成します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/creating-an-account.html"/>
+    <summary>トランザクションの送信と受信をするために、新しい Symbol アカウントを作成します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-02T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/getting-account-information.html</id>
+    <title>アカウントの情報を取得する</title>
+    <updated>2018-08-03T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;公開鍵とアカウントの残高を取得します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/getting-account-information.html"/>
+    <summary>公開鍵とアカウントの残高を取得します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/transfer/sending-a-transfer-transaction.html</id>
+    <title>２つのアカウント間でモザイクとメッセージを送信</title>
+    <updated>2018-08-10T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;定義して、署名したら転送トランザクションをアナウンスします。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/transfer/sending-a-transfer-transaction.html"/>
+    <summary>定義して、署名したら転送トランザクションをアナウンスします。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-10T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.html</id>
+    <title>複数のトランザクションを同時に送信</title>
+    <updated>2018-08-11T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;異なるアカウントへトランザクションを同時に送信するには、アグリゲートトランザクションを使用します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.html"/>
+    <summary>異なるアカウントへトランザクションを同時に送信するには、アグリゲートトランザクションを使用します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.html</id>
+    <title>エスクローコントラクトの作成</title>
+    <updated>2018-08-12T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;エスクローコントラクトの作成でアグリゲートボンドトランザクションについて学習します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.html"/>
+    <summary>エスクローコントラクトの作成でアグリゲートボンドトランザクションについて学習します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.html</id>
+    <title>自動的なアグリゲートボンデッドトランザクションの署名</title>
+    <updated>2018-08-15T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アカウントの署名が必要なトランザクションへ自動的に署名をするボットを作成します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.html"/>
+    <summary>アカウントの署名が必要なトランザクションへ自動的に署名をするボットを作成します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-15T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/registering-a-namespace.html</id>
+    <title>ネームスペースの取得</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アセットを識別する、一意の名前を作成します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/registering-a-namespace.html"/>
+    <summary>アセットを識別する、一意の名前を作成します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/getting-block-by-height.html</id>
+    <title>ブロック高によるブロックの取得</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;与えられたブロック高のブロック情報を取得する。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/getting-block-by-height.html"/>
+    <summary>与えられたブロック高のブロック情報を取得する。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/creating-a-multisig-account.html</id>
+    <title>マルチシグアカウントの作成</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、共同アカウントを設定する方法について説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/creating-a-multisig-account.html"/>
+    <summary>このガイドでは、共同アカウントを設定する方法について説明します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/mosaic/creating-a-mosaic.html</id>
+    <title>モザイクの作成</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイクを使用した資産のトークン化&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/mosaic/creating-a-mosaic.html"/>
+    <summary>モザイクを使用した資産のトークン化</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/removing-a-signer-from-a-multisig-account.html</id>
+    <title>マルチシグアカウントからの署名者の削除</title>
+    <updated>2018-08-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、マルチシグアカウントから署名者を削除する方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/removing-a-signer-from-a-multisig-account.html"/>
+    <summary>このガイドでは、マルチシグアカウントから署名者を削除する方法を説明します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/adding-a-new-signer-to-a-multisig-account.html</id>
+    <title>マルチシグアカウントに新しい署名者の追加</title>
+    <updated>2018-08-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、マルチシグアカウントに新しい署名者を追加する方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/adding-a-new-signer-to-a-multisig-account.html"/>
+    <summary>このガイドでは、マルチシグアカウントに新しい署名者を追加する方法を説明します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/modifying-a-multisig-account-min-approval.html</id>
+    <title>マルチシグアカウントの最小承認の変更</title>
+    <updated>2018-08-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、マルチシグトランザクションを実行するために必要な署名の最小数を増減する方法について説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/modifying-a-multisig-account-min-approval.html"/>
+    <summary>このガイドでは、マルチシグトランザクションを実行するために必要な署名の最小数を増減する方法について説明します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/getting-the-amount-of-assets-sent-to-an-account.html</id>
+    <title>アカウントへ送信したアセットの総量の取得</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;あなたがアカウントへ送信したアセットの量を確認しましょう。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/getting-the-amount-of-assets-sent-to-an-account.html"/>
+    <summary>あなたがアカウントへ送信したアセットの量を確認しましょう。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/signing-announced-aggregate-bonded-transactions.html</id>
+    <title>アグリゲートボンデッドトランザクションの連署</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;署名待ちの &lt;a class="reference internal" href="concepts/aggregate-transaction.html#aggregate-bonded"&gt;&lt;span class="std std-ref"&gt;アグリゲート&lt;/span&gt;&lt;/a&gt; トランザクションに署名&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/signing-announced-aggregate-bonded-transactions.html"/>
+    <summary>署名待ちの アグリゲート トランザクションに署名</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/registering-a-subnamespace.html</id>
+    <title>サブネームスペースの作成</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ルート &lt;a class="reference internal" href="concepts/namespace.html"&gt;&lt;span class="doc"&gt;ネームスペース&lt;/span&gt;&lt;/a&gt; を取得すると &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;3&lt;/span&gt;&lt;/code&gt; つまでのサブネームスペースを作って、アセットの整理をすることができます。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/registering-a-subnamespace.html"/>
+    <summary>ルート ネームスペース を取得すると 3 つまでのサブネームスペースを作って、アセットの整理をすることができます。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/reading-transactions-from-an-account.html</id>
+    <title>トランザクションをアカウントから読み込む</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アカウントに関連するトランザクションの完全なリストの取得&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/reading-transactions-from-an-account.html"/>
+    <summary>アカウントに関連するトランザクションの完全なリストの取得</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html</id>
+    <title>パブリックとプライベート間のアトミッククロスチェイン交換</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;第三者の仲介者が入ることなく、異なるブロックチェーン間でトークンの交換をします。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html"/>
+    <summary>第三者の仲介者が入ることなく、異なるブロックチェーン間でトークンの交換をします。</summary>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/creating-a-multi-level-multisig-account.html</id>
+    <title>マルチレベルマルチシグアカウントの作成</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、複数のマルチシグアカウントを接続して、高度なチェーン上の承認ロジックを実現する方法について説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/creating-a-multi-level-multisig-account.html"/>
+    <summary>このガイドでは、複数のマルチシグアカウントを接続して、高度なチェーン上の承認ロジックを実現する方法について説明します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/mosaic/modifying-mosaic-supply.html</id>
+    <title>モザイク供給量の変更</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;&amp;quot;&lt;strong&gt;Supply Mutable&lt;/strong&gt;&amp;quot; プロパティを使用してモザイクを作成した場合、トークンを増やすか、総供給量を減らすことができます。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/mosaic/modifying-mosaic-supply.html"/>
+    <summary>"Supply Mutable" プロパティを使用してモザイクを作成した場合、トークンを増やすか、総供給量を減らすことができます。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/listening-new-blocks.html</id>
+    <title>新しいブロックの監視</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;新しいブロックが取り込まれた通知を受け取る。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/listening-new-blocks.html"/>
+    <summary>新しいブロックが取り込まれた通知を受け取る。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html</id>
+    <title>非同期なトランザクションのアナウンスを同期的に変える</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;トランザクションをアナウンスして、承認されるまで待つ便利なスニペット。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html"/>
+    <summary>トランザクションをアナウンスして、承認されるまで待つ便利なスニペット。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/sending-a-multisig-transaction.html</id>
+    <title>マルチシグトランザクションの送信</title>
+    <updated>2018-08-20T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、マルチシグアカウントからトランザクションを発行する方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/sending-a-multisig-transaction.html"/>
+    <summary>このガイドでは、マルチシグアカウントからトランザクションを発行する方法を説明します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/link-a-namespace-to-an-address.html</id>
+    <title>ネームスペースをアドレスへリンクする</title>
+    <updated>2019-03-04T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;トランザクションを発行するとき、他の人がよりわかりやすい方法でアカウントを参照できるように、ネームスペースをアドレスにエイリアスとして設定します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/link-a-namespace-to-an-address.html"/>
+    <summary>トランザクションを発行するとき、他の人がよりわかりやすい方法でアカウントを参照できるように、ネームスペースをアドレスにエイリアスとして設定します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2019-03-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/link-a-namespace-to-a-mosaic.html</id>
+    <title>ネームスペースをモザイクへリンクする</title>
+    <updated>2019-03-04T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;トランザクションを発行するとき、他の人がよりわかりやすい方法でモザイクを参照できるように、ネームスペースをモザイクにエイリアスとして設定します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/link-a-namespace-to-a-mosaic.html"/>
+    <summary>トランザクションを発行するとき、他の人がよりわかりやすい方法でモザイクを参照できるように、ネームスペースをモザイクにエイリアスとして設定します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2019-03-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/getting-namespace-information.html</id>
+    <title>ネームスペースの情報を取得する</title>
+    <updated>2019-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ネームスペース識別子による所有権と期間の取得&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/getting-namespace-information.html"/>
+    <summary>ネームスペース識別子による所有権と期間の取得</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/mosaic/getting-mosaic-information.html</id>
+    <title>モザイクの情報を取得する</title>
+    <updated>2019-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイク識別子による所有権、可分性、期間、フラグの取得&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/mosaic/getting-mosaic-information.html"/>
+    <summary>モザイク識別子による所有権、可分性、期間、フラグの取得</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/preventing-spam-attacks-with-account-restrictions.html</id>
+    <title>アカウント制限でスパム攻撃を防ぐ</title>
+    <updated>2019-05-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アカウント制限の追加・削除の方法を学ぶ&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/preventing-spam-attacks-with-account-restrictions.html"/>
+    <summary>アカウント制限の追加・削除の方法を学ぶ</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-05-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/transfer/sending-an-encrypted-message.html</id>
+    <title>暗号化メッセージの送信</title>
+    <updated>2019-06-12T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;受信者アカウントでしか読めない暗号化メッセージを送信します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/transfer/sending-an-encrypted-message.html"/>
+    <summary>受信者アカウントでしか読めない暗号化メッセージを送信します。</summary>
+    <published>2019-06-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/extending-a-namespace-registration-period.html</id>
+    <title>ネームスペース登録期限の延長</title>
+    <updated>2019-06-19T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、ネームスペース期限の延長の仕方を示します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/extending-a-namespace-registration-period.html"/>
+    <summary>このガイドでは、ネームスペース期限の延長の仕方を示します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2019-06-19T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html</id>
+    <title>レシート付きネームスペースの背後にあるアセットの識別子を取得</title>
+    <updated>2019-07-11T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;レシートを使用して特定のエイリアスとトランザクションの解決を取得します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html"/>
+    <summary>レシートを使用して特定のエイリアスとトランザクションの解決を取得します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-07-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/migration/migrating-from-nem-to-symbol.html</id>
+    <title>NIS1 から Symbol へのマイグレーション</title>
+    <updated>2019-07-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Symbol では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 の機能を、新たに利用可能な Symbol の技術に &lt;strong&gt;あなたのアプリケーションをアップグレード&lt;/strong&gt; する手助けとなるでしょう。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/migration/migrating-from-nem-to-symbol.html"/>
+    <summary>Symbol では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 の機能を、新たに利用可能な Symbol の技術に あなたのアプリケーションをアップグレード する手助けとなるでしょう。</summary>
+    <published>2019-07-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/restricting-mosaics-transfers.html</id>
+    <title>モザイク転送の制限</title>
+    <updated>2019-09-13T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイク制限でアカウントが処理できる手段を制限します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/restricting-mosaics-transfers.html"/>
+    <summary>モザイク制限でアカウントが処理できる手段を制限します。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-09-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.html</id>
+    <title>モザイクの制限を第三者に委任する</title>
+    <updated>2019-09-20T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;別のアカウントがモザイクに制限を追加できるようにします。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.html"/>
+    <summary>別のアカウントがモザイクに制限を追加できるようにします。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-09-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/assigning-metadata-entries-to-an-account.html</id>
+    <title>アカウントにメタデータを割り当てる</title>
+    <updated>2019-09-29T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アカウントにカスタムデータを追加&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/assigning-metadata-entries-to-an-account.html"/>
+    <summary>アカウントにカスタムデータを追加</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-09-29T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/assigning-metadata-entries-to-a-namespace.html</id>
+    <title>ネームスペースにメタデータを割り当てる</title>
+    <updated>2019-10-01T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ネームスペースにカスタムデータを追加&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/assigning-metadata-entries-to-a-namespace.html"/>
+    <summary>ネームスペースにカスタムデータを追加</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/assigning-metadata-entries-to-a-mosaic.html</id>
+    <title>モザイクにメタデータを割り当てる</title>
+    <updated>2019-10-01T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイクにカスタムデータを追加&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/assigning-metadata-entries-to-a-mosaic.html"/>
+    <summary>モザイクにカスタムデータを追加</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/creating-a-private-test-net.html</id>
+    <title>プライベートテストネットワーク</title>
+    <updated>2019-10-03T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、 Symbol を使用して、独自のプライベートネットワークをセットアップする手順を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/creating-a-private-test-net.html"/>
+    <summary>このガイドでは、 Symbol を使用して、独自のプライベートネットワークをセットアップする手順を説明します。</summary>
+    <published>2019-10-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/running-a-symbol-node.html</id>
+    <title>ノードの立ち上げ</title>
+    <updated>2019-10-04T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは Symbol の &lt;strong&gt;パブリックネットワーク&lt;/strong&gt; へ参加するために、ノードをセットアップする方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/running-a-symbol-node.html"/>
+    <summary>このガイドでは Symbol の パブリックネットワーク へ参加するために、ノードをセットアップする方法を説明します。</summary>
+    <published>2019-10-04T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/getting-metadata-entries-attached-to-an-account.html</id>
+    <title>アカウントにアタッチされたメタデータエントリを取得する</title>
+    <updated>2019-10-06T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アカウントにアタッチされたメタデータエントリの一覧を取得する&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/getting-metadata-entries-attached-to-an-account.html"/>
+    <summary>アカウントにアタッチされたメタデータエントリの一覧を取得する</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.html</id>
+    <title>モザイクにアタッチされたグローバルモザイク制限を取得する</title>
+    <updated>2019-10-06T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイクのグローバル制限リストの取得&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.html"/>
+    <summary>モザイクのグローバル制限リストの取得</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.html</id>
+    <title>アカウントにアタッチされたモザイクアドレス制限を取得する</title>
+    <updated>2019-10-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイクのアドレス制限リストの取得&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.html"/>
+    <summary>モザイクのアドレス制限リストの取得</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/getting-metadata-entries-attached-to-a-namespace.html</id>
+    <title>ネームスペースにアタッチされたメタデータエントリを取得する</title>
+    <updated>2019-10-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ネームスペースにアタッチされたメタデータエントリの一覧を取得する&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/getting-metadata-entries-attached-to-a-namespace.html"/>
+    <summary>ネームスペースにアタッチされたメタデータエントリの一覧を取得する</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.html</id>
+    <title>モザイクにアタッチされたメタデータエントリを取得する</title>
+    <updated>2019-10-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;モザイクにアタッチされたメタデータエントリの一覧を取得する&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.html"/>
+    <summary>モザイクにアタッチされたメタデータエントリの一覧を取得する</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/updating-metadata-entries.html</id>
+    <title>メタデータエントリの更新</title>
+    <updated>2019-10-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;存在するメタデータエントリの更新&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/updating-metadata-entries.html"/>
+    <summary>存在するメタデータエントリの更新</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/getting-account-restrictions-attached-to-an-address.html</id>
+    <title>アドレスにアカウント制限をアタッチする</title>
+    <updated>2019-10-29T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;アカウントの制限リストの取得&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/getting-account-restrictions-attached-to-an-address.html"/>
+    <summary>アカウントの制限リストの取得</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/configuring-network-properties.html</id>
+    <title>ネットワークプロパティ</title>
+    <updated>2019-10-30T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Symbol には多数のカスタマイズ可能なネットワーク関連の設定があります。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/configuring-network-properties.html"/>
+    <summary>Symbol には多数のカスタマイズ可能なネットワーク関連の設定があります。</summary>
+    <published>2019-10-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/configuring-node-properties.html</id>
+    <title>ノードプロパティ</title>
+    <updated>2019-10-30T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Symbol には多数のカスタマイズ可能なノード関連の設定があります。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/configuring-node-properties.html"/>
+    <summary>Symbol には多数のカスタマイズ可能なノード関連の設定があります。</summary>
+    <published>2019-10-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/connecting-to-mongodb.html</id>
+    <title>MongoDB への接続方法</title>
+    <updated>2020-02-13T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;あなたの API ノードの MongoDB インスタンスへ接続する方法の学習&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/connecting-to-mongodb.html"/>
+    <summary>あなたの API ノードの MongoDB インスタンスへ接続する方法の学習</summary>
+    <published>2020-02-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/adding-cosginatures-aggregate-complete.html</id>
+    <title>アグリゲートコンプリートトランザクションに連署名を追加する</title>
+    <updated>2020-07-13T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、パーシャルキャッシュを使用せずに、アグリゲートコンプリートトランザクションに連署名を追加する方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/adding-cosginatures-aggregate-complete.html"/>
+    <summary>このガイドでは、パーシャルキャッシュを使用せずに、アグリゲートコンプリートトランザクションに連署名を追加する方法を説明します。</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2020-07-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/using-symbol-bootstrap.html</id>
+    <title>Symbol Bootstrap の使用</title>
+    <updated>2020-09-25T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to use this handy node deployment tool.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/using-symbol-bootstrap.html"/>
+    <summary>How to use this handy node deployment tool.</summary>
+    <published>2020-09-25T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/harvesting/activating-delegated-harvesting-wallet.html</id>
+    <title>デリゲートハーベスティングをデスクトップウォレットで有効化</title>
+    <updated>2021-01-25T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/harvesting/activating-delegated-harvesting-wallet.html"/>
+    <summary>あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2021-01-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/harvesting/activating-delegated-harvesting-manual.html</id>
+    <title>デリゲートハーベスティングを手動で有効化</title>
+    <updated>2021-01-25T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/harvesting/activating-delegated-harvesting-manual.html"/>
+    <summary>あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2021-01-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/harvesting/activating-remote-harvesting.html</id>
+    <title>リモートハーベスティングの有効化</title>
+    <updated>2021-01-26T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;セキュリティ強化のために、プロキシアカウントを介して新しいブロックのハーベスティングします。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/harvesting/activating-remote-harvesting.html"/>
+    <summary>セキュリティ強化のために、プロキシアカウントを介して新しいブロックのハーベスティングします。</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2021-01-26T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/running-a-symbol-node-manually.html</id>
+    <title>手動によるノードの立ち上げ</title>
+    <updated>2021-03-05T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは Symbol Bootstrap を &lt;strong&gt;使用せず&lt;/strong&gt; に Symbol のネットワークへ参加するために、ノードをセットアップする方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/running-a-symbol-node-manually.html"/>
+    <summary>このガイドでは Symbol Bootstrap を 使用せず に Symbol のネットワークへ参加するために、ノードをセットアップする方法を説明します。</summary>
+    <published>2021-03-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/running-a-secure-symbol-node.html</id>
+    <title>セキュアなノードの立ち上げ</title>
+    <updated>2021-03-13T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to run a Symbol node with added security.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/running-a-secure-symbol-node.html"/>
+    <summary>How to run a Symbol node with added security.</summary>
+    <published>2021-03-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/non-custodial-node-setup.html</id>
+    <title>非カストディアルなノードのセットアップ</title>
+    <updated>2021-04-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to &lt;strong&gt;relinquish control of a node's main account to an external account&lt;/strong&gt;, so that the external account's private key is never required in the node setup process.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/non-custodial-node-setup.html"/>
+    <summary>How to relinquish control of a node's main account to an external account, so that the external account's private key is never required in the node setup process.</summary>
+    <published>2021-04-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/migration/post-optin-xym-retrieval.html</id>
+    <title>ロンチ前のオプトインから XYM を取得する</title>
+    <updated>2021-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;このガイドでは、 Symbol &lt;strong&gt;ロンチ前&lt;/strong&gt; (2021年3月12日) のオプトインプロセスに登録した場合に、あなたにへ授与された &lt;strong&gt;XYM&lt;/strong&gt; (Symbol の基軸通貨) へのアクセス方法を説明します。&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/migration/post-optin-xym-retrieval.html"/>
+    <summary>このガイドでは、 Symbol ロンチ前 (2021年3月12日) のオプトインプロセスに登録した場合に、あなたにへ授与された XYM (Symbol の基軸通貨) へのアクセス方法を説明します。</summary>
+    <category term="wallet" label="wallet"/>
+    <published>2021-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/migration/post-launch-optin-xym-retrieval.html</id>
+    <title>Retrieving your XYM from a post-launch opt-in</title>
+    <updated>2021-04-27T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide explains how to enroll in the opt-in process once Symbol has launched (this is, after March 12, 2021).&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/migration/post-launch-optin-xym-retrieval.html"/>
+    <summary>This guide explains how to enroll in the opt-in process once Symbol has launched (this is, after March 12, 2021).</summary>
+    <category term="wallet" label="wallet"/>
+    <published>2021-04-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/global-mosaic-supply.html</id>
+    <title>Retrieving the global mosaic supply</title>
+    <updated>2021-05-27T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Different values regarding the total supply of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;symbol.xym&lt;/span&gt;&lt;/code&gt; are available in real-time, through REST endpoints on any Symbol API node. Click on each endpoint below for an example.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/global-mosaic-supply.html"/>
+    <summary>Different values regarding the total supply of symbol.xym are available in real-time, through REST endpoints on any Symbol API node. Click on each endpoint below for an example.</summary>
+    <category term="REST" label="REST"/>
+    <published>2021-05-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/maintaining-a-symbol-node.html</id>
+    <title>ノードの維持管理</title>
+    <updated>2021-06-06T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to keep your Symbol node up and running healthily.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/maintaining-a-symbol-node.html"/>
+    <summary>How to keep your Symbol node up and running healthily.</summary>
+    <published>2021-06-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/scams-and-security.html</id>
+    <title>Common Hacks and Scams</title>
+    <updated>2022-02-24T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security of your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet's security.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/scams-and-security.html"/>
+    <summary>It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security of your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet's security.</summary>
+    <category term="wallet" label="wallet"/>
+    <published>2022-02-24T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/how-to-use-ledger-hardware-wallet.html</id>
+    <title>How to use your Ledger device with Symbol Wallet</title>
+    <updated>2023-03-26T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The Ledger Nano S and X are hardware wallets that support multiple cryptocurrencies, including Symbol.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/how-to-use-ledger-hardware-wallet.html"/>
+    <summary>The Ledger Nano S and X are hardware wallets that support multiple cryptocurrencies, including Symbol.</summary>
+    <category term="Ledger" label="Ledger"/>
+    <category term="wallet" label="wallet"/>
+    <published>2023-03-26T00:00:00+01:00</published>
+  </entry>
+</feed>

@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Creating a multisig account &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modifying a multisig account min approval" href="modifying-a-multisig-account-min-approval.html" />
+    <link rel="prev" title="Creating a multi-level multisig account" href="creating-a-multi-level-multisig-account.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/multisig/creating-a-multisig-account.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/multisig/creating-a-multisig-account.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Multisignature accounts</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adding-a-new-signer-to-a-multisig-account.html">Adding a new signer to a multisig account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-multi-level-multisig-account.html">Creating a multi-level multisig account</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a multisig account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modifying-a-multisig-account-min-approval.html">Modifying a multisig account min approval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="removing-a-signer-from-a-multisig-account.html">Removing a signer from a multisig account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Multisignature accounts</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adding-a-new-signer-to-a-multisig-account.html">Adding a new signer to a multisig account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-multi-level-multisig-account.html">Creating a multi-level multisig account</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a multisig account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modifying-a-multisig-account-min-approval.html">Modifying a multisig account min approval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="removing-a-signer-from-a-multisig-account.html">Removing a signer from a multisig account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="creating-a-multisig-account">
+<h1>Creating a multisig account<a class="headerlink" href="#creating-a-multisig-account" title="Permalink to this heading"></a></h1>
+<p>This guide will show you how to setup a joint account.</p>
+<section id="use-case">
+<h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h2>
+<p>Imagine that Alice and Bob have separate accounts, but they also want to have a shared account to buy groceries.
+If one of them goes out shopping, they should be able to transact with using their joint account without requiring explicit authorization from the other person.</p>
+<p>This shared account appears in Symbol as <strong>1-of-2 multisig</strong>.
+Creating a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">Multisig account</span></a> permits Alice and Bob to share funds in a separate account.
+Since the account is configured as a 1-of-2, it’s only required the signature from one of them to issue transactions from the new account.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/multisig-1-of-2.png" src="../../_images/multisig-1-of-2.png" style="width: 350px;" />
+<figcaption>
+<p><span class="caption-text">1-of-2 multisig account example</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete the <a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">getting started section</span></a>.</p></li>
+<li><p>Create a new <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">account</span></a> to turn into multisig.</p></li>
+<li><p>Load the account with enough <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to pay for transaction fees.</p></li>
+<li><p>Create accounts for Alice and Bob.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To create create new accounts, follow <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">this guide</span></a>.</p>
+</div>
+</section>
+<section id="method-01-using-the-desktop-wallet">
+<h2>Method #01: Using the Desktop Wallet<a class="headerlink" href="#method-01-using-the-desktop-wallet" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Log in to the account that you want to convert into a multisig account.</p></li>
+<li><p>Click on the “<strong>Multisig</strong>” tab on the left-side menu.</p></li>
+<li><p>Click on “<strong>Add a cosignatory</strong>” and provide the address or public key of the account you want to add as a cosignatory of the multisig. Click on the “<strong>+</strong>” button.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/create-multisig-2.gif" src="../../_images/create-multisig-2.gif" style="width: 800px;" />
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Repeat step 3 for each account you want to add as a cosignatory of the multisig. In our example case, we have 2 accounts we want to add as cosignatories: Alice and Bob.</p></li>
+<li><p>Select the number of “<strong>Min. Approval</strong>” and “<strong>Min. Removal</strong>” for the multisig.</p></li>
+<li><p>Click “<strong>Send</strong>”. Review the information on the popup. Provide your wallet password and click “<strong>Confirm</strong>”.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/create-multisig-3.gif" src="../../_images/create-multisig-3.gif" style="width: 800px;" />
+</figure>
+<ol class="arabic simple" start="7">
+<li><p>Log in to an account you selected as a potential cosignatory of the multisig. On the “<strong>Home</strong>” page, click on “<strong>Partial</strong>” transactions. Click on the pending Aggregate Bonded transaction. Provide your wallet password and click “<strong>Confirm</strong>”.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/create-multisig-4.gif" src="../../_images/create-multisig-4.gif" style="width: 800px;" />
+</figure>
+<ol class="arabic simple" start="8">
+<li><p>Repeat step 7 for each account you added as a potential cosignatory for the multisig.</p></li>
+<li><p>Log in to the account being converted to a multisig. When the Aggregate Bonded transaction is complete (confirmed), you can check that it has been converted by going back to the “<strong>Multisig</strong>” page.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/create-multisig-5.png" src="../../_images/create-multisig-5.png" style="width: 800px;" />
+</figure>
+</section>
+<section id="method-02-using-the-sdk">
+<h2>Method #02: Using the SDK<a class="headerlink" href="#method-02-using-the-sdk" title="Permalink to this heading"></a></h2>
+<p>1. First, define the accounts that will become cosignatories of the multisig account.
+Following our example, these are Alice and Bob addresses.
+Then, open the account that will be converted into multisig using its private key.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with candidate multisig private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with cosignatory 1 public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory1PublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">cosignatory1PublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with cosignatory 2 public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory2PublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">cosignatory2PublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with candidate multisig private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with cosignatory 1 public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory1PublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;D04AB232742BB4AB3A1368BD4615E4E6D0224AB71A016BAF8520A332C9778737&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">cosignatory1PublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with cosignatory 2 public key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory2PublicKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;462EE976890916E54FA825D26BDD0235F5EB5B6A143C199AB0AE5EE9328E08CE&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignatory2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">PublicAccount</span><span class="p">.</span><span class="nx">createFromPublicKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">cosignatory2PublicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. Create a <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> to convert the shared account into a multisig account.
+Since we want to create a 1-of-2 multisig account, let’s set the minimum required signatures to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">multisigAccountModificationTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MultisigAccountModificationTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">cosignatory1</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span><span class="w"> </span><span class="nx">cosignatory2</span><span class="p">.</span><span class="nx">address</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">multisigAccountModificationTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MultisigAccountModificationTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">cosignatory1</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span><span class="w"> </span><span class="nx">cosignatory2</span><span class="p">.</span><span class="nx">address</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>3. Create an <a class="reference internal" href="../../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransaction</span></a>, wrapping the <strong>MultisigAccountModificationTransaction</strong> defined in the previous step.
+This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createBonded</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">multisigAccountModificationTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createBonded</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">multisigAccountModificationTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Sign the <strong>AggregateTransaction</strong> using the private key of the future multisig account.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To make the transaction only valid for your network, you will need to pass the first network generation hash. Open <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> in a new browser tab and copy the <code class="docutils literal notranslate"><span class="pre">meta.networkGenerationHash</span></code> value.</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>5. Before sending an <strong>AggregateBondedTransaction</strong>, the future multisig account needs to lock at least <code class="docutils literal notranslate"><span class="pre">10</span></code> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>.
+This transaction is required to prevent spamming the network.
+After the <strong>HashLockTransaction</strong> has been confirmed, announce the AggregateTransaction signed in (4).</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.ts">View Code</a></span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with symbol.xym id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkCurrencyMosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">);</span>
+<span class="c1">// replace with network currency divisibility</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkCurrencyDivisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">hashLockTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">HashLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">networkCurrencyMosaicId</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">networkCurrencyDivisibility</span><span class="p">)),</span>
+<span class="w">  </span><span class="p">),</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">480</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">signedTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedHashLockTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">hashLockTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">receiptHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createReceiptRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionService</span><span class="p">(</span><span class="nx">transactionHttp</span><span class="p">,</span><span class="w"> </span><span class="nx">receiptHttp</span><span class="p">);</span>
+
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">transactionService</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announceHashLockAggregateBonded</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">signedHashLockTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">signedTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">listener</span><span class="p">,</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">      </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/ConvertingAnAccountToMultisig.js">View Code</a></span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with symbol.xym id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkCurrencyMosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">);</span>
+<span class="c1">// replace with network currency divisibility</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkCurrencyDivisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hashLockTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">HashLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">networkCurrencyMosaicId</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span>
+<span class="w">      </span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">networkCurrencyDivisibility</span><span class="p">),</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">  </span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">480</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">signedTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedHashLockTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">hashLockTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">receiptHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createReceiptRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionService</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transactionHttp</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">receiptHttp</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">transactionService</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announceHashLockAggregateBonded</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">signedHashLockTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">signedTransaction</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">listener</span><span class="p">,</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">      </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>6. <a class="reference internal" href="../aggregate/signing-announced-aggregate-bonded-transactions.html"><span class="doc">Cosign the AggregateTransaction</span></a> with the <a class="reference internal" href="../../cli.html#wallet-cli"><span class="std std-ref">CLI</span></a> using Alice’s account.
+Replace the hash <code class="docutils literal notranslate"><span class="pre">A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C</span></code> with the AggregateTransaction hash signed in (4).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>cosign<span class="w"> </span>--hash<span class="w"> </span>A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C<span class="w"> </span>--profile<span class="w"> </span>alice
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p><a class="reference internal" href="../aggregate/signing-announced-aggregate-bonded-transactions.html"><span class="doc">Cosign the AggregateTransaction</span></a> with Bob’s account.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>cosign<span class="w"> </span>--hash<span class="w"> </span>A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C<span class="w"> </span>--profile<span class="w"> </span>bob
+</pre></div>
+</div>
+<p id="guide-get-multisig-account-info">8. If everything goes well, the account is now set as multisig, being Alice and Bob accounts their cosignatories.
+You can get the list of the multisig accounts where Alice or Bob are cosignatories with the function <code class="docutils literal notranslate"><span class="pre">MultisigHttp.getMultisigAccountInfo()</span></code>.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/GettingMultisigAccountCosignatories.ts">View Code</a></span><a class="headerlink" href="#id12" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with multisig address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">multisigHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createMultisigRepository</span><span class="p">();</span>
+
+<span class="nx">multisigHttp</span><span class="p">.</span><span class="nx">getMultisigAccountInfo</span><span class="p">(</span><span class="nx">address</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">multisigInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multisigInfo</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/multisig/GettingMultisigAccountCosignatories.js">View Code</a></span><a class="headerlink" href="#id13" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with multisig address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">multisigHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createMultisigRepository</span><span class="p">();</span>
+<span class="nx">multisigHttp</span><span class="p">.</span><span class="nx">getMultisigAccountInfo</span><span class="p">(</span><span class="nx">address</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">multisigInfo</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multisigInfo</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/multisig/GettingMultisigAccountCosignatories.java">View Code</a></span><a class="headerlink" href="#id14" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// replace with node endpoint</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">RepositoryFactory</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RepositoryFactoryVertxImpl</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;NODE_URL&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MultisigRepository</span><span class="w"> </span><span class="n">multisigRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span>
+<span class="w">                </span><span class="p">.</span><span class="na">createMultisigRepository</span><span class="p">();</span>
+
+<span class="w">            </span><span class="c1">// replace with multisig address</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TAEG6L-KWXRA7-PSWUEE-ILQPG4-3V5CYZ-S5652T-JTUU&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Address</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Address</span><span class="p">.</span><span class="na">createFromRawAddress</span><span class="p">(</span><span class="n">rawAddress</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MultisigAccountInfo</span><span class="w"> </span><span class="n">multisigAccountInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">multisigRepository</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getMultisigAccountInfo</span><span class="p">(</span><span class="n">address</span><span class="p">).</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">JsonHelper</span><span class="w"> </span><span class="n">helper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonHelperJackson2</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">helper</span><span class="p">.</span><span class="na">prettyPrint</span><span class="p">(</span><span class="n">multisigAccountInfo</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Follow <a class="reference internal" href="modifying-a-multisig-account-min-approval.html"><span class="doc">the next guide</span></a> to modify the number of required signatures.</p>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;11&#8209;25</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/multisig/creating-a-multisig-account.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Creating a multisig account</a><ul>
+<li><a class="reference internal" href="#use-case">Use case</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#method-01-using-the-desktop-wallet">Method #01: Using the Desktop Wallet</a></li>
+<li><a class="reference internal" href="#method-02-using-the-sdk">Method #02: Using the SDK</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;11&#8209;25.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;11&#8209;25.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

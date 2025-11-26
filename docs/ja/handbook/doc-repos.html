@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Repository structure &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Documentation workflow" href="doc-workflow.html" />
+    <link rel="prev" title="Documentation" href="documenting.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="active">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/doc-repos.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/doc-repos.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="documenting.html">Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Repository structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-workflow.html">Documentation workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-sphinx-primer.html">Sphinx primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-common-tasks.html">Common tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="documenting.html">Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Repository structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-workflow.html">Documentation workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-sphinx-primer.html">Sphinx primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-common-tasks.html">Common tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="repository-structure">
+<h1>Repository structure<a class="headerlink" href="#repository-structure" title="この見出しへのパーマリンク"></a></h1>
+<p>There are currently 3 sources of documentation for Symbol. Feel free to jump to the one you are interested in.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#technical-documentation">Technical documentation</a>: Tool guides, developer tutorials, SDK reference guides and the Syndicate's handbook.</p></li>
+<li><p><a class="reference external" href="#nis1-documentation">NEM NIS1 documentation</a>: Old NEM NIS1 guides, pending assimilation into the Symbol technical docs.</p></li>
+<li><p><a class="reference external" href="#working-documentation">Working documentation</a>: Meeting minutes, Community logs, stuff that changes often.</p></li>
+</ul>
+<section id="technical-documentation">
+<h2>Technical documentation<a class="headerlink" href="#technical-documentation" title="この見出しへのパーマリンク"></a></h2>
+<table class="docs-repo-table docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Site</strong></p></td>
+<td><p><a class="reference external" href="https://docs.symbol.dev">docs.symbol.dev</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Source repo</strong></p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/symbol-docs">github.com/symbol/symbol-docs</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Host</strong></p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/symbol-docs/tree/gh-pages">GitHub pages</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Engine</strong></p></td>
+<td><p><a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Intended readers</strong></p></td>
+<td><p>The world at large.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Intended writers</strong></p></td>
+<td><p>The Symbol technical writers.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Editing workflow</strong></p></td>
+<td><p>Git-based: Check out the source repository, make modifications, check results by building the pages locally and submit pull requests.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Localization</strong></p></td>
+<td><p><a class="reference external" href="https://app.transifex.com/nemtech/symboldocs/">Transifex</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Maintainers</strong></p></td>
+<td><p><a class="reference external" href="https://github.com/segfaultxavi">Xavi</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="content">
+<h3>Content<a class="headerlink" href="#content" title="この見出しへのパーマリンク"></a></h3>
+<p>This is the main technical reference for <strong>Symbol</strong>. It contains (or will contain):</p>
+<ul class="simple">
+<li><p><strong>User guides</strong> for the different tools (Wallet, CLI, Explorer, etc.), intended for non-heavily-technical readers, including screenshots and step-by-step instructions on how to solve common problems.</p></li>
+<li><p><strong>Developer tutorials</strong> with source code examples in different languages, organized by topics. Ranging from Getting Started to in-depth guides on specific topics.</p></li>
+<li><p><strong>Concept definitions</strong> required to understand the Symbol protocol.</p></li>
+<li><p><strong>Technical reference</strong> guides describing every API and REST endpoint.</p></li>
+</ul>
+<p>Due to the complexity of the technical content, the <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> engine and <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> is used instead of the simpler MarkDown format. This enables much more flexibility, so we can use multi-language (tabbed) code snippets, Python macros which automatically retrieve content from GitHub or have more formatting options for complex tables, for example.</p>
+</section>
+<section id="editing">
+<h3>Editing<a class="headerlink" href="#editing" title="この見出しへのパーマリンク"></a></h3>
+<p>This repository follows the docs-as-code approach, meaning that you treat the documentation as if it was source code.</p>
+<p>To contribute you need to check out the Git repository, make your changes and submit a <a class="reference external" href="https://docs.github.com/en/github/collaborating-with-pull-requests">Pull Request</a> to GitHub. The repository maintainers will review your contribution, suggest changes if required and eventually merge it.</p>
+</section>
+<section id="testing-locally">
+<h3>Testing locally<a class="headerlink" href="#testing-locally" title="この見出しへのパーマリンク"></a></h3>
+<p>Before submitting a pull request it is a good idea to test your changes locally, to ensure that everything shows as expected and nothing breaks.</p>
+<p>You first need to <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Install Sphinx</a>. Basically, you need to:</p>
+<ul class="simple">
+<li><p>Install Python 3.7</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+</ul>
+<p>After that you can trigger a build by running from the repository's root:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>livehtml
+</pre></div>
+</div>
+<p>This generates all HTML files in the <code class="docutils literal notranslate"><span class="pre">build/html</span></code> folder, including all assets like images, javascript, CSS, code snippets, etc. This also monitors your source folder and regenerates the output when changes are detected. It also instantiates a web server on <code class="docutils literal notranslate"><span class="pre">localhost:8000</span></code> for your convenience.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>On Windows you have a handy <code class="docutils literal notranslate"><span class="pre">make-win.bat</span></code> that does the same thing but takes care of some Windows shenanigans like incorrect console output and filesystem monitoring.</p>
+</div>
+</section>
+<section id="deployment">
+<h3>Deployment<a class="headerlink" href="#deployment" title="この見出しへのパーマリンク"></a></h3>
+<p>The GitHub repository is linked to <a class="reference external" href="https://jenkins.symbolsyndicate.us/job/Symbol/job/Docs/job/symbol-docs">Jenkins</a>, so on every push to the
+<code class="docutils literal notranslate"><span class="pre">main</span></code> branch a full build is triggered (See <code class="docutils literal notranslate"><span class="pre">Jenkinsfile</span></code>). This involves several steps besides
+the generation of the output documentation:</p>
+<ul>
+<li><p><strong>Source snippets validation</strong>: The guides include lots of source code examples which are actually snippets from complete programs. These programs must <strong>compile</strong> and pass <strong>lint checks</strong> at all times and Travis makes sure of this. Right now only the TypeScript programs are checked.</p></li>
+<li><p><strong>Link checking</strong>: All pages are examined to find broken links using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">linkcheck</span></code>.</p>
+<p>Throttling is enabled to avoid pestering servers too much and getting <code class="docutils literal notranslate"><span class="pre">HTTP</span> <span class="pre">429</span> <span class="pre">Too</span> <span class="pre">Many</span> <span class="pre">Requests</span></code> errors. Still, sometimes your build fails because of this. If you detect such error in the Travis logs just try again.</p>
+<p>If you are sure a link is correct but linkcheck on Travis keeps failing, you can add this particular link to the <code class="docutils literal notranslate"><span class="pre">linkcheck_ignore</span></code> list in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> to skip checking it. Please add a comment explaining the reason.</p>
+</li>
+<li><p><strong>Localization</strong>: Text strings are extracted from every page using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">gettext</span></code> and uploaded to Transifex (see next section).</p></li>
+<li><p><strong>Publishing</strong>: The built HTML pages are moved to the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch and pushed. GitHub pages is configured to serve them from there.</p></li>
+</ul>
+<p>Due to this process, pushes to <code class="docutils literal notranslate"><span class="pre">main</span></code> normally take up to 5 minutes to go live.</p>
+</section>
+<section id="localization">
+<h3>Localization<a class="headerlink" href="#localization" title="この見出しへのパーマリンク"></a></h3>
+<p>Right now almost every page is available in Japanese besides the original English, but the repository is ready to accept more languages.</p>
+<p><a class="reference external" href="https://app.transifex.com/nemtech/symboldocs/">Transifex</a> is integrated in the deployment process, so after every push to <code class="docutils literal notranslate"><span class="pre">main</span></code> Travis extracts and sends all strings (<code class="docutils literal notranslate"><span class="pre">.pot</span></code> files) to Transifex, which detects any new or updated text and notifies the translators.</p>
+<p>Translators can log in to Transifex and provide the translations there. Developers can then download the updated text (<code class="docutils literal notranslate"><span class="pre">.po</span></code> files) and commit them to the source repository.</p>
+<p>So far this process has been entirely done by the Symbol community, even committing the updated texts and submitting pull requests.</p>
+</section>
+</section>
+<section id="nem-nis1-documentation">
+<h2>NEM NIS1 documentation<a class="headerlink" href="#nem-nis1-documentation" title="この見出しへのパーマリンク"></a></h2>
+<table class="table-double-rows docs-repo-table docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Site</strong></p></td>
+<td><p><strong>Docs</strong>: <a class="reference external" href="https://nemproject.github.io/nem-docs">nemproject.github.io/nem-docs</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>API</strong>: <a class="reference external" href="https://nemproject.github.io/">nemproject.github.io</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Source repo</strong></p></td>
+<td><p><strong>Docs</strong>: <a class="reference external" href="https://github.com/NemProject/nem-docs/tree/gh-pages">github.com/NemProject/nem-docs</a> (<code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>API</strong>: <a class="reference external" href="https://github.com/NemProject/NemProject.github.io">https://github.com/NemProject/NemProject.github.io</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Host</strong></p></td>
+<td><p><strong>Docs</strong>: <a class="reference external" href="https://github.com/NemProject/nem-docs/tree/gh-pages">GitHub pages</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>API</strong>: <a class="reference external" href="https://github.com/NemProject/NemProject.github.io">GitHub pages</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Engine</strong></p></td>
+<td><p><strong>Docs</strong>: <a class="reference external" href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">GitHub Jekyll</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>API</strong>: Static HTML page</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p><strong>Docs</strong>: <a class="reference external" href="https://www.markdownguide.org/">Markdown</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>API</strong>: HTML</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Intended readers</strong></p></td>
+<td><p>The world at large.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Intended writers</strong></p></td>
+<td><p>The Symbol technical writers.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Editing workflow</strong></p></td>
+<td><p>Git-based: Check out the source repository, make modifications, check results by building the pages locally and submit pull requests.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Localization</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Maintainers</strong></p></td>
+<td><p><a class="reference external" href="https://github.com/segfaultxavi">Xavi</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="id1">
+<h3>Content<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h3>
+<p>These are the old NEM NIS1 docs, which were spread over several repos, blogs and forum posts, ported over a to single repository. This documentation is rather old and parts of it are still being figured out.</p>
+<p>The old docs were mainly hosted at <code class="docutils literal notranslate"><span class="pre">docs.nem.io</span></code> from the <a class="reference external" href="https://github.com/saulgray/nemioDev">github.com/saulgray/nemioDev</a> repository using the <a class="reference external" href="https://getgrav.org/">Grav Engine</a>.</p>
+<p>A much simpler GitHub page is setup now, using the <a class="reference external" href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">Jekyll Engine</a> provided by GitHub, using plain Markdown. All content is in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>There is still some placeholders left in the docs (like <a class="reference external" href="https://nemproject.github.io/nem-docs/pages/Overview/docs.en.html">the overview page</a>) so a big <strong>PREVIEW</strong> banner is shown at the top of every page.</p>
+<p>This banner is <a class="reference external" href="https://github.com/NemProject/nem-docs/blob/gh-pages/_layouts/default.html#L45">hardcoded in the layout HTML file</a> and can be removed once the docs are good to go public.</p>
+</div>
+</section>
+<section id="id2">
+<h3>Editing<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h3>
+<p>This repository follows the docs-as-code approach, meaning that you treat the documentation as if it was source code.</p>
+<p>To contribute you need to check out the Git repository, make your changes and submit a <a class="reference external" href="https://docs.github.com/en/github/collaborating-with-pull-requests">Pull Request</a> to GitHub. The repository maintainers will review your contribution, suggest changes if required and eventually merge it.</p>
+</section>
+<section id="id3">
+<h3>Testing locally<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h3>
+<p>Before submitting a pull request it is a good idea to test your changes locally, to ensure that everything shows as expected and nothing breaks.</p>
+<p>Follow <a class="reference external" href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll">GitHub's instructions</a> to install a local Jekyll instance and run it.</p>
+</section>
+<section id="id4">
+<h3>Deployment<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h3>
+<p>Deployment is straightforward since a standard GitHub pages setup is used (GitHub repo + Jekyll site + GitHub pages). Just push to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch and it will be published in seconds.</p>
+</section>
+</section>
+<section id="working-documentation">
+<h2>Working documentation<a class="headerlink" href="#working-documentation" title="この見出しへのパーマリンク"></a></h2>
+<table class="docs-repo-table docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Site</strong></p></td>
+<td><p><a class="reference external" href="https://hackmd.io/team/syndicate">hackmd.io/team/syndicate</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Source repo</strong></p></td>
+<td><p><a class="reference external" href="https://hackmd.io/team/syndicate">hackmd.io/team/syndicate</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Host</strong></p></td>
+<td><p><a class="reference external" href="https://hackmd.io/team/syndicate">hackmd.io/team/syndicate</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Engine</strong></p></td>
+<td><p>HackMD</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p><a class="reference external" href="https://www.markdownguide.org/">Markdown</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Intended readers</strong></p></td>
+<td><p>Syndicate members.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Intended writers</strong></p></td>
+<td><p>Syndicate members.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Editing workflow</strong></p></td>
+<td><p>Edit pages directly on HackMD.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Localization</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Maintainers</strong></p></td>
+<td><p>Every syndicate member.</p></td>
+</tr>
+</tbody>
+</table>
+<p>This is meant as a scratch pad for collaborative editing, or as a means of storage for documents that change too often or are too big or numerous to be in the Handbook.</p>
+<p>Examples are:</p>
+<ul class="simple">
+<li><p>Documents being worked on (they are live, or waiting approval to go into the Handbook)</p></li>
+<li><p>Meeting minutes (there are too many of them)</p></li>
+<li><p>Test results (they change continuously)</p></li>
+</ul>
+<p>To keep this area organized all documents should be <strong>tagged</strong>. Please add this line at the bottom of your document:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">###### tags: `tag1` `tag2`</span>
+</pre></div>
+</div>
+<p>Use any tag you want, but please look at the other documents and try to be consistent.</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>If you don't use a tag your document will appear in the <strong>Untagged</strong> section and you will be severely reprimanded.</p>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2025&#8209;07&#8209;24</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/handbook/doc-repos.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Repository structure</a><ul>
+<li><a class="reference internal" href="#technical-documentation">Technical documentation</a><ul>
+<li><a class="reference internal" href="#content">Content</a></li>
+<li><a class="reference internal" href="#editing">Editing</a></li>
+<li><a class="reference internal" href="#testing-locally">Testing locally</a></li>
+<li><a class="reference internal" href="#deployment">Deployment</a></li>
+<li><a class="reference internal" href="#localization">Localization</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nem-nis1-documentation">NEM NIS1 documentation</a><ul>
+<li><a class="reference internal" href="#id1">Content</a></li>
+<li><a class="reference internal" href="#id2">Editing</a></li>
+<li><a class="reference internal" href="#id3">Testing locally</a></li>
+<li><a class="reference internal" href="#id4">Deployment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-documentation">Working documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2025&#8209;07&#8209;24.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2025&#8209;07&#8209;24.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

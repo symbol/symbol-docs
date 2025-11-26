@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ハーベスティング &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="インフレーション" href="inflation.html" />
+    <link rel="prev" title="手数料" href="fees.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/harvesting.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/harvesting.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="harvesting">
+<h1>ハーベスティング<a class="headerlink" href="#harvesting" title="この見出しへのパーマリンク"></a></h1>
+<p>新しい <a class="reference internal" href="block.html"><span class="doc">ブロック</span></a> を生成するプロセスをハーベスティングと呼びます。</p>
+<p>このプロセス中に <strong>ハーベスタ</strong> と呼ばれる、ブロックをハーベストする <a class="reference internal" href="account.html"><span class="doc">アカウント</span></a> は、生産した <a class="reference internal" href="fees.html"><span class="doc">トランザクション手数料</span></a> と発生した <a class="reference internal" href="inflation.html"><span class="doc">インフレーション</span></a> トークンで報われます。</p>
+<p>生成された各ブロックは、ハーベスタアカウントの公開鍵とそれが作成したブロック署名を <a class="reference internal" href="block.html#block-header"><span class="std std-ref">ヘッダー</span></a> に格納します。</p>
+<section id="eligibility-criteria">
+<span id="account-eligibility"></span><h2>適格基準<a class="headerlink" href="#eligibility-criteria" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポータンススコア</span></a> はハーベストが有効になっているすべてのアカウントの中から、次のブロックを収集するためにアカウントを選択する確率を決定します。</p>
+<p>Symbol のパブリックネットワークでは、0 より大きいインポータンススコアを獲得するために、アカウントは <strong>10,000</strong> 以上の <a class="reference internal" href="#harvesting-mosaic"><span class="std std-ref">ハーベスティングモザイク</span></a> を保有している必要があります。 <a class="reference internal" href="#local-harvesting"><span class="std std-ref">ノードの運用</span></a> または、別のノードに <a class="reference internal" href="#delegated-harvesting"><span class="std std-ref">デリゲートハーベスティング</span></a> を有効にすることで、適格なアカウントはそのインポータンススコアを使用して新しいブロック生成を行います。</p>
+<p>選択した方法に関係なく、 <strong>ハーベスティングをアクティブ化したいアカウント</strong> は、最初に有効な <a class="reference internal" href="../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> を通知します。このキーは Symbol のランダムなハーベスタ選択に必要です。</p>
+</section>
+<section id="harvesting-mosaic">
+<span id="id1"></span><h2>ハーベスティングモザイク<a class="headerlink" href="#harvesting-mosaic" title="この見出しへのパーマリンク"></a></h2>
+<p>Symbol プラットフォームは様々なビジネスニーズに合わせたハーベスティングを目的とした <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">モザイク定義</span></a> をサポートします。</p>
+<p>例えばコンソーシアムネットワークではインフラを運営する企業間でハーベスティングモザイクを配布することができますが、他の参加者はサービスを利用するために <a class="reference internal" href="fees.html"><span class="doc">通貨モザイク</span></a> を支払う必要があります。</p>
+<p>これとは対照的に、パブリックネットワークではトランザクション手数料の支払いとネットワーク運用には同じモザイクを使用することがあります。たとえば Symbol のパブリックネットワークでは <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> をハーベストモザイクとして使用して、適格な参加者が新しいブロックをハーベストできるようにしています。</p>
+</section>
+<section id="rewards">
+<span id="harvesting-rewards"></span><h2>報酬<a class="headerlink" href="#rewards" title="この見出しへのパーマリンク"></a></h2>
+<p>ネットワークオペレーターはハーベスト報酬 (ブロック <a class="reference internal" href="fees.html"><span class="doc">手数料</span></a> および <a class="reference internal" href="inflation.html"><span class="doc">インフレーション</span></a>）の割合を受け取る <strong>ネットワーク手数料シンクアカウント</strong> を定義できます。パブリックメインネットワークにおいて、この料金は <strong>5％</strong> に設定されており、さまざまな <a class="reference internal" href="reward-programs.html"><span class="doc">報酬プログラム</span></a> をサポートするために使用されます。</p>
+<p>さらに、各ノードは <strong>受益者アカウント</strong> を設定して、ハーベスト報酬の割合 (最大25％) を共有できます。ノードオペレータはこの機能を使用して、ノードサポータのインセンティブ構造を作成できます。</p>
+<p>受取人の共有比率とネットワークシンクアカウントは <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワークごとに設定可能</span></a> です。</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/network-sink-beneficiary.png" src="../_images/network-sink-beneficiary.png" style="width: 600px;" />
+<figcaption>
+<p><span class="caption-text">ネットワークシンクに対するネットワークの共有率が20％、受益者に対するネットワークの共有率が10％である場合の報酬区分。</span><a class="headerlink" href="#id6" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>受益者の割合の計算は、ネットワークシンク計算後に行われます。ノードオペレーターが受取人またはネットワーク手数料シンクを定義しない場合、すべての報酬はブロック署名者に送られます。</p>
+</div>
+</section>
+<section id="harvesting-types">
+<span id="id2"></span><h2>ハーベスティングタイプ<a class="headerlink" href="#harvesting-types" title="この見出しへのパーマリンク"></a></h2>
+<p>ハーベスタアカウントがノードを所有しているか、および要求するセキュリティレベルに応じて、さまざまな種類のハーベスティングを利用できます。: <a class="reference internal" href="#local-harvesting"><span class="std std-ref">ローカル</span></a>, <a class="reference internal" href="#remote-harvesting"><span class="std std-ref">リモート</span></a> そして <a class="reference internal" href="#delegated-harvesting"><span class="std std-ref">デリゲート</span></a> です。</p>
+<section id="local-harvesting">
+<span id="id3"></span><h3>ローカルハーベスティング<a class="headerlink" href="#local-harvesting" title="この見出しへのパーマリンク"></a></h3>
+<p>これは <strong>最も簡単なセットアップ手順</strong> ですが <strong>最も安全ではない方法</strong> です。ノード設定を変更する必要があるため、ノード所有者のみが利用できます。これは <a class="reference internal" href="../guides/network/configuring-node-properties.html#node-properties-harvesting-configuration"><span class="std std-ref">ノード構成</span></a> ファイルにハーベスティングプロパティを適切に入力することで有効になります。</p>
+<p>ご覧の通り、作成されたブロックに署名するために  <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> に指定されたハーベスタアカウントの <strong>秘密鍵</strong> が要求されます。このアカウントには資産が含まれており、ノードが侵害された場合、侵入者が設定ファイルにアクセスする可能性という <strong>セキュリティ上の懸念</strong> が存在します。資産が提供されたアカウントの <strong>秘密鍵は常にオフラインで保存する必要があります</strong> 。</p>
+<p>そのため <strong>この方法はあまり良くありません</strong> 。 <a class="reference internal" href="#remote-harvesting"><span class="std std-ref">リモート</span></a> または <a class="reference internal" href="#delegated-harvesting"><span class="std std-ref">デリゲート</span></a> ハーベスティングを推奨します。</p>
+</section>
+<section id="remote-harvesting">
+<span id="id4"></span><h3>リモートハーベスティング<a class="headerlink" href="#remote-harvesting" title="この見出しへのパーマリンク"></a></h3>
+<p>ノード所有者は <strong>プロキシとして機能</strong> する <strong>リモートアカウント</strong> を使用して、新しく作成されたブロックに署名しますが、ハーベスト手数料は引き続きメインアカウントが徴収されます。 <strong>リモートアカウントは資産を持たない</strong> ので、その秘密鍵がノード上の設定ファイルに記述されていることは問題になりません。引き続き、メインアカウントの <a class="reference internal" href="consensus-algorithm.html#importance-calculation"><span class="std std-ref">重要度スコア</span></a> に基づきます。</p>
+<p>この設定では、簡単にするために、引き続きメインアカウントは <strong>ハーベスタ</strong> と呼ばれますが、リモートアカウントは <strong>プロキシ</strong> と呼ばれます。</p>
+<p>リモートハーベスティングは <a class="reference internal" href="#local-harvesting"><span class="std std-ref">ローカルハーベスティング</span></a> と同様に有効になりますが、 <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> プロパティに設定されたリモートアカウントの秘密鍵を使用し、リモートアカウントとメインアカウントをリンクする <a class="reference internal" href="../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> をアナウンスします。</p>
+<p>これはノード所有者に <strong>推奨される方法</strong> です。リモートハーベスティングをアクティブ化する方法の詳細な手順については、 <a class="reference internal" href="../guides/harvesting/index.html"><span class="doc">ハーベスティングガイド</span></a> を参照してください。</p>
+</section>
+<section id="delegated-harvesting">
+<span id="id5"></span><h3>デリゲートハーベスティング<a class="headerlink" href="#delegated-harvesting" title="この見出しへのパーマリンク"></a></h3>
+<p><strong>ノードを所有していない</strong> <a class="reference internal" href="#account-eligibility"><span class="std std-ref">適格なアカウント</span></a> は <strong>それらのアカウントのハーベストをノードにリクエスト</strong> することで、ハーベスティング報酬の恩恵を受けることができます。アカウントの <a class="reference internal" href="consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポートスコア</span></a> が使用され、収集された手数料はアカウントとノードの受益者の間で分割 (<a class="reference internal" href="#harvesting-rewards"><span class="std std-ref">報酬</span></a> セクションで説明) されます。 <strong>これはアカウントとノードの両方にとって有益</strong> です。</p>
+<p>その後、アカウントはノードに <strong>デリゲートハーベスティング</strong> すると言われますが、依然としてアカウントはハーベスタと見なされます。</p>
+<p>Delegated harvesting is enabled similarly to <a class="reference internal" href="#remote-harvesting"><span class="std std-ref">remote harvesting</span></a> but, since the account has no access to the node's configuration, it announces a <a class="reference internal" href="#persistentdelegationrequesttransaction"><span class="std std-ref">PersistentDelegationRequest transaction</span></a> instead (This can be done effortlessly from the <a class="reference internal" href="../wallets.html#wallet-desktop"><span class="std std-ref">Wallet</span></a>). Upon receiving the request, <strong>the node may or may not grant it</strong>, depending on its configuration and the rest of requests received.</p>
+<p><a class="reference internal" href="#remote-harvesting"><span class="std std-ref">リモートハーベスティング</span></a> と同様に、プロキシリモートアカウントが使用されるため、メインアカウントの秘密鍵が危険に晒されることはありません。</p>
+<p>デリゲートハーベスティングを有効にする、ステップ・バイ・ステップの手順については <a class="reference internal" href="../guides/harvesting/index.html"><span class="doc">ハーベスティングガイド</span></a> を参照し、デリゲートリクエストが許可されているかを確認します。</p>
+<section id="persistent-delegation-request-transaction">
+<span id="persistentdelegationrequesttransaction"></span><h4>Persistent Delegation Request Transaction<a class="headerlink" href="#persistent-delegation-request-transaction" title="この見出しへのパーマリンク"></a></h4>
+<p>This is actually a <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a> sent to the node owner's account with a special 132-byte <strong>message</strong>, formatted as a 264-characters hexadecimal string:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Bytes</p></th>
+<th class="head"><p>Hex digits</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>16</p></td>
+<td><p>Header: <code class="docutils literal notranslate"><span class="pre">FE2A8061577301E2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>64</p></td>
+<td><p>Ephemeral keypair public key.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>Below is encoded with the ephemeral key:</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>32</p></td>
+<td><p>AES GCM tag.</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>24</p></td>
+<td><p>AES GCM initialization vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>64</p></td>
+<td><p>remoteLinkedPrivateKey</p></td>
+</tr>
+<tr class="row-even"><td><p>32</p></td>
+<td><p>64</p></td>
+<td><p>vrfPrivateKey</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="related-transactions">
+<h2>関連トランザクション<a class="headerlink" href="#related-transactions" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 41%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x4243</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a></p></td>
+<td><p>アカウントを VRF 公開鍵にリンクします。ハーベスト対象のすべてのアカウントに必要です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x414C</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a></p></td>
+<td><p>アカウントのインポータンスをプロキシアカウントに委任します。リモートまたはデリゲートハーベスティングをアクティブ化しようとする、すべてのアカウントに必要なことです。</p></td>
+</tr>
+<tr class="row-even"><td><p>0x424C</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a></p></td>
+<td><p>アカウントを TLS が使用する公開鍵とリンクしてセッションを作成します。デリゲートハーベスティングをアクティブ化することをいとわない、すべてのアカウントに必要です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x4154</p></td>
+<td><p><a class="reference internal" href="#persistentdelegationrequesttransaction"><span class="std std-ref">PersistentDelegationRequestTransaction</span></a></p></td>
+<td><p>ハーベスタとしてアカウントを追加するためにノードへ要求します。これは特別なメッセージを持たせた <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a> です。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/network/configuring-node-properties.html">ノードプロパティ</a></p>
+<p class="ablog-post-excerpt">Symbol には多数のカスタマイズ可能なノード関連の設定があります。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/harvesting/activating-delegated-harvesting-wallet.html">デリゲートハーベスティングをデスクトップウォレットで有効化</a></p>
+<p class="ablog-post-excerpt">あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/harvesting/activating-delegated-harvesting-manual.html">デリゲートハーベスティングを手動で有効化</a></p>
+<p class="ablog-post-excerpt">あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/harvesting/activating-remote-harvesting.html">リモートハーベスティングの有効化</a></p>
+<p class="ablog-post-excerpt">セキュリティ強化のために、プロキシアカウントを介して新しいブロックのハーベスティングします。</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;17</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/harvesting.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ハーベスティング</a><ul>
+<li><a class="reference internal" href="#eligibility-criteria">適格基準</a></li>
+<li><a class="reference internal" href="#harvesting-mosaic">ハーベスティングモザイク</a></li>
+<li><a class="reference internal" href="#rewards">報酬</a></li>
+<li><a class="reference internal" href="#harvesting-types">ハーベスティングタイプ</a><ul>
+<li><a class="reference internal" href="#local-harvesting">ローカルハーベスティング</a></li>
+<li><a class="reference internal" href="#remote-harvesting">リモートハーベスティング</a></li>
+<li><a class="reference internal" href="#delegated-harvesting">デリゲートハーベスティング</a><ul>
+<li><a class="reference internal" href="#persistent-delegation-request-transaction">Persistent Delegation Request Transaction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#related-transactions">関連トランザクション</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;17.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;17.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Running a secure node &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Maintaining a Node" href="maintaining-a-symbol-node.html" />
+    <link rel="prev" title="Running a node manually" href="running-a-symbol-node-manually.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/running-a-secure-symbol-node.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/running-a-secure-symbol-node.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <p>How to run a Symbol node with added security.</p>
+<section id="running-a-secure-node">
+<h1>Running a secure node<a class="headerlink" href="#running-a-secure-node" title="Permalink to this heading"></a></h1>
+<p>The <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">Running a node</span></a> guide explains how to easily <strong>create a node using Symbol Bootstrap</strong>. In that guide, the setup process is conducted on the same machine that will host the node, meaning that private keys are generated on a machine connected to the Internet. If you need a <strong>hardened level of security</strong> you can follow this guide instead, at the cost of a more involved setup process.</p>
+<p>The <strong>summary</strong> of it is that the <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">start</span></code> command is split into a <code class="docutils literal notranslate"><span class="pre">config</span></code> phase run offline, which generates a configuration folder, and the rest of the <code class="docutils literal notranslate"><span class="pre">start</span></code> command is then run on the destination online machine that will host the node. <strong>The main account’s private key never leaves the offline machine</strong>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Machine</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Configuration</strong></p></td>
+<td><ul class="simple">
+<li><p>Online to install software, then offline.</p></li>
+<li><p>Creates configuration files.</p></li>
+<li><p>Prepares setup transactions.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Node</strong></p></td>
+<td><ul class="simple">
+<li><p>Permanently online.</p></li>
+<li><p>Runs the node.</p></li>
+<li><p>Announces the setup transactions.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A node can also be setup in such a way that all harvesting rewards go to an <strong>external account</strong> without requiring this account’s private key. This is known as a <strong>non-custodial setup</strong> and must be configured <strong>once the node is up and running</strong>, so a pointer to the appropriate guide is given at the end of this page.</p>
+<section id="configuration-machine">
+<h2>Configuration machine<a class="headerlink" href="#configuration-machine" title="Permalink to this heading"></a></h2>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this heading"></a></h3>
+<p>On the <strong>Configuration machine</strong>, while still online:</p>
+<ul>
+<li><p><strong>Install Symbol Bootstrap</strong> as instructed in the <a class="reference internal" href="using-symbol-bootstrap.html"><span class="doc">Using Symbol Bootstrap</span></a> guide. Make sure you read also the <strong>Configuration</strong> section of that guide to get acquainted with presets and assemblies.</p></li>
+<li><p><strong>Install Symbol CLI</strong> as instructed in the <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> guide. You just need to run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>symbol-cli
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run Symbol Bootstrap a first time</strong>, so that it can download the required Docker images:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>&lt;assembly&gt;<span class="w"> </span>--noPassword
+rm<span class="w"> </span>-rf<span class="w"> </span>target
+</pre></div>
+</div>
+<p>The output of this first run is irrelevant, that’s why <code class="docutils literal notranslate"><span class="pre">--noPassword</span></code> is used and the <code class="docutils literal notranslate"><span class="pre">target</span></code> folder is removed.</p>
+</li>
+<li><p><strong>Disconnect the Configuration machine from the Internet</strong> since private keys will be generated on this machine from this point.</p></li>
+</ul>
+</section>
+<section id="create-configuration">
+<h3>Create configuration<a class="headerlink" href="#create-configuration" title="Permalink to this heading"></a></h3>
+<section id="profile">
+<h4>Profile<a class="headerlink" href="#profile" title="Permalink to this heading"></a></h4>
+<p><strong>Create the main account profile</strong>. This is the account that will receive all harvesting fees and whose <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> will be used when harvesting.</p>
+<p><strong>The purpose of this guide is making sure that this account’s private key is never used on an online machine</strong>.</p>
+<p>This step will create a <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> profile to hold the main account and sign transactions using its private key. The machine is offline now, so you need to provide some network-related data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The commands below assume you want to create a <strong>new</strong> main account and use the <code class="docutils literal notranslate"><span class="pre">profile</span> <span class="pre">create</span></code> command. If you <strong>already have an account</strong> that you would like to use as main use the <code class="docutils literal notranslate"><span class="pre">profile</span> <span class="pre">import</span></code> command instead.</p>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MAINNET</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">TESTNET</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>profile<span class="w"> </span>create<span class="w"> </span>--profile<span class="w"> </span>offline-main<span class="w"> </span>--default<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--url<span class="w"> </span>http://localhost:3000<span class="w"> </span>--network<span class="w"> </span>MAIN_NET<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--generation-hash<span class="w"> </span>57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--namespace-id<span class="w"> </span>symbol.xym<span class="w"> </span>--divisibility<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--epoch-adjustment<span class="w"> </span><span class="m">1615853185</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>profile<span class="w"> </span>create<span class="w"> </span>--profile<span class="w"> </span>offline-test<span class="w"> </span>--default<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--url<span class="w"> </span>http://localhost:3000<span class="w"> </span>--network<span class="w"> </span>TEST_NET<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--generation-hash<span class="w"> </span>3B5E1FA6445653C971A50687E75E6D09FB30481055E3990C84B25E9222DC1155<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--namespace-id<span class="w"> </span>symbol.xym<span class="w"> </span>--divisibility<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--epoch-adjustment<span class="w"> </span><span class="m">1616694977</span>
+</pre></div>
+</div>
+</div></div>
+<p>When prompted, enter a password to secure your profile and select the <code class="docutils literal notranslate"><span class="pre">PrivateKey</span></code> import type:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span><span class="gi">✔ </span>Enter your wallet password: … *********
+<span class="gi">✔ </span>Select an import type: › PrivateKey
+
+<span class="cp">Account</span>
+┌───────────────┬──────────────────────────────────────────────────────────────────────┐
+│ <span class="cp">Property</span>      │ <span class="cp">Value</span>                                                                │
+├───────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Address       │ NCCE5O-BMZHWM-IYZKR6-4WZKFD-4P7DTS-IRXJZ2-3LI                        │
+├───────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Public Key    │ 51C2CB98B61D666A993FA9B25EEBCB48DE5F0B1B7D8B79ECB7AFCB1E5E601108     │
+├───────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Private Key   │ ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●     │
+├───────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Password      │ ●●●●●●●●●                                                            │
+└───────────────┴──────────────────────────────────────────────────────────────────────┘
+
+<span class="gi">SUCCESS </span>Stored offline-main profile
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> is now ready to be used later on. All transactions will be signed by your main account so make sure it has some funds to pay for the <a class="reference internal" href="../../concepts/fees.html"><span class="doc">Fees</span></a>.</p>
+<p><strong>Take note of the main account’s private key and keep it in a safe place</strong>.</p>
+</section>
+<section id="preset">
+<h4>Preset<a class="headerlink" href="#preset" title="Permalink to this heading"></a></h4>
+<p><strong>Create a</strong> <a class="reference internal" href="using-symbol-bootstrap.html#symbol-bootstrap-presets"><span class="std std-ref">custom preset file</span></a> for Symbol Bootstrap and name it <code class="docutils literal notranslate"><span class="pre">custom.yml</span></code>. It must include, at least, these lines:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">privateKeySecurityMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PROMPT_MAIN</span>
+<span class="nt">nodes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span>
+<span class="w">  </span><span class="nt">mainPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+</pre></div>
+</div>
+<p>You can read more about these properties in the <a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/docs/presetGuides.md#user-content-private-key-security-mode">security mode section</a> in Symbol Bootstrap’s documentation.</p>
+<p>If you have customizations to make, like enabling <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">voting</span></a>, you can provide them too:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">privateKeySecurityMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PROMPT_MAIN</span>
+<span class="nt">nodes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span>
+<span class="w">  </span><span class="nt">mainPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">  </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-symbol-node.com</span><span class="w"> </span><span class="c1"># Could also be an IP address</span>
+</pre></div>
+</div>
+</section>
+<section id="configure">
+<h4>Configure<a class="headerlink" href="#configure" title="Permalink to this heading"></a></h4>
+<p><strong>Run Symbol Bootstrap again</strong>, this time with all required parameters:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>&lt;assembly&gt;<span class="w"> </span>-c<span class="w"> </span>custom.yml
+</pre></div>
+</div>
+<p>You will be asked for the <strong>password</strong> to use to encrypt the <strong>configuration files</strong>.</p>
+<div class="highlight-symbol-bootstrap notranslate"><div class="highlight"><pre><span></span><span class="gi">? </span>Enter password to use to encrypt and decrypt custom presets, addresses.yml,
+  and preset.yml files. When providing a password, private keys will be
+  encrypted. Keep this password in a secure place! ******
+<span class="gi">info </span>    Password has been provided
+<span class="gi">info </span>    Generating config from preset testnet
+<span class="gi">info </span>    Assembly preset dual
+<span class="gi">info </span>    Generating Main account...
+<span class="gi">info </span>    Generating Transport account...
+<span class="gi">info </span>    Generating Remote account...
+<span class="gi">info </span>    Generating VRF account...
+<span class="gi">info </span>    User for docker resolved: 1000:1000
+<span class="gi">info </span>    Running image using Exec: symbolplatform/symbol-server:tools-gcc-0.10.1.8 bash createNodeCertificates.sh
+<span class="gi">info </span>    Certificate for node api-node created
+<span class="gi">info </span>    Generating api-node server configuration
+<span class="gi">info </span>    Generating api-broker broker configuration
+<span class="gi">info </span>    Non-voting node api-node.
+<span class="gi">info </span>    Configuration generated.
+</pre></div>
+</div>
+<p>This generates a <code class="docutils literal notranslate"><span class="pre">target</span></code> directory containing an <code class="docutils literal notranslate"><span class="pre">addresses.yml</span></code> file and multiple configuration files.</p>
+<p><strong>The main account’s private key is not present in any of these files</strong>.</p>
+<p>It is worth noting that Symbol Bootstrap enables <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a> by default, meaning that the <strong>main private key is never available in a plain text file</strong> in the client. Only the remote key is, which acts as a proxy between the node and its main account.</p>
+</section>
+<section id="copy-configuration">
+<h4>Copy configuration<a class="headerlink" href="#copy-configuration" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">custom.yml</span></code> and <strong>remove the line</strong> containing <code class="docutils literal notranslate"><span class="pre">mainPrivateKey</span></code>.</p>
+<p>Now that Symbol Bootstrap has already used it in the <code class="docutils literal notranslate"><span class="pre">config</span></code> stage, there is no need for such a sensitive key to be lying around in a plain text file.</p>
+</li>
+<li><p><strong>Copy</strong> the whole <code class="docutils literal notranslate"><span class="pre">target</span></code> directory to a pen drive (or other non-networked support) to be used later.</p></li>
+</ul>
+</section>
+</section>
+<section id="prepare-transactions">
+<h3>Prepare transactions<a class="headerlink" href="#prepare-transactions" title="Permalink to this heading"></a></h3>
+<p>Still in the offline Configuration machine, you are now going to <strong>prepare a series of link transactions manually</strong>. These transactions will be created by <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code>, signed by your main account, and will be moved to an online machine to be announced later on.</p>
+<p>The following commands all use <code class="docutils literal notranslate"><span class="pre">--max-fee</span> <span class="pre">1000000</span></code> which means that <strong>1 XYM</strong> will be paid for each transaction. Feel free to use a different number after reading the <a class="reference internal" href="../../concepts/fees.html"><span class="doc">fees documentation</span></a>.</p>
+<aside class="topic">
+<p class="topic-title">Concerning deadlines</p>
+<p>All transactions have a deadline, meaning that they must be announced (and confirmed) <strong>before the deadline expires</strong>.</p>
+<p>There is currently a limitation in <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> which sets this deadline to <strong>2 hours</strong> after transaction creation, for all non-multisig transactions.</p>
+</aside>
+<section id="remote-key-link">
+<h4>Remote key link<a class="headerlink" href="#remote-key-link" title="Permalink to this heading"></a></h4>
+<p>Obtain the <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> payload.</p>
+<p>This links your main account to the <strong>remote account</strong> used for <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a>. Symbol Bootstrap generated this account for you, and you can find its public key in the <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">remote</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F</span>
+</pre></div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">--linked-public-key</span></code> parameter below, use the <strong>remote account public key</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>accountkeylink<span class="w"> </span>--max-fee<span class="w"> </span><span class="m">1000000</span><span class="w"> </span>--mode<span class="w"> </span>normal<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--linked-public-key<span class="w"> </span>1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--action<span class="w"> </span>Link
+</pre></div>
+</div>
+<p>Enter the password you used when you created the <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> profile and do <strong>not</strong> announce the transaction (the machine is offline).</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span><span class="gi">✔ </span>Enter your wallet password: … *********
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                                 ACCOUNT_KEY_LINK                                 │
+├───────────────┬──────────────────────────────────────────────────────────────────┤
+│ Max fee:      │ 1,000,000                                                        │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Network type: │ TEST_NET                                                         │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Deadline:     │ 2021-03-27 10:41:41.286                                          │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Action:       │ Link                                                             │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+├───────────────┴──────────────────────────────────────────────────────────────────┤
+│                                Signature details                                 │
+├───────────────┬──────────────────────────────────────────────────────────────────┤
+│ Payload:      │ A10000000000000042E0E0A0B8D7E1F27805F3537F80BFEAB6FEAC318908C486 │
+│               │ 4D03260B83ED1D0332D6EA6E086A4B68C578DB690D78D50BDA5C706B1DC66472 │
+│               │ 9326511547E42E0FCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
+│               │ B902600CB7DA10330000000001984C4140420F000000000026F54C1B0A000000 │
+│               │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+│               │ 01                                                               │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Hash:         │ 08C63D3AFAC3767F43053AFF1ACA61381FE81929B2384B91C450010A547AFA4A │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Signer:       │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
+└───────────────┴──────────────────────────────────────────────────────────────────┘
+<span class="gi">✔ </span>Do you want to announce this transaction? … no
+</pre></div>
+</div>
+<p>Select all the text in the <code class="docutils literal notranslate"><span class="pre">Payload</span></code> box and paste it into a new text file named <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code>. <strong>Remove all spaces and other decorations</strong> to obtain a single line <strong>containing only</strong> numbers and uppercase letters:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A100000000000000703C88DEDC4ABC2917F00ADB12C45F2C333B1113405C3CFAB289E78D9C54DDFCB1FE7C3048B6DA735568A935C6C08AF7E70AEC614A2EE9590967A7A044E52B0DCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA10330000000001984C4140420F000000000038F32C1B0A0000001544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F01
+</pre></div>
+</div>
+</section>
+<section id="vrf-key-link">
+<h4>VRF key link<a class="headerlink" href="#vrf-key-link" title="Permalink to this heading"></a></h4>
+<p>Obtain the <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> payload.</p>
+<p>This key is required for harvesting.</p>
+<p>Again, Symbol Bootstrap has already generated this key for you and you can find it in the <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">vrf</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">856B6CCA574508158D66046CACEA2D81CB626DEEFDD3B6C466514CE31F32A52B</span>
+</pre></div>
+</div>
+<p>Use the <strong>VRF account public key</strong> in the <code class="docutils literal notranslate"><span class="pre">--linked-public-key</span></code> parameter below and do <strong>not</strong> announce the transaction (the machine is offline):</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction vrfkeylink --max-fee 1000000 --mode normal \
+   --linked-public-key 856B6CCA574508158D66046CACEA2D81CB626DEEFDD3B6C466514CE31F32A52B \
+   --action Link
+</pre></div>
+</div>
+<p>Again, copy the content of the <code class="docutils literal notranslate"><span class="pre">Payload</span></code> box, trim it, and add it to <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code>, in a new line.</p>
+</section>
+<section id="voting-key-link">
+<h4>Voting key link<a class="headerlink" href="#voting-key-link" title="Permalink to this heading"></a></h4>
+<p>Obtain the <a class="reference internal" href="../../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a> payload.</p>
+<p>This key is only required for voting nodes.</p>
+<p>If you added <code class="docutils literal notranslate"><span class="pre">voting:</span> <span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">custom.yml</span></code> when creating the configuration, then Symbol Bootstrap has created this key too in <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">voting</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">05693B4300ABFD28CD6BA434DD26F9FAF2342927FE32840898DCB895B8A17E84</span>
+</pre></div>
+</div>
+<p>Use the <strong>Voting account public key</strong> in the <code class="docutils literal notranslate"><span class="pre">--linked-public-key</span></code> parameter below and do <strong>not</strong> announce the transaction (the machine is offline):</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction votingkeylink --max-fee 1000000 --mode normal \
+   --linked-public-key 05693B4300ABFD28CD6BA434DD26F9FAF2342927FE32840898DCB895B8A17E84 \
+   --action Link --start-point 1 --end-point 360
+</pre></div>
+</div>
+<p>Again, copy the content of the <code class="docutils literal notranslate"><span class="pre">Payload</span></code> box, trim it, and add it to <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code>, in a new line.</p>
+</section>
+<section id="copy-payloads">
+<h4>Copy payloads<a class="headerlink" href="#copy-payloads" title="Permalink to this heading"></a></h4>
+<p>Copy <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code> to the pen drive where you previously copied the <code class="docutils literal notranslate"><span class="pre">target</span></code> folder.</p>
+</section>
+</section>
+</section>
+<section id="online-machine">
+<h2>Online machine<a class="headerlink" href="#online-machine" title="Permalink to this heading"></a></h2>
+<p>Move now to the online machine, the one that is permanently connected to the Internet and will host the node. Plug in the pen drive with the node configuration.</p>
+<section id="id1">
+<h3>Setup<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p><strong>Install Symbol Bootstrap</strong> as instructed in the <a class="reference internal" href="using-symbol-bootstrap.html"><span class="doc">Using Symbol Bootstrap</span></a> guide.</p></li>
+<li><p><strong>Install Symbol CLI</strong> as instructed in the <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> guide. You just need to run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>symbol-cli
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create an announcer profile</strong> for <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code>. This is only a temporary account used to announce the payloads; it does not require funds:</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">--url</span></code> parameter to specify the <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> to access the network.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MAINNET</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">TESTNET</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>profile<span class="w"> </span>create<span class="w"> </span>--profile<span class="w"> </span>announcer<span class="w"> </span>--default<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--network<span class="w"> </span>MAIN_NET<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--url<span class="w"> </span>&lt;NODE_URL&gt;
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>profile<span class="w"> </span>create<span class="w"> </span>--profile<span class="w"> </span>announcer<span class="w"> </span>--default<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--network<span class="w"> </span>TEST_NET<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--url<span class="w"> </span>&lt;TESTNET_NODE_URL&gt;
+</pre></div>
+</div>
+</div></div>
+<p>When prompted, enter a password to secure your profile, and select the <code class="docutils literal notranslate"><span class="pre">PrivateKey</span></code> import type:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span><span class="gi">✔ </span>Enter your wallet password: ... *********
+<span class="gi">✔ </span>Select an import type: » PrivateKey
+...
+<span class="gi">SUCCESS </span>Stored announcer profile
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="announce-links">
+<h3>Announce links<a class="headerlink" href="#announce-links" title="Permalink to this heading"></a></h3>
+<p>You will now use <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> to announce to the network the transactions you prepared in <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code>.</p>
+<section id="id2">
+<h4>Remote key link<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Announce the Remote key link:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction payload --sync --announce
+<span class="gi">✔ </span>Enter the transaction payload:
+</pre></div>
+</div>
+<p>Paste the first long text line from <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code> and press Enter:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span><span class="gi">SUCCESS </span>Transaction loaded:
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                                 ACCOUNT_KEY_LINK                                 │
+├───────────────┬──────────────────────────────────────────────────────────────────┤
+│ Max fee:      │ 1,000,000                                                        │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Network type: │ TEST_NET                                                         │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Deadline:     │ 2021-03-27 10:41:41.286                                          │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Signer:       │ TBGPYD-CO35V2-AMOYEJ-LEM44H-372M3I-6RWVFY-QCY                    │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Action:       │ Link                                                             │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+└───────────────┴──────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                                 ACCOUNT_KEY_LINK                                 │
+├───────────────┬──────────────────────────────────────────────────────────────────┤
+│ Max fee:      │ 1,000,000                                                        │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Network type: │ TEST_NET                                                         │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Deadline:     │ 2021-03-27 10:41:41.286                                          │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Signer:       │ CC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528FB902600CB7DA1033 │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Action:       │ Link                                                             │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Linked key:   │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+├───────────────┴──────────────────────────────────────────────────────────────────┤
+│                                Signature details                                 │
+├───────────────┬──────────────────────────────────────────────────────────────────┤
+│ Payload:      │ A10000000000000042E0E0A0B8D7E1F27805F3537F80BFEAB6FEAC318908C486 │
+│               │ 4D03260B83ED1D0332D6EA6E086A4B68C578DB690D78D50BDA5C706B1DC66472 │
+│               │ 9326511547E42E0FCC6D13D64FB9BF69B72846C3FE99127D48C3293F473D528F │
+│               │ B902600CB7DA10330000000001984C4140420F000000000026F54C1B0A000000 │
+│               │ 1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F │
+│               │ 01                                                               │
+├───────────────┼──────────────────────────────────────────────────────────────────┤
+│ Hash:         │ 08C63D3AFAC3767F43053AFF1ACA61381FE81929B2384B91C450010A547AFA4A │
+└───────────────┴──────────────────────────────────────────────────────────────────┘
+...
+<span class="gi">SUCCESS </span>Transaction announced
+<span class="gi">SUCCESS </span>Transaction confirmed
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the transaction is <strong>announced</strong> but it never gets <strong>confirmed</strong> (<code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> is stuck in <code class="docutils literal notranslate"><span class="pre">Processing</span></code> for more than a minute) it can be due to a number of things. Without interrupting <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code>, copy the <strong>transaction hash</strong>, open a new terminal and run:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction status --hash &lt;transaction hash&gt;
+</pre></div>
+</div>
+<p>If there has been any issue with the transaction, this should give you the cause and you can then interrupt <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code>.</p>
+<p>If you need to try again, <strong>never re-announce the same payload</strong>. Create a new one (from the Configuration machine) and announce it again.</p>
+<p>The most common problems are:</p>
+<ul class="simple">
+<li><p><strong>Not enough funds</strong> (<code class="docutils literal notranslate"><span class="pre">Failure_Core_Insufficient_Balance</span></code>): The main account (which signed the transaction) does not have enough funds to pay the fee. Transfer some funds and try with a new payload.</p></li>
+<li><p><strong>Deadline expired</strong> (<code class="docutils literal notranslate"><span class="pre">Failure_Core_Past_Deadline</span></code>): Create a new payload and announce it again before the deadline expires (See the <strong>Concerning deadlines</strong> box above).</p></li>
+<li><p><strong>Insufficient fee</strong>: No error will be reported but if the fee is too low most nodes will ignore it. Try again with a higher fee or be ready to wait for a long time.</p></li>
+<li><p><strong>Payload re-announced</strong>: <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> will be stuck in <code class="docutils literal notranslate"><span class="pre">Processing</span></code> and you will get no relevant information from the <code class="docutils literal notranslate"><span class="pre">transaction</span> <span class="pre">status</span></code>. Just don’t announce the same payload more than once.</p></li>
+</ul>
+</div>
+</section>
+<section id="id3">
+<h4>VRF key link<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<p>Announce the VRF key link:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction payload --sync --announce
+<span class="gi">✔ </span>Enter the transaction payload:
+</pre></div>
+</div>
+<p>Paste the second long text line from <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code> and wait for the transaction to be accepted.</p>
+</section>
+<section id="id4">
+<h4>Voting key link<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<p>Announce the Voting key link (if yours is a voting node):</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction payload --sync --announce
+<span class="gi">✔ </span>Enter the transaction payload:
+</pre></div>
+</div>
+<p>Paste the third long text line from <code class="docutils literal notranslate"><span class="pre">payloads.txt</span></code> and wait for the transaction to be accepted.</p>
+</section>
+</section>
+<section id="start-the-node">
+<h3>Start the node<a class="headerlink" href="#start-the-node" title="Permalink to this heading"></a></h3>
+<p>If all key link transactions were confirmed the node is now configured and you can finally launch it.</p>
+<p><strong>Go to the directory</strong> containing the <code class="docutils literal notranslate"><span class="pre">target</span></code> directory copied from the Configuration machine and <strong>start the node</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>start
+</pre></div>
+</div>
+<p>No other parameters are required, the configuration is already present in the <code class="docutils literal notranslate"><span class="pre">target</span></code> directory and Symbol Bootstrap will use it.</p>
+<p>The node should start and a lot of debug output should appear on the screen.</p>
+<div class="highlight-symbol-bootstrap notranslate"><div class="highlight"><pre><span></span><span class="gi">info </span>    Password has been provided
+<span class="gi">info </span>    The generated preset target/preset.yml already exist, ignoring configuration. (run -r to reset or --upgrade to upgrade)
+...
+</pre></div>
+</div>
+<p>Your node should now be <strong>up and running</strong> and its main private key has never left the configuration (offline) machine.</p>
+<p>For added security, you can now turn the node’s main account into a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">Multisig Account</span></a>. This is useful, for example, for service providers that work in a <strong>non-custodial</strong> manner. Read about this process in the <a class="reference internal" href="non-custodial-node-setup.html"><span class="doc">Non-custodial node setup</span></a> guide.</p>
+</section>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;06&#8209;07</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/running-a-secure-symbol-node.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Running a secure node</a><ul>
+<li><a class="reference internal" href="#configuration-machine">Configuration machine</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#create-configuration">Create configuration</a><ul>
+<li><a class="reference internal" href="#profile">Profile</a></li>
+<li><a class="reference internal" href="#preset">Preset</a></li>
+<li><a class="reference internal" href="#configure">Configure</a></li>
+<li><a class="reference internal" href="#copy-configuration">Copy configuration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prepare-transactions">Prepare transactions</a><ul>
+<li><a class="reference internal" href="#remote-key-link">Remote key link</a></li>
+<li><a class="reference internal" href="#vrf-key-link">VRF key link</a></li>
+<li><a class="reference internal" href="#voting-key-link">Voting key link</a></li>
+<li><a class="reference internal" href="#copy-payloads">Copy payloads</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#online-machine">Online machine</a><ul>
+<li><a class="reference internal" href="#id1">Setup</a></li>
+<li><a class="reference internal" href="#announce-links">Announce links</a><ul>
+<li><a class="reference internal" href="#id2">Remote key link</a></li>
+<li><a class="reference internal" href="#id3">VRF key link</a></li>
+<li><a class="reference internal" href="#id4">Voting key link</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#start-the-node">Start the node</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

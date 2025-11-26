@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>NIS1 から Symbol へのマイグレーション &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Technology" href="../../concepts/overview.html" />
+    <link rel="prev" title="はじめてのアプリケーションを作成" href="../../getting-started/first-application.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/migration/migrating-from-nem-to-symbol.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/migration/migrating-from-nem-to-symbol.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">NIS1 からのマイグレーション</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="post-optin-xym-retrieval.html">ロンチ前のオプトインから XYM を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NIS1 から Symbol へのマイグレーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">NIS1 からのマイグレーション</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="post-optin-xym-retrieval.html">ロンチ前のオプトインから XYM を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NIS1 から Symbol へのマイグレーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="migrating-from-nis1-to-symbol">
+<h1>NIS1 から Symbol へのマイグレーション<a class="headerlink" href="#migrating-from-nis1-to-symbol" title="この見出しへのパーマリンク"></a></h1>
+<p>Symbol では以前に利用可能だった NIS1 の機能のほとんどが進化しました。このドキュメントは以前の NIS1 の機能を、新たに利用可能な Symbol の技術に <strong>あなたのアプリケーションをアップグレード</strong> する手助けとなるでしょう。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><strong>オプトイン</strong> によって、NIS1 資産を Symbol のアカウントへ移行することができます。より詳細は <a class="reference internal" href="post-launch-optin-xym-retrieval.html"><span class="doc">ローンチ後オプトインで XYM を取得する</span></a> を参照してください。</p>
+</div>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">NIS1 と Symbol の機能比較</span><a class="headerlink" href="#id1" title="このテーブルへのパーマリンク"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>NEM NIS1</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>ビルドイン機能</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>モザイク</p></td>
+<td><p>モザイク</p></td>
+</tr>
+<tr class="row-even"><td><p>ネームスペース</p></td>
+<td><p>ネームスペース</p></td>
+</tr>
+<tr class="row-odd"><td><p>デリゲートハーベスティング</p></td>
+<td><p>デリゲートハーベスティング</p></td>
+</tr>
+<tr class="row-even"><td><p>マルチシグアカウント</p></td>
+<td><p>マルチレベルマルチシグアカウント</p></td>
+</tr>
+<tr class="row-odd"><td><p>モザイク制限</p></td>
+<td><p>応用モザイク制限</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>アカウント制限</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>メタデータコントロール</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>アグリゲートトランザクション</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>インフレーション</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>クロスチェーンスワップ</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>プラグイン</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>プロトコル</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Java 製</p></td>
+<td><p>C++ 製</p></td>
+</tr>
+<tr class="row-even"><td><p>POI (Proof of Importance)</p></td>
+<td><p>POS+ (Proof of Stake Plus)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Keccak-SHA3-512</p></td>
+<td><p>SHA-512</p></td>
+</tr>
+<tr class="row-even"><td><p>固定手数料</p></td>
+<td><p>変動手数料</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>レシート</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>マークル証明</p></td>
+</tr>
+</tbody>
+</table>
+<section id="test-network">
+<h2>テストネットワーク<a class="headerlink" href="#test-network" title="この見出しへのパーマリンク"></a></h2>
+<p>現時点で Symbol のテストを開始するには、資産を使用しない 2 つの選択肢があります。</p>
+<ul class="simple">
+<li><p><strong>パブリックテストネットワーク</strong>: パブリックテストネットワークはパブリックメインネットワークと同じテクノロジーと機能を使用しています。テストネットを実験的に使用することで、貴重な資産を失うことなく、トランザクションセットを試すことができます。テストネットを使用するには、次の <a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">ガイド</span></a> に従ってください。</p></li>
+<li><p><strong>プライベートテストネットワーク</strong>: プライベートテストネットネットワークを起動するには、 <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> パッケージを使用します。このツールは開発と学習目的の構築を、コマンド一つで行うスクリプトが含まれています。</p></li>
+</ul>
+</section>
+<section id="legacy-api-incompatibility">
+<h2>旧 API の非互換性<a class="headerlink" href="#legacy-api-incompatibility" title="この見出しへのパーマリンク"></a></h2>
+<p>NIS1 ネットワークで動作していた旧 API 呼び出しは Symbol とは <strong>非互換</strong> です。REST API ノードのポート <strong>3000</strong> 番を用いて API リクエストを行います。</p>
+<p>いくつかの <strong>ソフトウェア開発キット</strong> - 開発中の Symbol 分散型レッジャー用コンシューマアプリケーション - があります。現在 <a class="reference internal" href="../../sdk.html"><span class="doc">計画中の SDK</span></a> は Typescript / Javascript / NodeJS, Java, C#, Go, Python, Swift で書かれています。</p>
+<p>はじめに <a href="https://github.com/symbol/symbol-sdk-typescript-javascript" target="_blank">TS/JS SDK</a> を見てみることを推奨します。最も使用されている SDK であり <a href="https://symbol.github.io/symbol-sdk-typescript-javascript/" target="_blank">documentation</a> の先頭にあります。TS SDK のアーキテクチャは NIS1 向け <a href="https://nemproject.github.io/nem-library-docs/" target="_blank">NEM Library</a> にインスパイアされています。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>プロトコル: <a class="reference internal" href="../../concepts/node.html"><span class="doc">ノードアーキテクチャ</span></a></p></li>
+<li><p>リファレンス: <a class="reference internal" href="../../api.html"><span class="doc">REST Gateway</span></a></p></li>
+<li><p>Reference: <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.11.3/">REST API contract</a></p></li>
+</ul>
+</section>
+<section id="accounts-management">
+<h2>アカウントの管理<a class="headerlink" href="#accounts-management" title="この見出しへのパーマリンク"></a></h2>
+<p>どちらのプラットフォームも Ed25519 というデジタル署名アルゴリズムを使用しますが、ハッシュアルゴリズムが異なります。NIS1 は <strong>Keccak-SHA3-512</strong> を使用しますが、 Symbol は TLS をサポートするために <strong>SHA-512</strong> に変更されました。</p>
+<p>使用されているハッシュアルゴリズムの変更により、同じ秘密鍵でも NIS1 と Symbol では、異なる公開鍵とアドレスが使用されます。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>ガイド: <a class="reference internal" href="../account/creating-an-account.html"><span class="doc">アカウントの作成と開設</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../account/getting-account-information.html"><span class="doc">アカウント情報の取得</span></a></p></li>
+</ul>
+</section>
+<section id="legacy-transactions">
+<h2>旧トランザクション<a class="headerlink" href="#legacy-transactions" title="この見出しへのパーマリンク"></a></h2>
+<p>NIS1 と Symbol でのトランザクションの <strong>シリアライゼーションフォーマットに互換性がありません</strong>。それでも、ほとんどの種類のトランザクションは進化し​​ただけで削除されたものはありません。より少ない変更で Symbol トランザクションへのアップグレードが可能であることを意味します。</p>
+<p>トランザクションについての最初の注目すべき変更は、ステータスレスポンスが <a class="reference internal" href="../../api.html#websockets"><span class="std std-ref">WebSocket チャンネル</span></a> を通して受信されることです。NIS1 ではクライアントはトランザクションをアナウンスした直後に API 呼び出しの応答を受け取りました。Symbol は呼び出しの応答を非同期に受信し、呼び出しをブロックしません。</p>
+<p>それに加え、 Symbol では <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">TransferTransaction</span></a> は1つのバージョンだけになります。基軸通貨は通常の <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">モザイク</span></a> としてトランザクションのモザイク配列に追加されるようになりました。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>プロトコル: <a class="reference internal" href="../../concepts/transaction.html"><span class="doc">トランザクションライフサイクル</span></a></p></li>
+<li><p>プロトコル: <a href="https://github.com/symbol/symbol/tree/main/catbuffer/schemas/symbol/" target="_blank">Serialization schemas</a></p></li>
+</ul>
+</section>
+<section id="transaction-fees">
+<h2>トランザクション手数料<a class="headerlink" href="#transaction-fees" title="この見出しへのパーマリンク"></a></h2>
+<p>Symbol のトランザクション手数料は動的であり、ネットワーク参加者によって決定されます。各トランザクションの <strong>実効手数料</strong> は <strong>手数料乗数</strong> に <strong>トランザクションサイズ</strong> を掛けて算出されます。手数料乗数はトランザクションが承認されるブロックに付加され、ブロックをハーベストするノード所有者によって定義されます。</p>
+<p>トランザクションの定義中に、送信者はトランザクションをブロックに含めるための最大手数料を制限します。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>プロトコル: <a class="reference internal" href="../../concepts/fees.html"><span class="doc">トランザクション手数料</span></a></p></li>
+</ul>
+</section>
+<section id="mosaics">
+<h2>モザイク<a class="headerlink" href="#mosaics" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">モザイク</span></a> の管理に関してプロトコルレベルで顕著な変更が行われ、いまや <a class="reference internal" href="../../concepts/namespace.html"><span class="doc">ネームスペース</span></a> から <strong>独立</strong> した存在となりました。</p>
+<p>実際に NIS1 ではネームスペースにリンクされたアセットも完全に期限切れとなる可能性があります。 Symbol ではモザイクは代わりにそれ自身の <code class="docutils literal notranslate"><span class="pre">期間</span></code> を持つように設定され、一意な <code class="docutils literal notranslate"><span class="pre">nonce</span></code> 値が割り当てられます。</p>
+<p>最後に、 Levy は Symbol では使用できなくなりました。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>ガイド: <a class="reference internal" href="../mosaic/creating-a-mosaic.html"><span class="doc">モザイク作成</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>ネームスペース<a class="headerlink" href="#namespaces" title="この見出しへのパーマリンク"></a></h2>
+<p>ネームスペースは依然として <a class="reference internal" href="../../serialization/index.html#mosaicaliastransaction"><span class="std std-ref">MosaicAliasTransaction</span></a> によってモザイクを参照することができます。ネームスペースの所有者はアカウントまたはモザイク ID のいずれかをそのネームスペースのいずれかに添付できます。ネームスペース情報のエンドポイントはエイリアスフィールドにリンクされたオブジェクトを返します。</p>
+<p>また Symbol ルートネームスペースには <strong>ブロック数で表される</strong> <code class="docutils literal notranslate"><span class="pre">期間</span></code> フィールドを持つことで、年間更新が必須ではなくなりました。</p>
+<p>モザイクの転送を促進するためにモザイク作成者はネームスペースを登録し、そのネームスペースをモザイクのエイリアスにすることができます。エンドユーザーはモザイクの参照に <strong>エイリアスを使用してトランザクションを送信</strong> することができます。</p>
+<p>トランザクションがエイリアスを含む場合、 <strong>resolution</strong> はブロック内のそのエイリアスの解決された値を反映します。エイリアスアドレスやモザイクの背後にある実際の識別子を取得するには、クライアントアプリケーションはトランザクションが含まれるブロックにリンクされている関連の <a class="reference internal" href="../../concepts/receipt.html"><span class="doc">解決レシート</span></a> を取得する必要があります。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>ガイド: <a class="reference internal" href="../namespace/registering-a-namespace.html"><span class="doc">ネームスペースの登録</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../namespace/registering-a-subnamespace.html"><span class="doc">サブネームスペースの作成</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../namespace/link-a-namespace-to-a-mosaic.html"><span class="doc">ネームスペースをモザイクへリンクする</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../namespace/link-a-namespace-to-an-address.html"><span class="doc">ネームスペースをアドレスへリンクする</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../namespace/link-a-namespace-to-a-mosaic.html#sending-a-transfer-transaction-with-an-aliased-mosaic"><span class="std std-ref">エイリアス済みモザイクの TransferTransaction の送信</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../namespace/link-a-namespace-to-an-address.html#sending-a-transfer-transaction-to-an-aliased-address"><span class="std std-ref">エイリアス済みアドレスへの TransferTransaction の送信</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html"><span class="doc">レシート付きネームスペースの背後にあるアセットの識別子を取得</span></a></p></li>
+</ul>
+</section>
+<section id="multisignature-management">
+<h2>マルチシグネチャの管理<a class="headerlink" href="#multisignature-management" title="この見出しへのパーマリンク"></a></h2>
+<p>チェーン上で管理されたマルチシグネチャアカウントである Symbol のマルチシグネチャ実装は他の多くのいわゆるクライアントサイドのマルチシグネチャ実装とは異なります。</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">マルチシグアカウント</span></a> の作成</p></li>
+</ol>
+<p>NIS1 と異なり、アカウントの変更エントリに <code class="docutils literal notranslate"><span class="pre">最低承認数</span></code> と <code class="docutils literal notranslate"><span class="pre">最低削除数</span></code> のフィールドが追加されました。</p>
+<ul class="simple">
+<li><p><strong>最小削除数</strong>: マルチシグアカウントから署名者を削除するトランザクションをブロードキャストするために必要な署名者の数を定義します。</p></li>
+<li><p><strong>最小承認数</strong>: 他のタイプのトランザクションに必要な署名者の数を定義します。</p></li>
+</ul>
+<p>さらに、マルチシグアカウントに追加される署名者は <strong>署名</strong> (オプトインプロセス)を送信して変更について承認する必要があります。このプロセスを促進するために <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> のトランザクションタイプは <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">アグリゲートトランザクション</span></a> でラップされる必要があります。</p>
+<ol class="arabic simple" start="2">
+<li><p>マルチシグネチャトランザクションは <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">アグリゲートトランザクション</span></a> と組み合わせて動作します。</p></li>
+</ol>
+<p>新しい AggregateTransaction は異なる参加者が関わる複数のトランザクションをまとめてラップすることができます。すべての参加者がアグリゲートに共同署名すると、インナートランザクションはアトミックにブロックへ取り込まれます。それ以外の場合にはいずれのトランザクションも承認されません。</p>
+<p>NIS1のようにマルチシグトランザクションを送信するには、トランザクションの開始者はそれをアグリゲートのインナートランザクションとして追加する必要があります。次にマルチシグで定義された最小数の署名者が、共有アカウントからのトランザクションのアナウンスを許可するために、アグリゲートに署名しなければなりません。</p>
+<p><strong>こちらも参照してください</strong>:</p>
+<ul class="simple">
+<li><p>ガイド: <a class="reference internal" href="../multisig/creating-a-multisig-account.html"><span class="doc">マルチシグアカウントの作成</span></a></p></li>
+<li><p>ガイド: <a class="reference internal" href="../aggregate/sending-a-multisig-transaction.html"><span class="doc">マルチシグトランザクションの送信</span></a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;05&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/migration/migrating-from-nem-to-symbol.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">NIS1 から Symbol へのマイグレーション</a><ul>
+<li><a class="reference internal" href="#test-network">テストネットワーク</a></li>
+<li><a class="reference internal" href="#legacy-api-incompatibility">旧 API の非互換性</a></li>
+<li><a class="reference internal" href="#accounts-management">アカウントの管理</a></li>
+<li><a class="reference internal" href="#legacy-transactions">旧トランザクション</a></li>
+<li><a class="reference internal" href="#transaction-fees">トランザクション手数料</a></li>
+<li><a class="reference internal" href="#mosaics">モザイク</a></li>
+<li><a class="reference internal" href="#namespaces">ネームスペース</a></li>
+<li><a class="reference internal" href="#multisignature-management">マルチシグネチャの管理</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

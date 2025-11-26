@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Atomic cross-chain swap between public and private chain &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Transfers" href="../transfer/index.html" />
+    <link rel="prev" title="SecretLock" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">SecretLock</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Atomic cross-chain swap between public and private chain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">SecretLock</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Atomic cross-chain swap between public and private chain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="atomic-cross-chain-swap-between-public-and-private-chain">
+<h1>Atomic cross-chain swap between public and private chain<a class="headerlink" href="#atomic-cross-chain-swap-between-public-and-private-chain" title="Permalink to this heading"></a></h1>
+<p>Trade tokens between different blockchains without using an intermediary party in the process.</p>
+<section id="use-case">
+<h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h2>
+<p>Alice and Bob want to exchange <strong>10 alice.tokens for 10 bob.tokens</strong>.
+The problem is that they are not in the same network: alice.token is defined in a private chain using Symbol tech, whereas bob.token is only present in Symbol’s public chain.</p>
+<p>One non-atomic solution could be:</p>
+<ol class="arabic simple">
+<li><p>Alice sends 10 alice tokens to Bob (private chain).</p></li>
+<li><p>Bob receives the transaction.</p></li>
+<li><p>Bob sends 10 bob tokens to Alice (public chain).</p></li>
+<li><p>Alice receives the transaction.</p></li>
+</ol>
+<p>However, they do not trust each other that much.
+As you may have noticed, Bob could keep Alice’s tokens if he opts not to perform 3.</p>
+<p>This guide will show you how to define a secure way to exchange tokens between different participants and networks.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete the <a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">getting started section</span></a>.</p></li>
+<li><p>All participant involved in the swap must own at least one account in each blockchain:</p></li>
+</ul>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePrivateChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPublicChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPrivateChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateChainTransactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionHttp</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">publicChainTransactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransactionHttp</span><span class="p">(</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">publicChainGenerationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NETWORK_GENERATION_HASH</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateChainGenerationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">NETWORK_GENERATION_HASH</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">alicePublicChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">alicePrivateChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPublicChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobPrivateChainAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateChainTransactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionHttp</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">publicChainTransactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransactionHttp</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">publicChainGenerationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NETWORK_GENERATION_HASH</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateChainGenerationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NETWORK_GENERATION_HASH</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Alice account in the private chain must own at least 10 alice.tokens.</p></li>
+<li><p>Bob account in the public chain must own at least 10 bob.tokens.</p></li>
+<li><p>Both accounts should have enough network currency to pay for the transaction fees.</p></li>
+</ul>
+</section>
+<section id="method-01-using-the-sdk">
+<h2>Method #01: Using the SDK<a class="headerlink" href="#method-01-using-the-sdk" title="Permalink to this heading"></a></h2>
+<p>1. Alice generates a random set of bytes called <code class="docutils literal notranslate"><span class="pre">proof</span></code>. The proof should have a size between <code class="docutils literal notranslate"><span class="pre">10</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code> bytes.
+Then, applies a <strong>SHA3-256</strong> algorithm to it, obtaining the <code class="docutils literal notranslate"><span class="pre">secret</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>Alice hashes the obtained proof with one of the <a class="reference internal" href="../../serialization/index.html#lockhashalgorithm"><span class="std std-ref">available algorithms</span></a> to generate the <code class="docutils literal notranslate"><span class="pre">secret</span></code>.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">randomBytes</span><span class="p">(</span><span class="mf">20</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">proof</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">random</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Proof:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">proof</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sha3_256</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hash</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">random</span><span class="p">).</span><span class="nx">hex</span><span class="p">().</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Secret:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">randomBytes</span><span class="p">(</span><span class="mf">20</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">proof</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">random</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Proof:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">proof</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">js_sha3_1</span><span class="p">.</span><span class="nx">sha3_256</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hash</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">random</span><span class="p">).</span><span class="nx">hex</span><span class="p">().</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Secret:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Alice defines the <a class="reference internal" href="../../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransaction</span></a> <strong>TX1</strong>:</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX1 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>SecretLockTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaic</p></td>
+<td><p>10 <code class="docutils literal notranslate"><span class="pre">00D3378709746FC4</span></code> (alice token)</p></td>
+</tr>
+<tr class="row-even"><td><p>Recipient</p></td>
+<td><p>Bob’s address (Private Chain)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Algorithm</p></td>
+<td><p>SHA3-256</p></td>
+</tr>
+<tr class="row-even"><td><p>Duration</p></td>
+<td><p>96 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>SHA3-256(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Network</p></td>
+<td><p>Private Chain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SecretLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;00D3378709746FC4&#39;</span><span class="p">),</span><span class="w"> </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="p">)),</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">((</span><span class="mf">96</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3600</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">30</span><span class="p">),</span><span class="w"> </span><span class="c1">// assuming one block every 30 seconds</span>
+<span class="w">  </span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">bobPrivateChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">SecretLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;00D3378709746FC4&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="p">),</span>
+<span class="w">  </span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">((</span><span class="mf">96</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3600</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">30</span><span class="p">),</span><span class="w"> </span><span class="c1">// assuming one block every 30 seconds</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">bobPrivateChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once announced, this transaction will remain locked until someone discovers the proof that matches the secret. If no one unlocks it before the duration set is reached, the locked funds will be returned back to Alice.</p>
+<ol class="arabic simple" start="4">
+<li><p>Alice <strong>announces TX1 to the private network</strong> and <strong>shares with Bob the secret</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bob should retrieve the secret from the chain. It is Bob’s responsibility to verify the secret correctness.</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx1Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alicePrivateChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">tx1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">privateChainGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">privateChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx1Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx1Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alicePrivateChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">tx1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">privateChainGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">privateChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx1Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Bob announces the following <strong>SecretLockTransaction TX2</strong> to the <strong>public network</strong></p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX2 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>SecretLockTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaic</p></td>
+<td><p>10 <code class="docutils literal notranslate"><span class="pre">10293DE77C684F71</span></code> (bob token)</p></td>
+</tr>
+<tr class="row-even"><td><p>Recipient</p></td>
+<td><p>Alice’s address (Public Chain)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Algorithm</p></td>
+<td><p>SHA3-256</p></td>
+</tr>
+<tr class="row-even"><td><p>Duration</p></td>
+<td><p>84 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>SHA3-256(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Network</p></td>
+<td><p>Public Chain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SecretLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;10293DE77C684F71&#39;</span><span class="p">),</span><span class="w"> </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="p">)),</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">((</span><span class="mf">84</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3600</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">30</span><span class="p">),</span><span class="w"> </span><span class="c1">// assuming one block every 30 seconds</span>
+<span class="w">  </span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">alicePublicChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">SecretLockTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;10293DE77C684F71&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="p">),</span>
+<span class="w">  </span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">((</span><span class="mf">84</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3600</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">30</span><span class="p">),</span><span class="w"> </span><span class="c1">// assuming one block every 30 seconds</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">alicePublicChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The duration which funds can be unlocked should be a smaller time frame than TX1’s. Alice knows the secret, so Bob must make sure he will have some time left after Alice releases the secret.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To guarantee that TX1 cannot be <a class="reference internal" href="../../concepts/block.html#rollbacks"><span class="std std-ref">rolled back</span></a>, Bob must wait until TX1 receives at least <code class="docutils literal notranslate"><span class="pre">maxRollBackBlocks</span></code> confirmations before announcing TX2.</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx2Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bobPublicChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">tx2</span><span class="p">,</span><span class="w"> </span><span class="nx">publicChainGenerationHash</span><span class="p">);</span>
+<span class="nx">publicChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx2Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id12" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx2Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bobPublicChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">tx2</span><span class="p">,</span><span class="w"> </span><span class="nx">publicChainGenerationHash</span><span class="p">);</span>
+<span class="nx">publicChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx2Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Alice announces the <a class="reference internal" href="../../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransaction</span></a> <strong>TX3</strong> to the <strong>public network</strong>. This transaction defines the encrypting algorithm used, the original proof and the secret:</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX3 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>SecretProofTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recipient</p></td>
+<td><p>Alice’s address (Public Chain)</p></td>
+</tr>
+<tr class="row-even"><td><p>Algorithm</p></td>
+<td><p>SHA3-256</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>SHA3-256(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Proof</p></td>
+<td><p>proof</p></td>
+</tr>
+<tr class="row-odd"><td><p>Network</p></td>
+<td><p>Public Chain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To guarantee that TX2 cannot be <a class="reference internal" href="../../concepts/block.html#rollbacks"><span class="std std-ref">rolled back</span></a>, Alice must wait until TX2 receives at least <code class="docutils literal notranslate"><span class="pre">maxRollBackBlocks</span></code> confirmations before announcing TX3.</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id13" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SecretProofTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">alicePublicChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">proof</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">tx3Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alicePublicChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">tx3</span><span class="p">,</span><span class="w"> </span><span class="nx">publicChainGenerationHash</span><span class="p">);</span>
+<span class="nx">publicChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx3Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id14" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">SecretProofTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">alicePublicChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">proof</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MAIN_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">tx3Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alicePublicChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">tx3</span><span class="p">,</span><span class="w"> </span><span class="nx">publicChainGenerationHash</span><span class="p">);</span>
+<span class="nx">publicChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx3Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Once TX3 is confirmed, the <strong>proof</strong> is revealed. <strong>TX2 transaction is unlocked</strong>, and Alice receives the locked funds.</p></li>
+<li><p>Bob picks the proof and announces the <strong>SecretProofTransaction TX4</strong> to the <strong>private network</strong>, receiving the locked funds from <strong>TX1</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To guarantee that TX3 cannot be <a class="reference internal" href="../../concepts/block.html#rollbacks"><span class="std std-ref">rolled back</span></a>, Bob must wait until TX3 receives at least <code class="docutils literal notranslate"><span class="pre">maxRollBackBlocks</span></code> before announcing TX4.</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX4 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>SecretProofTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recipient</p></td>
+<td><p>Bob’s address (Private Chain)</p></td>
+</tr>
+<tr class="row-even"><td><p>Algorithm</p></td>
+<td><p>SHA3-256</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>SHA3-256(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Proof</p></td>
+<td><p>proof</p></td>
+</tr>
+<tr class="row-odd"><td><p>Network</p></td>
+<td><p>Private Chain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.ts">View Code</a></span><a class="headerlink" href="#id15" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SecretProofTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">bobPrivateChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">proof</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">tx4Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bobPrivateChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">tx4</span><span class="p">,</span><span class="w"> </span><span class="nx">privateChainGenerationHash</span><span class="p">);</span>
+<span class="nx">privateChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx4Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/secretlock/CrossChainSwap.js">View Code</a></span><a class="headerlink" href="#id16" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">tx4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">SecretProofTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">LockHashAlgorithm</span><span class="p">.</span><span class="nx">Op_Sha3_256</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">secret</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">bobPrivateChainAccount</span><span class="p">.</span><span class="nx">address</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">proof</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">MIJIN</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">tx4Signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bobPrivateChainAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">tx4</span><span class="p">,</span><span class="w"> </span><span class="nx">privateChainGenerationHash</span><span class="p">);</span>
+<span class="nx">privateChainTransactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">tx4Signed</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="is-the-process-atomic">
+<h2>Is the process atomic?<a class="headerlink" href="#is-the-process-atomic" title="Permalink to this heading"></a></h2>
+<p>The process is atomic but should be completed with lots of time before the deadlines:</p>
+<ul class="simple">
+<li><p>✅ Bob does not want to announce TX2: Alice will receive her funds back after 94 hours.</p></li>
+<li><p>✅ Alice does not announce TX3: Bob will receive his refund after 84h. Alice will unlock her funds as well after 94 hours.</p></li>
+<li><p>⚠️Alice signs and announces TX3: Alice receives Bob’s funds. Bob will have enough time to sign TX4 because TX1’s duration is longer than TX2’s.</p></li>
+<li><p>⚠️A rollback rewrites the history: Alice and Bob have waited at least <code class="docutils literal notranslate"><span class="pre">maxRollBackBlocks</span></code> between each transaction confirmation.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;10&#8209;06</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Atomic cross-chain swap between public and private chain</a><ul>
+<li><a class="reference internal" href="#use-case">Use case</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#method-01-using-the-sdk">Method #01: Using the SDK</a></li>
+<li><a class="reference internal" href="#is-the-process-atomic">Is the process atomic?</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;06.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;06.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

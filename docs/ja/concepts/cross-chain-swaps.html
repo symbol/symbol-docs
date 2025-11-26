@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>クロスチェーンスワップ &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="暗号理論" href="cryptography.html" />
+    <link rel="prev" title="コンセンサス" href="consensus-algorithm.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/cross-chain-swaps.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/cross-chain-swaps.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="cross-chain-swaps">
+<h1>クロスチェーンスワップ<a class="headerlink" href="#cross-chain-swaps" title="この見出しへのパーマリンク"></a></h1>
+<p>クロスチェーンスワップは、その過程に第三者(例: 両替サービス)が入ることなく、異なるブロックチェーン間でのトークントレードを可能にします。</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/cross-chain-swap.png" src="../_images/cross-chain-swap.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">パブリックとプライベート間のクロスチェーン交換</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>Symbol は <strong>ハッシュタイムロックコントラクト</strong> (HTLC) プロトコルに従って、アセットの分散型交換のためにトラストレス環境を作成します。プロトコルはすべての参加者が同意した場合にスワップが行われることを保証します。それと引き換えに、参加者の一部が手順を完了させないと決めた場合、各参加者はロックされた資金を受け取ることになります。</p>
+<p>HTLC はカウンターパーティーリスクの回避のために <em>hashlocks</em> と <em>timelocks</em> を使用します。トークンの交換に関わる各参加者はそれを完了させるために proof (hashlock) を示さなければなりません。それが失敗する場合、ロックされたアセットはタイムロックが解消された後、元の所有者へ返却されます。</p>
+<p>プロトコルの詳細な説明は <a class="reference external" href="https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts">Bitcoin Wiki</a> を参照してください。</p>
+<section id="protocol">
+<h2>プロトコル<a class="headerlink" href="#protocol" title="この見出しへのパーマリンク"></a></h2>
+<p>Alice と Bob は <strong>10 alice:tokens を 10 bob:tokens</strong> に交換したいと思っています。</p>
+<p>課題は彼らが同じネットワークに存在していないことです: alice:token は Symbol  のプライベートチェーン上に、一方で bob:token は Symbol のパブリックチェーン上に存在しています。</p>
+<p>トークン間の技術的な違いにより、あるブロックチェーンから別のブロックチェーンへトークンを直接取引することは不可能です。 Symbol パブリックおよびプライベートチェーンの場合、同じモザイク名でも異なる定義と配布されていることも、存在しないこともあります。Bitcoin と Symbol の違いは、各ブロックチェーンがまったく異なるテクノロジーを使用しているためです。</p>
+<p>文字通り、異なるチェーン間でトークンを転送する代わりに、各チェーン内で取引が行われます。クロスチェーンスワッププロトコルは、トークンスワップがアトミックに発生することを保証します。</p>
+<figure class="align-center" id="id2">
+<div class="mermaid">
+            sequenceDiagram
+    participant Alice
+    participant Private Chain
+    participant Public Chain
+    participant Bob
+    Note over Alice: proof = 'random'
+    Note over Alice: h = sha_256()
+    Note over Alice: secret = h(proof)
+    Alice -&gt;&gt;  Private Chain: announces TX1(secret)
+    Note right of Alice: TX1 waits for proof
+    Alice --&gt;&gt; Bob: tells secret
+    Bob -&gt;&gt; Public Chain: announces TX2(secret)
+    Note left of Bob: TX2 waits for proof
+    Alice -&gt;&gt;  Public Chain: announces TX3(proof, secret)
+    Note left of Public Chain: proof becomes public
+    Note left of Bob: TX2 executes
+    Note left of Bob: Alice receives funds
+    Bob -&gt;&gt;  Private Chain: announces TX4(proof, secret)
+    Note right of Alice: TX1 executes
+    Note right of Alice: Bob receives funds
+
+        </div><figcaption>
+<p><span class="caption-text">Cross-chain swap sequence diagram</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>スワップを開始する前に、すべての関与する参加者は、各ブロックチェーンで少なくとも 1 つのアカウントを所有している必要があります。</p>
+<ol class="arabic simple">
+<li><p>Alice は <code class="docutils literal notranslate"><span class="pre">proof</span></code> と呼ばれるランダムなバイトを生成します。proof は <code class="docutils literal notranslate"><span class="pre">10</span></code> から <code class="docutils literal notranslate"><span class="pre">1000</span></code> バイトの間でなければなりません。</p></li>
+<li><p>Alice は得られた proof を <a class="reference internal" href="../serialization/index.html#lockhashalgorithm"><span class="std std-ref">利用可能なアルゴリズム</span></a> の1つでハッシュ化して <code class="docutils literal notranslate"><span class="pre">secret</span></code> を生成します。</p></li>
+<li><p>Alice は <a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransaction</span></a> <strong>TX1</strong> を定義します:</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX1 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>タイプ</p></td>
+<td><p>SecretLockTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaic</p></td>
+<td><p>10 alice.token</p></td>
+</tr>
+<tr class="row-even"><td><p>Recipient</p></td>
+<td><p>Bob のアドレス (プライベートチェーン)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Algorithm</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-even"><td><p>Duration</p></td>
+<td><p>96 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>h(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Network</p></td>
+<td><p>Private Chain</p></td>
+</tr>
+</tbody>
+</table>
+<p>度アナウンスされると、誰かがシークレットにマッチする証明を発見するまで、このトランザクションはロックされたままです。もしセットされた期限よりも前に、誰もアンロックしない場合は、ロックされた資産は Alice へ返還されます。</p>
+<ol class="arabic simple" start="4">
+<li><p>Alice は <strong>TX1 をプライベートネットワークへアナウンス</strong> し <strong>Bob とシークレットを共有</strong> します。</p></li>
+<li><p>Bob はチェーンからシークレットを取得し、次の <strong>SecretLockTransaction TX2</strong> を <strong>パブリックネットワーク</strong> へアナウンスします。</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX2 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>タイプ</p></td>
+<td><p>SecretLockTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaic</p></td>
+<td><p>10 bob.token</p></td>
+</tr>
+<tr class="row-even"><td><p>Recipient</p></td>
+<td><p>Alice のアドレス (パブリックチェーン)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Algorithm</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-even"><td><p>Duration</p></td>
+<td><p>84 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>h(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Network</p></td>
+<td><p>Public Chain</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="6">
+<li><p>Alice は <a class="reference internal" href="../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransaction</span></a> <strong>TX3</strong> を <strong>パブリックネットワーク</strong> へアナウンスします。このトランザクションは使用している暗号化アルゴリズム、オリジナルの証明とシークレットを定義します。</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX3 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>タイプ</p></td>
+<td><p>SecretProofTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recipient</p></td>
+<td><p>Alice のアドレス (パブリックチェーン)</p></td>
+</tr>
+<tr class="row-even"><td><p>Algorithm</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>h(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Proof</p></td>
+<td><p>proof</p></td>
+</tr>
+<tr class="row-odd"><td><p>Network</p></td>
+<td><p>Public Chain</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="7">
+<li><p>TX3 が承認されると <strong>proof</strong> が明かされます。<strong>TX2 トランザクションはアンロック</strong> されて Alice はロックされた資産を受け取ります。</p></li>
+<li><p>Bob は proof を手に入れて <strong>SecretProofTransaction TX4</strong> を <strong>プライベートネットワーク</strong> へアナウンスし、ロックされた資産を <strong>TX1</strong> から受け取ります。</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>TX4 Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>タイプ</p></td>
+<td><p>SecretProofTransaction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recipient</p></td>
+<td><p>Bob のアドレス (プライベートチェーン)</p></td>
+</tr>
+<tr class="row-even"><td><p>Algorithm</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secret</p></td>
+<td><p>h(proof)</p></td>
+</tr>
+<tr class="row-even"><td><p>Proof</p></td>
+<td><p>proof</p></td>
+</tr>
+<tr class="row-odd"><td><p>Network</p></td>
+<td><p>Private Chain</p></td>
+</tr>
+</tbody>
+</table>
+<p>このプロセスはアトミックですが、デッドラインを迎える前に完了するまで、多くの時間がかかることになります:</p>
+<ul class="simple">
+<li><p>TX1 の期間は TX2 の期間より大幅に長くして、最初の参加者が proof を公開した後に、2番目の参加者が TX1 のロックを解除する時間を確保する必要があります。</p></li>
+<li><p><a class="reference internal" href="block.html#rollbacks"><span class="std std-ref">transaction rollbacks</span></a> を回避するには、各参加者のアナウンス間に少なくとも <code class="docutils literal notranslate"><span class="pre">maxRollBackBlocks</span></code> を待機する必要があります。</p></li>
+</ul>
+</section>
+<section id="related-transactions">
+<h2>関連トランザクション<a class="headerlink" href="#related-transactions" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x4152</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransaction</span></a></p></td>
+<td><p>異なるチェーン間でのトークンスワップを開始するトランザクション。</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x4252</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransaction</span></a></p></td>
+<td><p>異なるチェーン間でのトークンスワップを完結するトランザクション。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html">パブリックとプライベート間のアトミッククロスチェイン交換</a></p>
+<p class="ablog-post-excerpt">第三者の仲介者が入ることなく、異なるブロックチェーン間でトークンの交換をします。</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/cross-chain-swaps.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">クロスチェーンスワップ</a><ul>
+<li><a class="reference internal" href="#protocol">プロトコル</a></li>
+<li><a class="reference internal" href="#related-transactions">関連トランザクション</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

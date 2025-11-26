@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>REST API Troubleshooting Guide for Exchanges &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contribute" href="../../contribute/index.html" />
+    <link rel="prev" title="Integrating with an Exchange" href="exchange-integration.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/exchanges/exchange-REST-troubleshooting.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/exchanges/exchange-REST-troubleshooting.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Exchanges</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="exchange-integration.html">Integrating with an Exchange</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">REST API Troubleshooting Guide for Exchanges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Exchanges</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="exchange-integration.html">Integrating with an Exchange</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">REST API Troubleshooting Guide for Exchanges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="rest-api-troubleshooting-guide-for-exchanges">
+<h1>REST API Troubleshooting Guide for Exchanges<a class="headerlink" href="#rest-api-troubleshooting-guide-for-exchanges" title="Permalink to this heading"></a></h1>
+<p>The <a class="reference internal" href="exchange-integration.html"><span class="doc">Integrating with an Exchange</span></a> guide explains how to integrate the <code class="docutils literal notranslate"><span class="pre">XYM</span></code> token into an Exchange platform using the <a class="reference internal" href="../../sdk.html"><span class="doc">available SDKs</span></a>. It is also possible to perform this integration using the <a class="reference internal" href="../../api.html"><span class="doc">REST API</span></a> but the procedure is significantly <strong>more complicated</strong>.</p>
+<p>This page does not aim at repeating the content of the <a class="reference internal" href="exchange-integration.html"><span class="doc">Integrating with an Exchange</span></a> guide using REST, instead, it shows how to fix <strong>the most common problems</strong> encountered when using this API in the development of an Exchange.</p>
+<p>Feel free to jump directly to the section of your interest.</p>
+<nav class="contents local" id="topics">
+<p class="topic-title">Topics</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#receiving-transactions" id="id3">Receiving transactions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#filtering-by-block-height-and-more" id="id4">Filtering (by block height and more)</a></p></li>
+<li><p><a class="reference internal" href="#parsing-of-embedded-transactions" id="id5">Parsing of embedded transactions</a></p></li>
+<li><p><a class="reference internal" href="#alias-resolution" id="id6">Alias resolution</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sending-transactions" id="id7">Sending transactions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#transaction-deadline" id="id8">Transaction deadline</a></p></li>
+<li><p><a class="reference internal" href="#transaction-fee" id="id9">Transaction fee</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="receiving-transactions">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Receiving transactions</a><a class="headerlink" href="#receiving-transactions" title="Permalink to this heading"></a></h2>
+<section id="filtering-by-block-height-and-more">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Filtering (by block height and more)</a><a class="headerlink" href="#filtering-by-block-height-and-more" title="Permalink to this heading"></a></h3>
+<p>Use the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions">/transactions/confirmed</a> endpoint to retrieve any group of confirmed transactions. Among other filtering options, the following parameters are typically useful for narrowing down searches:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 15%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>integer</p></td>
+<td><p>Retrieve only transactions of this type. The code for <a class="reference internal" href="../../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a> is 16724 (0x4154).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">recipientAddress</span></code></p></td>
+<td><p>string</p></td>
+<td><p>The address <strong>receiving</strong> the transaction. Compare with <code class="docutils literal notranslate"><span class="pre">address</span></code> which returns all transactions involving the given address (as sender, recipient or cosigner).</p>
+<p>This might either be a Base32 <a class="reference internal" href="../../concepts/cryptography.html#address"><span class="std std-ref">Address</span></a> or a <a class="reference internal" href="../../concepts/namespace.html"><span class="doc">Namespace</span></a>. If the bit 0 of byte 0 is not set (e.g. 0x90) then it is an address, otherwise (e.g. 0x91) it represents a namespace id which starts at byte 1.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fromHeight</span></code></p></td>
+<td><p>string</p></td>
+<td><p>The starting block height to search for.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">toHeight</span></code></p></td>
+<td><p>string</p></td>
+<td><p>The ending block height to search for.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">embedded</span></code></p></td>
+<td><p>boolean</p></td>
+<td><p>Use <code class="docutils literal notranslate"><span class="pre">true</span></code> to automatically search inside aggregate transactions. The data returned by a standalone transaction and an embedded transaction (one inside an aggregate) is slightly different (Check the next section).</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">false</span></code> to manually search for aggregate transactions (e.g. types 0x4141 and 0x4241) and parse them.</p>
+<p><strong>Caution</strong>: Does not work when combined with <code class="docutils literal notranslate"><span class="pre">address</span></code>, only with <code class="docutils literal notranslate"><span class="pre">recipientAddress</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here is an example query to a <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NODE_URL
+  /transactions/confirmed
+    ?recipientAddress=TAOXUJOTTW3W5XTBQMQEX3SQNA6MCUVGXLXR3TA
+    &amp;type=16724
+    &amp;fromHeight=70000
+    &amp;toHeight=80000
+    &amp;embedded=true
+</pre></div>
+</div>
+<p>This query returns the list of all <strong>transfer</strong> transactions sent to address <code class="docutils literal notranslate"><span class="pre">TAOXU...</span></code>, that happened between block height <strong>70000</strong> and <strong>80000</strong>, including transactions <strong>embedded</strong> inside other transactions.</p>
+<p>The next section explains how to parse the resulting list.</p>
+</section>
+<section id="parsing-of-embedded-transactions">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Parsing of embedded transactions</a><a class="headerlink" href="#parsing-of-embedded-transactions" title="Permalink to this heading"></a></h3>
+<p>Symbol supports <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">Aggregate Transaction</span></a>, i.e., <strong>transactions inside other transactions</strong>. For the most part it does not matter if a transaction is <strong>standalone</strong> or <strong>embedded</strong> inside another one, but there are a few differences which might be confusing when parsing incoming transactions. This section explains them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can always <strong>receive</strong> embedded transactions, even if you never <strong>create</strong> any yourself. Make sure you understand how to parse them!</p>
+</div>
+<p>As shown in the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchConfirmedTransactions">/transactions/confirmed</a> endpoint documentation, a successfull query returns <strong>a data array</strong> including transactions and metadata (this array is <strong>paginated</strong> so pay attention to the <code class="docutils literal notranslate"><span class="pre">pageSize</span></code> and <code class="docutils literal notranslate"><span class="pre">pageNumber</span></code> parameters and return values). Each one of the returned transactions can match a different schema depending on the transaction’s type, so the <code class="docutils literal notranslate"><span class="pre">type</span></code> field of each transaction must be checked.</p>
+<p>Moreover, the metadata content is also different when the transaction is embedded inside an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">Aggregate Transaction</span></a>.</p>
+<p>This is specially important when using the <code class="docutils literal notranslate"><span class="pre">embedded=true</span></code> parameter since some of the returned transactions might be <strong>embedded</strong> transactions whereas some other might be <strong>regular</strong> transactions, and the involved schemas are different.</p>
+<p>For example the above sample query, which filters by <code class="docutils literal notranslate"><span class="pre">type=16724</span></code> (transfer transactions), actually returns both <code class="docutils literal notranslate"><span class="pre">TransferTransactionDTO</span></code> and <code class="docutils literal notranslate"><span class="pre">EmbeddedTransferTransactionDTO</span></code> objects because of the <code class="docutils literal notranslate"><span class="pre">embedded=true</span></code> parameter. The attached metadata also varies between <code class="docutils literal notranslate"><span class="pre">TransactionMetaDTO</span></code> and <code class="docutils literal notranslate"><span class="pre">EmbeddedTransactionMetaDTO</span></code>.</p>
+<p>These are the main differences to keep in mind:</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Metadata</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 35%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Regular</p></th>
+<th class="head"><p>Embedded</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Schema</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TransactionMetaDTO</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">EmbeddedTransactionMetaDTO</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">index</span></code></p></td>
+<td><p>Transaction index <strong>within the block</strong></p></td>
+<td><p>Transaction index <strong>within the aggregate transaction</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hash</span></code></p></td>
+<td><p>Transaction Hash</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">aggregateHash</span></code></p></td>
+<td><p>-</p></td>
+<td><p>Hash of the containing aggregate transaction.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Transaction</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 35%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Regular</p></th>
+<th class="head"><p>Embedded</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Schema</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TransferTransactionDTO</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">EmbeddedTransferTransactionDTO</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">size</span></code></p></td>
+<td><p>Transaction size in bytes</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">signature</span></code></p></td>
+<td><p>Signature generated by the signer</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">maxFee</span></code></p></td>
+<td><p>Maximum fee to pay for the transaction</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code></p></td>
+<td><p>Number of blocks before the transaction expires</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<p>The above 4 fields are missing from the embedded transaction because they belong to the containing aggregate transaction. To access them recover first the aggregate transaction using the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getConfirmedTransaction">/transactions/confirmed/{transactionId}</a> endpoint and <code class="docutils literal notranslate"><span class="pre">aggregateHash</span></code> as Id.</p>
+<p>If you are not interested in any of the fields listed above you can safely treat regular and embedded transfer transactions the same way, since they share the rest of properties.</p>
+</section>
+<section id="alias-resolution">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Alias resolution</a><a class="headerlink" href="#alias-resolution" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">Mosaics</span></a> IDs and <a class="reference internal" href="../../concepts/cryptography.html#address"><span class="std std-ref">addresses</span></a> are long random strings which are cumbersome to use. For convenience, Symbol provides <strong>namespaces</strong>, which are user-provided <strong>text strings</strong> (aliases) that can be used instead of addresses or mosaic IDs. A namespace can always be <strong>resolved</strong> into the actual address or mosaic ID that it represents.</p>
+<p>The most common example is <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> (Namespace ID <code class="docutils literal notranslate"><span class="pre">0xE74B99BA41F4AFEE</span></code>) which is an <strong>alias</strong> for Symbol’s native currency (Mosaic ID <code class="docutils literal notranslate"><span class="pre">0x6BED913FA20223F8</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mosaic ID <code class="docutils literal notranslate"><span class="pre">0x6BED913FA20223F8</span></code> and <code class="docutils literal notranslate"><span class="pre">0xE74B99BA41F4AFEE</span></code> can always be safely treated as equivalent.</p>
+<p>You might find transactions using one or the other depending on whether they were created using directly the mosaic ID or the namespace.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> is a namespace which does not <strong>expire</strong> so the above equivalence <strong>always holds</strong>. However, regular namespaces are rented <strong>for a limited amount of time</strong>, and this poses a problem when resolving them because after expiration a namespace might get rented again and be aliased to a different mosaic or address.</p>
+<p>Therefore, <strong>to correctly resolve a namespace found in a transaction, the block height that included the transaction must be taken into account</strong>.</p>
+<p>This is very easy to do because all blocks which include a namespace also include either a <a class="reference internal" href="../../serialization/index.html#mosaicresolutionstatement"><span class="std std-ref">MosaicResolutionStatement</span></a> or an <a class="reference internal" href="../../serialization/index.html#addressresolutionstatement"><span class="std std-ref">AddressResolutionStatement</span></a> containing the resolved namespace. Just use the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchMosaicResolutionStatements">/statements/resolutions/mosaic</a> and <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/searchAddressResolutionStatements">/statements/resolutions/address</a> endpoints to retrieve all statements for a given block, and then locate the unresolved namespace ID you are interested in.</p>
+<p><strong>Example using TESTNET:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">NODE_URL/transactions/confirmed?height=211972</span></code> retrieves all transactions included in block 211972.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;transaction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;35DC5689...&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;signerPublicKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B49D1910...&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;network&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">152</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16724</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;maxFee&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100000&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;deadline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8530382295&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;recipientAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;981D7A25D39DB76EDE6183204BEE50683CC152A6BAEF1DCC&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;mosaics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E374D0B5E061EE92&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>However, the mosaic ID <code class="docutils literal notranslate"><span class="pre">0xE374D0B5E061EE92</span></code> does not exist (<code class="docutils literal notranslate"><span class="pre">/mosaics/E374D0B5E061EE92</span></code> would return a <code class="docutils literal notranslate"><span class="pre">ResourceNotFound</span></code> error). Besides, the highest bit being set indicates this is actually a namespace.</p>
+</li>
+<li><p>You could check the <strong>current</strong> alias of this namespace by querying <code class="docutils literal notranslate"><span class="pre">/namespaces/E374D0B5E061EE92</span></code>, but you actually want to know the aliased mosaic ID <strong>at the time the transaction was confirmed</strong>.</p></li>
+<li><p>You do this by checking the block’s <a class="reference internal" href="../../serialization/index.html#mosaicresolutionstatement"><span class="std std-ref">MosaicResolutionStatement</span></a> at <code class="docutils literal notranslate"><span class="pre">/statements/resolutions/mosaic?height=211972</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;211972&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;unresolved&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E374D0B5E061EE92&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;resolutionEntries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;primaryId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;secondaryId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;resolved&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0DDE03C044AF95D4&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;60DEDC83EA7C4338C56C4FB6&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here you can see the resolved mosaic ID, <code class="docutils literal notranslate"><span class="pre">0x0DDE03C044AF95D4</span></code> which is a valid ID and can be queried with <code class="docutils literal notranslate"><span class="pre">/mosaics/0DDE03C044AF95D4</span></code>.</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="sending-transactions">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Sending transactions</a><a class="headerlink" href="#sending-transactions" title="Permalink to this heading"></a></h2>
+<p>Transactions are announced to the network through the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/announceTransaction">/transactions</a> endpoint which accepts an hexadecimal string representing the transaction’s payload. The process to build this payload is explained fairly extensively in the <a class="reference internal" href="../../concepts/transaction.html#transaction-definition"><span class="std std-ref">Defining a transaction</span></a> guide.</p>
+<p>The following sections aim at clarifying the points which have been deemed the most confusing by users of the API.</p>
+<section id="transaction-deadline">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Transaction deadline</a><a class="headerlink" href="#transaction-deadline" title="Permalink to this heading"></a></h3>
+<p>Transactions are not allowed to remain unconfirmed in the network forever, as this would pose a significant strain on the network’s resources. Instead, <strong>all transactions have a deadline</strong>, and are automatically disposed of when the deadline arrives.</p>
+<p>Users are free to use any deadline they want for their transactions, between <strong>now</strong> and <strong>6h into the future</strong> (48h for <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">Aggregate bonded</span></a> transactions). Transactions announced with a deadline outside this window will be rejected with an <strong>invalid deadline</strong> error.</p>
+<p>Deadlines are given in <strong>milliseconds since the creation of the nemesis block</strong>.</p>
+<p>The moment when the <a class="reference internal" href="../../concepts/block.html#block-creation"><span class="std std-ref">nemesis block</span></a> was created can be found in the <code class="docutils literal notranslate"><span class="pre">network.epochAdjustment</span></code> property of the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getNetworkProperties">/network/properties</a> endpoint. This is the <strong>number of seconds</strong> elapsed since the <a class="reference external" href="https://en.wikipedia.org/wiki/Unix_time">UNIX epoch</a> and <strong>it is always 1615853185 for MAINNET</strong>.</p>
+<p>In other words, you need to subtract the <strong>epoch adjustment</strong> from a Unix time to obtain a deadline. Therefore, a <strong>deadline 2h into the future</strong>, which is the default deadline provided by the SDK, can be calculated as:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">currentTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">now</span><span class="p">();</span><span class="w"> </span><span class="c1">// Seconds since the UNIX epoch</span>
+<span class="nx">deadline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">currentTime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">7200</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">epochAdjustment</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This deadline can now be used when building the transaction, and it will expire 2h from now (7200 seconds).</p>
+</section>
+<section id="transaction-fee">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Transaction fee</a><a class="headerlink" href="#transaction-fee" title="Permalink to this heading"></a></h3>
+<p>The effective <a class="reference internal" href="../../concepts/fees.html"><span class="doc">Fee</span></a> a transaction must pay to be announced is the <strong>transaction size</strong> (in bytes) times a <strong>fee multiplier</strong> chosen by the node that confirms the transaction.</p>
+<p>Since this multiplier is unknown when making the announcement, <strong>transactions</strong> define the <strong>maximum fee</strong> they are willing to pay.</p>
+<p>Moreover, <strong>nodes</strong> can define a <strong>minimum fee</strong> below which transactions are just ignored.</p>
+<p>As a consequence, choosing the right maximum fee for a transaction is very important: Too low a number and the transaction will not be confirmed by any node and will eventually expire. Too high maximum fees, though, will incur in unnecessary expenses.</p>
+<p>To help choose the right amount, the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v1.0.1/#operation/getTransactionFees">/network/fees/transaction</a> endpoint provides some statistics regarding the effective fees paid by the last 60 blocks. The returned data is:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Highest</p></td>
+<td><p>Biggest fee multiplier used in the last 60 blocks.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Median</p></td>
+<td><p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Median">median value</a> of the fee multipliers used in the last 60 blocks. See the <a class="reference internal" href="../../concepts/fees.html#fees-dynamic-multiplier"><span class="std std-ref">Dynamic fee multiplier</span></a> section for more details.</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Arithmetic_mean">average value</a> of the fee multipliers used in the last 60 blocks.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lowest</p></td>
+<td><p>Smallest fee multiplier used in the last 60 blocks.</p></td>
+</tr>
+<tr class="row-even"><td><p>Min</p></td>
+<td><p>The minimum fee multiplier accepted by the node being queried.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><code class="docutils literal notranslate"><span class="pre">minFeeMultiplier</span></code> refers to <strong>the node</strong> being queried, whereas the rest of properties refer to <strong>the whole network</strong>.</p>
+</div>
+<p>A good rule of thumb is to use the <code class="docutils literal notranslate"><span class="pre">medianFeeMultiplier</span></code>. This typically provides timely confirmation of transactions without incurring in excessive fees being paid.</p>
+</section>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2023&#8209;04&#8209;06</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/exchanges/exchange-REST-troubleshooting.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">REST API Troubleshooting Guide for Exchanges</a><ul>
+<li><a class="reference internal" href="#receiving-transactions">Receiving transactions</a><ul>
+<li><a class="reference internal" href="#filtering-by-block-height-and-more">Filtering (by block height and more)</a></li>
+<li><a class="reference internal" href="#parsing-of-embedded-transactions">Parsing of embedded transactions</a></li>
+<li><a class="reference internal" href="#alias-resolution">Alias resolution</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sending-transactions">Sending transactions</a><ul>
+<li><a class="reference internal" href="#transaction-deadline">Transaction deadline</a></li>
+<li><a class="reference internal" href="#transaction-fee">Transaction fee</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/22633385?v=4" class="git-info-image">Last updated by <a href="https://github.com/eltociear" target="_blank" rel="noopener noreferrer">Ikko Eltociear Ashimine</a>
+            on 2023&#8209;04&#8209;06.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/22633385?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/eltociear" target="_blank" rel="noopener noreferrer">Ikko Eltociear Ashimine</a>
+            on 2023&#8209;04&#8209;06.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

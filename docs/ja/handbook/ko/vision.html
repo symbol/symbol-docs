@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Vision: Symbol² &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Directory" href="../directory.html" />
+    <link rel="prev" title="Vision: Symbol²" href="../zh/vision.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="active">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/ko/vision.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/ko/vision.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../vision.html">Vision: Symbol²</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../es/vision.html">Español</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../id/vision.html">Bahasa Indonesia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../it/vision.html">Italiano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ja/vision.html">日本語</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pt/vision.html">Português</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ru/vision.html">Русский</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../zh/vision.html">中文</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">한국어</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../vision.html">Vision: Symbol²</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../es/vision.html">Español</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../id/vision.html">Bahasa Indonesia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../it/vision.html">Italiano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ja/vision.html">日本語</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pt/vision.html">Português</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ru/vision.html">Русский</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../zh/vision.html">中文</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">한국어</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="vision-symbol2">
+<h1>Vision: Symbol²<a class="headerlink" href="#vision-symbol2" title="この見出しへのパーマリンク"></a></h1>
+<p class="h1centered">우주 해적의 반영</p>
+<figure class="align-center" id="id23">
+<img alt="../../_images/ship cover blank.png" src="../../_images/ship cover blank.png" style="width: 600px;" />
+<figcaption>
+<p><span class="caption-text">버전 1.0</span><a class="headerlink" href="#id23" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<section id="id1">
+<h2>머리말<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h2>
+<p>먼저, 닻을 단단하게 고정하는 것이 중요합니다. 목적과 사명은 선장과 조수에 따라 달라질 수 있지만, 닻은 우리 모두를 단단하게 이어주는 매개체입니다. 혼란스러울 때, 좌절감이올 때, 불안할 때, 사람들은 언제든지 돌아와 자신이 왜 여기에 있는지 다시 생각해볼 수 있습니다.</p>
+<p>우리의 닻은 지금까지, 그리고 앞으로도 <strong>Symbol</strong> 입니다. 지금까지의 모든 프로젝트(앞으로 계속 될 수 많은 프로젝트도)와 마찬가지로 우리는 블록체인이 새로운 경제 체계를 추진하기에 가장 적합한 기술이라 믿고 그 추구에 대한 우리의 기여는 <strong>Symbol</strong> 입니다. 프로토콜을 통해 부를 쌓기보다는 체인의 <em>사용자</em> 분들에게 우선적으로 보상을 주는 것을 목적으로 한 합의 알고리즘이 특징입니다. 시스템으로서는 결정론적인 가상머신 <a class="footnote-reference brackets" href="#id13" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> 의 opcode와는 대조적으로, 시스템 레벨의 플러그인을 활용해 기능 확장을 할 수 있게 만든 구조가 특징입니다. 간단하지만 이러한 두가지 특성은 설계 철학, 즉 사용자 우선으로 서비스 지향 접근법을 정의한다는 것입니다. 블록체인 기술의 주역은 사람이며 <strong>Symbol</strong> 에서 하고자하는 모든 것에 있어서는 이점을 강조할 필요가 있습니다.</p>
+<p>여기 기록된 문장들은 백서, 라이트페이퍼, 비즈니스 문서, 매니페스트가 되기 위한 것이 아닙니다. 사람을 중심으로 하는 기술은 사용자들에 의해 개발되는 것이며, 우리는 커뮤니티와 함께 <strong>Symbol</strong> 을 정의, 디자인, 개발을 실시하고 있습니다. 대신, 이것을 배가 나아가기 위한 진로의 지침으로서 사용할 수 있는 북극성과 같은 존재라 생각해주세요. 닻은 우리를 땅에 튼튼하게 고정시켜 줄 것 입니다. 그리고 북극성은 배를 새로운 땅으로 이끄는 별자리입니다.</p>
+<p>~GHJ</p>
+</section>
+<section id="symbol-nis1">
+<h2>Symbol과 NIS1의 미래<a class="headerlink" href="#symbol-nis1" title="この見出しへのパーマリンク"></a></h2>
+<p>성공적인 프로토콜의 핵심은 <em>혁신</em> 입니다. 결제 인프라의 혁신(Bitcoin); 클라우드 컴퓨팅의 혁신(Ethereum); 클라우스 저장소의 혁신(Arweave); 무선 네트워크의 혁신(Helium); 이점에서 <strong>Symbol</strong> 은 사용자가 <em>가치</em> 를 디지털 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 으로 정의하고 교환할 수 있는 효율적인 마켓을 제공함으로써 기존 및 신규 <em>경제권</em> 모두 혁신하는 것을 목표로 하고 있습니다.</p>
+<p>이러한 시장은 목적에 따라 구축된 작은 체인(하위 체인)으로 표시되며 부분적으로 영 지식 증명에 기반한 롤업 중심의 상호 연결을 통해 결제 레이어(메인 체인)에 앵커링됩니다. 각 하위 체인은 새로운 블록을 생성하는 노드(블록 하베스터)에 보상하는 고유한 유틸리티 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> (모자이크)로 표시됩니다. 이러한 유틸리티 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰들</span></a> 은 스테이크(노드가 유동성 제공자 역할을 담당) 또는 사물 및 서비스로 교환(분산형 어플리케이션 및 분산형 거래소를 통해)될 수 있습니다.</p>
+<p>유동성 제공은 노드가 수행할 수 있는 새로운 유형의 서비스로 한 모자이크에서 다른 모자이크(<a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 쌍)로의 교환을 허락합니다. 노드가 유동성 제공을 담당하도록 선택하면 (<a class="reference internal" href="../../contribute/glossary.html#term-XYM"><span class="xref std std-term">XYM</span></a>)외에 적어도 하나의 다른 하위 체인의 토큰을 스테이크해야합니다. 효율적인 유동성 제공 노드는 다양한 토큰 쌍 바스켓을 유지합니다. 그렇게 함으로써 노드는 추가 요금을 징수하는 <em>스왑</em> 요청(새로운 타입의 트랜잭션)을 할 수 있습니다.</p>
+<p><em>결제 레이어</em> 에서 트랜잭션이 마무리되려면 메인체인의 유틸리티 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> (<a class="reference internal" href="../../contribute/glossary.html#term-XYM"><span class="xref std std-term">XYM</span></a>)이 필요합니다. 특정 하위 체인의 모든 노드는 롤업 프로세스에 참여하기 위해 <a class="reference internal" href="../../contribute/glossary.html#term-XYM"><span class="xref std std-term">XYM</span></a> 의 균형을 유지해야 합니다(이를 위해 블록 보상을 분배하여 공유함). 노드는 특정 트랜잭션 세트(예: 유효성 증명 또는 스테이블 코인)를 전문적으로 생성할 수 있습니다. 다른 사람들은 대신 현재 네트워크 수요에 따라 하위 체인 세트에 할당되는 조율된 노드 클러스터인 <em>Syndicate</em> 에 위임할 수도 있습니다.</p>
+<p><strong>Symbol</strong> 에서 출시될 예정인 첫 번째 하위 체인 중에는 <a class="reference internal" href="../../contribute/glossary.html#term-NIS1"><span class="xref std std-term">NIS1</span></a> 과 해당 체인의 네이티브 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 인 <a class="reference internal" href="../../contribute/glossary.html#term-XEM"><span class="xref std std-term">XEM</span></a> 입니다. <a class="reference internal" href="../../contribute/glossary.html#term-XEM"><span class="xref std std-term">XEM</span></a> 과 함께 <em>로얄티</em> 및 <em>세금</em> 이라는 두 가지 새로운 개념이 도입됩니다. <em>부담금</em> 기능을 적용한 로열티를 통해 특정 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 판매의 일정 비율이 이체될 때마다 계정으로 전달됩니다. 세금은 이체 외에 추가되는 추가 수수료입니다. 두 거래 유형 모두 <a class="reference internal" href="../../contribute/glossary.html#term-XEM"><span class="xref std std-term">XEM</span></a> 으로 표시되며 유동성 공급자에서 <a class="reference internal" href="../../contribute/glossary.html#term-XYM"><span class="xref std std-term">XYM</span></a> (또는 다른 하위 체인의 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a>)으로 교체 될 수 있습니다.</p>
+<p>크리에이터 이코노미의 부상으로 단순한 암호화 식별자를 넘어 여러 종류의 복잡한 가치를 거래하기 위해 블록체인 기술이 점점 더 많이 활용되고 있습니다. 특히 NFT와 디지털 수집품은 아티스트들이 팬에게 직접 수익 창출 모델을 제공할 수 있는 역량을 강화했습니다. 그럼에도 불구하고 콘텐츠가 <em>온-체인</em> 에 저장되는 경우가 거의 없기 떄문에 오늘날 대부분의 체인에서 데이터 영속성은 여전히 문제점으로 남아 있습니다. 이더리움에서 가장 일반적으로 사용되는 표준인 &quot;<a class="reference internal" href="../../contribute/glossary.html#term-ERC"><span class="xref std std-term">ERC-721</span></a>&quot;는 발급자가 참조 데이터(예: 오디오, 이미지 또는 비디오 파일)를 저장하는 위치에 제한을 두고 있지 않습니다. <em>permaweb</em> <a class="footnote-reference brackets" href="#id14" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> 및 분산형 저장소 서비스 <a class="footnote-reference brackets" href="#id15" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> 의 등장이 데이터 영속성 문제에 대한 적절한 솔루션을 제공했지만, <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 자체와의 분리로 인해 다음과 같은 위험이 발생할 수 있습니다. 소유권 보장이 약해지고 여러 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 이 동일한 데이터를 요구할 수 있거나 저장된 데이터가 허용되지 않게 변경될 수 있습니다.</p>
+<p>이 딜레마에 대한 한 가지 해결책은 콘텐츠 저장을 위한 일련의 전용 하위 체인이 될 수 있으며, 여기서 모자이크는 주어진 데이터 파일을 나타냅니다. 구매자와 <a class="reference internal" href="../../contribute/glossary.html#term-dApp"><span class="xref std std-term">dApps</span></a> 은 판매시점에서 진위성과 출처를 모두 입증하는 특정 콘텐츠에 대한 유효성 증명을 생성할 수 있습니다. 구매 시 유효성 증명과 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 을 사용하면 실제 데이터 자체의 암호를 해독할 수 있습니다. 보다 가벼운 솔루션에서는 대신 분산형 스토리지 제공업체에 엽결되는 전용 서브체인을 볼 수 있으며, 이를 통해 노드가 전용 스토리지 제공업체 역할을 하고 서비스에 대해 그에 따라 보상을 받을 수 있습니다. 따라서 데이터 지속성은 여러 서비스에 대한 의존성이 아니라 발행체인의 성공과 연결되어 있습니다.</p>
+<p><strong>Symbol</strong> 의 초기 하이브리드 설계에서는 아토믹 스왑을 통해 퍼블릭 체인과 프라이빗 체인의 상호 작용을 하려했지만, 서브체인의 도입으로 데이터 영속성 및 콘텐츠별 네트워크 문제에 대해 보다 우아한 솔루션 제공이 가능해졌습니다. 퍼블릭 블록체인의 숨겨진 잠재력은 모든 사용자가 루트 사용자인 공유 글로벌 상태 <a class="footnote-reference brackets" href="#id16" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> 입니다. 그러나 물리학과 기술 모두의 실적인 한계로 인해 단일 퍼블릭 체인으로는 이를 달성하기가 어렵습니다. 시장 수요와 <em>기계 공감</em> 을 기반으로 콘텐츠를 서비스할 수 있도록 운영자에게 권한을 부여함으로써 네트워크의 처리량은 시스템의 단일 부분에 의존하지 않고 추가됩니다.</p>
+<p><strong>Symbol</strong> 의 미래는 전 세계적인 확장성 제약 없이 맞춤형 체인들의 우주 중심에 위치한 허브 및 교환 계층으로서 그것을 상상합니다. 하위 체인들은 이를 향한 우리의 첫 걸음입니다.</p>
+</section>
+<section id="id6">
+<h2>신디케이트 및 시스템 설계 정보<a class="headerlink" href="#id6" title="この見出しへのパーマリンク"></a></h2>
+<p>비즈니스 이론에서, 혁신은 <em>새로운 시장과 가치 네트워크를 창출하고, 결국에는 기존의 시장을 선도하는 기업, 제품 및 연합을 대체하는 혁신</em> 으로 정의됩니다. <a class="footnote-reference brackets" href="#id17" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> 이러한 혁신은 대개 대규모 팀이나 기존 기업이 아닌 소규모의 자체 조직화된 개인들에 의해 이루어지는 경향이 있습니다. <a class="footnote-reference brackets" href="#id18" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> 혁신의 과정은 전통적인 접근 방식보다 시간이 더 걸리며 실패할 위험이 더 높습니다. 그러나 성공할 경우, 이러한 기술들은 일단 배포되면 다른 기술들보다 빠르게 확산되고 더 큰 영향을 미치는 경향이 있습니다.</p>
+<p>중앙집중식 구조가 탈중앙화된 시스템의 발전과 종종 상충하는 것은 잘 알려진 사실입니다. 비트코인의 도입은 중앙 권한의 체계적인 실패에 대한 직접적인 대응이었으며, 그 이후로 모든 블록체인 네트워크는 현재까지 권력 분산을 설계 목표로 삼고 있습니다.</p>
+<aside class="sidebar">
+<p class="sidebar-title">생태계의 플라이휠</p>
+<figure class="align-center">
+<img alt="../../_images/Symbol Venn Diagram 1.png" src="../../_images/Symbol Venn Diagram 1.png" style="width: 600px;" />
+</figure>
+</aside>
+<p>어쨌든, 중앙집중화는 일정 시간이 지난 후 자연스럽게 발생하게 되는데, 이는 전문화의 부산물이거나 규모의 경제 때문일 수 있습니다. <a class="footnote-reference brackets" href="#id19" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> 이는 <span class="xref std std-term">작업 증명(PoW) 방식</span> (채굴 풀, 해시레이트 집중, 특화된 하드웨어를 통해)과 <a class="reference internal" href="../../contribute/glossary.html#term-PoS"><span class="xref std std-term">지분 증명(PoS) 방식</span></a> (재산의 집중과 검증자 인프라의 집중을 통해)에서 모두 사실로 입증되었습니다. 따라서, 블록체인의 탄력성은 생태계 내의 당사자들이 담합하기보다는 협력하도록 유도하는 데에서 주로 비롯됩니다. 이것은 게임 이론의 기초이며, 이를 마스터하는 것이 성공적인 시스템 디자인의 핵심입니다.</p>
+<p>Symbol에서는 신디케이트 개념을 통해 협력을 달성합니다. 전통적으로 신디케이트는 공동의 목표를 달성하기 위해 함께 일하는 개인, 법인 또는 회사의 자체 조직화된 그룹입니다. 신디케이트는 암호화폐에서 새로운 개념은 아닙니다. 비영리 단체인 이더리움 재단과 테조스 재단은 비공식적으로 신디케이트로 분류될 수 있으며, 분산 자율 조직(<a class="reference internal" href="../../contribute/glossary.html#term-DAO"><span class="xref std std-term">DAOs</span></a>)과 비공식 작업 또는 연구 그룹도 있습니다. <a class="reference internal" href="../../contribute/glossary.html#term-Flashbots"><span class="xref std std-term">Flashbots</span></a> <a class="footnote-reference brackets" href="#id20" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> 은 <a class="reference internal" href="../../contribute/glossary.html#term-DeFi"><span class="xref std std-term">DeFi</span></a> 에서 채굴자 추출 가능 가치(<a class="reference internal" href="../../contribute/glossary.html#term-MEV"><span class="xref std std-term">MEV</span></a>)에 초점을 맞춘 연구 개발 조직는 해적 협동조합을 기반으로 한 비공식 신디케이트인 해적 해커 집단을 따릅니다. 신디케이트는 암호화폐와 관련 없는 외부 세계에서도 관찰될 수 있습니다. 예시로 수십억 달러 규모의 엔터테인먼트 및 하드웨어 회사인 Valve는 중간 관리나 공식 리더십이 없는 비계층적 디자인(&quot;Flatland&quot;)을 따릅니다. <a class="footnote-reference brackets" href="#id21" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p>
+<aside class="sidebar">
+<p class="sidebar-title">쿼드라틱 펀딩</p>
+<figure class="align-center">
+<img alt="../../_images/Syndicate Matching dark.png" src="../../_images/Syndicate Matching dark.png" style="width: 600px;" />
+</figure>
+</aside>
+<p><strong>Symbol</strong> 에서, 쿼드라틱 펀딩은 프로젝트 자금 조달 부분에서 중요한 도전을 해결할 수 있습니다: 어떤 프로젝트가 가장 많은 개인에게 이익을 줄 것인지 어떻게 결정합니까? 이것은 개인이 다음에 자금을 지원할 프로젝트에 대해 &quot;투표를 위한 구매&quot;를 할 수 있게 하고, 공공재 자금 조달에 전념하는 매칭 신디케이트와 함께 기부금을 증폭함으로써 이루어집니다. 추가 투표에 대한 수익은 감소하며, 이는 벤처 캐피탈 회사, 큰 고래 및 중앙 권력 중개인으로부터 권력을 분산시키는 데 도움이 됩니다. 요약하자면, 개인별 기여 횟수가 한 개인이 자금 조달하는 총액보다 더 중요합니다.</p>
+<p>우리는 신디케이트가 참가자들이 자신의 이익보다 집단의 성공을 우선시하도록 동기를 부여하며, 블록체인을 성공적으로 만든 동일한 원칙들인 혁신, 탈중앙화, 투명성에 대한 약속을 강제하는 강력한 자체 조직 형태라고 생각합니다. 쿼드라틱 자금 조달과 함께, 우리는 신디케이트가 공통된 미션에 모두 일치된 활기찬, 자체 조직화된 기여자 및 협업자 커뮤니티를 강화한다고 생각합니다: <strong>Symbol</strong></p>
+</section>
+<section id="id12">
+<h2>우주 해적의 규칙<a class="headerlink" href="#id12" title="この見出しへのパーマリンク"></a></h2>
+<p>가장 무법의 체계에서조차 운영을 위한 공통된 합의가 있었습니다. 도둑 사이에도 명예가 존재했습니다. 해적들은 거칠기는 했지만, 서로 간의 갈등을 줄이면서 이익을 극대화하는 방법을 찾아냈습니다. 그들은 선거와 같은 민주적 시스템과 항해 전에 운영 규칙을 정한 뒤 헌장에서 사용했습니다: 전리품 분배; 노동 분배; 책임 분배. 그들은 금지된 활동과 그 처벌을 명시했으며; 선박과 승무원의 안전을 위한 규칙; 그리고 생산적인 구성원들을 위한 인센티브와 보너스를 제시했습니다.</p>
+<p>해적들은 항해를 시작하기 전에 선장과 장교 선출과 함께 그들의 규약을 작성했습니다. 선장은 상사가 아니었으며, 승무원의 기쁨을 위해 봉사했습니다 — 언제든지 다수의 투표나 반란으로 교체될 수 있었고 대체로 선장들은 대담하고 결단력 있는 지도자로 기대되었으며, 승무원들에게 누구와 무엇을 약탈할지, 어떻게 당국을 피하거나 공격에 대처할지를 안내했다. 장교는 승무원들의 이익을 대표했다 — 그들은 질서를 유지하고; 승무원 간의 갈등을 해결하며; 각 승무원에게 배분되는 음식과 음료의 양을 결정했다. 모든 사람들은 이 규약에 동의하고 그들의 지도자를 선출했다. 만약 어떤 사람이 계약이나 승무원에 동의하지 않으면, 그는 자신의 의지로 떠날 자유가 있었습니다.</p>
+<p>해적들은 그들 사이의 협력 협정을 시행하거나 지원할 정부가 없었음에도 불구하고 합법적인 해적들만큼 일반적인 조화를 유지했습니다. 이는 부분적으로 그들이 모은 전리품부터 부의 분배에 이르기까지 모든 것에 투명성을 유지했기 때문이었으며, 부분적으로는 승무원들이 자신들의 필요보다 배의 집단적 성공을 우선시했기 때문이었고, 부분적으로는 평등과 동지애에 대한 그들의 헌신 때문이었다. 배는 그 구성 요소들의 합만큼만 좋기 때문이다. 우리는 <strong>Symbol</strong> 에 전념하는 신디케이트가 해적 문화에서 영감을 얻은 구조를 따르되, 비계층적인 기업 구조로 정의되어야 한다고 믿는다.</p>
+<p>이어지는 것은 우리가 <em>일부</em> 제안한 <strong>동의서 항목들</strong> 입니다. 우리가 <strong>Symbol</strong> 의 다음 여정을 시작하기 전에 하는 서약입니다. 모든 항목들이 합의가 필요하며, 특히 승무원들의 승인이 중요하지만, 일부 일반적인 지침을 설정하는 것이 도움이 될 것이라고 생각합니다.</p>
+<ul class="simple">
+<li><p>우리는 <strong>투명성</strong> 을 중요시합니다. 투명성은 신뢰를 구축하고, 우리를 책임지게 하며, 우리의 생태계를 발전시키는 데 도움을 줍니다. 우리는 공개적으로 운영하며, 우리 커뮤니티가 우리의 작업을 완전히 볼 수 있도록 하고, 우리 팀이 자신의 실수에서 배울 수 있게 합니다. 우리는 우리가 배운 것들, 저질렀던 실수들, 생각해낸 아이디어들, 그리고 우리가 작업 중인 것들에 대해 공개적으로, 널리, 의도적으로 정보를 공유합니다. 거의 모든 문서는 누구나 읽고 댓글을 달 수 있도록 완전히 공개되어 있으며, 모든 전략 결정, 모든 분석, 모든 제품 또는 기능 테스트가 그러합니다. 우리는 우리의 가치(예: Git, Discord)와 일치하는 도구를 사용하여 생태계가 우리와 함께 일할 수 있도록 지원합니다.</p></li>
+<li><p>우리는 <strong>재정적 자유</strong> 를 믿습니다. 우리는 모두에게 즉시 보이는 공식 기반의 보상 방식으로 운영합니다. 우리는 경쟁력 있는 시장에 맞는 급여와 함께 넉넉한 복지 혜택을 제공합니다. 우리는 모든 구성원이 우리가 구축하는 것에 직접적인 이해관계를 가져야 한다고 믿습니다. 이것이 우리가 모든 보상 패키지에 <a class="reference internal" href="../../contribute/glossary.html#term-Token"><span class="xref std std-term">토큰</span></a> 조건부 적립 일정을 포함하는 이유입니다.</p></li>
+<li><p>우리는 <strong>챔피언십 팀</strong> 입니다. 우리는 가족이 아니라 우리는 우리만의 선수를 선택합니다. 우리는 성과와 결과에 대한 높은 기대를 가지고 있습니다. 누군가 평균을 올리지 않는다면, 우리는 적극적으로 코칭하고 개발합니다. 우리는 강렬하고 종종 혼란스러운 업무 문화를 가지고 있으며, 정기적으로 우리의 안락한 영역에서 벗어나게 되는데 이것은 개인과 팀으로서 성장할 수 있게 합니다. 우리는 우리 팀이 배에서 자리를 얻고 그것을 유지할 것을 기대합니다.</p></li>
+<li><p>우리는 <strong>락스타</strong> 를 찾습니다. 모든 자리에 최고의 인재가 있도록 특별한 조치를 취합니다. 우리는 “T-형” 인물을 선호합니다 - 제너럴리스트(다양한 가치 있는 것들에 능숙한 사람들)이지만 동시에 스페셜리스트(좁은 분야 내에서 그 분야에서 최고 중 하나)입니다. 우리는 우리보다 능력이 떨어지는 사람들이 아니라 더 능력 있는 사람들과만 함께 일합니다. 우리는 재능이 우리의 성공에서 가장 중요한 요소라고 믿으며, 전체 승무원이 팀의 평균을 높이는 데 책임을 지기를 기대합니다. 평범한 성과는 넉넉한 퇴직금 패키지로 대응됩니다.</p></li>
+<li><p>우리는 <strong>집중</strong> 하고 있습니다. <strong>Symbol</strong> 의 미션은 시장을 혼란에 빠뜨리고 기회의 평등을 가져오는 것입니다. 우리는 무엇보다도 엔지니어링 중심의 승무원입니다 — 만약 여러분의 전문성이 코딩(개발)에 속하지 않는다면, 여러분이 가진 모든 에너지를 우리 시스템 뒤에 있는 기술을 이해하는 데에 쏟아야 합니다.</p></li>
+</ul>
+<p>모든 것에서, 우리는 무엇보다도 먼저 <strong>Symbol</strong> 을 섬깁니다.</p>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id13" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Griffin Ichiba Hotchkiss, Andrei Maiboroda, and Paul Wackerow, “ETHEREUM VIRTUAL MACHINE (EVM)”, accessed June 7, 2021, <a class="reference external" href="https://ethereum.org/en/developers/docs/evm/">https://ethereum.org/en/developers/docs/evm/</a></p>
+</aside>
+<aside class="footnote brackets" id="id14" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>&quot;Store Data, Permanently&quot;, Arweave home page, 2020, <a class="reference external" href="https://www.arweave.org/">https://www.arweave.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="id15" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>David Vorick et al., &quot;Decentralized Internet for a Free Future&quot;, Home page, Skynet, 2021, <a class="reference external" href="https://siasky.net/">https://siasky.net/</a></p>
+</aside>
+<aside class="footnote brackets" id="id16" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>Balaji S. Srinivasan, &quot;Yes, You May Need a Blockchain&quot;, Blog post, Balaji S. Srinivasan, May 14, 2019, <a class="reference external" href="https://balajis.com/yes-you-may-need-a-blockchain/">https://balajis.com/yes-you-may-need-a-blockchain/</a></p>
+</aside>
+<aside class="footnote brackets" id="id17" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">5</a><span class="fn-bracket">]</span></span>
+<p>Clayton M. Christensen, Michael E. Raynor, and Rory McDonald, &quot;What Is Disruptive Innovation?&quot;, <em>Harvard Business Review</em>, December 2015, <a class="reference external" href="https://hbr.org/2015/12/what-is-disruptive-innovation">https://hbr.org/2015/12/what-is-disruptive-innovation</a></p>
+</aside>
+<aside class="footnote brackets" id="id18" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">6</a><span class="fn-bracket">]</span></span>
+<p>Lingfei Wu, Wang Dashun, and James A. Evans, &quot;Large Teams Develop and Small Teams Disrupt Science and Technology&quot;, <em>Nature</em> 566 (2019): 378–2, <a class="reference external" href="https://par.nsf.gov/servlets/purl/10109889">https://par.nsf.gov/servlets/purl/10109889</a></p>
+</aside>
+<aside class="footnote brackets" id="id19" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">7</a><span class="fn-bracket">]</span></span>
+<p>Aaron Shaw and Benjamin Mako Hill, &quot;Laboratories of Oligarchy? How the Iron Law Extends to Peer Production&quot;, <em>Arxiv</em>, 2014, <a class="reference external" href="https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf">https://arxiv.org/ftp/arxiv/papers/1407/1407.0323.pdf</a></p>
+</aside>
+<aside class="footnote brackets" id="id20" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">8</a><span class="fn-bracket">]</span></span>
+<p>Flashbots, software repository, github.com/flashbots, 2021, <a class="reference external" href="https://github.com/flashbots/pm">https://github.com/flashbots/pm</a></p>
+</aside>
+<aside class="footnote brackets" id="id21" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">9</a><span class="fn-bracket">]</span></span>
+<p>Phanish Puranam and Dorthe Døjbak Håkonsson, &quot;Valve’s Way&quot;, <em>Journal of Organization Design</em> 4, no. 2 (June 2015): 2–, <a class="reference external" href="https://www.researchgate.net/publication/282395703_Valve%27s_Way">https://www.researchgate.net/publication/282395703_Valve%27s_Way</a></p>
+</aside>
+<aside class="footnote brackets" id="id22" role="note">
+<span class="label"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></span>
+<p>Vitalik Buterin, Zoë Hitzig, and E. Glen Weyl, &quot;Liberal Radicalism: A Flexible Design for Philanthropic Matching Funds&quot;, <em>Available at SSRN 3243656</em>, 2018, <a class="reference external" href="https://www.gwern.net/docs/economics/2018-buterin.pdf">https://www.gwern.net/docs/economics/2018-buterin.pdf</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2023&#8209;11&#8209;27</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/handbook/ko/vision.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Vision: Symbol²</a><ul>
+<li><a class="reference internal" href="#id1">머리말</a></li>
+<li><a class="reference internal" href="#symbol-nis1">Symbol과 NIS1의 미래</a></li>
+<li><a class="reference internal" href="#id6">신디케이트 및 시스템 설계 정보</a></li>
+<li><a class="reference internal" href="#id12">우주 해적의 규칙</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10491607?v=4" class="git-info-image">Last updated by <a href="https://github.com/karriz-dev" target="_blank" rel="noopener noreferrer">Karriz</a>
+            on 2023&#8209;11&#8209;27.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10491607?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/karriz-dev" target="_blank" rel="noopener noreferrer">Karriz</a>
+            on 2023&#8209;11&#8209;27.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

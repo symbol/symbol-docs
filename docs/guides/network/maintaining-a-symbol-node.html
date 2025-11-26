@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Maintaining a Node &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Non-custodial node setup" href="non-custodial-node-setup.html" />
+    <link rel="prev" title="Running a secure node" href="running-a-secure-symbol-node.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/maintaining-a-symbol-node.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/maintaining-a-symbol-node.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <p>How to keep your Symbol node up and running healthily.</p>
+<section id="maintaining-a-node">
+<h1>Maintaining a Node<a class="headerlink" href="#maintaining-a-node" title="Permalink to this heading"></a></h1>
+<p>Once you have created a Symbol node, be it <a class="reference internal" href="running-a-symbol-node-manually.html"><span class="doc">manually</span></a> or <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">using Symbol bootstrap</span></a>, the node is <strong>mostly autonomous</strong>. But there is still a little bit of maintenance required, explained in this guide.</p>
+<ul class="simple">
+<li><p>Regular nodes only need to take care of the <a class="reference internal" href="#maintain-client-version"><span class="std std-ref">Client updates</span></a> section.</p></li>
+<li><p><a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">Voting nodes</span></a> also need to read the <a class="reference internal" href="#maintain-voting-keys"><span class="std std-ref">Voting key renewal</span></a> section.</p></li>
+</ul>
+<section id="client-updates">
+<span id="maintain-client-version"></span><h2>Client updates<a class="headerlink" href="#client-updates" title="Permalink to this heading"></a></h2>
+<p>New Symbol client versions will be released <strong>periodically</strong>. If you want to benefit from the added features and bugfixes you will need to <strong>update your node</strong> to use the latest client version.</p>
+<p>Additionally, if your node’s client version falls too far behind, other nodes might refuse to connect to it.</p>
+<p>The main version to keep track of is the <strong>Catapult client version</strong>, since this component is used by all <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">peer nodes</span></a>. Additionally, <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API nodes</span></a> need to keep track of the <strong>REST component version</strong> too.</p>
+<ul>
+<li><p><strong>Finding out what are the latest versions</strong>:</p>
+<p>Whenever there is a new client version released it will be announced through the Symbol <a href="https://twitter.com/NEMofficial" target="_blank">Twitter</a> and the <a href="https://discord.gg/J38KwW5ZuG" target="_blank">Discord</a> channel. You can also keep an eye on the different <a href="https://github.com/symbol" target="_blank">GitHub</a> repositories and <a class="reference internal" href="../../compatibility.html"><span class="doc">the compatibility matrix page</span></a> to know the latest client and REST versions.</p>
+</li>
+<li><p><strong>Finding out your node versions</strong>:</p>
+<p>You can find the versions used by your node in the <a class="reference external" href="https://symbol.fyi/nodes">Symbol Explorer nodes list</a>.</p>
+<p>Additionally, if your node is an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API node</span></a>, you can also query it directly:</p>
+<ul>
+<li><p><strong>Client version</strong>: <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> endpoint, <code class="docutils literal notranslate"><span class="pre">version</span></code> property.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">version</span></code> is encoded as a single 4-byte integer, where the Most-Significant Byte encodes the Major version, and the rest of bytes are the Minor, the Micro and the Patch version.</p>
+<p>For example, version <strong>16777472</strong> (decimal) is <strong>01000100h</strong> (hex), which corresponds to version <strong>1.0.1.0</strong>.</p>
+</div>
+</li>
+<li><p><strong>REST version</strong>: <code class="docutils literal notranslate"><span class="pre">/node/server</span></code> endpoint, <code class="docutils literal notranslate"><span class="pre">restVersion</span></code> property.</p>
+<p><code class="docutils literal notranslate"><span class="pre">restVersion</span></code> is a version string like <strong>“2.3.6”</strong>, for example.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>The exact procedure to update your node depends on how you created it. Read the appropriate section below.</p>
+<section id="update-nodes-created-with-bootstrap">
+<span id="update-bootstrap-nodes"></span><h3>Update nodes created with Bootstrap<a class="headerlink" href="#update-nodes-created-with-bootstrap" title="Permalink to this heading"></a></h3>
+<p>If you used Symbol Bootstrap to create your node (following the <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">Running a node</span></a> guide), keeping it up to date is very simple.</p>
+<ol class="arabic">
+<li><p><strong>Update Symbol Bootstrap</strong> first (see the <a class="reference internal" href="using-symbol-bootstrap.html"><span class="doc">Using Symbol Bootstrap</span></a> guide for more details):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>symbol-bootstrap
+</pre></div>
+</div>
+</li>
+<li><p>Then <strong>move to the folder</strong> where the node’s data folder is (typically <code class="docutils literal notranslate"><span class="pre">target</span></code>) and <strong>stop the node</strong>.</p>
+<p>The exact stop command depends on whether your node was running in detached mode or not:</p>
+<ul>
+<li><p><strong>If you started in detached mode</strong> with <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">start</span> <span class="pre">--detached</span></code>:</p>
+<p>From the folder containing the <code class="docutils literal notranslate"><span class="pre">target</span></code> folder type:</p>
+<div class="highlight-symbol-bootstrap notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap stop
+</pre></div>
+</div>
+</li>
+<li><p><strong>If you did not start in detached mode</strong>:</p>
+<p>You must have a terminal running somewhere with all the output from the client. Stop it by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Next <strong>make a backup copy</strong> of the node’s data folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>target<span class="w"> </span>target.BAK
+</pre></div>
+</div>
+</li>
+<li><p>Finally, <strong>restart the node</strong> with the <code class="docutils literal notranslate"><span class="pre">--upgrade</span></code> flag to update all necessary component versions.</p>
+<p>Add also the <code class="docutils literal notranslate"><span class="pre">--detached</span></code> flag to start in detached mode if you need it.</p>
+<div class="highlight-symbol-bootstrap notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap start --upgrade -c custom-presets.yml
+</pre></div>
+</div>
+</li>
+<li><p>Once the node is up and running again, and you <strong>verify that the component versions have been updated</strong>, you can <strong>remove the backup copy</strong>.</p></li>
+</ol>
+</section>
+<section id="update-nodes-created-manually">
+<h3>Update nodes created manually<a class="headerlink" href="#update-nodes-created-manually" title="Permalink to this heading"></a></h3>
+<p>If you followed the <a class="reference internal" href="running-a-symbol-node-manually.html"><span class="doc">Running a node manually</span></a> guide, you need to rebuild the Catapult client and keep the previous data folder so the same accounts and cached data is reused.</p>
+<p>In summary, you need to:</p>
+<ul class="simple">
+<li><p>Stop the running Catapult client with <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code>.</p></li>
+<li><p>Update the Catapult client source repository with the latest version and build it again following the <a class="reference external" href="https://github.com/symbol/symbol/tree/main/client/catapult/docs">Catapult client</a> instructions.</p></li>
+<li><p>Restart the client from the same folder it was initially launched. Data and configuration files will be reused.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above procedure works but brings the client offline while the new version is being built, which could be a lengthy process.</p>
+<p>If you <strong>install</strong> the client (with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>) instead of running it from the same folder where it is built, though, you have the option to build the new version while the previous one is still running. In this way the service interruption should be minimal.</p>
+<p>The steps then would be:</p>
+<ul class="simple">
+<li><p>Update the Catapult client source repository and build it again.</p></li>
+<li><p>Stop the running Catapult client.</p></li>
+<li><p>Install the new version of the client.</p></li>
+<li><p>Restart the client.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="voting-key-renewal">
+<span id="maintain-voting-keys"></span><h2>Voting key renewal<a class="headerlink" href="#voting-key-renewal" title="Permalink to this heading"></a></h2>
+<p>If your node is a <a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">Voting node</span></a> it requires a valid voting key to operate. For security these keys expire after 6 months, so you need to renew them as part of the regular node maintenance.</p>
+<p>Read the appropriate section about renewing the voting keys depending on whether you used Symbol Bootstrap or not to build your node:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="running-a-symbol-node.html#bootstrap-voting-key-renewal"><span class="std std-ref">Voting key renewal using Bootstrap</span></a></p></li>
+<li><p><a class="reference internal" href="running-a-symbol-node-manually.html#manual-voting-key-renewal"><span class="std std-ref">Manual voting key renewal</span></a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;04&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/maintaining-a-symbol-node.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Maintaining a Node</a><ul>
+<li><a class="reference internal" href="#client-updates">Client updates</a><ul>
+<li><a class="reference internal" href="#update-nodes-created-with-bootstrap">Update nodes created with Bootstrap</a></li>
+<li><a class="reference internal" href="#update-nodes-created-manually">Update nodes created manually</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#voting-key-renewal">Voting key renewal</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Private test networks &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Node properties" href="configuring-node-properties.html" />
+    <link rel="prev" title="Non-custodial node setup" href="non-custodial-node-setup.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/creating-a-private-test-net.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/network/creating-a-private-test-net.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Network</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Using Symbol Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">Running a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">Running a node manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">Running a secure node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">Maintaining a Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">Non-custodial node setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Private test networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">Node properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">Network properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">How to connect to MongoDB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="private-test-networks">
+<h1>Private test networks<a class="headerlink" href="#private-test-networks" title="Permalink to this heading"></a></h1>
+<p>This guide will walk you through the process of setting up your own private network using Symbol.</p>
+<p>To run the network, we are going to use the package <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>. To better understand how this package works it is recommended to read the <a class="reference internal" href="using-symbol-bootstrap.html"><span class="doc">Using Symbol Bootstrap</span></a> guide.</p>
+<section id="the-bootstrap-preset">
+<h2>The <code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> preset<a class="headerlink" href="#the-bootstrap-preset" title="Permalink to this heading"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> has a preset called <code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> which instantiates a network with multiple nodes with the following architecture:</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/four-layer-architecture.png" src="../../_images/four-layer-architecture.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">Bootstrap network architecture</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The nodes labelled “Internal” are the ones created by <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>, and are accessible through the REST API:</p>
+<ul class="simple">
+<li><p><strong>peer-node (1 and 2)</strong>: Peer nodes verify transactions once the API pushes them into the P2P network. They run the consensus algorithm, create new blocks, and propagate the changes through the network.</p></li>
+<li><p><strong>api-node</strong>: The API node stores data in the MongoDB database once transactions are validated. They also identify and store partial aggregate bonded transactions.</p></li>
+<li><p><strong>rest-gateway</strong>: Combines HTTP and WebSockets to perform read and write actions on the blockchain.</p></li>
+</ul>
+</section>
+<section id="instantiate-the-network">
+<h2>Instantiate the network<a class="headerlink" href="#instantiate-the-network" title="Permalink to this heading"></a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">start</span></code> command (explained in the <a class="reference internal" href="using-symbol-bootstrap.html#symbol-bootstrap-all-in-one"><span class="std std-ref">Using Symbol Bootstrap</span></a> guide) using the <code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> preset:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>start<span class="w"> </span>-p<span class="w"> </span>bootstrap
+</pre></div>
+</div>
+<p>With a single command the network is created and booted. Now check that it is up and running by opening a new browser tab and going to:</p>
+<p><code class="docutils literal notranslate"><span class="pre">localhost:3000/chain/info</span></code></p>
+<p>You should get a response from the API node.</p>
+</section>
+<section id="retrieving-the-node-accounts">
+<h2>Retrieving the node accounts<a class="headerlink" href="#retrieving-the-node-accounts" title="Permalink to this heading"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> has created multiple nodes with corresponding accounts. To interact with any of these accounts (to transfer mosaics <strong>to</strong> it, for example) you need its address or its public key. To fully control an account (to transfer mosaics <strong>from</strong> it, for example) you need its private key.</p>
+<p>All this information can be retrieved from a YAML file in the <code class="docutils literal notranslate"><span class="pre">target</span></code> folder:</p>
+<p><code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code></p>
+<p>As an example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">networkType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">152</span>
+<span class="nt">nemesisGenerationHashSeed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7BFC536990108CA923B2715DE6B8E47E6BB56C945293BF4FC22C5AF895F61E62</span>
+<span class="nt">nodes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span>
+<span class="w">        </span><span class="nt">signing</span><span class="p">:</span>
+<span class="w">            </span><span class="c1"># Keys for the account of the peer-node-0</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C2BD21E4F9261247A4CBE75DA8683978E0F1FFF34AAB17BEBC21E7B9E0E17A9F</span>
+<span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TAMEGYVY6GVGXCLBIEH72XU4D2OSTH2MIOOY4QQ</span>
+<span class="w">        </span><span class="nt">vrf</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D67601AC6767F8A3C97FFDB0D9D737A943FFFA6E69C2C6527B0ED32A4E41B443</span>
+<span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCR6ZWX3UP3TKJK3BSE6ARJ4WAF3KHFFUWJ7EWI</span>
+<span class="w">        </span><span class="nt">voting</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">921ED0839EA3C8590CA1D6562DDD3BFEDA44CCE05DD82DF8C79DED2A3F816A1B</span>
+<span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TA77BJJJMRXR2OLJKZNUFTRMLHLQ4T2PPHZRX5I</span>
+<span class="w">        </span><span class="nt">ssl</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3d68cdaa4e48a14bd875d4ca18e044522be5f602e8c4f37c1c65eafdfaa19110</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peer-node</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peer-node-0</span>
+<span class="w">        </span><span class="nt">friendlyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peer-node-0</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep your Secret Keys secret at all times!</p>
+</div>
+<p>You can now import any of these accounts using the <a href="https://www.npmjs.com/package/symbol-cli" target="_blank">symbol-cli</a> command-line tool for ease of access (Read <a class="reference internal" href="../../cli.html"><span class="doc">the symbol-cli guide</span></a> for more details):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>profile<span class="w"> </span>import<span class="w"> </span>--private-key<span class="w"> </span>&lt;PRIVATE_KEY&gt;<span class="w"> </span>--network<span class="w"> </span>TEST_NET<span class="w"> </span>--url<span class="w"> </span>http://localhost:3000
+</pre></div>
+</div>
+<p>After giving this new profile a name you will be ready to use it, for example, to retrieve the account’s balance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>account<span class="w"> </span>info<span class="w"> </span>--profile<span class="w"> </span>&lt;PROFILE_NAME&gt;
+</pre></div>
+</div>
+<p>You should see that the nodes that <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> has created for you already contain some currency (in different <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">mosaics</span></a>) to start experimenting with them:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Balance Information
+┌──────────────────┬──────────────────┬──────────────────┬───────────────────┐
+│ Mosaic Id        │ Relative Amount  │ Absolute Amount  │ Expiration Height │
+├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
+│ 3ECBB73A05A147BC │ 1,124,874,999.75 │ 1124874999750000 │ Never             │
+├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
+│ 2B19203C86F9A668 │ 3,000            │ 3000000          │ Never             │
+└──────────────────┴──────────────────┴──────────────────┴───────────────────┘
+</pre></div>
+</div>
+</section>
+<section id="retrieving-the-test-accounts">
+<h2>Retrieving the test accounts<a class="headerlink" href="#retrieving-the-test-accounts" title="Permalink to this heading"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> has also created several test accounts preloaded with <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">mosaics</span></a>. These accounts exist solely for development and learning purposes.</p>
+<p>The keys to these accounts can be found in the <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code> file as described above, in the <code class="docutils literal notranslate"><span class="pre">mosaics</span></code> section:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mosaics</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">56631872BA6657A1</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">currency</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">currency</span>
+<span class="w">        </span><span class="c1"># These are accounts containing the main currency</span>
+<span class="w">        </span><span class="nt">accounts</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">91A9513EBEB50DEFCD928032611B2FBC046FA894089D2ACED115D6EDEB0BFD2A</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NBO3P2AM3A6242V2NFMUIG5RQ3ZFDRKS5QNRBJA</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4E9CC90B45265691C2CF0C68785A06602D28DB50ACFB91F8389B976898239132</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NCDFN3W2AP3E4I2XYITUJHHGVSYKOIR2IUTXKXY</span>
+<span class="w">    </span><span class="p p-Indicator">-</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">079C43E0DFC44B38</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">harvest</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">harvest</span>
+<span class="w">        </span><span class="c1"># These are account containing the network currency used for harvesting</span>
+<span class="w">        </span><span class="nt">accounts</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D617FC0C746681849D93DBEB5FE0E390F26535E4EA76F02AB206AD053B72FAB8</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NBFFJ3MNPMHP474KD7JLBJWAYSYSAUEW7L7262Q</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BBB04EC2CF67658B755F94FC347DDC4AAFFBFC24B84298AEF41CDA2485FA216E</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NCQBYJE3U4Q36AA2E6HFTGKCUXIBUB2NMIGAFDA</span>
+</pre></div>
+</div>
+<p>Use the Private Keys to access these accounts, for example, using the <a href="https://www.npmjs.com/package/symbol-cli" target="_blank">symbol-cli</a> command-line tool as described above.</p>
+</section>
+<section id="voting-nodes">
+<h2>Voting nodes<a class="headerlink" href="#voting-nodes" title="Permalink to this heading"></a></h2>
+<p>The <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">block finalization</span></a> process requires that network nodes vote about the correctness of blocks before they are added to the blockchain. Each node can decide whether to register as a voter or not.</p>
+<p>All nodes created by the <code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> preset are voters by default. If you don’t want this, provide a custom preset with these lines to disable voting for each node:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># peer-node-0</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># peer-node-1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># api-node-0</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Without ANY voting node no finalization can occur. By taking a look at <code class="docutils literal notranslate"><span class="pre">localhost:3000/chain/info</span></code> you will see you chain height grow but the <code class="docutils literal notranslate"><span class="pre">latestFinalizedBlock</span></code>’s height will remain at zero.</p>
+</div>
+</section>
+<section id="configuring-network-properties">
+<h2>Configuring network properties<a class="headerlink" href="#configuring-network-properties" title="Permalink to this heading"></a></h2>
+<p>Read the <a class="reference internal" href="configuring-network-properties.html"><span class="doc">Configuring network properties</span></a> guide for a list of network-related settings that can be customized.</p>
+</section>
+<section id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<p>You now have a test network running and access to each node’s account. You can also interact with it through the API node serving at <code class="docutils literal notranslate"><span class="pre">localhost:3000</span></code>.</p>
+<p>We recommend you continue reading the rest of <a class="reference internal" href="../category.html" title="Categories"><span class="xref std std-ref">the guides</span></a> to keep learning more Symbol’s features!</p>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;06&#8209;07</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/creating-a-private-test-net.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Private test networks</a><ul>
+<li><a class="reference internal" href="#the-bootstrap-preset">The <code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> preset</a></li>
+<li><a class="reference internal" href="#instantiate-the-network">Instantiate the network</a></li>
+<li><a class="reference internal" href="#retrieving-the-node-accounts">Retrieving the node accounts</a></li>
+<li><a class="reference internal" href="#retrieving-the-test-accounts">Retrieving the test accounts</a></li>
+<li><a class="reference internal" href="#voting-nodes">Voting nodes</a></li>
+<li><a class="reference internal" href="#configuring-network-properties">Configuring network properties</a></li>
+<li><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Sending mosaics and messages between two accounts &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sending an encrypted message" href="sending-an-encrypted-message.html" />
+    <link rel="prev" title="Transfers" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/transfer/sending-a-transfer-transaction.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/transfer/sending-a-transfer-transaction.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Transfers</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sending mosaics and messages between two accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sending-an-encrypted-message.html">Sending an encrypted message</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Transfers</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sending mosaics and messages between two accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sending-an-encrypted-message.html">Sending an encrypted message</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="sending-mosaics-and-messages-between-two-accounts">
+<h1>Sending mosaics and messages between two accounts<a class="headerlink" href="#sending-mosaics-and-messages-between-two-accounts" title="Permalink to this heading"></a></h1>
+<p>Define, sign, and announce a transfer transaction.</p>
+<p>This guide will show you how to send 10 <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> from your account to Bob’s, whose address is <code class="docutils literal notranslate"><span class="pre">TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ</span></code>.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete the <a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">getting started section</span></a>.</p></li>
+<li><p>Create a new <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">account</span></a>.</p></li>
+<li><p>Load the account with enough <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to pay for transaction fees.</p></li>
+</ul>
+</section>
+<section id="method-01-using-the-desktop-wallet">
+<h2>Method #01: Using the Desktop Wallet<a class="headerlink" href="#method-01-using-the-desktop-wallet" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>From the home page of your Desktop Wallet, click on the “<strong>Transfer</strong>” tab.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/desktop-transfer-1.gif" src="../../_images/desktop-transfer-1.gif" style="width: 800px;" />
+</figure>
+<p>2. Fill out the necessary information for the transfer transaction.
+For this example, you need to specify that you are sending 10 XYM to Bob (<code class="docutils literal notranslate"><span class="pre">TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ</span></code>).  You can add a message, but it is not necessary in this case.</p>
+<figure class="align-center">
+<img alt="../../_images/desktop-transfer-2.gif" src="../../_images/desktop-transfer-2.gif" style="width: 800px;" />
+</figure>
+<p>3. Once you have filled out all the information, click “<strong>Send</strong>”. A popup will show.
+Read and verify the information, then enter your wallet password and click “<strong>Confirm</strong>”.</p>
+<p>4. You can verify that the transaction was successful by going back to the “<strong>Dashboard</strong>” tab.
+At first, it might show up under “<strong>Unconfirmed</strong>” transactions as the transaction becomes included in a block, but you should soon be able to see it under the “<strong>Confirmed</strong>” transactions.</p>
+</section>
+<section id="method-02-using-the-sdk">
+<h2>Method #02: Using the SDK<a class="headerlink" href="#method-02-using-the-sdk" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>In a new terminal, monitor the transactions involving the sender account to know if they are confirmed or rejected by the network.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>monitor<span class="w"> </span>all<span class="w"> </span>--address<span class="w"> </span>&lt;YOUR-ADDRESS&gt;
+</pre></div>
+</div>
+<p>2. Open a new file and define the <strong>TransferTransaction</strong>.
+Include Bob’s address as the recipient, and attach  10 <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>.</p>
+<p>Mosaic units in Symbol are defined as <strong>absolute amounts</strong>.
+To get an absolute amount, multiply the number of assets you want to send by 10<sup>divisibility</sup>.
+For example, if the mosaic had <a class="reference internal" href="../mosaic/getting-mosaic-information.html"><span class="doc">divisibility</span></a> 2, to send 10 units (relative) you should define 1000 (absolute) instead.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts">View Code</a></span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// replace with recipient address</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">currency</span><span class="p">.</span><span class="nx">createRelative</span><span class="p">(</span><span class="mf">10</span><span class="p">)],</span>
+<span class="w">    </span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;This is a test message&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="w">  </span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.js">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// replace with recipient address</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">rawAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">currency</span><span class="p">.</span><span class="nx">createRelative</span><span class="p">(</span><span class="mf">10</span><span class="p">)],</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;This is a test message&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="w">  </span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// replace with node endpoint</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">RepositoryFactory</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RepositoryFactoryVertxImpl</span><span class="p">(</span>
+<span class="w">                </span><span class="s">&quot;NODE_URL&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// replace with recipient address</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">UnresolvedAddress</span><span class="w"> </span><span class="n">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Address</span><span class="p">.</span><span class="na">createFromRawAddress</span><span class="p">(</span><span class="n">rawAddress</span><span class="p">);</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">NetworkType</span><span class="w"> </span><span class="n">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getNetworkType</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// replace with symbol.xym id</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MosaicId</span><span class="w"> </span><span class="n">networkCurrencyMosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MosaicId</span><span class="p">(</span><span class="s">&quot;5E62990DCAC5BE8A&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// replace with network currency divisibility</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">networkCurrencyDivisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// replace with relative amount of symbol.xym to send</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">BigInteger</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Mosaic</span><span class="w"> </span><span class="n">mosaic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mosaic</span><span class="p">(</span><span class="n">networkCurrencyMosaicId</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">amount</span><span class="p">.</span><span class="na">multiply</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="na">pow</span><span class="p">(</span><span class="n">networkCurrencyDivisibility</span><span class="p">)));</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">TransferTransaction</span><span class="w"> </span><span class="n">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TransferTransactionFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+<span class="w">                            </span><span class="n">networkType</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">recipientAddress</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">mosaic</span><span class="p">),</span>
+<span class="w">                            </span><span class="n">PlainMessage</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;This is a test message&quot;</span><span class="p">))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">maxFee</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">2000000</span><span class="p">)).</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you may have noticed, transfer transactions require an array of mosaics as a parameter.
+This permits sending transfer transactions with multiple mosaics at the same time.</p>
+<p>If you own more than one mosaic, you can send them together in the same transaction:</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;7CDF3B117A3C40CC&#39;</span><span class="p">),</span><span class="w"> </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1000</span><span class="p">)),</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">      </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransactionWithMultipleMosaics.js">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">      </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;7CDF3B117A3C40CC&#39;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1000</span><span class="p">),</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span>
+<span class="w">      </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransactionWithMultipleMosaics.java">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">                            </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Mosaic</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MosaicId</span><span class="p">(</span><span class="s">&quot;7CDF3B117A3C40CC&quot;</span><span class="p">),</span>
+<span class="w">                                            </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span>
+<span class="w">                                    </span><span class="k">new</span><span class="w"> </span><span class="n">Mosaic</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MosaicId</span><span class="p">(</span><span class="s">&quot;5E62990DCAC5BE8A&quot;</span><span class="p">),</span>
+<span class="w">                                            </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">10000000</span><span class="p">))),</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>3. Sign the transaction with your account.
+Then, include the network generation hash seed to make the transaction only valid for your network.
+To retrieve the network generation hash seed, open <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> in a new browser tab and copy <code class="docutils literal notranslate"><span class="pre">meta.networkGenerationHashSeed</span></code> value.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// replace with sender private key</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="s1">&#39;1111111111111111111111111111111111111111111111111111111111111111&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transferTransaction</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Payload:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">payload</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Transaction Hash:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.js">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// replace with sender private key</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="s1">&#39;1111111111111111111111111111111111111111111111111111111111111111&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transferTransaction</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Payload:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">payload</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Transaction Hash:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="c1">// replace with private key</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">privateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1111111111111111111111111111111111111111111111111111111111111111&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// replace with network generation hash</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">generationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getGenerationHash</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Account</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createFromPrivateKey</span><span class="p">(</span><span class="n">privateKey</span><span class="p">,</span><span class="w"> </span><span class="n">networkType</span><span class="p">);</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">SignedTransaction</span><span class="w"> </span><span class="n">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">account</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">sign</span><span class="p">(</span><span class="n">transferTransaction</span><span class="p">,</span><span class="w"> </span><span class="n">generationHash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Once signed, <a class="reference internal" href="../../concepts/transaction.html"><span class="doc">announce the transaction</span></a> to the network.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts">View Code</a></span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionRepository</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.js">View Code</a></span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionRepository</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/SendingATransferTransaction.java">View Code</a></span><a class="headerlink" href="#id12" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">TransactionRepository</span><span class="w"> </span><span class="n">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createTransactionRepository</span><span class="p">();</span>
+<span class="w">            </span><span class="n">transactionRepository</span><span class="p">.</span><span class="na">announce</span><span class="p">(</span><span class="n">signedTransaction</span><span class="p">).</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>5. Open the terminal where you are monitoring the transaction’s status.
+The transaction should appear as confirmed after 30 seconds at most and the amount defined gets transferred from the sender’s account to the recipient’s account.
+If the terminal raises an error, you can check the error code description <a class="reference external" href="https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml">here</a>.</p>
+</section>
+<section id="method-03-using-the-cli">
+<h2>Method #03: Using the CLI<a class="headerlink" href="#method-03-using-the-cli" title="Permalink to this heading"></a></h2>
+<p>Open a terminal window and run the following command to transfer 10 XYM from your default account.</p>
+<p>Remember to replace <code class="docutils literal notranslate"><span class="pre">TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ</span></code> with the recipient address you want to send mosaics too
+and <code class="docutils literal notranslate"><span class="pre">&#64;symbol.xym::10000000</span></code> with the desired absolute amount.</p>
+<p>Optionally, you can set a custom message with the option <code class="docutils literal notranslate"><span class="pre">--message</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/transfer/SendingATransferTransaction.sh">View Code</a></span><a class="headerlink" href="#id13" title="Permalink to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>transfer<span class="w"> </span>--recipient-address<span class="w"> </span>TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ<span class="w"> </span>--mosaics<span class="w"> </span><span class="s2">&quot;@symbol.xym::10000000&quot;</span><span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;This is a test message&quot;</span><span class="w"> </span>--sync
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/transfer/sending-a-transfer-transaction.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Sending mosaics and messages between two accounts</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#method-01-using-the-desktop-wallet">Method #01: Using the Desktop Wallet</a></li>
+<li><a class="reference internal" href="#method-02-using-the-sdk">Method #02: Using the SDK</a></li>
+<li><a class="reference internal" href="#method-03-using-the-cli">Method #03: Using the CLI</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>コンセンサス &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="クロスチェーンスワップ" href="cross-chain-swaps.html" />
+    <link rel="prev" title="ブロック" href="block.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/consensus-algorithm.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/consensus-algorithm.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">ブロック</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="consensus">
+<h1>コンセンサス<a class="headerlink" href="#consensus" title="この見出しへのパーマリンク"></a></h1>
+<p>コンセンサスアルゴリズムとはブロックチェーンシステムのノードが <strong>合意形成</strong> と <strong>意志決定</strong> をするための動的メソッドです。</p>
+<p>Symbol では、有名な <strong>Proof-of-Stake</strong> (<a href="https://en.wikipedia.org/wiki/Proof_of_stake" target="_blank">PoS</a>) プコンセンサスの改善バージョンである <strong>Proof-of-Stake Plus</strong> (PoS+) と呼ばれる革新的なメカニズムを利用します。</p>
+<p>基本的な <strong>PoS</strong> コンセンサスアルゴリズムでは、ブロックチェーン内の新しいブロック生成は <strong>ノード所有者の富にのみ関連する</strong> 要因の組み合わせに基づいて、確率的にノードに割り当てられます。</p>
+<p><strong>PoS+</strong> メカニズムはアカウントの利害関係も考慮しますが、 <strong>参加者の活動に基づいた</strong> 報酬を与えることにより、エコシステムの健全性も促進します。</p>
+<section id="factors">
+<span id="importance-calculation"></span><h2>要因<a class="headerlink" href="#factors" title="この見出しへのパーマリンク"></a></h2>
+<p>アルゴリズムはアカウントの <strong>インポータンス</strong> を計算する際に、次のハーベスティングノードを選択するために最終的に使用される指標を考慮します:</p>
+<ul class="simple">
+<li><p><strong>Stake</strong>: 保有している <a class="reference internal" href="harvesting.html#harvesting-mosaic"><span class="std std-ref">ハーベスティングモザイク</span></a> の合計量。残高が多い保有者はエコシステムの繁栄を見るインセンティブがあります。10,000 を超えるハーベスティングモザイクを保持しているアカウント (<strong>高価値アカウント</strong>) のみがハーベスティングに <a class="reference internal" href="harvesting.html#account-eligibility"><span class="std std-ref">適格</span></a> となります。</p></li>
+<li><p><strong>Transactions</strong>: アカウントによって支払われた <a class="reference internal" href="fees.html"><span class="doc">手数料</span></a> の合計。これによりアカウントはネットワークでアクティブになります。</p></li>
+<li><p><strong>Nodes</strong>: アカウントがノードによってハーベストされた手数料の <a class="reference internal" href="harvesting.html#harvesting-rewards"><span class="std std-ref">受取人</span></a> であった回数。したがってネットワークはノードを実行するアカウントにインセンティブを与えます。</p></li>
+</ul>
+<p>すべての高価値アカウントについて、定期的にこれら 3 つの要素に基づいて <strong>インポータンススコア</strong> が計算されます。インポータンススコアはアカウントが次のブロックを <a class="reference internal" href="harvesting.html"><span class="doc">ハーベスト</span></a> する確率を決定します。</p>
+</section>
+<section id="partial-scores">
+<h2>部分スコア<a class="headerlink" href="#partial-scores" title="この見出しへのパーマリンク"></a></h2>
+<p>ネットワークは最初に、各インポータンス期間 (720 ブロック、約 6 時間 <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワーク設定</span></a> の <code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code> を参照) の終わりに、すべての高価値アカウントについて、次の <strong>部分スコア</strong> を計算します:</p>
+<ul>
+<li><p><strong>Stake Score</strong> (<span class="math notranslate nohighlight">\(S\)</span>): 期末時点のアカウントの残高をすべての高価値アカウントの残高で割ったもの。</p></li>
+<li><p><strong>Transaction Score</strong> (<span class="math notranslate nohighlight">\(T\)</span>): アカウントによって支払われた手数料の合計を、期間中にすべての高価値アカウントによって支払われた手数料の合計で割ったもの。</p></li>
+<li><p><strong>Node Score</strong> (<span class="math notranslate nohighlight">\(N\)</span>): 期間中にアカウントがノード手数料の <a class="reference internal" href="harvesting.html#harvesting-rewards"><span class="std std-ref">受益者</span></a> であった回数を、すべての高価値アカウントがノード料金の受益者であった回数で割ったもの。</p></li>
+<li><p><strong>Activity Score</strong> (<span class="math notranslate nohighlight">\(A\)</span>): <span class="math notranslate nohighlight">\(T\)</span> と <span class="math notranslate nohighlight">\(N\)</span> スコアの平均は、それぞれ <strong>80％</strong> と <strong>20％</strong> で重み付けされ、アカウント残高で除算されます。アカウント残高で割ると、小さなアカウントがいくらか後押しされます。これはアカウントのインポータンススコアがアクティビティに依存し、ステークには依存しないためです。</p>
+<p>最初に絶対アクティビティスコア (<span class="math notranslate nohighlight">\(A'\)</span>) が計算されます:</p>
+<div class="math notranslate nohighlight">
+\[A' = \frac{10000}{Balance}(0.8T+0.2N)\]</div>
+<p>また、実際のアクティビティスコア (<span class="math notranslate nohighlight">\(A\)</span>) は <span class="math notranslate nohighlight">\(A'\)</span> をすべての高価値アカウントの絶対アクティビティスコアの合計で割って計算されます。</p>
+</li>
+</ul>
+<p>次に、上記の部分スコアに基づいてインポータンススコアが計算されます。</p>
+</section>
+<section id="importance-score">
+<h2>インポータンススコア<a class="headerlink" href="#importance-score" title="この見出しへのパーマリンク"></a></h2>
+<p>インポータンススコア <span class="math notranslate nohighlight">\(I\)</span> はアクティビティ係数 <span class="math notranslate nohighlight">\(\gamma\)</span> で重み付けされた <span class="math notranslate nohighlight">\(S\)</span> スコアと <span class="math notranslate nohighlight">\(A\)</span> スコアの平均が計算されます。</p>
+<div class="math notranslate nohighlight">
+\[I = \gamma A + (1-\gamma)S\]</div>
+<p>Symbol ネットワークにおいて <span class="math notranslate nohighlight">\(\gamma\)</span> は 0.05 (<strong>5%</strong>) です</p>
+<p>最後に、すべての <a class="reference internal" href="harvesting.html#account-eligibility"><span class="std std-ref">ハーベスティング適格</span></a> アカウントのうち、特定のアカウントが選択される確率は <strong>直近 2 つのうち小さい方と定義されるインポータンススコア</strong> <span class="math notranslate nohighlight">\(I\)</span> の <strong>有効なインポータンススコア</strong> に比例します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>スコアは 720 ブロック毎 (およそ 6 時間) で計算され、ハーベスティング可能性を計算する際、直近の <strong>2 つのスコア</strong> で小さい方が使用され、アカウントへ最初に資産を提供する際、ゼロより大きい確率を得るには <strong>12 時間</strong> が必要です。</p>
+</div>
+</section>
+<section id="customization">
+<h2>カスタマイズ<a class="headerlink" href="#customization" title="この見出しへのパーマリンク"></a></h2>
+<p>プライベートネットワークは、次の構成プロパティを変更することにより、 <strong>コンセンサスアルゴリズムをカスタマイズ</strong> できます。 <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワーク設定</span></a> を参照してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 15%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>プロパティ</p></th>
+<th class="head"><p>デフォルト</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code></p></td>
+<td><p>720 ブロック</p></td>
+<td><p>インポータンスが計算される頻度。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">minHarvesterBalance</span></code></p></td>
+<td><p>10000</p></td>
+<td><p>ハーベスティング対象となるために必要な最小残高。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">importanceActivityPercentage</span></code></p></td>
+<td><p>0.05</p></td>
+<td><p>アクティビティスコアの寄与 (<span class="math notranslate nohighlight">\(\gamma\)</span>) が 0 の場合、 PoS+ コンセンサスは、従来の PoS と同じように動作します。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/consensus-algorithm.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">コンセンサス</a><ul>
+<li><a class="reference internal" href="#factors">要因</a></li>
+<li><a class="reference internal" href="#partial-scores">部分スコア</a></li>
+<li><a class="reference internal" href="#importance-score">インポータンススコア</a></li>
+<li><a class="reference internal" href="#customization">カスタマイズ</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

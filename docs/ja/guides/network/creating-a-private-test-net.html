@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>プライベートテストネットワーク &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ノードプロパティ" href="configuring-node-properties.html" />
+    <link rel="prev" title="非カストディアルなノードのセットアップ" href="non-custodial-node-setup.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/network/creating-a-private-test-net.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/network/creating-a-private-test-net.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ネットワーク</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Symbol Bootstrap の使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">ノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">ノードの維持管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">プライベートテストネットワーク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">ノードプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">ネットワークプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">MongoDB への接続方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ネットワーク</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Symbol Bootstrap の使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">ノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">ノードの維持管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">プライベートテストネットワーク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">ノードプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">ネットワークプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">MongoDB への接続方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="private-test-networks">
+<h1>プライベートテストネットワーク<a class="headerlink" href="#private-test-networks" title="この見出しへのパーマリンク"></a></h1>
+<p>このガイドでは、 Symbol を使用して、独自のプライベートネットワークをセットアップする手順を説明します。</p>
+<p>ネットワークを実行するため、 <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> パッケージを使用します。このパッケージの動作をより理解するために <a class="reference internal" href="using-symbol-bootstrap.html"><span class="doc">Symbol Bootstrap の使用</span></a> ガイドを読むことを推奨します。</p>
+<section id="the-bootstrap-preset">
+<h2><code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> プリセット<a class="headerlink" href="#the-bootstrap-preset" title="この見出しへのパーマリンク"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> には、複数のノードを持つ、次のアーキテクチャのネットワークをインスタンス化する <code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> のプリセットがあります:</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/four-layer-architecture.png" src="../../_images/four-layer-architecture.png" style="width: 500px;" />
+<figcaption>
+<p><span class="caption-text">ブートストラップネットワークアーキテクチャ</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク"></a></p>
+</figcaption>
+</figure>
+<p>&quot;Internal&quot; とラベル付けされたノードは <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> によって作成されており、REST API からアクセス可能です:</p>
+<ul class="simple">
+<li><p><strong>peer-node (1 と 2)</strong>: Peer ノードは API がトランザクションを P2P ネットワークにプッシュすると、それを検証します。ノードはコンセンサスアルゴリズムを実行して、新しいブロックを作成して、ネットワークを通して変更を伝播します。</p></li>
+<li><p><strong>api-node</strong>: API ノードはトランザクションが検証された後に MongoDB データベースにデータを保存します。これらはパーシャルなアグリゲートボンドトランザクションを識別して保存もします。</p></li>
+<li><p><strong>rest-gateway</strong> は HTTP と WebSockets をブロックチェーン上で読み書きアクションが実行できるように構成します。</p></li>
+</ul>
+</section>
+<section id="instantiate-the-network">
+<h2>ネットワークのインスタンス化<a class="headerlink" href="#instantiate-the-network" title="この見出しへのパーマリンク"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> プリセットで <code class="docutils literal notranslate"><span class="pre">start</span></code> コマンド (<a class="reference internal" href="using-symbol-bootstrap.html#symbol-bootstrap-all-in-one"><span class="std std-ref">Symbol Bootstrap の使い方</span></a> ガイドで説明) を使用します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>start<span class="w"> </span>-p<span class="w"> </span>bootstrap
+</pre></div>
+</div>
+<p>1 つのコマンドで、ネットワークを作成して、起動します。新しいブラウザタブを開き、次の場所に移動して、稼働していることを確認します:</p>
+<p><code class="docutils literal notranslate"><span class="pre">localhost:3000/chain/info</span></code></p>
+<p>API ノードからレスポンスを取得します。</p>
+</section>
+<section id="retrieving-the-node-accounts">
+<h2>ノードアカウントの取得<a class="headerlink" href="#retrieving-the-node-accounts" title="この見出しへのパーマリンク"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> は対応するアカウントを持つ、複数のノードを作成しました。これらアカウントのいずれかと対話 (たとえば、モザイクをそのアカウント <strong>へ</strong> 転送) するには、そのアドレスまたは公開鍵が必要です。アカウントの完全な制御 (たとえば、モザイクをアカウント <strong>から</strong> 転送) には、その秘密鍵が必要です。</p>
+<p>すべての情報は <code class="docutils literal notranslate"><span class="pre">target</span></code> フォルダ内の YAML ファイルから取得できます:</p>
+<p><code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code></p>
+<p>例:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">networkType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">152</span>
+<span class="nt">nemesisGenerationHashSeed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7BFC536990108CA923B2715DE6B8E47E6BB56C945293BF4FC22C5AF895F61E62</span>
+<span class="nt">nodes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span>
+<span class="w">        </span><span class="nt">signing</span><span class="p">:</span>
+<span class="w">            </span><span class="c1"># Keys for the account of the peer-node-0</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C2BD21E4F9261247A4CBE75DA8683978E0F1FFF34AAB17BEBC21E7B9E0E17A9F</span>
+<span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TAMEGYVY6GVGXCLBIEH72XU4D2OSTH2MIOOY4QQ</span>
+<span class="w">        </span><span class="nt">vrf</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D67601AC6767F8A3C97FFDB0D9D737A943FFFA6E69C2C6527B0ED32A4E41B443</span>
+<span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCR6ZWX3UP3TKJK3BSE6ARJ4WAF3KHFFUWJ7EWI</span>
+<span class="w">        </span><span class="nt">voting</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">921ED0839EA3C8590CA1D6562DDD3BFEDA44CCE05DD82DF8C79DED2A3F816A1B</span>
+<span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TA77BJJJMRXR2OLJKZNUFTRMLHLQ4T2PPHZRX5I</span>
+<span class="w">        </span><span class="nt">ssl</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">            </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3d68cdaa4e48a14bd875d4ca18e044522be5f602e8c4f37c1c65eafdfaa19110</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peer-node</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peer-node-0</span>
+<span class="w">        </span><span class="nt">friendlyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peer-node-0</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>シークレットキーは常に秘匿してください！</p>
+</div>
+<p><a href="https://www.npmjs.com/package/symbol-cli" target="_blank">symbol-cli</a> を使用して、これらアカウントのいずれかをインポートできます。アクセスを容易にするコマンドラインツール (詳細については <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli ガイド</span></a> を参照してください):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>profile<span class="w"> </span>import<span class="w"> </span>--private-key<span class="w"> </span>&lt;PRIVATE_KEY&gt;<span class="w"> </span>--network<span class="w"> </span>TEST_NET<span class="w"> </span>--url<span class="w"> </span>http://localhost:3000
+</pre></div>
+</div>
+<p>この新しいプロファイルに名前を付けることで、たとえば、アカウントの残高を取得するために使用できます:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>account<span class="w"> </span>info<span class="w"> </span>--profile<span class="w"> </span>&lt;PROFILE_NAME&gt;
+</pre></div>
+</div>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> によって作成されたノードが表示され、実験の開始するために、いくつかの通貨 (異なる <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">モザイク</span></a>) がすでに含まれています:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Balance Information
+┌──────────────────┬──────────────────┬──────────────────┬───────────────────┐
+│ Mosaic Id        │ Relative Amount  │ Absolute Amount  │ Expiration Height │
+├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
+│ 3ECBB73A05A147BC │ 1,124,874,999.75 │ 1124874999750000 │ Never             │
+├──────────────────┼──────────────────┼──────────────────┼───────────────────┤
+│ 2B19203C86F9A668 │ 3,000            │ 3000000          │ Never             │
+└──────────────────┴──────────────────┴──────────────────┴───────────────────┘
+</pre></div>
+</div>
+</section>
+<section id="retrieving-the-test-accounts">
+<h2>テストアカウントの取得<a class="headerlink" href="#retrieving-the-test-accounts" title="この見出しへのパーマリンク"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> は <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">モザイク</span></a> を事前に保有する、いくつかのテストアカウントを生成します。これらのアカウントは開発または学習目的のために存在します。</p>
+<p>これらのアカウントの鍵は、上記の <code class="docutils literal notranslate"><span class="pre">target</span> <span class="pre">/addresses.yml</span></code> ファイルに、 <code class="docutils literal notranslate"><span class="pre">mosaics</span></code> セクションにあります:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mosaics</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">56631872BA6657A1</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">currency</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">currency</span>
+<span class="w">        </span><span class="c1"># These are accounts containing the main currency</span>
+<span class="w">        </span><span class="nt">accounts</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">91A9513EBEB50DEFCD928032611B2FBC046FA894089D2ACED115D6EDEB0BFD2A</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NBO3P2AM3A6242V2NFMUIG5RQ3ZFDRKS5QNRBJA</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4E9CC90B45265691C2CF0C68785A06602D28DB50ACFB91F8389B976898239132</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NCDFN3W2AP3E4I2XYITUJHHGVSYKOIR2IUTXKXY</span>
+<span class="w">    </span><span class="p p-Indicator">-</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">079C43E0DFC44B38</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">harvest</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">harvest</span>
+<span class="w">        </span><span class="c1"># These are account containing the network currency used for harvesting</span>
+<span class="w">        </span><span class="nt">accounts</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D617FC0C746681849D93DBEB5FE0E390F26535E4EA76F02AB206AD053B72FAB8</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NBFFJ3MNPMHP474KD7JLBJWAYSYSAUEW7L7262Q</span>
+<span class="w">            </span><span class="p p-Indicator">-</span>
+<span class="w">                </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</span>
+<span class="w">                </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BBB04EC2CF67658B755F94FC347DDC4AAFFBFC24B84298AEF41CDA2485FA216E</span>
+<span class="w">                </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NCQBYJE3U4Q36AA2E6HFTGKCUXIBUB2NMIGAFDA</span>
+</pre></div>
+</div>
+<p>例えば、上記のコマンドラインツールの <a href="https://www.npmjs.com/package/symbol-cli" target="_blank">symbol-cli</a> を使用することで、これらのアカウントに秘密鍵でアクセスします。</p>
+</section>
+<section id="voting-nodes">
+<h2>投票ノード<a class="headerlink" href="#voting-nodes" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">ブロックファイナライゼーション</span></a> プロセスは、ブロックチェーンに追加する前に、ネットワークノードがブロックの正確性について投票を要求されます。各ノードは投票者として登録するかどうかを選択します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> プリセットによって作成される、すべてのノードはデフォルトで投票者です。これが不要な場合は、カスタムプリセットで次の行を提供し、各ノードの投票を無効にします。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># peer-node-0</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># peer-node-1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">voting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># api-node-0</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>投票ノードが無い場合、ファイナライズは発生しません。 <code class="docutils literal notranslate"><span class="pre">localhost:3000/chain/info</span></code> を参照すると、チェーン高が増加していることがわかりますが、 <code class="docutils literal notranslate"><span class="pre">latestFinalizedBlock</span></code> 高はゼロのままです。</p>
+</div>
+</section>
+<section id="configuring-network-properties">
+<h2>ネットワークプロパティの設定<a class="headerlink" href="#configuring-network-properties" title="この見出しへのパーマリンク"></a></h2>
+<p>カスタマイズ可能なネットワーク関連の設定については <a class="reference internal" href="configuring-network-properties.html"><span class="doc">ネットワークプロパティの設定</span></a> ガイドを参照してください。</p>
+</section>
+<section id="next-steps">
+<h2>次の手順<a class="headerlink" href="#next-steps" title="この見出しへのパーマリンク"></a></h2>
+<p>各ノードは投票者として登録するかどうかを選択します。 <code class="docutils literal notranslate"><span class="pre">localhost:3000</span></code> で提供される API ノードを介して疎通することもできます。</p>
+<p>Symbol の機能の学習を続けるために <a class="reference internal" href="../category.html" title="Categories"><span class="xref std std-ref">他のガイド</span></a> も参照してみてください！</p>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;06&#8209;07</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/creating-a-private-test-net.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">プライベートテストネットワーク</a><ul>
+<li><a class="reference internal" href="#the-bootstrap-preset"><code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> プリセット</a></li>
+<li><a class="reference internal" href="#instantiate-the-network">ネットワークのインスタンス化</a></li>
+<li><a class="reference internal" href="#retrieving-the-node-accounts">ノードアカウントの取得</a></li>
+<li><a class="reference internal" href="#retrieving-the-test-accounts">テストアカウントの取得</a></li>
+<li><a class="reference internal" href="#voting-nodes">投票ノード</a></li>
+<li><a class="reference internal" href="#configuring-network-properties">ネットワークプロパティの設定</a></li>
+<li><a class="reference internal" href="#next-steps">次の手順</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

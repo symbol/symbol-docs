@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Preventing spam attacks with account restrictions &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SecretLock" href="../secretlock/index.html" />
+    <link rel="prev" title="Getting mosaic global restrictions attached to a mosaic" href="getting-mosaic-global-restrictions-attached-to-a-mosaic.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/restriction/preventing-spam-attacks-with-account-restrictions.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/restriction/preventing-spam-attacks-with-account-restrictions.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Mosaic restrictions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="restricting-mosaics-transfers.html">Restricting mosaic transfers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delegating-mosaic-restrictions-to-a-third-party.html">Delegating mosaic restrictions to a third party</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-restrictions-attached-to-an-address.html">Getting the account restrictions attached to an address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-address-restrictions-attached-to-an-account.html">Getting mosaic address restrictions attached to an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-global-restrictions-attached-to-a-mosaic.html">Getting mosaic global restrictions attached to a mosaic</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Preventing spam attacks with account restrictions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Mosaic restrictions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="restricting-mosaics-transfers.html">Restricting mosaic transfers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delegating-mosaic-restrictions-to-a-third-party.html">Delegating mosaic restrictions to a third party</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-restrictions-attached-to-an-address.html">Getting the account restrictions attached to an address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-address-restrictions-attached-to-an-account.html">Getting mosaic address restrictions attached to an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-global-restrictions-attached-to-a-mosaic.html">Getting mosaic global restrictions attached to a mosaic</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Preventing spam attacks with account restrictions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="preventing-spam-attacks-with-account-restrictions">
+<h1>Preventing spam attacks with account restrictions<a class="headerlink" href="#preventing-spam-attacks-with-account-restrictions" title="Permalink to this heading"></a></h1>
+<p>Learn how to add and remove account restrictions.</p>
+<section id="use-case">
+<h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h2>
+<p>Imagine you are a company using the public chain to certify the quality of your products.</p>
+<p>When the quality verification process concludes, an operator sends a <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">quality seal</span></a> to the product account, which the customers can review by scanning a QR code.
+For the convenience of the customers, you only want to <strong>show relevant transactions</strong> and prevent spam from cluttering the product account.</p>
+<p>The final customers can review the product mosaics scanning a QR code.
+For that reason, the company only wants to show related transactions, avoiding that others spam their products with non-related information.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/account-restrictions-spam.png" src="../../_images/account-restrictions-spam.png" style="width: 550px;" />
+<figcaption>
+<p><span class="caption-text">Blocking spam attacks</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Thus, you opt to configure the product <a class="reference internal" href="../../concepts/account-restriction.html"><span class="doc">account restrictions</span></a> to only receive transactions that follow a set of conditions.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete <a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">sending mosaics and messages between two accounts guide</span></a>.</p></li>
+<li><p>Complete <a class="reference internal" href="../mosaic/creating-a-mosaic.html"><span class="doc">creating a mosaic guide</span></a>.</p></li>
+<li><p>Complete <a class="reference internal" href="restricting-mosaics-transfers.html"><span class="doc">restricting mosaics transfers</span></a>.</p></li>
+<li><p>Create <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">accounts</span></a> to represent the product and another one to repesent the company.</p></li>
+<li><p>Load the product’s account with enough <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to pay for the transactions fees.</p></li>
+</ul>
+</section>
+<section id="method-01-using-the-sdk">
+<h2>Method #01: Using the SDK<a class="headerlink" href="#method-01-using-the-sdk" title="Permalink to this heading"></a></h2>
+<section id="blocking-transactions-by-address">
+<h3>Blocking transactions by address<a class="headerlink" href="#blocking-transactions-by-address" title="Permalink to this heading"></a></h3>
+<p>An account can decide to receive transactions only from an allowed list of <a class="reference internal" href="../../concepts/account.html"><span class="doc">addresses</span></a>.
+Similarly, an account can specify a blocked list of addresses to block transactions from.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Allow and block restrictions are mutually exclusive per restriction type. In other words, an account can only be configured to have either an allowed or blocked list per type of restriction.</p>
+</div>
+<p>By default, when there is no restriction set, all the accounts in the network can announce transactions to the stated account.</p>
+<p>Returning to our previous example, let us imagine that you want to configure the product account only to accept receiving transactions that come from the company’s account.
+You might take the following steps to do so:</p>
+<ol class="arabic simple">
+<li><p>Define the company’s address <code class="docutils literal notranslate"><span class="pre">TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI</span></code> in a new variable.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.ts">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with company address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">companyRawAddress</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.js">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with company address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">companyRawAddress</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. Create an <strong>AccountRestrictionTransaction</strong>, with restrictionType <code class="docutils literal notranslate"><span class="pre">AllowAddress</span></code>.
+Add to the company’s address from the previous step to the allowed list.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AccountRestrictionTransaction</span><span class="p">.</span><span class="nx">createAddressRestrictionModificationTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">AddressRestrictionFlag</span><span class="p">.</span><span class="nx">AllowIncomingAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">companyAddress</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.js">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AccountRestrictionTransaction</span><span class="p">.</span><span class="nx">createAddressRestrictionModificationTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AddressRestrictionFlag</span><span class="p">.</span><span class="nx">AllowIncomingAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">companyAddress</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Sign and announce the transaction with the product’s account.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.ts">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with product private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">productPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionAllowList.js">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with product private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">productPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, if you send a <a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">TransferTransaction</span></a> from another account, you will get an error since only <code class="docutils literal notranslate"><span class="pre">TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI</span></code> is allowed to send transactions to the product’s account.</p>
+</section>
+<section id="blocking-transactions-by-mosaic-id">
+<h3>Blocking transactions by mosaic id<a class="headerlink" href="#blocking-transactions-by-mosaic-id" title="Permalink to this heading"></a></h3>
+<p>Imagine that the account that represents the company owns the following mosaics:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">company.share</span></code>: represents shares of the company.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">company.quality.seal</span></code>: represents that the product has passed a quality test.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">company.safety.seal</span></code>: represents that the product has passed a safety test.</p></li>
+</ul>
+<p>In this case, it might be useful if the product could only receive seals and not company shares.</p>
+<p>Thus, you could narrow the type of transactions that the product can receive from the company’s account through the use of negation.
+Instead of specifically allowing the seals, the product can be set up to block receiving transactions that contain <code class="docutils literal notranslate"><span class="pre">company.share</span></code>.
+This is how it can be done:</p>
+<p>1. Define the <strong>AccountRestrictionModification</strong>.
+Add the mosaic id you want to block to the blocked list.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.ts">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyShareMosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7cdf3b117a3c40cc&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyShareMosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">companyShareMosaicIdHex</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.js">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyShareMosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7cdf3b117a3c40cc&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyShareMosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">companyShareMosaicIdHex</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. Create an <strong>AccountRestrictionTransaction</strong>, with restrictionType <code class="docutils literal notranslate"><span class="pre">BlockMosaic</span></code>.
+Add to the array the modification created in the previous step.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.ts">View Code</a></span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AccountRestrictionTransaction</span><span class="p">.</span><span class="nx">createMosaicRestrictionModificationTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">MosaicRestrictionFlag</span><span class="p">.</span><span class="nx">BlockMosaic</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">companyShareMosaicId</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.js">View Code</a></span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AccountRestrictionTransaction</span><span class="p">.</span><span class="nx">createMosaicRestrictionModificationTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicRestrictionFlag</span><span class="p">.</span><span class="nx">BlockMosaic</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">companyShareMosaicId</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Sign and announce the transaction with the product’s account.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.ts">View Code</a></span><a class="headerlink" href="#id12" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with product private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">productPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountMosaicRestrictionBlockList.js">View Code</a></span><a class="headerlink" href="#id13" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with product private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">productPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the process was successful, the product account can now only receive transactions from the company’s account that does not include any <code class="docutils literal notranslate"><span class="pre">company.share</span></code> mosaic.</p>
+</section>
+<section id="removing-a-restriction">
+<h3>Removing a restriction<a class="headerlink" href="#removing-a-restriction" title="Permalink to this heading"></a></h3>
+<p>After the company sells the product to the final client, they want to remove the condition that only allowed the company’s account to send transactions to the product. The account restrictions can be removed as easily as they were set up:</p>
+<p>1. Define the <strong>AccountRestrictionModification</strong>.
+Remove from the allowed list the company’s address.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.ts">View Code</a></span><a class="headerlink" href="#id14" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">companyRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">companyRawAddress</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.js">View Code</a></span><a class="headerlink" href="#id15" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">companyRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">companyAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">companyRawAddress</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create an <strong>AccountRestrictionTransaction</strong>, setting the type <code class="docutils literal notranslate"><span class="pre">AllowAddress</span></code>. Add as well the modification created.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.ts">View Code</a></span><a class="headerlink" href="#id16" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AccountRestrictionTransaction</span><span class="p">.</span><span class="nx">createAddressRestrictionModificationTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">AddressRestrictionFlag</span><span class="p">.</span><span class="nx">AllowIncomingAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">companyAddress</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.js">View Code</a></span><a class="headerlink" href="#id17" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AccountRestrictionTransaction</span><span class="p">.</span><span class="nx">createAddressRestrictionModificationTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AddressRestrictionFlag</span><span class="p">.</span><span class="nx">AllowIncomingAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="p">[</span><span class="nx">companyAddress</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Sign and announce the transaction with the product’s account.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.ts">View Code</a></span><a class="headerlink" href="#id18" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with product private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">productPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/AccountAddressRestrictionRemoveRestriction.js">View Code</a></span><a class="headerlink" href="#id19" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with product private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productPrivateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#39;</span><span class="p">;</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">productAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">productPrivateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productAccount</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After the transaction gets confirmed, you should be able to send transactions from any account to the product’s account again.</p>
+</section>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2020&#8209;11&#8209;19</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/restriction/preventing-spam-attacks-with-account-restrictions.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Preventing spam attacks with account restrictions</a><ul>
+<li><a class="reference internal" href="#use-case">Use case</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#method-01-using-the-sdk">Method #01: Using the SDK</a><ul>
+<li><a class="reference internal" href="#blocking-transactions-by-address">Blocking transactions by address</a></li>
+<li><a class="reference internal" href="#blocking-transactions-by-mosaic-id">Blocking transactions by mosaic id</a></li>
+<li><a class="reference internal" href="#removing-a-restriction">Removing a restriction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2020&#8209;11&#8209;19.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2020&#8209;11&#8209;19.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

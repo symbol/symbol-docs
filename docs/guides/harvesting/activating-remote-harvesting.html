@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Activating remote harvesting &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Metadata" href="../metadata/index.html" />
+    <link rel="prev" title="Activating delegated harvesting manually" href="activating-delegated-harvesting-manual.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/harvesting/activating-remote-harvesting.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/harvesting/activating-remote-harvesting.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Harvesting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-wallet.html">Activating delegated harvesting using the Desktop Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-manual.html">Activating delegated harvesting manually</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Activating remote harvesting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Harvesting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-wallet.html">Activating delegated harvesting using the Desktop Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-manual.html">Activating delegated harvesting manually</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Activating remote harvesting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="activating-remote-harvesting">
+<h1>Activating remote harvesting<a class="headerlink" href="#activating-remote-harvesting" title="Permalink to this heading"></a></h1>
+<p>Harvest new blocks through a proxy account for added security.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a> enables <strong>node owners</strong> to receive rewards from creating new blocks <strong>without exposing their main account’s private key</strong> in the node’s configuration files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Blocks can only be harvested by nodes. If you do not own a node but still want to receive harvesting fees you will have to <strong>request a node to harvest for you</strong> using <a class="reference internal" href="../../concepts/harvesting.html#delegated-harvesting"><span class="std std-ref">Delegated harvesting</span></a>.</p>
+</div>
+<p>This guide has <strong>two sections</strong>, depending on how you created your node: Using <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> or manually.</p>
+</section>
+<section id="activation-through-symbol-bootstrap">
+<h2>Activation through Symbol Bootstrap<a class="headerlink" href="#activation-through-symbol-bootstrap" title="Permalink to this heading"></a></h2>
+<p>If you have followed the <a class="reference internal" href="../network/running-a-symbol-node.html"><span class="doc">Running a node</span></a> guide then you have used <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> to create your node. <strong>The out-of-the-box presets enable remote harvesting by default</strong> so there is nothing you need to do if you enabled harvesting when following that guide.</p>
+<p>To clarify, <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> automatically creates a remote account (labelled <code class="docutils literal notranslate"><span class="pre">remote</span></code> in the <code class="docutils literal notranslate"><span class="pre">addresses.yml</span></code> file) and sets it as the signer of the new blocks (using its private key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> property). Then, the <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">link</span></code> command announces the <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> transactions required to finish the activation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is worth noting that, although <strong>this is NOT recommended</strong>, you can omit the remote account and sign the new block <strong>directly with your main account</strong> by using a <a class="reference internal" href="../network/using-symbol-bootstrap.html#symbol-bootstrap-presets"><span class="std std-ref">custom preset file</span></a> with this line:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodeUseRemoteAccount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<p>Needless to say your main account’s private key will then be present in the node configuration files and will be accessible if the node is compromised.</p>
+</div>
+</section>
+<section id="manual-activation">
+<h2>Manual activation<a class="headerlink" href="#manual-activation" title="Permalink to this heading"></a></h2>
+<p>If you have deployed a node yourself, for example by following <a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/docs/RUNPEERLIN.md">the catapult-client instructions</a>, then you have to <strong>enable harvesting manually</strong>.</p>
+<p>The <a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/docs/RUNPEERLIN.md#user-content-enable-harvesting">catapult-client documentation</a> explains how to enable <a class="reference internal" href="../../concepts/harvesting.html#local-harvesting"><span class="std std-ref">local harvesting</span></a>, which stores your main account’s private key on the client. This section explains how to enable <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">remote harvesting</span></a> instead, which uses a proxy account and is therefore <strong>much more secure</strong>.</p>
+<p>This will be done using the <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> tool. The required steps are:</p>
+<ol class="arabic simple">
+<li><p>Set the <strong>remote account</strong> as the harvester in the node configuration.</p></li>
+<li><p>Announce an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> linking your main and your remote accounts.</p></li>
+<li><p>(Optional) Configure the <strong>VRF account</strong> if it is not already set.</p></li>
+</ol>
+<section id="step-1-setup-the-remote-account">
+<h3>Step 1: Setup the remote account<a class="headerlink" href="#step-1-setup-the-remote-account" title="Permalink to this heading"></a></h3>
+<p>Create a brand new account to act as the <strong>remote account</strong>. This account <strong>must have never sent nor received any transaction</strong>, and it cannot be involved in any transaction while it acts as remote account, so it is safest to create it from scratch.</p>
+<p>Run this from a terminal:</p>
+<div class="example-code docutils container">
+<div class="highlight-catapult-client notranslate"><div class="highlight"><pre><span></span>catapult.tools.addressgen<span class="w"> </span>--network<span class="w"> </span>public
+<span class="c1"># Change the network type to suit your needs</span>
+</pre></div>
+</div>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account generate
+# Do NOT save the account, and set the import type to PrivateKey
+</pre></div>
+</div>
+</div>
+<p>Note the <strong>public</strong> and <strong>private</strong> keys for this new account.</p>
+<p>Now edit the <code class="docutils literal notranslate"><span class="pre">config-harvesting.properties</span></code> file (it should be in a <code class="docutils literal notranslate"><span class="pre">resources</span></code> directory if you followed <a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/docs/RUNPEERLIN.md">the catapult-client instructions</a>). Look for the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> field and write the remote account’s private key.</p>
+</section>
+<section id="step-2-link-the-remote-and-main-accounts">
+<h3>Step 2: Link the remote and main accounts<a class="headerlink" href="#step-2-link-the-remote-and-main-accounts" title="Permalink to this heading"></a></h3>
+<p>Make sure you have configured <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> so that your main account is your default profile (if this is not the case, use the <code class="docutils literal notranslate"><span class="pre">--profile</span></code> parameter).</p>
+<p>Then run this command from a terminal:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction accountkeylink --action Link -u &lt;PUBLIC-REMOTE-KEY&gt; --sync
+</pre></div>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">&lt;PUBLIC-REMOTE-KEY&gt;</span></code> obtained in Step 1. The <code class="docutils literal notranslate"><span class="pre">--sync</span></code> parameter will wait until the transaction is confirmed. Check out the <a class="reference internal" href="../../concepts/fees.html"><span class="doc">fees documentation</span></a> to know how much to pay to announce this transaction.</p>
+</section>
+<section id="step-3-configure-the-vrf-account">
+<h3>Step 3: Configure the VRF account<a class="headerlink" href="#step-3-configure-the-vrf-account" title="Permalink to this heading"></a></h3>
+<p>All <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">eligible accounts</span></a> must have registered a VRF key. Check out the <code class="docutils literal notranslate"><span class="pre">harvesterVrfPrivateKey</span></code> field in the <code class="docutils literal notranslate"><span class="pre">config-harvesting.properties</span></code> file. If it’s already filled-in, you can skip this step.</p>
+<p>Otherwise, create another account just like you did in Step 1, to act as the VRF account:</p>
+<div class="example-code docutils container">
+<div class="highlight-catapult-client notranslate"><div class="highlight"><pre><span></span>catapult.tools.addressgen<span class="w"> </span>--network<span class="w"> </span>public
+<span class="c1"># Change the network type to suit your needs</span>
+</pre></div>
+</div>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account generate
+# Do NOT save the account, and set the import type to PrivateKey
+</pre></div>
+</div>
+</div>
+<p>Write the <strong>private key</strong> in the <code class="docutils literal notranslate"><span class="pre">harvesterVrfPrivateKey</span></code> field of the configuration file, and announce a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> to link the VRF and main accounts:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction vrfkeylink --action Link -u &lt;PUBLIC-VRF-KEY&gt; --sync
+</pre></div>
+</div>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this heading"></a></h2>
+<p>The node should now be configured with remote harvesting. Keep these important points in mind, though:</p>
+<ul class="simple">
+<li><p><strong>Accounts with higher importance are selected more often to perform harvesting</strong>. Even if you successfully enable remote harvesting, you will not harvest any block (nor receive any fees) unless your main account’s <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> is high enough.</p></li>
+<li><p><strong>Importance score calculation does not happen continuously</strong>. By default, account importance scores are recalculated every 1440 blocks (about every 12 hours). See the <code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code> property in the <a class="reference internal" href="../network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">Configuring network properties</span></a> guide.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;04&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/harvesting/activating-remote-harvesting.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Activating remote harvesting</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#activation-through-symbol-bootstrap">Activation through Symbol Bootstrap</a></li>
+<li><a class="reference internal" href="#manual-activation">Manual activation</a><ul>
+<li><a class="reference internal" href="#step-1-setup-the-remote-account">Step 1: Setup the remote account</a></li>
+<li><a class="reference internal" href="#step-2-link-the-remote-and-main-accounts">Step 2: Link the remote and main accounts</a></li>
+<li><a class="reference internal" href="#step-3-configure-the-vrf-account">Step 3: Configure the VRF account</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#final-words">Final words</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

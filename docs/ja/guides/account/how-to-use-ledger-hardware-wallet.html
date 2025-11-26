@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>How to use your Ledger device with Symbol Wallet &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Common Hacks and Scams" href="scams-and-security.html" />
+    <link rel="prev" title="トランザクションをアカウントから読み込む" href="reading-transactions-from-an-account.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/account/how-to-use-ledger-hardware-wallet.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/account/how-to-use-ledger-hardware-wallet.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">アカウント</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="creating-an-account.html">アカウントの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-information.html">アカウントの情報を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-the-amount-of-assets-sent-to-an-account.html">アカウントへ送信したアセットの総量の取得</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reading-transactions-from-an-account.html">トランザクションをアカウントから読み込む</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to use your Ledger device with Symbol Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scams-and-security.html">Common Hacks and Scams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">アカウント</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="creating-an-account.html">アカウントの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-information.html">アカウントの情報を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-the-amount-of-assets-sent-to-an-account.html">アカウントへ送信したアセットの総量の取得</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reading-transactions-from-an-account.html">トランザクションをアカウントから読み込む</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to use your Ledger device with Symbol Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scams-and-security.html">Common Hacks and Scams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="how-to-use-your-ledger-device-with-symbol-wallet">
+<h1>How to use your Ledger device with Symbol Wallet<a class="headerlink" href="#how-to-use-your-ledger-device-with-symbol-wallet" title="この見出しへのパーマリンク"></a></h1>
+<p>The Ledger Nano S and X are hardware wallets that support multiple cryptocurrencies, including Symbol.</p>
+<p>A hardware wallet is a type of cryptocurrency wallet where you can store your private keys on a physical device. It's a secure and simultaneously user-friendly way to access your coins, as the private key is stored on the device and doesn't get leaked. Your coins are safe even when connected to an infected or malicious computer or a phishing/scam web page.</p>
+<p>Symbol Wallet for Desktop allows you to send and receive Symbol assets using a Ledger hardware wallet. Along with providing support for XYM, the Ledger device can also offer support for tokens created on the Symbol blockchain.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>Your Ledger device has been initialized. Select and click your model below for instructions on how to set up your device.</p>
+<ul>
+<li><p><a class="reference external" href="https://support.ledger.com/hc/en-us/articles/360000613793">Ledger S device set up</a></p></li>
+<li><p><a class="reference external" href="https://support.ledger.com/hc/en-us/articles/360018784134">Ledger X device set up</a></p></li>
+</ul>
+</li>
+<li><p>Your Ledger device’s firmware is up to date. Select and click your model below for instructions on how to update your device’s firmware.</p>
+<ul>
+<li><p><a class="reference external" href="https://support.ledger.com/hc/en-us/articles/360002731113">Ledger S device update</a></p></li>
+<li><p><a class="reference external" href="https://support.ledger.com/hc/en-us/articles/360013349800">Ledger X device update</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.ledger.com/ledger-live">Ledger Live</a> application is installed. Click <a class="reference external" href="https://www.ledger.com/start-your-crypto-journey">here</a> for instructions on how to get started.</p></li>
+<li><p><a class="reference external" href="https://github.com/nemgrouplimited/symbol-desktop-wallet/releases/latest">Symbol Wallet for Desktop</a> is installed.</p></li>
+</ul>
+</section>
+<section id="step-1-install-symbol-app-on-ledger-device">
+<h2>Step 1: Install Symbol app on Ledger device<a class="headerlink" href="#step-1-install-symbol-app-on-ledger-device" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>Launch the Ledger Live app, then click <strong>Manager</strong> in the left side panel.</p></li>
+<li><p>Connect and unlock your Ledger device.</p></li>
+<li><p>Allow the Manager on your device by pressing both left and right buttons simultaneously.</p></li>
+<li><p>Find Symbol in the App catalog.</p></li>
+<li><p>Click the <strong>Install</strong> button.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-0.png"><img alt="../../_images/ledger-guide-0.png" class="with-shadow" src="../../_images/ledger-guide-0.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="step-2-open-symbol-app-on-ledger-device">
+<h2>Step 2: Open Symbol app on Ledger device<a class="headerlink" href="#step-2-open-symbol-app-on-ledger-device" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>Find the Symbol app in your Ledger device by pressing the left and right buttons.</p></li>
+<li><p>Press both left and right buttons simultaneously to open the Symbol app.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-1.png"><img alt="../../_images/ledger-guide-1.png" class="with-shadow" src="../../_images/ledger-guide-1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="step-3-launch-the-symbol-wallet">
+<h2>Step 3: Launch the Symbol Wallet<a class="headerlink" href="#step-3-launch-the-symbol-wallet" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>Launch the Symbol Wallet.</p></li>
+<li><p>Click <strong>Create a new profile</strong> link.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-2.png"><img alt="../../_images/ledger-guide-2.png" class="with-shadow" src="../../_images/ledger-guide-2.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Click the <strong>Use Ledger</strong> button. Make sure the Symbol app is loaded in your Ledger device.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-3.png"><img alt="../../_images/ledger-guide-3.png" class="with-shadow" src="../../_images/ledger-guide-3.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Enter a profile name, select <strong>Symbol Mainnet</strong> (for purpose of this guide we used Testnet) network, enter a password and then click the <strong>Next</strong> button.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-4.png"><img alt="../../_images/ledger-guide-4.png" class="with-shadow" src="../../_images/ledger-guide-4.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>Ten accounts will be presented. Please choose at least one of them to continue. All accounts are derived from your Ledger device.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-5.png"><img alt="../../_images/ledger-guide-5.png" class="with-shadow" src="../../_images/ledger-guide-5.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>To confirm profile creation accept the Terms and click the <strong>Next</strong> to continue. Note that all transactions must be confirmed via your Ledger device NOT with your password.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-6.png"><img alt="../../_images/ledger-guide-6.png" class="with-shadow" src="../../_images/ledger-guide-6.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="step-4-send-and-receive-xym-in-the-ledger-device">
+<h2>Step 4: Send and receive XYM in the Ledger device<a class="headerlink" href="#step-4-send-and-receive-xym-in-the-ledger-device" title="この見出しへのパーマリンク"></a></h2>
+<p>After completing the steps mentioned above, navigate to the Symbol Wallet dashboard by clicking <strong>Home</strong> in the left side panel.</p>
+<p>The dashboard shows all the transactions coming in and out of your Ledger device, your account balance, assets and block information.</p>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-7.png"><img alt="../../_images/ledger-guide-7.png" class="with-shadow" src="../../_images/ledger-guide-7.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>IMPORTANT</strong>: When initializing a transaction in your Symbol Wallet, always verify if the data (e.g. Symbol address, XYM amount) matches with the corresponding data displayed on your Ledger device. If the two data match, you can proceed with the transaction; otherwise, you should NOT continue.</p>
+</section>
+<section id="how-to-receive-xym">
+<h2>How to receive XYM<a class="headerlink" href="#how-to-receive-xym" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>Click <strong>Accounts</strong> in the left side panel.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-8.png"><img alt="../../_images/ledger-guide-8.png" class="with-shadow" src="../../_images/ledger-guide-8.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Click the <strong>Show on Ledger</strong> button to verify your Symbol address. If the address in your Symbol Wallet matches with the address in your Ledger device, you can rest assured that it is true and genuine.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-9.png"><img alt="../../_images/ledger-guide-9.png" class="with-shadow" src="../../_images/ledger-guide-9.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-10.png"><img alt="../../_images/ledger-guide-10.png" class="with-shadow" src="../../_images/ledger-guide-10.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-11.png"><img alt="../../_images/ledger-guide-11.png" class="with-shadow" src="../../_images/ledger-guide-11.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Once verified, you can now share your Symbol address with the sender.</p></li>
+</ol>
+</section>
+<section id="how-to-send-xym">
+<h2>How to send XYM<a class="headerlink" href="#how-to-send-xym" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>Click <strong>Transfer</strong>.</p></li>
+<li><p>Fill out the required fields.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>To</strong> - the receiver’s XYM address.</p></li>
+<li><p><strong>Amount of XYM</strong> - the amount you are sending to the receiver.</p></li>
+</ul>
+<p><strong>IMPORTANT</strong>: If you are sending XYM to an exchange, you might need to add an unencrypted message. Please read carefully the instructions provided by the exchange.</p>
+<ol class="arabic simple" start="3">
+<li><p>Click the <strong>Send</strong> button. Note that there will be a fee for every transaction made.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-12.png"><img alt="../../_images/ledger-guide-12.png" class="with-shadow" src="../../_images/ledger-guide-12.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-13.png"><img alt="../../_images/ledger-guide-13.png" class="with-shadow" src="../../_images/ledger-guide-13.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Review each transaction detail in your Ledger device and press the right button to continue.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Recipient’s Symbol address</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-14.png"><img alt="../../_images/ledger-guide-14.png" class="with-shadow" src="../../_images/ledger-guide-14.png" style="width: 100%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Transaction Type</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-15.png"><img alt="../../_images/ledger-guide-15.png" class="with-shadow" src="../../_images/ledger-guide-15.png" style="width: 100%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Amount</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-16.png"><img alt="../../_images/ledger-guide-16.png" class="with-shadow" src="../../_images/ledger-guide-16.png" style="width: 100%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Message Type</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-17.png"><img alt="../../_images/ledger-guide-17.png" class="with-shadow" src="../../_images/ledger-guide-17.png" style="width: 100%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Message Text</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-18.png"><img alt="../../_images/ledger-guide-18.png" class="with-shadow" src="../../_images/ledger-guide-18.png" style="width: 100%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Fee</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-19.png"><img alt="../../_images/ledger-guide-19.png" class="with-shadow" src="../../_images/ledger-guide-19.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>If all data are correct, press both left and right buttons simultaneously to approve and sign the transaction.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-20.png"><img alt="../../_images/ledger-guide-20.png" class="with-shadow" src="../../_images/ledger-guide-20.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="how-to-view-transaction-details">
+<h2>How to view transaction details<a class="headerlink" href="#how-to-view-transaction-details" title="この見出しへのパーマリンク"></a></h2>
+<p>As mentioned above, you can view all the transactions coming in and out of your Ledger device through the Symbol Wallet dashboard.</p>
+<ol class="arabic simple">
+<li><p>Go to <strong>Dashboard</strong>.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-21.png"><img alt="../../_images/ledger-guide-21.png" class="with-shadow" src="../../_images/ledger-guide-21.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Click the transaction you want to view.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference external image-reference" href="/_images/ledger-guide-22.png"><img alt="../../_images/ledger-guide-22.png" class="with-shadow" src="../../_images/ledger-guide-22.png" style="width: 100%;" /></a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>You can also view the transaction details in the <a class="reference external" href="https://symbol.fyi/">Symbol Blockchain Explorer</a> by using the Hash data.</p></li>
+</ol>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="この見出しへのパーマリンク"></a></h2>
+<p>Ledger device integration supports all features available via Symbol Wallet, e.g.:</p>
+<ul class="simple">
+<li><p>Send transactions</p></li>
+<li><p>Sign/Send multisignature transactions</p></li>
+<li><p>Create/Edit multisignature accounts</p></li>
+<li><p>Create/Edit namespaces</p></li>
+<li><p>Create/Edit mosaics</p></li>
+<li><p>Enable delegated harvesting</p></li>
+<li><p>Add/Remove aliases for account and mosaics</p></li>
+<li><p>Add metadata to account/mosaic/namespace</p></li>
+<li><p>Add/Remove account restrictions</p></li>
+</ul>
+</section>
+<section id="contact-support">
+<h2>Contact Support<a class="headerlink" href="#contact-support" title="この見出しへのパーマリンク"></a></h2>
+<p>For technical support, you may reach us at:</p>
+<ul class="simple">
+<li><p>Discord: <a class="reference external" href="https://discord.gg/J38KwW5ZuG">https://discord.gg/J38KwW5ZuG</a></p></li>
+<li><p>Telegram: &#64;nemhelpdesk</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2025&#8209;07&#8209;24</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/account/how-to-use-ledger-hardware-wallet.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">How to use your Ledger device with Symbol Wallet</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#step-1-install-symbol-app-on-ledger-device">Step 1: Install Symbol app on Ledger device</a></li>
+<li><a class="reference internal" href="#step-2-open-symbol-app-on-ledger-device">Step 2: Open Symbol app on Ledger device</a></li>
+<li><a class="reference internal" href="#step-3-launch-the-symbol-wallet">Step 3: Launch the Symbol Wallet</a></li>
+<li><a class="reference internal" href="#step-4-send-and-receive-xym-in-the-ledger-device">Step 4: Send and receive XYM in the Ledger device</a></li>
+<li><a class="reference internal" href="#how-to-receive-xym">How to receive XYM</a></li>
+<li><a class="reference internal" href="#how-to-send-xym">How to send XYM</a></li>
+<li><a class="reference internal" href="#how-to-view-transaction-details">How to view transaction details</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#contact-support">Contact Support</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2025&#8209;07&#8209;24.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2025&#8209;07&#8209;24.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

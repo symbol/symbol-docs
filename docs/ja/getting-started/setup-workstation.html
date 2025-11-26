@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ワークステーションのセットアップ &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="はじめてのアプリケーションを作成" href="first-application.html" />
+    <link rel="prev" title="入門" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="active">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/getting-started/setup-workstation.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/getting-started/setup-workstation.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">入門</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ワークステーションのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-application.html">はじめてのアプリケーションを作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/migration/migrating-from-nem-to-symbol.html">NIS1 から Symbol へのマイグレーション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">入門</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ワークステーションのセットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-application.html">はじめてのアプリケーションを作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/migration/migrating-from-nem-to-symbol.html">NIS1 から Symbol へのマイグレーション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="setting-up-your-workstation">
+<h1>ワークステーションのセットアップ<a class="headerlink" href="#setting-up-your-workstation" title="この見出しへのパーマリンク"></a></h1>
+<p>最初のガイドでは Symbol <strong>アプリケーションの開発を始める</strong> ために必要なツールのインストールをステップバイステップに進めていきます。</p>
+<p><strong>メインネットワーク</strong> と同じテクノロジーと機能を使用している <strong>テストネットワーク</strong> を使用します。テストネットは開発者の貴重な資産を失うことなく Symbol が提供するトランザクションセットを試用することができます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Not a developer? Download our <a class="reference internal" href="../wallets.html"><span class="doc">client</span></a> to manage <code class="docutils literal notranslate"><span class="pre">XYM</span></code> and issue transactions.</p>
+</div>
+<section id="creating-an-account">
+<span id="setup-creating-a-test-account"></span><h2>アカウントの作成<a class="headerlink" href="#creating-an-account" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="../concepts/account.html"><span class="doc">アカウント</span></a> はあなたが <a class="reference internal" href="../concepts/mosaic.html"><span class="doc">モザイク</span></a> (トークン) を保有することのできる、預け入れ箱であり、 <a class="reference internal" href="../concepts/transaction.html"><span class="doc">トランザクションをアナウンス</span></a> することでこれらと疎通できます。</p>
+<p><a class="reference internal" href="../cli.html"><span class="doc">Symbol CLI</span></a> を使用して新しいアカウントを作成します。これはソリューションを構築して Symbol ネットワークと効率的に対話するために設計されたコマンドラインツールです。</p>
+<ol class="arabic">
+<li><p>Symbol CLI を実行するには <strong>Node.js 12 LTS</strong> が必要です。新しいターミナルを開き、インストールされているバージョンを確認します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>エラーが発生する場合、またはバージョンが v12.X に一致しない場合は <a href="https://nodejs.org/en/download/" target="_blank">nodejs.org</a> にアクセスして、要求バージョンをインストールしてください。 (ですが <a class="reference external" href="https://github.com/nvm-sh/nvm">nvm</a> を使用してインストールすることを推奨します)</p>
+</li>
+<li><p>Symbol CLI をインストールするには、次のコマンドを実行します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>symbol-cli
+</pre></div>
+</div>
+</li>
+<li><p>新しいアカウントを生成して <strong>profile</strong> として保存します。</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account generate
+
+Enter network type (MAIN_NET, TEST_NET): TEST_NET
+Do you want to save the account? [y/n]: y
+Select an import type: » PrivateKey
+Enter Symbol Node URL. (Example: http://localhost:3000): &lt;NODE_URL&gt;
+Insert the profile name: testnet
+Do you want to set the account as the default profile? [y/n]: y
+</pre></div>
+</div>
+</li>
+<li><p>すべてがうまくいけば、アカウントの資格情報がターミナルに表示されます。</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>Profile stored correctly
+┌─────────────┬──────────────────────────────────────────────────────────────┐
+│ <span class="cp">Property</span>    │ <span class="cp">Value</span>                                                        │
+├─────────────┼──────────────────────────────────────────────────────────────┤
+│ Address     │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI                │
+├─────────────┼──────────────────────────────────────────────────────────────┤
+│ Public Key  │ 203...C0A                                                    │
+├─────────────┼──────────────────────────────────────────────────────────────┤
+│ Private Key │ AAA...AAA                                                    │
+└─────────────┴──────────────────────────────────────────────────────────────┘
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>プライベートキーは秘密にして、オフラインのどこか安全な場所にバックアップしてください。</p>
+</div>
+</li>
+</ol>
+<p>エラー <code class="docutils literal notranslate"><span class="pre">CLI</span> <span class="pre">がノードに到達できません</span></code> が発生した場合、次が原因の可能性があります:</p>
+<ul class="simple">
+<li><p><strong>不正なノード URL</strong>: 使用された URL はアクティブノードに属していません。提供された URL を新しいブラウザータブで開き、レスポンスが返されるかどうかを確認します。テストネットワークノードが動いていない場合は <a href="https://symbol.fyi/nodes" target="_blank">this list</a> から <strong>他のノード URL を使用</strong> するか、この <a class="reference internal" href="../guides/network/running-a-symbol-node.html"><span class="doc">ガイド</span></a> に従って <strong>あなたのテストネットノードを実行</strong> することもできます。</p></li>
+<li><p><strong>インターネット接続</strong>: CLI はノードからいくつかの値を解決します。インターネットに接続せずにツールを使用する場合は <code class="docutils literal notranslate"><span class="pre">--network</span></code> , <code class="docutils literal notranslate"><span class="pre">--generation-hash</span></code> , <code class="docutils literal notranslate"><span class="pre">--namespace-id</span></code>, <code class="docutils literal notranslate"><span class="pre">divisibility</span></code> オプションを渡す必要があります。各パラメーターの詳細を確認するには <code class="docutils literal notranslate"><span class="pre">symbol-cli</span> <span class="pre">account</span> <span class="pre">generate</span> <span class="pre">--help</span></code> と入力します。</p></li>
+</ul>
+</section>
+<section id="getting-test-currency">
+<span id="setup-getting-test-currency"></span><h2>テスト通貨の取得<a class="headerlink" href="#getting-test-currency" title="この見出しへのパーマリンク"></a></h2>
+<p>トランザクションをアナウンスするには、ネットワークを保護・検証するインフラストラクチャを維持する人々へのインセンティブを提供するための <a class="reference internal" href="../concepts/fees.html"><span class="doc">手数料</span></a> を支払う必要があります。このコストはデフォルトのパブリックネットワークのネットワーク通貨である <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>  モザイクで支払われます。</p>
+<p>あなたは初めてのアカウントを作成したので、 <strong>テストネットフォーセット</strong> から <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> の取得をリクエストしてください。 <a href="https://testnet.symbol.tools/" target="_blank">Navigate here</a> で受信したい <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> の量とアドレスを指定して &quot;<strong>CLAIM!</strong>&quot; をクリックします。</p>
+<figure class="align-center">
+<img alt="../_images/faucet.png" src="../_images/faucet.png" />
+</figure>
+<p>トランザクションが承認されたら、あなたのアカウントが <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> を受信していることをコマンドラインツールを使用して確認します。</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account info --profile testnet
+
+Balance Information
+┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
+│ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
+├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
+│ 5E62990DCAC5BE8A │ 750.0           │ 750000000       | Never             │
+└──────────────────┴─────────────────┴─────────────────┴───────────────────┘
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>フォーセットの <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> の量が限られているため、不足する前に補充する必要があります。 <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> が必要なくなった場合は、フォーセットのページに表示されているアドレスへ送り返してください。</p>
+</div>
+</section>
+<section id="creating-a-project">
+<span id="setup-development-environment"></span><h2>プロジェクトの作成<a class="headerlink" href="#creating-a-project" title="この見出しへのパーマリンク"></a></h2>
+<p>アカウントに <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> 単位が入力されたので <strong>プログラミング言語を選択</strong> します。あなたが一番使いやすいと思う、またはあなたのプロジェクトに必要な言語を選んでください。</p>
+<p>次に、 <strong>新しいプロジェクト用のフォルダを作成します</strong> 。そして、選択した言語による指示に従います。プロジェクトで使用する言語がどれにも当てはまらない場合は  <a class="reference internal" href="../api.html"><span class="doc">REST ゲートウェイ</span></a> を使用して直接ブロックチェーンに問い合わせできます。</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">TypeScript</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">JavaScript</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Java</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Symbol SDK は Node.js 12 LTS を実行に必要とします。</p>
+</div>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">package.json</span></code> ファイルを作成します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Symbol SDK と RxJS ライブラリのインストール。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>symbol-sdk<span class="w"> </span>rxjs
+</pre></div>
+</div>
+</li>
+<li><p>TypeScript の依存をグローバルにインストールします:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>typescript
+typescript<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference external" href="https://www.npmjs.com/package/ts-node">ts-node</a> をインストールすると TypeScript ファイルを node で実行できます。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>ts-node
+</pre></div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Symbol SDK は Node.js 12 LTS を実行に必要とします。</p>
+</div>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">package.json</span></code> ファイルを作成します。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Symbol SDK と RxJS ライブラリのインストール。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>symbol-sdk<span class="w"> </span>rxjs
+</pre></div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Symbol SDK は JDK 8 を実行に必要とします。</p>
+</div>
+<ol class="arabic">
+<li><p>新しく Java <a class="reference external" href="https://gradle.org/install/">gradle</a> プロジェクトを開いてください。お好みの IDE を使用するか、コマンドラインからプロジェクトを作成してください。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gradle<span class="w"> </span>init<span class="w"> </span>--type<span class="w"> </span>java-application
+</pre></div>
+</div>
+</li>
+<li><p>Maven セントラルリポジトリを使うため <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> を編集します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">mavenCentral</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">symbol-sdk</span></code> を依存として追加します。</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">compile</span><span class="w"> </span><span class="s">&quot;io.nem:symbol-sdk-vertx-client&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>プログラムを開始するために <code class="docutils literal notranslate"><span class="pre">gradle</span> <span class="pre">build</span></code> と <code class="docutils literal notranslate"><span class="pre">gradle</span> <span class="pre">run</span></code> を実行します。</p></li>
+</ol>
+</div></div>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/getting-started/setup-workstation.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ワークステーションのセットアップ</a><ul>
+<li><a class="reference internal" href="#creating-an-account">アカウントの作成</a></li>
+<li><a class="reference internal" href="#getting-test-currency">テスト通貨の取得</a></li>
+<li><a class="reference internal" href="#creating-a-project">プロジェクトの作成</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

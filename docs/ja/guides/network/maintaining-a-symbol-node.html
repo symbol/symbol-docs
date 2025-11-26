@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ノードの維持管理 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="非カストディアルなノードのセットアップ" href="non-custodial-node-setup.html" />
+    <link rel="prev" title="セキュアなノードの立ち上げ" href="running-a-secure-symbol-node.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/network/maintaining-a-symbol-node.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/network/maintaining-a-symbol-node.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ネットワーク</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Symbol Bootstrap の使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">ノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ノードの維持管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">プライベートテストネットワーク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">ノードプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">ネットワークプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">MongoDB への接続方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ネットワーク</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="using-symbol-bootstrap.html">Symbol Bootstrap の使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">ノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ノードの維持管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">プライベートテストネットワーク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">ノードプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">ネットワークプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">MongoDB への接続方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <p>How to keep your Symbol node up and running healthily.</p>
+<section id="maintaining-a-node">
+<h1>ノードの維持管理<a class="headerlink" href="#maintaining-a-node" title="この見出しへのパーマリンク"></a></h1>
+<p>Symbol ノードを作成すれば、それが <a class="reference internal" href="running-a-symbol-node-manually.html"><span class="doc">手動</span></a> であろうと <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">Symbol Bootstrap</span></a> を使用していようと、ノードは <strong>ほぼ自律的</strong> です。ただし、このガイドで説明するように、多少のメンテナンスが必要です。</p>
+<ul class="simple">
+<li><p>通常のノードは <a class="reference internal" href="#maintain-client-version"><span class="std std-ref">クライアントのアップデート</span></a> セクションだけを対応します。</p></li>
+<li><p><a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">投票ノード</span></a> も <a class="reference internal" href="#maintain-voting-keys"><span class="std std-ref">投票キーの更新</span></a> セクションを参照する必要があります。</p></li>
+</ul>
+<section id="client-updates">
+<span id="maintain-client-version"></span><h2>クライアントのアップデート<a class="headerlink" href="#client-updates" title="この見出しへのパーマリンク"></a></h2>
+<p>新しいバージョンの Symbol クライアントは <strong>定期的に</strong> リリースされます。追加された機能とバグ修正を適用したい場合は、最新バージョンのクライアントを使用するように <strong>ノードを更新</strong> する必要があります。</p>
+<p>さらに、ノードのクライアントバージョンが大幅に遅れている場合、他のノードがノードへの接続を拒否する場合があります。</p>
+<p>すべての <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">ピアノード</span></a> で使用されるので、 <strong>Catapult client バージョン</strong> が更新するべき主たるバージョンです。加えて <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API ノード</span></a> は <strong>REST コンポーネントのバージョン</strong> も更新する必要があります。</p>
+<ul>
+<li><p><strong>最新バージョンを確認する</strong>:</p>
+<p>新しいバージョンのクライアントがリリースされるたびに、Symbol <a href="https://twitter.com/NEMofficial" target="_blank">Twitter</a> 、 <a href="https://discord.gg/J38KwW5ZuG" target="_blank">Discord</a> チャネル にて発表されます。 <a href="https://github.com/symbol" target="_blank">GitHub</a> を監視することやリポジトリと <a class="reference internal" href="../../compatibility.html"><span class="doc">互換性表ページ</span></a> でも最新のクライアントと REST のバージョンを確認できます。</p>
+</li>
+<li><p><strong>ノードのバージョンを確認する</strong>:</p>
+<p>ノードが使用しているバージョンは <a class="reference external" href="https://symbol.fyi/nodes">Symbol エクスプローラーノードリスト</a> から確認できます。</p>
+<p>もしくは、 <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API ノード</span></a> である場合、直接問い合わせることができます:</p>
+<ul>
+<li><p><strong>クライアントバージョン</strong>: <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> エンドポイント <code class="docutils literal notranslate"><span class="pre">version</span></code> プロパティ</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><code class="docutils literal notranslate"><span class="pre">バージョン</span></code> は単一の 4 バイト整数としてエンコードされ、最上位バイトはメジャーバージョンを、残りのバイトはマイナー、マイクロ、およびパッチバージョンを示します。</p>
+<p>例, バージョン <strong>16777472</strong> (10進法) は <strong>01000100h</strong> (16進法) バージョン <strong>1.0.1.0</strong> に対応します。</p>
+</div>
+</li>
+<li><p><strong>REST バージョン</strong>: <code class="docutils literal notranslate"><span class="pre">/node/server</span></code> エンドポイント <code class="docutils literal notranslate"><span class="pre">restVersion</span></code> プロパティ</p>
+<p>例では <code class="docutils literal notranslate"><span class="pre">restVersion</span></code> は <strong>&quot;2.3.6&quot;</strong> のようなバージョン文字列です。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>ノードを更新する手順は、ノードの作成方法にごとに異なります。以下の該当するセクションを参照してください。。</p>
+<section id="update-nodes-created-with-bootstrap">
+<span id="update-bootstrap-nodes"></span><h3>Bootstrap で作成したノードをアップデートする<a class="headerlink" href="#update-nodes-created-with-bootstrap" title="この見出しへのパーマリンク"></a></h3>
+<p>Symbol Bootstrap を使用して (<a class="reference internal" href="running-a-symbol-node.html"><span class="doc">ノードの立ち上げ</span></a> ガイドに従って) ノードを作成した場合、最新の状態に保つのは非常に簡単です。</p>
+<ol class="arabic">
+<li><p>まず <strong>Symbol Bootstrap のアップデート</strong> をします (詳細は <a class="reference internal" href="using-symbol-bootstrap.html"><span class="doc">Symbol Bootstrap の使用</span></a> ガイドを参照):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>symbol-bootstrap
+</pre></div>
+</div>
+</li>
+<li><p>次に、ノードのデータフォルダ (通常は <code class="docutils literal notranslate"><span class="pre">target</span></code> ) がある <strong>フォルダに移動</strong> して <strong>ノードを停止</strong> します。</p>
+<p>正確な停止コマンドはノードがデタッチモードで実行されていたかどうかによります。</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">start</span> <span class="pre">--detached</span></code> を使用して <strong>デタッチモードで開始</strong> した場合:</p>
+<p><code class="docutils literal notranslate"><span class="pre">target</span></code> フォルダタイプを含むフォルダから:</p>
+<div class="highlight-symbol-bootstrap notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap stop
+</pre></div>
+</div>
+</li>
+<li><p><strong>デタッチモードで起動しなかった場合</strong>:</p>
+<p>クライアントからのすべての出力を受けるターミナルを実行する必要があります。 <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> を押下して停止します:</p>
+</li>
+</ul>
+</li>
+<li><p>次にノードのデータフォルダの <strong>バックアップを作成</strong> します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>target<span class="w"> </span>target.BAK
+</pre></div>
+</div>
+</li>
+<li><p>最後に、全ての必要なコンポーネントのバージョンをアップデートするために <code class="docutils literal notranslate"><span class="pre">--upgrade</span></code> フラグを付けて <strong>ノードを停止して再起動</strong> します。</p>
+<p>必要に応じて <code class="docutils literal notranslate"><span class="pre">--detached</span></code> フラグも追加して、デタッチモードで開始します。</p>
+<div class="highlight-symbol-bootstrap notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap start --upgrade -c custom-presets.yml
+</pre></div>
+</div>
+</li>
+<li><p>ノードを再起動して <strong>コンポーネントのバージョンが更新されたことを確認</strong> できたら <strong>バックアップコピーを削除</strong> してもよいです。</p></li>
+</ol>
+</section>
+<section id="update-nodes-created-manually">
+<h3>手動で作成したノードをアップデートする<a class="headerlink" href="#update-nodes-created-manually" title="この見出しへのパーマリンク"></a></h3>
+<p><a class="reference internal" href="running-a-symbol-node-manually.html"><span class="doc">手動によるノードの立ち上げ</span></a> ガイドに従った場合は、Catapult クライアントを再ビルドし、以前のデータフォルダを保持して、同じアカウントとキャッシュされたデータが再利用されるようにする必要があります。</p>
+<p>必要な操作の概要:</p>
+<ul class="simple">
+<li><p>実行中の Catapult クライアントを <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> で停止します。</p></li>
+<li><p>Update the Catapult client source repository with the latest version and build it again following the <a class="reference external" href="https://github.com/symbol/symbol/tree/main/client/catapult/docs">Catapult client</a> instructions.</p></li>
+<li><p>最初に起動した際と同じフォルダでクライアントを再起動します。データと構成ファイルは再利用されます。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>上記の手順は機能しますが、新しいバージョンのビルド中にクライアントがオフラインになり、時間のかかる処理になる可能性があります。</p>
+<p>ただし、クライアントをビルドしたのと同じフォルダから実行するのではなく、サーバを (<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> を使用して) <strong>インストール</strong> する場合は、前のバージョンの実行中に新しいバージョンをビルドするオプションがあります。このようにして、サービスの中断を最小限に抑える必要があります。</p>
+<p>実施するステップ:</p>
+<ul class="simple">
+<li><p>Catapult クライアントのソースリポジトリを更新して、再ビルドします。</p></li>
+<li><p>起動中の Catapult クライアントの停止</p></li>
+<li><p>新しいバージョンのクライアントをインストール</p></li>
+<li><p>クライアントを再起動</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="voting-key-renewal">
+<span id="maintain-voting-keys"></span><h2>投票キーの更新<a class="headerlink" href="#voting-key-renewal" title="この見出しへのパーマリンク"></a></h2>
+<p>ノードが <a class="reference internal" href="../../concepts/reward-programs.html#voting-node-program"><span class="std std-ref">投票ノード</span></a> の場合、動作するには有効な投票キーが必要です。セキュリティ上の理由から、これらのキーは 6 か月後に期限切れになるため、定期的なノードメンテナンスの一環としてキーを更新する必要があります。</p>
+<p>Symbol Bootstrap を使用してノードを構築したかどうかに応じて、投票キーの更新に関する適切なセクションを参照してください。</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="running-a-symbol-node.html#bootstrap-voting-key-renewal"><span class="std std-ref">Bootstrap を使用した投票キーの更新</span></a></p></li>
+<li><p><a class="reference internal" href="running-a-symbol-node-manually.html#manual-voting-key-renewal"><span class="std std-ref">投票キーの手動更新</span></a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;04&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/maintaining-a-symbol-node.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ノードの維持管理</a><ul>
+<li><a class="reference internal" href="#client-updates">クライアントのアップデート</a><ul>
+<li><a class="reference internal" href="#update-nodes-created-with-bootstrap">Bootstrap で作成したノードをアップデートする</a></li>
+<li><a class="reference internal" href="#update-nodes-created-manually">手動で作成したノードをアップデートする</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#voting-key-renewal">投票キーの更新</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>デリゲートハーベスティングを手動で有効化 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="リモートハーベスティングの有効化" href="activating-remote-harvesting.html" />
+    <link rel="prev" title="デリゲートハーベスティングをデスクトップウォレットで有効化" href="activating-delegated-harvesting-wallet.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/harvesting/activating-delegated-harvesting-manual.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/harvesting/activating-delegated-harvesting-manual.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ハーベスティング</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-wallet.html">デリゲートハーベスティングをデスクトップウォレットで有効化</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">デリゲートハーベスティングを手動で有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">リモートハーベスティングの有効化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ハーベスティング</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-wallet.html">デリゲートハーベスティングをデスクトップウォレットで有効化</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">デリゲートハーベスティングを手動で有効化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">リモートハーベスティングの有効化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="activating-delegated-harvesting-manually">
+<h1>デリゲートハーベスティングを手動で有効化<a class="headerlink" href="#activating-delegated-harvesting-manually" title="この見出しへのパーマリンク"></a></h1>
+<p>あなたのアカウントのインポータンスを安全にノードと共有して報酬を得ます。</p>
+<section id="introduction">
+<h2>紹介<a class="headerlink" href="#introduction" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="../../concepts/harvesting.html#delegated-harvesting"><span class="std std-ref">デリゲートハーベスティング</span></a> によって <strong>ノードを運用せず</strong> にアカウントで <strong>ブロック報酬を得る</strong> ことができます。同時にノードはアカウントの (おそらくはより高い) <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポータンススコア</span></a> の恩恵を受けることができます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ノード所有者はノードの設定にアクセスできるため、 <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">リモートハーベスティング</span></a> を利用する方が便利です。</p>
+</div>
+<p><a class="reference internal" href="../../sdk.html"><span class="doc">SDK</span></a> または <a class="reference internal" href="../../cli.html"><span class="doc">CLI</span></a> を使用した、 <strong>開発者向け</strong> に <strong>手動で</strong> デリゲートハーベスティングを有効にする方法をガイドします。一般ユーザは <a class="reference internal" href="activating-delegated-harvesting-wallet.html"><span class="doc">デスクトップウォレット</span></a> を使用してください。</p>
+</section>
+<section id="summary">
+<h2>概要<a class="headerlink" href="#summary" title="この見出しへのパーマリンク"></a></h2>
+<p>必要なステップ:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> を使用して <strong>メインアカウント (M)</strong> のインポータンスを <strong>リモートアカウント (R)</strong> に委譲します。</p></li>
+<li><p><a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> を使用して、ランダム化したブロック生成とアカウント選択のために、メインアカウント <strong>M</strong> を <strong>VRF アカウント (V)</strong> にリンクします。</p></li>
+<li><p><a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a> を使用してノードを介してハーベスティングをするために、メインアカウント <strong>M</strong> をノードにリンクします。</p></li>
+<li><p>ハーベスタとしてリモートアカウント <strong>R</strong> を追加するために <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> を使用して、ノードにリクエストを行います。ノード構成にアクセスできる場合は、リモートアカウントの秘密鍵をノードの構成に設定できます。</p></li>
+</ol>
+<p>リクエストに応じるのは完全にノード次第であることに注意してください。一部のノードは現在のデリゲートハーベスタの一覧を要求できますが、この情報が常に利用できるとは限りません。 (以下の <a class="reference internal" href="#delegated-harvesting-verifying-activation"><span class="std std-ref">有効化の確認</span></a> を参照)</p>
+</section>
+<section id="prerequisites">
+<h2>前提条件<a class="headerlink" href="#prerequisites" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>トランザクションの基本の理解のために <a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">モザイクとメッセージを２つのアカウント間で送信する</span></a> ガイドを完了している</p></li>
+</ul>
+<p>デリゲートハーベスティングを有効にするには、次のアイテムが必要です:</p>
+<ul class="simple">
+<li><p><strong>メインアカウント (M)</strong> が <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">適格</span></a> となるためには、 <strong>10,000</strong> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> 以上と支払うトランザクション手数料が必要です。アカウントには 0 より大きい <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポ―タンススコア</span></a> (このスコアは 12 時間ごとに計算されます) が必要です。これはハーベスト手数料を受け取るアカウントです。その秘密鍵は常に秘匿してください。</p></li>
+<li><p><strong>リモートアカウント (R)</strong> は <strong>M</strong> とノード間でプロキシとして機能します。このアカウントは <strong>トランザクションを送受信したことがない</strong> 必要があり、デリゲートアカウントである間はトランザクションに関与できません。</p></li>
+<li><p><strong>VRF アカウント (V)</strong> はトランザクションを送受信したことがないものです。これはアカウントの選択プロセスにランダム性を追加するために使用される通常アカウントです。</p></li>
+<li><p><strong>ノードの公開 TLS キー</strong>。これはノードが <a class="reference external" href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> を介した転送のために、データを認証するためのキーであり、通常はノード所有者によって提供されます。</p></li>
+</ul>
+<p>必要であれば、新しいアカウントの作成ついて、 <a class="reference internal" href="../account/creating-an-account.html"><span class="doc">アカウントの作成</span></a> ガイドを参照してください。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>次の bash コードスニペットは <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> で <strong>メインアカウント (M)</strong> が <strong>デフォルト</strong> プロファイルとして設定されていることを前提としています。そうでない場合は <code class="docutils literal notranslate"><span class="pre">‑‑profile</span></code> パラメタを使用してください。</p>
+</div>
+</section>
+<section id="guide">
+<h2>ガイド<a class="headerlink" href="#guide" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic">
+<li><p><strong>M のインポータンスを R へ委譲</strong> するための <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> を作成します。 <strong>M</strong> でトランザクションに署名し、ネットワークにアナウンスします。</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingAccountLink.ts">View Code</a></span><a class="headerlink" href="#id1" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">accountLinkTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AccountKeyLinkTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">remoteAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">LinkAction</span><span class="p">.</span><span class="nx">Link</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingAccountLink.sh">View Code</a></span><a class="headerlink" href="#id2" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>accountkeylink<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--linked-public-key<span class="w"> </span>&lt;REMOTE_PUBLIC_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--action<span class="w"> </span>Link<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p><strong>M を VRF キーへリンク</strong> するための <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> を作成します。 <strong>M</strong> でトランザクションに署名し、ネットワークにアナウンスします。</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.ts">View Code</a></span><a class="headerlink" href="#id3" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">vrfLinkTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">VrfKeyLinkTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">vrfAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">LinkAction</span><span class="p">.</span><span class="nx">Link</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span><span class="w"> </span><span class="c1">// Absolute number</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.sh">View Code</a></span><a class="headerlink" href="#id4" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>vrfkeylink<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--linked-public-key<span class="w"> </span>&lt;VRF_PUBLIC_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--action<span class="w"> </span>Link<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p><strong>M をノードの TLS キーへリンク</strong> するための <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a> を作成します。 <strong>M</strong> で NodeKeyLinkTransaction に署名し、ネットワークにアナウンスします。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The node's public TLS key is typically provided by the node owner. However, <strong>Dual</strong> nodes (being both <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> and <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> nodes) running a version of the <a class="reference internal" href="../../api.html"><span class="doc">REST Gateway</span></a> higher than <strong>2.2.0</strong> offer this information through the <code class="docutils literal notranslate"><span class="pre">nodePublicKey</span></code> field of the <code class="docutils literal notranslate"><span class="pre">node/info</span></code> <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getNodeInfo">REST endpoint</a>.</p>
+<p>ブラウザで <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> を開きます。</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingNodeKeyLink.ts">View Code</a></span><a class="headerlink" href="#id5" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">nodeLinkTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NodeKeyLinkTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">nodeAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">LinkAction</span><span class="p">.</span><span class="nx">Link</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span><span class="w"> </span><span class="c1">// Absolute number</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingNodeKeyLink.sh">View Code</a></span><a class="headerlink" href="#id6" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>nodekeylink<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--linked-public-key<span class="w"> </span>&lt;NODE_PUBLIC_TLS_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--action<span class="w"> </span>Link<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p>トランザクションが確認されたら、次のステップで <strong>R の秘密鍵をノードと共有</strong> します。これはノードの所有者であり、ノードの構成にアクセスできるかどうかに応じて、2 つの方法があります。</p>
+<p><strong>ノード所有者</strong> の場合は、フィールドにリモートアカウントの秘密署名鍵を <a class="reference internal" href="../network/configuring-node-properties.html#node-properties-harvesting-configuration"><span class="std std-ref">ハーベスティング設定</span></a> の <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> 設定するだけです。</p>
+<p><strong>それ以外の場合</strong> <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> を使用しなければなりません。秘密鍵は <strong>暗号化メッセージ</strong> で共有されるため、ノードだけが平文を確認できます。さらに <strong>R</strong> はモザイクを保有していません。</p>
+<p>ハーベスティング手数料は <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a> を介してノードとリンクを確立しているので、<strong>M</strong> へ送られます</p>
+<p><strong>M</strong> で <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> に署名して、ネットワークへアナウンスします。</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingPersistentRequest.ts">View Code</a></span><a class="headerlink" href="#id7" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">persistentDelegationRequestTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PersistentDelegationRequestTransaction</span><span class="p">.</span><span class="nx">createPersistentDelegationRequestTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">remoteAccount</span><span class="p">.</span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">vrfAccount</span><span class="p">.</span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">nodeAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingPersistentRequest.sh">View Code</a></span><a class="headerlink" href="#id8" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optionally use --profile announcer</span>
+symbol-cli<span class="w"> </span>transaction<span class="w"> </span>persistentharvestdelegation<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--remote-private-key<span class="w"> </span>&lt;REMOTE_PRIVATE_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--recipient-public-key<span class="w"> </span>&lt;NODE_PUBLIC_TLS_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--vrf-private-key<span class="w"> </span>&lt;VRF_PRIVATE_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>上記すべてのトランザクションは、単一の <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">アグリゲートトランザクション</span></a> でまとめてアナウンスできます。</p>
+</div>
+<p>すべてが成功すると、ノードは <a class="reference internal" href="../../api.html#websockets"><span class="std std-ref">WebSockets</span></a> を使用して暗号化メッセージを受信します。ノードがデリゲートハーベスティングをする秘密鍵を復号すると、次の条件を満たす場合、ノードの所有者は <strong>デリゲートハーベスターとして R を追加</strong> できます。</p>
+<ul class="simple">
+<li><p>ノードがデリゲートハーベスティングを許可していること</p></li>
+<li><p>ノードのハーベスティングスロットが有効であること (次のセクションを参照)</p></li>
+<li><p>リモートアカウントは以前にトランザクションを送信も受信もしていないこと</p></li>
+</ul>
+<p>リモート秘密鍵はノードごとに <strong>ディスクに保存されている</strong> ため、ノードが一時的に切断された場合でも、ノードがネットワークに再接続すると、永続的にデリゲートハーベスタが再確立されます。</p>
+<p>さらに、暗号化メッセージを使用すると、ノード情報の <strong>バックアップ</strong> が作成されます。デリゲートキーを含むディスクが破損や破壊された場合でも、ノード所有者はブロックチェーンを照会してデータを取得できます。</p>
+</section>
+<section id="verifying-activation">
+<span id="delegated-harvesting-verifying-activation"></span><h2>有効化の確認<a class="headerlink" href="#verifying-activation" title="この見出しへのパーマリンク"></a></h2>
+<p>ノードを構成するのではなく <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> を介して委任をリクエストする場合、ノードがデリゲートハーベスティングを有効にしているかどうかは、 <strong>ネットワークではなく</strong> ノードに依存しています。要求に応じるか、その状態について嘘をつくかは、完全にノードによります。</p>
+<p>したがって、アカウントがハーベスターになったかどうかを知るための <strong>信頼できる</strong> 方法は (ブロックチェーンにリモートアカウントが署名したブロックが表示され、メインアカウントがハーベスト手数料の受け取りが始まるのを待つ以外に) ありません。</p>
+<p>とはいえ、 <strong>Dual</strong> ノードとして構成したノード (<a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> と <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> ノードの両方) は現在のデリゲートハーベスタのリストを照会できます。繰り返しますが、この情報はノードから取得されるものであり、ブロックチェーンにバックアップされないので、あまり信頼しないでください。</p>
+<p>You can retrieve this list using the <code class="docutils literal notranslate"><span class="pre">getUnlockedAccount</span></code> <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getUnlockedAccount">API endpoint</a> (point your browser to <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/unlockedaccount</span></code>) or the <a class="reference external" href="https://symbol.github.io/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount">Typescript SDK</a> for example). It contains the public keys of all registered delegated harvesters in the node, so your <strong>remote account (R)</strong> public key should appear here.</p>
+<p>デフォルトでは、ノードは最大 5 つのデリゲートハーベスタ (ハーベスティングスロット) を持ち、ノードが適切と判断した場合、過剰な要求に優先順位を付けることがあります。これは <a class="reference internal" href="../network/configuring-node-properties.html#node-properties-harvesting-configuration"><span class="std std-ref">ハーベスティング設定</span></a> の <code class="docutils literal notranslate"><span class="pre">maxUnlockedAccounts</span></code> と <code class="docutils literal notranslate"><span class="pre">delegatePrioritizationPolicy</span></code> で設定できます。</p>
+</section>
+<section id="final-words">
+<h2>最後に<a class="headerlink" href="#final-words" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p><strong>インポータンスの高いアカウントは、ハーベスティングを実行するためにより頻繁に選択されます</strong>。デリゲートハーベスタとして、正常にノードに登録している場合でも、 <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">インポータンススコア</span></a> が十分に高くない限りは、ブロックをハーベスティングすることはありません。 (報酬も受け取りません)</p></li>
+<li><p><strong>インポータンススコアの計算は継続的に行われません</strong>。デフォルトでは、アカウントインポータンススコアは、1440 ブロックごと (約 12 時間ごと) に再計算されます。 <a class="reference internal" href="../network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワークプロパティの設定</span></a> ガイドの <code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code> プロパティを参照してください。</p></li>
+<li><p>最後に、上記の <a class="reference internal" href="#delegated-harvesting-verifying-activation"><span class="std std-ref">有効化の確認</span></a> で説明したように、 <strong>Harvesting Delegation リクエストをアナウンスしても、デリゲートハーベスタとして追加されるとは限りません</strong>。ノードは自由に要求に応じたり、そのステータスについて嘘をつく場合があります。</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;21</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/harvesting/activating-delegated-harvesting-manual.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">デリゲートハーベスティングを手動で有効化</a><ul>
+<li><a class="reference internal" href="#introduction">紹介</a></li>
+<li><a class="reference internal" href="#summary">概要</a></li>
+<li><a class="reference internal" href="#prerequisites">前提条件</a></li>
+<li><a class="reference internal" href="#guide">ガイド</a></li>
+<li><a class="reference internal" href="#verifying-activation">有効化の確認</a></li>
+<li><a class="reference internal" href="#final-words">最後に</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;21.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;21.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

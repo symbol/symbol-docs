@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Setting up your workstation &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Writing your first application" href="first-application.html" />
+    <link rel="prev" title="Getting Started" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="active">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/getting-started/setup-workstation.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/getting-started/setup-workstation.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setting up your workstation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-application.html">Writing your first application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/migration/migrating-from-nem-to-symbol.html">Migrating from NIS1 to Symbol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setting up your workstation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-application.html">Writing your first application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/migration/migrating-from-nem-to-symbol.html">Migrating from NIS1 to Symbol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="setting-up-your-workstation">
+<h1>Setting up your workstation<a class="headerlink" href="#setting-up-your-workstation" title="Permalink to this heading"></a></h1>
+<p>This first guide will walk you through a step-by-step installation of the required tools to <strong>start developing applications</strong> on Symbol.</p>
+<p>We will be using the <strong>test network</strong>, which uses the same technology and features of the <strong>main network</strong>.
+The testnet allows developers to experiment with the offered Symbol’s transaction set in a live network without the loss of valuable assets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not a developer? Download our <a class="reference internal" href="../wallets.html"><span class="doc">client</span></a> to manage <code class="docutils literal notranslate"><span class="pre">XYM</span></code> and issue transactions.</p>
+</div>
+<section id="creating-an-account">
+<span id="setup-creating-a-test-account"></span><h2>Creating an account<a class="headerlink" href="#creating-an-account" title="Permalink to this heading"></a></h2>
+<p>An <a class="reference internal" href="../concepts/account.html"><span class="doc">account</span></a> is a deposit box where you can hold <a class="reference internal" href="../concepts/mosaic.html"><span class="doc">mosaics</span></a> (tokens) and interact with them by <a class="reference internal" href="../concepts/transaction.html"><span class="doc">announcing transactions</span></a>.</p>
+<p>We are creating a new account with the <a class="reference internal" href="../cli.html"><span class="doc">Symbol CLI</span></a>, a command-line tool designed to architect solutions and interact with Symbol networks in an efficient manner.</p>
+<ol class="arabic">
+<li><p>Symbol CLI requires <strong>Node.js 12 LTS</strong> to execute. Open a new terminal and check the version installed with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>If you get an error or the version returned does not match v12.X, visit <a href="https://nodejs.org/en/download/" target="_blank">nodejs.org</a> to install the requirement (Although it is recommended to install through <a class="reference external" href="https://github.com/nvm-sh/nvm">nvm</a>).</p>
+</li>
+<li><p>To install Symbol CLI, run the next command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>symbol-cli
+</pre></div>
+</div>
+</li>
+<li><p>Then, generate a new account and save it as a <strong>profile</strong>.</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account generate
+
+Enter network type (MAIN_NET, TEST_NET): TEST_NET
+Do you want to save the account? [y/n]: y
+Select an import type: » PrivateKey
+Enter Symbol Node URL. (Example: http://localhost:3000): &lt;NODE_URL&gt;
+Insert the profile name: testnet
+Do you want to set the account as the default profile? [y/n]: y
+</pre></div>
+</div>
+</li>
+<li><p>If everything goes well, you should see the account credentials displayed in the terminal.</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>Profile stored correctly
+┌─────────────┬──────────────────────────────────────────────────────────────┐
+│ <span class="cp">Property</span>    │ <span class="cp">Value</span>                                                        │
+├─────────────┼──────────────────────────────────────────────────────────────┤
+│ Address     │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI                │
+├─────────────┼──────────────────────────────────────────────────────────────┤
+│ Public Key  │ 203...C0A                                                    │
+├─────────────┼──────────────────────────────────────────────────────────────┤
+│ Private Key │ AAA...AAA                                                    │
+└─────────────┴──────────────────────────────────────────────────────────────┘
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to keep the private key secret and backed up safely somewhere offline.</p>
+</div>
+</li>
+</ol>
+<p>If you get the error <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">CLI</span> <span class="pre">cannot</span> <span class="pre">reach</span> <span class="pre">the</span> <span class="pre">node</span></code>, the most common causes are:</p>
+<ul class="simple">
+<li><p><strong>Incorrect node URL</strong>: The URL used does not belong to an active node. Open the URL provided in a new browser tab and check if you get a response. If the test network node is not working, you can <strong>use another node url</strong> from <a href="https://symbol.fyi/nodes" target="_blank">this list</a> or <strong>run your own testnet node</strong> by following <a class="reference internal" href="../guides/network/running-a-symbol-node.html"><span class="doc">the next guide</span></a>.</p></li>
+<li><p><strong>Internet connection</strong>: The CLI resolves some values from the node. If you decide to use the tool without being connected to the internet, you will have to pass the options <code class="docutils literal notranslate"><span class="pre">--network</span></code>, <code class="docutils literal notranslate"><span class="pre">--generation-hash</span></code>, <code class="docutils literal notranslate"><span class="pre">--namespace-id</span></code>, and <code class="docutils literal notranslate"><span class="pre">divisibility</span></code>. Type <code class="docutils literal notranslate"><span class="pre">symbol-cli</span> <span class="pre">account</span> <span class="pre">generate</span> <span class="pre">--help</span></code> to know more about each parameter.</p></li>
+</ul>
+</section>
+<section id="getting-test-currency">
+<span id="setup-getting-test-currency"></span><h2>Getting test currency<a class="headerlink" href="#getting-test-currency" title="Permalink to this heading"></a></h2>
+<p>To announce a transaction, the sender should pay a <a class="reference internal" href="../concepts/fees.html"><span class="doc">fee</span></a> to provide an incentive to those who validate and secure the network and run the infrastructure.
+This cost is paid in <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> mosaics, the default network currency of the public network.</p>
+<p>Now that you have created your first account, let’s request <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> units from the <strong>testnet faucet</strong>.
+<a href="https://testnet.symbol.tools/" target="_blank">Navigate here</a>, indicate the amount of <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> you want to receive and the address, and click “<strong>CLAIM!</strong>”.</p>
+<figure class="align-center">
+<img alt="../_images/faucet.png" src="../_images/faucet.png" />
+</figure>
+<p>After the transaction gets confirmed, check if your account has received <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> using the command-line tool.</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account info --profile testnet
+
+Balance Information
+┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
+│ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
+├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
+│ 5E62990DCAC5BE8A │ 750.0           │ 750000000       | Never             │
+└──────────────────┴─────────────────┴─────────────────┴───────────────────┘
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The faucet has a limited amount of <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> and must be replenished before it dries out. If you don’t need your test <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> units anymore, please send them back to the account indicated in the faucet’s page.</p>
+</div>
+</section>
+<section id="creating-a-project">
+<span id="setup-development-environment"></span><h2>Creating a project<a class="headerlink" href="#creating-a-project" title="Permalink to this heading"></a></h2>
+<p>Now that you have your account filled with <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> units, it is time to <strong>choose a programming language</strong>.
+Pick the one you feel most comfortable with, or follow your project requirements.</p>
+<p>Then, <strong>create a folder for your new project</strong> and run the instructions for the selected language.
+If none of the languages fits your project, you can always query the blockchain directly using the <a class="reference internal" href="../api.html"><span class="doc">REST gateway</span></a>.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">TypeScript</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">JavaScript</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Java</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Symbol SDK requires Node.js 12 LTS to execute.</p>
+</div>
+<ol class="arabic">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Install Symbol SDK and RxJS library.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>symbol-sdk<span class="w"> </span>rxjs
+</pre></div>
+</div>
+</li>
+<li><p>Install globally TypeScript dependency:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>typescript
+typescript<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p>Install <a class="reference external" href="https://www.npmjs.com/package/ts-node">ts-node</a> to execute TypeScript files with node.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>ts-node
+</pre></div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Symbol SDK requires Node.js 12 LTS to execute.</p>
+</div>
+<ol class="arabic">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Install Symbol SDK and RxJS library.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>symbol-sdk<span class="w"> </span>rxjs
+</pre></div>
+</div>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Symbol SDK requires JDK 8 to execute.</p>
+</div>
+<ol class="arabic">
+<li><p>Open a new Java <a class="reference external" href="https://gradle.org/install/">gradle</a> project.  Use your favourite IDE or create a project from the command line.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gradle<span class="w"> </span>init<span class="w"> </span>--type<span class="w"> </span>java-application
+</pre></div>
+</div>
+</li>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> to use Maven central repository.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">mavenCentral</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">symbol-sdk</span></code> as a dependency.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">compile</span><span class="w"> </span><span class="s">&quot;io.nem:symbol-sdk-vertx-client&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Execute <code class="docutils literal notranslate"><span class="pre">gradle</span> <span class="pre">build</span></code> and <code class="docutils literal notranslate"><span class="pre">gradle</span> <span class="pre">run</span></code> to run your program.</p></li>
+</ol>
+</div></div>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/getting-started/setup-workstation.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Setting up your workstation</a><ul>
+<li><a class="reference internal" href="#creating-an-account">Creating an account</a></li>
+<li><a class="reference internal" href="#getting-test-currency">Getting test currency</a></li>
+<li><a class="reference internal" href="#creating-a-project">Creating a project</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

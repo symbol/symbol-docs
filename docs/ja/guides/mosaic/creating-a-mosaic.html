@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>モザイクの作成 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="モザイクの情報を取得する" href="getting-mosaic-information.html" />
+    <link rel="prev" title="モザイク" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/mosaic/creating-a-mosaic.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/mosaic/creating-a-mosaic.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">モザイク</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">モザイクの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-information.html">モザイクの情報を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modifying-mosaic-supply.html">モザイク供給量の変更</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">モザイク</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">モザイクの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-information.html">モザイクの情報を取得する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modifying-mosaic-supply.html">モザイク供給量の変更</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">ネットワーク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="creating-a-mosaic">
+<h1>モザイクの作成<a class="headerlink" href="#creating-a-mosaic" title="この見出しへのパーマリンク"></a></h1>
+<p>モザイクを使用した資産のトークン化</p>
+<section id="prerequisites">
+<h2>前提条件<a class="headerlink" href="#prerequisites" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">入門セクション</span></a> を完了している</p></li>
+<li><p>新しい <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">アカウント</span></a> を作成します。</p></li>
+<li><p>アカウントに手数料を支払うために十分な <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> を入金してください。</p></li>
+</ul>
+</section>
+<section id="method-01-using-the-desktop-wallet">
+<h2>方法 #01: デスクトップウォレットを使用する<a class="headerlink" href="#method-01-using-the-desktop-wallet" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic simple">
+<li><p>左側のメニューから &quot;<strong>モザイク</strong>&quot; タブをクリックします。</p></li>
+<li><p>ページの上部から &quot;<strong>新しいモザイクの作成</strong>&quot; タブをクリックします。</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/desktop-create-mosaic-1.gif" src="../../_images/desktop-create-mosaic-1.gif" style="width: 800px;" />
+</figure>
+<p>3. Determine the properties of the mosaic you desire to create.
+You can read <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">&quot;Mosaic Properties&quot;</span></a> to decide how do you want to configure your mosaic.
+Click &quot;<strong>Send</strong>&quot;.</p>
+<figure class="align-center">
+<img alt="../../_images/desktop-create-mosaic-2.gif" src="../../_images/desktop-create-mosaic-2.gif" style="width: 800px;" />
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>ポップアップの情報を確認し、ウォレットのパスワードを入力します。 &quot;<strong>確認</strong>&quot; をクリックします。これでトランザクションがネットワークに送信されます。</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/desktop-create-mosaic-3.gif" src="../../_images/desktop-create-mosaic-3.gif" style="width: 800px;" />
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>トランザクションが確認されたら &quot;<strong>所有モザイク</strong>&quot; タブに戻り、モザイクが作成されたことを確認できます。</p></li>
+</ol>
+</section>
+<section id="method-02-using-the-sdk">
+<h2>方法 #02: SDK を使用する<a class="headerlink" href="#method-02-using-the-sdk" title="この見出しへのパーマリンク"></a></h2>
+<p>1. Open a new file and define a <a class="reference internal" href="../../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransaction</span></a>.
+This transaction defines the mosaic properties your mosaic will have.
+You can read <a class="reference internal" href="../../concepts/mosaic.html#configurable-mosaic-properties"><span class="std std-ref">Mosaic Properties</span></a> to decide how do you want to configure your mosaic.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts">View Code</a></span><a class="headerlink" href="#id1" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1111111111111111111111111111111111111111111111111111111111111111&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with duration (in blocks)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="c1">// replace with custom mosaic flags</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isSupplyMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isTransferable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isRestrictable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="c1">// replace with custom divisibility</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">divisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">nonce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicNonce</span><span class="p">.</span><span class="nx">createRandom</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicDefinitionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicDefinitionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">nonce</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MosaicId</span><span class="p">.</span><span class="nx">createFromNonce</span><span class="p">(</span><span class="nx">nonce</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">address</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">MosaicFlags</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">isSupplyMutable</span><span class="p">,</span><span class="w"> </span><span class="nx">isTransferable</span><span class="p">,</span><span class="w"> </span><span class="nx">isRestrictable</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">divisibility</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">duration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/CreatingAMosaic.js">View Code</a></span><a class="headerlink" href="#id2" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1111111111111111111111111111111111111111111111111111111111111111&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with duration (in blocks)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="c1">// replace with custom mosaic flags</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isSupplyMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isTransferable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isRestrictable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="c1">// replace with custom divisibility</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">divisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nonce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicNonce</span><span class="p">.</span><span class="nx">createRandom</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicDefinitionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicDefinitionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">nonce</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">.</span><span class="nx">createFromNonce</span><span class="p">(</span><span class="nx">nonce</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">address</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicFlags</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">isSupplyMutable</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">isTransferable</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">isRestrictable</span><span class="p">,</span>
+<span class="w">  </span><span class="p">),</span>
+<span class="w">  </span><span class="nx">divisibility</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">duration</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/mosaic/CreatingAMosaic.java">View Code</a></span><a class="headerlink" href="#id3" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// replace with node endpoint</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">RepositoryFactory</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RepositoryFactoryVertxImpl</span><span class="p">(</span>
+<span class="w">                </span><span class="s">&quot;NODE_URL&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">NetworkType</span><span class="w"> </span><span class="n">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getNetworkType</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// replace with private key</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">privateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1111111111111111111111111111111111111111111111111111111111111111&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Account</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createFromPrivateKey</span><span class="p">(</span><span class="n">privateKey</span><span class="p">,</span><span class="w"> </span><span class="n">networkType</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// replace with duration (in blocks)</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">BlockDuration</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlockDuration</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// replace with custom mosaic flags</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isSupplyMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isTransferable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isRestrictable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// replace with custom divisibility</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">divisibility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MosaicNonce</span><span class="w"> </span><span class="n">nonce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MosaicNonce</span><span class="p">.</span><span class="na">createRandom</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MosaicDefinitionTransaction</span><span class="w"> </span><span class="n">mosaicDefinitionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MosaicDefinitionTransactionFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">networkType</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">nonce</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">MosaicId</span><span class="p">.</span><span class="na">createFromNonce</span><span class="p">(</span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">.</span><span class="na">getPublicAccount</span><span class="p">()),</span>
+<span class="w">                            </span><span class="n">MosaicFlags</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">isSupplyMutable</span><span class="p">,</span><span class="w"> </span><span class="n">isTransferable</span><span class="p">,</span><span class="w"> </span><span class="n">isRestrictable</span><span class="p">),</span>
+<span class="w">                            </span><span class="n">divisibility</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">duration</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. Define a <a class="reference internal" href="../../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a> to set the <strong>initial supply</strong>.
+For instance, we can set it to <strong>1,000,000</strong> mosaic units.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts">View Code</a></span><a class="headerlink" href="#id4" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic units to increase</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1000000</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicSupplyChangeTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicSupplyChangeTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicDefinitionTransaction</span><span class="p">.</span><span class="nx">mosaicId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MosaicSupplyChangeAction</span><span class="p">.</span><span class="nx">Increase</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">divisibility</span><span class="p">)),</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/CreatingAMosaic.js">View Code</a></span><a class="headerlink" href="#id5" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic units to increase</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1000000</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicSupplyChangeTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicSupplyChangeTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicDefinitionTransaction</span><span class="p">.</span><span class="nx">mosaicId</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicSupplyChangeAction</span><span class="p">.</span><span class="nx">Increase</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="nx">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">divisibility</span><span class="p">)),</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/mosaic/CreatingAMosaic.java">View Code</a></span><a class="headerlink" href="#id6" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="c1">// replace with mosaic units to increase</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MosaicSupplyChangeTransaction</span><span class="w"> </span><span class="n">mosaicSupplyChangeTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MosaicSupplyChangeTransactionFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+<span class="w">                            </span><span class="n">networkType</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">mosaicDefinitionTransaction</span><span class="p">.</span><span class="na">getMosaicId</span><span class="p">(),</span>
+<span class="w">                            </span><span class="n">MosaicSupplyChangeActionType</span><span class="p">.</span><span class="na">INCREASE</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">divisibility</span><span class="p">)).</span><span class="na">toBigInteger</span><span class="p">())</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Symbol は <strong>絶対量</strong> を扱います。絶対量を取得するには、作成したいアセットの量に 10<sup>divisibility</sup> を乗じてください。例えば、モザイクが <strong>可分性</strong> 2 である場合、10 単位 (相対) 作成するには 1000 (絶対) と定義します。</p>
+</div>
+<p>3. Announce both transactions together using an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">アグリゲートトランザクション</span></a>.
+Include the network generation hash to make the transaction only valid for your network.
+Open <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> in a new browser tab and copy the <code class="docutils literal notranslate"><span class="pre">meta.networkGenerationHash</span></code> value.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/CreatingAMosaic.ts">View Code</a></span><a class="headerlink" href="#id7" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createComplete</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">mosaicDefinitionTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">mosaicSupplyChangeTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/mosaic/CreatingAMosaic.js">View Code</a></span><a class="headerlink" href="#id8" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createComplete</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">mosaicDefinitionTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">mosaicSupplyChangeTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/mosaic/CreatingAMosaic.java">View Code</a></span><a class="headerlink" href="#id9" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">AggregateTransaction</span><span class="w"> </span><span class="n">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AggregateTransactionFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createComplete</span><span class="p">(</span>
+<span class="w">                            </span><span class="n">networkType</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">                                </span><span class="n">mosaicDefinitionTransaction</span><span class="p">.</span><span class="na">toAggregate</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getPublicAccount</span><span class="p">()),</span>
+<span class="w">                                </span><span class="n">mosaicSupplyChangeTransaction</span><span class="p">.</span><span class="na">toAggregate</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getPublicAccount</span><span class="p">())</span>
+<span class="w">                            </span><span class="p">))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">maxFee</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">2000000</span><span class="p">)).</span><span class="na">build</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">generationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getGenerationHash</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">SignedTransaction</span><span class="w"> </span><span class="n">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">account</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">sign</span><span class="p">(</span><span class="n">aggregateTransaction</span><span class="p">,</span><span class="w"> </span><span class="n">generationHash</span><span class="p">);</span>
+
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">TransactionRepository</span><span class="w"> </span><span class="n">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createTransactionRepository</span><span class="p">();</span>
+<span class="w">            </span><span class="n">transactionRepository</span><span class="p">.</span><span class="na">announce</span><span class="p">(</span><span class="n">signedTransaction</span><span class="p">).</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>トランザクションが承認されたら、他のアカウントへ作ったモザイクの 1 単位を <a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">転送</span></a> してみたり、 <a class="reference internal" href="modifying-mosaic-supply.html"><span class="doc">モザイクプロパティの変更</span></a> または <a class="reference internal" href="#"><span class="doc">ネームスペースをモザイクへリンク</span></a> してみましょう。</p>
+</section>
+<section id="method-03-using-the-cli">
+<h2>方法 #03: CLI を使用する<a class="headerlink" href="#method-03-using-the-cli" title="この見出しへのパーマリンク"></a></h2>
+<p>ターミナルを開き、次のコマンドを実行します。</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/mosaic/CreatingAMosaic.sh">View Code</a></span><a class="headerlink" href="#id10" title="このコードへのパーマリンク"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>mosaic
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/mosaic/creating-a-mosaic.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">モザイクの作成</a><ul>
+<li><a class="reference internal" href="#prerequisites">前提条件</a></li>
+<li><a class="reference internal" href="#method-01-using-the-desktop-wallet">方法 #01: デスクトップウォレットを使用する</a></li>
+<li><a class="reference internal" href="#method-02-using-the-sdk">方法 #02: SDK を使用する</a></li>
+<li><a class="reference internal" href="#method-03-using-the-cli">方法 #03: CLI を使用する</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

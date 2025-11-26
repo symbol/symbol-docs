@@ -1,0 +1,868 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>/</id>
+  <title>Blog</title>
+  <updated>2025-11-26T09:18:42.668746+00:00</updated>
+  <link href="/"/>
+  <link href="/guides/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
+  <entry>
+    <id>/getting-started/setup-workstation.html</id>
+    <title>Setting up your workstation</title>
+    <updated>2018-08-01T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This first guide will walk you through a step-by-step installation of the required tools to &lt;strong&gt;start developing applications&lt;/strong&gt; on Symbol.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/getting-started/setup-workstation.html"/>
+    <summary>This first guide will walk you through a step-by-step installation of the required tools to start developing applications on Symbol.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/creating-an-account.html</id>
+    <title>Creating an account</title>
+    <updated>2018-08-02T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Create a new Symbol account to start sending and receiving transactions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/creating-an-account.html"/>
+    <summary>Create a new Symbol account to start sending and receiving transactions.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-02T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/getting-account-information.html</id>
+    <title>Getting the account information</title>
+    <updated>2018-08-03T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the public key and balance of an account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/getting-account-information.html"/>
+    <summary>Get the public key and balance of an account.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/transfer/sending-a-transfer-transaction.html</id>
+    <title>Sending mosaics and messages between two accounts</title>
+    <updated>2018-08-10T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Define, sign, and announce a transfer transaction.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/transfer/sending-a-transfer-transaction.html"/>
+    <summary>Define, sign, and announce a transfer transaction.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-10T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.html</id>
+    <title>Sending multiple transactions together</title>
+    <updated>2018-08-11T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Send transactions to different accounts at the same time, using aggregate transactions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/sending-multiple-transactions-together-with-aggregate-complete-transaction.html"/>
+    <summary>Send transactions to different accounts at the same time, using aggregate transactions.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.html</id>
+    <title>Creating an escrow contract</title>
+    <updated>2018-08-12T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Learn about aggregate bonded transactions creating an escrow contract.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/creating-an-escrow-contract-with-aggregate-bonded-transaction.html"/>
+    <summary>Learn about aggregate bonded transactions creating an escrow contract.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.html</id>
+    <title>Cosigning aggregate bonded transactions automatically</title>
+    <updated>2018-08-15T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Create a bot to cosign automatically transactions that require your account’s signature.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.html"/>
+    <summary>Create a bot to cosign automatically transactions that require your account’s signature.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-15T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/mosaic/creating-a-mosaic.html</id>
+    <title>Creating a mosaic</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Tokenize an asset using mosaics.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/mosaic/creating-a-mosaic.html"/>
+    <summary>Tokenize an asset using mosaics.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/creating-a-multisig-account.html</id>
+    <title>Creating a multisig account</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to setup a joint account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/creating-a-multisig-account.html"/>
+    <summary>This guide will show you how to setup a joint account.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/getting-block-by-height.html</id>
+    <title>Getting a block by height</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the block information given a height.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/getting-block-by-height.html"/>
+    <summary>Get the block information given a height.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/registering-a-namespace.html</id>
+    <title>Registering a namespace</title>
+    <updated>2018-08-16T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Create a unique name to identify your assets.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/registering-a-namespace.html"/>
+    <summary>Create a unique name to identify your assets.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-16T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/adding-a-new-signer-to-a-multisig-account.html</id>
+    <title>Adding a new signer to a multisig account</title>
+    <updated>2018-08-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to add a new cosignatory to a multisig account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/adding-a-new-signer-to-a-multisig-account.html"/>
+    <summary>This guide will show you how to add a new cosignatory to a multisig account.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/modifying-a-multisig-account-min-approval.html</id>
+    <title>Modifying a multisig account min approval</title>
+    <updated>2018-08-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to increase and decrease the minimum number of signatures needed to execute a multisig transaction.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/modifying-a-multisig-account-min-approval.html"/>
+    <summary>This guide will show you how to increase and decrease the minimum number of signatures needed to execute a multisig transaction.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/removing-a-signer-from-a-multisig-account.html</id>
+    <title>Removing a signer from a multisig account</title>
+    <updated>2018-08-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to remove a cosignatory from a multisig account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/removing-a-signer-from-a-multisig-account.html"/>
+    <summary>This guide will show you how to remove a cosignatory from a multisig account.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html</id>
+    <title>Atomic cross-chain swap between public and private chain</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Trade tokens between different blockchains without using an intermediary party in the process.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/secretlock/atomic-cross-chain-swap-between-NEM-public-and-private-chain.html"/>
+    <summary>Trade tokens between different blockchains without using an intermediary party in the process.</summary>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/signing-announced-aggregate-bonded-transactions.html</id>
+    <title>Cosigning aggregate bonded transactions</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Cosign &lt;a class="reference internal" href="concepts/aggregate-transaction.html#aggregate-bonded"&gt;&lt;span class="std std-ref"&gt;aggregate&lt;/span&gt;&lt;/a&gt; transactions pending to be signed.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/signing-announced-aggregate-bonded-transactions.html"/>
+    <summary>Cosign aggregate transactions pending to be signed.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/multisig/creating-a-multi-level-multisig-account.html</id>
+    <title>Creating a multi-level multisig account</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to connect multiple multisig accounts to achieve advanced on-chain authorization logic.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/multisig/creating-a-multi-level-multisig-account.html"/>
+    <summary>This guide will show you how to connect multiple multisig accounts to achieve advanced on-chain authorization logic.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/registering-a-subnamespace.html</id>
+    <title>Creating a subnamespace</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Once you have a registered root &lt;a class="reference internal" href="concepts/namespace.html"&gt;&lt;span class="doc"&gt;namespace&lt;/span&gt;&lt;/a&gt;, you can create up to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;3&lt;/span&gt;&lt;/code&gt; levels of subnamespaces to organize your assets.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/registering-a-subnamespace.html"/>
+    <summary>Once you have a registered root namespace, you can create up to 3 levels of subnamespaces to organize your assets.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/getting-the-amount-of-assets-sent-to-an-account.html</id>
+    <title>Getting the amount of assets sent to an account</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Check the number of asset units you have sent to an account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/getting-the-amount-of-assets-sent-to-an-account.html"/>
+    <summary>Check the number of asset units you have sent to an account.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/listening-new-blocks.html</id>
+    <title>Listening to new blocks</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get notified when a new block is included.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/listening-new-blocks.html"/>
+    <summary>Get notified when a new block is included.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/mosaic/modifying-mosaic-supply.html</id>
+    <title>Modifying the mosaic supply</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;If a mosaic was created with the “&lt;strong&gt;Supply Mutable&lt;/strong&gt;” property, you can make more tokens or reduce the total supply.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/mosaic/modifying-mosaic-supply.html"/>
+    <summary>If a mosaic was created with the “Supply Mutable” property, you can make more tokens or reduce the total supply.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/reading-transactions-from-an-account.html</id>
+    <title>Reading transactions from an account</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the complete list of transactions involving an account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/reading-transactions-from-an-account.html"/>
+    <summary>Get the complete list of transactions involving an account.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html</id>
+    <title>Turning the asynchronous transaction announcement into synchronous</title>
+    <updated>2018-08-18T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Handy snippet to announce a transaction and wait until this is confirmed.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html"/>
+    <summary>Handy snippet to announce a transaction and wait until this is confirmed.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-18T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/sending-a-multisig-transaction.html</id>
+    <title>Sending a multisig transaction</title>
+    <updated>2018-08-20T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to issue transactions from a multisig account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/sending-a-multisig-transaction.html"/>
+    <summary>This guide will show you how to issue transactions from a multisig account.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2018-08-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/link-a-namespace-to-a-mosaic.html</id>
+    <title>Linking a namespace to a mosaic</title>
+    <updated>2019-03-04T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Alias an mosaic with a namespace so that others can reference it in a more friendly way when issuing transactions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/link-a-namespace-to-a-mosaic.html"/>
+    <summary>Alias an mosaic with a namespace so that others can reference it in a more friendly way when issuing transactions.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2019-03-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/link-a-namespace-to-an-address.html</id>
+    <title>Linking a namespace to an address</title>
+    <updated>2019-03-04T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Alias an address with a namespace so that others can reference the account in a more friendly way when issuing transactions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/link-a-namespace-to-an-address.html"/>
+    <summary>Alias an address with a namespace so that others can reference the account in a more friendly way when issuing transactions.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2019-03-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/mosaic/getting-mosaic-information.html</id>
+    <title>Getting the mosaic information</title>
+    <updated>2019-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the ownership, divisibility, duration, and flags for a given mosaic identifier.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/mosaic/getting-mosaic-information.html"/>
+    <summary>Get the ownership, divisibility, duration, and flags for a given mosaic identifier.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/getting-namespace-information.html</id>
+    <title>Getting the namespace information</title>
+    <updated>2019-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the ownership and duration for a given namespace identifier.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/getting-namespace-information.html"/>
+    <summary>Get the ownership and duration for a given namespace identifier.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/preventing-spam-attacks-with-account-restrictions.html</id>
+    <title>Preventing spam attacks with account restrictions</title>
+    <updated>2019-05-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Learn how to add and remove account restrictions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/preventing-spam-attacks-with-account-restrictions.html"/>
+    <summary>Learn how to add and remove account restrictions.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-05-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/transfer/sending-an-encrypted-message.html</id>
+    <title>Sending an encrypted message</title>
+    <updated>2019-06-12T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Send an encrypted message that only can be read by the recipient account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/transfer/sending-an-encrypted-message.html"/>
+    <summary>Send an encrypted message that only can be read by the recipient account.</summary>
+    <published>2019-06-12T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/namespace/extending-a-namespace-registration-period.html</id>
+    <title>Extending a namespace registration period</title>
+    <updated>2019-06-19T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide shows you how to extend the rental period of a namespace.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/namespace/extending-a-namespace-registration-period.html"/>
+    <summary>This guide shows you how to extend the rental period of a namespace.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <category term="wallet" label="wallet"/>
+    <published>2019-06-19T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html</id>
+    <title>Getting the asset identifier behind a namespace with receipts</title>
+    <updated>2019-07-11T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the resolution for a given alias and transaction using receipts.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html"/>
+    <summary>Get the resolution for a given alias and transaction using receipts.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-07-11T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/migration/migrating-from-nem-to-symbol.html</id>
+    <title>Migrating from NIS1 to Symbol</title>
+    <updated>2019-07-17T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;With Symbol, most of the previously available NIS1 features have evolved.
+This document will help you &lt;strong&gt;upgrade your application&lt;/strong&gt;’s previous NIS1 features to the newly available Symbol technology.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/migration/migrating-from-nem-to-symbol.html"/>
+    <summary>With Symbol, most of the previously available NIS1 features have evolved.
+This document will help you upgrade your application’s previous NIS1 features to the newly available Symbol technology.</summary>
+    <published>2019-07-17T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/restricting-mosaics-transfers.html</id>
+    <title>Restricting mosaic transfers</title>
+    <updated>2019-09-13T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Limit how accounts can transact with Mosaic Restrictions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/restricting-mosaics-transfers.html"/>
+    <summary>Limit how accounts can transact with Mosaic Restrictions.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-09-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.html</id>
+    <title>Delegating mosaic restrictions to a third party</title>
+    <updated>2019-09-20T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Allow another account to add restrictions to your mosaics.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/delegating-mosaic-restrictions-to-a-third-party.html"/>
+    <summary>Allow another account to add restrictions to your mosaics.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2019-09-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/assigning-metadata-entries-to-an-account.html</id>
+    <title>Assigning metadata to an account</title>
+    <updated>2019-09-29T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Add custom data to an account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/assigning-metadata-entries-to-an-account.html"/>
+    <summary>Add custom data to an account.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-09-29T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/assigning-metadata-entries-to-a-mosaic.html</id>
+    <title>Assigning metadata to a mosaic</title>
+    <updated>2019-10-01T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Add custom data to a mosaic.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/assigning-metadata-entries-to-a-mosaic.html"/>
+    <summary>Add custom data to a mosaic.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/assigning-metadata-entries-to-a-namespace.html</id>
+    <title>Assigning metadata to a namespace</title>
+    <updated>2019-10-01T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Add custom data to a namespace.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/assigning-metadata-entries-to-a-namespace.html"/>
+    <summary>Add custom data to a namespace.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-01T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/creating-a-private-test-net.html</id>
+    <title>Private test networks</title>
+    <updated>2019-10-03T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will walk you through the process of setting up your own private network using Symbol.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/creating-a-private-test-net.html"/>
+    <summary>This guide will walk you through the process of setting up your own private network using Symbol.</summary>
+    <published>2019-10-03T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/running-a-symbol-node.html</id>
+    <title>Running a node</title>
+    <updated>2019-10-04T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide walks you through the process of setting up a node to join Symbol’s &lt;strong&gt;public network&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/running-a-symbol-node.html"/>
+    <summary>This guide walks you through the process of setting up a node to join Symbol’s public network.</summary>
+    <published>2019-10-04T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/getting-metadata-entries-attached-to-an-account.html</id>
+    <title>Getting metadata entries attached to an account</title>
+    <updated>2019-10-06T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the list of metadata entries attached to an account.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/getting-metadata-entries-attached-to-an-account.html"/>
+    <summary>Get the list of metadata entries attached to an account.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.html</id>
+    <title>Getting mosaic global restrictions attached to a mosaic</title>
+    <updated>2019-10-06T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the list of mosaic global restrictions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/getting-mosaic-global-restrictions-attached-to-a-mosaic.html"/>
+    <summary>Get the list of mosaic global restrictions.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.html</id>
+    <title>Getting metadata entries attached to a mosaic</title>
+    <updated>2019-10-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the list of metadata entries attached to an mosaic.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/getting-metadata-entries-attached-to-a-mosaic.html"/>
+    <summary>Get the list of metadata entries attached to an mosaic.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/getting-metadata-entries-attached-to-a-namespace.html</id>
+    <title>Getting metadata entries attached to a namespace</title>
+    <updated>2019-10-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the list of metadata entries attached to an namespace.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/getting-metadata-entries-attached-to-a-namespace.html"/>
+    <summary>Get the list of metadata entries attached to an namespace.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.html</id>
+    <title>Getting mosaic address restrictions attached to an account</title>
+    <updated>2019-10-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the list of mosaic address restrictions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/getting-mosaic-address-restrictions-attached-to-an-account.html"/>
+    <summary>Get the list of mosaic address restrictions.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/metadata/updating-metadata-entries.html</id>
+    <title>Updating metadata entries</title>
+    <updated>2019-10-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Update any existent metadata entry.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/metadata/updating-metadata-entries.html"/>
+    <summary>Update any existent metadata entry.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/restriction/getting-account-restrictions-attached-to-an-address.html</id>
+    <title>Getting the account restrictions attached to an address</title>
+    <updated>2019-10-29T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Get the list of account’s restrictions.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/restriction/getting-account-restrictions-attached-to-an-address.html"/>
+    <summary>Get the list of account’s restrictions.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2019-10-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/configuring-network-properties.html</id>
+    <title>Network properties</title>
+    <updated>2019-10-30T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;There is a large number of network-related settings that can be customized in Symbol.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/configuring-network-properties.html"/>
+    <summary>There is a large number of network-related settings that can be customized in Symbol.</summary>
+    <published>2019-10-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/configuring-node-properties.html</id>
+    <title>Node properties</title>
+    <updated>2019-10-30T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;There is a large number of node-related settings that can be customized in Symbol.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/configuring-node-properties.html"/>
+    <summary>There is a large number of node-related settings that can be customized in Symbol.</summary>
+    <published>2019-10-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/connecting-to-mongodb.html</id>
+    <title>How to connect to MongoDB</title>
+    <updated>2020-02-13T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Learn how to access your API node’s MongoDB instance.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/connecting-to-mongodb.html"/>
+    <summary>Learn how to access your API node’s MongoDB instance.</summary>
+    <published>2020-02-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/aggregate/adding-cosginatures-aggregate-complete.html</id>
+    <title>Adding cosignatures to aggregate complete trasactions</title>
+    <updated>2020-07-13T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide will show you how to add cosignatures to an aggregate complete transaction without using the partial cache.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/aggregate/adding-cosginatures-aggregate-complete.html"/>
+    <summary>This guide will show you how to add cosignatures to an aggregate complete transaction without using the partial cache.</summary>
+    <category term="CLI" label="CLI"/>
+    <category term="SDK" label="SDK"/>
+    <published>2020-07-13T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/using-symbol-bootstrap.html</id>
+    <title>Using Symbol Bootstrap</title>
+    <updated>2020-09-25T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to use this handy node deployment tool.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/using-symbol-bootstrap.html"/>
+    <summary>How to use this handy node deployment tool.</summary>
+    <published>2020-09-25T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/harvesting/activating-delegated-harvesting-manual.html</id>
+    <title>Activating delegated harvesting manually</title>
+    <updated>2021-01-25T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Share your account’s importance securely with a node and get rewarded.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/harvesting/activating-delegated-harvesting-manual.html"/>
+    <summary>Share your account’s importance securely with a node and get rewarded.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2021-01-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/harvesting/activating-delegated-harvesting-wallet.html</id>
+    <title>Activating delegated harvesting using the Desktop Wallet</title>
+    <updated>2021-01-25T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Share your account’s importance securely with a node and get rewarded.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/harvesting/activating-delegated-harvesting-wallet.html"/>
+    <summary>Share your account’s importance securely with a node and get rewarded.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2021-01-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/harvesting/activating-remote-harvesting.html</id>
+    <title>Activating remote harvesting</title>
+    <updated>2021-01-26T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Harvest new blocks through a proxy account for added security.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/harvesting/activating-remote-harvesting.html"/>
+    <summary>Harvest new blocks through a proxy account for added security.</summary>
+    <category term="SDK" label="SDK"/>
+    <published>2021-01-26T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/running-a-symbol-node-manually.html</id>
+    <title>Running a node manually</title>
+    <updated>2021-03-05T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide walks you through the process of setting up a node to join Symbol’s network &lt;strong&gt;without&lt;/strong&gt; using Symbol Bootstrap.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/running-a-symbol-node-manually.html"/>
+    <summary>This guide walks you through the process of setting up a node to join Symbol’s network without using Symbol Bootstrap.</summary>
+    <published>2021-03-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/running-a-secure-symbol-node.html</id>
+    <title>Running a secure node</title>
+    <updated>2021-03-13T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to run a Symbol node with added security.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/running-a-secure-symbol-node.html"/>
+    <summary>How to run a Symbol node with added security.</summary>
+    <published>2021-03-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/non-custodial-node-setup.html</id>
+    <title>Non-custodial node setup</title>
+    <updated>2021-04-07T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to &lt;strong&gt;relinquish control of a node’s main account to an external account&lt;/strong&gt;, so that the external account’s private key is never required in the node setup process.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/non-custodial-node-setup.html"/>
+    <summary>How to relinquish control of a node’s main account to an external account, so that the external account’s private key is never required in the node setup process.</summary>
+    <published>2021-04-07T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/migration/post-optin-xym-retrieval.html</id>
+    <title>Retrieving your XYM from a pre-launch opt-in</title>
+    <updated>2021-04-08T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide explains how to access the &lt;strong&gt;XYM&lt;/strong&gt; (Symbol’s native currency) you were awarded if you enrolled in the opt-in process &lt;strong&gt;BEFORE&lt;/strong&gt; Symbol launched (March 12, 2021).&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/migration/post-optin-xym-retrieval.html"/>
+    <summary>This guide explains how to access the XYM (Symbol’s native currency) you were awarded if you enrolled in the opt-in process BEFORE Symbol launched (March 12, 2021).</summary>
+    <category term="wallet" label="wallet"/>
+    <published>2021-04-08T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/migration/post-launch-optin-xym-retrieval.html</id>
+    <title>Retrieving your XYM from a post-launch opt-in</title>
+    <updated>2021-04-27T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This guide explains how to enroll in the opt-in process once Symbol has launched (this is, after March 12, 2021).&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/migration/post-launch-optin-xym-retrieval.html"/>
+    <summary>This guide explains how to enroll in the opt-in process once Symbol has launched (this is, after March 12, 2021).</summary>
+    <category term="wallet" label="wallet"/>
+    <published>2021-04-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/blockchain/global-mosaic-supply.html</id>
+    <title>Retrieving the global mosaic supply</title>
+    <updated>2021-05-27T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Different values regarding the total supply of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;symbol.xym&lt;/span&gt;&lt;/code&gt; are available in real-time, through REST endpoints on any Symbol API node. Click on each endpoint below for an example.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/blockchain/global-mosaic-supply.html"/>
+    <summary>Different values regarding the total supply of symbol.xym are available in real-time, through REST endpoints on any Symbol API node. Click on each endpoint below for an example.</summary>
+    <category term="REST" label="REST"/>
+    <published>2021-05-27T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/network/maintaining-a-symbol-node.html</id>
+    <title>Maintaining a Node</title>
+    <updated>2021-06-06T00:00:00+02:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;How to keep your Symbol node up and running healthily.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/network/maintaining-a-symbol-node.html"/>
+    <summary>How to keep your Symbol node up and running healthily.</summary>
+    <published>2021-06-06T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/scams-and-security.html</id>
+    <title>Common Hacks and Scams</title>
+    <updated>2022-02-24T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security of your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet’s security.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/scams-and-security.html"/>
+    <summary>It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security of your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet’s security.</summary>
+    <category term="wallet" label="wallet"/>
+    <published>2022-02-24T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>/guides/account/how-to-use-ledger-hardware-wallet.html</id>
+    <title>How to use your Ledger device with Symbol Wallet</title>
+    <updated>2023-03-26T00:00:00+01:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The Ledger Nano S and X are hardware wallets that support multiple cryptocurrencies, including Symbol.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="/guides/account/how-to-use-ledger-hardware-wallet.html"/>
+    <summary>The Ledger Nano S and X are hardware wallets that support multiple cryptocurrencies, including Symbol.</summary>
+    <category term="Ledger" label="Ledger"/>
+    <category term="wallet" label="wallet"/>
+    <published>2023-03-26T00:00:00+01:00</published>
+  </entry>
+</feed>

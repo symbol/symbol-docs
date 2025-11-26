@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Symbol Coding Guidelines &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="C++ Coding Guidelines" href="cpp-coding-guidelines.html" />
+    <link rel="prev" title="Commit discipline" href="commit-discipline.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="active">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/all-coding-guidelines.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/all-coding-guidelines.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Symbol Coding Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cpp-coding-guidelines.html">C++ Coding Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javascript-coding-guidelines.html">JavaScript Coding Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python-coding-guidelines.html">Python Coding Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Symbol Coding Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cpp-coding-guidelines.html">C++ Coding Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="javascript-coding-guidelines.html">JavaScript Coding Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python-coding-guidelines.html">Python Coding Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="symbol-coding-guidelines">
+<h1>Symbol Coding Guidelines<a class="headerlink" href="#symbol-coding-guidelines" title="この見出しへのパーマリンク"></a></h1>
+<p>Symbol uses multiple languages in its development, each with its own coding standards.
+Nonetheless, we have some common principles we use across all languages.</p>
+<section id="regions">
+<h2>Regions<a class="headerlink" href="#regions" title="この見出しへのパーマリンク"></a></h2>
+<p>In long files, we use <code class="docutils literal notranslate"><span class="pre">region</span></code> and <code class="docutils literal notranslate"><span class="pre">endregion</span></code> tags to group related code.
+This makes these files easier to navigate.</p>
+<p><code class="docutils literal notranslate"><span class="pre">region</span></code> tags should always be surrounded by blank lines with one exception. If they are the first line of a new indent level, a preceding blank line is not required.
+<code class="docutils literal notranslate"><span class="pre">endregion</span></code> tags should always be surrounded by blank lines.</p>
+<p>For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Something</span><span class="p">:</span>
+    <span class="c1"># region load</span>
+
+    <span class="o">...</span>
+
+    <span class="c1"># endregion</span>
+
+    <span class="c1"># region save</span>
+
+    <span class="o">...</span>
+
+    <span class="c1"># endregion</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>In C style languages, the tags are opened and closed with <code class="docutils literal notranslate"><span class="pre">//</span></code> single line comments instead of <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
+</div>
+</section>
+<section id="unit-testing">
+<h2>Unit Testing<a class="headerlink" href="#unit-testing" title="この見出しへのパーマリンク"></a></h2>
+<p>We prefer to structure unit tests in the Arrange / Act / Assert form in order to clearly delineate the code under test and the assertions being tested.
+Unit tests should contain comments breaking tests into the three sections when they are present.
+This is somewhat of a judgement call as some tests will not have all three sections.</p>
+<p>For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arrange:</span>
+<span class="n">wordlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="s1">&#39;gamma&#39;</span><span class="p">,</span> <span class="s1">&#39;delta&#39;</span><span class="p">,</span> <span class="s1">&#39;epsilon&#39;</span><span class="p">,</span> <span class="s1">&#39;eta&#39;</span><span class="p">,</span> <span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="s1">&#39;iota&#39;</span><span class="p">,</span> <span class="s1">&#39;kappa&#39;</span><span class="p">,</span> <span class="s1">&#39;lambda&#39;</span><span class="p">]</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">WordEncoder</span><span class="p">(</span><span class="n">wordlist</span><span class="p">)</span>
+
+<span class="c1"># Act:</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Assert:</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span><span class="s1">&#39;alpha&#39;</span><span class="p">],</span> <span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For a more thorough discussion, please review this blog post: <a class="reference external" href="https://symbolblog.com/developer-guides/how-to-write-good-unit-tests">https://symbolblog.com/developer-guides/how-to-write-good-unit-tests</a>.</p>
+</section>
+<section id="commenting-documentation">
+<h2>Commenting / Documentation<a class="headerlink" href="#commenting-documentation" title="この見出しへのパーマリンク"></a></h2>
+<p>Include a copyright statement at the top of each file. For new projects, use the default copyright contents.
+Copyright and all related rights should be waived for all contributions and via CC0 for all written works.</p>
+<p>We document all public methods and classes with at least a sentence or two.
+For projects intended to be used as libraries by external developers, like SDKs, it's recommended to document all parameters.
+For other projects, it's often enough to just reference the parameters without documenting each in detail.</p>
+<p>We believe that code should be for the most part self-documenting so use inline comments sparingly.
+Prefer well structured code and good names to inline comments.
+For example, Instead of using comments to delineate the steps of a complicated process, we prefer to refactor the code to have a well-named function per step.
+Inline comments can be used where the purpose of the code is not immediately clear to the reader.</p>
+</section>
+<section id="naming">
+<h2>Naming<a class="headerlink" href="#naming" title="この見出しへのパーマリンク"></a></h2>
+<p>Avoid unpronounceable names and abbreviations.
+Use a spell checker! <code class="docutils literal notranslate"><span class="pre">codespell</span></code> is recommended.</p>
+<ol class="arabic">
+<li><p>User defined types (<code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">struct</span></code>, <code class="docutils literal notranslate"><span class="pre">enum</span></code>) should be UpperCamelCase and be nouns. [e.g. <code class="docutils literal notranslate"><span class="pre">MyEnum</span></code>, <code class="docutils literal notranslate"><span class="pre">NodeEndpoint</span></code>]</p></li>
+<li><p>Function names should contain verbs [e.g. <code class="docutils literal notranslate"><span class="pre">DoSomething</span></code>, <a href="#id1"><span class="problematic" id="id2">``</span></a>TryDoSomething`]</p>
+<p>Functions that fail by throwing exceptions should be optimistically named [e.g. <cite>DoSomething</cite>].</p>
+<p>Functions that fail by returning error codes should be prefixed with <cite>Try</cite> to indicate that something needs to be checked by the caller [e.g. <cite>TryDoSomething</cite>].</p>
+</li>
+<li><p>Boolean properties should generally begin with <code class="docutils literal notranslate"><span class="pre">is</span></code>, <code class="docutils literal notranslate"><span class="pre">has</span></code> or <code class="docutils literal notranslate"><span class="pre">should</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">isOpen()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">open()</span></code></p>
+</li>
+<li><p>Non-boolean properties should generally avoid <code class="docutils literal notranslate"><span class="pre">get</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code> prefixes:</p>
+<p><code class="docutils literal notranslate"><span class="pre">value(12)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">setValue(12)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">value()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">getValue()</span></code></p>
+</li>
+</ol>
+</section>
+<section id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="この見出しへのパーマリンク"></a></h2>
+<p>Not all frameworks support the full spectrum of logging levels.
+A description of logging levels from most to least severe follows:</p>
+<ul class="simple">
+<li><p><strong>FATAL</strong> - Critical error that will require the immediate exit of the program.</p></li>
+<li><p><strong>ERROR</strong> - Serious error that the node operator might need to act on but will not terminate the program.</p></li>
+<li><p><strong>WARNING</strong> - Error of which the node operator should be made aware but unlikely requires action.</p></li>
+<li><p><strong>IMPORTANT</strong> - Informational message with additional emphasis.</p></li>
+<li><p><strong>INFO</strong> - Informational message logged by default.</p></li>
+<li><p><strong>DEBUG</strong> - Verbose informational message that might be disabled by default.</p></li>
+<li><p><strong>TRACE</strong> - Low level debugging information that will almost always be disabled.</p></li>
+</ul>
+</section>
+<section id="vertical-spacing">
+<h2>Vertical Spacing<a class="headerlink" href="#vertical-spacing" title="この見出しへのパーマリンク"></a></h2>
+<p>Generally, there should be a blank line after any de-indentation.
+One exception is the closing of braces.</p>
+<p>For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">token</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">token</span>  <span class="c1"># next line de-indents so should be blank</span>
+
+<span class="k">return</span> <span class="p">{</span>
+    <span class="s1">&#39;token&#39;</span><span class="p">:</span> <span class="n">token</span>  <span class="c1"># next line closes the prior brace, so shouldn&#39;t be blank</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Trim trailing whitespace from all lines.
+End every file with a newline.</p>
+</section>
+<section id="horizontal-line-length">
+<h2>Horizontal Line Length<a class="headerlink" href="#horizontal-line-length" title="この見出しへのパーマリンク"></a></h2>
+<p>Maximum line length is 140 characters.</p>
+</section>
+<section id="token-spacing">
+<h2>Token Spacing<a class="headerlink" href="#token-spacing" title="この見出しへのパーマリンク"></a></h2>
+<ul>
+<li><p>Always put a space after commas ',', like:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">outputAsciiString</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">something</span><span class="p">,</span><span class="w"> </span><span class="n">elsewhere</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Not:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">outputAsciiString</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="n">something</span><span class="p">,</span><span class="n">elsewhere</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p>Always put a space after semicolons ';' in for, that is ok:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This one's not:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">sections</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<section id="operators">
+<h3>Operators<a class="headerlink" href="#operators" title="この見出しへのパーマリンク"></a></h3>
+<p>In case of operators please put additional space before and after them. This makes code much more readable.</p>
+<p>This should be always used in case of binary operators, including <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code>. So this one's ok:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While this one is not:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="n">foo</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="n">x</span><span class="o">*</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="language-specific-guides">
+<h2>Language Specific Guides<a class="headerlink" href="#language-specific-guides" title="この見出しへのパーマリンク"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cpp-coding-guidelines.html">C++ Coding Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript-coding-guidelines.html">JavaScript Coding Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-coding-guidelines.html">Python Coding Guidelines</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;29</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/handbook/all-coding-guidelines.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Symbol Coding Guidelines</a><ul>
+<li><a class="reference internal" href="#regions">Regions</a></li>
+<li><a class="reference internal" href="#unit-testing">Unit Testing</a></li>
+<li><a class="reference internal" href="#commenting-documentation">Commenting / Documentation</a></li>
+<li><a class="reference internal" href="#naming">Naming</a></li>
+<li><a class="reference internal" href="#logging">Logging</a></li>
+<li><a class="reference internal" href="#vertical-spacing">Vertical Spacing</a></li>
+<li><a class="reference internal" href="#horizontal-line-length">Horizontal Line Length</a></li>
+<li><a class="reference internal" href="#token-spacing">Token Spacing</a><ul>
+<li><a class="reference internal" href="#operators">Operators</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#language-specific-guides">Language Specific Guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

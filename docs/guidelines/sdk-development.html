@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>SDK Development &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Style guide" href="style-guide.html" />
+    <link rel="prev" title="Generating transaction builders" href="generating-transaction-builders.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="active">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guidelines/sdk-development.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guidelines/sdk-development.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contribute/index.html">Contribute</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contributing-docs.html">Contribute Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../contribute/contributing.html">Contributing Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="writing-a-schema.html">Writing a Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generating-transaction-builders.html">Generating transaction builders</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SDK Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style-guide.html">Style guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="suggesting-changes.html">Suggesting documentation changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-a-guide.html">Writing a guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translating-the-documentation.html">Translating the documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk-documentation.html">SDK Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/authors.html">Documentation Authors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contribute/index.html">Contribute</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contributing-docs.html">Contribute Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../contribute/contributing.html">Contributing Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="writing-a-schema.html">Writing a Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generating-transaction-builders.html">Generating transaction builders</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SDK Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style-guide.html">Style guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="suggesting-changes.html">Suggesting documentation changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-a-guide.html">Writing a guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translating-the-documentation.html">Translating the documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk-documentation.html">SDK Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/authors.html">Documentation Authors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="sdk-development">
+<h1>SDK Development<a class="headerlink" href="#sdk-development" title="Permalink to this heading"></a></h1>
+<p>One of the key objectives we had when building the first group of  SDKs was to enable developers to change quickly between programming languages without having to adapt to a completely different design.
+This document intends to guide developers to ship Symbol-based SDKs that share the same design to achieve interoperability.</p>
+<section id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h2>
+<section id="package-organization">
+<h3>Package Organization<a class="headerlink" href="#package-organization" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id3">
+<img alt="../_images/sdk-architecture.png" src="../_images/sdk-architecture.png" style="width: 450px;" />
+<figcaption>
+<p><span class="caption-text">Package organization diagram</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Infrastructure</strong></p>
+<p>This package includes the generated API client and DTOs.
+The HTTP requests are made following the Repository Pattern, and they return Symbol domain immutable models via the Observable Pattern.</p>
+<p><strong>Models</strong></p>
+<p>The Symbol domain models are immutable by definition, meaning that the developer cannot change their attributes.
+Instead, the developers have to create new Transactions and dispatch them to the blockchain via TransactionHTTP.</p>
+<p><strong>Services</strong></p>
+<p>Common operations that require combining multiple <a class="reference internal" href="../api.html"><span class="doc">REST API</span></a> requests.</p>
+</section>
+<section id="characteristics">
+<h3>Characteristics<a class="headerlink" href="#characteristics" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Standardized Contracts</strong>: Guaranteeing interoperability and harmonization of data models.</p></li>
+<li><p><strong>Loose Coupling</strong>: Reducing the degree of component coupling fosters.</p></li>
+<li><p><strong>Abstraction</strong>: Increasing the long-term consistency of interoperability and allowing underlying components to evolve independently.</p></li>
+<li><p><strong>Reusability</strong>: Enabling high-level interoperability between modules and potential component consumers.</p></li>
+<li><p><strong>Stateless</strong>: Increasing availability and scalability of components allowing them to interoperate more frequently and reliably.</p></li>
+<li><p><strong>Composability</strong>: For components to be effectively composable, they must be interoperable.</p></li>
+</ul>
+</section>
+<section id="reactive">
+<h3>Reactive<a class="headerlink" href="#reactive" title="Permalink to this heading"></a></h3>
+<p>The Symbol SDK uses the <a class="reference external" href="http://reactivex.io/">ReactiveX Library</a> intensely.</p>
+<p>The benefits of using a reactive approach are:</p>
+<ul class="simple">
+<li><p><strong>Functional</strong>: Developers can avoid complex stateful programs using clean input/output functions over observable streams.</p></li>
+<li><p><strong>Less is more</strong>: ReactiveX’s operators often reduce what was once an elaborate challenge into a few lines of code.</p></li>
+<li><p><strong>Async error handling</strong>: Traditional try/catch is weak for error handling in asynchronous computations, but ReactiveX will offer developers the proper tools to handle errors.</p></li>
+<li><p><strong>Concurrency</strong>: Observables and Schedulers in ReactiveX allow the programmer to abstract away low-level threading, synchronization, and concurrency issues.</p></li>
+<li><p><strong>Frontend</strong>: Manipulation of UI events and API responses on the Web using RxJS.</p></li>
+<li><p><strong>Backend</strong>: Embrace ReactiveX’s asynchronicity, enabling concurrency and implementation independence.</p></li>
+</ul>
+<p>If you are new to Reactive Programming, we encourage you to start with the online guide <a class="reference external" href="https://www.learnrxjs.io/">Learn RxJS</a>.</p>
+</section>
+</section>
+<section id="before-starting">
+<h2>Before starting<a class="headerlink" href="#before-starting" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Review the technical documentation to become familiar with the Symbol <a class="reference internal" href="../concepts/account.html"><span class="doc">built-in features</span></a>.</p></li>
+<li><p>Setup the Symbol <a class="reference internal" href="../guides/network/creating-a-private-test-net.html"><span class="doc">local environment via docker</span></a>.</p></li>
+<li><p>Check the <a class="reference internal" href="../api.html"><span class="doc">API reference</span></a> and play with offered set of endpoints.</p></li>
+<li><p>Become familiar with the current <a class="reference internal" href="../concepts/account.html"><span class="doc">SDK via code examples</span></a> and <a class="reference internal" href="../cli.html#wallet-cli"><span class="std std-ref">CLI</span></a> .</p></li>
+<li><p>Join our <a href="https://discord.gg/J38KwW5ZuG" target="_blank">Discord</a> to ask Symbol related questions.</p></li>
+<li><p>Be sure no one is already working on the SDK you want to create. Check the <a class="reference internal" href="../sdk.html"><span class="doc">repository list</span></a> and comment on your intentions in <code class="docutils literal notranslate"><span class="pre">#sig-api</span></code> channel.</p></li>
+<li><p>Claim the SDK <a class="reference external" href="https://help.github.com/en/articles/creating-a-pull-request/">forking this repository</a> and add a new entry to the <a class="reference internal" href="../sdk.html"><span class="doc">repository list</span></a>.</p></li>
+</ol>
+</section>
+<section id="creating-the-project">
+<h2>Creating the project<a class="headerlink" href="#creating-the-project" title="Permalink to this heading"></a></h2>
+<p>You can base your work on the <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript">TypeScript SDK</a>.
+The TypeScript version is the first SDK getting the latest updates.
+Check regularly the <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/CHANGELOG.md">Changelog</a> to be sure you didn’t miss any code change update.</p>
+<p>Create a new repository, preferably on GitHub, with:</p>
+<ol class="arabic simple">
+<li><p>The README with the instructions to install the SDK.</p></li>
+<li><p>The <a class="reference external" href="https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/">Code of Conduct</a>.</p></li>
+<li><p>The <a class="reference external" href="https://help.github.com/articles/setting-guidelines-for-repository-contributors/">Contributors guidelines</a> to help others know how they can help you.</p></li>
+</ol>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading"></a></h2>
+<p>A project with good test coverage it’s more likely to be used and trusted by the developers!</p>
+<p>We <strong>strongly</strong> suggest to do <a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">Test-Driven Development</a> or Unit-Testing (test last).
+If you need inspiration, feel free to adapt directly the same tests we did.</p>
+<ul class="simple">
+<li><p>Example of <code class="docutils literal notranslate"><span class="pre">travis.yml</span></code> <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/.travis.yml">configuration file</a></p></li>
+<li><p>Example of <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/tree/main/test">unit tests</a>.</p></li>
+<li><p>Example of <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/tree/main/e2e">end to end tests</a>.</p></li>
+</ul>
+<p>Once you have written some tests, setup a Continuous Integration (CI) system to run the test suite and code linter automatically.
+We use <a class="reference external" href="https://travis-ci.org/">travis-ci</a>, but feel free to use the one that suits you best.</p>
+<p>Also, we strive to keep our codebases with a unit test coverage of 80% or higher.
+We use <a class="reference external" href="https://coveralls.io/">coveralls</a> to monitor test coverage.</p>
+</section>
+<section id="infrastructure">
+<h2>Infrastructure<a class="headerlink" href="#infrastructure" title="Permalink to this heading"></a></h2>
+<p>The <a class="reference external" href="https://openapi-generator.tech/">OpenAPI Generator</a>  handles the API and DTOs generation.
+It supports multiple languages, and hopefully, yours is <a class="reference external" href="https://openapi-generator.tech/docs/generators/">on the list</a>.</p>
+<p>These are the steps we followed to generate the Typescript DTOs (data transfer objects):</p>
+<ol class="arabic">
+<li><p>Download the <a class="reference external" href="https://github.com/symbol/symbol-openapi/releases">latest Symbol OpenAPI spec</a> from GitHub releases.</p></li>
+<li><p>Install the OpenApi generator CLI.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>@openapitools/openapi-generator-cli@cli-4.1.0<span class="w"> </span>-g
+</pre></div>
+</div>
+</li>
+<li><p>Generate the DTOs for the programming language selected.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>openapi-generator<span class="w"> </span>generate<span class="w"> </span>-i<span class="w"> </span>./openapi3.yml<span class="w"> </span>-g<span class="w"> </span>typescript-node<span class="w"> </span>-o<span class="w"> </span>./symbol-ts-sdk/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-R<span class="w"> </span>symbol-ts-sdk/test
+</pre></div>
+</div>
+</li>
+<li><p>The generated lib is normally published into a central repository (e.g. maven, npm). The SDKs depend on those libraries like any other third party dependency. To automate the deployment of the packages, including the generator for the selected programming language in the <a class="reference external" href="https://github.com/symbol/symbol-openapi-generator">symbol-openapi-generator</a> project.</p></li>
+<li><p>Drop the generated client classes and implement them using the <a class="reference external" href="https://martinfowler.com/eaaCatalog/repository.html">Repository pattern</a> returning <a class="reference external" href="https://en.wikipedia.org/wiki/Observer_pattern">Observables</a> of <a class="reference external" href="http://reactivex.io/">ReactiveX</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SDK for TypeScript currently chooses the <code class="docutils literal notranslate"><span class="pre">typescript-node</span></code> template from the OpenAPI Generator, but there are also other templates available to fit for other purposes. The SDK has interfaced out all the Http Repositories so that different implementations can be applied.</p>
+</div>
+<p>Example of repositories and implementations:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/transaction/CreateTransactionFromDTO.ts">CreateTransactionsFromDTO</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockRepository.ts">BlockchainRepository</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure/BlockHttp.ts">BlockchainHttp</a></p></li>
+</ul>
+<p>See the complete list of <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/infrastructure">repositories and implementations</a>.</p>
+</li>
+<li><p>The <strong>repositories return models instead of DTOs</strong>. You will need to code the models before finishing the API wrapper.</p></li>
+</ol>
+</section>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this heading"></a></h2>
+<p>By default, models are immutable and aim to hide the complexity, like type conversion or relationship between objects.</p>
+<p>Example of models implementation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/account/Account.ts">Account</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/namespace/NamespaceId.ts">NamespaceId</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/node/NodeInfo.ts">NodeInfo</a></p></li>
+</ul>
+<p>See the complete list of <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/tree/main/src/model">models</a>.</p>
+<p>You will find in the implementations different invariants to ensure the object is well constructed and a nicer API is published.</p>
+<p>Particular decisions we considered:</p>
+<ul class="simple">
+<li><p>UInt64 support: While <a class="reference external" href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html">Java supports big numbers</a>, for example, JavaScript doesn’t. The JavaScript SDK has a custom class to handle the <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/UInt64.ts">uint64 types</a>. If your language supports <code class="docutils literal notranslate"><span class="pre">uint64</span></code>, use that implementation instead.</p></li>
+<li><p>API conversions: Sometimes, the data returned by API is compressed. You might need to convert those types for the user.</p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/namespace/NamespaceId.ts">Namespace</a> id: At creation time you add the string name, but when you receive the Namespace from the network, it comes in formatted as <code class="docutils literal notranslate"><span class="pre">uint64</span></code> id. A specific endpoint returns the Namespace <code class="docutils literal notranslate"><span class="pre">string</span></code> name.</p></li>
+</ul>
+<section id="transaction-serialization">
+<h3>Transaction Serialization<a class="headerlink" href="#transaction-serialization" title="Permalink to this heading"></a></h3>
+<p>The <a class="reference external" href="https://github.com/symbol/symbol/tree/dev/catbuffer/schemas">catbuffer-schemas library</a> defines the protocol to serialize and deserialize Symbol entities.</p>
+<p>In combination with the catbuffer generators project, developers can generate builder classes for a given set of programming languages.
+For example, the Symbol SDK uses the generated code to operate with the entities in binary form.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If there is no generator for the programming language selected, you will need to develop it first. You can base your work on the <a class="reference external" href="https://github.com/symbol/symbol/tree/dev/sdk/javascript/generator">generator</a> for TypeScript.</p>
+</div>
+<p>If there is a generator, follow the next steps to generate the builders for all the existent entities:</p>
+<ol class="arabic">
+<li><p>Clone the catbuffer-generators repository recursively.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>git@github.com:symbol/catbuffer-generators.git
+</pre></div>
+</div>
+</li>
+<li><p>Install the package requirements.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p>Clone the catbuffer-schemas repository inside the <code class="docutils literal notranslate"><span class="pre">catbuffer-generators</span></code> folder.</p></li>
+<li><p>Generate code for all the schemas running the following command under the <code class="docutils literal notranslate"><span class="pre">catbuffer-generators</span></code> directory, replacing <code class="docutils literal notranslate"><span class="pre">cpp_builder</span></code> for the targeted programming language.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>scripts/generate_all.sh<span class="w"> </span>cpp_builder
+</pre></div>
+</div>
+<p>The previous command creates a new file for every schema under the <code class="docutils literal notranslate"><span class="pre">catbuffer/_generated/cpp_builder</span></code> folder.</p>
+</li>
+<li><p>Publish the generated code into a central repository (e.g. Maven, NPM) and make the SDK dependant on this library. For every transaction type, use the generated builders to serialize and deserialize transactions.</p></li>
+</ol>
+<p>Here you can find some examples of how we used transactions builders:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/AccountAddressRestrictionTransaction.ts">AccountAddressRestrictionTransaction</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/TransferTransaction.ts">TransferTransaction</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/AggregateTransaction.ts">AggregateTransaction</a></p></li>
+</ul>
+<p>See the complete list of <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/tree/main/src/model/transaction">transactions</a>.</p>
+</section>
+<section id="keypair-and-cryptographic-functions">
+<h3>KeyPair and Cryptographic functions<a class="headerlink" href="#keypair-and-cryptographic-functions" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is incomplete.</p>
+</div>
+<p>Cryptographic functions are required to sign transactions.
+All the crypto-related functions can be found under the <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/tree/main/src/core/crypto">core/crypto</a> module.</p>
+<p>SDKs use standard <code class="docutils literal notranslate"><span class="pre">tweetnacl</span></code> (ed2559) for key pair generation, address derivation (from public key) and signings:</p>
+<ul class="simple">
+<li><p>Keypairs are based on tweetnacl 64 bytes secretKey (public + private) using SHA-512.</p></li>
+<li><p>Signatures use tweetnacl detached mode and also get generated using SHA-512.</p></li>
+</ul>
+<p>Finally, pay special attention to the <a class="reference external" href="https://github.com/symbol/symbol/tree/dev/tests/vectors">test vectors</a>.
+The best way to make sure your implementation is correct is to use the test vectors files as inputs and expected outputs.</p>
+<p>Examples of vector tests:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/test/core/crypto/keyPair.spec.ts#L88">KeyPair</a></p></li>
+</ul>
+</section>
+</section>
+<section id="services">
+<h2>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h2>
+<p>Services combine multiple <a class="reference internal" href="../api.html"><span class="doc">REST API</span></a> requests and provide developers with handy methods that cannot be retrieved directly from the API.</p>
+<p>Services are considered “nice to have” features, and these usually are not required to consider the SDK complete. We recommend starting coding services only if you have a fully operational and well-tested SDK first.</p>
+<p>Examples of services:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/service/AggregateTransactionService.ts">AggregateTransactionService</a>: Helps application developers to announce aggregate transactions without having to develop the logic to wait for the hash lock confirmation.</p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/service/MetadataTransactionService.ts">MetadataTransactionService</a>: Creates metadata transactions without having to pass the previous value.</p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/service/BlockService.ts">BlockService</a>: Provides with methods to verify that the data returned by a given node is valid.</p></li>
+</ul>
+<p>See the complete list of <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/tree/main/src/service">services</a>.</p>
+</section>
+<section id="documenting-the-sdk">
+<h2>Documenting the SDK<a class="headerlink" href="#documenting-the-sdk" title="Permalink to this heading"></a></h2>
+<p>The SDKs need to be adopted by other developers.
+As the main developer, no one knows better than you how the SDK works.
+Consider helping others and spread the usage of the SDK by providing <a class="reference internal" href="sdk-documentation.html"><span class="doc">the following documentation</span></a>.</p>
+<section id="recommended-licenses">
+<h3>Recommended Licenses<a class="headerlink" href="#recommended-licenses" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>MIT: <a class="reference external" href="https://opensource.org/licenses/MIT">Expat/MIT/X11 license</a></p></li>
+<li><p>Apache-2.0: <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, version
+2.0</a></p></li>
+<li><p>BSD-2-Clause: <a class="reference external" href="https://opensource.org/licenses/BSD-2-Clause">OSI-approved BSD 2-clause
+license</a></p></li>
+<li><p>BSD-3-Clause: <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause">OSI-approved BSD 3-clause
+license</a></p></li>
+<li><p>CC0-1.0: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 1.0
+Universal</a></p></li>
+<li><p>GNU-All-Permissive: <a class="reference external" href="http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html">GNU All-Permissive
+License</a></p></li>
+<li><p>LGPL-2.1+: <a class="reference external" href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html">GNU Lesser General Public License (LGPL), version 2.1 or
+newer</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;05&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guidelines/sdk-development.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">SDK Development</a><ul>
+<li><a class="reference internal" href="#architecture">Architecture</a><ul>
+<li><a class="reference internal" href="#package-organization">Package Organization</a></li>
+<li><a class="reference internal" href="#characteristics">Characteristics</a></li>
+<li><a class="reference internal" href="#reactive">Reactive</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#before-starting">Before starting</a></li>
+<li><a class="reference internal" href="#creating-the-project">Creating the project</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#infrastructure">Infrastructure</a></li>
+<li><a class="reference internal" href="#models">Models</a><ul>
+<li><a class="reference internal" href="#transaction-serialization">Transaction Serialization</a></li>
+<li><a class="reference internal" href="#keypair-and-cryptographic-functions">KeyPair and Cryptographic functions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#services">Services</a></li>
+<li><a class="reference internal" href="#documenting-the-sdk">Documenting the SDK</a><ul>
+<li><a class="reference internal" href="#recommended-licenses">Recommended Licenses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

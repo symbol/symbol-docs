@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Cosigning aggregate bonded transactions automatically &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Cosigning aggregate bonded transactions" href="signing-announced-aggregate-bonded-transactions.html" />
+    <link rel="prev" title="Sending multiple transactions together" href="sending-multiple-transactions-together-with-aggregate-complete-transaction.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Aggregate transactions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adding-cosginatures-aggregate-complete.html">Adding cosignatures to aggregate complete trasactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-an-escrow-contract-with-aggregate-bonded-transaction.html">Creating an escrow contract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sending-a-multisig-transaction.html">Sending a multisig transaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sending-multiple-transactions-together-with-aggregate-complete-transaction.html">Sending multiple transactions together</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cosigning aggregate bonded transactions automatically</a></li>
+<li class="toctree-l3"><a class="reference internal" href="signing-announced-aggregate-bonded-transactions.html">Cosigning aggregate bonded transactions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Aggregate transactions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adding-cosginatures-aggregate-complete.html">Adding cosignatures to aggregate complete trasactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-an-escrow-contract-with-aggregate-bonded-transaction.html">Creating an escrow contract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sending-a-multisig-transaction.html">Sending a multisig transaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sending-multiple-transactions-together-with-aggregate-complete-transaction.html">Sending multiple transactions together</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cosigning aggregate bonded transactions automatically</a></li>
+<li class="toctree-l3"><a class="reference internal" href="signing-announced-aggregate-bonded-transactions.html">Cosigning aggregate bonded transactions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="cosigning-aggregate-bonded-transactions-automatically">
+<h1>Cosigning aggregate bonded transactions automatically<a class="headerlink" href="#cosigning-aggregate-bonded-transactions-automatically" title="Permalink to this heading"></a></h1>
+<p>Create a bot to cosign automatically transactions that require your account’s signature.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete <a class="reference internal" href="creating-an-escrow-contract-with-aggregate-bonded-transaction.html"><span class="doc">creating an escrow contract</span></a> guide.</p></li>
+</ul>
+</section>
+<section id="developing-the-bot">
+<h2>Developing the bot<a class="headerlink" href="#developing-the-bot" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create a function to cosign any <strong>AggregateBondedTransaction</strong>.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.ts">View Code</a></span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">cosignAggregateBondedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="o">:</span><span class="w"> </span><span class="kt">AggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">account</span><span class="o">:</span><span class="w"> </span><span class="kt">Account</span><span class="p">,</span>
+<span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">CosignatureSignedTransaction</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">cosignatureTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CosignatureTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">transaction</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">signCosignatureTransaction</span><span class="p">(</span><span class="nx">cosignatureTransaction</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">cosignAggregateBondedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">cosignatureTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">CosignatureTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">signCosignatureTransaction</span><span class="p">(</span><span class="nx">cosignatureTransaction</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactionsAutomatically.java">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">AggregateTransaction</span><span class="p">,</span><span class="w"> </span><span class="n">Account</span><span class="p">,</span><span class="w"> </span><span class="n">CosignatureSignedTransaction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cosignAggregateBondedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">transaction</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">CosignatureTransaction</span>
+<span class="w">                </span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">transaction</span><span class="p">).</span><span class="na">signWith</span><span class="p">(</span><span class="n">account</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create a new <strong>Listener</strong> to get notified every time a new <strong>AggregateBondedTransaction</strong> requires the signature of your account.</p></li>
+<li><p>Open the connection. You only need to open the connection once and then connect to all desired channels.</p></li>
+<li><p>Start listening for new transactions, subscribing to the <code class="docutils literal notranslate"><span class="pre">aggregateBondedAdded</span></code> channel using your account’s address.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To automatically sign aggregate bonded transactions that must be signed by multisig cosignatories, refer to the multisig address instead.See <a class="reference internal" href="../multisig/creating-a-multisig-account.html#guide-get-multisig-account-info"><span class="std std-ref">how to get multisig accounts where an account is cosignatory</span></a>.</p>
+</div>
+<p>5. For each received transaction, check if you have signed it.
+At this point, you might want to do some extra checks, like verifying the contents of the transaction.
+Cosign each pending <strong>AggregateBondedTransaction</strong> using the previously created function.</p>
+<ol class="arabic simple" start="6">
+<li><p>Announce <code class="docutils literal notranslate"><span class="pre">CosignatureSignedTransaction</span></code> to the network using the <code class="docutils literal notranslate"><span class="pre">TransactionHttp</span></code> repository.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">listener</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">aggregateBondedAdded</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">_</span><span class="p">.</span><span class="nx">signedByAccount</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">map</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">cosignAggregateBondedTransaction</span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">signedCosignatureTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announceAggregateBondedCosignature</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">signedCosignatureTransaction</span><span class="p">,</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">      </span><span class="p">}),</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomatically.js">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">listener</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">aggregateBondedAdded</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">_</span><span class="p">.</span><span class="nx">signedByAccount</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">cosignAggregateBondedTransaction</span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">signedCosignatureTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announceAggregateBondedCosignature</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">signedCosignatureTransaction</span><span class="p">,</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">      </span><span class="p">}),</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactionsAutomatically.java">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="n">NetworkType</span><span class="w"> </span><span class="n">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getNetworkType</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// replace with cosigner private key</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">privateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Account</span><span class="p">.</span><span class="na">createFromPrivateKey</span><span class="p">(</span><span class="n">privateKey</span><span class="p">,</span><span class="w"> </span><span class="n">networkType</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">TransactionRepository</span><span class="w"> </span><span class="n">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">createTransactionRepository</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Listener</span><span class="w"> </span><span class="n">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">createListener</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">listener</span><span class="p">.</span><span class="na">open</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">                </span><span class="n">listener</span><span class="p">.</span><span class="na">aggregateBondedAdded</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getAddress</span><span class="p">())</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">signedByAccount</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getPublicAccount</span><span class="p">()))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">cosignAggregateBondedTransaction</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">transactionRepository</span><span class="p">::</span><span class="n">announceAggregateBondedCosignature</span><span class="p">).</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-s-next">
+<h2>What’s next?<a class="headerlink" href="#what-s-next" title="Permalink to this heading"></a></h2>
+<p>Extend the previous function to cosign transactions if they follow some constraints. For example, adapt your bot to only cosign aggregate transactions matching the following conditions:</p>
+<ul class="simple">
+<li><p>The aggregate has <strong>two inner transactions</strong>.</p></li>
+<li><p>The inner transactions must be <strong>transfer transactions.</strong></p></li>
+<li><p>The transaction sending funds must have <strong>yourself as the signer</strong>.</p></li>
+<li><p>The transaction sending funds should have <strong>only one mosaic</strong>, being this <strong>less than</strong> 100 <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>.</p></li>
+</ul>
+<p>Here you have a possible implementation:</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.ts">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">validTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="o">:</span><span class="w"> </span><span class="kt">Transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">publicAccount</span><span class="o">:</span><span class="w"> </span><span class="kt">PublicAccount</span><span class="p">,</span>
+<span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">signer</span><span class="o">!</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">publicAccount</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span>
+<span class="w">      </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;symbol.xym&#39;</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignAggregateBondedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transaction</span><span class="o">:</span><span class="w"> </span><span class="kt">AggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">account</span><span class="o">:</span><span class="w"> </span><span class="kt">Account</span><span class="p">,</span>
+<span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">CosignatureSignedTransaction</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">cosignatureTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CosignatureTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">transaction</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">signCosignatureTransaction</span><span class="p">(</span><span class="nx">cosignatureTransaction</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">listener</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">aggregateBondedAdded</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">_</span><span class="p">.</span><span class="nx">innerTransactions</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">2</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">_</span><span class="p">.</span><span class="nx">signedByAccount</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">filter</span><span class="p">(</span>
+<span class="w">        </span><span class="p">(</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">          </span><span class="nx">validTransaction</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">innerTransactions</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">          </span><span class="nx">validTransaction</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">innerTransactions</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">map</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">cosignAggregateBondedTransaction</span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">signedCosignatureTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announceAggregateBondedCosignature</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">signedCosignatureTransaction</span><span class="p">,</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.js">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">validTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">publicAccount</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransferTransaction</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">signer</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">publicAccount</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span>
+<span class="w">      </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="s1">&#39;5E62990DCAC5BE8A&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span>
+<span class="w">          </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NamespaceId</span><span class="p">(</span><span class="s1">&#39;symbol.xym&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">mosaics</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">amount</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cosignAggregateBondedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">cosignatureTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">CosignatureTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transaction</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">signCosignatureTransaction</span><span class="p">(</span><span class="nx">cosignatureTransaction</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createListener</span><span class="p">();</span>
+<span class="nx">listener</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">listener</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">aggregateBondedAdded</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">_</span><span class="p">.</span><span class="nx">innerTransactions</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">2</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">_</span><span class="p">.</span><span class="nx">signedByAccount</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span>
+<span class="w">        </span><span class="p">(</span><span class="nx">_</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">          </span><span class="nx">validTransaction</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">innerTransactions</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">          </span><span class="nx">validTransaction</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">innerTransactions</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">cosignAggregateBondedTransaction</span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">account</span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">      </span><span class="nx">operators_1</span><span class="p">.</span><span class="nx">mergeMap</span><span class="p">((</span><span class="nx">signedCosignatureTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announceAggregateBondedCosignature</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">signedCosignatureTransaction</span><span class="p">,</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">announcedTransaction</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">listener</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/aggregate/CosigningAggregateBondedTransactionsAutomaticallyWithConstraints.java">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="n">NetworkCurrency</span><span class="w"> </span><span class="n">networkCurrency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getNetworkCurrency</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">Transaction</span><span class="p">,</span><span class="w"> </span><span class="n">PublicAccount</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="o">&gt;</span><span class="w"> </span><span class="n">validTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">transaction</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">transaction</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">TransferTransaction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">transaction</span><span class="p">.</span><span class="na">getSigner</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">!</span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">account</span><span class="p">)).</span><span class="na">orElse</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="n">TransferTransaction</span><span class="w"> </span><span class="n">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TransferTransaction</span><span class="p">)</span><span class="w"> </span><span class="n">transaction</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">transferTransaction</span><span class="p">.</span><span class="na">getMosaics</span><span class="p">().</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">transferTransaction</span><span class="p">.</span><span class="na">getMosaics</span><span class="p">().</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">allMatch</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">BigInteger</span><span class="w"> </span><span class="n">maxBalance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">networkCurrency</span><span class="p">.</span><span class="na">createAbsolute</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">100</span><span class="p">)).</span><span class="na">getAmount</span><span class="p">();</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">getAmount</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">maxBalance</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">networkCurrency</span><span class="p">.</span><span class="na">getMosaicId</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">mosaicId</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mosaicId</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">getId</span><span class="p">())).</span><span class="na">orElse</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+<span class="w">                            </span><span class="o">||</span><span class="w"> </span><span class="n">networkCurrency</span><span class="p">.</span><span class="na">getNamespaceId</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">namespaceId</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">namespaceId</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="na">getId</span><span class="p">()))</span>
+<span class="w">                            </span><span class="p">.</span><span class="na">orElse</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">});</span>
+
+<span class="w">            </span><span class="p">});</span>
+
+<span class="w">            </span><span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">AggregateTransaction</span><span class="p">,</span><span class="w"> </span><span class="n">Account</span><span class="p">,</span><span class="w"> </span><span class="n">CosignatureSignedTransaction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cosignAggregateBondedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">transaction</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">CosignatureTransaction</span>
+<span class="w">                </span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">transaction</span><span class="p">).</span><span class="na">signWith</span><span class="p">(</span><span class="n">account</span><span class="p">));</span>
+
+<span class="w">            </span><span class="n">NetworkType</span><span class="w"> </span><span class="n">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getNetworkType</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// replace with cosigner private key</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">privateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Account</span><span class="p">.</span><span class="na">createFromPrivateKey</span><span class="p">(</span><span class="n">privateKey</span><span class="p">,</span><span class="w"> </span><span class="n">networkType</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">TransactionRepository</span><span class="w"> </span><span class="n">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">createTransactionRepository</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Listener</span><span class="w"> </span><span class="n">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">createListener</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">listener</span><span class="p">.</span><span class="na">open</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">                </span><span class="n">listener</span><span class="p">.</span><span class="na">aggregateBondedAdded</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getAddress</span><span class="p">())</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">signedByAccount</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getPublicAccount</span><span class="p">())).</span><span class="na">filter</span><span class="p">(</span>
+<span class="w">                    </span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">getInnerTransactions</span><span class="p">().</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                        </span><span class="p">.</span><span class="na">anyMatch</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">validTransaction</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">.</span><span class="na">getPublicAccount</span><span class="p">())))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">cosignAggregateBondedTransaction</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">account</span><span class="p">))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">transactionRepository</span><span class="p">::</span><span class="n">announceAggregateBondedCosignature</span><span class="p">).</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2020&#8209;11&#8209;19</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/aggregate/signing-announced-aggregate-bonded-transactions-automatically.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Cosigning aggregate bonded transactions automatically</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#developing-the-bot">Developing the bot</a></li>
+<li><a class="reference internal" href="#what-s-next">What’s next?</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2020&#8209;11&#8209;19.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2020&#8209;11&#8209;19.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

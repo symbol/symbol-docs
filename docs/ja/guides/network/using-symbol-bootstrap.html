@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Symbol Bootstrap の使用 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ノードの立ち上げ" href="running-a-symbol-node.html" />
+    <link rel="prev" title="ネットワーク" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/network/using-symbol-bootstrap.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guides/network/using-symbol-bootstrap.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ネットワーク</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Symbol Bootstrap の使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">ノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">ノードの維持管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">プライベートテストネットワーク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">ノードプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">ネットワークプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">MongoDB への接続方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ガイド</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">ブロックチェーン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">NIS1 からのマイグレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">モニタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">ネームスペース</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">ネットワーク</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Symbol Bootstrap の使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node.html">ノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-symbol-node-manually.html">手動によるノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running-a-secure-symbol-node.html">セキュアなノードの立ち上げ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintaining-a-symbol-node.html">ノードの維持管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-custodial-node-setup.html">非カストディアルなノードのセットアップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-a-private-test-net.html">プライベートテストネットワーク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-node-properties.html">ノードプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuring-network-properties.html">ネットワークプロパティ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connecting-to-mongodb.html">MongoDB への接続方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">シークレットロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">転送</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">交換</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <p>How to use this handy node deployment tool.</p>
+<section id="using-symbol-bootstrap">
+<h1>Symbol Bootstrap の使用<a class="headerlink" href="#using-symbol-bootstrap" title="この見出しへのパーマリンク"></a></h1>
+<aside class="sidebar">
+<p class="sidebar-title">Quick Installation</p>
+<p><code class="docutils literal notranslate"><span class="pre">apt</span></code> を使用する Linux システム:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>docker<span class="w"> </span>docker-compose
+node<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>取得した node のバージョンが十分に高い場合 (<a class="reference internal" href="#symbol-bootstrap-requirements"><span class="std std-ref">必須項目</span></a> を参照) は Symbol Bootstrapをインストールできます:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>symbol-bootstrap
+</pre></div>
+</div>
+</aside>
+<p>このガイドでは、複数のオペレーティングシステム (Windows、Linux、Mac) で Symbol ノードを迅速に設定し、実行できるプログラムである <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> の概念を説明しています。</p>
+<p>また、複数のノードを一度にデプロイして、テストネットワーク環境を素早く構築することもできます。</p>
+<p>こちらを読んだ後には <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">ノードの立ち上げ</span></a> と <a class="reference internal" href="creating-a-private-test-net.html"><span class="doc">プライベートテストネットワーク</span></a> ガイドをより理解することができるでしょう。</p>
+<p><strong>このプログラムは以前のツールを置き換えます</strong> <code class="docutils literal notranslate"><span class="pre">catapult-service-bootstrap</span></code> <strong>と</strong> <code class="docutils literal notranslate"><span class="pre">symbol-testnet-bootstrap</span></code></p>
+<section id="requirements">
+<span id="symbol-bootstrap-requirements"></span><h2>必須項目<a class="headerlink" href="#requirements" title="この見出しへのパーマリンク"></a></h2>
+<section id="environment">
+<h3>環境<a class="headerlink" href="#environment" title="この見出しへのパーマリンク"></a></h3>
+<p>セットアップスクリプトは <strong>Docker</strong> を使用して自動化されます。ノードまたはテストネットワークを立ち上げるには、次のツールをインストールする必要があります。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nodejs.org/en/download">node.js</a> バージョン 12 以上 (node.js は <a class="reference external" href="https://github.com/nvm-sh/nvm">nvm</a> を <strong>使用してインストールすることを推奨</strong> します)</p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/install/">docker</a></p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/compose/install/">docker-compose</a></p></li>
+</ul>
+</section>
+<section id="ports">
+<h3>ポート<a class="headerlink" href="#ports" title="この見出しへのパーマリンク"></a></h3>
+<p>クライアントのホストがインターネットからアクセス可能であり、 <strong>次のポートが開いていて、使用可能であること</strong> を確認してください。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">7900</span></code> 番ポートはノード間の通信するに catapult-client が使用します。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3000</span></code> 番ポートは REST ゲートウェイがエンドポイントを公開してノードとの疎通に使用します。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3001</span></code> 番ポートは REST ゲートウェイの HTTPS モードにおいて使用されます。</p></li>
+</ul>
+</section>
+</section>
+<section id="installation">
+<h2>インストール<a class="headerlink" href="#installation" title="この見出しへのパーマリンク"></a></h2>
+<p><a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> はインストール可能なツールとして提供されており、リポジトリからクローンやビルドする必要はありません。ターミナルまたはコマンドプロンプトから次を実行します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>symbol-bootstrap
+</pre></div>
+</div>
+<aside class="topic">
+<p class="topic-title">Notes:</p>
+<ul>
+<li><p>新しいバージョンの <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> が公開されるたびに、上記のコマンドを再度実行することで、最新版をインストールできます。</p>
+<p>後述のように、アップグレードする前には <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> を停止して、その後に再開することを忘れないでください。</p>
+</li>
+<li><p>パーミッションエラーに遭遇した場合は <a class="reference external" href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally">パッケージのグローバルインストール時における EACCES パーミッションエラーの解決</a> を参照してください。</p></li>
+</ul>
+</aside>
+</section>
+<section id="configuration">
+<h2>設定<a class="headerlink" href="#configuration" title="この見出しへのパーマリンク"></a></h2>
+<section id="presets">
+<span id="symbol-bootstrap-presets"></span><h3>プリセット<a class="headerlink" href="#presets" title="この見出しへのパーマリンク"></a></h3>
+<p>ノードの設定は、すべてのネットワークパラメータを指定する <strong>YAML設定ファイル</strong> を介して行われます。ファイル全体の長さは数百行に及ぶため、処理の簡素化のために <strong>プリセット</strong> を使用できます。 <code class="docutils literal notranslate"><span class="pre">‑‑preset</span></code> または <code class="docutils literal notranslate"><span class="pre">‑p</span></code> パラメタで指定することができます。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>プリセット</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p>A <strong>single node</strong> that connects to the current public <strong>main</strong> network. Nemesis block is copied over. Requires an <code class="docutils literal notranslate"><span class="pre">assembly</span></code>, as shown below (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/mainnet/network.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bootstrap</span></code></p></td>
+<td><p><strong>Autonomous network</strong> with 1 mongo database, 2 peers, 1 api and 1 rest gateway. Nemesis block is generated (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/bootstrap/network.yml">configuration file</a>). This is the default preset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p>A <strong>single node</strong> that connects to the current public <strong>test</strong> network. Nemesis block is copied over. Requires an <code class="docutils literal notranslate"><span class="pre">assembly</span></code>, as shown below (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/testnet/network.yml">configuration file</a>).</p></td>
+</tr>
+</tbody>
+</table>
+<p>プリセットは、追加パラメータを提供する <strong>assembly</strong> (または特徴) を指定することで、さらなるカスタマイズが可能です。 <code class="docutils literal notranslate"><span class="pre">‑‑assembly</span></code> または <code class="docutils literal notranslate"><span class="pre">‑a</span></code> パラメータでアセンブリを指定します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>プリセット</p></th>
+<th class="head"><p>利用可能な構成</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">peer</span></code></p></td>
+<td><p>The node is a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer ノード</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-peer.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">api</span></code></p></td>
+<td><p>The node is an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API ノード</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-api.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mainnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dual</span></code></p></td>
+<td><p>The node is both a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer ノード</span></a> and an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API ノード</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-dual.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">peer</span></code></p></td>
+<td><p>The node is a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer ノード</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-peer.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">api</span></code></p></td>
+<td><p>The node runs is an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API ノード</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-api.yml">configuration file</a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">testnet</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dual</span></code></p></td>
+<td><p>The node is both a <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer ノード</span></a> and an <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API ノード</span></a> (<a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/presets/assemblies/assembly-dual.yml">configuration file</a>).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="custom-presets">
+<h3>カスタムプリセット<a class="headerlink" href="#custom-presets" title="この見出しへのパーマリンク"></a></h3>
+<p>さらに、追加の設定が必要な場合は <strong>カスタムプリセットファイル</strong> を使用することができます。このファイルのどの値も、プリセットまたはアセンブリによって設定されたデフォルト値を上書きするので、それらの上位として組み合わせることができます。例えば <a class="reference internal" href="configuring-network-properties.html"><span class="doc">ネットワークプロパティ</span></a> または <a class="reference internal" href="configuring-node-properties.html"><span class="doc">ノードプロパティ</span></a> のすべてのプロパティはこのファイルを介して設定できます。</p>
+<p>カスタムプリセットファイルは <code class="docutils literal notranslate"><span class="pre">‑‑customPreset</span></code> または <code class="docutils literal notranslate"><span class="pre">‑c</span></code> パラメタで指定できます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ノードがすでに実行されている状態で、カスタムプリセットファイルを変更した場合は、Bootstrap で作成したノードをアップデートする <a class="reference internal" href="maintaining-a-symbol-node.html#update-bootstrap-nodes"><span class="std std-ref">Bootstrap で作成したノードをアップデートする</span></a> ガイドで説明されている方法で、ノードをアップグレードする必要があります。</p>
+</div>
+</section>
+</section>
+<section id="the-config-command">
+<h2><code class="docutils literal notranslate"><span class="pre">config</span></code> コマンド<a class="headerlink" href="#the-config-command" title="この見出しへのパーマリンク"></a></h2>
+<p>Before building the node or network a full configuration file has to be created by using the <a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/docs/config.md">symbol-bootstrap config</a> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>&lt;preset&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;assembly&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;custom_parameters_file.yml&gt;
+</pre></div>
+</div>
+<p>例:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>bootstrap
+symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>peer
+symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>dual
+symbol-bootstrap<span class="w"> </span>config<span class="w"> </span>-p<span class="w"> </span>mainnet<span class="w"> </span>-a<span class="w"> </span>dual<span class="w"> </span>-c<span class="w"> </span>custom_parameters.yml
+</pre></div>
+</div>
+<p>これは、デフォルトで <code class="docutils literal notranslate"><span class="pre">target</span></code> ( <code class="docutils literal notranslate"><span class="pre">--target</span></code> または <code class="docutils literal notranslate"><span class="pre">-t</span></code> パラメタで変更できます)  フォルダを作成し、ノードまたはネットワークを構築するために使用する、生成された完全な構成ファイル (<code class="docutils literal notranslate"><span class="pre">target/preset.yml</span></code>) が含まれます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Linux では、ユーザが <code class="docutils literal notranslate"><span class="pre">docker</span></code> グループに属していないと <code class="docutils literal notranslate"><span class="pre">Permission</span> <span class="pre">denied</span> <span class="pre">while</span> <span class="pre">trying</span> <span class="pre">to</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">Docker</span> <span class="pre">daemon</span> <span class="pre">socket</span></code> というエラーが表示される場合があります。その場合は次のように追加します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>addgroup<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>docker
+</pre></div>
+</div>
+</div>
+</section>
+<section id="the-compose-command">
+<h2><code class="docutils literal notranslate"><span class="pre">compose</span></code> コマンド<a class="headerlink" href="#the-compose-command" title="この見出しへのパーマリンク"></a></h2>
+<p>このコマンドは提供した構成に基づいて、必要な Docker ファイルを準備します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>compose
+</pre></div>
+</div>
+<p>設定手順と同様に、これも１度だけ実行する必要があります。</p>
+</section>
+<section id="the-run-command">
+<h2><code class="docutils literal notranslate"><span class="pre">run</span></code> コマンド<a class="headerlink" href="#the-run-command" title="この見出しへのパーマリンク"></a></h2>
+<p>最後に、次のコマンドを実行して必要な Docker インスタンスを起動し、ノードまたはネットワークを起動します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>run
+</pre></div>
+</div>
+<p>プロセスを停止するには <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> を押下します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ターミナルで Docker コンテナをバックグラウンド実行するには <code class="docutils literal notranslate"><span class="pre">‑‑detached</span></code> または <code class="docutils literal notranslate"><span class="pre">‑d</span></code> パラメータを使用することで、サービスをデタッチモードで実行出来ます。</p>
+<p>次に <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">stop</span></code> を使用して、それらを停止してください。</p>
+</div>
+</section>
+<section id="the-all-in-one-start-command">
+<span id="symbol-bootstrap-all-in-one"></span><h2>オールインワンの <code class="docutils literal notranslate"><span class="pre">start</span></code> コマンド<a class="headerlink" href="#the-all-in-one-start-command" title="この見出しへのパーマリンク"></a></h2>
+<p>上記３つのコマンドは (<code class="docutils literal notranslate"><span class="pre">config</span></code>, <code class="docutils literal notranslate"><span class="pre">compose</span></code>, <code class="docutils literal notranslate"><span class="pre">run</span></code>) １つにまとまります:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-bootstrap<span class="w"> </span>start<span class="w"> </span>-p<span class="w"> </span>&lt;preset&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;assembly&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;custom_parameters_file.yml&gt;
+</pre></div>
+</div>
+<p>そのとおり、単一のコマンドで Symbol ノード (または多くのノードを持つテストネットワーク) をインスタンス化して起動できます！</p>
+<p>１度だけ実行する必要のある手順 (<code class="docutils literal notranslate"><span class="pre">config</span></code> と <code class="docutils literal notranslate"><span class="pre">compose</span></code>) は繰り返し行わないので、このコマンドを毎回使用できます。</p>
+</section>
+<section id="providing-https-access">
+<h2>HTTPS アクセスの提供<a class="headerlink" href="#providing-https-access" title="この見出しへのパーマリンク"></a></h2>
+<p><a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API nodes</span></a> created using the <code class="docutils literal notranslate"><span class="pre">api</span></code> or <code class="docutils literal notranslate"><span class="pre">dual</span></code> assemblies accept HTTP commands through port 3000. HTTPS access can also be enabled, as described in the next two sections.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The certificates used below will <strong>only</strong> be used for HTTPS communication with the REST API, <strong>not</strong> as <a class="reference internal" href="running-a-symbol-node-manually.html#manual-node-certificates"><span class="std std-ref">node certificates</span></a> for inter-node communication.</p>
+</div>
+<section id="use-your-own-certificate">
+<h3>所有する証明書を使用する<a class="headerlink" href="#use-your-own-certificate" title="この見出しへのパーマリンク"></a></h3>
+<p>もし、すでにあなたのホスト向けの SSL をお持ちなら、Symbol Bootstrap にはカスタムプリセットファイル経由で、それを適用できます。</p>
+<p>カスタムプリセットファイルを自己完結型とするためには、あなたの証明書の <strong>Key</strong> ファイルと <strong>Crt</strong> ファイルを <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> 文字列に変換し、プリセットファイルにコピーする必要があります:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>restSsl.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span>
+cat<span class="w"> </span>restSsl.crt<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span>
+</pre></div>
+</div>
+<p>このようにセクション内に、これらのコマンド出力をプリセットファイルにコピーします:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">friendlyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Node</span><span class="w"> </span><span class="c1"># Use anything you want here</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesomenode.mycompany.net</span><span class="w"> </span><span class="c1"># Use your node&#39;s host name</span>
+<span class="nt">gateways</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">restProtocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPS</span>
+<span class="w">  </span><span class="nt">openPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3001</span>
+<span class="w">  </span><span class="nt">restSSLCertificateBase64</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">LS0tLS1CRUdJTiBDRVJUSUZ...Base64...==</span>
+<span class="w">  </span><span class="nt">restSSLKeyBase64</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">LS0tLS1CRUdJTiBSU0EgUFJ...Base64...=</span>
+</pre></div>
+</div>
+<p>提供した証明書は、ホスト名 <code class="docutils literal notranslate"><span class="pre">awesomenode.mycompany.net</span></code> に対して正当なものでなければなりません。ドメインはノードの IP アドレスを解決できる必要があります。</p>
+<p>後に、証明書の有効期限が切れた場合、カスタムプリセットファイルを更新し、 <a class="reference internal" href="maintaining-a-symbol-node.html#update-bootstrap-nodes"><span class="std std-ref">Bootstrap で作成したノードをアップデートする</span></a> ガイドにあるように、ノードをアップグレードする必要があります。</p>
+<p>このオプションでは、HTTP 3000 番ポートではなく、HTTPS 3001 番ポートのみを開放します。 <strong>ファイアウォールまたはセキュリティグループで、ポート 3001 番を開放しておいてください</strong>。ポート 3000 番は、もう使用されないので、閉じてもよいです。</p>
+</section>
+<section id="automatic-let-s-encrypt-certificate">
+<h3>自動 Let's Encrypt 証明書<a class="headerlink" href="#automatic-let-s-encrypt-certificate" title="この見出しへのパーマリンク"></a></h3>
+<p>Bootstrap は公衆用で無料の <a class="reference external" href="https://letsencrypt.org/">Let's Encrypt</a> サービスを利用して、必要な SSL 証明書を取得することもできます。</p>
+<p>有効化するには、カスタムプリセットファイルに <code class="docutils literal notranslate"><span class="pre">httpsProxies</span></code> セクションを追加してオプトインします:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">friendlyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Node</span><span class="w"> </span><span class="c1"># Use anything you want here</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesomenode.mycompany.net</span><span class="w"> </span><span class="c1"># Use your node&#39;s host name</span>
+<span class="nt">httpsProxies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">excludeDockerService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">awesomenode.mycompany.net</span></code> ドメインを所有しており、それがノードの IP アドレスの名前解決をする必要があります。Let's Encrypt サービスは証明書の作成と更新を代行を行います。</p>
+<p><strong>ファイアウォールまたはセキュリティグループで、ポート 3001 番と 80 番を開放することを忘れないでください</strong> 。ポート 3000 番は閉じていても、いなくても、構いません。 <a class="reference external" href="https://letsencrypt.org/docs/challenge-types/#http-01-challenge">ポート 80 番は Let's Encrypt が必要とします</a> 。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>This option has been heavily inspired by the community and Symbol Bootstrap simply bundles this solution, streamlining the process.</p>
+</div>
+</section>
+</section>
+<section id="next-steps">
+<h2>次の手順<a class="headerlink" href="#next-steps" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>Read the <a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap#user-content-command-topics">complete list</a> of <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span></code> commands.</p></li>
+<li><p>こちらの <a class="reference internal" href="running-a-symbol-node.html"><span class="doc">ノードの立ち上げ</span></a> ガイドに従ってノードを作成してみてください。</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2023&#8209;11&#8209;15</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/network/using-symbol-bootstrap.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Symbol Bootstrap の使用</a><ul>
+<li><a class="reference internal" href="#requirements">必須項目</a><ul>
+<li><a class="reference internal" href="#environment">環境</a></li>
+<li><a class="reference internal" href="#ports">ポート</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">インストール</a></li>
+<li><a class="reference internal" href="#configuration">設定</a><ul>
+<li><a class="reference internal" href="#presets">プリセット</a></li>
+<li><a class="reference internal" href="#custom-presets">カスタムプリセット</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-config-command"><code class="docutils literal notranslate"><span class="pre">config</span></code> コマンド</a></li>
+<li><a class="reference internal" href="#the-compose-command"><code class="docutils literal notranslate"><span class="pre">compose</span></code> コマンド</a></li>
+<li><a class="reference internal" href="#the-run-command"><code class="docutils literal notranslate"><span class="pre">run</span></code> コマンド</a></li>
+<li><a class="reference internal" href="#the-all-in-one-start-command">オールインワンの <code class="docutils literal notranslate"><span class="pre">start</span></code> コマンド</a></li>
+<li><a class="reference internal" href="#providing-https-access">HTTPS アクセスの提供</a><ul>
+<li><a class="reference internal" href="#use-your-own-certificate">所有する証明書を使用する</a></li>
+<li><a class="reference internal" href="#automatic-let-s-encrypt-certificate">自動 Let's Encrypt 証明書</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#next-steps">次の手順</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2023&#8209;11&#8209;15.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2023&#8209;11&#8209;15.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

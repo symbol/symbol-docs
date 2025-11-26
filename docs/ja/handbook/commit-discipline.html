@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Commit discipline &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Symbol Coding Guidelines" href="all-coding-guidelines.html" />
+    <link rel="prev" title="Git branching structure" href="git-branching.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="active">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/commit-discipline.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/handbook/commit-discipline.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documenting.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="commit-discipline">
+<h1>Commit discipline<a class="headerlink" href="#commit-discipline" title="この見出しへのパーマリンク"></a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="この見出しへのパーマリンク"></a></h2>
+<p>OK, so you’ve finished your work and you are naturally eager to git push it and start working on something else, new and exciting. I know the feeling, we have all been there.</p>
+<p>Well, I have news for you: The <strong>truly excellent developer</strong> grits their teeth and walks the extra mile, spending the time to write a <strong>good commit message</strong> for all of posterity to see.</p>
+<p>Just like a tree is harder <strong>to implement</strong> than a list, but provides orders of magnitude better <strong>runtime performance</strong>, writing good commit messages takes <strong>you</strong> more time, but saves time for <strong>everybody else</strong> reading your code in the future (including your future self).</p>
+<p>There is a <strong>net gain</strong> for everybody here. Just consider what happens when <strong>you</strong> need to review <strong>somebody else</strong>'s code and it has been tagged with proper git messages. Cool, isn’t it? A game-changer even?</p>
+<p>We strive to be <strong>truly excellent developers</strong> here, so grit your teeth and spend the time to write a <strong>good commit message</strong> after every completed job. This guide explains you how to do it.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Proper commit messages are <strong>extremely important</strong> as they simplify <strong>maintainability</strong>:</p>
+<ul class="simple">
+<li><p>They ease code <strong>understanding</strong> and <strong>debugging</strong> by providing the <strong>reasons</strong> behind each source code line.</p></li>
+<li><p>They allow <strong>automated</strong> CHANGELOG and version generation.</p></li>
+</ul>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>The following commit message <strong>format</strong> and <strong>content</strong> are <strong>mandatory</strong>, and will be <strong>enforced by server hooks</strong>.</p>
+</div>
+</section>
+<section id="commit-message-content">
+<h2>Commit Message Content<a class="headerlink" href="#commit-message-content" title="この見出しへのパーマリンク"></a></h2>
+<p>This is the most important bit of this document:</p>
+<p><strong>A good commit message explains the reason behind the change</strong>, this is, the <strong>why</strong> of the commit.</p>
+<p><strong>What</strong> the commit does, and <strong>how</strong> it does it, is already shown in the actual commit. The good commit message includes the missing information, like:</p>
+<ul class="simple">
+<li><p><strong>The reason behind the change</strong>: Why was this needed?</p></li>
+<li><p><strong>The need for the change</strong>: How were things working before, what was wrong with that, and how will things work after this commit?</p></li>
+<li><p><strong>The summary of the change</strong>, when it is too long to be easily understood by reading the code. Feel free to add bullet lists or diagrams when required to understand a big code drop.</p></li>
+<li><p><strong>Pointers to extra information</strong>: No detail should be omitted. Include links to every bit of information that helped you produce this commit, so other developers can retrace your steps if required. This means links to Jira or GitHub issues, Wikipedia articles or Stack Overflow discussions.</p></li>
+</ul>
+</section>
+<section id="commit-message-format">
+<h2>Commit Message Format<a class="headerlink" href="#commit-message-format" title="この見出しへのパーマリンク"></a></h2>
+<p>Additionally, if the commit message adheres to a strict format, it can enable some interesting automation.</p>
+<p>We have decided to follow the <a class="reference external" href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> specification:</p>
+<blockquote>
+<div><p>The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with <a class="reference external" href="http://semver.org/">SemVer</a>, by describing the features, fixes, and breaking changes made in commit messages.</p>
+</div></blockquote>
+<p>The benefits are:</p>
+<ul class="simple">
+<li><p><strong>Easier communication</strong>, as the nature of changes is clear.</p></li>
+<li><p>CHANGELOGs are <strong>generated automatically</strong>.</p></li>
+<li><p>Versions are <strong>bumped automatically</strong> based on the types of commits landed.</p></li>
+</ul>
+<p>In summary, all commits must have this format:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;type&gt;[optional scope]: &lt;description&gt;
+
+&lt;body&gt;
+
+[optional footer(s)]
+</pre></div>
+</div>
+<section id="type">
+<h3>Type<a class="headerlink" href="#type" title="この見出しへのパーマリンク"></a></h3>
+<p>Valid types (based on <a class="reference external" href="https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md">the Angular convention</a>) are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">build</span></code></p></td>
+<td><p>Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ci</span></code></p></td>
+<td><p>Changes to the CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">docs</span></code></p></td>
+<td><p>Documentation only changes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">feat</span></code></p></td>
+<td><p>A new feature. <strong>This will change the</strong> <code class="docutils literal notranslate"><span class="pre">MINOR</span></code> <strong>version</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fix</span></code></p></td>
+<td><p>Patches a bug in the codebase. <strong>This will change the</strong> <code class="docutils literal notranslate"><span class="pre">PATCH</span></code> <strong>version</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">perf</span></code></p></td>
+<td><p>A code change that improves performance.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">refactor</span></code></p></td>
+<td><p>No functional changes, just moving code around for maintainability.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">style</span></code></p></td>
+<td><p>Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, …).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">test</span></code></p></td>
+<td><p>Adding missing tests or correcting existing ones.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The type can be followed by an exclamation mark <code class="docutils literal notranslate"><span class="pre">!</span></code> indicating that this is an <strong>API BREAKING CHANGE</strong> (see the footer section below).</p>
+</section>
+<section id="scope">
+<h3>Scope<a class="headerlink" href="#scope" title="この見出しへのパーマリンク"></a></h3>
+<p>A scope may be provided after a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., <code class="docutils literal notranslate"><span class="pre">feat(parser):</span> <span class="pre">add</span> <span class="pre">ability</span> <span class="pre">to</span> <span class="pre">parse</span> <span class="pre">arrays</span></code>.</p>
+</section>
+<section id="footer">
+<h3>Footer<a class="headerlink" href="#footer" title="この見出しへのパーマリンク"></a></h3>
+<p>One or more footers may be provided one blank line after the body. Each footer must consist of a word token, followed by either a <code class="docutils literal notranslate"><span class="pre">:&lt;space&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;space&gt;#</span></code> separator, followed by a string value (this is inspired by the <a class="reference external" href="https://git-scm.com/docs/git-interpret-trailers">git trailer convention</a>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">BREAKING</span> <span class="pre">CHANGE</span></code> is a special token that <strong>will change the</strong> <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code> <strong>version</strong>. This can also be indicated with a <code class="docutils literal notranslate"><span class="pre">!</span></code> after the type or scope.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Reviewed-by:</span> <span class="pre">John</span> <span class="pre">Doe</span> <span class="pre">&lt;john.doe&#64;nem.software&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Co-authored-by:</span> <span class="pre">John</span> <span class="pre">Doe</span> <span class="pre">&lt;john.doe&#64;nem.software&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Fixes</span> <span class="pre">#1024</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BREAKING</span> <span class="pre">CHANGE:</span> <span class="pre">environment</span> <span class="pre">variables</span> <span class="pre">now</span> <span class="pre">take</span> <span class="pre">precedence</span> <span class="pre">over</span> <span class="pre">config</span> <span class="pre">files</span></code></p></li>
+</ul>
+</section>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="この見出しへのパーマリンク"></a></h3>
+<p>It follows the colon and space after the type/scope prefix. The description is a single-line summary of the code changes, e.g., <code class="docutils literal notranslate"><span class="pre">fix:</span> <span class="pre">array</span> <span class="pre">parsing</span> <span class="pre">issue</span> <span class="pre">when</span> <span class="pre">multiple</span> <span class="pre">spaces</span> <span class="pre">were</span> <span class="pre">contained</span> <span class="pre">in</span> <span class="pre">string</span></code>.</p>
+</section>
+<section id="body">
+<h3>Body<a class="headerlink" href="#body" title="この見出しへのパーマリンク"></a></h3>
+<p>This goes into the <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> of the commit message and it should try to address <strong>all the points</strong> in the <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">Message</span> <span class="pre">Content</span></code> section above.</p>
+<p>The body can be omitted <strong>only</strong> when the commit is <strong>short</strong>, its description is <strong>self-explanatory</strong> and links to further information (like issue numbers, if any) are already given in the <strong>footer</strong>.</p>
+<p><strong>Skipping the body should be a rare case</strong>. A clear example could be <code class="docutils literal notranslate"><span class="pre">fix:</span> <span class="pre">spelling</span> <span class="pre">errors</span></code>, but coding typos must definitely have a body: Even though the fix might be simple, the commit message must explain at least what the ill effects were.</p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="この見出しへのパーマリンク"></a></h2>
+<ul>
+<li><p>Commit message with description and breaking change footer:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feat: Allow provided config object to extend other configs
+
+BREAKING CHANGE: `extends` key in config file is now used for
+extending other config files.
+</pre></div>
+</div>
+</li>
+<li><p>Commit message with <code class="docutils literal notranslate"><span class="pre">!</span></code> to draw attention to breaking change:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>refactor!: Drop support for Node 6
+</pre></div>
+</div>
+</li>
+<li><p>Commit message with both <code class="docutils literal notranslate"><span class="pre">!</span></code> and BREAKING CHANGE footer:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>refactor!: Drop support for Node 6
+
+BREAKING CHANGE: Refactor to use JavaScript features not available
+in Node 6.
+</pre></div>
+</div>
+</li>
+<li><p>Commit message with no body:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docs: Correct spelling of CHANGELOG
+</pre></div>
+</div>
+</li>
+<li><p>Commit message with scope:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feat(lang): Add Polish language
+</pre></div>
+</div>
+</li>
+<li><p>Commit message with multi-paragraph body and multiple footers:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fix: Correct minor typos in code
+
+See the issue for details on the typos fixed.
+
+Some of them seeped into the UI so this is important.
+
+Reviewed-by: Z
+Refs #133
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;05&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/handbook/commit-discipline.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">Commit discipline</a><ul>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#commit-message-content">Commit Message Content</a></li>
+<li><a class="reference internal" href="#commit-message-format">Commit Message Format</a><ul>
+<li><a class="reference internal" href="#type">Type</a></li>
+<li><a class="reference internal" href="#scope">Scope</a></li>
+<li><a class="reference internal" href="#footer">Footer</a></li>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#body">Body</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

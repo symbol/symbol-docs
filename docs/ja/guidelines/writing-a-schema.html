@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>スキーマの記述 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="トランザクションビルダの生成" href="generating-transaction-builders.html" />
+    <link rel="prev" title="Contributing Guidelines" href="../contribute/contributing.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="active">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guidelines/writing-a-schema.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/guidelines/writing-a-schema.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contribute/index.html">Contribute</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contributing-docs.html">Contribute Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../contribute/contributing.html">Contributing Guidelines</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">スキーマの記述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generating-transaction-builders.html">トランザクションビルダの生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk-development.html">SDK 開発</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style-guide.html">スタイルガイド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="suggesting-changes.html">ドキュメント変更の提案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-a-guide.html">ガイドを記述する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translating-the-documentation.html">ドキュメントの翻訳</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk-documentation.html">SDK ドキュメント</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/authors.html">Documentation Authors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contribute/index.html">Contribute</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contributing-docs.html">Contribute Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../contribute/contributing.html">Contributing Guidelines</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">スキーマの記述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generating-transaction-builders.html">トランザクションビルダの生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk-development.html">SDK 開発</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style-guide.html">スタイルガイド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="suggesting-changes.html">ドキュメント変更の提案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-a-guide.html">ガイドを記述する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translating-the-documentation.html">ドキュメントの翻訳</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk-documentation.html">SDK ドキュメント</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/authors.html">Documentation Authors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="writing-a-schema">
+<h1>スキーマの記述<a class="headerlink" href="#writing-a-schema" title="この見出しへのパーマリンク"></a></h1>
+<p>新しいトランザクションタイプを含む、新しい Catapult プラグインを記述しようとしていますか？</p>
+<p>In this guide, we examine how the <a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/transfer/transfer.cats">transfer.cats</a> was constructed.
+You can adapt the same steps to define a new schema.</p>
+<section id="instructions">
+<h2>インストラクション<a class="headerlink" href="#instructions" title="この見出しへのパーマリンク"></a></h2>
+<ol class="arabic">
+<li><p>catbuffer-schemas リポジトリをクローンしてください。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/symbol/symbol.git
+</pre></div>
+</div>
+</li>
+<li><p>Create a new file under the <code class="docutils literal notranslate"><span class="pre">catbuffer/schemas</span></code> folder. In our case, we have named the file <code class="docutils literal notranslate"><span class="pre">transfer.cats</span></code>.</p></li>
+<li><p>トランザクション本体の構造体を定義。</p>
+<p>構造体を同じメモリブロックに格納したい一連のプロパティとして考えます。</p>
+<p>The transaction body contains the extra properties which differ from a basic transaction.
+Each attribute can have one of the types defined in <a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">types.cats</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># binary layout for a transfer transaction</span>
+<span class="n">struct</span> <span class="n">TransferTransactionBody</span>
+    <span class="c1"># transaction recipient</span>
+    <span class="n">recipient</span> <span class="o">=</span> <span class="n">UnresolvedAddress</span>
+    <span class="c1"># size of attached message</span>
+    <span class="n">messageSize</span> <span class="o">=</span> <span class="n">uint16</span>
+    <span class="c1"># number of attached mosaics</span>
+    <span class="n">mosaicsCount</span> <span class="o">=</span> <span class="n">uint8</span>
+    <span class="c1"># transaction message</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">byte</span><span class="p">,</span> <span class="n">messageSize</span><span class="p">)</span>
+    <span class="c1"># attached mosaics</span>
+    <span class="n">mosaics</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">UnresolvedMosaic</span><span class="p">,</span> <span class="n">mosaicsCount</span><span class="p">,</span> <span class="n">sort_key</span><span class="o">=</span><span class="n">mosaicId</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Define a second transaction struct in the same file.</p>
+<p>This will contain information about the version of the entity and its identifier.
+The underlying transaction properties and the particular transaction body are appended as inlines.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># binary layout for a non-embedded transfer transaction</span>
+<span class="n">struct</span> <span class="n">TransferTransaction</span>
+    <span class="n">const</span> <span class="n">uint8</span> <span class="n">version</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">const</span> <span class="n">EntityType</span> <span class="n">entityType</span> <span class="o">=</span> <span class="mh">0x4154</span>
+
+    <span class="n">inline</span> <span class="n">Transaction</span>
+    <span class="n">inline</span> <span class="n">TransferTransactionBody</span>
+</pre></div>
+</div>
+</li>
+<li><p>Define an <code class="docutils literal notranslate"><span class="pre">EmbeddedTransaction</span></code> struct to serialize the inner transactions within an aggregate.</p>
+<p>The embedded transaction and the body transaction are added as inlines.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># binary layout for an embedded transaction</span>
+<span class="n">struct</span> <span class="n">EmbeddedTransaction</span>
+    <span class="n">inline</span> <span class="n">SizePrefixedEntity</span>
+    <span class="n">inline</span> <span class="n">EntityBody</span>
+</pre></div>
+</div>
+</li>
+<li><p>The catbuffer library allows you to generate the transaction builders from the schema we have defined.</p>
+<p>For example, run the following command to generate C++ code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py<span class="w"> </span>--schema<span class="w"> </span>symbol/transfer/transfer.cats<span class="w"> </span>--generator<span class="w"> </span>cpp_builder
+</pre></div>
+</div>
+<p>ジェネレータは <code class="docutils literal notranslate"><span class="pre">_generated/cpp_builder</span></code> フォルダの下にトランザクションビルダーファイルを作成します。</p>
+</li>
+</ol>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;04&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guidelines/writing-a-schema.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">スキーマの記述</a><ul>
+<li><a class="reference internal" href="#instructions">インストラクション</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

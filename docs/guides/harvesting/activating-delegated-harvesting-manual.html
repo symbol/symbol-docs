@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Activating delegated harvesting manually &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Activating remote harvesting" href="activating-remote-harvesting.html" />
+    <link rel="prev" title="Activating delegated harvesting using the Desktop Wallet" href="activating-delegated-harvesting-wallet.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/harvesting/activating-delegated-harvesting-manual.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/harvesting/activating-delegated-harvesting-manual.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Harvesting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-wallet.html">Activating delegated harvesting using the Desktop Wallet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Activating delegated harvesting manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">Activating remote harvesting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Harvesting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="activating-delegated-harvesting-wallet.html">Activating delegated harvesting using the Desktop Wallet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Activating delegated harvesting manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activating-remote-harvesting.html">Activating remote harvesting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="activating-delegated-harvesting-manually">
+<h1>Activating delegated harvesting manually<a class="headerlink" href="#activating-delegated-harvesting-manually" title="Permalink to this heading"></a></h1>
+<p>Share your account’s importance securely with a node and get rewarded.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../concepts/harvesting.html#delegated-harvesting"><span class="std std-ref">Delegated harvesting</span></a> enables accounts to <strong>receive rewards</strong> from creating new blocks <strong>without running a node</strong>. At the same time, it allows nodes to benefit from an account’s (possibly higher) <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Node owners have access to the node’s configuration so it’s more convenient for them to use <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a> instead.</p>
+</div>
+<p>This guide explains how to <strong>manually</strong> activate delegated harvesting using the <a class="reference internal" href="../../sdk.html"><span class="doc">SDK</span></a> or the <a class="reference internal" href="../../cli.html"><span class="doc">CLI</span></a> interface and is therefore <strong>intended for developers</strong>. Users should use the <a class="reference internal" href="activating-delegated-harvesting-wallet.html"><span class="doc">Desktop Wallet guide</span></a> instead.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
+<p>Required steps:</p>
+<ol class="arabic simple">
+<li><p>Delegate the <strong>main account (M)</strong> importance to a <strong>remote account (R)</strong> using an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a>.</p></li>
+<li><p>Link the main account <strong>M</strong> to a <strong>VRF account (V)</strong> for randomized block production and account selection using a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a>.</p></li>
+<li><p>Link the main account <strong>M</strong> to a node in order to harvest through that node using a <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a>.</p></li>
+<li><p>Request the node to add the remote account <strong>R</strong> as a harvester using a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a>. Conversely, if the node configuration is accessible, the remote account’s private key can be set in the node configuration.</p></li>
+</ol>
+<p>Please note that it is entirely up to the node to comply with the request. Some nodes can be asked for their current list of delegated harvesters but this information is not always available (see <a class="reference internal" href="#delegated-harvesting-verifying-activation"><span class="std std-ref">Verifying activation</span></a> below).</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete the <a class="reference internal" href="../transfer/sending-a-transfer-transaction.html"><span class="doc">sending mosaics and messages between two accounts</span></a> guide to have a basic understanding of transactions.</p></li>
+</ul>
+<p>Before you can activate delegated harvesting, you need the following items:</p>
+<ul class="simple">
+<li><p>A <strong>Main account (M)</strong> with at least <strong>10,000</strong> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to be <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">eligible</span></a> and then some more to pay for transaction fees. The account also has to have an <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> greater than zero (this score is calculated every 12h). This is the account that will receive the harvesting fees. Keep its private key secret at all times.</p></li>
+<li><p>A <strong>Remote account (R)</strong> that will act as a proxy between <strong>M</strong> and the node. This account <strong>must have never sent or received any transaction</strong>, and it cannot be involved in any transaction while it is a delegated account.</p></li>
+<li><p>A <strong>VRF account (V)</strong> that has never sent or received any transactions. It is a regular account used to add randomness to the account selection process.</p></li>
+<li><p>The <strong>node’s public TLS key</strong>. This is the key the node uses to authenticate data for transport over <a class="reference external" href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> and is typically provided by the node owner.</p></li>
+</ul>
+<p>Refer to the <a class="reference internal" href="../account/creating-an-account.html"><span class="doc">Creating an account</span></a> guide to know how to create new accounts if you need to.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following bash code snippets make use of <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> and assume that the <strong>main account (M)</strong> is set as the <strong>default</strong> profile. Use the <code class="docutils literal notranslate"><span class="pre">‑‑profile</span></code> parameter if this is not the case.</p>
+</div>
+</section>
+<section id="guide">
+<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Create an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> to <strong>delegate M’s importance to R</strong>. Sign the transaction with <strong>M</strong> and announce it to the network.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingAccountLink.ts">View Code</a></span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">accountLinkTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AccountKeyLinkTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">remoteAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">LinkAction</span><span class="p">.</span><span class="nx">Link</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingAccountLink.sh">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>accountkeylink<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--linked-public-key<span class="w"> </span>&lt;REMOTE_PUBLIC_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--action<span class="w"> </span>Link<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p>Create a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> to <strong>link M to a VRF key</strong>. Sign the transaction with  <strong>M</strong> and announce it to the network.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.ts">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">vrfLinkTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">VrfKeyLinkTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">vrfAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">LinkAction</span><span class="p">.</span><span class="nx">Link</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span><span class="w"> </span><span class="c1">// Absolute number</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.sh">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>vrfkeylink<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--linked-public-key<span class="w"> </span>&lt;VRF_PUBLIC_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--action<span class="w"> </span>Link<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p>Create a <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a> to <strong>link M to a node’s TLS key</strong>. Sign the NodeKeyLinkTransaction with <strong>M</strong> and announce it to the network.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The node’s public TLS key is typically provided by the node owner. However, <strong>Dual</strong> nodes (being both <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> and <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> nodes) running a version of the <a class="reference internal" href="../../api.html"><span class="doc">REST Gateway</span></a> higher than <strong>2.2.0</strong> offer this information through the <code class="docutils literal notranslate"><span class="pre">nodePublicKey</span></code> field of the <code class="docutils literal notranslate"><span class="pre">node/info</span></code> <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getNodeInfo">REST endpoint</a>.</p>
+<p>Just point your browser to <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info</span></code>.</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingNodeKeyLink.ts">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">nodeLinkTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NodeKeyLinkTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">nodeAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">LinkAction</span><span class="p">.</span><span class="nx">Link</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span><span class="w"> </span><span class="c1">// Absolute number</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingNodeKeyLink.sh">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>nodekeylink<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--linked-public-key<span class="w"> </span>&lt;NODE_PUBLIC_TLS_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--action<span class="w"> </span>Link<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p>Once the transactions are confirmed, the next step is to <strong>share R’s private key with the node</strong>. This can be done in one of two ways depending on whether you are the node owner and have access to the node’s configuration or not.</p>
+<p>If you are the <strong>node owner</strong>, you simply need to set the remote account’s private signing key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> field in the <a class="reference internal" href="../network/configuring-node-properties.html#node-properties-harvesting-configuration"><span class="std std-ref">Harvesting Configuration</span></a>.</p>
+<p><strong>Otherwise</strong>, a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> must be used. As the private key will be shared in an <strong>encrypted message</strong>, only the node will be able to see it. Moreover, <strong>R</strong> does not own any mosaic.</p>
+<p>The harvesting fees will be sent to <strong>M</strong> as it has established a link with the node through the <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a>.</p>
+<p>Sign the <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> with <strong>M</strong> and announce it to the network.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingPersistentRequest.ts">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">persistentDelegationRequestTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PersistentDelegationRequestTransaction</span><span class="p">.</span><span class="nx">createPersistentDelegationRequestTransaction</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">remoteAccount</span><span class="p">.</span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">vrfAccount</span><span class="p">.</span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">nodeAccount</span><span class="p">.</span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/bash/accountlink/ActivatingDelegatedHarvestingPersistentRequest.sh">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optionally use --profile announcer</span>
+symbol-cli<span class="w"> </span>transaction<span class="w"> </span>persistentharvestdelegation<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--remote-private-key<span class="w"> </span>&lt;REMOTE_PRIVATE_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--recipient-public-key<span class="w"> </span>&lt;NODE_PUBLIC_TLS_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--vrf-private-key<span class="w"> </span>&lt;VRF_PRIVATE_KEY&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--sync
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the above transactions can be announced together in a single <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">Aggregate Transaction</span></a>.</p>
+</div>
+<p>If everything is successful, the node will receive the encrypted message through <a class="reference internal" href="../../api.html#websockets"><span class="std std-ref">WebSockets</span></a>. Once the node decrypts the private key of the potential delegated harvester, the node owner may <strong>add R as a delegated harvester</strong> if the following requirements are met:</p>
+<ul class="simple">
+<li><p>The node permits delegated harvesting.</p></li>
+<li><p>The node has harvesting slots available (See next section).</p></li>
+<li><p>The remote account has never sent or received transactions before.</p></li>
+</ul>
+<p>As the remote private key is <strong>saved on disk</strong> by the node, even if the node disconnects temporarily the persistent delegated harvesters will be reestablished once the node reconnects to the network.</p>
+<p>Additionally, the use of an encrypted message creates a <strong>backup</strong> of the information for the nodes. If the disk containing the delegated keys becomes corrupted or destroyed, the node owner can still retrieve the data by querying the blockchain.</p>
+</section>
+<section id="verifying-activation">
+<span id="delegated-harvesting-verifying-activation"></span><h2>Verifying activation<a class="headerlink" href="#verifying-activation" title="Permalink to this heading"></a></h2>
+<p>When requesting delegation through a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> instead of directly configuring the node, whether the node enables delegated harvesting depends entirely on the node and <strong>not on the network</strong>. It is entirely up to the node to comply with the request or even to lie about its state.</p>
+<p>Therefore, there is no <strong>reliable</strong> way to know if your account has become a harvester or not (besides waiting to see if any blocks appear on the blockchain signed by your remote account and your main account starts collecting harvesting fees).</p>
+<p>That said, nodes configured to act as <strong>Dual</strong> nodes (being both <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> and <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> nodes) can be queried for their current list of delegated harvesters. To reiterate, this information comes from the node and is not backed up by the blockchain, so take it with a grain of salt.</p>
+<p>You can retrieve this list using the <code class="docutils literal notranslate"><span class="pre">getUnlockedAccount</span></code> <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getUnlockedAccount">API endpoint</a> (point your browser to <a class="reference internal" href="../../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/unlockedaccount</span></code>) or the <a class="reference external" href="https://symbol.github.io/symbol-sdk-typescript-javascript/0.22.2/classes/_src_infrastructure_nodehttp_.nodehttp.html#getunlockedaccount">Typescript SDK</a> for example). It contains the public keys of all registered delegated harvesters in the node, so your <strong>remote account (R)</strong> public key should appear here.</p>
+<p>By default a node can have up to 5 delegated harvesters (harvesting slots) and excess requests can be priorized as the node sees fit. This can be configured on the node through the <code class="docutils literal notranslate"><span class="pre">maxUnlockedAccounts</span></code> and <code class="docutils literal notranslate"><span class="pre">delegatePrioritizationPolicy</span></code> <a class="reference internal" href="../network/configuring-node-properties.html#node-properties-harvesting-configuration"><span class="std std-ref">Harvesting Configuration</span></a>.</p>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Accounts with higher importance are selected more often to perform harvesting</strong>. Even if you successfully register as a delegated harvester with a node, you will not harvest any block (nor receive any fees) unless your <a class="reference internal" href="../../concepts/consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> is high enough.</p></li>
+<li><p><strong>Importance score calculation does not happen continuously</strong>. By default, account importance scores are recalculated every 1440 blocks (about every 12 hours). See the <code class="docutils literal notranslate"><span class="pre">importanceGrouping</span></code> property in the <a class="reference internal" href="../network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">Configuring network properties</span></a> guide.</p></li>
+<li><p>Finally, as explained in <a class="reference internal" href="#delegated-harvesting-verifying-activation"><span class="std std-ref">Verifying activation</span></a> above, <strong>announcing a Harvesting Delegation request does not guarantee being added as a delegated harvester</strong>. Nodes are free to comply with the request or even to lie about its status.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;21</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/harvesting/activating-delegated-harvesting-manual.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Activating delegated harvesting manually</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#guide">Guide</a></li>
+<li><a class="reference internal" href="#verifying-activation">Verifying activation</a></li>
+<li><a class="reference internal" href="#final-words">Final words</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;21.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;21.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Migrating from NIS1 to Symbol &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Technology" href="../../concepts/overview.html" />
+    <link rel="prev" title="Writing your first application" href="../../getting-started/first-application.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/migration/migrating-from-nem-to-symbol.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/migration/migrating-from-nem-to-symbol.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Migration from NIS1</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="post-optin-xym-retrieval.html">Retrieving your XYM from a pre-launch opt-in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Migrating from NIS1 to Symbol</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Migration from NIS1</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="post-optin-xym-retrieval.html">Retrieving your XYM from a pre-launch opt-in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Migrating from NIS1 to Symbol</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restriction/index.html">Mosaic restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="migrating-from-nis1-to-symbol">
+<h1>Migrating from NIS1 to Symbol<a class="headerlink" href="#migrating-from-nis1-to-symbol" title="Permalink to this heading"></a></h1>
+<p>With Symbol, most of the previously available NIS1 features have evolved.
+This document will help you <strong>upgrade your application</strong>’s previous NIS1 features to the newly available Symbol technology.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can move your NIS1 assets to a Symbol account by <strong>Opting-in</strong>. For more information, see <a class="reference internal" href="post-launch-optin-xym-retrieval.html"><span class="doc">Retrieving your XYM from a post-launch opt-in</span></a>.</p>
+</div>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Feature comparison between NIS1 and Symbol</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>NEM NIS1</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Built-in features</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaics</p></td>
+<td><p>Mosaics</p></td>
+</tr>
+<tr class="row-even"><td><p>Namespaces</p></td>
+<td><p>Namespaces</p></td>
+</tr>
+<tr class="row-odd"><td><p>Delegated Harvesting</p></td>
+<td><p>Delegated Harvesting</p></td>
+</tr>
+<tr class="row-even"><td><p>Multisig Accounts</p></td>
+<td><p>Multi-level Multisig Accounts</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mosaic Restrictions</p></td>
+<td><p>Advanced Mosaic Restrictions</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>Account Restrictions</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>Metadata Controls</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>Aggregated Transactions</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>Inflation</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>Cross-Chain Swaps</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>Plug-Ins</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Protocol</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Coded in Java</p></td>
+<td><p>Coded in C++</p></td>
+</tr>
+<tr class="row-even"><td><p>POI (Proof of Importance)</p></td>
+<td><p>POS+ (Proof of Stake Plus)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Keccak-SHA3-512</p></td>
+<td><p>SHA-512</p></td>
+</tr>
+<tr class="row-even"><td><p>Fixed Fees</p></td>
+<td><p>Dynamic Fees</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>Receipts</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>Merkle Proofs</p></td>
+</tr>
+</tbody>
+</table>
+<section id="test-network">
+<h2>Test network<a class="headerlink" href="#test-network" title="Permalink to this heading"></a></h2>
+<p>Right now, there are two options to start testing Symbol which do not involve spending funds.</p>
+<ul class="simple">
+<li><p><strong>Public test network</strong> The public test network uses the same technology and features of the main public network. You can use the testnet to experiment with the offered transaction set in a live network without the loss of valuable assets. To start using the test net, follow <a class="reference internal" href="../../getting-started/setup-workstation.html"><span class="doc">this guide</span></a>.</p></li>
+<li><p><strong>Private test network</strong>: To run a private test network, use the package <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a>. This tool contains the necessary setup scripts to build a network for development and learning purposes with just one command.</p></li>
+</ul>
+</section>
+<section id="legacy-api-incompatibility">
+<h2>Legacy API incompatibility<a class="headerlink" href="#legacy-api-incompatibility" title="Permalink to this heading"></a></h2>
+<p>Legacy API calls that used to work for NIS1 network nodes are <strong>not compatible</strong> with Symbol.
+Now, API requests mostly happen with REST API nodes usually on port <strong>3000</strong>.</p>
+<p>There are several <strong>Software Development Kits</strong> that have been—and some that are—under development for Symbol distributed ledgers consumer applications.
+As of now, the <a class="reference internal" href="../../sdk.html"><span class="doc">planned SDKs</span></a> to be supported are written in: Typescript / Javascript / NodeJS, Java, C#, Go, Python and Swift.</p>
+<p>As a starting point, we suggest reviewing the <a href="https://github.com/symbol/symbol-sdk-typescript-javascript" target="_blank">TS/JS SDK</a> as it is the most used SDK and leads in <a href="https://symbol.github.io/symbol-sdk-typescript-javascript/" target="_blank">documentation</a>.
+The architecture of the TS SDK is inspired by <a href="https://nemproject.github.io/nem-library-docs/" target="_blank">NEM Library</a> from NIS1.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Protocol: <a class="reference internal" href="../../concepts/node.html"><span class="doc">Nodes Architecture</span></a></p></li>
+<li><p>Reference: <a class="reference internal" href="../../api.html"><span class="doc">REST Gateway</span></a></p></li>
+<li><p>Reference: <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.11.3/">REST API contract</a></p></li>
+</ul>
+</section>
+<section id="accounts-management">
+<h2>Accounts management<a class="headerlink" href="#accounts-management" title="Permalink to this heading"></a></h2>
+<p>Both platforms use the digital signature algorithm named Ed25519, but with different hashing algorithms.
+While NIS1 uses <strong>Keccak-SHA3-512</strong>, Symbol changed to <strong>SHA-512</strong> to support TLS.</p>
+<p>The change in the hashing algorithm used leads to have, for the same private key in NIS1 and Symbol, different public keys, and addresses.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Guide: <a class="reference internal" href="../account/creating-an-account.html"><span class="doc">Creating and opening an account</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../account/getting-account-information.html"><span class="doc">Getting the account information</span></a></p></li>
+</ul>
+</section>
+<section id="legacy-transactions">
+<h2>Legacy transactions<a class="headerlink" href="#legacy-transactions" title="Permalink to this heading"></a></h2>
+<p>NIS1 transactions <strong>serialization format is not compatible</strong> with Symbol.
+Yet, most of the transaction types have only evolved and none have been removed. This implies a possible upgrade to Symbol transactions that involve fewer changes.</p>
+<p>The first notable change about transactions is that the status response is received through <a class="reference internal" href="../../api.html#websockets"><span class="std std-ref">WebSocket channels</span></a>.
+In NIS1, the client received the response of the API call right after announcing a transaction.
+Symbol receives the response of the call <strong>asynchronously</strong>, eliminating blocking calls.</p>
+<p>Additionally, Symbol only has one version of <a class="reference internal" href="../../concepts/transfer-transaction.html"><span class="doc">TransferTransaction</span></a>.
+The native currency is now pushed as a regular <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">mosaic</span></a> in the mosaics array of the transaction.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Protocol: <a class="reference internal" href="../../concepts/transaction.html"><span class="doc">Transaction life-cycle</span></a></p></li>
+<li><p>Protocol: <a href="https://github.com/symbol/symbol/tree/main/catbuffer/schemas/symbol/" target="_blank">Serialization schemas</a></p></li>
+</ul>
+</section>
+<section id="transaction-fees">
+<h2>Transaction fees<a class="headerlink" href="#transaction-fees" title="Permalink to this heading"></a></h2>
+<p>Symbol transaction fees are dynamic and decided by the network participants.
+Each transaction <strong>effective fee</strong> is calculated by multiplying a <strong>fee multiplier</strong> by the <strong>transaction size</strong>.
+The fee multiplier is attached in the block where the transaction gets confirmed, and it is defined by the node owner harvesting the block.</p>
+<p>During the transaction definition, the sender limits the maximum fee authorized to include the transaction in a block.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Protocol: <a class="reference internal" href="../../concepts/fees.html"><span class="doc">Transaction fees</span></a></p></li>
+</ul>
+</section>
+<section id="mosaics">
+<h2>Mosaics<a class="headerlink" href="#mosaics" title="Permalink to this heading"></a></h2>
+<p>Notable changes have happened at protocol level with regards to <a class="reference internal" href="../../concepts/mosaic.html"><span class="doc">mosaics</span></a> management as they are now <strong>independent</strong> of <a class="reference internal" href="../../concepts/namespace.html"><span class="doc">namespaces</span></a>.</p>
+<p>In fact, NIS1 namespaces expire altogether with assets linked to them.
+Symbol mosaics are configured to have their own <code class="docutils literal notranslate"><span class="pre">duration</span></code>, as well as being assigned a unique <code class="docutils literal notranslate"><span class="pre">nonce</span></code> value.</p>
+<p>Lastly, levies are not available on Symbol.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Guide: <a class="reference internal" href="../mosaic/creating-a-mosaic.html"><span class="doc">Creating a mosaic</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading"></a></h2>
+<p>Namespaces can still refer to mosaics using <a class="reference internal" href="../../serialization/index.html#mosaicaliastransaction"><span class="std std-ref">MosaicAliasTransaction</span></a>.
+A namespace owner can attach either of an account or a mosaic id to one of its namespaces.
+The namespace information endpoint will return the linked object in the alias field.</p>
+<p>Also, Symbol root namespaces have a <code class="docutils literal notranslate"><span class="pre">duration</span></code> field that is <strong>expressed in a count of blocks</strong> which means yearly renewal is not mandatory anymore.</p>
+<p>In order to facilitate the transfer of mosaics, a mosaic creator should register a namespace and alias the mosaic with that namespace.
+End-users can <strong>send transactions using the alias</strong> to refer to the mosaic.</p>
+<p>When a transaction includes an alias, a <strong>resolution</strong> reflects the resolved value of that alias in the block.
+To get the real identifier behind an aliased address or mosaic, the client application needs to fetch the related <a class="reference internal" href="../../concepts/receipt.html"><span class="doc">resolution receipt</span></a> linked to the block where the transaction gets included.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Guide: <a class="reference internal" href="../namespace/registering-a-namespace.html"><span class="doc">Registering a namespace</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../namespace/registering-a-subnamespace.html"><span class="doc">Creating a subnamespace</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../namespace/link-a-namespace-to-a-mosaic.html"><span class="doc">Linking a namespace to a mosaic</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../namespace/link-a-namespace-to-an-address.html"><span class="doc">Linking a namespace to an address</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../namespace/link-a-namespace-to-a-mosaic.html#sending-a-transfer-transaction-with-an-aliased-mosaic"><span class="std std-ref">Sending a TransferTransaction with an aliased mosaic</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../namespace/link-a-namespace-to-an-address.html#sending-a-transfer-transaction-to-an-aliased-address"><span class="std std-ref">Sending a TransferTransaction to an aliased address</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../blockchain/getting-the-mosaic-identifier-behind-a-namespace-with-receipts.html"><span class="doc">Getting the asset identifier behind a namespace with receipts</span></a></p></li>
+</ul>
+</section>
+<section id="multisignature-management">
+<h2>Multisignature management<a class="headerlink" href="#multisignature-management" title="Permalink to this heading"></a></h2>
+<p>With multisignature accounts managed on-chain, Symbol’s multisignature implementation is different from many other—so-called client-side—multisignature implementations.</p>
+<ol class="arabic simple">
+<li><p>Creating a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">multisignature account</span></a>.</p></li>
+</ol>
+<p>Different to NIS1, the account modification entries now hold fields for <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">approval</span></code> and <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">removal</span></code>:</p>
+<ul class="simple">
+<li><p><strong>Minimum removal</strong>: Defines how many cosignatories are required to broadcast transactions removing cosignatories from the multisignature account.</p></li>
+<li><p><strong>Minimum approval</strong>: Defines how many cosignatories are required for any other type of transaction.</p></li>
+</ul>
+<p>Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a <strong>cosignature</strong> (opt-in process).
+In order to facilitate this process, transactions with type <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> must be wrapped in an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">Aggregate Transaction</span></a>.</p>
+<ol class="arabic simple" start="2">
+<li><p>Multi-Signature transactions work with <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">aggregate transactions</span></a>.</p></li>
+</ol>
+<p>The new AggregateTransaction permits to wrap multiple transactions together involving different participants.
+If all the participants cosign the aggregate, the inner transactions are included atomically in the block.
+Otherwise, none of the transactions will get confirmed.</p>
+<p>To send a multisig transaction as in NIS1, the initiator of the transaction has to add it <strong>as an inner transaction of the aggregate</strong>.
+Then, the minimum number of cosignatories defined in the multisignature will have to cosign the aggregate to allow announcing transactions from the shared account.</p>
+<p><strong>See also</strong>:</p>
+<ul class="simple">
+<li><p>Guide: <a class="reference internal" href="../multisig/creating-a-multisig-account.html"><span class="doc">Creating a multisig account</span></a></p></li>
+<li><p>Guide: <a class="reference internal" href="../aggregate/sending-a-multisig-transaction.html"><span class="doc">Sending a multisignature transaction</span></a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;05&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/migration/migrating-from-nem-to-symbol.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Migrating from NIS1 to Symbol</a><ul>
+<li><a class="reference internal" href="#test-network">Test network</a></li>
+<li><a class="reference internal" href="#legacy-api-incompatibility">Legacy API incompatibility</a></li>
+<li><a class="reference internal" href="#accounts-management">Accounts management</a></li>
+<li><a class="reference internal" href="#legacy-transactions">Legacy transactions</a></li>
+<li><a class="reference internal" href="#transaction-fees">Transaction fees</a></li>
+<li><a class="reference internal" href="#mosaics">Mosaics</a></li>
+<li><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li><a class="reference internal" href="#multisignature-management">Multisignature management</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;05&#8209;03.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

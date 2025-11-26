@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Fees &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Harvesting" href="harvesting.html" />
+    <link rel="prev" title="Data Validation" href="data-validation.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/fees.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/fees.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="fees">
+<h1>Fees<a class="headerlink" href="#fees" title="Permalink to this heading"></a></h1>
+<p>Announcing <a class="reference internal" href="transaction.html"><span class="doc">transactions</span></a> has an associated cost. This cost is necessary to provide an incentive for the <a class="reference internal" href="harvesting.html"><span class="doc">harvesters</span></a> who secure the network and run the infrastructure.</p>
+<section id="network-currency">
+<h2>Network currency<a class="headerlink" href="#network-currency" title="Permalink to this heading"></a></h2>
+<p>By default, fees are paid in the underlying currency of the Symbol network.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Default network currency per network type</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Network type</p></th>
+<th class="head"><p>Mosaic name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PRIVATE</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cat.currency</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>MAINNET, TESTNET</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Private chains <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">can edit the network configuration</span></a> to eliminate fees or use another <a class="reference internal" href="mosaic.html"><span class="doc">mosaic</span></a> that better suits their needs.</p>
+</section>
+<section id="transaction-fee">
+<h2>Transaction fee<a class="headerlink" href="#transaction-fee" title="Permalink to this heading"></a></h2>
+<p>The fee associated with a transaction primarily depends on the size (in bytes) of the transaction.
+The effective fee deducted from the account sending the transaction is calculated as the product of the size of the transaction and a fee multiplier set by the node that harvests the block.</p>
+<div class="math notranslate nohighlight">
+\[effectiveFee = transaction::size * block::feeMultiplier\]</div>
+<p>A node owner <a class="reference internal" href="../guides/network/configuring-node-properties.html#id1"><span class="std std-ref">can configure the fee multiplier</span></a> to all positive values, including zero.
+The <code class="docutils literal notranslate"><span class="pre">fee_multiplier</span></code> is stored in the <a class="reference internal" href="block.html#block-header"><span class="std std-ref">block header</span></a> when the node harvests a new block, determining which was the effective fee paid for every transaction included.</p>
+<p>Before announcing the transaction, the sender must specify during the transaction definition a <code class="docutils literal notranslate"><span class="pre">max_fee</span></code>, indicating the maximum fee the account allows to spend for this transaction.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">effective_fee</span></code> is smaller or equal to the <code class="docutils literal notranslate"><span class="pre">max_fee</span></code>, a harvester could opt to include the transaction in the block.
+The harvesting nodes <a class="reference internal" href="../guides/network/configuring-node-properties.html#id1"><span class="std std-ref">can set their transaction inclusion strategy</span></a>:</p>
+<ul class="simple">
+<li><p><strong>Prefer-oldest</strong>: Preferred for networks with high transaction throughput requirements. Include first the oldest transactions.</p></li>
+<li><p><strong>Minimize-fees</strong>: Philanthropic nodes. Include first the transactions that other nodes do not want to include.</p></li>
+<li><p><strong>Maximize-fees</strong>: Most common in public networks. Include first transactions with higher fees.</p></li>
+</ul>
+<p>To ensure that the transaction will get included without setting a <code class="docutils literal notranslate"><span class="pre">max_fee</span></code> unnecessarily high, the sender of the transaction can ask the <a class="reference internal" href="../api.html"><span class="doc">REST Gateway</span></a> for the median, average, highest, or lowest multiplier of the network over the last 60 blocks (<a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">maxDifficultyBlocks</span></a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A quick way of retrieving this information is pointing your browser to:</p>
+<p><a class="reference internal" href="../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/network/fees/transaction</span></code></p>
+</div>
+<p>For example, the sender could set the transaction max_fee as follows:</p>
+<div class="math notranslate nohighlight">
+\[maxFee = transaction::size ∗ network::medianFeeMultiplier\]</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/DefiningMaxFee.ts">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">publicAccount1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">generateNewAccount</span><span class="p">(</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">publicAccount2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">generateNewAccount</span><span class="p">(</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Get median fee multiplier</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">networkHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="p">.</span><span class="nx">createNetworkRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">medianFeeMultiplier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">networkHttp</span><span class="p">.</span><span class="nx">getTransactionFees</span><span class="p">().</span><span class="nx">toPromise</span><span class="p">()</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">medianFeeMultiplier</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Define transaction and set max fee</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[],</span>
+<span class="w">    </span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;This is a test message&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">setMaxFee</span><span class="p">(</span><span class="nx">medianFeeMultiplier</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/DefiningMaxFee.js">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">publicAccount1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">generateNewAccount</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">publicAccount</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">publicAccount2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">generateNewAccount</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">publicAccount</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Get median fee multiplier</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">networkHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryHttp</span><span class="p">.</span><span class="nx">createNetworkRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">medianFeeMultiplier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">networkHttp</span><span class="p">.</span><span class="nx">getTransactionFees</span><span class="p">().</span><span class="nx">toPromise</span><span class="p">()</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">medianFeeMultiplier</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Define transaction and set max fee</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">rawAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[],</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;This is a test message&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">setMaxFee</span><span class="p">(</span><span class="nx">medianFeeMultiplier</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not guaranteed that the transaction will get confirmed if the multiplier used is too low. To have better chances, the sender of the transaction could opt to use any value between <code class="docutils literal notranslate"><span class="pre">medianNetworkFeeMultiplier</span></code> and <code class="docutils literal notranslate"><span class="pre">highestFeeMultiplier</span></code> instead.</p>
+</div>
+<p>To determine an <a class="reference internal" href="aggregate-transaction.html"><span class="doc">aggregate bonded transaction</span></a> size, it is required to know beforehand the number of participant accounts that will need to cosign the transaction.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/DefiningMaxFee.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Define transaction and set max fee</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createBonded</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">      </span><span class="nx">transferTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">publicAccount1</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">transferTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">publicAccount2</span><span class="p">),</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[],</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">setMaxFeeForAggregate</span><span class="p">(</span><span class="nx">medianFeeMultiplier</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/DefiningMaxFee.js">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Define transaction and set max fee</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createBonded</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">      </span><span class="nx">transferTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">publicAccount1</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">transferTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">publicAccount2</span><span class="p">),</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[],</span>
+<span class="w">  </span><span class="p">).</span><span class="nx">setMaxFeeForAggregate</span><span class="p">(</span><span class="nx">medianFeeMultiplier</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dynamic-fee-multiplier">
+<span id="fees-dynamic-multiplier"></span><h2>Dynamic fee multiplier<a class="headerlink" href="#dynamic-fee-multiplier" title="Permalink to this heading"></a></h2>
+<p>Each block added to the blockchain has a different fee multiplier, set by the node that harvested it. The network also defines the <strong>dynamic fee multiplier</strong> as the <strong>median</strong> of the last <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">maxDifficultyBlocks</span></a> harvested blocks (60 by default).</p>
+<p>This value approximates the most common fee multiplier that nodes and transaction creators have agreed upon in the most recent blocks, and is used in the calculation of <a class="reference internal" href="namespace.html#namespace-rental-fee"><span class="std std-ref">namespace</span></a> and <a class="reference internal" href="mosaic.html#mosaic-rental-fee"><span class="std std-ref">mosaic</span></a> rental fees.</p>
+<p>If a block did not include any transaction, a value of <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">defaultDynamicFeeMultiplier</span></a> (100 by default) is used to avoid 0 multipliers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current value of the dynamic fee multiplier can be found in the <code class="docutils literal notranslate"><span class="pre">medianFeeMultiplier</span></code> property returned by the <a class="reference internal" href="../api.html"><span class="doc">REST Gateway</span></a>:</p>
+<p><a class="reference internal" href="../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/network/fees/transaction</span></code></p>
+</div>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/fees.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Fees</a><ul>
+<li><a class="reference internal" href="#network-currency">Network currency</a></li>
+<li><a class="reference internal" href="#transaction-fee">Transaction fee</a></li>
+<li><a class="reference internal" href="#dynamic-fee-multiplier">Dynamic fee multiplier</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

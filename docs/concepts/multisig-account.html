@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Multisig Account &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace" href="namespace.html" />
+    <link rel="prev" title="Mosaic Restriction" href="mosaic-restriction.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/multisig-account.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/multisig-account.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="multisig-account">
+<h1>Multisig Account<a class="headerlink" href="#multisig-account" title="Permalink to this heading"></a></h1>
+<p>Multisig <a class="reference internal" href="account.html"><span class="doc">accounts</span></a> require additional signatures to initiate actions/transfers.</p>
+<section id="cosignatories">
+<h2>Cosignatories<a class="headerlink" href="#cosignatories" title="Permalink to this heading"></a></h2>
+<p>Symbol <a class="reference internal" href="account.html"><span class="doc">accounts</span></a> can be <a class="reference internal" href="../guides/multisig/creating-a-multisig-account.html"><span class="doc">converted to multisig</span></a>.
+The cosignatories—other accounts—of the multisig will become the account managers.</p>
+<p>From that moment on, the multisig account cannot announce transactions by itself.
+A multisig cosignatory has to propose a transaction involving the multisig, wrapping it in an <a class="reference internal" href="aggregate-transaction.html"><span class="doc">AggregateTransaction</span></a>.</p>
+<p>To record the transaction in the block, the other cosignatories will have to agree.</p>
+</section>
+<section id="minimum-approval-and-removal">
+<h2>Minimum approval and removal<a class="headerlink" href="#minimum-approval-and-removal" title="Permalink to this heading"></a></h2>
+<p>It is not always necessary to require all cosignatories to cosign transactions associated with the multisig account.
+Symbol allows to set up the minimum number of cosignatory agreements.
+These properties can be <a class="reference internal" href="../guides/multisig/modifying-a-multisig-account-min-approval.html#guide-modify-a-multisig-account-min-approval"><span class="std std-ref">edited</span></a> afterward to suit almost all needs.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/multisig-2-of-3.png" src="../_images/multisig-2-of-3.png" style="width: 350px;" />
+<figcaption>
+<p><span class="caption-text">2-of-3 multisignature account</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Symbol’s current implementation of multisig is <em>“M-of-N”</em>, where M is the number of cosignatories required to announce a transaction and N is the total amount of cosignatories for that particular multisig account.
+This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.</p>
+<p>Similarly, cosignatories can <a class="reference internal" href="../guides/multisig/adding-a-new-signer-to-a-multisig-account.html#guide-modify-a-multisig-account-add-new-cosignatory"><span class="std std-ref">invite other accounts to take part in the multisig</span></a>, or  <a class="reference internal" href="../guides/multisig/removing-a-signer-from-a-multisig-account.html#guide-modify-a-multisig-account-removing-a-cosignatory"><span class="std std-ref">propose to remove others</span></a> when the defined conditions are fulfilled.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multisig accounts are a powerful tool, but please use this tool with caution.  If the cosignatories keys get lost and minimum approval is not reached, it would result in the permanent loss of access to the funds held by the multisig account. Choose <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">removal</span></code> parameter wisely to avoid this situation.</p>
+</div>
+</section>
+<section id="constraints">
+<h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this heading"></a></h2>
+<p>The public network defines the following constraints for multisig accounts, being the values presented <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">configurable per network</span></a>.</p>
+<ul class="simple">
+<li><p>Multisig accounts can have up to <code class="docutils literal notranslate"><span class="pre">25</span></code> cosignatories.</p></li>
+<li><p>An account can be cosigner of up to <code class="docutils literal notranslate"><span class="pre">25</span></code> multisig accounts.</p></li>
+<li><p>Multisig account can be a cosigner for another multisig account, up to <code class="docutils literal notranslate"><span class="pre">3</span></code> levels. Multi-level multisig accounts add “AND/OR” logic to multi-signature transactions.</p></li>
+<li><p><a class="reference internal" href="../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">Multisig modification transactions</span></a> must be wrapped in an <a class="reference internal" href="aggregate-transaction.html"><span class="doc">AggregateTransaction</span></a>. New cosignatories added to the multisig must opt-in by cosigning the aggregate.</p></li>
+</ul>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<p>There is a broad range of useful applications for multisig accounts.
+Let’s take a look at some of the most common use cases.</p>
+<section id="shared-accounts">
+<h3>Shared accounts<a class="headerlink" href="#shared-accounts" title="Permalink to this heading"></a></h3>
+<p>Several families are members of the local philatelist society and use a shared account to buy stamps.</p>
+<p>To ensure that all agree on which old stamps they should buy and on the right price, they use a multisig account.
+This way, all members of the society need to approve the transaction before it is included on the blockchain.</p>
+</section>
+<section id="multi-factor-authorization">
+<h3>Multi-factor authorization<a class="headerlink" href="#multi-factor-authorization" title="Permalink to this heading"></a></h3>
+<p>Alice wants to make sure her funds are not compromised in any way.
+Therefore she sets up a multisig account with her funds and attaches two accounts (signer accounts) to control her multisig account as a form of 2-factor authentication.</p>
+<p>Both of her signer accounts need to approve the transaction, and her signer accounts are located on different computer platforms with different passwords. This means that even if an evil hacker or virus should compromise one of her accounts, the funds are still kept secure.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/multisig-multifactor-auth.png" src="../_images/multisig-multifactor-auth.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">Multi-factor authorization using multisig accounts</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="assets-ownership">
+<h3>Assets ownership<a class="headerlink" href="#assets-ownership" title="Permalink to this heading"></a></h3>
+<p>Multisig accounts can be used to represent the ownership of assets.</p>
+<p>A company could create a 1-of-1 multisig account for each of their products, adding themselves as the cosignatory.
+When the company sells the product to Alice, she becomes the owner through the action of being added as the cosigner, and the company is removed in the same transaction.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/multisig-asset-ownership.png" src="../_images/multisig-asset-ownership.png" style="width: 300px;" />
+<figcaption>
+<p><span class="caption-text">Transferring an account</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="manufacturing-and-supply-chains">
+<h3>Manufacturing and supply chains<a class="headerlink" href="#manufacturing-and-supply-chains" title="Permalink to this heading"></a></h3>
+<p>In this example, a manufacturer is shipping a pharmaceutical product.</p>
+<p>The product receives its quality approval <a class="reference internal" href="mosaic.html"><span class="doc">mosaic</span></a> only when its blockchain record shows it has a production date, safety inspection, and was shipped at the correct temperature.</p>
+<p>Sensors in the shipping container report temperature data every 5 minutes and consolidate it into a daily report.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/mlma-supply-chain.png" src="../_images/mlma-supply-chain.png" style="width: 750px;" />
+<figcaption>
+<p><span class="caption-text">Manufacturing and Supply Chains</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="fraud-detection">
+<h3>Fraud Detection<a class="headerlink" href="#fraud-detection" title="Permalink to this heading"></a></h3>
+<p>This example shows how a high-security account can be made easier to use.</p>
+<p>Transactions are only approved from a hardware wallet OR your phone AND a fraud detection AI.
+MLMA allows a variety of security configurations at the protocol level to keep businesses and their customers hack-free.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/mlma-fraud-detection.png" src="../_images/mlma-fraud-detection.png" style="width: 550px;" />
+<figcaption>
+<p><span class="caption-text">Fraud Detection</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="related-transactions">
+<h2>Related transactions<a class="headerlink" href="#related-transactions" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x4155</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a></p></td>
+<td><p>Create or modify a multisig contract.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="Permalink to this heading"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/creating-a-multisig-account.html">Creating a multisig account</a></p>
+<p class="ablog-post-excerpt">This guide will show you how to setup a joint account.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/adding-a-new-signer-to-a-multisig-account.html">Adding a new signer to a multisig account</a></p>
+<p class="ablog-post-excerpt">This guide will show you how to add a new cosignatory to a multisig account.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/modifying-a-multisig-account-min-approval.html">Modifying a multisig account min approval</a></p>
+<p class="ablog-post-excerpt">This guide will show you how to increase and decrease the minimum number of signatures needed to execute a multisig transaction.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/removing-a-signer-from-a-multisig-account.html">Removing a signer from a multisig account</a></p>
+<p class="ablog-post-excerpt">This guide will show you how to remove a cosignatory from a multisig account.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/multisig/creating-a-multi-level-multisig-account.html">Creating a multi-level multisig account</a></p>
+<p class="ablog-post-excerpt">This guide will show you how to connect multiple multisig accounts to achieve advanced on-chain authorization logic.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/aggregate/sending-a-multisig-transaction.html">Sending a multisig transaction</a></p>
+<p class="ablog-post-excerpt">This guide will show you how to issue transactions from a multisig account.</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/multisig-account.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Multisig Account</a><ul>
+<li><a class="reference internal" href="#cosignatories">Cosignatories</a></li>
+<li><a class="reference internal" href="#minimum-approval-and-removal">Minimum approval and removal</a></li>
+<li><a class="reference internal" href="#constraints">Constraints</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#shared-accounts">Shared accounts</a></li>
+<li><a class="reference internal" href="#multi-factor-authorization">Multi-factor authorization</a></li>
+<li><a class="reference internal" href="#assets-ownership">Assets ownership</a></li>
+<li><a class="reference internal" href="#manufacturing-and-supply-chains">Manufacturing and supply chains</a></li>
+<li><a class="reference internal" href="#fraud-detection">Fraud Detection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#related-transactions">Related transactions</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ウォレット &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/examplecode.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/custom.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/examplecode.js"></script>
+    <script src="_static/js/jquery-1.11.0.min.js"></script>
+    <script src="_static/js/jquery-fix.js"></script>
+    <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="互換性表" href="compatibility.html" />
+    <link rel="prev" title="CLI" href="cli.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/wallets.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/wallets.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="references/index.html">リファレンス</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="references/overview.html">ツール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">クライアント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">REST ゲートウェイ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html">SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ウォレット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compatibility.html">互換性表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization/index.html">シリアル化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/glossary.html">用語集</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="references/index.html">リファレンス</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="references/overview.html">ツール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">クライアント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">REST ゲートウェイ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html">SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ウォレット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compatibility.html">互換性表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization/index.html">シリアル化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/glossary.html">用語集</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="wallets">
+<h1>ウォレット<a class="headerlink" href="#wallets" title="この見出しへのパーマリンク"></a></h1>
+<section id="desktop-wallet">
+<span id="wallet-desktop"></span><h2>デスクトップウォレット<a class="headerlink" href="#desktop-wallet" title="この見出しへのパーマリンク"></a></h2>
+<a class="reference external image-reference" href="/_images/wallet.png"><img alt="_images/wallet.png" class="with-shadow align-center" src="_images/wallet.png" /></a>
+<p>アカウント、モザイク、名前空間を管理し、トランザクションを発行するための Symbol 用クロスプラットフォームクライアント。 Symbol Desktop Wallet は Linux, Mac, Windows と Web アプリケーションが提供されています。</p>
+<section id="installation">
+<h3>インストール<a class="headerlink" href="#installation" title="この見出しへのパーマリンク"></a></h3>
+<ol class="arabic">
+<li><p><a class="reference external" href="https://github.com/symbol/desktop-wallet/releases">リリースセクション</a> から Symbol Desktop Wallet インストーラを <strong>ダウンロード</strong> してください。</p>
+<p>各 OS 用の実行可能ファイルは <strong>アセット</strong> のセクションにあります。</p>
+</li>
+<li><p>インストーラを <em>実行</em> して、手順に従います。</p></li>
+<li><p><strong>新しいアカウントを作成</strong> するには <a class="reference internal" href="guides/account/creating-an-account.html"><span class="doc">ステップ・バイ・ステップガイド</span></a> に従ってください。</p></li>
+</ol>
+</section>
+<section id="related-guides">
+<h3>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h3>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/account/creating-an-account.html">アカウントの作成</a></p>
+<p class="ablog-post-excerpt">トランザクションの送信と受信をするために、新しい Symbol アカウントを作成します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/transfer/sending-a-transfer-transaction.html">２つのアカウント間でモザイクとメッセージを送信</a></p>
+<p class="ablog-post-excerpt">定義して、署名したら転送トランザクションをアナウンスします。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/namespace/registering-a-namespace.html">ネームスペースの取得</a></p>
+<p class="ablog-post-excerpt">アセットを識別する、一意の名前を作成します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/mosaic/creating-a-mosaic.html">モザイクの作成</a></p>
+<p class="ablog-post-excerpt">モザイクを使用した資産のトークン化</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/namespace/registering-a-subnamespace.html">サブネームスペースの作成</a></p>
+<p class="ablog-post-excerpt">ルート <a class="reference internal" href="concepts/namespace.html"><span class="doc">ネームスペース</span></a> を取得すると <code class="docutils literal notranslate"><span class="pre">3</span></code> つまでのサブネームスペースを作って、アセットの整理をすることができます。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/mosaic/modifying-mosaic-supply.html">モザイク供給量の変更</a></p>
+<p class="ablog-post-excerpt">&quot;<strong>Supply Mutable</strong>&quot; プロパティを使用してモザイクを作成した場合、トークンを増やすか、総供給量を減らすことができます。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/namespace/link-a-namespace-to-an-address.html">ネームスペースをアドレスへリンクする</a></p>
+<p class="ablog-post-excerpt">トランザクションを発行するとき、他の人がよりわかりやすい方法でアカウントを参照できるように、ネームスペースをアドレスにエイリアスとして設定します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/namespace/link-a-namespace-to-a-mosaic.html">ネームスペースをモザイクへリンクする</a></p>
+<p class="ablog-post-excerpt">トランザクションを発行するとき、他の人がよりわかりやすい方法でモザイクを参照できるように、ネームスペースをモザイクにエイリアスとして設定します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/namespace/extending-a-namespace-registration-period.html">ネームスペース登録期限の延長</a></p>
+<p class="ablog-post-excerpt">このガイドでは、ネームスペース期限の延長の仕方を示します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/migration/post-optin-xym-retrieval.html">ロンチ前のオプトインから XYM を取得する</a></p>
+<p class="ablog-post-excerpt">このガイドでは、 Symbol <strong>ロンチ前</strong> (2021年3月12日) のオプトインプロセスに登録した場合に、あなたにへ授与された <strong>XYM</strong> (Symbol の基軸通貨) へのアクセス方法を説明します。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/migration/post-launch-optin-xym-retrieval.html">Retrieving your XYM from a post-launch opt-in</a></p>
+<p class="ablog-post-excerpt">This guide explains how to enroll in the opt-in process once Symbol has launched (this is, after March 12, 2021).</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/account/scams-and-security.html">Common Hacks and Scams</a></p>
+<p class="ablog-post-excerpt">It should come as no surprise that cryptocurrency users are targeted by a wide variety of scammers, hackers, and thieves. While some attempts may come in familiar forms such as impersonation or misinformation, the digital nature of cryptocurrencies opens the door to a number of novel approaches. This page is intended to help you ensure the security of your assets by explaining a number of common scams and security considerations. This list is by no means comprehensive, and you are strongly encouraged to research the topic further for the sake of your wallet's security.</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="guides/account/how-to-use-ledger-hardware-wallet.html">How to use your Ledger device with Symbol Wallet</a></p>
+<p class="ablog-post-excerpt">The Ledger Nano S and X are hardware wallets that support multiple cryptocurrencies, including Symbol.</p>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/wallets.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ウォレット</a><ul>
+<li><a class="reference internal" href="#desktop-wallet">デスクトップウォレット</a><ul>
+<li><a class="reference internal" href="#installation">インストール</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

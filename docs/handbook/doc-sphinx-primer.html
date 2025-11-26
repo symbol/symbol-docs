@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Sphinx primer &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common tasks" href="doc-common-tasks.html" />
+    <link rel="prev" title="Documentation workflow" href="doc-workflow.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="active">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/handbook/doc-sphinx-primer.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/handbook/doc-sphinx-primer.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="documenting.html">Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="doc-repos.html">Repository structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-workflow.html">Documentation workflow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sphinx primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-common-tasks.html">Common tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Symbol Handbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vision.html">Vision: Symbol²</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directory.html">Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-guidelines.html">Organization Contribution Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-branching.html">Git branching structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commit-discipline.html">Commit discipline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all-coding-guidelines.html">Symbol Coding Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="documenting.html">Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="doc-repos.html">Repository structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-workflow.html">Documentation workflow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sphinx primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doc-common-tasks.html">Common tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="sphinx-primer">
+<h1>Sphinx primer<a class="headerlink" href="#sphinx-primer" title="Permalink to this heading"></a></h1>
+<p>The Symbol documentation pages are made with <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a>, a documentation engine built around the <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> format and adding its own extensions.</p>
+<p>Therefore, you will need to read both the RST and <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Sphinx</a> docs to learn about their syntax. This page is intended as an extremely quick summary of the things you will most commonly use.</p>
+<p>It is extremely helpful to use an IDE that supports reStructuredText, like <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> with an <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext">RST extension</a>, for example.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Pay attention to Sphinx’s log output when building! Any warning you see there is worth investigating.</p>
+</div>
+<section id="basic-formatting">
+<h2>Basic formatting<a class="headerlink" href="#basic-formatting" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><strong>Bold</strong>: **Bold**</p></li>
+<li><p><em>Italics</em>: *Italics*</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Monospace</span></code>: ``Monospace``</p></li>
+<li><p>Unordered lists: Start items with - or *.</p></li>
+<li><p>Ordered lists: Start items with numbers or #.</p></li>
+<li><p>Headers: Underline (and optionally overline) the header with any of the characters #, *, =, -, ^ or “. The level of the header will be inferred from the order in which they are found. The Symbol docs mostly use only 3 levels indicated with the characters #, * and =.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">##########</span>
+<span class="gh">Main Title</span>
+<span class="gh">##########</span>
+
+<span class="gh">Header level 2</span>
+<span class="gh">**************</span>
+
+<span class="gh">Header level 3</span>
+<span class="gh">==============</span>
+
+Normal text.
+</pre></div>
+</div>
+</li>
+<li><p>Quoted block: Indent with a space. <strong>Indentation is critical in RST!</strong></p></li>
+<li><p>Code blocks: See the directives section below.</p></li>
+</ul>
+</section>
+<section id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>External link: Enclosed in backticks, with a trailing <strong>double underscore</strong>.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`Link Title </span><span class="si">&lt;link-url&gt;</span><span class="s">`__</span>
+</pre></div>
+</div>
+</li>
+<li><p>Internal link to another page:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`Link Title &lt;relative-file-path-without-extension&gt;`</span>
+</pre></div>
+</div>
+<p>The path is relative to the current file, or absolute (from the <code class="docutils literal notranslate"><span class="pre">source</span></code> directory) if it starts with <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+<p>You can skip the Link Title part and use the document’s actual title (its first header):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`relative-file-path-without-extension`</span>
+</pre></div>
+</div>
+</li>
+<li><p>Internal link to a label (anchor):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`Link Title &lt;label-name&gt;`</span>
+</pre></div>
+</div>
+<p>And define labels (in any file) like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_label-name:</span>
+
+<span class="gh">Here comes a new section</span>
+<span class="gh">========================</span>
+</pre></div>
+</div>
+<p>If the label appears right before a header (as in the example above), you can omit the “Link Title” part in the link and the header text will be used:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`label-name`</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading"></a></h2>
+<p>There are <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-directives">different mechanisms</a> to render tables in Sphinx. The most used in the Symbol docs is the <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table">csv-table</a>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span>
+   <span class="nc">:header:</span> &quot;Header 1&quot;, &quot;Header 2&quot;, &quot;Header 3&quot;
+   <span class="nc">:widths:</span> 25 25 50
+   <span class="nc">:delim:</span> ;
+
+   Data 1; Data 2; Data 3
+   Data 4; Data 5; Data 6
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">:header:</span></code>, <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> and <code class="docutils literal notranslate"><span class="pre">:delim:</span></code> are optional and do not require much explanation. <code class="docutils literal notranslate"><span class="pre">:delim:</span></code> indicates the character used to separate columns in the data that follows.</p>
+<p>Note that the data is indented so it is aligned with the word <code class="docutils literal notranslate"><span class="pre">csv-table</span></code> (i.e. indented by 3 spaces).</p>
+</section>
+<section id="adding-pages">
+<h2>Adding pages<a class="headerlink" href="#adding-pages" title="Permalink to this heading"></a></h2>
+<p>In the Symbol docs all pages appear in the Navigation bar at the left, therefore all pages <strong>must appear in a TOC tree</strong>. Any page can indicate what other pages are its children by using the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive (you can search for examples in the current docs).</p>
+<p>If you add a new page, besides creating the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file in the proper folder, you will need to add its name to the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> of its parent:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:maxdepth:</span> 1
+
+    doc-repos
+    doc-workflow
+    doc-sphinx-primer
+    doc-common-tasks
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">1</span></code> indicates that you do not want that page’s sections or its sub-pages to be listed. If the page has sub-pages you will give it its own <code class="docutils literal notranslate"><span class="pre">toctree</span></code> so they are shown.</p>
+<p>You can add <code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> so the list of pages does not render on the page. It will still show up in the navigation bar.</p>
+</section>
+<section id="substitutions">
+<h2>Substitutions<a class="headerlink" href="#substitutions" title="Permalink to this heading"></a></h2>
+<p>Sphinx allows defining some codewords to be substituted by longer text. The codewords are indicated between pipe characters <code class="docutils literal notranslate"><span class="pre">|like-this|</span></code> and can be defined anywhere. In the Symbol docs they are mostly defined in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file (In the <code class="docutils literal notranslate"><span class="pre">rst_prolog</span></code> variable).</p>
+<p>The most commonly used substitution is <code class="docutils literal notranslate"><span class="pre">|codename|</span></code> which expands to “Symbol”. <a class="reference external" href="https://github.com/symbol/symbol-docs/issues/670">There is an open issue to remove this particular one</a>.</p>
+</section>
+<section id="useful-directives">
+<h2>Useful directives<a class="headerlink" href="#useful-directives" title="Permalink to this heading"></a></h2>
+<p>Directives have the form <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">directive-name::</span></code> and are a mechanism to extend RST functionality. Sphinx added its own directives over RST, and the Symbol docs further add a few more (Look at the <code class="docutils literal notranslate"><span class="pre">/source/_ext</span></code> folder. They are written in Python).</p>
+<p>Directives can have an unnamed parameter <strong>after</strong> the directive name (see <code class="docutils literal notranslate"><span class="pre">code-block</span></code> below), or multiple named parameters between colons <code class="docutils literal notranslate"><span class="pre">:</span></code> in the lines below (as you have seen above in the Tables section).</p>
+<p>The directive <strong>body</strong> is separated from the directive and parameters by a blank line and is indented by 3 spaces.</p>
+<p>These are the most commonly used directives in the Symbol docs (besides the ones already mentioned):</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">code-block</span></code>: To insert syntax-highlighted code.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> language
+
+   code
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code>: To insert a captioned image.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> image-file-path
+
+   Caption text.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code>, <code class="docutils literal notranslate"><span class="pre">caution</span></code>, <code class="docutils literal notranslate"><span class="pre">topic</span></code>: To insert a titled, colored box (notes are blue, cautions are orange). Topics allow defining your own title, otherwise it will be “Note” or “Caution”.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Some text
+
+   Some more text.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raw</span></code>: To insert raw HTML. Use only in case of emergency.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">raw</span><span class="p">::</span> html
+
+   HTML code.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tabs</span></code>: Define tabbed content.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tabs</span><span class="p">::</span>
+
+<span class="p">   ..</span> <span class="ow">tab</span><span class="p">::</span> Tab1 title
+
+      Tab1 content
+
+<span class="p">   ..</span> <span class="ow">tab</span><span class="p">::</span> Tab2 title
+
+      Tab2 content
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">example-code</span></code>: Tabbed source code, with syntax highlight and link to original source file.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">example-code</span><span class="p">::</span>
+
+<span class="p">   ..</span> <span class="ow">viewsource</span><span class="p">::</span> ../resources/examples/typescript/transfer/DefiningMaxFee.ts
+       <span class="nc">:language:</span> typescript
+       <span class="nc">:start-after:</span> /<span class="ge">* start block 01 *</span>/
+       <span class="nc">:end-before:</span> /<span class="ge">* end block 01 *</span>/
+
+<span class="p">   ..</span> <span class="ow">viewsource</span><span class="p">::</span> ../resources/examples/typescript/transfer/DefiningMaxFee.js
+       <span class="nc">:language:</span> javascript
+       <span class="nc">:start-after:</span> /<span class="ge">* start block 01 *</span>/
+       <span class="nc">:end-before:</span> /<span class="ge">* end block 01 *</span>/
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serializationref</span></code>: Inserts nicely-formatted serialization documentation.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">serializationref</span><span class="p">::</span> StructureName
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;01&#8209;03</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/handbook/doc-sphinx-primer.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Sphinx primer</a><ul>
+<li><a class="reference internal" href="#basic-formatting">Basic formatting</a></li>
+<li><a class="reference internal" href="#links">Links</a></li>
+<li><a class="reference internal" href="#tables">Tables</a></li>
+<li><a class="reference internal" href="#adding-pages">Adding pages</a></li>
+<li><a class="reference internal" href="#substitutions">Substitutions</a></li>
+<li><a class="reference internal" href="#useful-directives">Useful directives</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2022&#8209;01&#8209;03.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2022&#8209;01&#8209;03.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

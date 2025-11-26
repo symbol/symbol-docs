@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Writing your first application &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Migrating from NIS1 to Symbol" href="../guides/migration/migrating-from-nem-to-symbol.html" />
+    <link rel="prev" title="Setting up your workstation" href="setup-workstation.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="active">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/getting-started/first-application.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/getting-started/first-application.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup-workstation.html">Setting up your workstation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Writing your first application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/migration/migrating-from-nem-to-symbol.html">Migrating from NIS1 to Symbol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup-workstation.html">Setting up your workstation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Writing your first application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/migration/migrating-from-nem-to-symbol.html">Migrating from NIS1 to Symbol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="writing-your-first-application">
+<h1>Writing your first application<a class="headerlink" href="#writing-your-first-application" title="Permalink to this heading"></a></h1>
+<p>This guide will take you through the Symbol development cycle.</p>
+<p>First, we will architect our solution combining some built-in features available in Symbol, such as <a class="reference internal" href="../concepts/mosaic.html"><span class="doc">mosaics</span></a> and <a class="reference internal" href="../concepts/account.html"><span class="doc">accounts</span></a>.
+By the end of this guide, you will know how to issue and monitor transactions on the blockchain.</p>
+<section id="use-case">
+<h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h2>
+<p>The secondary ticket market, also known as the resale market, is the exchange of tickets that happens between individuals after they have purchased a ticket from an initial vendor.
+The initial vendor could be the event website, an online ticket vending platform, a shop, or a stall at the entrance of the event.</p>
+<p>Buying a ticket from someone that is not the initial vendor does not necessarily mean paying more for the ticket.
+There is the chance to be a victim of buying a fake or duplicate ticket, where the initial original vendor can’t do anything to solve the issue.</p>
+<section id="what-do-we-want-to-solve">
+<h3>What do we want to solve?<a class="headerlink" href="#what-do-we-want-to-solve" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id1">
+<img alt="../_images/getting-started.png" src="../_images/getting-started.png" style="width: 600px;" />
+<figcaption>
+<p><span class="caption-text">Authorization model</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>A ticket vendor wants to set up a system to:</p>
+<ol class="loweralpha simple">
+<li><p>Identify each ticket and customer.</p></li>
+<li><p>Avoid ticket reselling.</p></li>
+<li><p>Avoid non-authentic tickets and duplicate ones.</p></li>
+</ol>
+</section>
+<section id="why-symbol-is-the-right-choice">
+<h3>Why Symbol is the right choice?<a class="headerlink" href="#why-symbol-is-the-right-choice" title="Permalink to this heading"></a></h3>
+<p>Blockchain technology makes sense in cases where:</p>
+<ul class="simple">
+<li><p>There are different participants involved.</p></li>
+<li><p>These participants need to trust each other.</p></li>
+<li><p>There is a need to keep track of an immutable set of events.</p></li>
+</ul>
+<p>Symbol is a <strong>flexible blockchain</strong> technology.
+Instead of uploading all the application logic into the blockchain, you can use its tested features through <strong>API calls</strong> to transfer and store value, authorization, traceability, and identification.</p>
+<p>The rest of the code will remain <strong>off-chain</strong>.
+This reduces the inherent immutability risk, as you could change the process when necessary.</p>
+</section>
+</section>
+<section id="creating-an-account-for-each-participant">
+<h2>Creating an account for each participant<a class="headerlink" href="#creating-an-account-for-each-participant" title="Permalink to this heading"></a></h2>
+<p>First, let’s identify the actors involved in the use case we want to solve:</p>
+<ul class="simple">
+<li><p>The ticket vendor.</p></li>
+<li><p>The customer.</p></li>
+</ul>
+<p>We have decided to represent the ticket vendor and customer as separate <a class="reference internal" href="../concepts/account.html"><span class="doc">accounts</span></a>.
+Think of accounts as deposit boxes on the blockchain, which can be modified with an appropriate private key.
+Each account is unique and identified by an address.</p>
+<p>Have you loaded an account with test <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>?
+In the <a class="reference internal" href="setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">previous guide</span></a>, you have learned how to create an account with Symbol CLI.
+This account will represent the <strong>ticket vendor</strong> account.</p>
+<ol class="arabic">
+<li><p>Run the following command to verify if the ticket vendor account has <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> units.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>account<span class="w"> </span>info<span class="w"> </span>--profile<span class="w"> </span>testnet
+</pre></div>
+</div>
+<p>You should see on your screen a line similar to:</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span><span class="cp">Account</span> Information
+┌───────────────────┬────────────────────────────────────────────────┐
+│ <span class="cp">Property</span>          │ <span class="cp">Value</span>                                          │
+├───────────────────┼────────────────────────────────────────────────┤
+│ Address           │ TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI  │
+├───────────────────┼────────────────────────────────────────────────┤
+│ Address Height    │ 1                                              │
+├───────────────────┼────────────────────────────────────────────────┤
+│ Public Key        │ 203...C0A                                      │
+├───────────────────┼────────────────────────────────────────────────┤
+│ Public Key Height │ 3442                                           │
+├───────────────────┼────────────────────────────────────────────────┤
+│ Importance        │ 0                                              │
+├───────────────────┼────────────────────────────────────────────────┤
+│ Importance Height │ 0                                              │
+└───────────────────┴────────────────────────────────────────────────┘
+
+Balance Information
+┌──────────────────┬─────────────────┬─────────────────┬───────────────────┐
+│ Mosaic Id        │ Relative Amount │ Absolute Amount │ Expiration Height │
+├──────────────────┼─────────────────┼─────────────────┼───────────────────┤
+│ 5E62990DCAC5BE8A │ 750.0           │ 750000000       │ Never             │
+└──────────────────┴─────────────────┴─────────────────┴───────────────────┘
+</pre></div>
+</div>
+<p>This account owns 750 <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> relative units.
+If your row after “Balance Information” is empty, follow the <a class="reference internal" href="setup-workstation.html"><span class="doc">previous guide</span></a> to get test currency.</p>
+</li>
+<li><p>Create a second account with the CLI to identify the <strong>customer</strong>.</p>
+<div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli account generate --network TEST_NET --save \
+           --url &lt;NODE_URL&gt; --profile customer
+
+New <span class="cp">Account</span>
+
+┌─────────────┬────────────────────────────────────────────────┐
+│ <span class="cp">Property</span>    │ <span class="cp">Value</span>                                          │
+├─────────────┼────────────────────────────────────────────────┤
+│ Address     │ TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I  │
+├─────────────┼────────────────────────────────────────────────┤
+│ Public Key  │ E59...82F                                      │
+├─────────────┼────────────────────────────────────────────────┤
+│ Private Key │ 111...111                                      │
+└─────────────┴────────────────────────────────────────────────┘
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="monitoring-the-blockchain">
+<h2>Monitoring the blockchain<a class="headerlink" href="#monitoring-the-blockchain" title="Permalink to this heading"></a></h2>
+<p>Accounts change the blockchain state through transactions.
+Once an account announces a transaction, the server will return an OK response if it is properly formed.</p>
+<p>However, receiving an OK response does not mean the transaction is valid or included in a block.
+For example, the transaction could be rejected because the issuer does not have enough <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>, the message set is too large, or the fee set is too low.</p>
+<p>A good practice is to <strong>monitor transactions</strong> before being announced to know when they get confirmed or rejected by the network.</p>
+<ol class="arabic">
+<li><p>In a new terminal, monitor the transactions involving the ticket vendor’s account to know if they are confirmed or rejected by the network.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>monitor<span class="w"> </span>all<span class="w"> </span>--address<span class="w"> </span>TCWYXK-VYBMO4-NBCUF3-AXKJMX-CGVSYQ-OS7ZG2-TLI
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="creating-the-ticket">
+<h2>Creating the ticket<a class="headerlink" href="#creating-the-ticket" title="Permalink to this heading"></a></h2>
+<p>We are representing the ticket with Symbol <a class="reference internal" href="../concepts/mosaic.html"><span class="doc">mosaics</span></a>.
+This feature can be used to represent any asset on the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency.</p>
+<p>Mosaics have configurable properties, which are defined at the moment of their creation.
+For example, we opt to set <strong>transferable property to false</strong>.
+This means that the customer can only send the ticket back to the mosaic’s creator, avoiding the ticket reselling.</p>
+<ol class="arabic">
+<li><p>Use the CLI with the ticket vendor account to create a new mosaic that will represent the ticket. This new mosaic can be configured as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 15%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Divisibility</p></td>
+<td><p>0</p></td>
+<td><p>The mosaic units must not be divisible. No one should be able to send “0.5 tickets”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Duration</p></td>
+<td><p>1000</p></td>
+<td><p>The mosaic will be registered for 1000 blocks.</p></td>
+</tr>
+<tr class="row-even"><td><p>Amount</p></td>
+<td><p>99</p></td>
+<td><p>The number of tickets you are going to create.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Supply mutable</p></td>
+<td><p>True</p></td>
+<td><p>The mosaic supply can change at a later point.</p></td>
+</tr>
+<tr class="row-even"><td><p>Transferable</p></td>
+<td><p>False</p></td>
+<td><p>The mosaic can be only transferred back to the mosaic creator.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>mosaic<span class="w"> </span>--amount<span class="w"> </span><span class="m">99</span><span class="w"> </span>--supply-mutable<span class="w"> </span><span class="se">\</span>
+<span class="w">           </span>--divisibility<span class="w"> </span><span class="m">0</span><span class="w"> </span>--duration<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--max-fee<span class="w"> </span><span class="m">2000000</span><span class="w"> </span><span class="se">\</span>
+<span class="w">           </span>--sync<span class="w"> </span>--profile<span class="w"> </span>testnet
+</pre></div>
+</div>
+</li>
+<li><p>After announcing the transaction, copy the mosaic id displayed in the terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The<span class="w"> </span>new<span class="w"> </span>mosaic<span class="w"> </span>id<span class="w"> </span>is:<span class="w"> </span>7cdf3b117a3c40cc
+</pre></div>
+</div>
+<p>The transaction should appear as confirmed after 30 seconds at most.
+If the terminal raises an error, you can check the error code description <a class="reference external" href="https://github.com/symbol/symbol-openapi/blob/main/spec/core/transaction/schemas/TransactionStatusEnum.yml">here</a>.</p>
+</li>
+</ol>
+</section>
+<section id="sending-the-ticket">
+<h2>Sending the ticket<a class="headerlink" href="#sending-the-ticket" title="Permalink to this heading"></a></h2>
+<p>Now that we have defined the mosaic, we will send one ticket unit to a customer announcing a <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a>.</p>
+<ol class="arabic">
+<li><p>Open a new file, and define a <strong>TransferTransaction</strong> with the following values.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Deadline</p></td>
+<td><p>Default (2 hours)</p></td>
+<td><p>The maximum amount of time to wait for the transaction to be included on the blockchain. A transaction will be dropped if it stays unconfirmed after this amount of time. The parameter is defined in hours and must be in the 1 to 6 range (1 to 48 for <a class="reference internal" href="../concepts/aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">Aggregate bonded</span></a> transactions).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recipient</p></td>
+<td><p>TCHBDE…32I</p></td>
+<td><p>The recipient account address. In this case, the customer’s address.</p></td>
+</tr>
+<tr class="row-even"><td><p>Mosaics</p></td>
+<td><p>[1 <code class="docutils literal notranslate"><span class="pre">7cdf3b117a3c40cc</span></code>]</p></td>
+<td><p>The array of mosaics to send.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>enjoy your ticket</p></td>
+<td><p>The attached message.</p></td>
+</tr>
+<tr class="row-even"><td><p>Network</p></td>
+<td><p>TEST_NET</p></td>
+<td><p>The network type.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/FirstApplication.ts">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7cdf3b117a3c40cc&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">mosaicIdHex</span><span class="p">);</span>
+<span class="c1">// replace with customer address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+<span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="ow">new</span><span class="w"> </span><span class="nx">Mosaic</span><span class="p">(</span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">))],</span>
+<span class="w">  </span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;enjoy your ticket&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/FirstApplication.js">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7cdf3b117a3c40cc&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">mosaicIdHex</span><span class="p">);</span>
+<span class="c1">// replace with customer address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+<span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[</span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Mosaic</span><span class="p">(</span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">))],</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;enjoy your ticket&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/FirstApplication.java">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// replace with node endpoint</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">RepositoryFactory</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RepositoryFactoryVertxImpl</span><span class="p">(</span>
+<span class="w">                </span><span class="s">&quot;NODE_URL&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// replace with mosaic id</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;7cdf3b117a3c40cc&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">MosaicId</span><span class="w"> </span><span class="n">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MosaicId</span><span class="p">(</span><span class="n">mosaicIdHex</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// replace with customer address</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">UnresolvedAddress</span><span class="w"> </span><span class="n">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Address</span><span class="p">.</span><span class="na">createFromRawAddress</span><span class="p">(</span><span class="n">rawAddress</span><span class="p">);</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">NetworkType</span><span class="w"> </span><span class="n">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getNetworkType</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Mosaic</span><span class="w"> </span><span class="n">mosaic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mosaic</span><span class="p">(</span><span class="n">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">TransferTransaction</span><span class="w"> </span><span class="n">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TransferTransactionFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+<span class="w">                            </span><span class="n">networkType</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">recipientAddress</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">mosaic</span><span class="p">),</span>
+<span class="w">                            </span><span class="n">PlainMessage</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;Enjoy your ticket&quot;</span><span class="p">))</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">maxFee</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">2000000</span><span class="p">)).</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Although the transaction is defined, it has not been announced to the network yet.</p>
+</li>
+<li><p>Sign the transaction with the <strong>ticket vendor account</strong>, so that the network can verify the authenticity of the transaction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Include the network generation hash to make the transaction only valid for your network. Open <a class="reference internal" href="../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info</span></code> in a new browser tab and copy the <code class="docutils literal notranslate"><span class="pre">meta.networkGenerationHash</span></code> value.</p>
+</div>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/FirstApplication.ts">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with ticket vendor private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transferTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/FirstApplication.js">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with ticket vendor private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">transferTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/FirstApplication.java">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="c1">// replace with ticket vendor private key</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">privateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// replace with network generation hash</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">generationHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span><span class="p">.</span><span class="na">getGenerationHash</span><span class="p">().</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Account</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createFromPrivateKey</span><span class="p">(</span><span class="n">privateKey</span><span class="p">,</span><span class="w"> </span><span class="n">networkType</span><span class="p">);</span>
+<span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">SignedTransaction</span><span class="w"> </span><span class="n">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">account</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">sign</span><span class="p">(</span><span class="n">transferTransaction</span><span class="p">,</span><span class="w"> </span><span class="n">generationHash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p>Once signed, announce the transaction to the network.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/FirstApplication.ts">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/FirstApplication.js">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/java/src/test/java/symbol/guides/examples/transfer/FirstApplication.java">View Code</a></span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">TransactionRepository</span><span class="w"> </span><span class="n">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repositoryFactory</span>
+<span class="w">                    </span><span class="p">.</span><span class="na">createTransactionRepository</span><span class="p">();</span>
+<span class="w">            </span><span class="n">transactionRepository</span><span class="p">.</span><span class="na">announce</span><span class="p">(</span><span class="n">signedTransaction</span><span class="p">).</span><span class="na">toFuture</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>transfer<span class="w"> </span>--recipient-address<span class="w"> </span>TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I<span class="w"> </span>--mosaics<span class="w"> </span>7cdf3b117a3c40cc::1<span class="w"> </span>--message<span class="w"> </span>enjoy_your_ticket<span class="w"> </span>--max-fee<span class="w"> </span><span class="m">2000000</span><span class="w"> </span>--sync
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Look at the terminal window where you are monitoring transactions. When the transaction appears as confirmed, you can check if the customer has received the ticket with the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>account<span class="w"> </span>info<span class="w"> </span>--profile<span class="w"> </span>customer
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="did-we-solve-the-use-case">
+<h2>Did we solve the use case?<a class="headerlink" href="#did-we-solve-the-use-case" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>✅ Identify each customer: Creating Symbol accounts for each customer.</p></li>
+<li><p>✅ Avoid ticket reselling: Creating a non-transferable mosaic.</p></li>
+<li><p>✅ Avoid non-authentic tickets and duplicate ones: Creating a unique mosaic.</p></li>
+</ul>
+<p>Continue learning about more about Symbol <a class="reference internal" href="../concepts/overview.html"><span class="doc">built-in features</span></a>.</p>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;01</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/getting-started/first-application.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Writing your first application</a><ul>
+<li><a class="reference internal" href="#use-case">Use case</a><ul>
+<li><a class="reference internal" href="#what-do-we-want-to-solve">What do we want to solve?</a></li>
+<li><a class="reference internal" href="#why-symbol-is-the-right-choice">Why Symbol is the right choice?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creating-an-account-for-each-participant">Creating an account for each participant</a></li>
+<li><a class="reference internal" href="#monitoring-the-blockchain">Monitoring the blockchain</a></li>
+<li><a class="reference internal" href="#creating-the-ticket">Creating the ticket</a></li>
+<li><a class="reference internal" href="#sending-the-ticket">Sending the ticket</a></li>
+<li><a class="reference internal" href="#did-we-solve-the-use-case">Did we solve the use case?</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;01.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;01.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

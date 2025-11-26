@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Transaction &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transfer Transaction" href="transfer-transaction.html" />
+    <link rel="prev" title="Reward Programs" href="reward-programs.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/transaction.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/concepts/transaction.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">Account Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">Aggregate Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">Consensus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">Cross-Chain Swaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">Cryptography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">Data Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">Fees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">Inflation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">Mosaic Restriction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">Multisig Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">Receipt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">Reward Programs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">Transfer Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="transaction">
+<h1>Transaction<a class="headerlink" href="#transaction" title="Permalink to this heading"></a></h1>
+<p>A transaction generally represents a unit of work within a database system.
+In the case of blockchain, that is when an action signed by an <a class="reference internal" href="account.html"><span class="doc">account</span></a> changes its state.</p>
+<section id="transaction-types">
+<span id="id1"></span><h2>Transaction types<a class="headerlink" href="#transaction-types" title="Permalink to this heading"></a></h2>
+<p>Symbol supports many different transaction types.
+For example, there are transactions to transfer <a class="reference internal" href="mosaic.html"><span class="doc">mosaics</span></a> between accounts, messages or configure the ownership of accounts (including the use of <a class="reference internal" href="multisig-account.html"><span class="doc">multisig</span></a> rules), and more.</p>
+<p>The following transaction types are included in Symbol based networks by default:</p>
+<aside class="topic">
+<details><summary><p class="topic-title">TransactionType</p></summary><table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 2 bytes = 0x2</td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/transaction_type.cats#L2">schema</a></td></tr>
+    </table></div>
+<p>Enumeration of <a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> types </p>
+</td></tr></table>
+
+<div class="big-table3">
+<div><b>0x414c</b></div>
+<div><code class="docutils literal">ACCOUNT_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#accountkeylinktransaction" title="This transaction is required for all accounts wanting to activate remote or delegated harvesting.">AccountKeyLinkTransaction</a> </p></div>
+<div><b>0x424c</b></div>
+<div><code class="docutils literal">NODE_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#nodekeylinktransaction" title="This transaction is required for all accounts willing to activate delegated harvesting.">NodeKeyLinkTransaction</a> </p></div>
+<div><b>0x4141</b></div>
+<div><code class="docutils literal">AGGREGATE_COMPLETE</code></div>
+<div class="description"><p><a href="/serialization#aggregatecompletetransaction" title="Send transactions in batches to different accounts.">AggregateCompleteTransaction</a> </p></div>
+<div><b>0x4241</b></div>
+<div><code class="docutils literal">AGGREGATE_BONDED</code></div>
+<div class="description"><p><a href="/serialization#aggregatebondedtransaction" title="Propose an arrangement of transactions between different accounts.">AggregateBondedTransaction</a> </p></div>
+<div><b>0x4143</b></div>
+<div><code class="docutils literal">VOTING_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#votingkeylinktransaction" title="Link an account with a BLS public key required for finalization voting.">VotingKeyLinkTransaction</a> </p></div>
+<div><b>0x4243</b></div>
+<div><code class="docutils literal">VRF_KEY_LINK</code></div>
+<div class="description"><p><a href="/serialization#vrfkeylinktransaction" title="Link an account with a VRF public key required for harvesting.">VrfKeyLinkTransaction</a> </p></div>
+<div><b>0x4148</b></div>
+<div><code class="docutils literal">HASH_LOCK</code></div>
+<div class="description"><p><a href="/serialization#hashlocktransaction" title="Lock a deposit needed to announce an AggregateBondedTransaction.">HashLockTransaction</a> </p></div>
+<div><b>0x4152</b></div>
+<div><code class="docutils literal">SECRET_LOCK</code></div>
+<div class="description"><p><a href="/serialization#secretlocktransaction" title="Start a token swap between different chains.">SecretLockTransaction</a> </p></div>
+<div><b>0x4252</b></div>
+<div><code class="docutils literal">SECRET_PROOF</code></div>
+<div class="description"><p><a href="/serialization#secretprooftransaction" title="Conclude a token swap between different chains.">SecretProofTransaction</a> </p></div>
+<div><b>0x4144</b></div>
+<div><code class="docutils literal">ACCOUNT_METADATA</code></div>
+<div class="description"><p><a href="/serialization#accountmetadatatransaction" title="Associate a key-value state (metadata) to an account.">AccountMetadataTransaction</a> </p></div>
+<div><b>0x4244</b></div>
+<div><code class="docutils literal">MOSAIC_METADATA</code></div>
+<div class="description"><p><a href="/serialization#mosaicmetadatatransaction" title="Associate a key-value state (metadata) to a mosaic.">MosaicMetadataTransaction</a> </p></div>
+<div><b>0x4344</b></div>
+<div><code class="docutils literal">NAMESPACE_METADATA</code></div>
+<div class="description"><p><a href="/serialization#namespacemetadatatransaction" title="Associate a key-value state (metadata) to a namespace.">NamespaceMetadataTransaction</a> </p></div>
+<div><b>0x414d</b></div>
+<div><code class="docutils literal">MOSAIC_DEFINITION</code></div>
+<div class="description"><p><a href="/serialization#mosaicdefinitiontransaction" title="Create a new  mosaic.">MosaicDefinitionTransaction</a> </p></div>
+<div><b>0x424d</b></div>
+<div><code class="docutils literal">MOSAIC_SUPPLY_CHANGE</code></div>
+<div class="description"><p><a href="/serialization#mosaicsupplychangetransaction" title="Change the total supply of a mosaic.">MosaicSupplyChangeTransaction</a> </p></div>
+<div><b>0x434d</b></div>
+<div><code class="docutils literal">MOSAIC_SUPPLY_REVOCATION</code></div>
+<div class="description"><p><a href="/serialization#mosaicsupplyrevocationtransaction" title="Revoke mosaic.">MosaicSupplyRevocationTransaction</a> </p></div>
+<div><b>0x4155</b></div>
+<div><code class="docutils literal">MULTISIG_ACCOUNT_MODIFICATION</code></div>
+<div class="description"><p><a href="/serialization#multisigaccountmodificationtransaction" title="Create or modify a multi-signature account.">MultisigAccountModificationTransaction</a> </p></div>
+<div><b>0x424e</b></div>
+<div><code class="docutils literal">ADDRESS_ALIAS</code></div>
+<div class="description"><p><a href="/serialization#addressaliastransaction" title="Attach or detach a namespace (alias) to an account address..">AddressAliasTransaction</a> </p></div>
+<div><b>0x434e</b></div>
+<div><code class="docutils literal">MOSAIC_ALIAS</code></div>
+<div class="description"><p><a href="/serialization#mosaicaliastransaction" title="Attach or detach a namespace to a Mosaic.">MosaicAliasTransaction</a> </p></div>
+<div><b>0x414e</b></div>
+<div><code class="docutils literal">NAMESPACE_REGISTRATION</code></div>
+<div class="description"><p><a href="/serialization#namespaceregistrationtransaction" title="Register (or renew a registration for) a namespace.">NamespaceRegistrationTransaction</a> </p></div>
+<div><b>0x4150</b></div>
+<div><code class="docutils literal">ACCOUNT_ADDRESS_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#accountaddressrestrictiontransaction" title="Allow or block incoming and outgoing transactions for a given a set of addresses.">AccountAddressRestrictionTransaction</a> </p></div>
+<div><b>0x4250</b></div>
+<div><code class="docutils literal">ACCOUNT_MOSAIC_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#accountmosaicrestrictiontransaction" title="Allow or block incoming transactions containing a given set of mosaics.">AccountMosaicRestrictionTransaction</a> </p></div>
+<div><b>0x4350</b></div>
+<div><code class="docutils literal">ACCOUNT_OPERATION_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#accountoperationrestrictiontransaction" title="Allow or block outgoing transactions depending on their transaction type.">AccountOperationRestrictionTransaction</a> </p></div>
+<div><b>0x4251</b></div>
+<div><code class="docutils literal">MOSAIC_ADDRESS_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#mosaicaddressrestrictiontransaction" title="Set address specific rules to transfer a restrictable mosaic.">MosaicAddressRestrictionTransaction</a> </p></div>
+<div><b>0x4151</b></div>
+<div><code class="docutils literal">MOSAIC_GLOBAL_RESTRICTION</code></div>
+<div class="description"><p><a href="/serialization#mosaicglobalrestrictiontransaction" title="Set global rules to transfer a restrictable mosaic.">MosaicGlobalRestrictionTransaction</a> </p></div>
+<div><b>0x4154</b></div>
+<div><code class="docutils literal">TRANSFER</code></div>
+<div class="description"><p><a href="/serialization#transfertransaction" title="Send mosaics and messages between two accounts.">TransferTransaction</a> </p></div>
+</div>
+</details></aside>
+<p>Every base transaction type available in Symbol is defined as a separate <a class="reference internal" href="plugin.html"><span class="doc">plugin</span></a>.
+The plugin approach allows developers to introduce new transaction types without modifying the core engine or disrupting other features.</p>
+</section>
+<section id="defining-a-transaction">
+<span id="transaction-definition"></span><h2>Defining a transaction<a class="headerlink" href="#defining-a-transaction" title="Permalink to this heading"></a></h2>
+<p>Transactions are defined in a serialized form.
+Every transaction extends from the base <code class="docutils literal notranslate"><span class="pre">Transaction</span></code> schema, adding the type’s particular properties.</p>
+<p>All transactions should define a deadline and a max_fee:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code>: A transaction has a time window to be accepted before it reaches its deadline. The transaction expires when the deadline is reached and all the nodes reject the transaction. By default, the SDK sets the deadline to 2 hours, but it can be extended up to 6 hours (or 48 for <a class="reference internal" href="aggregate-transaction.html#aggregate-bonded"><span class="std std-ref">Aggregate bonded</span></a> transactions).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_fee</span></code>: The maximum amount of network currency that the sender of the transaction is willing to pay to get the transaction accepted. <a class="reference internal" href="fees.html"><span class="doc">The next documentation</span></a> shows you how to set the optimal max_fee value.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="https://github.com/symbol/symbol/tree/main/catbuffer/schemas">catbuffer schemas</a> repository defines how each transaction type should be serialized. In combination with the catbuffer generators, developers can generate builder classes for a given set of programming languages.</p>
+</div>
+<p>We recommend using the <a class="reference internal" href="../sdk.html"><span class="doc">SDK</span></a> to define new transactions.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// replace with recipient address</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">rawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">recipientAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">rawAddress</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transferTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TransferTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">recipientAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">currency</span><span class="p">.</span><span class="nx">createRelative</span><span class="p">(</span><span class="mf">10</span><span class="p">)],</span>
+<span class="w">    </span><span class="nx">PlainMessage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;This is a test message&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="w">  </span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="signing-a-transaction">
+<span id="transaction-signature"></span><h2>Signing a transaction<a class="headerlink" href="#signing-a-transaction" title="Permalink to this heading"></a></h2>
+<p>Accounts must sign transactions before announcing them to the network.
+Signing a transaction expresses the account’s agreement to change the network state as defined.</p>
+<p>For example, a TransferTransaction describes who the recipient is and the number of mosaics to transfer.
+In this case, signing the transaction means to accept moving those mosaics from one account’s balance to another.</p>
+<p>An account has to follow the next steps to <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L216">sign a transaction</a>:</p>
+<ol class="arabic simple">
+<li><p>Get the <code class="docutils literal notranslate"><span class="pre">signing</span> <span class="pre">bytes</span></code>, which are all the bytes of the transaction except the size, signature, and signer.</p></li>
+<li><p>Get the nemesis block <code class="docutils literal notranslate"><span class="pre">generation</span> <span class="pre">hash</span></code>. You can query <a class="reference internal" href="../contribute/glossary.html#term-NODE_URL"><span class="xref std std-term">NODE_URL</span></a> <code class="docutils literal notranslate"><span class="pre">/node/info'</span></code> and copy <code class="docutils literal notranslate"><span class="pre">meta.networkGenerationHash</span></code> value.</p></li>
+<li><p>Prepend the nemesis block generation hash to the signing bytes.</p></li>
+<li><p>Sign the resulting string with the signer’s private key. This will give you the transaction <code class="docutils literal notranslate"><span class="pre">signature</span></code>.</p></li>
+<li><p>Append the signer’s signature and public key to the transaction to obtain the <code class="docutils literal notranslate"><span class="pre">payload</span></code>.</p></li>
+<li><p>Calculate the <a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/src/model/transaction/Transaction.ts#L127">transaction hash</a> by applying SHA3-512 hashing algorithm to the first 32 bytes of signature, the signer public key, nemesis block generation hash, and the remaining transaction payload.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// replace with sender private key</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="s1">&#39;1111111111111111111111111111111111111111111111111111111111111111&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">transferTransaction</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Payload:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">payload</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Transaction Hash:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="announcing-a-transaction">
+<h2>Announcing a transaction<a class="headerlink" href="#announcing-a-transaction" title="Permalink to this heading"></a></h2>
+<p>Signed transactions are ready to be announced to the network.
+You can either use the SDK <code class="docutils literal notranslate"><span class="pre">TransactionHttp</span></code> service or append the payload to the request of the <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.11.3/#operation/announceTransaction">transaction endpoint</a>.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/transfer/SendingATransferTransaction.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transactionRepository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">transactionRepository</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toPromise</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;payload&quot;:&quot;B3000000F77A8DCFCB57B81F9BE5B46738F7132998F55123BFF4D89DC8E5CAE1F071A040E5571F4D8DA125B243C785DA5261F878E3DE898815F6E8F12A2C0A5F0A9C3504FA6249E8334E3F83E972461125504AFFD3E7750AFBB3371E7B2D22A599A3D0E3039054410000000000000000265DEE3F1700000090FA39EC47E05600AFA74308A7EA607D145E371B5F4F1447BC0F00010057656C636F6D6520546F204E454D44B262C46CEABB858096980000000000&quot;}&#39;</span><span class="w"> </span>http://localhost:3000/transaction
+</pre></div>
+</div>
+</div>
+<p>After announcing the transaction, the REST API will always return an OK response immediately.
+At this point, it is still unknown whether the transaction is valid.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/transaction-cycle.png" src="../_images/transaction-cycle.png" style="width: 800px;" />
+<figcaption>
+<p><span class="caption-text">Transaction cycle</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="validation">
+<span id="transaction-validation"></span><h2>Validation<a class="headerlink" href="#validation" title="Permalink to this heading"></a></h2>
+<p>The first stage of validation happens in the API nodes.
+If the transaction encounters an error, the WebSocket throws a notification through the status channel.
+If not, the transaction reaches the P2P network with an <strong>unconfirmed</strong> status.
+In this state, it is not yet clear if the transaction will get included in a block. Thus, an unconfirmed transaction should never be relied upon.</p>
+<p>The second validation happens before the transaction is added in a <a class="reference internal" href="block.html"><span class="doc">harvested block</span></a>.
+If successful, the harvester stores the transaction in a block and the transaction reaches the <strong>confirmed</strong> status.
+At this state, the transaction is officially recorded in the blockchain ledger, but has not yet reached <strong>finality</strong>.</p>
+<p>Under certain circumstances, such as a network failure or partition, the most recently confirmed blocks can be <a class="reference internal" href="block.html#rollbacks"><span class="std std-ref">rolled back</span></a>.
+Hence, confirmed transactions that have not been finalized are recognized by the network but are not immutable because they can still be reversed.</p>
+<p>For a block to be immutable, it needs to complete the <a class="reference internal" href="block.html#finalization"><span class="std std-ref">finalization</span></a> process.
+Once a block is finalized, the block and the included transactions are permanently recorded on the blockchain ledger.</p>
+</section>
+<section id="spam-throttle">
+<h2>Spam Throttle<a class="headerlink" href="#spam-throttle" title="Permalink to this heading"></a></h2>
+<p>The node’s cache holds unconfirmed transactions until they can be included in a block.
+Since cache is a valuable resource, Symbol implements a spam throttle that prevents an attacker from filling the cache with unconfirmed transactions while still letting honest actors successfully submit new unconfirmed transactions.</p>
+<p>The spam throttle controls the amount of unconfirmed transactions accounts can submit by calculating the fair share of cache for each account relative to its importance score.
+If an account has surpassed its fair share of the cache and the node cache contains more unconfirmed transactions than the amount that can be included in a single block, the transaction will be rejected.
+This effectively blocks malicious actors from spamming a node with transactions while allowing other users to continue using the node normally.</p>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="Permalink to this heading"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/monitor/turning-the-asynchronous-transaction-announcement-into-synchronous.html">Turning the asynchronous transaction announcement into synchronous</a></p>
+<p class="ablog-post-excerpt">Handy snippet to announce a transaction and wait until this is confirmed.</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;04&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/transaction.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Transaction</a><ul>
+<li><a class="reference internal" href="#transaction-types">Transaction types</a></li>
+<li><a class="reference internal" href="#defining-a-transaction">Defining a transaction</a></li>
+<li><a class="reference internal" href="#signing-a-transaction">Signing a transaction</a></li>
+<li><a class="reference internal" href="#announcing-a-transaction">Announcing a transaction</a></li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+<li><a class="reference internal" href="#spam-throttle">Spam Throttle</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;04&#8209;14.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

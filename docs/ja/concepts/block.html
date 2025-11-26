@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>ブロック &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/examplecode.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/examplecode.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="コンセンサス" href="consensus-algorithm.html" />
+    <link rel="prev" title="アグリゲートトランザクション" href="aggregate-transaction.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="active">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/block.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/concepts/block.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">入門</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account.html">アカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account-restriction.html">アカウント制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aggregate-transaction.html">アグリゲートトランザクション</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ブロック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consensus-algorithm.html">コンセンサス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-chain-swaps.html">クロスチェーンスワップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptography.html">暗号理論</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-validation.html">データバリデーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fees.html">手数料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harvesting.html">ハーベスティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inflation.html">インフレーション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">メタデータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic.html">モザイク</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mosaic-restriction.html">モザイク制限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multisig-account.html">マルチシグアカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">ネームスペース</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">ノード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.html">Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="receipt.html">レシート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reward-programs.html">報酬プログラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">トランザクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transfer-transaction.html">転送トランザクション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">リファレンス</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="block">
+<h1>ブロック<a class="headerlink" href="#block" title="この見出しへのパーマリンク"></a></h1>
+<p>全ての暗号通貨の中心となる要素は、ブロック同士がリンクした <strong>ブロックチェーン</strong> と呼ばれる公開台帳です。</p>
+<p>チェーン内のブロックは順序付けられており、完了した  <a class="reference internal" href="transaction.html"><span class="doc">トランザクション</span></a> 履歴はブロックチェーンに保持されます。後に続くブロックは 1 づつ高さを増やしていきます。各ブロックには最大 <code class="docutils literal notranslate"><span class="pre">6,000</span></code> のトランザクション (パブリックネットワーク) を含めることができ、この値は <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワークごとに設定可能</span></a> です。</p>
+<p>Symbol ブロックは <code class="docutils literal notranslate"><span class="pre">30</span></code> 秒毎に完了し、日々の使用に対して十分にトランザクションを承認します。</p>
+<section id="header">
+<h2>Header<a class="headerlink" href="#header" title="この見出しへのパーマリンク"></a></h2>
+<p>ノードは次のようにブロックをシリアル化した形式で保存します:</p>
+<p><strong>Version</strong>: 0x01</p>
+<p><strong>EntityType</strong>: 0x8143</p>
+<p><strong>インライン</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../serialization/index.html#sizeprefixedentity"><span class="std std-ref">SizePrefixedEntity</span></a></p></li>
+<li><p><a class="reference internal" href="../serialization/index.html#verifiableentity"><span class="std std-ref">VerifiableEntity</span></a></p></li>
+<li><p><a class="reference internal" href="../serialization/index.html#entitybody"><span class="std std-ref">EntityBody</span></a></p></li>
+</ul>
+<table class="docutils align-default" id="block-header">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>プロパティ</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>height</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Height</a></p></td>
+<td><p>ブロックチェーンの高さ。各ブロックは一意な高さを持っています。後ろに続くブロックとは 1 だけ高さが異なります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>timestamp</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Timestamp</a></p></td>
+<td><p>ネメシスブロックが生成されてから経過したミリ秒です。</p></td>
+</tr>
+<tr class="row-even"><td><p>difficulty</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Difficulty</a></p></td>
+<td><p>以前のブロックに基づき、新しいブロックを見つけるのがどのくらい難しいかを決定します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>generationHashProof</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/block.cats">VrfProof</a></p></td>
+<td><p>ジェネレーションハッシュプルーフ</p></td>
+</tr>
+<tr class="row-even"><td><p>previousBlockHash</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Hash256</a></p></td>
+<td><p>前ブロックのハッシュ</p></td>
+</tr>
+<tr class="row-odd"><td><p>transactionsHash</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Hash256</a></p></td>
+<td><p>ブロック内トランザクションのハッシュ</p></td>
+</tr>
+<tr class="row-even"><td><p>receiptsHash</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Hash256</a></p></td>
+<td><p>このブロックによって生成されたレシートのハッシュ</p></td>
+</tr>
+<tr class="row-odd"><td><p>stateHash</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Hash256</a></p></td>
+<td><p>このブロックでのグローバルチェーンステートのハッシュ</p></td>
+</tr>
+<tr class="row-even"><td><p>beneficiaryAddress</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">Address</a></p></td>
+<td><p>ハーベスタによって指定されたオプション受益者のアドレス。</p></td>
+</tr>
+<tr class="row-odd"><td><p>feeMultiplier</p></td>
+<td><p><a class="reference external" href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/types.cats">BlockFeeMultiplier</a></p></td>
+<td><p>手数料乗数はブロックのトランザクションに適用されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>blockHeader_Reserved1</p></td>
+<td><p>uint32</p></td>
+<td><p>BlockHeader の終わりを 8 バイト境界に揃えた予約パディング</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="creation">
+<span id="block-creation"></span><h2>Creation<a class="headerlink" href="#creation" title="この見出しへのパーマリンク"></a></h2>
+<p>Symbol チェーンの原初ブロックを <strong>nemesis ブロック</strong> と呼びます。原初ブロックは新しいネットワークを起動する前に定義され、ネットワーク通貨モザイクの頒布を設定します。</p>
+<p>後続する新しいブロックを生成するプロセスを <a class="reference internal" href="harvesting.html"><span class="doc">ハーベスティング</span></a> と呼びます。</p>
+<p>ブロックは <a class="reference internal" href="consensus-algorithm.html"><span class="doc">コンセンサスアルゴリズム</span></a> により、インポータンススコアに基づいて選ばれた <a class="reference internal" href="account.html"><span class="doc">アカウント</span></a> によって作成されます。コンセンサスアルゴリズムは各ブロックの作成後に後続ブロックをハーベストするための新しいアカウントを決定します。</p>
+<p>ハーベスティングアカウントはブロックに追加されたトランザクションの <a class="reference internal" href="fees.html"><span class="doc">手数料</span></a> と <a class="reference internal" href="inflation.html"><span class="doc">インフレーション</span></a> によって作成されたモザイクを受け取ります。これはハーベスタはできるだけ多くのトランザクションをブロックに追加するためのインセンティブを与えます。</p>
+</section>
+<section id="rollbacks">
+<span id="id1"></span><h2>ロールバック<a class="headerlink" href="#rollbacks" title="この見出しへのパーマリンク"></a></h2>
+<p>速い応答時間を確保するために、Symbol ブロックチェーンは、ネットワーク障害またはパーティションが存在する場合でも、要求に応答し、トランザクションがブロックチェーンに追加されるように設計されています。</p>
+<p>このことは当然のことながら <strong>フォーク</strong> を発生させます。つまり、ネットワークで切断された部分に異なるチェーンが作成されます。接続が回復すると <strong>フォーク解消</strong> が行われ、分岐したチェーンがひとつにマージされます。</p>
+<p>このプロセスでは一部のブロックを <strong>ロールバック</strong> する必要がある可能性があります。ブロックチェーンから削除されるブロックが存在するため、すべてのトランザクションは <strong>未承認</strong> 状態に移行し、再び <a class="reference internal" href="transaction.html#transaction-validation"><span class="std std-ref">validated</span></a> になる必要があります。この時に、それらの期限は再確認されることなく、期限切れになる可能性があります。</p>
+<p>このため以下に示すように、ブロックが <a class="reference internal" href="#finalization"><span class="std std-ref">finalized</span></a> になるまで <strong>承認済み</strong> のトランザクション (ブロックチェーンへ追加されている) でも信頼できません。</p>
+</section>
+<section id="finalization">
+<span id="id2"></span><h2>ファイナライゼーション<a class="headerlink" href="#finalization" title="この見出しへのパーマリンク"></a></h2>
+<p>これはブロックチェーン台帳の変更を永続的にするプロセスです。ブロックがファイナリティに到達する前に、ネットワーク障害またはパーティションが存在する場合、ブロックをロールバックする必要になる可能性があります。しかし、ブロックがファイナライズされると、それらは不変となります。</p>
+<p>ファイナライズはラウンドで行われます。各ラウンドで <strong>ソートアルゴリズム</strong> は、ファイナライズを保留しているすべてのブロックの検証を担当するアカウントを選択します。提案されたブロックがアカウントのノードのレコードと一致する場合、そのアカウントは肯定的な票を投じます。</p>
+<p>投票のために選出された <strong>ステークの67％以上</strong> が賛成票を投じると、ブロックはファイナライズされます。その時点で、ブロックにリンクされたトランザクションはブロックチェーンへ永続的に記録されます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>有権者としての資格を得るには、アカウントが次の条件を満たしている必要があります:</p>
+<ul class="simple">
+<li><p>ノードの所有者になります。</p></li>
+<li><p>最低 <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">minVoterBalance</span></a> ネットワーク通貨単位が必要です。</p></li>
+<li><p><a class="reference internal" href="../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a> をネットワークに通知することで有権者として登録されます。</p></li>
+</ul>
+</div>
+<p>接続性が低い場合、または多くの不正なアクターがいる場合、ファイナライズは通常より時間がかかり、大きな <a class="reference internal" href="#rollbacks"><span class="std std-ref">ロールバック</span></a> が作成される可能性があります。ただし、ファイナライズされたブロックはロールバックされません。</p>
+<p>したがって、ブロックチェーン履歴の不変性に依存するクライアントは <strong>ファイナライズされたブロックのトランザクション</strong> のみを信頼するべきです。</p>
+<p>ファイナライズラウンドは実際には <strong>エポック</strong> と呼び、 <strong>1440 ブロック</strong> または約 <strong>12 時間</strong> ごとに発生します。(<a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">ネットワークプロパティ</span></a> の <code class="docutils literal notranslate"><span class="pre">votingSetGrouping</span></code> を参照) 各エポックは複数の <strong>ファイナライズポイント</strong> に分割されます。(詳細は <a href="https://symbol.github.io/symbol-technicalref/main.pdf" target="_blank">Technical Reference</a> セクション 15.2 を参照)</p>
+</section>
+<section id="related-transactions">
+<h2>関連トランザクション<a class="headerlink" href="#related-transactions" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Id</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x4143</p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a></p></td>
+<td><p>アカウントを BLS 公開鍵にリンクします。ファイナライズ済みブロックに投票する意思のあるノードオペレータに必要です。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-guides">
+<h2>Related guides<a class="headerlink" href="#related-guides" title="この見出しへのパーマリンク"></a></h2>
+<ul class="postlist-style-circle postlist">
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/blockchain/getting-block-by-height.html">ブロック高によるブロックの取得</a></p>
+<p class="ablog-post-excerpt">与えられたブロック高のブロック情報を取得する。</p>
+</li>
+<li class="ablog-post"><p class="ablog-post-title"><a class="reference internal" href="../guides/blockchain/listening-new-blocks.html">新しいブロックの監視</a></p>
+<p class="ablog-post-excerpt">新しいブロックが取り込まれた通知を受け取る。</p>
+</li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/block.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">ブロック</a><ul>
+<li><a class="reference internal" href="#header">Header</a></li>
+<li><a class="reference internal" href="#creation">Creation</a></li>
+<li><a class="reference internal" href="#rollbacks">ロールバック</a></li>
+<li><a class="reference internal" href="#finalization">ファイナライゼーション</a></li>
+<li><a class="reference internal" href="#related-transactions">関連トランザクション</a></li>
+<li><a class="reference internal" href="#related-guides">Related guides</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;12&#8209;14.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

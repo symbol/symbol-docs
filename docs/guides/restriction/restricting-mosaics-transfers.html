@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>Restricting mosaic transfers &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/examplecode.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/custom.js"></script>
+    <script src="../../_static/examplecode.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Delegating mosaic restrictions to a third party" href="delegating-mosaic-restrictions-to-a-third-party.html" />
+    <link rel="prev" title="Mosaic restrictions" href="index.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/en/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/en/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="active">
+        <a href="/en/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/en/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/en/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/restriction/restricting-mosaics-transfers.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="../../index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="../../_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <img class="language-icon-selected" src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/>
+        <a href="/ja/guides/restriction/restricting-mosaics-transfers.html"><img src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/></a>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Mosaic restrictions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Restricting mosaic transfers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delegating-mosaic-restrictions-to-a-third-party.html">Delegating mosaic restrictions to a third party</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-restrictions-attached-to-an-address.html">Getting the account restrictions attached to an address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-address-restrictions-attached-to-an-account.html">Getting mosaic address restrictions attached to an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-global-restrictions-attached-to-a-mosaic.html">Getting mosaic global restrictions attached to a mosaic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preventing-spam-attacks-with-account-restrictions.html">Preventing spam attacks with account restrictions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>Navigation</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/overview.html">Technology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../account/index.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aggregate/index.html">Aggregate transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../harvesting/index.html">Harvesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata/index.html">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migration from NIS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitor/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaic/index.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multisig/index.html">Multisignature accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespace/index.html">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network/index.html">Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Mosaic restrictions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Restricting mosaic transfers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delegating-mosaic-restrictions-to-a-third-party.html">Delegating mosaic restrictions to a third party</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-account-restrictions-attached-to-an-address.html">Getting the account restrictions attached to an address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-address-restrictions-attached-to-an-account.html">Getting mosaic address restrictions attached to an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-mosaic-global-restrictions-attached-to-a-mosaic.html">Getting mosaic global restrictions attached to a mosaic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preventing-spam-attacks-with-account-restrictions.html">Preventing spam attacks with account restrictions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../secretlock/index.html">SecretLock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/index.html">Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchanges/index.html">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">References</a></li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="restricting-mosaic-transfers">
+<h1>Restricting mosaic transfers<a class="headerlink" href="#restricting-mosaic-transfers" title="Permalink to this heading"></a></h1>
+<p>Limit how accounts can transact with Mosaic Restrictions.</p>
+<section id="use-case">
+<h2>Use case<a class="headerlink" href="#use-case" title="Permalink to this heading"></a></h2>
+<p>Let’s say a company, CharlieChocolateFactory, wants to go public by tokenizing their shares and conducting an STO. They create a mosaic <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code> and configure it to be <strong>restrictable</strong>. To comply with regulations, the company wants only the participants that have passed the <strong>KYC/AML</strong> process to buy and transact their stock.</p>
+<p>This guide shows you how to use Symbol’s <a class="reference internal" href="../../concepts/mosaic-restriction.html"><span class="doc">Mosaic Restriction</span></a> feature to define rules that determine which participants can transact with <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code>.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Complete <a class="reference internal" href="../mosaic/creating-a-mosaic.html"><span class="doc">creating a mosaic</span></a> guide.</p></li>
+<li><p>Create <a class="reference internal" href="../../getting-started/setup-workstation.html#setup-creating-a-test-account"><span class="std std-ref">accounts</span></a> for CharlieChocolateFactory, Alice, And Bob.</p></li>
+<li><p>Load CharlieChocolateFactory’s account with enough <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to pay for the transactions fees and creation of mosaics.</p></li>
+</ul>
+</section>
+<section id="creating-a-restrictable-mosaic">
+<h2>Creating a restrictable mosaic<a class="headerlink" href="#creating-a-restrictable-mosaic" title="Permalink to this heading"></a></h2>
+<p>Before starting to work with Mosaic Restrictions, we need to have created a restrictable mosaic. Only mosaics with the <code class="docutils literal notranslate"><span class="pre">restrictable</span></code> <a class="reference internal" href="../../concepts/mosaic.html#configurable-mosaic-properties"><span class="std std-ref">property</span></a> set to true at the moment of their creation can accept mosaic restrictions.</p>
+<ol class="arabic simple">
+<li><p>Start creating the new restrictable mosaic <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code> with Symbol CLI using the <a class="reference internal" href="../account/creating-an-account.html"><span class="doc">CharlieChocolateFactory account</span></a>.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>mosaic<span class="w"> </span>--profile<span class="w"> </span>ccfactory<span class="w"> </span>--sync
+
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>a<span class="w"> </span>non-expiring<span class="w"> </span>mosaic?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Enter<span class="w"> </span>mosaic<span class="w"> </span>divisibility:<span class="w"> </span><span class="m">0</span>
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>mosaic<span class="w"> </span>to<span class="w"> </span>have<span class="w"> </span>supply<span class="w"> </span>mutable?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>mosaic<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>transferable?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>mosaic<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>restrictable?<span class="w"> </span><span class="o">[</span>y/n<span class="o">]</span>:<span class="w"> </span>y
+Enter<span class="w"> </span>amount<span class="w"> </span>of<span class="w"> </span>tokens:<span class="w"> </span><span class="m">1000</span>
+Transaction<span class="w"> </span>confirmed
+
+The<span class="w"> </span>new<span class="w"> </span>mosaic<span class="w"> </span>id<span class="w"> </span>is:<span class="w"> </span>634a8ac3fc2b65b3
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Then, copy and save the mosaic identifier. We will need it later to define restrictions.</p></li>
+</ol>
+</section>
+<section id="setting-a-mosaic-global-restriction">
+<h2>Setting a Mosaic Global Restriction<a class="headerlink" href="#setting-a-mosaic-global-restriction" title="Permalink to this heading"></a></h2>
+<p>The company wants to add a restriction to only permit accounts with elevated statuses to interact with the asset. To achieve this, the company will add a mosaic global restriction as <code class="docutils literal notranslate"><span class="pre">{ccf.shares,</span> <span class="pre">KYC,</span> <span class="pre">EQ</span> <span class="pre">=</span> <span class="pre">1}</span></code>, which can be read as “only allow accounts to transact with the <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code> mosaic if their <code class="docutils literal notranslate"><span class="pre">KYC</span></code> restriction key for it has a value equal to 1”.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/mosaic-restriction-sto.png" src="../../_images/mosaic-restriction-sto.png" style="width: 450px;" />
+<figcaption>
+<p><span class="caption-text">Use case diagram</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Open a new file and place the mosaic identifier value you got while creating the mosaic in a variable named <code class="docutils literal notranslate"><span class="pre">mosaicId</span></code>. Also, you should represent the key <code class="docutils literal notranslate"><span class="pre">KYC</span></code> with a numeric value encoded as a UInt64.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.ts">View Code</a></span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;634a8ac3fc2b65b3&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">mosaicIdHex</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;KYC&#39;</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.js">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;634a8ac3fc2b65b3&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">mosaicIdHex</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;KYC&#39;</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Then, define a new <strong>MosaicGlobalRestrictionTransaction</strong>. Pass the mosaic id and keys you have defined in the previous step as arguments.</p></li>
+</ol>
+<p>The SDK will also request the previous mosaic restriction value and type for this key and mosaic. As it is the first global restriction we are announcing, set the <code class="docutils literal notranslate"><span class="pre">previousRestrictionValue</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code> and the <code class="docutils literal notranslate"><span class="pre">mosaicRestrictionType</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.ts">View Code</a></span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicGlobalRestrictionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="c1">// mosaicId</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="c1">// restrictionKey</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="c1">// previousRestrictionValue</span>
+<span class="w">  </span><span class="nx">MosaicRestrictionType</span><span class="p">.</span><span class="nx">NONE</span><span class="p">,</span><span class="w"> </span><span class="c1">// previousRestrictionType</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span><span class="w"> </span><span class="c1">// newRestrictionValue</span>
+<span class="w">  </span><span class="nx">MosaicRestrictionType</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="c1">// newRestrictionType</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.js">View Code</a></span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicGlobalRestrictionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="c1">// mosaicId</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="c1">// restrictionKey</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="c1">// previousRestrictionValue</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicRestrictionType</span><span class="p">.</span><span class="nx">NONE</span><span class="p">,</span><span class="w"> </span><span class="c1">// previousRestrictionType</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span><span class="w"> </span><span class="c1">// newRestrictionValue</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicRestrictionType</span><span class="p">.</span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="c1">// newRestrictionType</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="kc">undefined</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>After defining the global restriction, sign the transaction with the mosaic creator’s account—CharlieChocolateFactory—and announce it to the network.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.ts">View Code</a></span><a class="headerlink" href="#id6" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with company private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicGlobalRestriction.js">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with company private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="nx">transaction</span><span class="p">,</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assigning-mosaic-address-restrictions">
+<h2>Assigning Mosaic Address Restrictions<a class="headerlink" href="#assigning-mosaic-address-restrictions" title="Permalink to this heading"></a></h2>
+<p>When investors complete the KYC/AML process, the CharlieChocolateFactory alters their accounts with a <strong>MosaicAddressRestrictionTransaction</strong> with parameters <code class="docutils literal notranslate"><span class="pre">ccf.shares,</span> <span class="pre">KYC,</span> <span class="pre">1</span></code>, allowing certified investors to participate in the STO. Others who have not provided the necessary information will not be able to receive or trade the asset.</p>
+<p>Alice, a potential investor, passes the KYC process. Once Alice has been verified, the company tags Alice’s account with the mosaic address restriction <code class="docutils literal notranslate"><span class="pre">{ccf.shares,</span> <span class="pre">Alice,</span> <span class="pre">KYC,</span> <span class="pre">1}</span></code>. On the other hand, Bob, another interested investor, did not pass the KYC process. Bob’s account is not eligible to receive <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code> as it does not meet the mosaic global restriction requirements. Nevertheless, CharlieCholocalteFatory decides to tag the account with the <strong>mosaic address restriction</strong> <code class="docutils literal notranslate"><span class="pre">{ccf.shares,</span> <span class="pre">Bob,</span> <span class="pre">KYC,</span> <span class="pre">0}</span></code>. Doing so, they know that Bob has attempted and failed the KYC process.</p>
+<ol class="arabic simple">
+<li><p>Define both <strong>MosaicAddressRestrictionTransaction</strong> for Alice and Bob accounts as follows:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Alice: <code class="docutils literal notranslate"><span class="pre">{ccf.shares,</span> <span class="pre">Alice,</span> <span class="pre">KYC,</span> <span class="pre">1}</span></code></p></li>
+<li><p>Bob:  <code class="docutils literal notranslate"><span class="pre">{ccf.shares,</span> <span class="pre">Bob,</span> <span class="pre">KYC,</span> <span class="pre">0}</span></code></p></li>
+</ul>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicAddressRestriction.ts">View Code</a></span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;634a8ac3fc2b65b3&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">mosaicIdHex</span><span class="p">);</span>
+<span class="c1">// replace with address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">aliceRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">aliceAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">aliceRawAddress</span><span class="p">);</span>
+<span class="c1">// replace with address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">bobRawAddress</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;KYC&#39;</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">aliceMosaicAddressRestrictionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="c1">// mosaicId</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="c1">// restrictionKey</span>
+<span class="w">  </span><span class="nx">aliceAddress</span><span class="p">,</span><span class="w"> </span><span class="c1">// address</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span><span class="w"> </span><span class="c1">// newRestrictionValue</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobMosaicAddressRestrictionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="c1">// mosaicId</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="c1">// restictionKey</span>
+<span class="w">  </span><span class="nx">bobAddress</span><span class="p">,</span><span class="w"> </span><span class="c1">// address</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="c1">// newRestrictionValue</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicAddressRestriction.js">View Code</a></span><a class="headerlink" href="#id9" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with network type</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">NetworkType</span><span class="p">.</span><span class="nx">TEST_NET</span><span class="p">;</span>
+<span class="c1">// replace with mosaic id</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicIdHex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;634a8ac3fc2b65b3&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mosaicId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicId</span><span class="p">(</span><span class="nx">mosaicIdHex</span><span class="p">);</span>
+<span class="c1">// replace with address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">aliceRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">aliceAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">aliceRawAddress</span><span class="p">);</span>
+<span class="c1">// replace with address</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobRawAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;TB6Q5E-YACWBP-CXKGIL-I6XWCH-DRFLTB-KUK34I-YJQ&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Address</span><span class="p">.</span><span class="nx">createFromRawAddress</span><span class="p">(</span><span class="nx">bobRawAddress</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">KeyGenerator</span><span class="p">.</span><span class="nx">generateUInt64Key</span><span class="p">(</span><span class="s1">&#39;KYC&#39;</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">aliceMosaicAddressRestrictionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="c1">// mosaicId</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="c1">// restrictionKey</span>
+<span class="w">  </span><span class="nx">aliceAddress</span><span class="p">,</span><span class="w"> </span><span class="c1">// address</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span><span class="w"> </span><span class="c1">// newRestrictionValue</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bobMosaicAddressRestrictionTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">MosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="nx">mosaicId</span><span class="p">,</span><span class="w"> </span><span class="c1">// mosaicId</span>
+<span class="w">  </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="c1">// restictionKey</span>
+<span class="w">  </span><span class="nx">bobAddress</span><span class="p">,</span><span class="w"> </span><span class="c1">// address</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="c1">// newRestrictionValue</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Now, you can announce the transactions to the network. To do so, try to announce both transactions together using an <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">aggregate transaction</span></a>. Remember that you will have to announce the transactions from the mosaic’s creator account.</p></li>
+</ol>
+<div class="example-code docutils container">
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicAddressRestriction.ts">View Code</a></span><a class="headerlink" href="#id10" title="Permalink to this code"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with company private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span><span class="nx">privateKey</span><span class="p">,</span><span class="w"> </span><span class="nx">networkType</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createComplete</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">aliceMosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">bobMosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/restriction/RestrictingMosaicsTransfersMosaicAddressRestriction.js">View Code</a></span><a class="headerlink" href="#id11" title="Permalink to this code"></a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// replace with company private key</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">privateKey</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Account</span><span class="p">.</span><span class="nx">createFromPrivateKey</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">privateKey</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">aggregateTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">AggregateTransaction</span><span class="p">.</span><span class="nx">createComplete</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">Deadline</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">epochAdjustment</span><span class="p">),</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">aliceMosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">bobMosaicAddressRestrictionTransaction</span><span class="p">.</span><span class="nx">toAggregate</span><span class="p">(</span><span class="nx">account</span><span class="p">.</span><span class="nx">publicAccount</span><span class="p">),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">networkType</span><span class="p">,</span>
+<span class="w">  </span><span class="p">[],</span>
+<span class="w">  </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">UInt64</span><span class="p">.</span><span class="nx">fromUint</span><span class="p">(</span><span class="mf">2000000</span><span class="p">),</span>
+<span class="p">);</span>
+<span class="c1">// replace with meta.networkGenerationHash (nodeUrl + &#39;/node/info&#39;)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">networkGenerationHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s1">&#39;1DFB2FAA9E7F054168B0C5FCB84F4DEB62CC2B4D317D861F3168D161F54EA78B&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">signedTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">account</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">aggregateTransaction</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">networkGenerationHash</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">.</span><span class="nx">hash</span><span class="p">);</span>
+<span class="c1">// replace with node endpoint</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NODE_URL&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">symbol_sdk_1</span><span class="p">.</span><span class="nx">RepositoryFactoryHttp</span><span class="p">(</span><span class="nx">nodeUrl</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transactionHttp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repositoryFactory</span><span class="p">.</span><span class="nx">createTransactionRepository</span><span class="p">();</span>
+<span class="nx">transactionHttp</span><span class="p">.</span><span class="nx">announce</span><span class="p">(</span><span class="nx">signedTransaction</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Once the transaction gets confirmed, try to send mosaics to Alice’s and Bob’s accounts.</p></li>
+</ol>
+<p>Now, you should be able to send <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code> to Alice without any problems. Additionally, Alice will be able to transfer mosaics with other accounts with restrictions set to <code class="docutils literal notranslate"><span class="pre">{ccf.shares,</span> <span class="pre">KYC,</span> <span class="pre">1}</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>symbol-cli<span class="w"> </span>transaction<span class="w"> </span>transfer<span class="w"> </span>--recipient-address<span class="w"> </span>TCHBDE-NCLKEB-ILBPWP-3JPB2X-NY64OE-7PYHHE-32I<span class="w"> </span>--mosaics<span class="w"> </span>634a8ac3fc2b65b3::1<span class="w"> </span>--sync
+</pre></div>
+</div>
+<p>However, when you send the same mosaic to Bob’s account, you should get the error <code class="docutils literal notranslate"><span class="pre">Failure_RestrictionMosaic_Account_Unauthorized</span></code> through the status error channel because he is not allowed to transact with <code class="docutils literal notranslate"><span class="pre">ccf.shares</span></code>.</p>
+</section>
+</section>
+
+<div class="section">
+   
+
+
+
+  
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2021&#8209;10&#8209;01</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/guides/restriction/restricting-mosaics-transfers.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
+    <hr/>
+</div>
+        
+            <span class="title">On this page</span>
+            <ul>
+<li><a class="reference internal" href="#">Restricting mosaic transfers</a><ul>
+<li><a class="reference internal" href="#use-case">Use case</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#creating-a-restrictable-mosaic">Creating a restrictable mosaic</a></li>
+<li><a class="reference internal" href="#setting-a-mosaic-global-restriction">Setting a Mosaic Global Restriction</a></li>
+<li><a class="reference internal" href="#assigning-mosaic-address-restrictions">Assigning Mosaic Address Restrictions</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;01.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            Did you find what you were looking for?
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
+            on 2021&#8209;10&#8209;01.</p>
+    
+    <p>
+        Did you find what you were looking for?
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">Give us your feedback.</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="../../_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="../../_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="../../_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>

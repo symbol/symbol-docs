@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18: http://docutils.sourceforge.net/" />
+
+    <title>互換性表 &#8212; Symbol Documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/examplecode.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/custom.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/examplecode.js"></script>
+    <script src="_static/js/jquery-1.11.0.min.js"></script>
+    <script src="_static/js/jquery-fix.js"></script>
+    <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="シリアル化" href="serialization/index.html" />
+    <link rel="prev" title="ウォレット" href="wallets.html" /> 
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174021413-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-174021413-2');
+</script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="guides/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head><body>
+
+<div class="hidden-xs hidden-sm navbar navbar-default header navbar-fixed-top"
+     id="navbar">
+    <div class="container navbar-main">
+        <a href="index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="_static/symbol-wordmark.svg" height="48">
+        </a>
+        <div class="navbar-right">
+            
+<ul class="list-inline">
+    <li class="">
+        <a href="/ja/getting-started">START</a>
+    </li>
+    <li class="">
+        <a href="/ja/concepts/overview.html">TECHNOLOGY</a>
+    </li>
+    <li class="">
+        <a href="/ja/guides/index.html">GUIDES</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/vision.html">VISION</a>
+    </li>
+    <li class="">
+        <a href="/ja/contribute/index.html">CONTRIBUTE</a>
+    </li>
+    <li class="">
+        <a href="/ja/handbook/index.html">HANDBOOK</a>
+    </li>
+</ul>
+
+        </div>
+        
+        <div class="search-box" id="search-box-desktop"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/compatibility.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+</div>
+<div class="hidden-md hidden-lg navbar navbar-default header navbar-fixed-top">
+    <div class="container navbar-main">
+        <a href="index.html" class="navbar-brand">
+            <img alt="Symbol logo" src="_static/symbol-wordmark.svg" width="173" height="48">
+        </a>
+        
+        <div class="search-box" id="search-box-mobile"></div>
+        
+        <div class="language-selector">
+    
+        <a href="/compatibility.html"><img src="/_static/images/white-globe.png" width="24px" height="24px" title="International version"/></a>
+        <img class="language-icon-selected" src="/_static/images/japanese-icon.png" width="24px" height="24px" title="Japanese version"/>
+    
+</div>
+    </div>
+    <div class="sidebar-xs">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ナビゲーション <b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="references/index.html">リファレンス</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="references/overview.html">ツール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">クライアント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">REST ゲートウェイ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html">SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wallets.html">ウォレット</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">互換性表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization/index.html">シリアル化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/glossary.html">用語集</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        
+
+<div class="col-md-3 hidden-xs hidden-sm">
+    <div id="sidebar" class="bs-sidenav" role="complementary">
+        
+        <div class="sidebar-md hidden-xs hidden-sm">
+    <h4>ナビゲーション</h4>
+    <hr />
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="concepts/overview.html">Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">ガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handbook/index.html">The Symbol Handbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="references/index.html">リファレンス</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="references/overview.html">ツール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">クライアント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">REST ゲートウェイ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html">SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wallets.html">ウォレット</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">互換性表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization/index.html">シリアル化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/glossary.html">用語集</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+        
+    </div>
+</div>
+
+
+        
+        <div class="col-md-7 content">
+             <section id="compatibility-matrix">
+<h1>互換性表<a class="headerlink" href="#compatibility-matrix" title="この見出しへのパーマリンク"></a></h1>
+<p>このドキュメントでは catapult-client マイルストーンとその関連するパッケージおよびアプリケーション間でのバージョン互換性表を示します。</p>
+<section id="apis">
+<h2>APIs<a class="headerlink" href="#apis" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>マイルストーン</p></th>
+<th class="head"><p>OpenAPI</p></th>
+<th class="head"><p>Rest</p></th>
+<th class="head"><p>SDK TS</p></th>
+<th class="head"><p>SDK Java</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-1010---26-may-2021">v1.0.1.0</a></p></td>
+<td><p>v1.0.0</p></td>
+<td><p>v2.3.6</p></td>
+<td><p>v1.0.1</p></td>
+<td><p>v1.0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-1000---12-mar-2021">v1.0.0.0</a></p></td>
+<td><p>v1.0.0</p></td>
+<td><p>v2.3.5</p></td>
+<td><p>v1.0.0</p></td>
+<td><p>v1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01007---15-feb-2021">v0.10.0.7</a></p></td>
+<td><p>v0.11.2</p></td>
+<td><p>v2.3.3</p></td>
+<td><p>v0.23.2</p></td>
+<td><p>v0.23.1</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01006---02-feb-2021">v0.10.0.6</a></p></td>
+<td><p>v0.11.2</p></td>
+<td><p>v2.3.2</p></td>
+<td><p>v0.23.1</p></td>
+<td><p>v0.23.1</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01005---14-jan-2021">v0.10.0.5</a></p></td>
+<td><p>v0.11.1</p></td>
+<td><p>v2.3.0</p></td>
+<td><p>v0.23.0</p></td>
+<td><p>v0.23.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01004---04-dec-2020">v0.10.0.4</a></p></td>
+<td><p>v0.10.5</p></td>
+<td><p>v2.2.0</p></td>
+<td><p>v0.22.2</p></td>
+<td><p>v0.22.2</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01003---25-sep-2020">v0.10.0.3</a></p></td>
+<td><p>v0.10.0</p></td>
+<td><p>v2.1.0</p></td>
+<td><p>v0.21.0</p></td>
+<td><p>v0.21.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0964---27-jul-2020">v0.9.6.4</a></p></td>
+<td><p>v0.9.6</p></td>
+<td><p>v1.2.1</p></td>
+<td><p>v0.20.7</p></td>
+<td><p>v0.20.3</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0963---10-jul-2020">v0.9.6.3</a></p></td>
+<td><p>v0.9.4</p></td>
+<td><p>v1.1.3</p></td>
+<td><p>v0.20.6</p></td>
+<td><p>v0.20.2</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0951---22-may-2020">v0.9.5.1</a></p></td>
+<td><p>v0.8.11</p></td>
+<td><p>v1.0.20.50</p></td>
+<td><p>v0.19.2</p></td>
+<td><p>v0.19.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0941---23-april-2020">v0.9.4.1</a></p></td>
+<td><p>v0.8.11</p></td>
+<td><p>v1.0.20.31</p></td>
+<td><p>v0.18.0</p></td>
+<td><p>v0.17.2</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-openapi/blob/main/CHANGELOG.md">OpenAPI CHANGELOG</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/rest/CHANGELOG.md">REST CHANGELOG</a></p></li>
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-sdk-typescript-javascript/blob/main/CHANGELOG.md">SDK TS CHANGELOG</a></p></li>
+</ul>
+</section>
+<section id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="この見出しへのパーマリンク"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>マイルストーン</p></th>
+<th class="head"><p>Desktop Wallet</p></th>
+<th class="head"><p>symbol-cli</p></th>
+<th class="head"><p>symbol-bootstrap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-1010---26-may-2021">v1.0.1.0</a></p></td>
+<td><p>v1.0.3</p></td>
+<td><p>v1.0.1</p></td>
+<td><p>v1.0.6</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-1000---12-mar-2021">v1.0.0.0</a></p></td>
+<td><p>v1.0.0</p></td>
+<td><p>v1.0.0</p></td>
+<td><p>v1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01007---15-feb-2021">v0.10.0.7</a></p></td>
+<td><p>v0.14.0</p></td>
+<td><p>v0.24.1</p></td>
+<td><p>v0.4.3</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01006---02-feb-2021">v0.10.0.6</a></p></td>
+<td><p>v0.14.0</p></td>
+<td><p>v0.24.0</p></td>
+<td><p>v0.4.2</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01005---14-jan-2021">v0.10.0.5</a></p></td>
+<td><p>v0.13.8</p></td>
+<td><p>v0.23.0</p></td>
+<td><p>v0.4.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01004---04-dec-2020">v0.10.0.4</a></p></td>
+<td><p>v0.13.6</p></td>
+<td><p>v0.22.1</p></td>
+<td><p>v0.3.1</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-01003---25-sep-2020">v0.10.0.3</a></p></td>
+<td><p>v0.13.1</p></td>
+<td><p>v0.22</p></td>
+<td><p>v0.2.1</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0964---27-jul-2020">v0.9.6.4</a></p></td>
+<td><p>v0.12.1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0963---10-jul-2020">v0.9.6.3</a></p></td>
+<td><p>v0.12</p></td>
+<td><p>v0.21.1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0951---22-may-2020">v0.9.5.1</a></p></td>
+<td><p>v0.10.0</p></td>
+<td><p>v0.20.2</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/symbol/symbol/blob/main/client/catapult/CHANGELOG.md#user-content-0941---23-april-2020">v0.9.4.1</a></p></td>
+<td><p>v0.9.11</p></td>
+<td><p>v0.19.4</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/symbol/symbol-desktop-wallet/blob/main/CHANGELOG.md">Desktop Wallet CHANGELOG</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fboucquez/symbol-bootstrap/blob/main/CHANGELOG.md">symbol-bootstrap CHANGELOG</a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+   
+</div>
+
+        </div>
+         
+
+<div class="col-md-2">
+    <div class="bs-sidenav secondary" role="complementary">
+    
+        <div class="edit-github"><p class="git-info">Last update 2022&#8209;06&#8209;07</p>
+    <a href="https://github.com/symbol/symbol-docs/edit/main/source/compatibility.rst" rel="nofollow"> <i class="fab fa-github"></i> このページを加筆修正する</a>
+    <hr/>
+</div>
+        
+            <span class="title">このページ</span>
+            <ul>
+<li><a class="reference internal" href="#">互換性表</a><ul>
+<li><a class="reference internal" href="#apis">APIs</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+</ul>
+</li>
+</ul>
+
+        
+    
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+
+<div class="feedback-footer row hidden-sm hidden-xs">
+    <div class="col-xs-4">
+    <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    </div>
+    <div class="col-xs-5 feedback-center">
+        <p>
+            お探しのものは見つかりましたか？
+            <br/>
+            <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+        </p>
+    </div>
+    <div class="col-xs-3">
+        <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+    </div>
+</div>
+<div class="feedback-footer hidden-lg hidden-md feedback-center">
+    <p class="git-info"><img src="https://avatars.githubusercontent.com/u/44558938?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/Wayonb" target="_blank" rel="noopener noreferrer">Wayonb</a>
+            on 2022&#8209;06&#8209;07.</p>
+    
+    <p>
+        お探しのものは見つかりましたか？
+        <br/>
+        <a href="https://github.com/symbol/symbol-docs/issues/new/choose" target="_blank" rel="noopener noreferrer">フィードバックをください。</a>
+    </p>
+    <ul id="social" class="list-inline">
+    <li>
+        <a href="https://twitter.com/NEMofficial" rel="nofollow" title="Twitter">
+            <img alt="Twitter" src="_static/images/Badge-Twitter.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://discord.gg/J38KwW5ZuG" rel="nofollow" title="Discord">
+            <img alt="Discord" src="_static/images/Badge-Discord.png" width="51" height="48"></a>
+    </li>
+    <li>
+        <a href="https://github.com/symbol/" rel="nofollow" title="GitHub">
+            <img alt="GitHub" src="_static/images/Badge-GitHub.png" width="51" height="48"></a>
+    </li>
+</ul>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-desktop',
+		placeholder: 'Search',
+		debug: false
+	});
+	docsearch({
+		appId: 'FC3LIKADJ1',
+		apiKey: 'f8a112dd047463e62796cd945f466684',
+		indexName: 'nemtech',
+		container: '#search-box-mobile',
+		placeholder: 'Search',
+		debug: false
+	});
+</script>
+
+  </body>
+</html>
