@@ -1,14 +1,13 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
-    <tr><td class="side-info-icon">&varr;</td><td>Size: 45+ bytes = 0x2d+ <i>(variable)</i></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/state/restriction_mosaic_entry.cats#L24">schema</a></td></tr>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 3+ bytes = 0x3+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol/state/restriction_mosaic_entry.cats#L24">schema</a></td></tr>
     </table></div>
 <p>binary layout for a mosaic restriction </p>
 </td></tr></table>
 
 <div class="big-table6">
-   <div style="grid-column: 1 / span 6;" class="big-table-section"><a href="/serialization#stateheader" title="header common to all serialized states">StateHeader</a><span style="float:right">2 bytes = 0x2</span></div>
-   <div class="indentation-cell">&nbsp;</div>
+   <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">version</code></div>
@@ -25,11 +24,11 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">address_entry</code></div>
    <div><a href="/serialization#mosaicaddressrestrictionentry" title="binary layout for a mosaic restriction">MosaicAddressRestrictionEntry</a></div>
-   <div class="description"><p>address restriction rule </p></div>
+   <div class="description"><p>address restriction rule </p><b>This field is only present if:</b><br/><code class="docutils literal">entry_type equals ADDRESS</code></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">global_entry</code></div>
    <div><a href="/serialization#mosaicglobalrestrictionentry" title="binary layout for a mosaic restriction">MosaicGlobalRestrictionEntry</a></div>
-   <div class="description"><p>global mosaic rule </p></div>
+   <div class="description"><p>global mosaic rule </p><b>This field is only present if:</b><br/><code class="docutils literal">entry_type equals GLOBAL</code></div>
 </div>

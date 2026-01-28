@@ -1,7 +1,7 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
-    <tr><td class="side-info-icon">&varr;</td><td>Size: 33 bytes = 0x21</td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/state/namespace_history_types.cats#L24">schema</a></td></tr>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 1+ byte = 0x1+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol/state/namespace_history_types.cats#L24">schema</a></td></tr>
     </table></div>
 <p>binary layout for alias </p>
 </td></tr></table>
@@ -18,11 +18,11 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">mosaic_alias</code></div>
    <div><a href="/serialization#mosaicid" title="A Mosaic identifier.">MosaicId</a></div>
-   <div class="description"><p>mosaic alias </p></div>
+   <div class="description"><p>mosaic alias </p><b>This field is only present if:</b><br/><code class="docutils literal">namespace_alias_type equals MOSAIC_ID</code></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">address_alias</code></div>
    <div><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a></div>
-   <div class="description"><p>address alias </p></div>
+   <div class="description"><p>address alias </p><b>This field is only present if:</b><br/><code class="docutils literal">namespace_alias_type equals ADDRESS</code></div>
 </div>
