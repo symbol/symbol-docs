@@ -197,10 +197,13 @@ class SerializationCommand(Command):
                 # Separate any non-keyword chars (like parenthesis or punctuation) before looking words up
                 # (And special-case an optional ending 's' for things like "MosaicId's")
                 m = re.search(r'^([^a-zA-Z]*)([a-zA-Z]+)([^a-rt-zA-Z]*)$', word)
-                if not ignore_keywords and m and m.group(2) in self.types:
-                    output += m.group(1) + self.type_description(self.types[m.group(2)]) + m.group(3)
+                if not ignore_keywords and m and (m.group(2) in self.types or m.group(2) + 'V1' in self.types):
+                    name = m.group(2) if m.group(2) in self.types else m.group(2) + 'V1'
+                    output += m.group(1) + self.type_description(self.types[name]) + m.group(3)
                 elif word == '\\note':
                     output += '<br/><b>Note:</b>'
+                elif word == 'deprecated).':
+                    output += '<b>deprecated</b>).'
                 else:
                     output += word
                 output += ' '
@@ -350,7 +353,7 @@ class SerializationCommand(Command):
         print('Serialization', file=index_file)
         print('#############', file=index_file)
         print(file=index_file)
-        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.', file=index_file)
+        print('The `catbuffer schemas <https://github.com/symbol/symbol/tree/dev/catbuffer/schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages.', file=index_file)
         print(file=index_file)
 
         # Hide level 4 headers from local TOC using CSS: there's too many of them and I could not find
