@@ -246,7 +246,7 @@ class SerializationCommand(Command):
                     self.source_api, self.type_schema_locations[name][0], self.type_schema_locations[name][1]), file=html_file)
         if name in self.type_catapult_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
-                '<td><a href="https://github.com/symbol/catapult-client/blob/main/{}#L{}">catapult model</a></td></tr>'.format(
+                '<td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/{}#L{}">catapult model</a></td></tr>'.format(
                     self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]), file=html_file)
         print('    </table></div>', file=html_file)
         print(self.parse_comment(element['comments']), file=html_file)
