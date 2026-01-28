@@ -12,7 +12,7 @@ Key pair
 
 Elliptic curve cryptography is based on **key pairs**: a private and a matching public key. In particular, |codename| uses the `Twisted Edwards curve <https://en.wikipedia.org/wiki/Twisted_Edwards_curve>`__ with the digital signature algorithm named `Ed25519 <https://ed25519.cr.yp.to>`__ and hashing algorithm **SHA-512**:
 
-* **Private key**: A random 256-bit (32 byte) integer used to sign :ref:`entities <verifiableentity>` known by the owner.
+* **Private key**: A random 256-bit (32 byte) integer used to sign entities known by the owner.
 
 * **Public key**: A 256-bit (32 bytes) integer derived from the private key. It serves as the public identifier of the key pair and can be disseminated widely. It is used to prove that an entity was signed with the paired private key.
 

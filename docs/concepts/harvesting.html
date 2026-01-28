@@ -238,7 +238,7 @@
 <p>The <a class="reference internal" href="consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> determines the probability that an account is chosen to harvest the next block among all the accounts which have harvesting enabled.</p>
 <p>Symbol’s public network defines that an account needs to hold at least <strong>10,000</strong> <a class="reference internal" href="#harvesting-mosaic"><span class="std std-ref">harvesting mosaics</span></a> to have an importance score greater than zero.
 Eligible accounts can use their importance score to create new blocks either by <a class="reference internal" href="#local-harvesting"><span class="std std-ref">running a node</span></a> or enabling <a class="reference internal" href="#delegated-harvesting"><span class="std std-ref">delegated harvesting</span></a>.</p>
-<p>Regardless of the method chosen, <strong>any account willing to activate harvesting must first announce a valid</strong> <a class="reference internal" href="../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a>. This key is required by Symbol to randomize harvester selection.</p>
+<p>Regardless of the method chosen, <strong>any account willing to activate harvesting must first announce a valid</strong> <a class="reference internal" href="../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a>. This key is required by Symbol to randomize harvester selection.</p>
 </section>
 <section id="harvesting-mosaic">
 <span id="id1"></span><h2>Harvesting mosaic<a class="headerlink" href="#harvesting-mosaic" title="Permalink to this heading"></a></h2>
@@ -276,7 +276,7 @@ Symbol’s public network uses <code class="docutils literal notranslate"><span 
 <span id="id4"></span><h3>Remote harvesting<a class="headerlink" href="#remote-harvesting" title="Permalink to this heading"></a></h3>
 <p>Node owners can use a <strong>remote account</strong> to <strong>act as proxy</strong> and sign off the newly created blocks, while harvesting fees are still collected by their main account. <strong>The remote account has no funds</strong>, so the fact that its private key is exposed in a configuration file on the node is not a concern. The <a class="reference internal" href="consensus-algorithm.html#importance-calculation"><span class="std std-ref">importance score</span></a> is still based on the main account.</p>
 <p>In this setup the main account is still called the <strong>Harvester</strong>, for simplicity, whereas the remote account is called a <strong>Proxy</strong>.</p>
-<p>Remote harvesting is enabled just like <a class="reference internal" href="#local-harvesting"><span class="std std-ref">local harvesting</span></a> but using the remote account’s private key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> property and announcing an <a class="reference internal" href="../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> that links the remote and main accounts.</p>
+<p>Remote harvesting is enabled just like <a class="reference internal" href="#local-harvesting"><span class="std std-ref">local harvesting</span></a> but using the remote account’s private key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> property and announcing an <a class="reference internal" href="../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a> that links the remote and main accounts.</p>
 <p>This is the <strong>recommended method</strong> for node owners. See the <a class="reference internal" href="../guides/harvesting/index.html"><span class="doc">Harvesting guides</span></a> for step-by-step instructions on how to activate remote harvesting.</p>
 </section>
 <section id="delegated-harvesting">
@@ -288,7 +288,7 @@ Symbol’s public network uses <code class="docutils literal notranslate"><span 
 <p>See the <a class="reference internal" href="../guides/harvesting/index.html"><span class="doc">Harvesting guides</span></a> for step-by-step instructions on how to activate delegated harvesting and check if the delegation request has been granted.</p>
 <section id="persistent-delegation-request-transaction">
 <span id="persistentdelegationrequesttransaction"></span><h4>Persistent Delegation Request Transaction<a class="headerlink" href="#persistent-delegation-request-transaction" title="Permalink to this heading"></a></h4>
-<p>This is actually a <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a> sent to the node owner’s account with a special 132-byte <strong>message</strong>, formatted as a 264-characters hexadecimal string:</p>
+<p>This is actually a <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransactionV1</span></a> sent to the node owner’s account with a special 132-byte <strong>message</strong>, formatted as a 264-characters hexadecimal string:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -351,15 +351,15 @@ Symbol’s public network uses <code class="docutils literal notranslate"><span 
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x4243</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a></p></td>
 <td><p>Link an account with a VRF public key. Required for all harvesting eligible accounts.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x414C</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a></p></td>
 <td><p>Delegate the account importance to a proxy account. Required for all accounts willing to activate remote or delegated harvesting.</p></td>
 </tr>
 <tr class="row-even"><td><p>0x424C</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransactionV1</span></a></p></td>
 <td><p>Link an account with a public key used by TLS to create sessions. Required for all accounts willing to activate delegated harvesting.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x4154</p></td>

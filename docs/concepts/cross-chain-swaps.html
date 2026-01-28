@@ -285,7 +285,7 @@ Between Bitcoin and Symbol, the difference is even more evident, as each blockch
 <ol class="arabic simple">
 <li><p>Alice generates a random set of bytes called <code class="docutils literal notranslate"><span class="pre">proof</span></code>. The proof should have a size between <code class="docutils literal notranslate"><span class="pre">10</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code> bytes.</p></li>
 <li><p>Alice hashes the obtained proof with one of the <a class="reference internal" href="../serialization/index.html#lockhashalgorithm"><span class="std std-ref">available algorithms</span></a> to generate the <code class="docutils literal notranslate"><span class="pre">secret</span></code>.</p></li>
-<li><p>Alice defines the <a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransaction</span></a> <strong>TX1</strong>:</p></li>
+<li><p>Alice defines the <a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransactionV1</span></a> <strong>TX1</strong>:</p></li>
 </ol>
 <table class="docutils align-default">
 <colgroup>
@@ -361,7 +361,7 @@ Between Bitcoin and Symbol, the difference is even more evident, as each blockch
 </tbody>
 </table>
 <ol class="arabic simple" start="6">
-<li><p>Alice announces the <a class="reference internal" href="../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransaction</span></a> <strong>TX3</strong> to the <strong>public network</strong>. This transaction defines the encrypting algorithm used, the original proof and the secret:</p></li>
+<li><p>Alice announces the <a class="reference internal" href="../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransactionV1</span></a> <strong>TX3</strong> to the <strong>public network</strong>. This transaction defines the encrypting algorithm used, the original proof and the secret:</p></li>
 </ol>
 <table class="docutils align-default">
 <colgroup>
@@ -451,11 +451,11 @@ Between Bitcoin and Symbol, the difference is even more evident, as each blockch
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x4152</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransactionV1</span></a></p></td>
 <td><p>Transaction to start a token swap between different chains.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x4252</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#secretprooftransaction"><span class="std std-ref">SecretProofTransactionV1</span></a></p></td>
 <td><p>transaction to conclude a token swap between different chains.</p></td>
 </tr>
 </tbody>

@@ -292,7 +292,7 @@ Define this key as a new variable.</p>
 </div>
 <p>2. Alice’s degree brings the identifier <code class="docutils literal notranslate"><span class="pre">123456</span></code> for her certificate.
 Help Bob to assign this value to the key defined in the previous step.
-To achieve so, define an <a class="reference internal" href="../../serialization/index.html#accountmetadatatransaction"><span class="std std-ref">AccountMetadataTransaction</span></a> linking Alice account, the key (CERT), and the associated value (123456).</p>
+To achieve so, define an <a class="reference internal" href="../../serialization/index.html#accountmetadatatransaction"><span class="std std-ref">AccountMetadataTransactionV1</span></a> linking Alice account, the key (CERT), and the associated value (123456).</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAnAccount.ts">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
@@ -404,7 +404,7 @@ Wrap the <strong>AccountMetadataTransaction</strong> inside an <a class="referen
 </div>
 </div>
 <p>4. Before sending an aggregate transaction to the network, Bob has to lock <code class="docutils literal notranslate"><span class="pre">10</span></code> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code>.
-Define a new <a class="reference internal" href="../../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a> and sign it with Bob’s account.</p>
+Define a new <a class="reference internal" href="../../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransactionV1</span></a> and sign it with Bob’s account.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/metadata/AssigningMetadataToAnAccount.ts">View Code</a></span><a class="headerlink" href="#id7" title="Permalink to this code"></a></div>

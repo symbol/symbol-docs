@@ -231,7 +231,7 @@
              <section id="receipt">
 <h1>Receipt<a class="headerlink" href="#receipt" title="Permalink to this heading"></a></h1>
 <p>Conditional state changes in the background enable complex transactions.
-For example, a <a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a> concludes as soon as the <a class="reference internal" href="../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransaction</span></a> is confirmed.
+For example, a <a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransactionV1</span></a> concludes as soon as the <a class="reference internal" href="../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransactionV1</span></a> is confirmed.
 When the locked funds are automatically returned to the account, there is no additional <a class="reference internal" href="transaction.html"><span class="doc">transaction</span></a> recorded.
 This might appear as a <em>hidden change</em> that increases the <a class="reference internal" href="account.html"><span class="doc">account</span></a> balance.</p>
 <p>Receipts provide proof for every hidden change.
@@ -279,7 +279,7 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x2143</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Harvest_Fee</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#harvestfeereceipt"><span class="std std-ref">HarvestFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The recipient, account and amount of fees received for harvesting a block. It is recorded when a block is <a class="reference internal" href="harvesting.html"><span class="doc">harvested</span></a>.</p></td>
 </tr>
@@ -313,13 +313,13 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x414D</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Mosaic_Expired</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicexpiryreceipt"><span class="std std-ref">MosaicExpiryReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicexpiredreceipt"><span class="std std-ref">MosaicExpiredReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The identifier of the mosaic expiring in this block. It is recorded when a <a class="reference internal" href="mosaic.html"><span class="doc">mosaic</span></a> lifetime elapses.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x124D</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Mosaic_Rental_Fee</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancetransferreceipt"><span class="std std-ref">BalanceTransferReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicrentalfeereceipt"><span class="std std-ref">MosaicRentalFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The sender and recipient of the mosaic id and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.</p></td>
 </tr>
@@ -329,19 +329,19 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x414E</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Namespace_Expired</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#namespaceexpiryreceipt"><span class="std std-ref">NamespaceExpiryReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#namespaceexpiredreceipt"><span class="std std-ref">NamespaceExpiredReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The identifier of the namespace expiring in this block. It is recorded when the <a class="reference internal" href="namespace.html"><span class="doc">namespace</span></a> lifetime elapses.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x424E</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Namespace_Deleted</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#namespaceexpiryreceipt"><span class="std std-ref">NamespaceExpiryReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#namespaceexpiredreceipt"><span class="std std-ref">NamespaceExpiredReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The identifier of the namespace deleted in this block. It is recorded when the <a class="reference internal" href="namespace.html"><span class="doc">namespace</span></a> grace period elapses.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x134E</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Namespace_Rental_Fee</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancetransferreceipt"><span class="std std-ref">BalanceTransferReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#namespacerentalfeereceipt"><span class="std std-ref">NamespaceRentalFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The sender and recipient of the mosaic id and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.</p></td>
 </tr>
@@ -351,19 +351,19 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x3148</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LockHash_Created</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#lockhashcreatedfeereceipt"><span class="std std-ref">LockHashCreatedFeeReceipt</span></a></p></td>
 </tr>
-<tr class="row-odd"><td colspan="3"><p>The lockhash sender, mosaic id and amount locked. It is recorded when a valid <a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a> is announced.</p></td>
+<tr class="row-odd"><td colspan="3"><p>The lockhash sender, mosaic id and amount locked. It is recorded when a valid <a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransactionV1</span></a> is announced.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x2248</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LockHash_Completed</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#lockhashcompletedfeereceipt"><span class="std std-ref">LockHashCompletedFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The hashlock sender, mosaic id and amount locked that is returned. It is recorded when an AggregateBondedTransaction linked to the hash completes.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x2348</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LockHash_Expired</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#lockhashexpiredfeereceipt"><span class="std std-ref">LockHashExpiredFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a lock hash expires.</p></td>
 </tr>
@@ -373,19 +373,19 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x3152</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LockSecret_Created</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#locksecretcreatedfeereceipt"><span class="std std-ref">LockSecretCreatedFeeReceipt</span></a></p></td>
 </tr>
-<tr class="row-odd"><td colspan="3"><p>The secretlock sender, mosaic id and amount locked. It is recorded when a valid <a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransaction</span></a> is announced.</p></td>
+<tr class="row-odd"><td colspan="3"><p>The secretlock sender, mosaic id and amount locked. It is recorded when a valid <a class="reference internal" href="../serialization/index.html#secretlocktransaction"><span class="std std-ref">SecretLockTransactionV1</span></a> is announced.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x2252</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LockSecret_Completed</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#locksecretcompletedfeereceipt"><span class="std std-ref">LockSecretCompletedFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The secretlock recipient, mosaic id and amount locked. It is recorded when a secretlock is proved.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x2352</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LockSecret_Expired</span></code></p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#balancechangereceipt"><span class="std std-ref">BalanceChangeReceipt</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#locksecretexpiredfeereceipt"><span class="std std-ref">LockSecretExpiredFeeReceipt</span></a></p></td>
 </tr>
 <tr class="row-odd"><td colspan="3"><p>The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a secretlock expires.</p></td>
 </tr>
@@ -416,7 +416,7 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 <div class="col-md-2">
     <div class="bs-sidenav secondary" role="complementary">
     
-        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+        <div class="edit-github"><p class="git-info">Last update 2026&#8209;01&#8209;28</p>
     <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/receipt.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
     <hr/>
 </div>
@@ -444,7 +444,7 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 <div class="feedback-footer row hidden-sm hidden-xs">
     <div class="col-xs-4">
     <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
-            on 2021&#8209;12&#8209;14.</p>
+            on 2026&#8209;01&#8209;28.</p>
     
     </div>
     <div class="col-xs-5 feedback-center">
@@ -473,7 +473,7 @@ The <code class="docutils literal notranslate"><span class="pre">secondaryId</sp
 </div>
 <div class="feedback-footer hidden-lg hidden-md feedback-center">
     <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
-            on 2021&#8209;12&#8209;14.</p>
+            on 2026&#8209;01&#8209;28.</p>
     
     <p>
         Did you find what you were looking for?

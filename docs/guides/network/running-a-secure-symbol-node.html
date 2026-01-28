@@ -417,7 +417,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span>target
 </aside>
 <section id="remote-key-link">
 <h4>Remote key link<a class="headerlink" href="#remote-key-link" title="Permalink to this heading"></a></h4>
-<p>Obtain the <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> payload.</p>
+<p>Obtain the <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a> payload.</p>
 <p>This links your main account to the <strong>remote account</strong> used for <a class="reference internal" href="../../concepts/harvesting.html#remote-harvesting"><span class="std std-ref">Remote harvesting</span></a>. Symbol Bootstrap generated this account for you, and you can find its public key in the <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code> file:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">remote</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">publicKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1544FE6F504A8B8536C2407664916AFB5C917400FD1B941B981933CDFE52AE3F</span>
@@ -467,7 +467,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span>target
 </section>
 <section id="vrf-key-link">
 <h4>VRF key link<a class="headerlink" href="#vrf-key-link" title="Permalink to this heading"></a></h4>
-<p>Obtain the <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> payload.</p>
+<p>Obtain the <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a> payload.</p>
 <p>This key is required for harvesting.</p>
 <p>Again, Symbol Bootstrap has already generated this key for you and you can find it in the <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code> file:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">vrf</span><span class="p">:</span>
@@ -484,7 +484,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span>target
 </section>
 <section id="voting-key-link">
 <h4>Voting key link<a class="headerlink" href="#voting-key-link" title="Permalink to this heading"></a></h4>
-<p>Obtain the <a class="reference internal" href="../../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a> payload.</p>
+<p>Obtain the <a class="reference internal" href="../../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransactionV1</span></a> payload.</p>
 <p>This key is only required for voting nodes.</p>
 <p>If you added <code class="docutils literal notranslate"><span class="pre">voting:</span> <span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">custom.yml</span></code> when creating the configuration, then Symbol Bootstrap has created this key too in <code class="docutils literal notranslate"><span class="pre">target/addresses.yml</span></code>:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">voting</span><span class="p">:</span>

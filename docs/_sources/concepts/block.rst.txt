@@ -20,12 +20,6 @@ Nodes stores blocks in a serialized form as follows:
 
 **EntityType**: 0x8143
 
-**Inlines:**
-
-* :ref:`SizePrefixedEntity <sizeprefixedentity>`
-* :ref:`VerifiableEntity <verifiableentity>`
-* :ref:`EntityBody <entitybody>`
-
 .. _block-header:
 
 .. csv-table::

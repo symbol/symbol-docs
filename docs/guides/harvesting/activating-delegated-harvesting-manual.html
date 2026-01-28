@@ -240,9 +240,9 @@
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
 <p>Required steps:</p>
 <ol class="arabic simple">
-<li><p>Delegate the <strong>main account (M)</strong> importance to a <strong>remote account (R)</strong> using an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a>.</p></li>
-<li><p>Link the main account <strong>M</strong> to a <strong>VRF account (V)</strong> for randomized block production and account selection using a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a>.</p></li>
-<li><p>Link the main account <strong>M</strong> to a node in order to harvest through that node using a <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a>.</p></li>
+<li><p>Delegate the <strong>main account (M)</strong> importance to a <strong>remote account (R)</strong> using an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a>.</p></li>
+<li><p>Link the main account <strong>M</strong> to a <strong>VRF account (V)</strong> for randomized block production and account selection using a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a>.</p></li>
+<li><p>Link the main account <strong>M</strong> to a node in order to harvest through that node using a <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransactionV1</span></a>.</p></li>
 <li><p>Request the node to add the remote account <strong>R</strong> as a harvester using a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a>. Conversely, if the node configuration is accessible, the remote account’s private key can be set in the node configuration.</p></li>
 </ol>
 <p>Please note that it is entirely up to the node to comply with the request. Some nodes can be asked for their current list of delegated harvesters but this information is not always available (see <a class="reference internal" href="#delegated-harvesting-verifying-activation"><span class="std std-ref">Verifying activation</span></a> below).</p>
@@ -268,7 +268,7 @@
 <section id="guide">
 <h2>Guide<a class="headerlink" href="#guide" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
-<li><p>Create an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> to <strong>delegate M’s importance to R</strong>. Sign the transaction with <strong>M</strong> and announce it to the network.</p>
+<li><p>Create an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a> to <strong>delegate M’s importance to R</strong>. Sign the transaction with <strong>M</strong> and announce it to the network.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingAccountLink.ts">View Code</a></span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
@@ -293,7 +293,7 @@
 </div>
 </div>
 </li>
-<li><p>Create a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> to <strong>link M to a VRF key</strong>. Sign the transaction with  <strong>M</strong> and announce it to the network.</p>
+<li><p>Create a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a> to <strong>link M to a VRF key</strong>. Sign the transaction with  <strong>M</strong> and announce it to the network.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text"><a class="reference external" href="https://github.com/symbol/symbol-docs/blob/main/source/resources/examples/typescript/accountlink/ActivatingDelegatedHarvestingVrfKeyLink.ts">View Code</a></span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
@@ -318,7 +318,7 @@
 </div>
 </div>
 </li>
-<li><p>Create a <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a> to <strong>link M to a node’s TLS key</strong>. Sign the NodeKeyLinkTransaction with <strong>M</strong> and announce it to the network.</p>
+<li><p>Create a <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransactionV1</span></a> to <strong>link M to a node’s TLS key</strong>. Sign the NodeKeyLinkTransaction with <strong>M</strong> and announce it to the network.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The node’s public TLS key is typically provided by the node owner. However, <strong>Dual</strong> nodes (being both <a class="reference internal" href="../../concepts/node.html#peer-node"><span class="std std-ref">Peer</span></a> and <a class="reference internal" href="../../concepts/node.html#api-node"><span class="std std-ref">API</span></a> nodes) running a version of the <a class="reference internal" href="../../api.html"><span class="doc">REST Gateway</span></a> higher than <strong>2.2.0</strong> offer this information through the <code class="docutils literal notranslate"><span class="pre">nodePublicKey</span></code> field of the <code class="docutils literal notranslate"><span class="pre">node/info</span></code> <a class="reference external" href="https://symbol.github.io/symbol-openapi/v0.10.6/#operation/getNodeInfo">REST endpoint</a>.</p>
@@ -351,7 +351,7 @@
 <li><p>Once the transactions are confirmed, the next step is to <strong>share R’s private key with the node</strong>. This can be done in one of two ways depending on whether you are the node owner and have access to the node’s configuration or not.</p>
 <p>If you are the <strong>node owner</strong>, you simply need to set the remote account’s private signing key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> field in the <a class="reference internal" href="../network/configuring-node-properties.html#node-properties-harvesting-configuration"><span class="std std-ref">Harvesting Configuration</span></a>.</p>
 <p><strong>Otherwise</strong>, a <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> must be used. As the private key will be shared in an <strong>encrypted message</strong>, only the node will be able to see it. Moreover, <strong>R</strong> does not own any mosaic.</p>
-<p>The harvesting fees will be sent to <strong>M</strong> as it has established a link with the node through the <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransaction</span></a>.</p>
+<p>The harvesting fees will be sent to <strong>M</strong> as it has established a link with the node through the <a class="reference internal" href="../../serialization/index.html#nodekeylinktransaction"><span class="std std-ref">NodeKeyLinkTransactionV1</span></a>.</p>
 <p>Sign the <a class="reference internal" href="../../concepts/harvesting.html#persistentdelegationrequesttransaction"><span class="std std-ref">Persistent Delegation Request Transaction</span></a> with <strong>M</strong> and announce it to the network.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id7">

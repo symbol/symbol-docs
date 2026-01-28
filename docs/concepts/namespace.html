@@ -250,7 +250,7 @@ The name must be <strong>unique in the network</strong>, and has a maximum lengt
 \[duration ≈ \frac{numberOfDays * 86400}{blockGenerationTargetTimeInSeconds}\]</div>
 <p>By default, <code class="docutils literal notranslate"><span class="pre">blockGenerationTargetTimeInSeconds</span></code> is <strong>30</strong> seconds.</p>
 <p>During the <strong>renting period</strong>, the namespace creator can create subnamespaces, alias accounts and mosaics.
-The creator can also <strong>extend the rental</strong> by sending a <a class="reference internal" href="../serialization/index.html#namespaceregistrationtransaction"><span class="std std-ref">NamespaceRegistrationTransaction</span></a> with the desired number of additional blocks.</p>
+The creator can also <strong>extend the rental</strong> by sending a <a class="reference internal" href="../serialization/index.html#namespaceregistrationtransaction"><span class="std std-ref">NamespaceRegistrationTransactionV1</span></a> with the desired number of additional blocks.</p>
 <p>The network can define a <strong>grace period</strong> that enables the namespace creator to renew the namespace past the expiration date before it becomes publicly available for registration.
 Symbol’s public network has set the <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">grace period</span></a> to <strong>30</strong> days.</p>
 <p>When the grace period ends, the namespace is <strong>deleted</strong>.
@@ -322,7 +322,7 @@ For example, you can create the subnamespaces <code class="docutils literal notr
 </section>
 <section id="alias">
 <span id="id1"></span><h2>Alias<a class="headerlink" href="#alias" title="Permalink to this heading"></a></h2>
-<p><a class="reference internal" href="../serialization/index.html#addressaliastransaction"><span class="std std-ref">AddressAliasTransaction</span></a> link namespaces to accounts and mosaics.
+<p><a class="reference internal" href="../serialization/index.html#addressaliastransaction"><span class="std std-ref">AddressAliasTransactionV1</span></a> link namespaces to accounts and mosaics.
 An alias or its linked asset can be used interchangeably when sending a transaction.
 Using the alias makes <strong>long addresses rememberable</strong> and <strong>mosaics recognizable</strong>.</p>
 <p>The creator of the namespace can <a class="reference internal" href="../guides/namespace/link-a-namespace-to-a-mosaic.html"><span class="doc">link the namespace</span></a> to an account or mosaic.
@@ -338,7 +338,7 @@ This link will be editable, so the creator may unlink a previously set alias and
 <section id="rental-fee">
 <span id="namespace-rental-fee"></span><h2>Rental fee<a class="headerlink" href="#rental-fee" title="Permalink to this heading"></a></h2>
 <p>An account willing to register a namespace or extend its duration has to pay a rental fee in addition to the <a class="reference internal" href="fees.html"><span class="doc">transaction fee</span></a>.
-Both fees will be deducted from the account’s balance after the announcement of a valid <a class="reference internal" href="../serialization/index.html#namespaceregistrationtransaction"><span class="std std-ref">NamespaceRegistrationTransaction</span></a>.</p>
+Both fees will be deducted from the account’s balance after the announcement of a valid <a class="reference internal" href="../serialization/index.html#namespaceregistrationtransaction"><span class="std std-ref">NamespaceRegistrationTransactionV1</span></a>.</p>
 <p>The <a class="reference internal" href="../api.html"><span class="doc">REST Gateway</span></a> provides an endpoint to get an estimation of how much network currency will cost you to register a namespace:</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id5">
@@ -417,15 +417,15 @@ Both fees will be deducted from the account’s balance after the announcement o
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x414E</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#namespaceregistrationtransaction"><span class="std std-ref">NamespaceRegistrationTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#namespaceregistrationtransaction"><span class="std std-ref">NamespaceRegistrationTransactionV1</span></a></p></td>
 <td><p>Register a namespace to organize your assets.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x424E</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#addressaliastransaction"><span class="std std-ref">AddressAliasTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#addressaliastransaction"><span class="std std-ref">AddressAliasTransactionV1</span></a></p></td>
 <td><p>Attach a namespace name to an account.</p></td>
 </tr>
 <tr class="row-even"><td><p>0x434E</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicaliastransaction"><span class="std std-ref">MosaicAliasTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicaliastransaction"><span class="std std-ref">MosaicAliasTransactionV1</span></a></p></td>
 <td><p>Attach a namespace name to a mosaic.</p></td>
 </tr>
 </tbody>

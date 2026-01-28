@@ -360,7 +360,7 @@ This multisig configuration permits Alice and Bob to share funds in a separate a
 </div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Define the a <a class="reference internal" href="../../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a> as follows:</p></li>
+<li><p>Define the a <a class="reference internal" href="../../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransactionV1</span></a> as follows:</p></li>
 </ol>
 <table class="docutils align-default">
 <colgroup>
@@ -612,7 +612,7 @@ If more than one cosignature is required to announce the transaction (e.g., the 
 </div>
 <p>2. When an AggregateTransaction is bonded, an account needs to lock at least <code class="docutils literal notranslate"><span class="pre">10</span></code> <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> to prevent spamming the network.
 Once all cosigners sign the transaction, the amount of <code class="docutils literal notranslate"><span class="pre">symbol.xym</span></code> locked becomes available again in the account that has locked the funds.
-After <a class="reference internal" href="../../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a> has been confirmed, <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">announce the AggregateBondedTransaction</span></a> with a cosignatory.
+After <a class="reference internal" href="../../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransactionV1</span></a> has been confirmed, <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">announce the AggregateBondedTransaction</span></a> with a cosignatory.
 In our case, we will sign the transaction with Bob’s account.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id17">

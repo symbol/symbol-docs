@@ -257,7 +257,7 @@ If the inner transaction setup is valid, and there is no validation error, the t
 <p>Transactions can remain in the partial state for up to <strong>48 hours</strong>: This is the deadline all cosigners have to provide their signatures before the aggregate bonded transaction expires.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Before announcing an <strong>Aggregate Bonded Transaction</strong>, an account must announce and get confirmed a <a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a> locking <strong>10 XYM</strong>. This is refunded when the transaction is confirmed and serves as an anti-SPAM mechanism.</p>
+<p>Before announcing an <strong>Aggregate Bonded Transaction</strong>, an account must announce and get confirmed a <a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransactionV1</span></a> locking <strong>10 XYM</strong>. This is refunded when the transaction is confirmed and serves as an anti-SPAM mechanism.</p>
 </div>
 <figure class="align-center" id="id5">
 <img alt="../_images/aggregate-bonded-transaction-cycle.png" src="../_images/aggregate-bonded-transaction-cycle.png" style="width: 900px;" />
@@ -321,11 +321,11 @@ Now, Alice and Bob can use Symbol’s public blockchain without ever having to b
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x4141</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#aggregatecompletetransaction"><span class="std std-ref">AggregateCompleteTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#aggregatecompletetransaction"><span class="std std-ref">AggregateCompleteTransactionV1</span></a></p></td>
 <td><p>Send transactions in batches to different accounts.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x4241</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransactionV1</span></a></p></td>
 <td><p>Propose an arrangement of transactions between different accounts.</p></td>
 </tr>
 <tr class="row-even"><td><p>–</p></td>
@@ -333,7 +333,7 @@ Now, Alice and Bob can use Symbol’s public blockchain without ever having to b
 <td><p>Cosign an AggregateBondedTransaction.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x4148</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#hashlocktransaction"><span class="std std-ref">HashLockTransactionV1</span></a></p></td>
 <td><p>Lock a deposit needed to announce aggregate bonded transactions.</p></td>
 </tr>
 </tbody>

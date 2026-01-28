@@ -239,7 +239,7 @@
 <section id="activation-through-symbol-bootstrap">
 <h2>Activation through Symbol Bootstrap<a class="headerlink" href="#activation-through-symbol-bootstrap" title="Permalink to this heading"></a></h2>
 <p>If you have followed the <a class="reference internal" href="../network/running-a-symbol-node.html"><span class="doc">Running a node</span></a> guide then you have used <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> to create your node. <strong>The out-of-the-box presets enable remote harvesting by default</strong> so there is nothing you need to do if you enabled harvesting when following that guide.</p>
-<p>To clarify, <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> automatically creates a remote account (labelled <code class="docutils literal notranslate"><span class="pre">remote</span></code> in the <code class="docutils literal notranslate"><span class="pre">addresses.yml</span></code> file) and sets it as the signer of the new blocks (using its private key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> property). Then, the <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">link</span></code> command announces the <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> transactions required to finish the activation.</p>
+<p>To clarify, <a href="https://github.com/fboucquez/symbol-bootstrap" target="_blank">Symbol Bootstrap</a> automatically creates a remote account (labelled <code class="docutils literal notranslate"><span class="pre">remote</span></code> in the <code class="docutils literal notranslate"><span class="pre">addresses.yml</span></code> file) and sets it as the signer of the new blocks (using its private key in the <code class="docutils literal notranslate"><span class="pre">harvesterSigningPrivateKey</span></code> property). Then, the <code class="docutils literal notranslate"><span class="pre">symbol-bootstrap</span> <span class="pre">link</span></code> command announces the <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a> transactions required to finish the activation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is worth noting that, although <strong>this is NOT recommended</strong>, you can omit the remote account and sign the new block <strong>directly with your main account</strong> by using a <a class="reference internal" href="../network/using-symbol-bootstrap.html#symbol-bootstrap-presets"><span class="std std-ref">custom preset file</span></a> with this line:</p>
@@ -256,7 +256,7 @@
 <p>This will be done using the <a class="reference internal" href="../../cli.html"><span class="doc">symbol-cli</span></a> tool. The required steps are:</p>
 <ol class="arabic simple">
 <li><p>Set the <strong>remote account</strong> as the harvester in the node configuration.</p></li>
-<li><p>Announce an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a> linking your main and your remote accounts.</p></li>
+<li><p>Announce an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a> linking your main and your remote accounts.</p></li>
 <li><p>(Optional) Configure the <strong>VRF account</strong> if it is not already set.</p></li>
 </ol>
 <section id="step-1-setup-the-remote-account">
@@ -299,7 +299,7 @@
 </pre></div>
 </div>
 </div>
-<p>Write the <strong>private key</strong> in the <code class="docutils literal notranslate"><span class="pre">harvesterVrfPrivateKey</span></code> field of the configuration file, and announce a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a> to link the VRF and main accounts:</p>
+<p>Write the <strong>private key</strong> in the <code class="docutils literal notranslate"><span class="pre">harvesterVrfPrivateKey</span></code> field of the configuration file, and announce a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a> to link the VRF and main accounts:</p>
 <div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction vrfkeylink --action Link -u &lt;PUBLIC-VRF-KEY&gt; --sync
 </pre></div>
 </div>

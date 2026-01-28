@@ -57,7 +57,7 @@ Recorded receipts
     **Core**
     -------------------------------------------------------------------
     -------------------------------------------------------------------
-    ``0x2143`` ``Harvest_Fee``              :ref:`balancechangereceipt`
+    ``0x2143`` ``Harvest_Fee``              :ref:`harvestfeereceipt`
     The recipient, account and amount of fees received for harvesting a block. It is recorded when a block is :doc:`harvested <harvesting>`.
     -------------------------------------------------------------------
     ``0x5143`` ``Inflation``                :ref:`inflationreceipt`
@@ -75,46 +75,46 @@ Recorded receipts
     **Mosaic**
     -------------------------------------------------------------------
     -------------------------------------------------------------------
-    ``0x414D`` ``Mosaic_Expired``           :ref:`mosaicexpiryreceipt`
+    ``0x414D`` ``Mosaic_Expired``           :ref:`mosaicexpiredreceipt`
     The identifier of the mosaic expiring in this block. It is recorded when a :doc:`mosaic <mosaic>` lifetime elapses.
     -------------------------------------------------------------------
-    ``0x124D`` ``Mosaic_Rental_Fee``        :ref:`balancetransferreceipt`
+    ``0x124D`` ``Mosaic_Rental_Fee``        :ref:`mosaicrentalfeereceipt`
     The sender and recipient of the mosaic id and amount representing the cost of registering the mosaic. It is recorded when a mosaic is registered.
     -------------------------------------------------------------------
     **Namespace**
     -------------------------------------------------------------------
     -------------------------------------------------------------------
-    ``0x414E`` ``Namespace_Expired``        :ref:`namespaceexpiryreceipt`
+    ``0x414E`` ``Namespace_Expired``        :ref:`namespaceexpiredreceipt`
     The identifier of the namespace expiring in this block. It is recorded when the :doc:`namespace <namespace>` lifetime elapses.
     -------------------------------------------------------------------
-    ``0x424E`` ``Namespace_Deleted``        :ref:`namespaceexpiryreceipt`
+    ``0x424E`` ``Namespace_Deleted``        :ref:`namespaceexpiredreceipt`
     The identifier of the namespace deleted in this block. It is recorded when the :doc:`namespace <namespace>` grace period elapses.
     -------------------------------------------------------------------
-    ``0x134E`` ``Namespace_Rental_Fee``     :ref:`balancetransferreceipt`
+    ``0x134E`` ``Namespace_Rental_Fee``     :ref:`namespacerentalfeereceipt`
     The sender and recipient of the mosaic id and amount representing the cost of extending the namespace. It is recorded when a namespace is registered or its duration is extended.
     -------------------------------------------------------------------
     **HashLock**
     -------------------------------------------------------------------
     -------------------------------------------------------------------
-    ``0x3148`` ``LockHash_Created``         :ref:`balancechangereceipt`
+    ``0x3148`` ``LockHash_Created``         :ref:`lockhashcreatedfeereceipt`
     The lockhash sender, mosaic id and amount locked. It is recorded when a valid :ref:`hashlocktransaction` is announced.
     -------------------------------------------------------------------
-    ``0x2248`` ``LockHash_Completed``       :ref:`balancechangereceipt`
+    ``0x2248`` ``LockHash_Completed``       :ref:`lockhashcompletedfeereceipt`
     The hashlock sender, mosaic id and amount locked that is returned. It is recorded when an AggregateBondedTransaction linked to the hash completes.
     -------------------------------------------------------------------
-    ``0x2348`` ``LockHash_Expired``         :ref:`balancechangereceipt`
+    ``0x2348`` ``LockHash_Expired``         :ref:`lockhashexpiredfeereceipt`
     The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a lock hash expires.
     -------------------------------------------------------------------
     **SecretLock**
     -------------------------------------------------------------------
     -------------------------------------------------------------------
-    ``0x3152`` ``LockSecret_Created``       :ref:`balancechangereceipt`
+    ``0x3152`` ``LockSecret_Created``       :ref:`locksecretcreatedfeereceipt`
     The secretlock sender, mosaic id and amount locked. It is recorded when a valid :ref:`secretlocktransaction` is announced.
     -------------------------------------------------------------------
-    ``0x2252`` ``LockSecret_Completed``     :ref:`balancechangereceipt`
+    ``0x2252`` ``LockSecret_Completed``     :ref:`locksecretcompletedfeereceipt`
     The secretlock recipient, mosaic id and amount locked. It is recorded when a secretlock is proved.
     -------------------------------------------------------------------
-    ``0x2352`` ``LockSecret_Expired``       :ref:`balancechangereceipt`
+    ``0x2352`` ``LockSecret_Expired``       :ref:`locksecretexpiredfeereceipt`
     The account receiving the locked mosaic, the mosaic id and the amount. It is recorded when a secretlock expires.
     -------------------------------------------------------------------
     ========== ============================ ===========================

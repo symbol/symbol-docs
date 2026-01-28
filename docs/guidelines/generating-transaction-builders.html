@@ -262,7 +262,7 @@ The library generates the leanest code necessary to serialize and deserialize de
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <p>Under the <code class="docutils literal notranslate"><span class="pre">catbuffer-schemas</span></code> folder of the catbuffer repository, you can find the entities’ data structure. With the help of a code generator, you can produce the leanest code necessary to serialize and deserialize those entities.</p>
-<p>For example, run the following command to generate C++ transaction builders for a <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransaction</span></a>:</p>
+<p>For example, run the following command to generate C++ transaction builders for a <a class="reference internal" href="../serialization/index.html#transfertransaction"><span class="std std-ref">TransferTransactionV1</span></a>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py<span class="w"> </span>--schema<span class="w"> </span>symbol/transfer/transfer.cats<span class="w"> </span>--generator<span class="w"> </span>cpp_builder
 </pre></div>
 </div>

@@ -250,7 +250,7 @@
 <section id="initial-supply">
 <h3>Initial supply<a class="headerlink" href="#initial-supply" title="Permalink to this heading"></a></h3>
 <p>Indicates the amount of mosaics initially in circulation, in <strong>absolute units</strong>.</p>
-<p>This amount can be later changed by a <a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a> if the <strong>Supply mutable</strong> flag (see below) of the mosaic is set to true.</p>
+<p>This amount can be later changed by a <a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransactionV1</span></a> if the <strong>Supply mutable</strong> flag (see below) of the mosaic is set to true.</p>
 <p>The total supply must be in the <strong>0</strong> to <strong>9,000,000,000,000,000</strong> range in absolute units.</p>
 </section>
 <section id="duration">
@@ -270,7 +270,7 @@
 <section id="supply-mutable">
 <h3>Supply mutable<a class="headerlink" href="#supply-mutable" title="Permalink to this heading"></a></h3>
 <p>If set to true, the mosaic supply can change at a later point.
-In this case, the mosaic creator is allowed to redefine the total mosaic supply with a <a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a>.
+In this case, the mosaic creator is allowed to redefine the total mosaic supply with a <a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransactionV1</span></a>.
 The transaction increases or decreases the mosaic supply in <code class="docutils literal notranslate"><span class="pre">delta</span></code> units.</p>
 <p>To decrease the mosaic supply, the mosaic creator account must own at least <code class="docutils literal notranslate"><span class="pre">delta</span></code> units.
 This means that the mosaic creator cannot remove mosaics from other account balances, even if the supply mutable property is enabled.</p>
@@ -306,7 +306,7 @@ Otherwise, the mosaic can only be transferred to or from the mosaic creator.</p>
 <section id="creation-fee">
 <span id="mosaic-rental-fee"></span><h2>Creation fee<a class="headerlink" href="#creation-fee" title="Permalink to this heading"></a></h2>
 <p>An account willing to create a mosaic has to pay a rental fee in addition to the <a class="reference internal" href="fees.html"><span class="doc">transaction fee</span></a>.
-Both fees will be deducted from the account’s balance after the announcement of a valid <a class="reference internal" href="../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransaction</span></a>.</p>
+Both fees will be deducted from the account’s balance after the announcement of a valid <a class="reference internal" href="../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransactionV1</span></a>.</p>
 <p>The <a class="reference internal" href="../api.html"><span class="doc">REST Gateway</span></a> provides an endpoint to get an estimation of how much network currency will cost you to create a mosaic:</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id3">
@@ -353,15 +353,15 @@ However, <strong>the network dynamically adjusts the mosaic rental fee</strong> 
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x414D</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicdefinitiontransaction"><span class="std std-ref">MosaicDefinitionTransactionV1</span></a></p></td>
 <td><p>Create a new mosaic.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x424D</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicsupplychangetransaction"><span class="std std-ref">MosaicSupplyChangeTransactionV1</span></a></p></td>
 <td><p>Change the mosaic total supply.</p></td>
 </tr>
 <tr class="row-even"><td><p>0x434D</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicsupplyrevocationtransaction"><span class="std std-ref">MosaicSupplyRevocationTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicsupplyrevocationtransaction"><span class="std std-ref">MosaicSupplyRevocationTransactionV1</span></a></p></td>
 <td><p>Reclaim transferred mosaics.</p></td>
 </tr>
 </tbody>

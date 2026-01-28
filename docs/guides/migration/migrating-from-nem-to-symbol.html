@@ -372,7 +372,7 @@ Symbol mosaics are configured to have their own <code class="docutils literal no
 </section>
 <section id="namespaces">
 <h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading"></a></h2>
-<p>Namespaces can still refer to mosaics using <a class="reference internal" href="../../serialization/index.html#mosaicaliastransaction"><span class="std std-ref">MosaicAliasTransaction</span></a>.
+<p>Namespaces can still refer to mosaics using <a class="reference internal" href="../../serialization/index.html#mosaicaliastransaction"><span class="std std-ref">MosaicAliasTransactionV1</span></a>.
 A namespace owner can attach either of an account or a mosaic id to one of its namespaces.
 The namespace information endpoint will return the linked object in the alias field.</p>
 <p>Also, Symbol root namespaces have a <code class="docutils literal notranslate"><span class="pre">duration</span></code> field that is <strong>expressed in a count of blocks</strong> which means yearly renewal is not mandatory anymore.</p>
@@ -403,7 +403,7 @@ To get the real identifier behind an aliased address or mosaic, the client appli
 <li><p><strong>Minimum approval</strong>: Defines how many cosignatories are required for any other type of transaction.</p></li>
 </ul>
 <p>Additionally, cosignatories that are added to multisignature accounts now have to confirm the modification by sending a <strong>cosignature</strong> (opt-in process).
-In order to facilitate this process, transactions with type <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> must be wrapped in an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">Aggregate Transaction</span></a>.</p>
+In order to facilitate this process, transactions with type <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransactionV1</span></a> must be wrapped in an <a class="reference internal" href="../../concepts/aggregate-transaction.html#aggregate-transaction"><span class="std std-ref">Aggregate Transaction</span></a>.</p>
 <ol class="arabic simple" start="2">
 <li><p>Multi-Signature transactions work with <a class="reference internal" href="../../concepts/aggregate-transaction.html"><span class="doc">aggregate transactions</span></a>.</p></li>
 </ol>

@@ -245,7 +245,7 @@ This property appears disabled by default, as it is undesirable for autonomous t
 <h2>Global restriction<a class="headerlink" href="#global-restriction" title="Permalink to this heading"></a></h2>
 <p>The mosaic global restrictions are the <strong>network-wide rules</strong> that will determine whether an account will be able to send or receive a given mosaic.</p>
 <p>One mosaic can handle up to <code class="docutils literal notranslate"><span class="pre">20</span></code> global restrictions, being this parameter <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">configurable per network</span></a>.
-A <a class="reference internal" href="../serialization/index.html#mosaicglobalrestrictiontransaction"><span class="std std-ref">MosaicGlobalRestrictionTransaction</span></a> is composed of:</p>
+A <a class="reference internal" href="../serialization/index.html#mosaicglobalrestrictiontransaction"><span class="std std-ref">MosaicGlobalRestrictionTransactionV1</span></a> is composed of:</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Property</p></th>
@@ -280,7 +280,7 @@ The referenced mosaic and the restricted mosaic do not necessarily have to be cr
 <h2>Address restriction<a class="headerlink" href="#address-restriction" title="Permalink to this heading"></a></h2>
 <p>Enabling accounts to transact with the token is similar to the process of adding elevated permissions to a user in a company computer network.</p>
 <p>The mosaic creator can <strong>modify the permissions of an account</strong> by sending a mosaic restriction transaction targeting the account address.
-The <a class="reference internal" href="../serialization/index.html#mosaicaddressrestrictiontransaction"><span class="std std-ref">MosaicAddressRestrictionTransaction</span></a> is composed of:</p>
+The <a class="reference internal" href="../serialization/index.html#mosaicaddressrestrictiontransaction"><span class="std std-ref">MosaicAddressRestrictionTransactionV1</span></a> is composed of:</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Property</p></th>
@@ -388,11 +388,11 @@ Nevertheless, Alice⁠—who has not provided a valid proof of address—will no
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x4151</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicglobalrestrictiontransaction"><span class="std std-ref">MosaicGlobalRestrictionTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicglobalrestrictiontransaction"><span class="std std-ref">MosaicGlobalRestrictionTransactionV1</span></a></p></td>
 <td><p>Set global rules to transfer a restrictable mosaic.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x4251</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#mosaicaddressrestrictiontransaction"><span class="std std-ref">MosaicAddressRestrictionTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#mosaicaddressrestrictiontransaction"><span class="std std-ref">MosaicAddressRestrictionTransactionV1</span></a></p></td>
 <td><p>Set address specific rules to transfer a restrictable mosaic.</p></td>
 </tr>
 </tbody>

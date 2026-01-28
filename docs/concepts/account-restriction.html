@@ -231,7 +231,7 @@
              <section id="account-restriction">
 <h1>Account Restriction<a class="headerlink" href="#account-restriction" title="Permalink to this heading"></a></h1>
 <p><a class="reference internal" href="account.html"><span class="doc">Accounts</span></a> may configure a set of smart rules to block announcing or receiving transactions given a series of restrictions.</p>
-<p>The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific <a class="reference internal" href="../serialization/index.html#accountaddressrestrictiontransaction"><span class="std std-ref">AccountAddressRestrictionTransaction</span></a>.</p>
+<p>The account owners—plural in case of multisig accounts—can edit the account restrictions at a later time announcing the specific <a class="reference internal" href="../serialization/index.html#accountaddressrestrictiontransaction"><span class="std std-ref">AccountAddressRestrictionTransactionV1</span></a>.</p>
 <p>Symbol’s public network enables accounts to define up to <code class="docutils literal notranslate"><span class="pre">512</span></code> restrictions per account and restriction type, being this parameter <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">configurable per network</span></a>.</p>
 <section id="address-restriction">
 <h2>Address restriction<a class="headerlink" href="#address-restriction" title="Permalink to this heading"></a></h2>
@@ -328,15 +328,15 @@ Doing so, Alice double-checks that the funds held in the main account are not go
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x4150</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#accountaddressrestrictiontransaction"><span class="std std-ref">AccountAddressRestrictionTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountaddressrestrictiontransaction"><span class="std std-ref">AccountAddressRestrictionTransactionV1</span></a></p></td>
 <td><p>Allow or block incoming and outgoing transactions for a given a set of addresses.</p></td>
 </tr>
 <tr class="row-odd"><td><p>0x4250</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#accountmosaicrestrictiontransaction"><span class="std std-ref">AccountMosaicRestrictionTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountmosaicrestrictiontransaction"><span class="std std-ref">AccountMosaicRestrictionTransactionV1</span></a></p></td>
 <td><p>Allow or block incoming transactions containing a given set of mosaics.</p></td>
 </tr>
 <tr class="row-even"><td><p>0x4350</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#accountoperationrestrictiontransaction"><span class="std std-ref">AccountOperationRestrictionTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#accountoperationrestrictiontransaction"><span class="std std-ref">AccountOperationRestrictionTransactionV1</span></a></p></td>
 <td><p>Allow or block outgoing transactions by transaction type.</p></td>
 </tr>
 </tbody>

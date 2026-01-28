@@ -275,7 +275,7 @@
 </section>
 <section id="prepare-the-transaction">
 <h2>Prepare the transaction<a class="headerlink" href="#prepare-the-transaction" title="Permalink to this heading"></a></h2>
-<p>So far, the node’s main account is a regular account. A <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> will be announced that will turn it into a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">Multisig Account</span></a> with a single cosignatory: the <strong>external account</strong>.</p>
+<p>So far, the node’s main account is a regular account. A <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransactionV1</span></a> will be announced that will turn it into a <a class="reference internal" href="../../concepts/multisig-account.html"><span class="doc">Multisig Account</span></a> with a single cosignatory: the <strong>external account</strong>.</p>
 <p>This means that <strong>any operation</strong> on the main account will <strong>require the signature</strong> of the external account.</p>
 <p>This transaction will be prepared by the service provider using <code class="docutils literal notranslate"><span class="pre">symbol-cli</span></code> and sent to the customer for signing.</p>
 <p>Notes on this transaction:</p>

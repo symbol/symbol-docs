@@ -240,12 +240,6 @@ Each block can contain up to <code class="docutils literal notranslate"><span cl
 <p>Nodes stores blocks in a serialized form as follows:</p>
 <p><strong>Version</strong>: 0x01</p>
 <p><strong>EntityType</strong>: 0x8143</p>
-<p><strong>Inlines:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../serialization/index.html#sizeprefixedentity"><span class="std std-ref">SizePrefixedEntity</span></a></p></li>
-<li><p><a class="reference internal" href="../serialization/index.html#verifiableentity"><span class="std std-ref">VerifiableEntity</span></a></p></li>
-<li><p><a class="reference internal" href="../serialization/index.html#entitybody"><span class="std std-ref">EntityBody</span></a></p></li>
-</ul>
 <table class="docutils align-default" id="block-header">
 <colgroup>
 <col style="width: 30%" />
@@ -335,7 +329,7 @@ Before blocks reach finality, they still might need to be rolled back in the pre
 <ul class="simple">
 <li><p>Be the owner of a node.</p></li>
 <li><p>Have at least <a class="reference internal" href="../guides/network/configuring-network-properties.html#config-network-properties"><span class="std std-ref">minVoterBalance</span></a> network currency units.</p></li>
-<li><p>Be registered as a voter by announcing a <a class="reference internal" href="../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a> to the network.</p></li>
+<li><p>Be registered as a voter by announcing a <a class="reference internal" href="../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransactionV1</span></a> to the network.</p></li>
 </ul>
 </div>
 <p>When there is low connectivity, or many bad actors, finalization can take longer than usual and create large <a class="reference internal" href="#rollbacks"><span class="std std-ref">Rollbacks</span></a>. However, no finalized block will ever be rolled back.</p>
@@ -358,7 +352,7 @@ Before blocks reach finality, they still might need to be rolled back in the pre
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0x4143</p></td>
-<td><p><a class="reference internal" href="../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a></p></td>
+<td><p><a class="reference internal" href="../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransactionV1</span></a></p></td>
 <td><p>Link an account with a BLS public key. Required for node operators willing to vote finalized blocks.</p></td>
 </tr>
 </tbody>
@@ -387,7 +381,7 @@ Before blocks reach finality, they still might need to be rolled back in the pre
 <div class="col-md-2">
     <div class="bs-sidenav secondary" role="complementary">
     
-        <div class="edit-github"><p class="git-info">Last update 2021&#8209;12&#8209;14</p>
+        <div class="edit-github"><p class="git-info">Last update 2026&#8209;01&#8209;28</p>
     <a href="https://github.com/symbol/symbol-docs/edit/main/source/concepts/block.rst" rel="nofollow"> <i class="fab fa-github"></i> Improve this page</a>
     <hr/>
 </div>
@@ -417,7 +411,7 @@ Before blocks reach finality, they still might need to be rolled back in the pre
 <div class="feedback-footer row hidden-sm hidden-xs">
     <div class="col-xs-4">
     <p class="git-info" style="text-align: right;"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
-            on 2021&#8209;12&#8209;14.</p>
+            on 2026&#8209;01&#8209;28.</p>
     
     </div>
     <div class="col-xs-5 feedback-center">
@@ -446,7 +440,7 @@ Before blocks reach finality, they still might need to be rolled back in the pre
 </div>
 <div class="feedback-footer hidden-lg hidden-md feedback-center">
     <p class="git-info"><img src="https://avatars.githubusercontent.com/u/10949043?v=4" class="git-info-image" width="32" height="32">Last updated by <a href="https://github.com/segfaultxavi" target="_blank" rel="noopener noreferrer">Xavi Artigas</a>
-            on 2021&#8209;12&#8209;14.</p>
+            on 2026&#8209;01&#8209;28.</p>
     
     <p>
         Did you find what you were looking for?

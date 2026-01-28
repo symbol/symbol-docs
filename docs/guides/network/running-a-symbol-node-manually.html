@@ -518,7 +518,7 @@ loaded voting public key: ****************
 </div>
 <section id="remote-key">
 <h4>Remote key<a class="headerlink" href="#remote-key" title="Permalink to this heading"></a></h4>
-<p>You configured the node to sign created blocks using the <strong>Remote</strong> key, but the harvesting fees should go to your <strong>Main</strong> account. This is accomplished by announcing an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransaction</span></a>:</p>
+<p>You configured the node to sign created blocks using the <strong>Remote</strong> key, but the harvesting fees should go to your <strong>Main</strong> account. This is accomplished by announcing an <a class="reference internal" href="../../serialization/index.html#accountkeylinktransaction"><span class="std std-ref">AccountKeyLinkTransactionV1</span></a>:</p>
 <div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction accountkeylink --sync --action Link \
            --max-fee 1000000 --mode normal
 <span class="gi">✔ </span>Enter your wallet password: ... *********
@@ -538,7 +538,7 @@ loaded voting public key: ****************
 </section>
 <section id="vrf-key">
 <h4>VRF key<a class="headerlink" href="#vrf-key" title="Permalink to this heading"></a></h4>
-<p>In order to be <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">eligible for harvesting</span></a> an account must have linked a VRF key. This is accomplished by announcing a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransaction</span></a>:</p>
+<p>In order to be <a class="reference internal" href="../../concepts/harvesting.html#account-eligibility"><span class="std std-ref">eligible for harvesting</span></a> an account must have linked a VRF key. This is accomplished by announcing a <a class="reference internal" href="../../serialization/index.html#vrfkeylinktransaction"><span class="std std-ref">VrfKeyLinkTransactionV1</span></a>:</p>
 <div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction vrfkeylink --sync --action Link \
                        --max-fee 1000000 --mode normal
 <span class="gi">✔ </span>Enter your wallet password: ... *********
@@ -551,7 +551,7 @@ loaded voting public key: ****************
 </section>
 <section id="voting-key">
 <span id="manual-enable-voting"></span><h4>Voting key<a class="headerlink" href="#voting-key" title="Permalink to this heading"></a></h4>
-<p>If your node is to be a <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">voting node</span></a> it must link the voting key you generated above. The link is accomplished by announcing a <a class="reference internal" href="../../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransaction</span></a>:</p>
+<p>If your node is to be a <a class="reference internal" href="../../concepts/block.html#finalization"><span class="std std-ref">voting node</span></a> it must link the voting key you generated above. The link is accomplished by announcing a <a class="reference internal" href="../../serialization/index.html#votingkeylinktransaction"><span class="std std-ref">VotingKeyLinkTransactionV1</span></a>:</p>
 <div class="highlight-symbol-cli notranslate"><div class="highlight"><pre><span></span>symbol-cli transaction votingkeylink --sync --action Link \
             --max-fee 1000000 --mode normal
 <span class="gi">✔ </span>Enter your wallet password: ... *********

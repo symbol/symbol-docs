@@ -350,7 +350,7 @@ Then, open the account that will be converted into multisig using its private ke
 </div>
 </div>
 </div>
-<p>2. Create a <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransaction</span></a> to convert the shared account into a multisig account.
+<p>2. Create a <a class="reference internal" href="../../serialization/index.html#multisigaccountmodificationtransaction"><span class="std std-ref">MultisigAccountModificationTransactionV1</span></a> to convert the shared account into a multisig account.
 Since we want to create a 1-of-2 multisig account, let’s set the minimum required signatures to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id4">
@@ -380,7 +380,7 @@ Since we want to create a 1-of-2 multisig account, let’s set the minimum requi
 </div>
 </div>
 </div>
-<p>3. Create an <a class="reference internal" href="../../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransaction</span></a>, wrapping the <strong>MultisigAccountModificationTransaction</strong> defined in the previous step.
+<p>3. Create an <a class="reference internal" href="../../serialization/index.html#aggregatebondedtransaction"><span class="std std-ref">AggregateBondedTransactionV1</span></a>, wrapping the <strong>MultisigAccountModificationTransaction</strong> defined in the previous step.
 This action is necessary because Alice and Bob must opt-in to become cosignatories of the new multisig account.</p>
 <div class="example-code docutils container">
 <div class="literal-block-wrapper docutils container" id="id6">
