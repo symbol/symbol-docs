@@ -242,7 +242,7 @@ class SerializationCommand(Command):
         print('    <tr><td class="side-info-icon">&varr;</td><td>Size: {}</td></tr>'.format(make_size_label(size, var)), file=html_file)
         if name in self.type_schema_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
-                '<td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/{}/{}#L{}">schema</a></td></tr>'.format( \
+                '<td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol{}/{}#L{}">schema</a></td></tr>'.format( \
                     self.source_api, self.type_schema_locations[name][0], self.type_schema_locations[name][1]), file=html_file)
         if name in self.type_catapult_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
