@@ -358,6 +358,10 @@ linkcheck_ignore = [
     r'https://par.nsf.gov/*', # unsafe legacy renegotiation disabled
     r'https://github.com/*', #  Anchor not found
     r'https://www.exodus.com/support/*', # 403 Client Error
+    r'https://davecube-com.medium.com/*', # 403 Client Error, but valid
+    r'https://medium.com/*', # 403 Client Error, but valid
+    r'https://www.npmjs.com/*', # 403 Client Error, but valid
+    r'http://www.gnu.org/*' # 403 Client Error, but valid
 ]
 linkcheck_anchors_ignore = [r'L\d+']
 
