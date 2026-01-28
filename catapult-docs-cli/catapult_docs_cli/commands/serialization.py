@@ -1,6 +1,6 @@
 import re
 import os
-import ruamel.yaml as yaml
+from ruamel.yaml import YAML
 from markdown import markdown, Markdown
 from .base import Command
 from io import StringIO
@@ -142,6 +142,9 @@ class SerializationCommand(Command):
         else:
             # Structs
             for f in element['layout']:
+                if 'condition' in f:
+                    var = 1
+                    continue
                 if f['type'] == 'byte':
                     field_size = 1
                     field_var = 0
@@ -212,6 +215,9 @@ class SerializationCommand(Command):
         """
         name = element['name']
         print('.. _{}:'.format(make_anchor(name)), file=index_file)
+        if name.endswith('V1'):
+            # Add unversioned labels too, for docs not referencing the new versioned names
+            print('.. _{}:'.format(make_anchor(name[:-2])), file=index_file)
         print(file=index_file)
         print(name, file=index_file)
         print('=' * len(name), file=index_file)
@@ -304,6 +310,9 @@ class SerializationCommand(Command):
             elif disposition == 'reserved':
                 comment = '<b>reserved</b> {}<br/>'.format(make_keyword(v['value']))
             comment += self.parse_comment(v['comments'])
+            if 'condition' in v:
+                comment += '<b>This field is only present if:</b><br/>{}'.format(
+                    make_keyword(v['condition'] + ' ' + v['condition_operation'] + ' ' + v['condition_value']))
             print('   <div{}>&nbsp;</div>'.format('' if indent < 1 else ' class="indentation-cell"'), file=html_file)
             print('   <div{}>&nbsp;</div>'.format('' if indent < 2 else ' class="indentation-cell"'), file=html_file)
             print('   <div{}>&nbsp;</div>'.format('' if indent < 3 else ' class="indentation-cell"'), file=html_file)
@@ -484,8 +493,18 @@ class SerializationCommand(Command):
         # Read a single YAML file containing all schemas
         with open(self.config['schema']) as f:
             try:
-                self.schema = yaml.safe_load(f)
-            except yaml.YAMLError as exc:
+                yaml = YAML(typ='safe', pure=True)
+                self.schema = yaml.load(f)
+                # Make sure every element has a 'comments' field
+                for e in self.schema:
+                    if 'comments' not in e:
+                        e['comments'] = ''
+                    if 'layout' in e:
+                        for f in e['layout']:
+                            if 'comments' not in f:
+                                f['comments'] = ''
+
+            except Exception as exc:
                 print(exc)
                 return
         # Build types dictionary indexed by type name, for simpler access
