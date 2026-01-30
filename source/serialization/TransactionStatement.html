@@ -1,0 +1,34 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 12+ bytes = 0xc+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol/statements/transaction_statement.cats#L5">schema</a></td></tr>
+    </table></div>
+<p>Collection of receipts scoped to a single source (transaction or block). </p>
+</td></tr></table>
+
+<div class="big-table6">
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">primary_id</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> primary source (e.g. index within the block). </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">secondary_id</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> secondary source (e.g. index within aggregate). </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">receipt_count</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p>Number of receipts. </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">receipts</code></div>
+   <div><a href="/serialization#receipt" title="Receipts provide proof for every state change not retrievable from the block.">Receipt</a>&ZeroWidthSpace;[receipt_count]</div>
+   <div class="description"><p>Receipts. </p></div>
+</div>

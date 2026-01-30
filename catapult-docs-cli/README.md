@@ -62,29 +62,26 @@ Use ``--help`` to obtain help about the available options.
 
 1. Checkout the following git repositories:
 
-   - [catapult-docs-cli](git@github.com:symbol/catapult-docs-cli.git)
-   - [catbuffer-schemas](git@github.com:symbol/catbuffer-schemas.git)
-   - [catbuffer-parser](git@github.com:symbol/catbuffer-parser.git)
-   - [catapult-client](git@github.com:symbol/catapult-client.git)
    - [symbol-docs](git@github.com:symbol/symbol-docs.git)
+   - [symbol](git@github.com:symbol/symbol.git)
 
-2. From within ``catbuffer-parser`` run:
+2. From within ``symbol/catbuffer/parser`` run:
 
    ``` bash
-   python3 -m catparser -s ../catbuffer-schemas/symbol/all.cats -i ../catbuffer-schemas/symbol/ > ../catapult-docs-cli/symbol.yaml
+   python3 -m catparser -s ../schemas/symbol/all.cats -i ../schemas/symbol/ -o ../../../symbol-docs/catapult-docs-cli/symbol.yaml
    ```
 
    This will produce a ``symbol.yaml`` in the ``catapult-docs-cli`` folder.
 
-3. Go to the ``catapult-docs-cli`` folder and run:
+3. Go to the ``symbol-docs/catapult-docs-cli`` folder and run:
 
    ``` bash
-   python3 -m catapult_docs_cli.cli serialization
+   python3 -m catapult_docs_cli.cli serialization -d ../source/serialization/ -a ../../symbol/client/catapult/ -h ../../symbol/catbuffer/schemas/symbol/
    ```
 
    The default values are already configured to work with the above folder structure so you don't need to provide any additional parameters.
 
-   The default output folder is ``../symbol-docs/source/serialization``, and a lot of ``.html`` and one ``.rst`` file will be generated there.
+   The output folder is ``../source/serialization``, and a lot of ``.html`` and one ``.rst`` file will be generated there.
 
 ### Generate serialization docs for NEM
 

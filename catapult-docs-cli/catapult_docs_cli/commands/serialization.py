@@ -1,6 +1,6 @@
 import re
 import os
-import ruamel.yaml as yaml
+from ruamel.yaml import YAML
 from markdown import markdown, Markdown
 from .base import Command
 from io import StringIO
@@ -142,6 +142,9 @@ class SerializationCommand(Command):
         else:
             # Structs
             for f in element['layout']:
+                if 'condition' in f:
+                    var = 1
+                    continue
                 if f['type'] == 'byte':
                     field_size = 1
                     field_var = 0
@@ -194,10 +197,14 @@ class SerializationCommand(Command):
                 # Separate any non-keyword chars (like parenthesis or punctuation) before looking words up
                 # (And special-case an optional ending 's' for things like "MosaicId's")
                 m = re.search(r'^([^a-zA-Z]*)([a-zA-Z]+)([^a-rt-zA-Z]*)$', word)
-                if not ignore_keywords and m and m.group(2) in self.types:
-                    output += m.group(1) + self.type_description(self.types[m.group(2)]) + m.group(3)
+                # Treat unversioned type names as synonyms for V1, so the old docs that use them continue working.
+                if not ignore_keywords and m and (m.group(2) in self.types or m.group(2) + 'V1' in self.types):
+                    name = m.group(2) if m.group(2) in self.types else m.group(2) + 'V1'
+                    output += m.group(1) + self.type_description(self.types[name]) + m.group(3)
                 elif word == '\\note':
                     output += '<br/><b>Note:</b>'
+                elif word == 'deprecated).':
+                    output += '<b>deprecated</b>).'
                 else:
                     output += word
                 output += ' '
@@ -212,6 +219,9 @@ class SerializationCommand(Command):
         """
         name = element['name']
         print('.. _{}:'.format(make_anchor(name)), file=index_file)
+        if name.endswith('V1'):
+            # Add unversioned labels too, for docs not referencing the new versioned names
+            print('.. _{}:'.format(make_anchor(name[:-2])), file=index_file)
         print(file=index_file)
         print(name, file=index_file)
         print('=' * len(name), file=index_file)
@@ -236,11 +246,11 @@ class SerializationCommand(Command):
         print('    <tr><td class="side-info-icon">&varr;</td><td>Size: {}</td></tr>'.format(make_size_label(size, var)), file=html_file)
         if name in self.type_schema_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
-                '<td><a href="https://github.com/symbol/catbuffer-schemas/blob/main/{}/{}#L{}">schema</a></td></tr>'.format( \
+                '<td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol{}/{}#L{}">schema</a></td></tr>'.format( \
                     self.source_api, self.type_schema_locations[name][0], self.type_schema_locations[name][1]), file=html_file)
         if name in self.type_catapult_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
-                '<td><a href="https://github.com/symbol/catapult-client/blob/main/{}#L{}">catapult model</a></td></tr>'.format(
+                '<td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/{}#L{}">catapult model</a></td></tr>'.format(
                     self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]), file=html_file)
         print('    </table></div>', file=html_file)
         print(self.parse_comment(element['comments']), file=html_file)
@@ -304,6 +314,9 @@ class SerializationCommand(Command):
             elif disposition == 'reserved':
                 comment = '<b>reserved</b> {}<br/>'.format(make_keyword(v['value']))
             comment += self.parse_comment(v['comments'])
+            if 'condition' in v:
+                comment += '<b>This field is only present if:</b><br/>{}'.format(
+                    make_keyword(v['condition'] + ' ' + v['condition_operation'] + ' ' + v['condition_value']))
             print('   <div{}>&nbsp;</div>'.format('' if indent < 1 else ' class="indentation-cell"'), file=html_file)
             print('   <div{}>&nbsp;</div>'.format('' if indent < 2 else ' class="indentation-cell"'), file=html_file)
             print('   <div{}>&nbsp;</div>'.format('' if indent < 3 else ' class="indentation-cell"'), file=html_file)
@@ -341,7 +354,7 @@ class SerializationCommand(Command):
         print('Serialization', file=index_file)
         print('#############', file=index_file)
         print(file=index_file)
-        print('The `catbuffer schemas <https://github.com/symbol/catbuffer-schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the `catbuffer-generators <https://github.com/symbol/catbuffer-generators>`_ project, developers can generate builder classes for a given set of programming languages.', file=index_file)
+        print('The `catbuffer schemas <https://github.com/symbol/symbol/tree/main/catbuffer/schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages.', file=index_file)
         print(file=index_file)
 
         # Hide level 4 headers from local TOC using CSS: there's too many of them and I could not find
@@ -484,8 +497,18 @@ class SerializationCommand(Command):
         # Read a single YAML file containing all schemas
         with open(self.config['schema']) as f:
             try:
-                self.schema = yaml.safe_load(f)
-            except yaml.YAMLError as exc:
+                yaml = YAML(typ='safe', pure=True)
+                self.schema = yaml.load(f)
+                # Make sure every element has a 'comments' field
+                for e in self.schema:
+                    if 'comments' not in e:
+                        e['comments'] = ''
+                    if 'layout' in e:
+                        for f in e['layout']:
+                            if 'comments' not in f:
+                                f['comments'] = ''
+
+            except Exception as exc:
                 print(exc)
                 return
         # Build types dictionary indexed by type name, for simpler access

@@ -2,9 +2,7 @@
 Serialization
 #############
 
-The `catbuffer schemas <https://github.com/symbol/symbol/tree/dev/catbuffer/schemas>`_ repository defines how the different Symbol
-entities type should be serialized (for example, Transactions). In combination with the catbuffer generators project, developers can
-generate builder classes for a given set of programming languages.
+The `catbuffer schemas <https://github.com/symbol/symbol/tree/dev/catbuffer/schemas>`_ repository defines how the different Symbol entities type should be serialized (for example, Transactions). In combination with the catbuffer-generators project, developers can generate builder classes for a given set of programming languages.
 
 .. raw:: html
 
@@ -19,7 +17,7 @@ Basic Types
    <div class="big-table3">
    <div id="amount"><b>Amount</b></div>
    <div>8&nbsp;ubytes</div>
-   <div class="description"><p>A quantity of mosaics in <a href="/concepts/mosaic.html#divisibility">absolute units</a>. <br/>It can only be positive or zero. Negative quantities must be indicated by other means (See for example <a href="/serialization#mosaicsupplychangetransaction" title="Change the total supply of a mosaic.">MosaicSupplyChangeTransaction</a> and <a href="/serialization#mosaicsupplychangeaction" title="Enumeration of mosaic supply change actions.">MosaicSupplyChangeAction</a>). </p></div>
+   <div class="description"><p>A quantity of mosaics in <a href="/concepts/mosaic.html#divisibility">absolute units</a>. <br/>It can only be positive or zero. Negative quantities must be indicated by other means (See for example <a href="/serialization#mosaicsupplychangetransactionv1" title="Change the total supply of a mosaic (V1, latest).">MosaicSupplyChangeTransactionV1</a> and <a href="/serialization#mosaicsupplychangeaction" title="Enumeration of mosaic supply change actions.">MosaicSupplyChangeAction</a>). </p></div>
    <div id="blockduration"><b>BlockDuration</b></div>
    <div>8&nbsp;ubytes</div>
    <div class="description"><p>A time lapse, expressed in number of blocks. </p></div>
@@ -43,7 +41,7 @@ Basic Types
    <div class="description"><p><a href="/concepts/consensus-algorithm.html#importance-score">Importance score</a> for an account. <br/>See also <a href="/serialization#importanceheight" title="Block height at which an Importance was calculated.">ImportanceHeight</a> and <a href="/serialization#importancesnapshot" title="temporal importance information">ImportanceSnapshot</a>. </p></div>
    <div id="importanceheight"><b>ImportanceHeight</b></div>
    <div>8&nbsp;ubytes</div>
-   <div class="description"><p>Block height at which an <a href="/serialization#importance" title="Importance score for an account.">Importance</a> was calculated. </p></div>
+   <div class="description"><p><a href="/serialization#block" title="binary layout for a block">Block</a> height at which an <a href="/serialization#importance" title="Importance score for an account.">Importance</a> was calculated. </p></div>
    <div id="unresolvedmosaicid"><b>UnresolvedMosaicId</b></div>
    <div>8&nbsp;ubytes</div>
    <div class="description"><p>Either a <a href="/serialization#mosaicid" title="A Mosaic identifier.">MosaicId</a> or a <a href="/serialization#namespaceid" title="">NamespaceId</a>. <br/>The <strong>most</strong>-significant bit of the first byte is 0 for <a href="/serialization#mosaicid" title="A Mosaic identifier.">MosaicId</a>'s and 1 for <a href="/serialization#namespaceid" title="">NamespaceId</a>'s. </p></div>
@@ -86,13 +84,13 @@ Basic Types
    <div id="namespaceid"><b>NamespaceId</b></div>
    <div>8&nbsp;ubytes</div>
    <div class="description"></div>
-   <div id="scopedmetadatakey"><b>ScopedMetadataKey</b></div>
-   <div>8&nbsp;ubytes</div>
-   <div class="description"></div>
    <div id="mosaicnonce"><b>MosaicNonce</b></div>
    <div>4&nbsp;ubytes</div>
    <div class="description"></div>
    <div id="mosaicrestrictionkey"><b>MosaicRestrictionKey</b></div>
+   <div>8&nbsp;ubytes</div>
+   <div class="description"></div>
+   <div id="scopedmetadatakey"><b>ScopedMetadataKey</b></div>
    <div>8&nbsp;ubytes</div>
    <div class="description"></div>
    </div>
@@ -115,6 +113,14 @@ NetworkType
 
 .. raw:: html
    :file: NetworkType.html
+
+.. _transactiontype:
+
+TransactionType
+===============
+
+.. raw:: html
+   :file: TransactionType.html
 
 .. _blocktype:
 
@@ -147,6 +153,46 @@ AliasAction
 
 .. raw:: html
    :file: AliasAction.html
+
+.. _lockhashalgorithm:
+
+LockHashAlgorithm
+=================
+
+.. raw:: html
+   :file: LockHashAlgorithm.html
+
+.. _mosaicflags:
+
+MosaicFlags
+===========
+
+.. raw:: html
+   :file: MosaicFlags.html
+
+.. _mosaicsupplychangeaction:
+
+MosaicSupplyChangeAction
+========================
+
+.. raw:: html
+   :file: MosaicSupplyChangeAction.html
+
+.. _accountrestrictionflags:
+
+AccountRestrictionFlags
+=======================
+
+.. raw:: html
+   :file: AccountRestrictionFlags.html
+
+.. _mosaicrestrictiontype:
+
+MosaicRestrictionType
+=====================
+
+.. raw:: html
+   :file: MosaicRestrictionType.html
 
 .. _accounttype:
 
@@ -188,22 +234,6 @@ MetadataType
 .. raw:: html
    :file: MetadataType.html
 
-.. _mosaicflags:
-
-MosaicFlags
-===========
-
-.. raw:: html
-   :file: MosaicFlags.html
-
-.. _mosaicsupplychangeaction:
-
-MosaicSupplyChangeAction
-========================
-
-.. raw:: html
-   :file: MosaicSupplyChangeAction.html
-
 .. _namespacealiastype:
 
 NamespaceAliasType
@@ -212,30 +242,6 @@ NamespaceAliasType
 .. raw:: html
    :file: NamespaceAliasType.html
 
-.. _accountrestrictionflags:
-
-AccountRestrictionFlags
-=======================
-
-.. raw:: html
-   :file: AccountRestrictionFlags.html
-
-.. _transactiontype:
-
-TransactionType
-===============
-
-.. raw:: html
-   :file: TransactionType.html
-
-.. _mosaicrestrictiontype:
-
-MosaicRestrictionType
-=====================
-
-.. raw:: html
-   :file: MosaicRestrictionType.html
-
 .. _mosaicrestrictionentrytype:
 
 MosaicRestrictionEntryType
@@ -243,14 +249,6 @@ MosaicRestrictionEntryType
 
 .. raw:: html
    :file: MosaicRestrictionEntryType.html
-
-.. _lockhashalgorithm:
-
-LockHashAlgorithm
-=================
-
-.. raw:: html
-   :file: LockHashAlgorithm.html
 
 Structures
 **********
@@ -271,6 +269,22 @@ UnresolvedMosaic
 .. raw:: html
    :file: UnresolvedMosaic.html
 
+.. _transaction:
+
+Transaction
+===========
+
+.. raw:: html
+   :file: Transaction.html
+
+.. _embeddedtransaction:
+
+EmbeddedTransaction
+===================
+
+.. raw:: html
+   :file: EmbeddedTransaction.html
+
 .. _vrfproof:
 
 VrfProof
@@ -279,29 +293,40 @@ VrfProof
 .. raw:: html
    :file: VrfProof.html
 
-.. _nemesisblockheader:
+.. _block:
 
-NemesisBlockHeader
-==================
+Block
+=====
 
 .. raw:: html
-   :file: NemesisBlockHeader.html
+   :file: Block.html
 
-.. _normalblockheader:
+.. _nemesisblockv1:
+.. _nemesisblock:
 
-NormalBlockHeader
+NemesisBlockV1
+==============
+
+.. raw:: html
+   :file: NemesisBlockV1.html
+
+.. _normalblockv1:
+.. _normalblock:
+
+NormalBlockV1
+=============
+
+.. raw:: html
+   :file: NormalBlockV1.html
+
+.. _importanceblockv1:
+.. _importanceblock:
+
+ImportanceBlockV1
 =================
 
 .. raw:: html
-   :file: NormalBlockHeader.html
-
-.. _importanceblockheader:
-
-ImportanceBlockHeader
-=====================
-
-.. raw:: html
-   :file: ImportanceBlockHeader.html
+   :file: ImportanceBlockV1.html
 
 .. _finalizationround:
 
@@ -319,21 +344,21 @@ FinalizedBlockHeader
 .. raw:: html
    :file: FinalizedBlockHeader.html
 
-.. _balancetransferreceipt:
+.. _receipt:
 
-BalanceTransferReceipt
-======================
-
-.. raw:: html
-   :file: BalanceTransferReceipt.html
-
-.. _balancechangereceipt:
-
-BalanceChangeReceipt
-====================
+Receipt
+=======
 
 .. raw:: html
-   :file: BalanceChangeReceipt.html
+   :file: Receipt.html
+
+.. _harvestfeereceipt:
+
+HarvestFeeReceipt
+=================
+
+.. raw:: html
+   :file: HarvestFeeReceipt.html
 
 .. _inflationreceipt:
 
@@ -343,21 +368,93 @@ InflationReceipt
 .. raw:: html
    :file: InflationReceipt.html
 
-.. _mosaicexpiryreceipt:
+.. _lockhashcreatedfeereceipt:
 
-MosaicExpiryReceipt
-===================
+LockHashCreatedFeeReceipt
+=========================
 
 .. raw:: html
-   :file: MosaicExpiryReceipt.html
+   :file: LockHashCreatedFeeReceipt.html
 
-.. _namespaceexpiryreceipt:
+.. _lockhashcompletedfeereceipt:
 
-NamespaceExpiryReceipt
+LockHashCompletedFeeReceipt
+===========================
+
+.. raw:: html
+   :file: LockHashCompletedFeeReceipt.html
+
+.. _lockhashexpiredfeereceipt:
+
+LockHashExpiredFeeReceipt
+=========================
+
+.. raw:: html
+   :file: LockHashExpiredFeeReceipt.html
+
+.. _locksecretcreatedfeereceipt:
+
+LockSecretCreatedFeeReceipt
+===========================
+
+.. raw:: html
+   :file: LockSecretCreatedFeeReceipt.html
+
+.. _locksecretcompletedfeereceipt:
+
+LockSecretCompletedFeeReceipt
+=============================
+
+.. raw:: html
+   :file: LockSecretCompletedFeeReceipt.html
+
+.. _locksecretexpiredfeereceipt:
+
+LockSecretExpiredFeeReceipt
+===========================
+
+.. raw:: html
+   :file: LockSecretExpiredFeeReceipt.html
+
+.. _mosaicexpiredreceipt:
+
+MosaicExpiredReceipt
+====================
+
+.. raw:: html
+   :file: MosaicExpiredReceipt.html
+
+.. _mosaicrentalfeereceipt:
+
+MosaicRentalFeeReceipt
 ======================
 
 .. raw:: html
-   :file: NamespaceExpiryReceipt.html
+   :file: MosaicRentalFeeReceipt.html
+
+.. _namespaceexpiredreceipt:
+
+NamespaceExpiredReceipt
+=======================
+
+.. raw:: html
+   :file: NamespaceExpiredReceipt.html
+
+.. _namespacedeletedreceipt:
+
+NamespaceDeletedReceipt
+=======================
+
+.. raw:: html
+   :file: NamespaceDeletedReceipt.html
+
+.. _namespacerentalfeereceipt:
+
+NamespaceRentalFeeReceipt
+=========================
+
+.. raw:: html
+   :file: NamespaceRentalFeeReceipt.html
 
 .. _receiptsource:
 
@@ -375,6 +472,14 @@ AddressResolutionEntry
 .. raw:: html
    :file: AddressResolutionEntry.html
 
+.. _addressresolutionstatement:
+
+AddressResolutionStatement
+==========================
+
+.. raw:: html
+   :file: AddressResolutionStatement.html
+
 .. _mosaicresolutionentry:
 
 MosaicResolutionEntry
@@ -391,13 +496,501 @@ MosaicResolutionStatement
 .. raw:: html
    :file: MosaicResolutionStatement.html
 
-.. _addressresolutionstatement:
+.. _transactionstatement:
 
-AddressResolutionStatement
+TransactionStatement
+====================
+
+.. raw:: html
+   :file: TransactionStatement.html
+
+.. _blockstatement:
+
+BlockStatement
+==============
+
+.. raw:: html
+   :file: BlockStatement.html
+
+.. _accountkeylinktransactionv1:
+.. _accountkeylinktransaction:
+
+AccountKeyLinkTransactionV1
+===========================
+
+.. raw:: html
+   :file: AccountKeyLinkTransactionV1.html
+
+.. _embeddedaccountkeylinktransactionv1:
+.. _embeddedaccountkeylinktransaction:
+
+EmbeddedAccountKeyLinkTransactionV1
+===================================
+
+.. raw:: html
+   :file: EmbeddedAccountKeyLinkTransactionV1.html
+
+.. _nodekeylinktransactionv1:
+.. _nodekeylinktransaction:
+
+NodeKeyLinkTransactionV1
+========================
+
+.. raw:: html
+   :file: NodeKeyLinkTransactionV1.html
+
+.. _embeddednodekeylinktransactionv1:
+.. _embeddednodekeylinktransaction:
+
+EmbeddedNodeKeyLinkTransactionV1
+================================
+
+.. raw:: html
+   :file: EmbeddedNodeKeyLinkTransactionV1.html
+
+.. _cosignature:
+
+Cosignature
+===========
+
+.. raw:: html
+   :file: Cosignature.html
+
+.. _detachedcosignature:
+
+DetachedCosignature
+===================
+
+.. raw:: html
+   :file: DetachedCosignature.html
+
+.. _aggregatecompletetransactionv1:
+.. _aggregatecompletetransaction:
+
+AggregateCompleteTransactionV1
+==============================
+
+.. raw:: html
+   :file: AggregateCompleteTransactionV1.html
+
+.. _aggregatecompletetransactionv2:
+
+AggregateCompleteTransactionV2
+==============================
+
+.. raw:: html
+   :file: AggregateCompleteTransactionV2.html
+
+.. _aggregatecompletetransactionv3:
+
+AggregateCompleteTransactionV3
+==============================
+
+.. raw:: html
+   :file: AggregateCompleteTransactionV3.html
+
+.. _aggregatebondedtransactionv1:
+.. _aggregatebondedtransaction:
+
+AggregateBondedTransactionV1
+============================
+
+.. raw:: html
+   :file: AggregateBondedTransactionV1.html
+
+.. _aggregatebondedtransactionv2:
+
+AggregateBondedTransactionV2
+============================
+
+.. raw:: html
+   :file: AggregateBondedTransactionV2.html
+
+.. _aggregatebondedtransactionv3:
+
+AggregateBondedTransactionV3
+============================
+
+.. raw:: html
+   :file: AggregateBondedTransactionV3.html
+
+.. _votingkeylinktransactionv1:
+.. _votingkeylinktransaction:
+
+VotingKeyLinkTransactionV1
 ==========================
 
 .. raw:: html
-   :file: AddressResolutionStatement.html
+   :file: VotingKeyLinkTransactionV1.html
+
+.. _embeddedvotingkeylinktransactionv1:
+.. _embeddedvotingkeylinktransaction:
+
+EmbeddedVotingKeyLinkTransactionV1
+==================================
+
+.. raw:: html
+   :file: EmbeddedVotingKeyLinkTransactionV1.html
+
+.. _vrfkeylinktransactionv1:
+.. _vrfkeylinktransaction:
+
+VrfKeyLinkTransactionV1
+=======================
+
+.. raw:: html
+   :file: VrfKeyLinkTransactionV1.html
+
+.. _embeddedvrfkeylinktransactionv1:
+.. _embeddedvrfkeylinktransaction:
+
+EmbeddedVrfKeyLinkTransactionV1
+===============================
+
+.. raw:: html
+   :file: EmbeddedVrfKeyLinkTransactionV1.html
+
+.. _hashlocktransactionv1:
+.. _hashlocktransaction:
+
+HashLockTransactionV1
+=====================
+
+.. raw:: html
+   :file: HashLockTransactionV1.html
+
+.. _embeddedhashlocktransactionv1:
+.. _embeddedhashlocktransaction:
+
+EmbeddedHashLockTransactionV1
+=============================
+
+.. raw:: html
+   :file: EmbeddedHashLockTransactionV1.html
+
+.. _secretlocktransactionv1:
+.. _secretlocktransaction:
+
+SecretLockTransactionV1
+=======================
+
+.. raw:: html
+   :file: SecretLockTransactionV1.html
+
+.. _embeddedsecretlocktransactionv1:
+.. _embeddedsecretlocktransaction:
+
+EmbeddedSecretLockTransactionV1
+===============================
+
+.. raw:: html
+   :file: EmbeddedSecretLockTransactionV1.html
+
+.. _secretprooftransactionv1:
+.. _secretprooftransaction:
+
+SecretProofTransactionV1
+========================
+
+.. raw:: html
+   :file: SecretProofTransactionV1.html
+
+.. _embeddedsecretprooftransactionv1:
+.. _embeddedsecretprooftransaction:
+
+EmbeddedSecretProofTransactionV1
+================================
+
+.. raw:: html
+   :file: EmbeddedSecretProofTransactionV1.html
+
+.. _accountmetadatatransactionv1:
+.. _accountmetadatatransaction:
+
+AccountMetadataTransactionV1
+============================
+
+.. raw:: html
+   :file: AccountMetadataTransactionV1.html
+
+.. _embeddedaccountmetadatatransactionv1:
+.. _embeddedaccountmetadatatransaction:
+
+EmbeddedAccountMetadataTransactionV1
+====================================
+
+.. raw:: html
+   :file: EmbeddedAccountMetadataTransactionV1.html
+
+.. _mosaicmetadatatransactionv1:
+.. _mosaicmetadatatransaction:
+
+MosaicMetadataTransactionV1
+===========================
+
+.. raw:: html
+   :file: MosaicMetadataTransactionV1.html
+
+.. _embeddedmosaicmetadatatransactionv1:
+.. _embeddedmosaicmetadatatransaction:
+
+EmbeddedMosaicMetadataTransactionV1
+===================================
+
+.. raw:: html
+   :file: EmbeddedMosaicMetadataTransactionV1.html
+
+.. _namespacemetadatatransactionv1:
+.. _namespacemetadatatransaction:
+
+NamespaceMetadataTransactionV1
+==============================
+
+.. raw:: html
+   :file: NamespaceMetadataTransactionV1.html
+
+.. _embeddednamespacemetadatatransactionv1:
+.. _embeddednamespacemetadatatransaction:
+
+EmbeddedNamespaceMetadataTransactionV1
+======================================
+
+.. raw:: html
+   :file: EmbeddedNamespaceMetadataTransactionV1.html
+
+.. _mosaicdefinitiontransactionv1:
+.. _mosaicdefinitiontransaction:
+
+MosaicDefinitionTransactionV1
+=============================
+
+.. raw:: html
+   :file: MosaicDefinitionTransactionV1.html
+
+.. _embeddedmosaicdefinitiontransactionv1:
+.. _embeddedmosaicdefinitiontransaction:
+
+EmbeddedMosaicDefinitionTransactionV1
+=====================================
+
+.. raw:: html
+   :file: EmbeddedMosaicDefinitionTransactionV1.html
+
+.. _mosaicsupplychangetransactionv1:
+.. _mosaicsupplychangetransaction:
+
+MosaicSupplyChangeTransactionV1
+===============================
+
+.. raw:: html
+   :file: MosaicSupplyChangeTransactionV1.html
+
+.. _embeddedmosaicsupplychangetransactionv1:
+.. _embeddedmosaicsupplychangetransaction:
+
+EmbeddedMosaicSupplyChangeTransactionV1
+=======================================
+
+.. raw:: html
+   :file: EmbeddedMosaicSupplyChangeTransactionV1.html
+
+.. _mosaicsupplyrevocationtransactionv1:
+.. _mosaicsupplyrevocationtransaction:
+
+MosaicSupplyRevocationTransactionV1
+===================================
+
+.. raw:: html
+   :file: MosaicSupplyRevocationTransactionV1.html
+
+.. _embeddedmosaicsupplyrevocationtransactionv1:
+.. _embeddedmosaicsupplyrevocationtransaction:
+
+EmbeddedMosaicSupplyRevocationTransactionV1
+===========================================
+
+.. raw:: html
+   :file: EmbeddedMosaicSupplyRevocationTransactionV1.html
+
+.. _multisigaccountmodificationtransactionv1:
+.. _multisigaccountmodificationtransaction:
+
+MultisigAccountModificationTransactionV1
+========================================
+
+.. raw:: html
+   :file: MultisigAccountModificationTransactionV1.html
+
+.. _embeddedmultisigaccountmodificationtransactionv1:
+.. _embeddedmultisigaccountmodificationtransaction:
+
+EmbeddedMultisigAccountModificationTransactionV1
+================================================
+
+.. raw:: html
+   :file: EmbeddedMultisigAccountModificationTransactionV1.html
+
+.. _addressaliastransactionv1:
+.. _addressaliastransaction:
+
+AddressAliasTransactionV1
+=========================
+
+.. raw:: html
+   :file: AddressAliasTransactionV1.html
+
+.. _embeddedaddressaliastransactionv1:
+.. _embeddedaddressaliastransaction:
+
+EmbeddedAddressAliasTransactionV1
+=================================
+
+.. raw:: html
+   :file: EmbeddedAddressAliasTransactionV1.html
+
+.. _mosaicaliastransactionv1:
+.. _mosaicaliastransaction:
+
+MosaicAliasTransactionV1
+========================
+
+.. raw:: html
+   :file: MosaicAliasTransactionV1.html
+
+.. _embeddedmosaicaliastransactionv1:
+.. _embeddedmosaicaliastransaction:
+
+EmbeddedMosaicAliasTransactionV1
+================================
+
+.. raw:: html
+   :file: EmbeddedMosaicAliasTransactionV1.html
+
+.. _namespaceregistrationtransactionv1:
+.. _namespaceregistrationtransaction:
+
+NamespaceRegistrationTransactionV1
+==================================
+
+.. raw:: html
+   :file: NamespaceRegistrationTransactionV1.html
+
+.. _embeddednamespaceregistrationtransactionv1:
+.. _embeddednamespaceregistrationtransaction:
+
+EmbeddedNamespaceRegistrationTransactionV1
+==========================================
+
+.. raw:: html
+   :file: EmbeddedNamespaceRegistrationTransactionV1.html
+
+.. _accountaddressrestrictiontransactionv1:
+.. _accountaddressrestrictiontransaction:
+
+AccountAddressRestrictionTransactionV1
+======================================
+
+.. raw:: html
+   :file: AccountAddressRestrictionTransactionV1.html
+
+.. _embeddedaccountaddressrestrictiontransactionv1:
+.. _embeddedaccountaddressrestrictiontransaction:
+
+EmbeddedAccountAddressRestrictionTransactionV1
+==============================================
+
+.. raw:: html
+   :file: EmbeddedAccountAddressRestrictionTransactionV1.html
+
+.. _accountmosaicrestrictiontransactionv1:
+.. _accountmosaicrestrictiontransaction:
+
+AccountMosaicRestrictionTransactionV1
+=====================================
+
+.. raw:: html
+   :file: AccountMosaicRestrictionTransactionV1.html
+
+.. _embeddedaccountmosaicrestrictiontransactionv1:
+.. _embeddedaccountmosaicrestrictiontransaction:
+
+EmbeddedAccountMosaicRestrictionTransactionV1
+=============================================
+
+.. raw:: html
+   :file: EmbeddedAccountMosaicRestrictionTransactionV1.html
+
+.. _accountoperationrestrictiontransactionv1:
+.. _accountoperationrestrictiontransaction:
+
+AccountOperationRestrictionTransactionV1
+========================================
+
+.. raw:: html
+   :file: AccountOperationRestrictionTransactionV1.html
+
+.. _embeddedaccountoperationrestrictiontransactionv1:
+.. _embeddedaccountoperationrestrictiontransaction:
+
+EmbeddedAccountOperationRestrictionTransactionV1
+================================================
+
+.. raw:: html
+   :file: EmbeddedAccountOperationRestrictionTransactionV1.html
+
+.. _mosaicaddressrestrictiontransactionv1:
+.. _mosaicaddressrestrictiontransaction:
+
+MosaicAddressRestrictionTransactionV1
+=====================================
+
+.. raw:: html
+   :file: MosaicAddressRestrictionTransactionV1.html
+
+.. _embeddedmosaicaddressrestrictiontransactionv1:
+.. _embeddedmosaicaddressrestrictiontransaction:
+
+EmbeddedMosaicAddressRestrictionTransactionV1
+=============================================
+
+.. raw:: html
+   :file: EmbeddedMosaicAddressRestrictionTransactionV1.html
+
+.. _mosaicglobalrestrictiontransactionv1:
+.. _mosaicglobalrestrictiontransaction:
+
+MosaicGlobalRestrictionTransactionV1
+====================================
+
+.. raw:: html
+   :file: MosaicGlobalRestrictionTransactionV1.html
+
+.. _embeddedmosaicglobalrestrictiontransactionv1:
+.. _embeddedmosaicglobalrestrictiontransaction:
+
+EmbeddedMosaicGlobalRestrictionTransactionV1
+============================================
+
+.. raw:: html
+   :file: EmbeddedMosaicGlobalRestrictionTransactionV1.html
+
+.. _transfertransactionv1:
+.. _transfertransaction:
+
+TransferTransactionV1
+=====================
+
+.. raw:: html
+   :file: TransferTransactionV1.html
+
+.. _embeddedtransfertransactionv1:
+.. _embeddedtransfertransaction:
+
+EmbeddedTransferTransactionV1
+=============================
+
+.. raw:: html
+   :file: EmbeddedTransferTransactionV1.html
 
 .. _pinnedvotingkey:
 
@@ -639,683 +1232,11 @@ SecretLockInfo
 .. raw:: html
    :file: SecretLockInfo.html
 
-.. _accountkeylinktransaction:
-
-AccountKeyLinkTransaction
-=========================
-
-.. raw:: html
-   :file: AccountKeyLinkTransaction.html
-
-.. _embeddedaccountkeylinktransaction:
-
-EmbeddedAccountKeyLinkTransaction
-=================================
-
-.. raw:: html
-   :file: EmbeddedAccountKeyLinkTransaction.html
-
-.. _nodekeylinktransaction:
-
-NodeKeyLinkTransaction
-======================
-
-.. raw:: html
-   :file: NodeKeyLinkTransaction.html
-
-.. _embeddednodekeylinktransaction:
-
-EmbeddedNodeKeyLinkTransaction
-==============================
-
-.. raw:: html
-   :file: EmbeddedNodeKeyLinkTransaction.html
-
-.. _detachedcosignature:
-
-DetachedCosignature
-===================
-
-.. raw:: html
-   :file: DetachedCosignature.html
-
-.. _aggregatecompletetransaction:
-
-AggregateCompleteTransaction
-============================
-
-.. raw:: html
-   :file: AggregateCompleteTransaction.html
-
-.. _aggregatebondedtransaction:
-
-AggregateBondedTransaction
-==========================
-
-.. raw:: html
-   :file: AggregateBondedTransaction.html
-
-.. _votingkeylinktransaction:
-
-VotingKeyLinkTransaction
-========================
-
-.. raw:: html
-   :file: VotingKeyLinkTransaction.html
-
-.. _embeddedvotingkeylinktransaction:
-
-EmbeddedVotingKeyLinkTransaction
-================================
-
-.. raw:: html
-   :file: EmbeddedVotingKeyLinkTransaction.html
-
-.. _vrfkeylinktransaction:
-
-VrfKeyLinkTransaction
-=====================
-
-.. raw:: html
-   :file: VrfKeyLinkTransaction.html
-
-.. _embeddedvrfkeylinktransaction:
-
-EmbeddedVrfKeyLinkTransaction
-=============================
-
-.. raw:: html
-   :file: EmbeddedVrfKeyLinkTransaction.html
-
-.. _hashlocktransaction:
-
-HashLockTransaction
-===================
-
-.. raw:: html
-   :file: HashLockTransaction.html
-
-.. _embeddedhashlocktransaction:
-
-EmbeddedHashLockTransaction
-===========================
-
-.. raw:: html
-   :file: EmbeddedHashLockTransaction.html
-
-.. _secretlocktransaction:
-
-SecretLockTransaction
-=====================
-
-.. raw:: html
-   :file: SecretLockTransaction.html
-
-.. _embeddedsecretlocktransaction:
-
-EmbeddedSecretLockTransaction
-=============================
-
-.. raw:: html
-   :file: EmbeddedSecretLockTransaction.html
-
-.. _secretprooftransaction:
-
-SecretProofTransaction
-======================
-
-.. raw:: html
-   :file: SecretProofTransaction.html
-
-.. _embeddedsecretprooftransaction:
-
-EmbeddedSecretProofTransaction
-==============================
-
-.. raw:: html
-   :file: EmbeddedSecretProofTransaction.html
-
-.. _accountmetadatatransaction:
-
-AccountMetadataTransaction
-==========================
-
-.. raw:: html
-   :file: AccountMetadataTransaction.html
-
-.. _embeddedaccountmetadatatransaction:
-
-EmbeddedAccountMetadataTransaction
-==================================
-
-.. raw:: html
-   :file: EmbeddedAccountMetadataTransaction.html
-
-.. _mosaicmetadatatransaction:
-
-MosaicMetadataTransaction
-=========================
-
-.. raw:: html
-   :file: MosaicMetadataTransaction.html
-
-.. _embeddedmosaicmetadatatransaction:
-
-EmbeddedMosaicMetadataTransaction
-=================================
-
-.. raw:: html
-   :file: EmbeddedMosaicMetadataTransaction.html
-
-.. _namespacemetadatatransaction:
-
-NamespaceMetadataTransaction
-============================
-
-.. raw:: html
-   :file: NamespaceMetadataTransaction.html
-
-.. _embeddednamespacemetadatatransaction:
-
-EmbeddedNamespaceMetadataTransaction
-====================================
-
-.. raw:: html
-   :file: EmbeddedNamespaceMetadataTransaction.html
-
-.. _mosaicdefinitiontransaction:
-
-MosaicDefinitionTransaction
-===========================
-
-.. raw:: html
-   :file: MosaicDefinitionTransaction.html
-
-.. _embeddedmosaicdefinitiontransaction:
-
-EmbeddedMosaicDefinitionTransaction
-===================================
-
-.. raw:: html
-   :file: EmbeddedMosaicDefinitionTransaction.html
-
-.. _mosaicsupplychangetransaction:
-
-MosaicSupplyChangeTransaction
-=============================
-
-.. raw:: html
-   :file: MosaicSupplyChangeTransaction.html
-
-.. _embeddedmosaicsupplychangetransaction:
-
-EmbeddedMosaicSupplyChangeTransaction
-=====================================
-
-.. raw:: html
-   :file: EmbeddedMosaicSupplyChangeTransaction.html
-
-.. _mosaicsupplyrevocationtransaction:
-
-MosaicSupplyRevocationTransaction
-=================================
-
-.. raw:: html
-   :file: MosaicSupplyRevocationTransaction.html
-
-.. _embeddedmosaicsupplyrevocationtransaction:
-
-EmbeddedMosaicSupplyRevocationTransaction
-=========================================
-
-.. raw:: html
-   :file: EmbeddedMosaicSupplyRevocationTransaction.html
-
-.. _multisigaccountmodificationtransaction:
-
-MultisigAccountModificationTransaction
-======================================
-
-.. raw:: html
-   :file: MultisigAccountModificationTransaction.html
-
-.. _embeddedmultisigaccountmodificationtransaction:
-
-EmbeddedMultisigAccountModificationTransaction
-==============================================
-
-.. raw:: html
-   :file: EmbeddedMultisigAccountModificationTransaction.html
-
-.. _addressaliastransaction:
-
-AddressAliasTransaction
-=======================
-
-.. raw:: html
-   :file: AddressAliasTransaction.html
-
-.. _embeddedaddressaliastransaction:
-
-EmbeddedAddressAliasTransaction
-===============================
-
-.. raw:: html
-   :file: EmbeddedAddressAliasTransaction.html
-
-.. _mosaicaliastransaction:
-
-MosaicAliasTransaction
-======================
-
-.. raw:: html
-   :file: MosaicAliasTransaction.html
-
-.. _embeddedmosaicaliastransaction:
-
-EmbeddedMosaicAliasTransaction
-==============================
-
-.. raw:: html
-   :file: EmbeddedMosaicAliasTransaction.html
-
-.. _namespaceregistrationtransaction:
-
-NamespaceRegistrationTransaction
-================================
-
-.. raw:: html
-   :file: NamespaceRegistrationTransaction.html
-
-.. _embeddednamespaceregistrationtransaction:
-
-EmbeddedNamespaceRegistrationTransaction
-========================================
-
-.. raw:: html
-   :file: EmbeddedNamespaceRegistrationTransaction.html
-
-.. _accountaddressrestrictiontransaction:
-
-AccountAddressRestrictionTransaction
-====================================
-
-.. raw:: html
-   :file: AccountAddressRestrictionTransaction.html
-
-.. _embeddedaccountaddressrestrictiontransaction:
-
-EmbeddedAccountAddressRestrictionTransaction
-============================================
-
-.. raw:: html
-   :file: EmbeddedAccountAddressRestrictionTransaction.html
-
-.. _accountmosaicrestrictiontransaction:
-
-AccountMosaicRestrictionTransaction
-===================================
-
-.. raw:: html
-   :file: AccountMosaicRestrictionTransaction.html
-
-.. _embeddedaccountmosaicrestrictiontransaction:
-
-EmbeddedAccountMosaicRestrictionTransaction
-===========================================
-
-.. raw:: html
-   :file: EmbeddedAccountMosaicRestrictionTransaction.html
-
-.. _accountoperationrestrictiontransaction:
-
-AccountOperationRestrictionTransaction
-======================================
-
-.. raw:: html
-   :file: AccountOperationRestrictionTransaction.html
-
-.. _embeddedaccountoperationrestrictiontransaction:
-
-EmbeddedAccountOperationRestrictionTransaction
-==============================================
-
-.. raw:: html
-   :file: EmbeddedAccountOperationRestrictionTransaction.html
-
-.. _mosaicaddressrestrictiontransaction:
-
-MosaicAddressRestrictionTransaction
-===================================
-
-.. raw:: html
-   :file: MosaicAddressRestrictionTransaction.html
-
-.. _embeddedmosaicaddressrestrictiontransaction:
-
-EmbeddedMosaicAddressRestrictionTransaction
-===========================================
-
-.. raw:: html
-   :file: EmbeddedMosaicAddressRestrictionTransaction.html
-
-.. _mosaicglobalrestrictiontransaction:
-
-MosaicGlobalRestrictionTransaction
-==================================
-
-.. raw:: html
-   :file: MosaicGlobalRestrictionTransaction.html
-
-.. _embeddedmosaicglobalrestrictiontransaction:
-
-EmbeddedMosaicGlobalRestrictionTransaction
-==========================================
-
-.. raw:: html
-   :file: EmbeddedMosaicGlobalRestrictionTransaction.html
-
-.. _transfertransaction:
-
-TransferTransaction
-===================
-
-.. raw:: html
-   :file: TransferTransaction.html
-
-.. _embeddedtransfertransaction:
-
-EmbeddedTransferTransaction
-===========================
-
-.. raw:: html
-   :file: EmbeddedTransferTransaction.html
-
 Inner Structures
 ****************
 
 These are structures only meant to be included inside other structures.
 Their description is already present in the containing structures above and is only repeated here for completeness.
-
-.. _sizeprefixedentity:
-
-SizePrefixedEntity
-==================
-
-.. raw:: html
-   :file: SizePrefixedEntity.html
-
-.. _verifiableentity:
-
-VerifiableEntity
-================
-
-.. raw:: html
-   :file: VerifiableEntity.html
-
-.. _entitybody:
-
-EntityBody
-==========
-
-.. raw:: html
-   :file: EntityBody.html
-
-.. _blockheader:
-
-BlockHeader
-===========
-
-.. raw:: html
-   :file: BlockHeader.html
-
-.. _importanceblockfooter:
-
-ImportanceBlockFooter
-=====================
-
-.. raw:: html
-   :file: ImportanceBlockFooter.html
-
-.. _receipt:
-
-Receipt
-=======
-
-.. raw:: html
-   :file: Receipt.html
-
-.. _stateheader:
-
-StateHeader
-===========
-
-.. raw:: html
-   :file: StateHeader.html
-
-.. _transaction:
-
-Transaction
-===========
-
-.. raw:: html
-   :file: Transaction.html
-
-.. _embeddedtransactionheader:
-
-EmbeddedTransactionHeader
-=========================
-
-.. raw:: html
-   :file: EmbeddedTransactionHeader.html
-
-.. _embeddedtransaction:
-
-EmbeddedTransaction
-===================
-
-.. raw:: html
-   :file: EmbeddedTransaction.html
-
-.. _accountkeylinktransactionbody:
-
-AccountKeyLinkTransactionBody
-=============================
-
-.. raw:: html
-   :file: AccountKeyLinkTransactionBody.html
-
-.. _nodekeylinktransactionbody:
-
-NodeKeyLinkTransactionBody
-==========================
-
-.. raw:: html
-   :file: NodeKeyLinkTransactionBody.html
-
-.. _cosignature:
-
-Cosignature
-===========
-
-.. raw:: html
-   :file: Cosignature.html
-
-.. _aggregatetransactionbody:
-
-AggregateTransactionBody
-========================
-
-.. raw:: html
-   :file: AggregateTransactionBody.html
-
-.. _votingkeylinktransactionbody:
-
-VotingKeyLinkTransactionBody
-============================
-
-.. raw:: html
-   :file: VotingKeyLinkTransactionBody.html
-
-.. _vrfkeylinktransactionbody:
-
-VrfKeyLinkTransactionBody
-=========================
-
-.. raw:: html
-   :file: VrfKeyLinkTransactionBody.html
-
-.. _hashlocktransactionbody:
-
-HashLockTransactionBody
-=======================
-
-.. raw:: html
-   :file: HashLockTransactionBody.html
-
-.. _secretlocktransactionbody:
-
-SecretLockTransactionBody
-=========================
-
-.. raw:: html
-   :file: SecretLockTransactionBody.html
-
-.. _secretprooftransactionbody:
-
-SecretProofTransactionBody
-==========================
-
-.. raw:: html
-   :file: SecretProofTransactionBody.html
-
-.. _accountmetadatatransactionbody:
-
-AccountMetadataTransactionBody
-==============================
-
-.. raw:: html
-   :file: AccountMetadataTransactionBody.html
-
-.. _mosaicmetadatatransactionbody:
-
-MosaicMetadataTransactionBody
-=============================
-
-.. raw:: html
-   :file: MosaicMetadataTransactionBody.html
-
-.. _namespacemetadatatransactionbody:
-
-NamespaceMetadataTransactionBody
-================================
-
-.. raw:: html
-   :file: NamespaceMetadataTransactionBody.html
-
-.. _mosaicdefinitiontransactionbody:
-
-MosaicDefinitionTransactionBody
-===============================
-
-.. raw:: html
-   :file: MosaicDefinitionTransactionBody.html
-
-.. _mosaicsupplychangetransactionbody:
-
-MosaicSupplyChangeTransactionBody
-=================================
-
-.. raw:: html
-   :file: MosaicSupplyChangeTransactionBody.html
-
-.. _mosaicsupplyrevocationtransactionbody:
-
-MosaicSupplyRevocationTransactionBody
-=====================================
-
-.. raw:: html
-   :file: MosaicSupplyRevocationTransactionBody.html
-
-.. _multisigaccountmodificationtransactionbody:
-
-MultisigAccountModificationTransactionBody
-==========================================
-
-.. raw:: html
-   :file: MultisigAccountModificationTransactionBody.html
-
-.. _addressaliastransactionbody:
-
-AddressAliasTransactionBody
-===========================
-
-.. raw:: html
-   :file: AddressAliasTransactionBody.html
-
-.. _mosaicaliastransactionbody:
-
-MosaicAliasTransactionBody
-==========================
-
-.. raw:: html
-   :file: MosaicAliasTransactionBody.html
-
-.. _namespaceregistrationtransactionbody:
-
-NamespaceRegistrationTransactionBody
-====================================
-
-.. raw:: html
-   :file: NamespaceRegistrationTransactionBody.html
-
-.. _accountaddressrestrictiontransactionbody:
-
-AccountAddressRestrictionTransactionBody
-========================================
-
-.. raw:: html
-   :file: AccountAddressRestrictionTransactionBody.html
-
-.. _accountmosaicrestrictiontransactionbody:
-
-AccountMosaicRestrictionTransactionBody
-=======================================
-
-.. raw:: html
-   :file: AccountMosaicRestrictionTransactionBody.html
-
-.. _accountoperationrestrictiontransactionbody:
-
-AccountOperationRestrictionTransactionBody
-==========================================
-
-.. raw:: html
-   :file: AccountOperationRestrictionTransactionBody.html
-
-.. _mosaicaddressrestrictiontransactionbody:
-
-MosaicAddressRestrictionTransactionBody
-=======================================
-
-.. raw:: html
-   :file: MosaicAddressRestrictionTransactionBody.html
-
-.. _mosaicglobalrestrictiontransactionbody:
-
-MosaicGlobalRestrictionTransactionBody
-======================================
-
-.. raw:: html
-   :file: MosaicGlobalRestrictionTransactionBody.html
-
-.. _transfertransactionbody:
-
-TransferTransactionBody
-=======================
-
-.. raw:: html
-   :file: TransferTransactionBody.html
 
 .. raw:: html
 

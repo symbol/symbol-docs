@@ -1,0 +1,47 @@
+<table style="width: 100%;"><tr><td>
+    <div class="side-info"><table>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 12+ bytes = 0xc+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol/statements/block_statement.cats#L6">schema</a></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/src/catapult/model/BlockStatement.h#L30">catapult model</a></td></tr>
+    </table></div>
+<p>Collection of statements scoped to a block. </p>
+</td></tr></table>
+
+<div class="big-table6">
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">transaction_statement_count</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p>Number of transaction statements. </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">transaction_statements</code></div>
+   <div><a href="/serialization#transactionstatement" title="Collection of receipts scoped to a single source (transaction or block).">TransactionStatement</a>&ZeroWidthSpace;[transaction_statement_count]</div>
+   <div class="description"><p><a href="/serialization#transaction" title="binary layout for a transaction">Transaction</a> statements. </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">address_&ZeroWidthSpace;resolution_&ZeroWidthSpace;statement_&ZeroWidthSpace;count</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p>Number of address resolution statements. </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">address_resolution_statements</code></div>
+   <div><a href="/serialization#addressresolutionstatement" title="An Address resolution statement links a namespace alias used in a transaction to the real address at the time of the transaction.">AddressResolutionStatement</a>&ZeroWidthSpace;[address_resolution_statement_count]</div>
+   <div class="description"><p><a href="/serialization#address" title="An address identifies an account and is derived from its PublicKey.">Address</a> resolution statements. </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">mosaic_&ZeroWidthSpace;resolution_&ZeroWidthSpace;statement_&ZeroWidthSpace;count</code></div>
+   <div>byte[4]</div>
+   <div class="description"><p>Number of mosaic resolution statements. </p></div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div>&nbsp;</div>
+   <div><code class="docutils literal">mosaic_resolution_statements</code></div>
+   <div><a href="/serialization#mosaicresolutionstatement" title="A Mosaic resolution statement links a namespace alias used in a transaction to the real mosaic id at the time of the transaction.">MosaicResolutionStatement</a>&ZeroWidthSpace;[mosaic_resolution_statement_count]</div>
+   <div class="description"><p><a href="/serialization#mosaic" title="A quantity of a certain mosaic.">Mosaic</a> resolution statements. </p></div>
+</div>

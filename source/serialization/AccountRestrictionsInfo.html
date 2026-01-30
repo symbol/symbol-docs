@@ -1,7 +1,7 @@
 <table style="width: 100%;"><tr><td>
     <div class="side-info"><table>
-    <tr><td class="side-info-icon">&varr;</td><td>Size: 26+ bytes = 0x1a+ <i>(variable)</i></td></tr>
-    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/blob/main/catbuffer/schemas/symbol/state/restriction_account_types.cats#L29">schema</a></td></tr>
+    <tr><td class="side-info-icon">&varr;</td><td>Size: 2+ bytes = 0x2+ <i>(variable)</i></td></tr>
+    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td><td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol/state/restriction_account_types.cats#L30">schema</a></td></tr>
     </table></div>
 <p>binary layout for account restrictions </p>
 </td></tr></table>
@@ -18,17 +18,17 @@
    <div>&nbsp;</div>
    <div><code class="docutils literal">address_restrictions</code></div>
    <div><a href="/serialization#accountrestrictionaddressvalue" title="binary layout for address based account restriction">AccountRestrictionAddressValue</a></div>
-   <div class="description"><p>address restrictions </p></div>
+   <div class="description"><p>address restrictions </p><b>This field is only present if:</b><br/><code class="docutils literal">restriction_flags in ADDRESS</code></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">mosaic_id_restrictions</code></div>
    <div><a href="/serialization#accountrestrictionmosaicvalue" title="binary layout for mosaic id based account restriction">AccountRestrictionMosaicValue</a></div>
-   <div class="description"><p>mosaic identifier restrictions </p></div>
+   <div class="description"><p>mosaic identifier restrictions </p><b>This field is only present if:</b><br/><code class="docutils literal">restriction_flags in MOSAIC_ID</code></div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div>&nbsp;</div>
    <div><code class="docutils literal">transaction_type_restrictions</code></div>
    <div><a href="/serialization#accountrestrictiontransactiontypevalue" title="binary layout for transaction type based account restriction">AccountRestrictionTransactionTypeValue</a></div>
-   <div class="description"><p>transaction type restrictions </p></div>
+   <div class="description"><p>transaction type restrictions </p><b>This field is only present if:</b><br/><code class="docutils literal">restriction_flags in TRANSACTION_TYPE</code></div>
 </div>
