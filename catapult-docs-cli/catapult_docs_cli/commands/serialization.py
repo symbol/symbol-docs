@@ -246,14 +246,17 @@ class SerializationCommand(Command):
         print('    <tr><td class="side-info-icon">&varr;</td><td>Size: {}</td></tr>'.format(make_size_label(size, var)), file=html_file)
         if name in self.type_schema_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
-                '<td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/symbol{}/{}#L{}">schema</a></td></tr>'.format( \
+                '<td><a href="https://github.com/symbol/symbol/blob/main/catbuffer/schemas/{}/{}#L{}">schema</a></td></tr>'.format( \
                     self.source_api, self.type_schema_locations[name][0], self.type_schema_locations[name][1]), file=html_file)
         if name in self.type_catapult_locations:
             print('    <tr><td class="side-info-icon"><i class="fab fa-github"></i></td>'
                 '<td><a href="https://github.com/symbol/symbol/blob/main/client/catapult/{}#L{}">catapult model</a></td></tr>'.format(
                     self.type_catapult_locations[name][0], self.type_catapult_locations[name][1]), file=html_file)
         print('    </table></div>', file=html_file)
-        print(self.parse_comment(element['comments']), file=html_file)
+        description = self.parse_comment(element['comments'])
+        if description.startswith('<p>') and description.endswith('</p>'):
+            description = description[3:-4]
+        print('    <dl markdown><dt><code>ser:{}</code></dt><dd>{}</dd></dl>'.format(name, description), file=html_file)
         print('</td></tr></table>', file=html_file)
         print(file=html_file)
 
@@ -316,7 +319,7 @@ class SerializationCommand(Command):
             comment += self.parse_comment(v['comments'])
             if 'condition' in v:
                 comment += '<b>This field is only present if:</b><br/>{}'.format(
-                    make_keyword(v['condition'] + ' ' + v['condition_operation'] + ' ' + v['condition_value']))
+                    make_keyword('{} {} {}'.format(v['condition'], v['condition_operation'], v['condition_value'])))
             print('   <div{}>&nbsp;</div>'.format('' if indent < 1 else ' class="indentation-cell"'), file=html_file)
             print('   <div{}>&nbsp;</div>'.format('' if indent < 2 else ' class="indentation-cell"'), file=html_file)
             print('   <div{}>&nbsp;</div>'.format('' if indent < 3 else ' class="indentation-cell"'), file=html_file)
@@ -536,7 +539,7 @@ class SerializationCommand(Command):
         # Parse source of catapult-client to extract exact locations of model definitions.
         self.type_catapult_locations = find_catapult_model_locations(self.config['source_catapult_path'])
 
-        self.source_api = self.config['source_schema_path'].split('/')[-1]
+        self.source_api = self.config['source_schema_path'].rstrip('/').split('/')[-1]
 
         # Print document title and introduction
         if self.config['format'] == 'rst':

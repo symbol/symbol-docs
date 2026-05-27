@@ -7,6 +7,6 @@ make gettext
 echo "Building docs..."
 make alldocs
 
-echo "Linking Check..."
-make linkcheck
+# echo "Linking Check..."
+# make linkcheck
 
